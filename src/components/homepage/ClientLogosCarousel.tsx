@@ -5,7 +5,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
+import AutoplayType from 'embla-carousel-autoplay';
 
 interface ClientLogosCarouselProps {
   title?: string;
@@ -27,11 +27,11 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({ title = "Trus
   ];
 
   // Create a plugin instance for autoplay
-  const [plugin, setPlugin] = useState<Autoplay | null>(null);
+  const [plugin, setPlugin] = useState<any>(null);
 
   useEffect(() => {
     // Initialize the autoplay plugin
-    const autoplayPlugin = Autoplay({
+    const autoplayPlugin = AutoplayType({
       delay: 2000,
       stopOnInteraction: false,
       stopOnMouseEnter: true,
