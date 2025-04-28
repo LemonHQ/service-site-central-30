@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
@@ -6,13 +5,18 @@ import SectionHeading from '../components/ui/SectionHeading';
 import ServiceCard from '../components/ui/ServiceCard';
 import CtaSection from '../components/ui/CtaSection';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
+import BlogCard from '@/components/blog/BlogCard';
+import { caseStudies } from '@/data/caseStudies';
+import { blogPosts } from '@/data/blogPosts';
 import { 
   Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
   LayersIcon, Settings, Cpu, Network, BarChart2, Users,
-  CheckCircle
+  CheckCircle, FileChartColumn, BookOpenText, Award
 } from 'lucide-react';
 
-// Define service data
 const servicesData = {
   'validating-product-ideas': {
     title: 'Validating Product Ideas',
@@ -82,7 +86,6 @@ const servicesData = {
       }
     ]
   },
-  // Add similar objects for other services
   'designing-experiences': {
     title: 'Designing Brand & Customer Experiences',
     description: 'Create cohesive, engaging brand and customer experiences that build emotional connections and drive loyalty.',
@@ -116,13 +119,49 @@ const servicesData = {
         description: 'Detailed documentation to ensure consistent execution across channels.'
       }
     ]
+  }
+};
+
+const serviceRelations = {
+  'validating-product-ideas': {
+    caseStudies: ['global-bank-digital-transformation', 'e-commerce-platform-redesign'],
+    blogs: ['product-validation-methods', 'market-research-techniques'],
+    whyChooseUs: [
+      'Proven track record with 90% validation success rate',
+      'Proprietary validation framework developed over 10+ years',
+      'Team of specialized researchers and analysts',
+      'Data-driven approach combining qualitative and quantitative methods'
+    ],
+    coverImage: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'
   },
-  // Add the rest of service details with similar structure
+  'ideating-product-concepts': {
+    caseStudies: ['healthcare-patient-portal', 'smart-city-infrastructure'],
+    blogs: ['innovation-frameworks', 'design-thinking-process'],
+    whyChooseUs: [
+      'Cross-industry innovation expertise',
+      'Award-winning creative ideation methodologies',
+      'Collaborative workshop facilitation by certified experts',
+      'Balanced approach to feasibility, viability, and desirability'
+    ],
+    coverImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158'
+  },
+  'designing-experiences': {
+    caseStudies: ['e-commerce-platform-redesign', 'healthcare-patient-portal'],
+    blogs: ['ux-best-practices', 'branding-strategies'],
+    whyChooseUs: [
+      'Holistic approach to brand and customer experiences',
+      'Multi-disciplinary team of designers, researchers and strategists',
+      'Focus on measurable business outcomes',
+      'Expertise in accessibility and inclusive design'
+    ],
+    coverImage: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81'
+  }
 };
 
 const ServiceDetail = () => {
   const { serviceId } = useParams<{ serviceId: string }>();
   const serviceData = serviceId ? servicesData[serviceId as keyof typeof servicesData] : null;
+  const relationData = serviceId ? serviceRelations[serviceId as keyof typeof serviceRelations] : null;
   
   if (!serviceData) {
     return (
@@ -140,35 +179,60 @@ const ServiceDetail = () => {
 
   const { title, description, heroText, benefits, process, icon: Icon } = serviceData;
 
+  const relatedCaseStudies = relationData?.caseStudies?.map(id => 
+    caseStudies.find(study => study.id === id)
+  ).filter(Boolean) || [];
+
+  const relatedBlogs = relationData?.blogs?.map(id => 
+    blogPosts?.find(post => post.id === id)
+  ).filter(Boolean) || [];
+
   return (
     <MainLayout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-700 to-brand-600 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            {Icon && <Icon size={48} className="mx-auto mb-6 text-brand-200" />}
-            <h1 className="mb-6">{title}</h1>
-            <p className="text-xl md:text-2xl mb-8 text-brand-100">
-              {heroText}
-            </p>
-            <Link to="/contact">
-              <Button className="bg-white text-brand-600 hover:bg-brand-100">
-                Request a Consultation
-              </Button>
-            </Link>
+      <section className="relative">
+        <AspectRatio ratio={3/1} className="w-full">
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-900/90 to-brand-800/70 z-10"></div>
+          <img 
+            src={relationData?.coverImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'} 
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 flex items-center z-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-3xl">
+                {Icon && <Icon size={56} className="mb-6 text-brand-200" />}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">{title}</h1>
+                <p className="text-xl md:text-2xl mb-8 text-white/90">
+                  {heroText}
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link to="/contact">
+                    <Button className="bg-white text-brand-600 hover:bg-brand-100">
+                      Request a Consultation
+                    </Button>
+                  </Link>
+                  <Link to="#approach">
+                    <Button variant="outline" className="border-white text-white hover:bg-white/20">
+                      Learn Our Approach
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </AspectRatio>
       </section>
 
-      {/* Overview Section */}
-      <section className="section-padding">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionHeading 
-                title="Service Overview" 
-                subtitle={description}
-              />
+              <div className="flex items-center mb-6">
+                <BookOpenText className="w-8 h-8 text-brand-500 mr-3" />
+                <h2 className="text-3xl font-bold">Service Overview</h2>
+              </div>
+              <p className="text-lg text-gray-700 mb-8">{description}</p>
+              
               <div className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start">
@@ -185,9 +249,12 @@ const ServiceDetail = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg">
-                {/* Replace with actual image */}
-                <div className="w-full h-full bg-gray-300 rounded-lg"></div>
+              <div className="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden">
+                <img 
+                  src={relationData?.coverImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'} 
+                  alt={title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-200 rounded-lg -z-10"></div>
             </div>
@@ -195,22 +262,25 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="section-padding bg-gray-50">
+      <section id="approach" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading 
-            title="Our Approach" 
-            subtitle="How we deliver exceptional results through our proven methodology"
-            centered
-          />
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <Settings className="w-8 h-8 text-brand-500 mr-3" />
+              <h2 className="text-3xl font-bold">Our Approach</h2>
+            </div>
+            <p className="text-lg text-gray-600">
+              How we deliver exceptional results through our proven methodology
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {process.map((step, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-6">
                   <span className="text-brand-500 font-semibold text-lg">{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
@@ -218,8 +288,78 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* Related Services Section */}
-      <section className="section-padding">
+      {relatedCaseStudies.length > 0 && (
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center mb-12">
+              <FileChartColumn className="w-8 h-8 text-brand-500 mr-3" />
+              <h2 className="text-3xl font-bold">Related Case Studies</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedCaseStudies.map((caseStudy) => (
+                caseStudy && <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
+              ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <Link to="/case-studies">
+                <Button variant="outline">View All Case Studies</Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {relatedBlogs.length > 0 && (
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center mb-12">
+              <BookOpenText className="w-8 h-8 text-brand-500 mr-3" />
+              <h2 className="text-3xl font-bold">Related Insights</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedBlogs.map((post) => (
+                post && <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <Link to="/blog">
+                <Button variant="outline">Read Our Blog</Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {relationData?.whyChooseUs?.length > 0 && (
+        <section className="py-20 bg-brand-600 text-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <div className="flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-brand-200 mr-3" />
+                <h2 className="text-3xl font-bold">Why Choose Us</h2>
+              </div>
+              <p className="text-lg text-white/80">
+                What makes our {title.toLowerCase()} service stand out from the rest
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {relationData?.whyChooseUs?.map((reason, index) => (
+                <div key={index} className="flex items-start bg-white/10 backdrop-blur p-6 rounded-lg">
+                  <CheckCircle className="w-6 h-6 text-brand-200 mr-4 flex-shrink-0 mt-1" />
+                  <p className="text-lg">{reason}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading 
             title="Related Services" 
@@ -228,7 +368,6 @@ const ServiceDetail = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Show 3 related services - for simplicity, just showing the first 3 other than current */}
             {Object.entries(servicesData)
               .filter(([id]) => id !== serviceId)
               .slice(0, 3)
@@ -245,7 +384,6 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <CtaSection 
         title={`Ready to Start ${title}?`}
         subtitle="Schedule a consultation with our product experts to discuss your specific needs."
