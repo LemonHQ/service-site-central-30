@@ -24,7 +24,7 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "Schedule Consultation",
     secondaryButtonLink: "/contact",
     bgColor: "from-brand-700 to-brand-600",
-    bgImage: "/digital-ecosystem-1.jpg"
+    bgImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80"
   }, {
     title: "Launch Products with Confidence",
     description: "Accelerate time-to-market with expert launch strategies that captivate your audience.",
@@ -33,7 +33,7 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "View Case Studies",
     secondaryButtonLink: "/case-studies",
     bgColor: "from-brand-600 to-brand-500",
-    bgImage: "/digital-ecosystem-2.jpg"
+    bgImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80"
   }, {
     title: "Scale Your Digital Portfolio",
     description: "Optimize and grow your product ecosystem with enterprise-grade scaling strategies.",
@@ -42,7 +42,7 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "Talk to an Expert",
     secondaryButtonLink: "/contact",
     bgColor: "from-brand-500 to-brand-400",
-    bgImage: "/digital-ecosystem-3.jpg"
+    bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80"
   }];
   
   return <section className="relative h-screen w-full">
