@@ -13,6 +13,7 @@ import PartnersSection from '../components/homepage/PartnersSection';
 import BlogCarousel from '../components/homepage/BlogCarousel';
 import SectorChallenges from '../components/homepage/SectorChallenges';
 import ProductJourney from '../components/homepage/ProductJourney';
+import ProductExpansion from '../components/homepage/ProductExpansion';
 
 const Home = () => {
   return (
@@ -28,6 +29,9 @@ const Home = () => {
       
       {/* Product Journey Section */}
       <ProductJourney />
+      
+      {/* Product Expansion Section */}
+      <ProductExpansion />
       
       {/* Sector-specific challenges */}
       <SectorChallenges />
