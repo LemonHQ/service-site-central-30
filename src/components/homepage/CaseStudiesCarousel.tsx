@@ -23,13 +23,13 @@ interface CaseStudy {
 }
 
 const CaseStudiesCarousel: React.FC = () => {
-  // Example case studies - in a real app these would come from a CMS or API
+  // Example case studies with placeholder images
   const caseStudies: CaseStudy[] = [
     {
       title: "Digital Transformation for Financial Services",
       client: "Global Bank Inc.",
       description: "Redesigned core banking products resulting in 40% increase in user engagement and 25% reduction in customer support calls.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/global-bank",
       industry: "Financial Services",
       service: "Digital Transformation"
@@ -38,7 +38,7 @@ const CaseStudiesCarousel: React.FC = () => {
       title: "E-commerce Platform Optimization",
       client: "Retail Giant Co.",
       description: "Implemented personalization engine that increased conversion rate by 35% and average order value by 28% within three months.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/retail-giant",
       industry: "Retail",
       service: "Platform Optimization"
@@ -47,7 +47,7 @@ const CaseStudiesCarousel: React.FC = () => {
       title: "Healthcare Patient Portal",
       client: "MediCare Systems",
       description: "Built an intuitive patient portal that improved patient satisfaction scores by 45% and streamlined administrative processes.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/medicare-systems",
       industry: "Healthcare",
       service: "Digital Product Design"
@@ -56,7 +56,7 @@ const CaseStudiesCarousel: React.FC = () => {
       title: "Manufacturing IoT Integration",
       client: "Industrial Solutions Ltd.",
       description: "Developed IoT strategy and implementation plan that resulted in 18% operational efficiency improvements across 12 facilities.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/industrial-solutions",
       industry: "Manufacturing",
       service: "IoT Strategy"

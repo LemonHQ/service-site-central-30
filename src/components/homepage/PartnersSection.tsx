@@ -9,46 +9,46 @@ interface Partner {
 }
 
 const PartnersSection: React.FC = () => {
-  // Mock partner data - in a real app, this would come from a CMS or API
+  // Mock partner data with placeholder images
   const partners: Partner[] = [
     {
       name: "Microsoft",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Strategic technology partner for cloud solutions and enterprise applications"
     },
     {
       name: "Salesforce",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80",
       description: "CRM implementation and customer experience optimization partner"
     },
     {
       name: "AWS",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Cloud infrastructure and serverless architecture partner"
     },
     {
       name: "Adobe",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Creative and marketing technology solutions partner"
     },
     {
       name: "Google Cloud",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80",
       description: "AI, machine learning, and data analytics partner"
     },
     {
       name: "SAP",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Enterprise resource planning and business operations partner"
     },
     {
       name: "IBM",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Digital transformation and enterprise modernization partner"
     },
     {
       name: "Oracle",
-      logo: "/placeholder.svg",
+      logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80",
       description: "Database, middleware, and enterprise applications partner"
     }
   ];

@@ -21,32 +21,32 @@ const ClientsSection: React.FC = () => {
     "Manufacturing"
   ];
   
-  // Mock client data - in a real app, this would come from a CMS or API
+  // Mock client data with placeholder images
   const clients: Record<string, Client[]> = {
     "Financial Services": [
-      { name: "Global Bank", logo: "/placeholder.svg", industry: "Financial Services" },
-      { name: "Investment Partners", logo: "/placeholder.svg", industry: "Financial Services" },
-      { name: "InsureTech", logo: "/placeholder.svg", industry: "Financial Services" },
+      { name: "Global Bank", logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
+      { name: "Investment Partners", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
+      { name: "InsureTech", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
     ],
     "Healthcare": [
-      { name: "MediCare Systems", logo: "/placeholder.svg", industry: "Healthcare" },
-      { name: "HealthGroup", logo: "/placeholder.svg", industry: "Healthcare" },
-      { name: "Pharma Innovations", logo: "/placeholder.svg", industry: "Healthcare" },
+      { name: "MediCare Systems", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
+      { name: "HealthGroup", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
+      { name: "Pharma Innovations", logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
     ],
     "Retail": [
-      { name: "Retail Giant", logo: "/placeholder.svg", industry: "Retail" },
-      { name: "Fashion Forward", logo: "/placeholder.svg", industry: "Retail" },
-      { name: "Home Goods Co.", logo: "/placeholder.svg", industry: "Retail" },
+      { name: "Retail Giant", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
+      { name: "Fashion Forward", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
+      { name: "Home Goods Co.", logo: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
     ],
     "Technology": [
-      { name: "Tech Innovators", logo: "/placeholder.svg", industry: "Technology" },
-      { name: "Software Solutions", logo: "/placeholder.svg", industry: "Technology" },
-      { name: "Cloud Systems", logo: "/placeholder.svg", industry: "Technology" },
+      { name: "Tech Innovators", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
+      { name: "Software Solutions", logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
+      { name: "Cloud Systems", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
     ],
     "Manufacturing": [
-      { name: "Industrial Solutions", logo: "/placeholder.svg", industry: "Manufacturing" },
-      { name: "Product Makers", logo: "/placeholder.svg", industry: "Manufacturing" },
-      { name: "Assembly Pro", logo: "/placeholder.svg", industry: "Manufacturing" },
+      { name: "Industrial Solutions", logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
+      { name: "Product Makers", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
+      { name: "Assembly Pro", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
     ],
   };
 

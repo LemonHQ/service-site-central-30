@@ -13,14 +13,14 @@ interface ClientLogosCarouselProps {
 const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({ title = "Trusted by leading enterprise brands" }) => {
   // In a real implementation, these would be actual client logos
   const clientLogos = [
-    { name: "Tech Corp", logo: "/placeholder.svg" },
-    { name: "Global Industries", logo: "/placeholder.svg" },
-    { name: "Innovation Labs", logo: "/placeholder.svg" },
-    { name: "Enterprise Solutions", logo: "/placeholder.svg" },
-    { name: "Future Systems", logo: "/placeholder.svg" },
-    { name: "Digital Ventures", logo: "/placeholder.svg" },
-    { name: "Smart Tech", logo: "/placeholder.svg" },
-    { name: "Cloud Partners", logo: "/placeholder.svg" },
+    { name: "Tech Corp", logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Global Industries", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Innovation Labs", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Enterprise Solutions", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Future Systems", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Digital Ventures", logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Smart Tech", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80" },
+    { name: "Cloud Partners", logo: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=200&h=100&q=80" },
   ];
 
   return (

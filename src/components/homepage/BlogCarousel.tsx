@@ -22,12 +22,12 @@ interface BlogPost {
 }
 
 const BlogCarousel: React.FC = () => {
-  // Example blog posts - in a real app these would come from a CMS or API
+  // Example blog posts with placeholder images
   const blogPosts: BlogPost[] = [
     {
       title: "The Future of Enterprise Product Development",
       excerpt: "Discover how AI, machine learning, and predictive analytics are reshaping product development strategies for enterprise organizations.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=400&q=80",
       date: "April 15, 2023",
       slug: "future-enterprise-product-development",
       category: "Innovation"
@@ -35,7 +35,7 @@ const BlogCarousel: React.FC = () => {
     {
       title: "Building Products that Scale: Architecture Considerations",
       excerpt: "Learn the key architectural patterns and principles that enable products to scale effectively from thousands to millions of users.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&h=400&q=80",
       date: "March 22, 2023",
       slug: "building-products-that-scale",
       category: "Technology"
@@ -43,7 +43,7 @@ const BlogCarousel: React.FC = () => {
     {
       title: "Validating Product Ideas: A Data-Driven Approach",
       excerpt: "Move beyond gut feelings with a structured framework for validating product concepts using quantitative and qualitative methods.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80",
       date: "February 8, 2023",
       slug: "validating-product-ideas",
       category: "Strategy"
@@ -51,7 +51,7 @@ const BlogCarousel: React.FC = () => {
     {
       title: "Enterprise UX: Balancing Complexity and Usability",
       excerpt: "Strategies for designing intuitive user experiences while accommodating the complex requirements of enterprise applications.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=400&q=80",
       date: "January 17, 2023",
       slug: "enterprise-ux-complexity-usability",
       category: "Design"
