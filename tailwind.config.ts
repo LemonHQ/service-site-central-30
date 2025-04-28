@@ -88,6 +88,25 @@ export default {
 					400: "#3CADA0", // Primary teal (from image)
 					500: "#2A8F86", // Darker teal
 					600: "#1F6F69", // Deep teal
+				},
+				// Adding beige and ivory colors
+				"beige": {
+					50: "#FDFBF7", // Lightest beige, almost white
+					100: "#F5F0E6", // Very light beige
+					200: "#EDE5D4", // Light beige
+					300: "#E6DBB9", // Medium light beige
+					400: "#D6C6A5", // Medium beige
+					500: "#CABDA0", // Standard beige
+					600: "#B6A889", // Darker beige
+					700: "#A89878", // Deep beige
+				},
+				"ivory": {
+					50: "#FFFFF8", // Brightest ivory
+					100: "#FFFDF5", // Very light ivory
+					200: "#FFFAEB", // Light ivory
+					300: "#FFF8E1", // Standard ivory
+					400: "#FFF2D7", // Medium ivory
+					500: "#FFEBC4", // Deeper ivory
 				}
 			},
 			borderRadius: {

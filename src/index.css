@@ -5,13 +5,13 @@
 
 @layer base {
   :root {
-    --background: 45 33% 98%;
+    --background: 43 40% 96%; /* Ivory background */
     --foreground: 222 14% 18%;
 
-    --card: 0 0% 100%;
+    --card: 43 30% 96%; /* Light beige card */
     --card-foreground: 222 14% 18%;
 
-    --popover: 0 0% 100%;
+    --popover: 43 30% 96%; /* Light beige popover */
     --popover-foreground: 222 14% 18%;
 
     --primary: 270 33% 46%;
@@ -20,7 +20,7 @@
     --secondary: 186 51% 52%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 43 20% 94%; /* Beige muted */
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 12 99% 69%;
@@ -29,19 +29,19 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 43 25% 90%; /* Beige border */
+    --input: 43 25% 90%; /* Beige input */
     --ring: 270 33% 46%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 43 40% 95%; /* Ivory sidebar */
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 43 15% 93%; /* Beige sidebar accent */
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 43 15% 88%; /* Beige sidebar border */
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -126,11 +126,11 @@
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-100 text-brand-600 font-semibold py-3 px-6 border border-brand-200 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-beige-100 hover:bg-beige-200 text-brand-600 font-semibold py-3 px-6 border border-brand-200 rounded-lg transition-colors duration-300 inline-block;
   }
 
   .btn-outline {
-    @apply bg-transparent border border-brand-400 text-brand-400 hover:bg-brand-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-transparent border border-brand-400 text-brand-400 hover:bg-beige-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
 
   .card-hover {

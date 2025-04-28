@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <Link
       to={link}
       className={cn(
-        'block bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100',
+        'block bg-ivory-100 p-6 rounded-xl shadow-sm card-hover border border-beige-300/30',
         className
       )}
     >
