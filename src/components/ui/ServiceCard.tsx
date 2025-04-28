@@ -23,14 +23,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <Link
       to={link}
       className={cn(
-        'block bg-white p-6 rounded-xl shadow-sm card-hover',
+        'block bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100',
         className
       )}
     >
       <div className="mb-4">
-        {Icon && <Icon className="w-10 h-10 text-brand-400" />}
+        {Icon && <Icon className="w-10 h-10 text-teal-400" />}
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-brand-700">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-brand-400">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </Link>
   );

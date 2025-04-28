@@ -63,15 +63,31 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors
+				// Custom colors based on the provided image
 				"brand": {
-					100: "#E5DEFF",
-					200: "#C6BDFF",
-					300: "#9B87F5",
-					400: "#8B5CF6",
-					500: "#7E69AB",
-					600: "#6E59A5",
-					700: "#1A1F2C",
+					100: "#F4F1F8", // Light purple background
+					200: "#E6D8F0", // Light purple
+					300: "#9B7DC7", // Medium purple
+					400: "#6F4E9C", // Primary purple (from logo)
+					500: "#5D4084", // Darker purple
+					600: "#4A3267", // Deep purple
+					700: "#292B32", // Near black
+				},
+				"accent": {
+					100: "#FEE8E1", // Light coral
+					200: "#FBD0C4", // Lighter coral
+					300: "#F8A78B", // Medium coral
+					400: "#FF7E5F", // Primary coral/orange (from buttons)
+					500: "#E65F42", // Darker coral
+					600: "#D4452B", // Deep coral
+				},
+				"teal": {
+					100: "#E0F3F5", // Light teal
+					200: "#C2E7EB", // Lighter teal
+					300: "#85CED7", // Medium teal
+					400: "#3CADA0", // Primary teal (from image)
+					500: "#2A8F86", // Darker teal
+					600: "#1F6F69", // Deep teal
 				}
 			},
 			borderRadius: {

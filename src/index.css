@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 220 33% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 33% 98%;
+    --foreground: 222 14% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 14% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 14% 18%;
 
-    --primary: 252 87% 67%;
+    --primary: 270 33% 46%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 252 16% 54%;
+    --secondary: 186 51% 52%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 252 94% 79%;
+    --accent: 12 99% 69%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 270 33% 46%;
 
     --radius: 0.5rem;
 
@@ -55,16 +55,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 252 87% 67%;
+    --primary: 270 33% 46%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 252 16% 54%;
+    --secondary: 186 51% 52%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 252 94% 79%;
+    --accent: 12 99% 69%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -122,11 +122,15 @@
 /* Custom styles */
 @layer components {
   .btn-primary {
-    @apply bg-brand-400 hover:bg-brand-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-accent-400 hover:bg-accent-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
   
   .btn-secondary {
     @apply bg-white hover:bg-gray-100 text-brand-600 font-semibold py-3 px-6 border border-brand-200 rounded-lg transition-colors duration-300 inline-block;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-brand-400 text-brand-400 hover:bg-brand-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
 
   .card-hover {
@@ -139,6 +143,10 @@
 
   .active-nav-link {
     @apply text-brand-400 font-medium;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent;
   }
 }
 
