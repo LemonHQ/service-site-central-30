@@ -63,15 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors
+				// Updated "Vibrant Tech" color palette
 				"brand": {
-					100: "#E5DEFF",
-					200: "#C6BDFF",
-					300: "#9B87F5",
-					400: "#8B5CF6",
-					500: "#7E69AB",
-					600: "#6E59A5",
-					700: "#1A1F2C",
+					100: "#E6F8FF", // Light Sky Blue
+					200: "#B3E5FC", // Sky Blue
+					300: "#4FC3F7", // Bright Blue
+					400: "#0EA5E9", // Ocean Blue (Primary)
+					500: "#0288D1", // Deep Blue
+					600: "#01579B", // Darker Blue
+					700: "#1A1F2C", // Dark Blue-Gray
 				}
 			},
 			borderRadius: {
@@ -124,6 +124,11 @@ export default {
 			fontFamily: {
 				sans: ['Inter var', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif']
+			},
+			backgroundImage: {
+				'tech-gradient': 'linear-gradient(90deg, hsla(198, 93%, 60%, 1) 0%, hsla(217, 100%, 50%, 1) 100%)',
+				'tech-gradient-alt': 'linear-gradient(90deg, hsla(190, 100%, 45%, 1) 0%, hsla(215, 98%, 61%, 1) 100%)',
+				'tech-gradient-dark': 'linear-gradient(90deg, hsla(217, 96%, 30%, 1) 0%, hsla(224, 89%, 31%, 1) 100%)'
 			}
 		}
 	},
