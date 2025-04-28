@@ -24,7 +24,7 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "Schedule Consultation",
     secondaryButtonLink: "/contact",
     bgColor: "from-brand-700 to-brand-600",
-    bgImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80"
+    bgImage: "/digital-ecosystem-1.jpg"
   }, {
     title: "Launch Products with Confidence",
     description: "Accelerate time-to-market with expert launch strategies that captivate your audience.",
@@ -33,7 +33,7 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "View Case Studies",
     secondaryButtonLink: "/case-studies",
     bgColor: "from-brand-600 to-brand-500",
-    bgImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80"
+    bgImage: "/digital-ecosystem-2.jpg"
   }, {
     title: "Scale Your Digital Portfolio",
     description: "Optimize and grow your product ecosystem with enterprise-grade scaling strategies.",
@@ -42,15 +42,15 @@ const SpotlightCarousel: React.FC = () => {
     secondaryButtonText: "Talk to an Expert",
     secondaryButtonLink: "/contact",
     bgColor: "from-brand-500 to-brand-400",
-    bgImage: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1920&q=80"
+    bgImage: "/digital-ecosystem-3.jpg"
   }];
   
-  return <section className="relative h-screen">
+  return <section className="relative h-screen w-full">
       <Carousel className="h-full w-full">
         <CarouselContent className="h-full">
           {slides.map((slide, index) => <CarouselItem key={index} className="h-full">
               <div className={`flex flex-col justify-center h-full w-full bg-gradient-to-br ${slide.bgColor} text-white px-4 sm:px-6 lg:px-8 relative`} style={{
-            backgroundImage: `linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(${slide.bgImage})`,
+            backgroundImage: `linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(${slide.bgImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
