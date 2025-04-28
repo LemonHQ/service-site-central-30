@@ -3,7 +3,7 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import CtaSection from '../components/ui/CtaSection';
 
-// Import new homepage components
+// Import homepage components
 import SpotlightCarousel from '../components/homepage/SpotlightCarousel';
 import CompanyOverview from '../components/homepage/CompanyOverview';
 import ClientLogosCarousel from '../components/homepage/ClientLogosCarousel';
@@ -11,6 +11,7 @@ import CaseStudiesCarousel from '../components/homepage/CaseStudiesCarousel';
 import ClientsSection from '../components/homepage/ClientsSection';
 import PartnersSection from '../components/homepage/PartnersSection';
 import BlogCarousel from '../components/homepage/BlogCarousel';
+import SectorChallenges from '../components/homepage/SectorChallenges';
 
 const Home = () => {
   return (
@@ -23,6 +24,9 @@ const Home = () => {
       
       {/* Company Overview with Stats */}
       <CompanyOverview />
+      
+      {/* Sector-specific challenges */}
+      <SectorChallenges />
       
       {/* Case Studies Carousel */}
       <CaseStudiesCarousel />
