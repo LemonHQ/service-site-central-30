@@ -14,39 +14,39 @@ interface Client {
 const ClientsSection: React.FC = () => {
   // Group clients by industry
   const industries = [
-    "Financial Services",
-    "Healthcare",
-    "Retail",
     "Technology",
-    "Manufacturing"
+    "E-commerce & Retail",
+    "Financial Services",
+    "Manufacturing",
+    "Healthcare"
   ];
   
-  // Mock client data with placeholder images
+  // Enterprise client data with actual logos organized by industry
   const clients: Record<string, Client[]> = {
-    "Financial Services": [
-      { name: "Global Bank", logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
-      { name: "Investment Partners", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
-      { name: "InsureTech", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80", industry: "Financial Services" },
-    ],
-    "Healthcare": [
-      { name: "MediCare Systems", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
-      { name: "HealthGroup", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
-      { name: "Pharma Innovations", logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80", industry: "Healthcare" },
-    ],
-    "Retail": [
-      { name: "Retail Giant", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
-      { name: "Fashion Forward", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
-      { name: "Home Goods Co.", logo: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=200&h=100&q=80", industry: "Retail" },
-    ],
     "Technology": [
-      { name: "Tech Innovators", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
-      { name: "Software Solutions", logo: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
-      { name: "Cloud Systems", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=200&h=100&q=80", industry: "Technology" },
+      { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg", industry: "Technology" },
+      { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", industry: "Technology" },
+      { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", industry: "Technology" },
+    ],
+    "E-commerce & Retail": [
+      { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", industry: "E-commerce & Retail" },
+      { name: "Walmart", logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg", industry: "E-commerce & Retail" },
+      { name: "Target", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg", industry: "E-commerce & Retail" },
+    ],
+    "Financial Services": [
+      { name: "JP Morgan", logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/J.P._Morgan_Logo_2008_1.svg", industry: "Financial Services" },
+      { name: "Visa", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg", industry: "Financial Services" },
+      { name: "Mastercard", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg", industry: "Financial Services" },
     ],
     "Manufacturing": [
-      { name: "Industrial Solutions", logo: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
-      { name: "Product Makers", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
-      { name: "Assembly Pro", logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=100&q=80", industry: "Manufacturing" },
+      { name: "Intel", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg", industry: "Manufacturing" },
+      { name: "Samsung", logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg", industry: "Manufacturing" },
+      { name: "Toyota", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg", industry: "Manufacturing" },
+    ],
+    "Healthcare": [
+      { name: "Johnson & Johnson", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Johnson_and_Johnson_Logo.svg", industry: "Healthcare" },
+      { name: "UnitedHealth Group", logo: "https://upload.wikimedia.org/wikipedia/commons/8/83/UnitedHealth_Group_logo.svg", industry: "Healthcare" },
+      { name: "Pfizer", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Pfizer_logo.svg", industry: "Healthcare" },
     ],
   };
 
