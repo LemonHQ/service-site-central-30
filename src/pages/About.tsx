@@ -3,6 +3,7 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import CtaSection from '../components/ui/CtaSection';
+import ProductJourney from '../components/homepage/ProductJourney';
 import { 
   CheckCircle, Clock, Users, Lightbulb, Target 
 } from 'lucide-react';
@@ -103,7 +104,10 @@ const About = () => {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Product Journey Section */}
+          <ProductJourney />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div className="order-2 md:order-1 relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
