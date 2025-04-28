@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SectionHeading from '../ui/SectionHeading';
 import { Card, CardContent } from '../ui/card';
 import { 
-  Bulb, 
+  Lightbulb, 
   Search, 
   LayoutDashboard, 
   Hammer, 
@@ -36,7 +36,7 @@ const ProductJourney: React.FC = () => {
   const journeySteps = [
     {
       id: 'ideation',
-      icon: <Bulb className="h-8 w-8 text-amber-500" />,
+      icon: <Lightbulb className="h-8 w-8 text-amber-500" />,
       title: 'Ideation',
       description: 'Transform business challenges into product opportunities through structured ideation workshops and strategic thinking.',
       color: 'bg-amber-100',
