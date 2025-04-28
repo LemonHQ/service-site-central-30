@@ -12,6 +12,7 @@ import ClientsSection from '../components/homepage/ClientsSection';
 import PartnersSection from '../components/homepage/PartnersSection';
 import BlogCarousel from '../components/homepage/BlogCarousel';
 import SectorChallenges from '../components/homepage/SectorChallenges';
+import ProductJourney from '../components/homepage/ProductJourney';
 
 const Home = () => {
   return (
@@ -24,6 +25,9 @@ const Home = () => {
       
       {/* Company Overview with Stats */}
       <CompanyOverview />
+      
+      {/* Product Journey Section */}
+      <ProductJourney />
       
       {/* Sector-specific challenges */}
       <SectorChallenges />
