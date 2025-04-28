@@ -55,7 +55,7 @@ const SpotlightCarousel: React.FC = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
           }}>
-                <div className="w-full max-w-7xl mx-auto">
+                <div className="container mx-auto">
                   <div className="max-w-3xl">
                     <h1 className="mb-6 animate-fade-in">
                       {slide.title}
