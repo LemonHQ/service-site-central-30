@@ -9,7 +9,8 @@ import {
   Scale, 
   Target, 
   TrendingUp, 
-  Award
+  Award,
+  Globe
 } from 'lucide-react';
 
 interface ExpansionStrategyProps {
@@ -68,6 +69,12 @@ const ProductExpansion: React.FC = () => {
       title: "Competitive Advantage",
       description: "Develop sustainable differentiators through continuous innovation programs, competitive intelligence dashboards, and strategic positioning strategies that keep you ahead.",
       color: "bg-amber-100"
+    },
+    {
+      icon: <Globe className="h-8 w-8 text-indigo-500" />,
+      title: "Market Share Growth",
+      description: "Capture and expand your market share with targeted acquisition strategies, customer retention programs, and data-driven expansion planning that maximize your industry presence.",
+      color: "bg-indigo-100"
     }
   ];
 
@@ -75,8 +82,8 @@ const ProductExpansion: React.FC = () => {
     <section className="section-padding bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Expand Your Product Footprint" 
-          subtitle="Strategic approaches to launch, scale, and extend your product's reach and impact"
+          title="Expand Product Offerings & Market Share" 
+          subtitle="Strategic approaches to launch, scale, and capture greater market presence for sustainable business growth"
           centered
           className="mb-16"
         />
@@ -93,7 +100,7 @@ const ProductExpansion: React.FC = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {expansionStrategies.slice(3).map((strategy, index) => (
             <ExpansionStrategy
               key={index + 3}
@@ -107,7 +114,7 @@ const ProductExpansion: React.FC = () => {
         
         <div className="text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to take your product to the next level? Our strategic consulting and growth acceleration programs help you unlock new markets and maximize product potential.
+            Ready to expand your market presence and grow your product portfolio? Our strategic consulting and growth acceleration programs help you unlock new markets and maximize business potential.
           </p>
           <Link to="/services">
             <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
