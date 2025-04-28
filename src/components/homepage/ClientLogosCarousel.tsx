@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 interface ClientLogosCarouselProps {
   title?: string;
@@ -25,6 +26,25 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({ title = "Trus
     { name: "SAP", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
   ];
 
+  // Create a plugin instance for autoplay
+  const [plugin, setPlugin] = useState<Autoplay | null>(null);
+
+  useEffect(() => {
+    // Initialize the autoplay plugin
+    const autoplayPlugin = Autoplay({
+      delay: 2000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    });
+    
+    setPlugin(autoplayPlugin);
+    
+    return () => {
+      // Cleanup when component unmounts
+      if (plugin) plugin.stop();
+    };
+  }, []);
+
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,11 +54,12 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({ title = "Trus
             align: "start",
             loop: true,
           }}
+          plugins={plugin ? [plugin] : []}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {clientLogos.map((client, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5">
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="h-16 flex items-center justify-center p-2">
                   <img 
                     src={client.logo} 
