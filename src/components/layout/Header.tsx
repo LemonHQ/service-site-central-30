@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import ServiceSubNav from '../navigation/ServiceSubNav';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,6 @@ const Header = () => {
   // Navigation links - Updated names
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'What We Do', path: '/services' },
     { name: 'Our Work', path: '/case-studies' },
     { name: 'Resources', path: '/blog' },
     { name: 'About', path: '/about' },
@@ -41,8 +41,20 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link 
+              to="/" 
+              className={`${isActive('/')} font-medium`}
+            >
+              Home
+            </Link>
+            
+            {/* Service SubNav - what we do */}
+            <div className="relative flex items-center">
+              <ServiceSubNav />
+            </div>
+            
+            {navLinks.slice(1).map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path} 
@@ -76,7 +88,21 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 animate-fade-in">
           <nav className="flex flex-col space-y-4 py-6 px-8">
-            {navLinks.map((link) => (
+            <Link 
+              to="/" 
+              className={`${isActive('/')} text-lg`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/services"
+              className={`${isActive('/services')} text-lg`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              What We Do
+            </Link>
+            {navLinks.slice(1).map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path} 

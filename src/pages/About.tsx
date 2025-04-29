@@ -1,35 +1,56 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import CtaSection from '../components/ui/CtaSection';
 import ProductJourney from '../components/homepage/ProductJourney';
+import TeamMemberDrawer, { TeamMember } from '../components/about/TeamMemberDrawer';
 import { 
   CheckCircle, Clock, Users, Lightbulb, Target 
 } from 'lucide-react';
 
 const About = () => {
-  // Team members
-  const teamMembers = [
+  const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // Team members with expanded data
+  const teamMembers: TeamMember[] = [
     {
       name: 'Sarah Johnson',
       role: 'CEO & Founder',
-      bio: '15+ years of experience in digital product strategy for Fortune 500 companies.'
+      bio: '15+ years of experience in digital product strategy for Fortune 500 companies.',
+      fullBio: 'Sarah founded ElevateDigital in 2010 after leading digital transformation initiatives at several Fortune 500 companies. With an MBA from Harvard Business School and a background in computer science, she combines business acumen with deep technical knowledge to help enterprises navigate the complex digital landscape. Sarah is a frequent speaker at industry conferences and has been recognized as one of the Top 50 Women in Tech by Forbes.',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80',
+      linkedin: 'https://linkedin.com/in/sarahjohnson',
+      email: 'sarah.johnson@elevatedigital.com'
     },
     {
       name: 'Michael Chen',
       role: 'Chief Technology Officer',
-      bio: 'Former tech lead at major tech companies with expertise in enterprise architecture.'
+      bio: 'Former tech lead at major tech companies with expertise in enterprise architecture.',
+      fullBio: 'Michael brings over 20 years of experience in enterprise software development and architecture. Before joining ElevateDigital, he was the VP of Engineering at a leading cloud services provider and previously held senior positions at Google and Microsoft. He specializes in scalable architecture, cloud infrastructure, and helping enterprises modernize their technology stacks. Michael holds a Ph.D. in Computer Science from MIT and has numerous patents in distributed systems.',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+      linkedin: 'https://linkedin.com/in/michaelchen',
+      email: 'michael.chen@elevatedigital.com'
     },
     {
       name: 'Alicia Rodriguez',
       role: 'Head of Design',
-      bio: 'Award-winning designer specializing in brand identity and user experience design.'
+      bio: 'Award-winning designer specializing in brand identity and user experience design.',
+      fullBio: 'Alicia leads our design practice, bringing a unique blend of creative vision and strategic thinking to client projects. Her work has been recognized with multiple industry awards, including Red Dot and IDEA Design Awards. Before ElevateDigital, she was Design Director at a global branding agency, working with brands like Nike, Apple, and Coca-Cola. Alicia holds a Master\'s in Design from Rhode Island School of Design and teaches UX design at several leading universities.',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80',
+      linkedin: 'https://linkedin.com/in/aliciarodriguez',
+      twitter: 'https://twitter.com/aliciarodesign',
+      email: 'alicia.rodriguez@elevatedigital.com'
     },
     {
       name: 'David Park',
       role: 'Product Strategy Director',
-      bio: 'Product strategy expert with experience launching over 30 successful enterprise products.'
+      bio: 'Product strategy expert with experience launching over 30 successful enterprise products.',
+      fullBio: 'David specializes in product strategy and go-to-market planning for enterprise software and services. In his career spanning 18 years, he has helped launch over 30 successful products across fintech, healthcare, and retail sectors. Prior to ElevateDigital, David was a Senior Product Manager at Salesforce and a consultant with McKinsey's Digital Practice. He holds an MBA from Wharton and is certified in Agile and Design Thinking methodologies.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      linkedin: 'https://linkedin.com/in/davidpark',
+      email: 'david.park@elevatedigital.com'
     }
   ];
 
@@ -52,6 +73,12 @@ const About = () => {
       description: 'We maintain the highest standards in everything we deliver, from strategy to implementation.'
     }
   ];
+
+  // Handle team member click
+  const handleTeamMemberClick = (member: TeamMember) => {
+    setSelectedTeamMember(member);
+    setDrawerOpen(true);
+  };
 
   return (
     <MainLayout>
@@ -202,9 +229,21 @@ const About = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm">
-                <div className="h-48 bg-gray-300">
-                  {/* Replace with actual team member photo */}
+              <div 
+                key={index} 
+                className="bg-white rounded-xl overflow-hidden shadow-sm transition-transform hover:scale-105 cursor-pointer"
+                onClick={() => handleTeamMemberClick(member)}
+              >
+                <div className="h-48 bg-gray-300 overflow-hidden">
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover" 
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-300"></div>
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
@@ -292,6 +331,13 @@ const About = () => {
         subtitle="Let's discuss how we can help transform your digital product strategy."
         buttonText="Get in Touch"
         buttonLink="/contact"
+      />
+
+      {/* Team Member Drawer */}
+      <TeamMemberDrawer 
+        member={selectedTeamMember}
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
       />
     </MainLayout>
   );
