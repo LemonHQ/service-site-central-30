@@ -130,7 +130,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-lg font-semibold mb-2 text-brand-600">UK Office</h4>
+              <h4 className="text-lg font-semibold mb-2 text-brand-600">UK & Europe</h4>
               <p className="text-gray-600">Lemon Marketing & Consultancy Ltd,</p>
               <p className="text-gray-600">128, City Road, London,England, EC1V 2NX</p>
               <p className="text-gray-600 flex items-center mt-2">
@@ -139,7 +139,7 @@ const Footer = () => {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-2 text-brand-600">Delivery & Fulfilment</h4>
+              <h4 className="text-lg font-semibold mb-2 text-brand-600">Middle East</h4>
               <p className="text-gray-600">Lemon Adv, & Pub. LLC</p>
               <p className="text-gray-600">Damas 14 Office Tower, Suite #1948</p>
               <p className="text-gray-600">Al Zahra Street, Sharjah, United Arab Emirates</p>
