@@ -15,8 +15,7 @@ const CompanyOverview: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Brands today are under increasing pressure to deliver digital-first experiences. 
-              We specialize in the complex realities enterprise brands face in today's modern digital commerce ecosystems: regulatory scrutiny, brand consistency across regions, multiple product lines, and accelerating expectations for digital growth. We’re not just digital enablers — we’re strategic partners who understand how to move regulated enterprises from idea to market to scale, safely and smartly.
-              {/* We combine deep industry expertise, experience with regulatory frameworks, and human-centered design to enable enterprise brands navigate today's rapidly evolving digital landscape. */}
+              We specialize in the complex realities enterprise brands face in today's modern digital commerce ecosystems: regulatory scrutiny, brand consistency across regions, multiple product lines, and accelerating expectations for digital growth. We're not just digital enablers — we're strategic partners who understand how to move regulated enterprises from idea to market to scale, safely and smartly.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -61,11 +60,13 @@ const CompanyOverview: React.FC = () => {
               </div>
             </div>
             
-            <Link to="/about">
-              <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
-                Learn About Our Approach
-              </Button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/about">
+                <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
+                  Learn About Our Approach
+                </Button>
+              </Link>
+            </div>
           </div>
           
           <div className="relative">
