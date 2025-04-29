@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -103,6 +103,7 @@ const LeadQualification = () => {
   }>({});
   
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   // Business sectors options
   const sectors = [
@@ -197,10 +198,8 @@ const LeadQualification = () => {
       description: "Thank you for your interest! Our team will contact you shortly.",
     });
     
-    // Redirect to home page after 2 seconds
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 2000);
+    // Redirect to thank you page instead of home page
+    navigate('/thank-you');
   };
 
   // Toggle a sector selection
