@@ -1,10 +1,9 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import SectionHeading from '../ui/SectionHeading';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
-import { Shield, Banknote, Hospital, ArrowRight } from 'lucide-react';
+import { Shield, Banknote, Hospital } from 'lucide-react';
 
 interface Service {
   id: string;
@@ -18,7 +17,6 @@ interface Sector {
   customerPersona: string;
   challenges: string[];
   solution: string;
-  relatedServices: Service[];
 }
 
 const SectorChallenges: React.FC = () => {
@@ -36,12 +34,7 @@ const SectorChallenges: React.FC = () => {
         'Balancing personalization with privacy concerns',
         'Increasing competitive pressure from fintech startups'
       ],
-      solution: 'Our product strategy accelerates digital transformation, helping financial institutions deliver seamless experiences while maintaining security and compliance.',
-      relatedServices: [
-        { id: 'standardize-technology', title: 'Standardize Technology' },
-        { id: 'launching-products', title: 'Launching New Products' },
-        { id: 'connect-ecosystems', title: 'Connect to Digital Ecosystems' }
-      ]
+      solution: 'Our product strategy accelerates digital transformation, helping financial institutions deliver seamless experiences while maintaining security and compliance.'
     },
     {
       id: 'insurance',
@@ -54,12 +47,7 @@ const SectorChallenges: React.FC = () => {
         'Low digital engagement with policy holders',
         'Difficulty differentiating product offerings'
       ],
-      solution: 'We transform insurance products by streamlining customer journeys and creating digital experiences that increase engagement and retention.',
-      relatedServices: [
-        { id: 'designing-experiences', title: 'Designing Brand & Customer Experiences' },
-        { id: 'validating-product-ideas', title: 'Validating Product Ideas' },
-        { id: 'optimize-portfolios', title: 'Optimize Digital Portfolios' }
-      ]
+      solution: 'We transform insurance products by streamlining customer journeys and creating digital experiences that increase engagement and retention.'
     },
     {
       id: 'healthcare',
@@ -72,19 +60,14 @@ const SectorChallenges: React.FC = () => {
         'Balancing digital innovation with data security',
         'Need for accessible yet sophisticated interfaces'
       ],
-      solution: 'Our strategies help healthcare providers deliver integrated patient experiences while maintaining compliance and securing sensitive information.',
-      relatedServices: [
-        { id: 'unify-brand-experiences', title: 'Unify Brand Experiences' },
-        { id: 'ideating-product-concepts', title: 'Ideating Product Concepts' },
-        { id: 'pilot-emerging-tech', title: 'Pilot Emerging Tech' }
-      ]
+      solution: 'Our strategies help healthcare providers deliver integrated patient experiences while maintaining compliance and securing sensitive information.'
     }
   ];
   
   const activeSectorData = sectors.find(sector => sector.id === activeSector) || sectors[0];
   
   return (
-    <section className="section-padding bg-ivory-100">
+    <section className="section-padding bg-ivory-100 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Industry-Specific Solutions" 
@@ -92,7 +75,7 @@ const SectorChallenges: React.FC = () => {
           centered
         />
         
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
           {sectors.map((sector) => (
             <Button
               key={sector.id}
@@ -110,60 +93,32 @@ const SectorChallenges: React.FC = () => {
           ))}
         </div>
         
-        <Card className="border-0 shadow-lg bg-white overflow-hidden transition-all duration-300">
-          <div className="grid md:grid-cols-2 gap-8">
-            <CardContent className="p-8">
-              <div className="bg-beige-100 p-4 inline-block rounded-lg mb-6">
-                {activeSectorData.icon}
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4 text-brand-600">{activeSectorData.title}</h3>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-lg mb-2 text-brand-500">Customer Persona</h4>
-                <p className="text-gray-700">{activeSectorData.customerPersona}</p>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-lg mb-2 text-brand-500">Our Solution</h4>
-                <p className="text-gray-700">{activeSectorData.solution}</p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-lg mb-4 text-brand-500">
-                  Relevant Services
-                </h4>
-                <div className="space-y-3">
-                  {activeSectorData.relatedServices.map((service, idx) => (
-                    <Link 
-                      key={idx}
-                      to={`/services/${service.id}`}
-                      className="flex items-center p-3 border border-beige-200 rounded-md bg-ivory-50 hover:bg-ivory-100 transition-colors group"
-                    >
-                      <span className="flex-1 text-brand-600">{service.title}</span>
-                      <ArrowRight className="w-4 h-4 text-accent-400 transform group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </CardContent>
-            
-            <CardContent className="bg-brand-100 p-8">
-              <h4 className="font-semibold text-lg mb-4 text-brand-500">
-                Key Challenges
-              </h4>
-              <ul className="space-y-4">
-                {activeSectorData.challenges.map((challenge, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="bg-accent-400 rounded-full w-6 h-6 flex items-center justify-center text-white mr-3 mt-0.5 flex-shrink-0">
-                      {index + 1}
-                    </span>
-                    <span className="text-gray-700">{challenge}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
+        <Card className="border-0 shadow-lg bg-white overflow-hidden transition-all duration-300 max-w-4xl mx-auto">
+          <div className="flex items-center space-x-4 p-6 border-b border-beige-200">
+            <div className="bg-beige-100 p-3 rounded-lg">
+              {activeSectorData.icon}
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-brand-600">{activeSectorData.title}</h3>
+              <p className="text-gray-600">{activeSectorData.solution}</p>
+            </div>
           </div>
+          
+          <CardContent className="p-6">
+            <h4 className="font-semibold text-lg mb-4 text-brand-500">
+              Key Challenges
+            </h4>
+            <ul className="space-y-4">
+              {activeSectorData.challenges.map((challenge, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="bg-accent-400 rounded-full w-6 h-6 flex items-center justify-center text-white mr-3 mt-0.5 flex-shrink-0">
+                    {index + 1}
+                  </span>
+                  <span className="text-gray-700">{challenge}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
         </Card>
       </div>
     </section>
