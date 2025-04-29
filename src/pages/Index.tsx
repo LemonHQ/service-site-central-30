@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 
 const Index = () => {
@@ -21,12 +22,12 @@ const Index = () => {
               <p className="text-gray-600">Comprehensive solutions to modernize your business operations and customer experiences.</p>
             </div>
           </div>
-          <a 
-            href="/services" 
+          <Link 
+            to="/services" 
             className="mt-8 inline-block bg-accent-400 hover:bg-accent-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
           >
             Explore Our Services
-          </a>
+          </Link>
         </div>
       </div>
     </MainLayout>

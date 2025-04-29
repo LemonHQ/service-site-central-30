@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Github, Youtube, CheckCircle, MapPin, Mail, Calendar } from 'lucide-react';
@@ -8,14 +7,14 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Footer = () => {
-  // Service links
+  // Service links - Updated with actual services
   const serviceLinks = [
-    { name: 'Design', path: '/services/design' },
-    { name: 'UI Engineering', path: '/services/ui-engineering' },
-    { name: 'Application Development', path: '/services/application-development' },
-    { name: 'Application Modernization', path: '/services/application-modernization' },
-    { name: 'Data Engineering & Modernization', path: '/services/data-engineering' },
-    { name: 'AI Engineering', path: '/services/ai-engineering' },
+    { name: 'Validating Product Ideas', path: '/services/validating-product-ideas' },
+    { name: 'Ideating Product Concepts', path: '/services/ideating-product-concepts' },
+    { name: 'Designing Brand & Customer Experiences', path: '/services/designing-experiences' },
+    { name: 'Launching New Products', path: '/services/launching-products' },
+    { name: 'Scaling Products', path: '/services/scaling-products' },
+    { name: 'Expand Product Offerings', path: '/services/expand-product-offerings' },
   ];
 
   // Industry links
@@ -29,11 +28,11 @@ const Footer = () => {
     { name: 'Insurtech', path: '/industries/insurtech' },
   ];
 
-  // Quick links
+  // Quick links - Renamed Blog to Resources
   const quickLinks = [
-    { name: 'Blog', path: '/blog' },
+    { name: 'Resources', path: '/blog' },
     { name: 'Events', path: '/events' },
-    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Our Work', path: '/case-studies' },
     { name: 'Guides', path: '/guides' },
     { name: 'Talks', path: '/talks' },
     { name: 'Serverless', path: '/serverless' },
@@ -67,9 +66,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Services Column */}
+          {/* Services Column - Renamed to What We Do */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-brand-600">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-brand-600">What We Do</h4>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
@@ -178,11 +177,25 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Link to="/contact">
-                  <Button className="bg-brand-400 hover:bg-brand-500">
-                    Contact Us
-                  </Button>
-                </Link>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="bg-brand-400 hover:bg-brand-500">
+                      Contact Us
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[650px]">
+                    <DialogHeader>
+                      <DialogTitle>Schedule a Meeting</DialogTitle>
+                    </DialogHeader>
+                    <div className="flex justify-center py-4" id="calendar-container">
+                      <iframe 
+                        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true" 
+                        style={{ width: "100%", height: "600px", border: 0 }} 
+                        frameBorder="0"
+                      ></iframe>
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 
                 <Dialog>
                   <DialogTrigger asChild>
@@ -191,7 +204,7 @@ const Footer = () => {
                       Book a Meeting
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
+                  <DialogContent className="sm:max-w-[650px]">
                     <DialogHeader>
                       <DialogTitle>Schedule a Meeting</DialogTitle>
                     </DialogHeader>

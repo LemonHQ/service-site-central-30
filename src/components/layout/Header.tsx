@@ -8,12 +8,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Navigation links
+  // Navigation links - Updated names
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'What We Do', path: '/services' },
+    { name: 'Our Work', path: '/case-studies' },
+    { name: 'Resources', path: '/blog' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -53,9 +53,9 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button - Now links to lead qualification journey */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/lead-qualification">
               <Button className="bg-brand-400 hover:bg-brand-500">
                 Get Started
               </Button>
@@ -87,7 +87,7 @@ const Header = () => {
               </Link>
             ))}
             <Link 
-              to="/contact" 
+              to="/lead-qualification" 
               onClick={() => setIsMenuOpen(false)}
             >
               <Button className="w-full mt-2 bg-brand-400 hover:bg-brand-500">

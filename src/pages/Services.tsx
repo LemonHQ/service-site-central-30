@@ -86,7 +86,7 @@ const Services = () => {
       <section className="bg-brand-100 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 text-brand-700">Our Services</h1>
+            <h1 className="mb-6 text-brand-700">What We Do</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-700">
               Comprehensive digital product services for enterprise brands seeking to innovate and transform.
             </p>

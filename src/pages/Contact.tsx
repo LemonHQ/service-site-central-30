@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { 
-  Mail, Phone, MapPin 
+  Mail, Phone, MapPin, Calendar
 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -22,6 +23,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [bookingDialogOpen, setBookingDialogOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -87,8 +89,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <a href="mailto:contact@elevatedigital.com" className="text-brand-400 hover:text-brand-500">
-                      contact@elevatedigital.com
+                    <a href="mailto:create@lemonhq.io" className="text-brand-400 hover:text-brand-500">
+                      create@lemonhq.io
                     </a>
                   </div>
                 </div>
@@ -227,13 +229,25 @@ const Contact = () => {
                     </div>
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full md:w-auto bg-brand-400 hover:bg-brand-500"
-                    disabled={loading}
-                  >
-                    {loading ? 'Sending...' : 'Submit Request'}
-                  </Button>
+                  <div className="flex flex-col md:flex-row md:justify-between gap-4">
+                    <Button 
+                      type="submit" 
+                      className="md:w-auto bg-brand-400 hover:bg-brand-500"
+                      disabled={loading}
+                    >
+                      {loading ? 'Sending...' : 'Submit Request'}
+                    </Button>
+                    
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100"
+                      onClick={() => setBookingDialogOpen(true)}
+                    >
+                      <Calendar className="h-4 w-4" />
+                      Request Consultation
+                    </Button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -250,6 +264,22 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Booking Dialog */}
+      <Dialog open={bookingDialogOpen} onOpenChange={setBookingDialogOpen}>
+        <DialogContent className="sm:max-w-[650px]">
+          <DialogHeader>
+            <DialogTitle>Schedule a Meeting</DialogTitle>
+          </DialogHeader>
+          <div className="flex justify-center py-4" id="calendar-container">
+            <iframe 
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true" 
+              style={{ width: "100%", height: "600px", border: 0 }} 
+              frameBorder="0"
+            ></iframe>
+          </div>
+        </DialogContent>
+      </Dialog>
     </MainLayout>
   );
 };
