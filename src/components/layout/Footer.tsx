@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Github, Youtube, CheckCircle } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github, Youtube, CheckCircle, MapPin, Phone, Mail, Calendar } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 const Footer = () => {
   // Service links
@@ -133,9 +135,23 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-2 text-brand-600">UK & Europe</h4>
               <p className="text-gray-600">Lemon Marketing & Consultancy Ltd,</p>
               <p className="text-gray-600">128, City Road, London,England, EC1V 2NX</p>
-              <p className="text-gray-600 flex items-center mt-2">
-                <span className="mr-2">+44-7570-631159</span>
-              </p>
+              <div className="text-gray-600 flex items-center mt-2">
+                <Phone size={16} className="mr-2 text-brand-500" />
+                <a href="tel:+44-7570-631159" className="hover:text-brand-500 transition-colors">
+                  +44-7570-631159
+                </a>
+              </div>
+              <div className="mt-3">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100"
+                  onClick={() => window.open("https://maps.google.com/?q=128, City Road, London, England, EC1V 2NX", "_blank")}
+                >
+                  <MapPin size={16} />
+                  Get Directions
+                </Button>
+              </div>
             </div>
             
             <div>
@@ -143,9 +159,58 @@ const Footer = () => {
               <p className="text-gray-600">Lemon Adv, & Pub. LLC</p>
               <p className="text-gray-600">Damas 14 Office Tower, Suite #1948</p>
               <p className="text-gray-600">Al Zahra Street, Sharjah, United Arab Emirates</p>
-              <p className="text-gray-600 flex items-center mt-2">
-                <span className="mr-2">+971-6-5629519</span>
-              </p>
+              <div className="text-gray-600 flex items-center mt-2">
+                <Phone size={16} className="mr-2 text-brand-500" />
+                <a href="tel:+971-6-5629519" className="hover:text-brand-500 transition-colors">
+                  +971-6-5629519
+                </a>
+              </div>
+              <div className="mt-3">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100"
+                  onClick={() => window.open("https://maps.google.com/?q=Damas 14 Office Tower, Al Zahra Street, Sharjah, UAE", "_blank")}
+                >
+                  <MapPin size={16} />
+                  Get Directions
+                </Button>
+              </div>
+            </div>
+            
+            {/* Get in touch section */}
+            <div className="mt-6 space-y-3">
+              <h4 className="text-lg font-semibold text-brand-600">Get in Touch</h4>
+              <div className="flex items-center">
+                <Mail size={16} className="mr-2 text-brand-500" />
+                <a href="mailto:create@lemonhq.io" className="text-brand-500 hover:underline">
+                  create@lemonhq.io
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Link to="/contact">
+                  <Button className="bg-brand-400 hover:bg-brand-500">
+                    Contact Us
+                  </Button>
+                </Link>
+                
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="outline" className="border-brand-400 text-brand-500 hover:bg-brand-100">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      Book a Meeting
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0">
+                    {/* Google Calendar embed */}
+                    <div className="p-4" id="calendar-container">
+                      {/* The script will attach the button here */}
+                      <div className="w-full" id="calendar-button-container"></div>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              </div>
             </div>
           </div>
 
@@ -212,12 +277,44 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Disclaimer and Copyright */}
         <Separator className="my-8" />
         <div className="text-center text-gray-600 text-sm">
-          &copy; 2019 - {new Date().getFullYear()} ElevateDigital. All Rights Reserved.
+          <p className="mb-3">
+            © 2025 LemonHQ. All rights reserved.
+          </p>
+          <p className="mb-2">
+            UAE registered company number 567068, at Damas 14 Office tower Suite 1948, Sharjah, UAE
+          </p>
+          <p>
+            England & Wales registered company number 14313332 at 128, City Road, London, England, EC1V 2NX
+          </p>
         </div>
       </div>
+      
+      {/* Google Calendar Script */}
+      <script dangerouslySetInnerHTML={{ __html: `
+        // Add Google Calendar Scripts
+        const calendarCss = document.createElement('link');
+        calendarCss.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
+        calendarCss.rel = 'stylesheet';
+        document.head.appendChild(calendarCss);
+
+        const calendarScript = document.createElement('script');
+        calendarScript.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
+        calendarScript.async = true;
+        document.head.appendChild(calendarScript);
+
+        // Initialize Calendar Button
+        calendarScript.onload = function() {
+          window.calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true',
+            color: '#039BE5',
+            label: 'Book an appointment',
+            target: document.getElementById('calendar-button-container'),
+          });
+        };
+      ` }} />
     </footer>
   );
 };
