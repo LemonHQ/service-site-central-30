@@ -72,20 +72,20 @@ const CompanyOverview: React.FC = () => {
             <div className="bg-brand-100 rounded-lg p-8 relative z-10">
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">15+</h3>
-                  <p className="text-gray-600">Years of Experience</p>
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2">17+</h3>
+                  <p className="text-gray-600">Years of experience</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">200+</h3>
-                  <p className="text-gray-600">Enterprise Clients</p>
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2">50+</h3>
+                  <p className="text-gray-600">Products launched</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">92%</h3>
-                  <p className="text-gray-600">Client Retention</p>
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2">$10M+</h3>
+                  <p className="text-gray-600">Transactions enabled</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">500+</h3>
-                  <p className="text-gray-600">Successful Projects</p>
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2">100+</h3>
+                  <p className="text-gray-600">Portfolio under management</p>
                 </div>
               </div>
             </div>
