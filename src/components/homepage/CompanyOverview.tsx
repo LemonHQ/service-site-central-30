@@ -15,7 +15,6 @@ const CompanyOverview: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               We enable enterprises with diverse brand portfolios and complex product lines move from idea to market to scale — faster, safer, and with full regulatory alignment.
-             <!-- We combine deep industry expertise, experience with regulatory frameworks, and human-centered design to enable enterprise brands navigate today's rapidly evolving digital landscape.-->
             </p>
             
             <div className="space-y-4 mb-8">
