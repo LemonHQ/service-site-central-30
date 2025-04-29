@@ -95,7 +95,7 @@ const ProductExpansion: React.FC = () => {
         
         <div className="text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to transform your digital strategy and increase your market share? Our end-to-end approach helps you navigate every stage of your digital maturity journey.
+            Ready to operationalize your digital strategy? Our strategic approach enables you to navigate every stage of your digital maturity journey with confidence and assurance.
           </p>
           <Link to="/services">
             <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
