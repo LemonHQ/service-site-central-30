@@ -84,8 +84,8 @@ const CompanyOverview: React.FC = () => {
                   <p className="text-gray-600">Transactions enabled</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">100+</h3>
-                  <p className="text-gray-600">Portfolio under management</p>
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2">10+</h3>
+                  <p className="text-gray-600">Portfolios under management</p>
                 </div>
               </div>
             </div>
