@@ -29,14 +29,14 @@ const ClientsSection: React.FC = () => {
   // Technology expertise with updated logo URLs
   const technologyExpertise: Alliance[] = [
     // Fixed Adobe Experience Manager logo
-    { name: "Adobe Experience", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Adobe_Experience_Cloud_logo.svg" },
+    { name: "Adobe Experience", logoUrl: "https://stensul.com/wp-content/uploads/2021/07/AEM.png" },
     // Fixed Drupal logo
     { name: "Drupal", logoUrl: "https://www.drupal.org/files/Wordmark_blue_RGB.png" },
     { name: "WordPress", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" },
     { name: "Stripe", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" },
     { name: "WooCommerce", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
     // Fixed Pimcore logo
-    { name: "Pimcore", logoUrl: "https://pimcore.com/en/resources/images/logo/pimcore-logo.svg" }
+    { name: "Pimcore", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/Pimcore-logo-5.svg" }
   ];
 
   return (
