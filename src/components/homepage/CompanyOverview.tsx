@@ -1,14 +1,59 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Users, Database, Globe } from 'lucide-react';
 
 const CompanyOverview: React.FC = () => {
+  // State for animated stats
+  const [years, setYears] = useState(0);
+  const [products, setProducts] = useState(0);
+  const [transactions, setTransactions] = useState(0);
+  const [portfolios, setPortfolios] = useState(0);
+
+  // Target values for stats
+  const targetYears = 17;
+  const targetProducts = 50;
+  const targetTransactions = 10; // For $10M+
+  const targetPortfolios = 10;
+
+  // Animation effect
+  useEffect(() => {
+    // Duration for the animation in milliseconds
+    const animationDuration = 1500;
+    // Number of steps in the animation
+    const steps = 50;
+    // Time for each step
+    const stepTime = animationDuration / steps;
+
+    // Increment values for each step
+    const yearIncrement = targetYears / steps;
+    const productIncrement = targetProducts / steps;
+    const transactionIncrement = targetTransactions / steps;
+    const portfolioIncrement = targetPortfolios / steps;
+
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      
+      setYears(Math.min(Math.round(yearIncrement * currentStep), targetYears));
+      setProducts(Math.min(Math.round(productIncrement * currentStep), targetProducts));
+      setTransactions(Math.min(Math.round(transactionIncrement * currentStep), targetTransactions));
+      setPortfolios(Math.min(Math.round(portfolioIncrement * currentStep), targetPortfolios));
+      
+      if (currentStep >= steps) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="section-padding">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-brand-700">
               Why Us
@@ -72,20 +117,20 @@ const CompanyOverview: React.FC = () => {
           <div className="relative">
             <div className="bg-brand-100 rounded-lg p-8 relative z-10">
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">17+</h3>
+                <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{years}+</h3>
                   <p className="text-gray-600">Years of experience</p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">50+</h3>
+                <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{products}+</h3>
                   <p className="text-gray-600">Products launched</p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">$10M+</h3>
+                <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">${transactions}M+</h3>
                   <p className="text-gray-600">Transactions enabled</p>
                 </div>
-                <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2">10+</h3>
+                <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{portfolios}+</h3>
                   <p className="text-gray-600">Portfolios under management</p>
                 </div>
               </div>
