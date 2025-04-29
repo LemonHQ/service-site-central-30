@@ -22,7 +22,7 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_of_OQ_Chemicals.svg"
   }, {
     name: "RJC",
-    logo: "https://lemonhq.io/_gatsby/image/39acf1b8bf48468dcf04fe7b841f2107/48b6165d4d31291ee55086ebb81edfc3/resize-file-white.avif"
+    logo: "https://portal.responsiblejewellery.com/images/default-source/default-album/logo-rjc2020-rgb-1bd66e1ff6e234a39b027614b28874303.png"
   }, {
     name: "Samsung",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
