@@ -6,12 +6,12 @@ import { Button } from '@/components/ui/button';
 const SpotlightCarousel: React.FC = () => {
   const content = {
     title: "Expanding and scaling compliant digital portfolios for enterprise brands",
-    description: "In today’s competitive and highly regulated markets, launching and scaling digital portfolios isn’t just about speed — it’s about precision, compliance, and protecting brand integrity across every region and channel.",
+    description: "In today's competitive and highly regulated markets, launching and scaling digital portfolios isn't just about speed — it's about precision, compliance, and protecting brand integrity across every region and channel.",
     buttonText: "Explore Our Services",
     buttonLink: "/services",
     secondaryButtonText: "Contact Us",
     secondaryButtonLink: "/contact",
-    bgImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80"
+    bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80"
   };
   
   return (
