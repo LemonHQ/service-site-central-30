@@ -82,36 +82,38 @@ const CaseStudiesCarousel: React.FC = () => {
             <CarouselContent className="-ml-4">
               {caseStudies.map((study, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden h-full">
-                    <div className="h-48 bg-gray-100">
-                      <img 
-                        src={study.image} 
-                        alt={study.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <CardContent className="pt-6 pb-2">
-                      <div className="flex gap-2 mb-2">
-                        <span className="text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
-                          {study.industry}
-                        </span>
-                        <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-                          {study.service}
-                        </span>
+                  <Link to={study.link} className="block h-full">
+                    <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
+                      <div className="h-48 bg-gray-100">
+                        <img 
+                          src={study.image} 
+                          alt={study.title} 
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <CardTitle className="mb-2 text-xl">{study.title}</CardTitle>
-                      <p className="text-sm text-gray-500 mb-2">Client: {study.client}</p>
-                      <p className="text-gray-600">{study.description}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <Link to={study.link} className="text-brand-400 hover:text-brand-500 font-medium inline-flex items-center">
-                        Read case study
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </CardFooter>
-                  </Card>
+                      <CardContent className="pt-6 pb-2">
+                        <div className="flex gap-2 mb-2">
+                          <span className="text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
+                            {study.industry}
+                          </span>
+                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+                            {study.service}
+                          </span>
+                        </div>
+                        <CardTitle className="mb-2 text-xl">{study.title}</CardTitle>
+                        <p className="text-sm text-gray-500 mb-2">Client: {study.client}</p>
+                        <p className="text-gray-600">{study.description}</p>
+                      </CardContent>
+                      <CardFooter>
+                        <div className="text-brand-400 hover:text-brand-500 font-medium inline-flex items-center">
+                          Read case study
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </CardFooter>
+                    </Card>
+                  </Link>
                 </CarouselItem>
               ))}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">

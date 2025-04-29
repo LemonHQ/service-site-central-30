@@ -7,7 +7,7 @@ const Index = () => {
     <MainLayout>
       <div className="min-h-screen flex items-center justify-center bg-ivory-100">
         <div className="text-center p-8 max-w-3xl">
-          <h1 className="text-4xl font-bold mb-6 text-brand-600">Welcome to Our Professional Services</h1>
+          <h1 className="text-4xl font-bold mb-6 text-brand-600">Welcome to LemonHQ Professional Services</h1>
           <p className="text-xl text-gray-700 mb-8">
             We specialize in delivering exceptional solutions that drive business growth and innovation.
           </p>
