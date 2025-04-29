@@ -9,14 +9,14 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
 }) => {
   // Top enterprise brand logos
   const clientLogos = [{
-    name: "Microsoft",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+    name: "Abbott",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Abbott_Laboratories_logo.svg"
   }, {
-    name: "Apple",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+    name: "Liva",
+    logo: "https://companieslogo.com/img/orig/LIVA.OM-38255c53.svg"
   }, {
-    name: "Amazon",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+    name: "Abdul Latif Jameel",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Logo-Abdul-Latif-Jameel-co.png"
   }, {
     name: "Google",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
