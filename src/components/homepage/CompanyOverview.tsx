@@ -11,7 +11,7 @@ const CompanyOverview: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-brand-700">
-              Expert product innovation for regulated enterprise brands
+              Why Us
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               We enable enterprises with diverse brand portfolios and complex product lines move from idea to market to scale — faster, safer, and with full regulatory alignment.
