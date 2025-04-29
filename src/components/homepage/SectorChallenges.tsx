@@ -22,12 +22,13 @@ const SectorChallenges: React.FC = () => {
       id: 'financial',
       title: 'Financial Sector',
       icon: <Banknote className="h-8 w-8 text-accent-400" />,
-      customerPersona: 'Financial Product Directors who need to quickly adapt to changing market conditions and regulatory requirements',
+      customerPersona: 'Financial Product owners who need to quickly adapt to changing market conditions and regulatory requirements',
       challenges: [
         'Legacy systems slowing down innovation',
         'Difficulty delivering consistent omnichannel experiences',
         'Balancing personalization with privacy concerns',
-        'Increasing competitive pressure from fintech startups'
+        'Increasing competitive pressure from fintech startups',
+        'Pressure to modernize while maintaining legacy infrastructure for critical operations'
       ],
       solution: 'Our product strategy accelerates digital transformation, helping financial institutions deliver seamless experiences while maintaining security and compliance.'
     },
@@ -35,12 +36,14 @@ const SectorChallenges: React.FC = () => {
       id: 'insurance',
       title: 'Insurance Sector',
       icon: <Shield className="h-8 w-8 text-accent-400" />,
-      customerPersona: 'Insurance Innovation Managers struggling with digital adoption and customer engagement',
+      customerPersona: 'Insurance innovation stakeholders struggling with digital adoption and customer retention',
       challenges: [
         'Complex customer journeys with multiple touchpoints',
         'Outdated claims processing experiences',
         'Low digital engagement with policy holders',
-        'Difficulty differentiating product offerings'
+        'Difficulty differentiating product offerings',
+        'Lack of real-time data visibility for both customers and internal teams',
+        'Challenges in integrating new technologies with traditional agent/broker models'
       ],
       solution: 'We transform insurance products by streamlining customer journeys and creating digital experiences that increase engagement and retention.'
     },
@@ -48,12 +51,13 @@ const SectorChallenges: React.FC = () => {
       id: 'healthcare',
       title: 'Healthcare Sector',
       icon: <Hospital className="h-8 w-8 text-accent-400" />,
-      customerPersona: 'Healthcare Product Leaders navigating intricate patient needs and compliance requirements',
+      customerPersona: 'Healthcare product leaders navigating personalized intricate patient needs and local regulatory requirements',
       challenges: [
-        'Fragmented patient experiences across services',
-        'Strict regulatory and compliance considerations',
-        'Balancing digital innovation with data security',
-        'Need for accessible yet sophisticated interfaces'
+        'Fragmented patient experiences across services and providers',
+        'Strict regulatory and data compliance considerations',
+        'Balancing digital innovation with privacy and security',
+        'Need for accessible yet sophisticated interfaces',
+        'Regulatory hurdles in launching new healthcare products or bundles across markets'
       ],
       solution: 'Our strategies help healthcare providers deliver integrated patient experiences while maintaining compliance and securing sensitive information.'
     }
@@ -65,7 +69,7 @@ const SectorChallenges: React.FC = () => {
     <section className="section-padding bg-ivory-100 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
-          title="Industry-Specific Solutions" 
+          title="What we optimize for" 
           subtitle="We solve the complex brand and product challenges that regulated industries face when transitioning to digital-first."
           centered
         />
