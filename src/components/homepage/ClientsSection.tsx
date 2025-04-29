@@ -79,7 +79,7 @@ const ClientsSection: React.FC = () => {
                 <img 
                   src={tech.logoUrl} 
                   alt={`${tech.name} logo`} 
-                  className="h-7 object-contain" 
+                  className={`${tech.name === "Adobe Experience" ? "h-12" : "h-7"} object-contain`} 
                 />
               </div>
             ))}
