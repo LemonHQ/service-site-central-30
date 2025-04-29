@@ -18,26 +18,20 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
     name: "Abdul Latif Jameel",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Logo-Abdul-Latif-Jameel-co.png"
   }, {
-    name: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+    name: "OQ",
+    logo: "https://lemonhq.io/_gatsby/image/f094b9b63f38e3c17f385626f65baaac/48b6165d4d31291ee55086ebb81edfc3/oq-white.avif"
   }, {
-    name: "IBM",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+    name: "RJC",
+    logo: "https://lemonhq.io/_gatsby/image/39acf1b8bf48468dcf04fe7b841f2107/48b6165d4d31291ee55086ebb81edfc3/resize-file-white.avif"
   }, {
     name: "Samsung",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
   }, {
-    name: "Intel",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg"
+    name: "RSA",
+    logo: "https://lemonhq.io/_gatsby/image/93a3a6240d5b12e7c6a79f86f2f9a14f/48b6165d4d31291ee55086ebb81edfc3/rsa-dark.avif"
   }, {
-    name: "Cisco",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg"
-  }, {
-    name: "Oracle",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg"
-  }, {
-    name: "SAP",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"
+    name: "Dubai Police",
+    logo: "https://lemonhq.io/_gatsby/image/0962d60269680c5b6ce5a746842c0364/48b6165d4d31291ee55086ebb81edfc3/dubai-police-white.avif"
   }];
 
   // Create a plugin instance for autoplay
