@@ -31,7 +31,7 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
     logo: "https://upload.wikimedia.org/wikipedia/en/8/8c/RSA_Insurance_Group_%28emblem%29.svg"
   }, {
     name: "Dubai Police",
-    logo: "https://lemonhq.io/_gatsby/image/0962d60269680c5b6ce5a746842c0364/48b6165d4d31291ee55086ebb81edfc3/dubai-police-white.avif"
+    logo: "https://vectorlogoseek.com/wp-content/uploads/2020/02/dubai-police-logo-vector.png"
   }];
 
   // Create a plugin instance for autoplay
