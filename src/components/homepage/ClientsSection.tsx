@@ -55,12 +55,12 @@ const ClientsSection: React.FC = () => {
             {platformAlliances.map((alliance, index) => (
               <div 
                 key={`platform-${index}`} 
-                className="flex items-center justify-center p-4 rounded-lg shadow-sm h-24 hover:shadow-md transition-shadow bg-transparent"
+                className="flex items-center justify-center p-4 rounded-lg shadow-sm h-24 hover:shadow-lg hover:-translate-y-1 hover:rotate-1 transition-all duration-300 bg-transparent"
               >
                 <img 
                   src={alliance.logoUrl} 
                   alt={`${alliance.name} logo`} 
-                  className="h-12 object-contain" 
+                  className="h-7 object-contain" 
                 />
               </div>
             ))}
@@ -74,12 +74,12 @@ const ClientsSection: React.FC = () => {
             {technologyExpertise.map((tech, index) => (
               <div 
                 key={`tech-${index}`} 
-                className="flex items-center justify-center p-4 rounded-lg shadow-sm h-24 hover:shadow-md transition-shadow bg-transparent"
+                className="flex items-center justify-center p-4 rounded-lg shadow-sm h-24 hover:shadow-lg hover:-translate-y-1 hover:rotate-1 transition-all duration-300 bg-transparent"
               >
                 <img 
                   src={tech.logoUrl} 
                   alt={`${tech.name} logo`} 
-                  className="h-12 object-contain" 
+                  className="h-7 object-contain" 
                 />
               </div>
             ))}
