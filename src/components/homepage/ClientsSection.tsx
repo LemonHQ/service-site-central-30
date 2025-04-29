@@ -1,41 +1,36 @@
 
 import React from 'react';
 import SectionHeading from '../ui/SectionHeading';
-import { 
-  Globe, Cloud, Monitor, Server, Code, Share2, 
-  MessageCircle, Database, FileCode, Bell, Palette, 
-  Layout, FileEdit, CreditCard, ShoppingCart, Package
-} from 'lucide-react';
 
 interface Alliance {
   name: string;
-  icon: React.ReactNode;
+  logoUrl: string;
 }
 
 const ClientsSection: React.FC = () => {
   // Platform alliances
   const platformAlliances: Alliance[] = [
-    { name: "AWS", icon: <Cloud className="w-8 h-8" /> },
-    { name: "Azure", icon: <Server className="w-8 h-8" /> },
-    { name: "Google", icon: <Globe className="w-8 h-8" /> },
-    { name: "Netlify", icon: <Monitor className="w-8 h-8" /> },
-    { name: "Gatsby", icon: <Code className="w-8 h-8" /> },
-    { name: "Meta", icon: <Share2 className="w-8 h-8" /> },
-    { name: "TikTok", icon: <MessageCircle className="w-8 h-8" /> },
-    { name: "Back4App", icon: <Database className="w-8 h-8" /> },
-    { name: "Parse Server", icon: <FileCode className="w-8 h-8" /> },
-    { name: "Firebase", icon: <Database className="w-8 h-8" /> },
-    { name: "Twilio", icon: <Bell className="w-8 h-8" /> }
+    { name: "AWS", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+    { name: "Azure", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" },
+    { name: "Google", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" },
+    { name: "Netlify", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg" },
+    { name: "Gatsby", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/08/Gatsby_Logo.svg" },
+    { name: "Meta", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+    { name: "TikTok", logoUrl: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" },
+    { name: "Back4App", logoUrl: "https://www.back4app.com/assets/back4app-logo.svg" },
+    { name: "Parse Server", logoUrl: "https://parseplatform.org/img/logo.svg" },
+    { name: "Firebase", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" },
+    { name: "Twilio", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg" }
   ];
 
   // Technology expertise
   const technologyExpertise: Alliance[] = [
-    { name: "Adobe Experience", icon: <Palette className="w-8 h-8" /> },
-    { name: "Drupal", icon: <Layout className="w-8 h-8" /> },
-    { name: "WordPress", icon: <FileEdit className="w-8 h-8" /> },
-    { name: "Stripe", icon: <CreditCard className="w-8 h-8" /> },
-    { name: "WooCommerce", icon: <ShoppingCart className="w-8 h-8" /> },
-    { name: "Pimcore", icon: <Package className="w-8 h-8" /> }
+    { name: "Adobe Experience", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Adobe_Experience_Cloud_logo.svg" },
+    { name: "Drupal", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/75/Drupal_logo.svg" },
+    { name: "WordPress", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" },
+    { name: "Stripe", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" },
+    { name: "WooCommerce", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
+    { name: "Pimcore", logoUrl: "https://pimcore.com/assets/icons/pimcore-logo.svg" }
   ];
 
   return (
@@ -56,9 +51,11 @@ const ClientsSection: React.FC = () => {
                 key={`platform-${index}`} 
                 className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm h-32 hover:shadow-md transition-shadow"
               >
-                <div className="text-brand-500 mb-3">
-                  {alliance.icon}
-                </div>
+                <img 
+                  src={alliance.logoUrl} 
+                  alt={`${alliance.name} logo`} 
+                  className="h-12 mb-3 object-contain" 
+                />
                 <p className="text-sm text-center font-medium text-gray-700">{alliance.name}</p>
               </div>
             ))}
@@ -74,9 +71,11 @@ const ClientsSection: React.FC = () => {
                 key={`tech-${index}`} 
                 className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm h-32 hover:shadow-md transition-shadow"
               >
-                <div className="text-brand-500 mb-3">
-                  {tech.icon}
-                </div>
+                <img 
+                  src={tech.logoUrl} 
+                  alt={`${tech.name} logo`} 
+                  className="h-12 mb-3 object-contain" 
+                />
                 <p className="text-sm text-center font-medium text-gray-700">{tech.name}</p>
               </div>
             ))}
