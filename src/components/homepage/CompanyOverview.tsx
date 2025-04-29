@@ -18,6 +18,18 @@ const CompanyOverview: React.FC = () => {
             </p>
             
             <div className="space-y-4 mb-8">
+
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Globe className="w-6 h-6 text-brand-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Global Perspective</h4>
+                  <p className="text-gray-600">Experience working with multi-market enterprises and brands with diverse product lines.</p>
+                </div>
+              </div>
+            </div>
+            
               <div className="flex items-start">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Users className="w-6 h-6 text-brand-400" />
@@ -34,20 +46,11 @@ const CompanyOverview: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Data-Driven Approach</h4>
-                  <p className="text-gray-600">Insights and analytics that inform every decision and strategy.</p>
+                  <p className="text-gray-600">Insights and analytics inform every decision and strategy.</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="bg-brand-100 p-2 rounded-full mr-4">
-                  <Globe className="w-6 h-6 text-brand-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Global Perspective</h4>
-                  <p className="text-gray-600">Experience working with multinational enterprise brands across industries.</p>
-                </div>
-              </div>
-            </div>
+
             
             <Link to="/about">
               <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
