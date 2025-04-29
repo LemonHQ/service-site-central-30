@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const SpotlightCarousel: React.FC = () => {
   const content = {
     title: "Expanding and scaling digital offerings for enterprise brands",
-    description: "Turn innovative ideas and business models into validated product opportunities to drive new revenue and growth.",
+    description: "Turn innovative ideas and business models into validated product opportunities to participate in modern digital ecosystems and drive competitive edge",
     buttonText: "Explore Our Services",
     buttonLink: "/services",
     secondaryButtonText: "Contact Us",
