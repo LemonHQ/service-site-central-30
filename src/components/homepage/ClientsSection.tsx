@@ -2,9 +2,9 @@
 import React from 'react';
 import SectionHeading from '../ui/SectionHeading';
 import { 
-  Aws, Azure, Google, Netlify, Gatsby, Meta, Tiktok, 
-  Back4app, Firebase, Twilio, AdobeExperience, Drupal, 
-  Wordpress, Stripe, Woocommerce, Pimcore
+  Globe, Cloud, Monitor, Server, Code, Share2, 
+  MessageCircle, Database, FileCode, Bell, Palette, 
+  Layout, FileEdit, CreditCard, ShoppingCart, Package
 } from 'lucide-react';
 
 interface Alliance {
@@ -15,27 +15,27 @@ interface Alliance {
 const ClientsSection: React.FC = () => {
   // Platform alliances
   const platformAlliances: Alliance[] = [
-    { name: "AWS", icon: <Aws className="w-8 h-8" /> },
-    { name: "Azure", icon: <Azure className="w-8 h-8" /> },
-    { name: "Google", icon: <Google className="w-8 h-8" /> },
-    { name: "Netlify", icon: <Netlify className="w-8 h-8" /> },
-    { name: "Gatsby", icon: <Gatsby className="w-8 h-8" /> },
-    { name: "Meta", icon: <Meta className="w-8 h-8" /> },
-    { name: "TikTok", icon: <Tiktok className="w-8 h-8" /> },
-    { name: "Back4App", icon: <Back4app className="w-8 h-8" /> },
-    { name: "Parse Server", icon: <Firebase className="w-8 h-8" /> },
-    { name: "Firebase", icon: <Firebase className="w-8 h-8" /> },
-    { name: "Twilio", icon: <Twilio className="w-8 h-8" /> }
+    { name: "AWS", icon: <Cloud className="w-8 h-8" /> },
+    { name: "Azure", icon: <Server className="w-8 h-8" /> },
+    { name: "Google", icon: <Globe className="w-8 h-8" /> },
+    { name: "Netlify", icon: <Monitor className="w-8 h-8" /> },
+    { name: "Gatsby", icon: <Code className="w-8 h-8" /> },
+    { name: "Meta", icon: <Share2 className="w-8 h-8" /> },
+    { name: "TikTok", icon: <MessageCircle className="w-8 h-8" /> },
+    { name: "Back4App", icon: <Database className="w-8 h-8" /> },
+    { name: "Parse Server", icon: <FileCode className="w-8 h-8" /> },
+    { name: "Firebase", icon: <Database className="w-8 h-8" /> },
+    { name: "Twilio", icon: <Bell className="w-8 h-8" /> }
   ];
 
   // Technology expertise
   const technologyExpertise: Alliance[] = [
-    { name: "Adobe Experience", icon: <AdobeExperience className="w-8 h-8" /> },
-    { name: "Drupal", icon: <Drupal className="w-8 h-8" /> },
-    { name: "WordPress", icon: <Wordpress className="w-8 h-8" /> },
-    { name: "Stripe", icon: <Stripe className="w-8 h-8" /> },
-    { name: "WooCommerce", icon: <Woocommerce className="w-8 h-8" /> },
-    { name: "Pimcore", icon: <Pimcore className="w-8 h-8" /> }
+    { name: "Adobe Experience", icon: <Palette className="w-8 h-8" /> },
+    { name: "Drupal", icon: <Layout className="w-8 h-8" /> },
+    { name: "WordPress", icon: <FileEdit className="w-8 h-8" /> },
+    { name: "Stripe", icon: <CreditCard className="w-8 h-8" /> },
+    { name: "WooCommerce", icon: <ShoppingCart className="w-8 h-8" /> },
+    { name: "Pimcore", icon: <Package className="w-8 h-8" /> }
   ];
 
   return (
