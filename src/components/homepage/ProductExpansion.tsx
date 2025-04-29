@@ -5,10 +5,10 @@ import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import { 
-  Lightbulb, 
-  Rocket, 
-  Scale,
-  Expand
+  Globe, 
+  Database, 
+  Expand,
+  ArrowRight
 } from 'lucide-react';
 
 interface ExpansionStrategyProps {
@@ -39,27 +39,27 @@ const ExpansionStrategy: React.FC<ExpansionStrategyProps> = ({ icon, title, desc
 const ProductExpansion: React.FC = () => {
   const expansionStrategies = [
     {
-      icon: <Lightbulb className="h-8 w-8 text-purple-500" />,
-      title: "Incubate",
-      description: "Turn early-stage concepts into validated product opportunities through structured ideation, customer insight, prototyping, and regulatory input.",
+      icon: <Globe className="h-8 w-8 text-purple-500" />,
+      title: "Unify brand experiences",
+      description: "Create consistent, cohesive brand experiences across all digital touchpoints while maintaining regulatory compliance.",
       color: "bg-purple-100"
     },
     {
-      icon: <Rocket className="h-8 w-8 text-red-500" />,
-      title: "Launch",
-      description: "Launch digital offerings with speed, compliance, and brand consistency across multiple regions and product lines.",
+      icon: <Database className="h-8 w-8 text-red-500" />,
+      title: "Digitalize product lines",
+      description: "Transform traditional product offerings into digital experiences with compliance and brand consistency at their core.",
       color: "bg-red-100"
     },
     {
       icon: <Expand className="h-8 w-8 text-blue-500" />,
-      title: "Expand",
-      description: "Enter new markets confidently with localized product strategies, regulatory alignment, and portfolio coordination.",
+      title: "Expand product offerings",
+      description: "Strategically grow your product portfolio with localized strategies and cross-portfolio synergies.",
       color: "bg-blue-100"
     },
     {
-      icon: <Scale className="h-8 w-8 text-green-500" />,
-      title: "Scale",
-      description: "Standardize and unify  product portfolios to reduce risk, improve efficiency, and prepare for modernization at enterprise scale.",
+      icon: <ArrowRight className="h-8 w-8 text-green-500" />,
+      title: "Scale digital experiences",
+      description: "Standardize and optimize your digital ecosystem to reduce risk, improve efficiency, and prepare for enterprise-level growth.",
       color: "bg-green-100"
     }
   ];
