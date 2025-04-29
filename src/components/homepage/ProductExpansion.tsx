@@ -69,7 +69,7 @@ const ProductExpansion: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionHeading 
           title="What we do" 
-          subtitle="From idea to market to scale — services designed to enable you at every stage of your digital maturity journey."
+          subtitle="We enable enterprises with diverse brand portfolios and complex product lines move from idea to market to scale — faster, safer, and with full regulatory alignment."
           centered
           className="mb-16"
         />
