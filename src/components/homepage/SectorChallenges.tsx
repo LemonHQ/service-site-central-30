@@ -88,7 +88,7 @@ const SectorChallenges: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Industry-Specific Solutions" 
-          subtitle="We address complex product and brand challenges across key regulated industries"
+          subtitle="We solve the complex brand and product challenges that regulated industries face when transitioning to digital."
           centered
         />
         
