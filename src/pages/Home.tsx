@@ -39,7 +39,7 @@ const Home = () => {
       <ClientsSection />
       
       {/* Partners Section with Logos */}
-      <PartnersSection />
+      {/*<PartnersSection />*/}
       
       {/* Blog Articles Carousel */}
       <BlogCarousel />
