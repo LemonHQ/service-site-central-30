@@ -11,10 +11,10 @@ const CompanyOverview: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-brand-700">
-              Expert Product Innovation for Enterprise Brands
+              Expert product innovation for regulated enterprise brands
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              We combine deep industry expertise, cutting-edge technology, and human-centered design to help enterprise brands succeed in today's rapidly evolving digital landscape.
+              We combine deep industry expertise, experience with regulatory frameworks, and human-centered design to enable enterprise brands navigate today's rapidly evolving digital landscape.
             </p>
             
             <div className="space-y-4 mb-8">
