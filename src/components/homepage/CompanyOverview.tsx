@@ -23,8 +23,8 @@ const CompanyOverview: React.FC = () => {
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Global Perspective</h4>
-                  <p className="text-gray-600">Experience working with multi-market enterprises and brands with diverse product lines.</p>
+                  <h4 className="font-semibold mb-1">Portfolio perspective</h4>
+                  <p className="text-gray-600">Experience working with enterprise brands with diverse business and product lines.</p>
                 </div>
               </div>
             
@@ -33,18 +33,30 @@ const CompanyOverview: React.FC = () => {
                   <Users className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Cross-Functional Teams</h4>
-                  <p className="text-gray-600">Strategists, designers, and engineers working together to deliver holistic solutions.</p>
+                  <h4 className="font-semibold mb-1">Ecosystem approach</h4>
+                  <p className="text-gray-600">Harnessing collaborative partnerships, platforms, and technologies to deliver integrated value across the digital landscape.</p>
                 </div>
               </div>
+
+              
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Globe className="w-6 h-6 text-brand-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Compliant by design</h4>
+                  <p className="text-gray-600">Architecting products and platforms with built-in compliance controls to support evolving regulations.</p>
+                </div>
+              </div>
+
               
               <div className="flex items-start">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Database className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Data-Driven Approach</h4>
-                  <p className="text-gray-600">Insights and analytics inform every decision and strategy.</p>
+                  <h4 className="font-semibold mb-1">Standardization</h4>
+                  <p className="text-gray-600">Creating a foundation for scaling products to new markets, customers, and targeted segments.</p>
                 </div>
               </div>
             </div>
