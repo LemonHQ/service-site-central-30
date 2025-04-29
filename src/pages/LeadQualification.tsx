@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Input } from '@/components/ui/input';
 import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
@@ -11,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Check, ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 // Define the form schema for each step
 const step1Schema = z.object({
@@ -32,6 +31,64 @@ const step3Schema = z.object({
 type Step1Data = z.infer<typeof step1Schema>;
 type Step2Data = z.infer<typeof step2Schema>;
 type Step3Data = z.infer<typeof step3Schema>;
+
+// Selectable option component
+interface SelectableBoxProps {
+  id: string;
+  label: string;
+  selected: boolean;
+  onClick: () => void;
+}
+
+const SelectableBox: React.FC<SelectableBoxProps> = ({ id, label, selected, onClick }) => {
+  return (
+    <div
+      id={id}
+      onClick={onClick}
+      className={cn(
+        "border rounded-lg px-4 py-3 cursor-pointer transition-all",
+        "hover:shadow-md flex items-center justify-between",
+        selected ? "border-brand-500 bg-brand-50 shadow-sm" : "border-gray-200 bg-white"
+      )}
+    >
+      <span className={cn("font-medium", selected ? "text-brand-700" : "text-gray-700")}>{label}</span>
+      {selected && <Check className="w-5 h-5 text-brand-500" />}
+    </div>
+  );
+};
+
+// Number option component
+interface NumberOptionProps {
+  label: string;
+  options: string[];
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+}
+
+const NumberOption: React.FC<NumberOptionProps> = ({ label, options, value, onChange, error }) => {
+  return (
+    <div className="space-y-2">
+      <p className="font-medium text-gray-800">{label}</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {options.map(option => (
+          <div
+            key={option}
+            onClick={() => onChange(option)}
+            className={cn(
+              "border rounded-lg px-4 py-3 text-center cursor-pointer transition-all",
+              "hover:shadow-md",
+              value === option ? "border-brand-500 bg-brand-50 shadow-sm" : "border-gray-200 bg-white"
+            )}
+          >
+            <span className={cn("font-medium", value === option ? "text-brand-700" : "text-gray-700")}>{option}</span>
+          </div>
+        ))}
+      </div>
+      {error && <p className="text-red-500 text-sm">{error}</p>}
+    </div>
+  );
+};
 
 const LeadQualification = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -71,6 +128,9 @@ const LeadQualification = () => {
     { id: "1-3-months", label: "1-3 months" },
     { id: "6-12-months", label: "6-12 months" }
   ];
+
+  // Number options for markets, brands, and products
+  const numberOptions = ["1-5", "6-20", "21-100", "100+"];
 
   // Set up form for Step 1
   const step1Form = useForm<Step1Data>({
@@ -136,6 +196,26 @@ const LeadQualification = () => {
     }, 2000);
   };
 
+  // Toggle a sector selection
+  const toggleSector = (sectorId: string) => {
+    const currentSectors = step1Form.getValues("sectors") || [];
+    if (currentSectors.includes(sectorId)) {
+      step1Form.setValue("sectors", currentSectors.filter(id => id !== sectorId));
+    } else {
+      step1Form.setValue("sectors", [...currentSectors, sectorId]);
+    }
+  };
+
+  // Toggle a challenge selection
+  const toggleChallenge = (challengeId: string) => {
+    const currentChallenges = step2Form.getValues("challenges") || [];
+    if (currentChallenges.includes(challengeId)) {
+      step2Form.setValue("challenges", currentChallenges.filter(id => id !== challengeId));
+    } else {
+      step2Form.setValue("challenges", [...currentChallenges, challengeId]);
+    }
+  };
+
   return (
     <MainLayout>
       <div className="container mx-auto px-4 py-12 max-w-3xl">
@@ -184,24 +264,13 @@ const LeadQualification = () => {
                 <h3 className="text-lg font-medium mb-4">Which business sectors do you operate in?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {sectors.map(sector => (
-                    <div key={sector.id} className="flex items-start space-x-3">
-                      <Checkbox 
-                        id={sector.id} 
-                        {...step1Form.register("sectors")}
-                        value={sector.id}
-                        onCheckedChange={(checked) => {
-                          const currentSectors = step1Form.getValues("sectors") || [];
-                          if (checked) {
-                            step1Form.setValue("sectors", [...currentSectors, sector.id]);
-                          } else {
-                            step1Form.setValue("sectors", currentSectors.filter(s => s !== sector.id));
-                          }
-                        }}
-                      />
-                      <label htmlFor={sector.id} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                        {sector.label}
-                      </label>
-                    </div>
+                    <SelectableBox
+                      key={sector.id}
+                      id={sector.id}
+                      label={sector.label}
+                      selected={step1Form.getValues("sectors")?.includes(sector.id) || false}
+                      onClick={() => toggleSector(sector.id)}
+                    />
                   ))}
                 </div>
                 {step1Form.formState.errors.sectors && (
@@ -210,51 +279,30 @@ const LeadQualification = () => {
               </div>
 
               {/* Markets, Brands, Products */}
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="markets" className="block text-sm font-medium mb-2">
-                    How many markets do you operate in?
-                  </label>
-                  <Input 
-                    id="markets" 
-                    type="number" 
-                    placeholder="Enter number of markets" 
-                    {...step1Form.register("markets")}
-                  />
-                  {step1Form.formState.errors.markets && (
-                    <p className="text-red-500 text-sm mt-1">{step1Form.formState.errors.markets.message}</p>
-                  )}
-                </div>
+              <div className="space-y-6">
+                <NumberOption
+                  label="How many markets do you operate in?"
+                  options={numberOptions}
+                  value={step1Form.getValues("markets")}
+                  onChange={(value) => step1Form.setValue("markets", value)}
+                  error={step1Form.formState.errors.markets?.message}
+                />
                 
-                <div>
-                  <label htmlFor="brands" className="block text-sm font-medium mb-2">
-                    How many brands do you have?
-                  </label>
-                  <Input 
-                    id="brands" 
-                    type="number" 
-                    placeholder="Enter number of brands" 
-                    {...step1Form.register("brands")}
-                  />
-                  {step1Form.formState.errors.brands && (
-                    <p className="text-red-500 text-sm mt-1">{step1Form.formState.errors.brands.message}</p>
-                  )}
-                </div>
+                <NumberOption
+                  label="How many brands do you have?"
+                  options={numberOptions}
+                  value={step1Form.getValues("brands")}
+                  onChange={(value) => step1Form.setValue("brands", value)}
+                  error={step1Form.formState.errors.brands?.message}
+                />
                 
-                <div>
-                  <label htmlFor="products" className="block text-sm font-medium mb-2">
-                    How many products do you have?
-                  </label>
-                  <Input 
-                    id="products" 
-                    type="number" 
-                    placeholder="Enter number of products" 
-                    {...step1Form.register("products")}
-                  />
-                  {step1Form.formState.errors.products && (
-                    <p className="text-red-500 text-sm mt-1">{step1Form.formState.errors.products.message}</p>
-                  )}
-                </div>
+                <NumberOption
+                  label="How many products do you have?"
+                  options={numberOptions}
+                  value={step1Form.getValues("products")}
+                  onChange={(value) => step1Form.setValue("products", value)}
+                  error={step1Form.formState.errors.products?.message}
+                />
               </div>
 
               <div className="pt-4 flex justify-end">
@@ -273,26 +321,15 @@ const LeadQualification = () => {
             <form onSubmit={step2Form.handleSubmit(handleStep2Submit)} className="space-y-8">
               <div>
                 <h3 className="text-lg font-medium mb-4">Select all that apply:</h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {challenges.map(challenge => (
-                    <div key={challenge.id} className="flex items-start space-x-3">
-                      <Checkbox 
-                        id={challenge.id} 
-                        value={challenge.id}
-                        {...step2Form.register("challenges")}
-                        onCheckedChange={(checked) => {
-                          const currentChallenges = step2Form.getValues("challenges") || [];
-                          if (checked) {
-                            step2Form.setValue("challenges", [...currentChallenges, challenge.id]);
-                          } else {
-                            step2Form.setValue("challenges", currentChallenges.filter(c => c !== challenge.id));
-                          }
-                        }}
-                      />
-                      <label htmlFor={challenge.id} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                        {challenge.label}
-                      </label>
-                    </div>
+                    <SelectableBox
+                      key={challenge.id}
+                      id={challenge.id}
+                      label={challenge.label}
+                      selected={step2Form.getValues("challenges")?.includes(challenge.id) || false}
+                      onClick={() => toggleChallenge(challenge.id)}
+                    />
                   ))}
                 </div>
                 {step2Form.formState.errors.challenges && (
@@ -327,20 +364,28 @@ const LeadQualification = () => {
               {/* Timeframe */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium">How soon are you planning to make a decision?</h3>
-                <RadioGroup 
-                  defaultValue={formData.step3?.timeframe} 
-                  onValueChange={(value) => step3Form.setValue("timeframe", value)}
-                  className="space-y-3"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   {timeframes.map(timeframe => (
-                    <div key={timeframe.id} className="flex items-center space-x-2">
-                      <RadioGroupItem value={timeframe.id} id={timeframe.id} />
-                      <label htmlFor={timeframe.id} className="text-sm font-medium">
+                    <div
+                      key={timeframe.id}
+                      onClick={() => step3Form.setValue("timeframe", timeframe.id)}
+                      className={cn(
+                        "border rounded-lg p-4 text-center cursor-pointer transition-all",
+                        "hover:shadow-md",
+                        step3Form.getValues("timeframe") === timeframe.id 
+                          ? "border-brand-500 bg-brand-50 shadow-sm" 
+                          : "border-gray-200 bg-white"
+                      )}
+                    >
+                      <span className={cn(
+                        "font-medium", 
+                        step3Form.getValues("timeframe") === timeframe.id ? "text-brand-700" : "text-gray-700"
+                      )}>
                         {timeframe.label}
-                      </label>
+                      </span>
                     </div>
                   ))}
-                </RadioGroup>
+                </div>
                 {step3Form.formState.errors.timeframe && (
                   <p className="text-red-500 text-sm mt-1">{step3Form.formState.errors.timeframe.message}</p>
                 )}
