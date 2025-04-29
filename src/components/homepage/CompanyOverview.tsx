@@ -28,7 +28,6 @@ const CompanyOverview: React.FC = () => {
                   <p className="text-gray-600">Experience working with multi-market enterprises and brands with diverse product lines.</p>
                 </div>
               </div>
-            </div>
             
               <div className="flex items-start">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
