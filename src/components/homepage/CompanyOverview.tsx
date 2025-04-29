@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Users, Database, Globe } from 'lucide-react';
@@ -10,6 +9,8 @@ const CompanyOverview: React.FC = () => {
   const [products, setProducts] = useState(0);
   const [transactions, setTransactions] = useState(0);
   const [portfolios, setPortfolios] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   // Target values for stats
   const targetYears = 17;
@@ -17,8 +18,40 @@ const CompanyOverview: React.FC = () => {
   const targetTransactions = 10; // For $10M+
   const targetPortfolios = 10;
 
-  // Animation effect
+  // Set up Intersection Observer to detect when stats are in viewport
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // When stats enter viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Once we've seen it, no need to keep observing
+          if (statsRef.current) {
+            observer.unobserve(statsRef.current);
+          }
+        }
+      },
+      {
+        // Start animation when element is 10% visible
+        threshold: 0.1,
+      }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
+
+  // Animation effect - only starts when isVisible becomes true
+  useEffect(() => {
+    if (!isVisible) return;
+
     // Duration for the animation in milliseconds
     const animationDuration = 1500;
     // Number of steps in the animation
@@ -48,7 +81,7 @@ const CompanyOverview: React.FC = () => {
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isVisible]);
 
   return (
     <section className="section-padding">
@@ -115,7 +148,7 @@ const CompanyOverview: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-brand-100 rounded-lg p-8 relative z-10">
+            <div ref={statsRef} className="bg-brand-100 rounded-lg p-8 relative z-10">
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
                   <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{years}+</h3>
