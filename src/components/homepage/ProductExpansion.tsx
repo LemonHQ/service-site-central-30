@@ -8,7 +8,8 @@ import {
   Globe, 
   Database, 
   Expand,
-  ArrowRight
+  ArrowUp,
+  FlaskConical
 } from 'lucide-react';
 
 interface ExpansionStrategyProps {
@@ -40,27 +41,33 @@ const ProductExpansion: React.FC = () => {
   const expansionStrategies = [
     {
       icon: <Globe className="h-8 w-8 text-purple-500" />,
-      title: "Unify brand experiences",
-      description: "Create consistent, cohesive brand experiences across all digital touchpoints while maintaining regulatory compliance.",
+      title: "Unify Brand Experiences",
+      description: "Create consistent, compliant brand and product experiences across all customer touchpoints, regions, and business units.",
       color: "bg-purple-100"
     },
     {
       icon: <Database className="h-8 w-8 text-red-500" />,
-      title: "Digitalize product lines",
-      description: "Transform traditional product offerings into digital experiences with compliance and brand consistency at their core.",
+      title: "Digitalize Product Lines",
+      description: "Transform legacy offerings into modern, scalable digital products built for today's markets and tomorrow's expectations.",
       color: "bg-red-100"
     },
     {
       icon: <Expand className="h-8 w-8 text-blue-500" />,
-      title: "Expand product offerings",
-      description: "Strategically grow your product portfolio with localized strategies and cross-portfolio synergies.",
+      title: "Expand Product Offerings",
+      description: "Identify, validate, and launch new services, bundles, and adjacent solutions that deepen customer value and drive growth.",
       color: "bg-blue-100"
     },
     {
-      icon: <ArrowRight className="h-8 w-8 text-green-500" />,
-      title: "Scale digital experiences",
-      description: "Standardize and optimize your digital ecosystem to reduce risk, improve efficiency, and prepare for enterprise-level growth.",
+      icon: <ArrowUp className="h-8 w-8 text-green-500" />,
+      title: "Scale Digital Experiences",
+      description: "Build the systems, standards, and operating models that power sustainable, enterprise-grade digital expansion.",
       color: "bg-green-100"
+    },
+    {
+      icon: <FlaskConical className="h-8 w-8 text-amber-500" />,
+      title: "Pilot Emerging Tech",
+      description: "Rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation in regulated environments.",
+      color: "bg-amber-100"
     }
   ];
 
@@ -74,7 +81,7 @@ const ProductExpansion: React.FC = () => {
           className="mb-16"
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {expansionStrategies.map((strategy, index) => (
             <ExpansionStrategy
               key={index}
