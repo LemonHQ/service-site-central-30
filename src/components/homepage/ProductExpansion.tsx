@@ -82,8 +82,8 @@ const ProductExpansion: React.FC = () => {
     <section className="section-padding bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Expand Product Offerings & Market Share" 
-          subtitle="Strategic approaches to launch, scale, and capture greater market presence for sustainable business growth"
+          title="What we do" 
+          subtitle="From idea to market to scale — services designed to enable you at every stage of your digital journey."
           centered
           className="mb-16"
         />
