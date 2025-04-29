@@ -48,10 +48,12 @@ const SelectableBox: React.FC<SelectableBoxProps> = ({ id, label, selected, onCl
       className={cn(
         "border rounded-lg px-4 py-3 cursor-pointer transition-all",
         "hover:shadow-md flex items-center justify-between",
-        selected ? "border-brand-500 bg-brand-50 shadow-sm" : "border-gray-200 bg-white"
+        selected ? 
+          "border-brand-500 bg-brand-100 shadow-sm text-brand-700 font-medium" : 
+          "border-gray-200 bg-white text-gray-700"
       )}
     >
-      <span className={cn("font-medium", selected ? "text-brand-700" : "text-gray-700")}>{label}</span>
+      <span className="font-medium">{label}</span>
       {selected && <Check className="w-5 h-5 text-brand-500" />}
     </div>
   );
@@ -78,10 +80,12 @@ const NumberOption: React.FC<NumberOptionProps> = ({ label, options, value, onCh
             className={cn(
               "border rounded-lg px-4 py-3 text-center cursor-pointer transition-all",
               "hover:shadow-md",
-              value === option ? "border-brand-500 bg-brand-50 shadow-sm" : "border-gray-200 bg-white"
+              value === option ? 
+                "border-brand-500 bg-brand-100 shadow-sm text-brand-700 font-medium" : 
+                "border-gray-200 bg-white text-gray-700"
             )}
           >
-            <span className={cn("font-medium", value === option ? "text-brand-700" : "text-gray-700")}>{option}</span>
+            <span className="font-medium">{option}</span>
           </div>
         ))}
       </div>
@@ -140,7 +144,8 @@ const LeadQualification = () => {
       markets: formData.step1?.markets || "",
       brands: formData.step1?.brands || "",
       products: formData.step1?.products || ""
-    }
+    },
+    mode: "onChange" // This allows the form to validate as changes are made
   });
 
   // Set up form for Step 2
@@ -148,7 +153,8 @@ const LeadQualification = () => {
     resolver: zodResolver(step2Schema),
     defaultValues: {
       challenges: formData.step2?.challenges || []
-    }
+    },
+    mode: "onChange"
   });
 
   // Set up form for Step 3
@@ -157,7 +163,8 @@ const LeadQualification = () => {
     defaultValues: {
       timeframe: formData.step3?.timeframe || "",
       email: formData.step3?.email || ""
-    }
+    },
+    mode: "onChange"
   });
 
   const handleStep1Submit = (data: Step1Data) => {
@@ -200,9 +207,13 @@ const LeadQualification = () => {
   const toggleSector = (sectorId: string) => {
     const currentSectors = step1Form.getValues("sectors") || [];
     if (currentSectors.includes(sectorId)) {
-      step1Form.setValue("sectors", currentSectors.filter(id => id !== sectorId));
+      const updatedSectors = currentSectors.filter(id => id !== sectorId);
+      step1Form.setValue("sectors", updatedSectors, { shouldValidate: true });
+      step1Form.trigger("sectors"); // Trigger validation
     } else {
-      step1Form.setValue("sectors", [...currentSectors, sectorId]);
+      const updatedSectors = [...currentSectors, sectorId];
+      step1Form.setValue("sectors", updatedSectors, { shouldValidate: true });
+      step1Form.trigger("sectors"); // Trigger validation
     }
   };
 
@@ -210,11 +221,20 @@ const LeadQualification = () => {
   const toggleChallenge = (challengeId: string) => {
     const currentChallenges = step2Form.getValues("challenges") || [];
     if (currentChallenges.includes(challengeId)) {
-      step2Form.setValue("challenges", currentChallenges.filter(id => id !== challengeId));
+      const updatedChallenges = currentChallenges.filter(id => id !== challengeId);
+      step2Form.setValue("challenges", updatedChallenges, { shouldValidate: true });
+      step2Form.trigger("challenges"); // Trigger validation
     } else {
-      step2Form.setValue("challenges", [...currentChallenges, challengeId]);
+      const updatedChallenges = [...currentChallenges, challengeId];
+      step2Form.setValue("challenges", updatedChallenges, { shouldValidate: true });
+      step2Form.trigger("challenges"); // Trigger validation
     }
   };
+
+  // Track selected sectors for UI rendering
+  const selectedSectors = step1Form.watch("sectors") || [];
+  const selectedChallenges = step2Form.watch("challenges") || [];
+  const selectedTimeframe = step3Form.watch("timeframe");
 
   return (
     <MainLayout>
@@ -268,7 +288,7 @@ const LeadQualification = () => {
                       key={sector.id}
                       id={sector.id}
                       label={sector.label}
-                      selected={step1Form.getValues("sectors")?.includes(sector.id) || false}
+                      selected={selectedSectors.includes(sector.id)}
                       onClick={() => toggleSector(sector.id)}
                     />
                   ))}
@@ -284,7 +304,10 @@ const LeadQualification = () => {
                   label="How many markets do you operate in?"
                   options={numberOptions}
                   value={step1Form.getValues("markets")}
-                  onChange={(value) => step1Form.setValue("markets", value)}
+                  onChange={(value) => {
+                    step1Form.setValue("markets", value, { shouldValidate: true });
+                    step1Form.trigger("markets");
+                  }}
                   error={step1Form.formState.errors.markets?.message}
                 />
                 
@@ -292,7 +315,10 @@ const LeadQualification = () => {
                   label="How many brands do you have?"
                   options={numberOptions}
                   value={step1Form.getValues("brands")}
-                  onChange={(value) => step1Form.setValue("brands", value)}
+                  onChange={(value) => {
+                    step1Form.setValue("brands", value, { shouldValidate: true });
+                    step1Form.trigger("brands");
+                  }}
                   error={step1Form.formState.errors.brands?.message}
                 />
                 
@@ -300,7 +326,10 @@ const LeadQualification = () => {
                   label="How many products do you have?"
                   options={numberOptions}
                   value={step1Form.getValues("products")}
-                  onChange={(value) => step1Form.setValue("products", value)}
+                  onChange={(value) => {
+                    step1Form.setValue("products", value, { shouldValidate: true });
+                    step1Form.trigger("products");
+                  }}
                   error={step1Form.formState.errors.products?.message}
                 />
               </div>
@@ -327,7 +356,7 @@ const LeadQualification = () => {
                       key={challenge.id}
                       id={challenge.id}
                       label={challenge.label}
-                      selected={step2Form.getValues("challenges")?.includes(challenge.id) || false}
+                      selected={selectedChallenges.includes(challenge.id)}
                       onClick={() => toggleChallenge(challenge.id)}
                     />
                   ))}
@@ -368,21 +397,19 @@ const LeadQualification = () => {
                   {timeframes.map(timeframe => (
                     <div
                       key={timeframe.id}
-                      onClick={() => step3Form.setValue("timeframe", timeframe.id)}
+                      onClick={() => {
+                        step3Form.setValue("timeframe", timeframe.id, { shouldValidate: true });
+                        step3Form.trigger("timeframe");
+                      }}
                       className={cn(
                         "border rounded-lg p-4 text-center cursor-pointer transition-all",
                         "hover:shadow-md",
-                        step3Form.getValues("timeframe") === timeframe.id 
-                          ? "border-brand-500 bg-brand-50 shadow-sm" 
-                          : "border-gray-200 bg-white"
+                        selectedTimeframe === timeframe.id 
+                          ? "border-brand-500 bg-brand-100 shadow-sm text-brand-700 font-medium" 
+                          : "border-gray-200 bg-white text-gray-700"
                       )}
                     >
-                      <span className={cn(
-                        "font-medium", 
-                        step3Form.getValues("timeframe") === timeframe.id ? "text-brand-700" : "text-gray-700"
-                      )}>
-                        {timeframe.label}
-                      </span>
+                      <span className="font-medium">{timeframe.label}</span>
                     </div>
                   ))}
                 </div>
