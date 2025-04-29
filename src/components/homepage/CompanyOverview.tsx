@@ -18,7 +18,6 @@ const CompanyOverview: React.FC = () => {
             </p>
             
             <div className="space-y-4 mb-8">
-
               <div className="flex items-start">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Globe className="w-6 h-6 text-brand-400" />
@@ -48,8 +47,7 @@ const CompanyOverview: React.FC = () => {
                   <p className="text-gray-600">Insights and analytics inform every decision and strategy.</p>
                 </div>
               </div>
-              
-
+            </div>
             
             <Link to="/about">
               <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
