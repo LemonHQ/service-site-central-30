@@ -40,26 +40,26 @@ const ProductExpansion: React.FC = () => {
   const expansionStrategies = [
     {
       icon: <Lightbulb className="h-8 w-8 text-purple-500" />,
-      title: "Ideate",
-      description: "Transform market insights and business challenges into innovative product concepts through strategic workshops, user research, and collaborative design thinking sessions.",
+      title: "Incubate",
+      description: "Turn early-stage concepts into validated product opportunities through structured ideation, customer insight, prototyping, and regulatory input.",
       color: "bg-purple-100"
     },
     {
       icon: <Rocket className="h-8 w-8 text-red-500" />,
       title: "Launch",
-      description: "Accelerate time-to-market with comprehensive launch strategies, technical implementation, and go-to-market frameworks that ensure successful product introduction.",
+      description: "Launch digital offerings with speed, compliance, and brand consistency across multiple regions and product lines.",
       color: "bg-red-100"
     },
     {
       icon: <Expand className="h-8 w-8 text-blue-500" />,
       title: "Expand",
-      description: "Grow your market presence through targeted expansion strategies, new customer segment identification, and portfolio diversification that drives business growth.",
+      description: "Enter new markets confidently with localized product strategies, regulatory alignment, and portfolio coordination.",
       color: "bg-blue-100"
     },
     {
       icon: <Scale className="h-8 w-8 text-green-500" />,
       title: "Scale",
-      description: "Build resilient infrastructure and operational frameworks that enable your products to handle increasing demand while maintaining performance and compliance.",
+      description: "Standardize and unify  product portfolios to reduce risk, improve efficiency, and prepare for modernization at enterprise scale.",
       color: "bg-green-100"
     }
   ];
