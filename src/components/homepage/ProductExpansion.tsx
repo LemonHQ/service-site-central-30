@@ -5,7 +5,7 @@ import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import { 
-  Bulb, 
+  Lightbulb, 
   Rocket, 
   Scale,
   Expand
@@ -39,7 +39,7 @@ const ExpansionStrategy: React.FC<ExpansionStrategyProps> = ({ icon, title, desc
 const ProductExpansion: React.FC = () => {
   const expansionStrategies = [
     {
-      icon: <Bulb className="h-8 w-8 text-purple-500" />,
+      icon: <Lightbulb className="h-8 w-8 text-purple-500" />,
       title: "Ideate",
       description: "Transform market insights and business challenges into innovative product concepts through strategic workshops, user research, and collaborative design thinking sessions.",
       color: "bg-purple-100"
