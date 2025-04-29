@@ -20,7 +20,7 @@ const ClientsSection: React.FC = () => {
     { name: "Meta", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
     { name: "TikTok", logoUrl: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" },
     // Fixed Back4App logo
-    { name: "Back4App", logoUrl: "https://www.back4app.com/docs/assets/images/back4app-logo.svg" },
+    { name: "Back4App", logoUrl: "https://blog.back4app.com/wp-content/uploads/2017/11/logo-b4a-1-768x175-1.png" },
     { name: "Parse Server", logoUrl: "https://parseplatform.org/img/logo.svg" },
     { name: "Firebase", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" },
     { name: "Twilio", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg" }
