@@ -5,12 +5,10 @@ import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import { 
+  Bulb, 
   Rocket, 
-  Scale, 
-  Target, 
-  TrendingUp, 
-  Award,
-  Globe
+  Scale,
+  Expand
 } from 'lucide-react';
 
 interface ExpansionStrategyProps {
@@ -41,40 +39,28 @@ const ExpansionStrategy: React.FC<ExpansionStrategyProps> = ({ icon, title, desc
 const ProductExpansion: React.FC = () => {
   const expansionStrategies = [
     {
-      icon: <Rocket className="h-8 w-8 text-red-500" />,
-      title: "Market Launch Excellence",
-      description: "Transform your product launch from a one-time event into a strategic process with our proven go-to-market frameworks, audience segmentation, and comprehensive launch playbooks.",
-      color: "bg-red-100"
-    },
-    {
-      icon: <Scale className="h-8 w-8 text-purple-500" />,
-      title: "Scalable Infrastructure",
-      description: "Build resilient technical foundations that grow with your business, leveraging cloud-native architectures, microservices, and automated scaling solutions to handle increasing demand.",
+      icon: <Bulb className="h-8 w-8 text-purple-500" />,
+      title: "Ideate",
+      description: "Transform market insights and business challenges into innovative product concepts through strategic workshops, user research, and collaborative design thinking sessions.",
       color: "bg-purple-100"
     },
     {
-      icon: <Target className="h-8 w-8 text-blue-500" />,
-      title: "Market Expansion",
-      description: "Identify and penetrate new market segments through strategic research, localization strategies, and tailored value propositions that resonate with diverse customer bases.",
+      icon: <Rocket className="h-8 w-8 text-red-500" />,
+      title: "Launch",
+      description: "Accelerate time-to-market with comprehensive launch strategies, technical implementation, and go-to-market frameworks that ensure successful product introduction.",
+      color: "bg-red-100"
+    },
+    {
+      icon: <Expand className="h-8 w-8 text-blue-500" />,
+      title: "Expand",
+      description: "Grow your market presence through targeted expansion strategies, new customer segment identification, and portfolio diversification that drives business growth.",
       color: "bg-blue-100"
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-green-500" />,
-      title: "Product Portfolio Growth",
-      description: "Expand your product offerings strategically with our product roadmap acceleration, feature prioritization frameworks, and innovation workshops that identify valuable extensions.",
+      icon: <Scale className="h-8 w-8 text-green-500" />,
+      title: "Scale",
+      description: "Build resilient infrastructure and operational frameworks that enable your products to handle increasing demand while maintaining performance and compliance.",
       color: "bg-green-100"
-    },
-    {
-      icon: <Award className="h-8 w-8 text-amber-500" />,
-      title: "Competitive Advantage",
-      description: "Develop sustainable differentiators through continuous innovation programs, competitive intelligence dashboards, and strategic positioning strategies that keep you ahead.",
-      color: "bg-amber-100"
-    },
-    {
-      icon: <Globe className="h-8 w-8 text-indigo-500" />,
-      title: "Market Share Growth",
-      description: "Capture and expand your market share with targeted acquisition strategies, customer retention programs, and data-driven expansion planning that maximize your industry presence.",
-      color: "bg-indigo-100"
     }
   ];
 
@@ -88,8 +74,8 @@ const ProductExpansion: React.FC = () => {
           className="mb-16"
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {expansionStrategies.slice(0, 3).map((strategy, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {expansionStrategies.map((strategy, index) => (
             <ExpansionStrategy
               key={index}
               icon={strategy.icon}
@@ -100,25 +86,13 @@ const ProductExpansion: React.FC = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {expansionStrategies.slice(3).map((strategy, index) => (
-            <ExpansionStrategy
-              key={index + 3}
-              icon={strategy.icon}
-              title={strategy.title}
-              description={strategy.description}
-              color={strategy.color}
-            />
-          ))}
-        </div>
-        
         <div className="text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to expand your market presence and grow your product portfolio? Our strategic consulting and growth acceleration programs help you unlock new markets and maximize business potential.
+            Ready to transform your product strategy and accelerate your market growth? Our end-to-end approach helps you navigate every stage of your product journey.
           </p>
           <Link to="/services">
             <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
-              Explore Growth Services
+              Explore Our Services
             </Button>
           </Link>
         </div>
