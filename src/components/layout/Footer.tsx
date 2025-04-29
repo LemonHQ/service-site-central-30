@@ -130,21 +130,21 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-lg font-semibold mb-2 text-brand-600">Headquarters</h4>
-              <p className="text-gray-600">ElevateDigital Inc.</p>
-              <p className="text-gray-600">600 Technology Park, Boston, MA 02210, USA</p>
+              <h4 className="text-lg font-semibold mb-2 text-brand-600">UK Office</h4>
+              <p className="text-gray-600">Lemon Marketing & Consultancy Ltd,</p>
+              <p className="text-gray-600">128, City Road, London,England, EC1V 2NX</p>
               <p className="text-gray-600 flex items-center mt-2">
-                <span className="mr-2">+1 (888) 555-1234</span>
+                <span className="mr-2">+44-7570-631159</span>
               </p>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-2 text-brand-600">Delivery Centre</h4>
-              <p className="text-gray-600">ElevateDigital Technologies Private Limited</p>
-              <p className="text-gray-600">#2001, 20th Floor, Tower B, Cyber Gateway,</p>
-              <p className="text-gray-600">Hitech City, Hyderabad, Telangana 500081</p>
+              <h4 className="text-lg font-semibold mb-2 text-brand-600">Delivery & Fulfilment</h4>
+              <p className="text-gray-600">Lemon Adv, & Pub. LLC</p>
+              <p className="text-gray-600">Damas 14 Office Tower, Suite #1948</p>
+              <p className="text-gray-600">Al Zahra Street, Sharjah, United Arab Emirates</p>
               <p className="text-gray-600 flex items-center mt-2">
-                <span className="mr-2">+91-9876543210</span>
+                <span className="mr-2">+971-6-5629519</span>
               </p>
             </div>
           </div>
