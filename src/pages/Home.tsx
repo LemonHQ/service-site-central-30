@@ -35,7 +35,7 @@ const Home = () => {
       {/* Case Studies Carousel */}
       <CaseStudiesCarousel />
       
-      {/* Clients Section with Logos */}
+      {/* Our Alliances Section */}
       <ClientsSection />
       
       {/* Partners Section with Logos */}
