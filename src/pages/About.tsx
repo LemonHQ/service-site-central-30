@@ -37,7 +37,7 @@ const About = () => {
       name: 'Alicia Rodriguez',
       role: 'Head of Design',
       bio: 'Award-winning designer specializing in brand identity and user experience design.',
-      fullBio: 'Alicia leads our design practice, bringing a unique blend of creative vision and strategic thinking to client projects. Her work has been recognized with multiple industry awards, including Red Dot and IDEA Design Awards. Before ElevateDigital, she was Design Director at a global branding agency, working with brands like Nike, Apple, and Coca-Cola. Alicia holds a Master\'s in Design from Rhode Island School of Design and teaches UX design at several leading universities.',
+      fullBio: "Alicia leads our design practice, bringing a unique blend of creative vision and strategic thinking to client projects. Her work has been recognized with multiple industry awards, including Red Dot and IDEA Design Awards. Before ElevateDigital, she was Design Director at a global branding agency, working with brands like Nike, Apple, and Coca-Cola. Alicia holds a Master's in Design from Rhode Island School of Design and teaches UX design at several leading universities.",
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80',
       linkedin: 'https://linkedin.com/in/aliciarodriguez',
       twitter: 'https://twitter.com/aliciarodesign',
@@ -47,7 +47,7 @@ const About = () => {
       name: 'David Park',
       role: 'Product Strategy Director',
       bio: 'Product strategy expert with experience launching over 30 successful enterprise products.',
-      fullBio: 'David specializes in product strategy and go-to-market planning for enterprise software and services. In his career spanning 18 years, he has helped launch over 30 successful products across fintech, healthcare, and retail sectors. Prior to ElevateDigital, David was a Senior Product Manager at Salesforce and a consultant with McKinsey's Digital Practice. He holds an MBA from Wharton and is certified in Agile and Design Thinking methodologies.',
+      fullBio: "David specializes in product strategy and go-to-market planning for enterprise software and services. In his career spanning 18 years, he has helped launch over 30 successful products across fintech, healthcare, and retail sectors. Prior to ElevateDigital, David was a Senior Product Manager at Salesforce and a consultant with McKinsey's Digital Practice. He holds an MBA from Wharton and is certified in Agile and Design Thinking methodologies.",
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
       linkedin: 'https://linkedin.com/in/davidpark',
       email: 'david.park@elevatedigital.com'
