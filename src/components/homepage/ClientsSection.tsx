@@ -8,29 +8,35 @@ interface Alliance {
 }
 
 const ClientsSection: React.FC = () => {
-  // Platform alliances
+  // Platform alliances with updated logo URLs
   const platformAlliances: Alliance[] = [
     { name: "AWS", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
     { name: "Azure", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" },
-    { name: "Google", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" },
+    // Fixed Google logo
+    { name: "Google", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
     { name: "Netlify", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg" },
-    { name: "Gatsby", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/08/Gatsby_Logo.svg" },
+    // Fixed Gatsby logo
+    { name: "Gatsby", logoUrl: "https://upload.wikimedia.org/wikipedia/en/d/d0/Gatsby_Logo.png" },
     { name: "Meta", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
     { name: "TikTok", logoUrl: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" },
-    { name: "Back4App", logoUrl: "https://www.back4app.com/assets/back4app-logo.svg" },
+    // Fixed Back4App logo
+    { name: "Back4App", logoUrl: "https://www.back4app.com/docs/assets/images/back4app-logo.svg" },
     { name: "Parse Server", logoUrl: "https://parseplatform.org/img/logo.svg" },
     { name: "Firebase", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" },
     { name: "Twilio", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg" }
   ];
 
-  // Technology expertise
+  // Technology expertise with updated logo URLs
   const technologyExpertise: Alliance[] = [
-    { name: "Adobe Experience", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Adobe_Experience_Cloud_logo.svg" },
-    { name: "Drupal", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/75/Drupal_logo.svg" },
+    // Fixed Adobe Experience Manager logo
+    { name: "Adobe Experience", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Adobe_Experience_Cloud_logo.svg" },
+    // Fixed Drupal logo
+    { name: "Drupal", logoUrl: "https://www.drupal.org/files/Wordmark_blue_RGB.png" },
     { name: "WordPress", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" },
     { name: "Stripe", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" },
     { name: "WooCommerce", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg" },
-    { name: "Pimcore", logoUrl: "https://pimcore.com/assets/icons/pimcore-logo.svg" }
+    // Fixed Pimcore logo
+    { name: "Pimcore", logoUrl: "https://pimcore.com/en/resources/images/logo/pimcore-logo.svg" }
   ];
 
   return (
