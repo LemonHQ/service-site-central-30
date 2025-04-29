@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Github, Youtube, CheckCircle, MapPin, Phone, Mail, Calendar } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github, Youtube, CheckCircle, MapPin, Mail, Calendar } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Footer = () => {
   // Service links
@@ -135,12 +136,6 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-2 text-brand-600">UK & Europe</h4>
               <p className="text-gray-600">Lemon Marketing & Consultancy Ltd,</p>
               <p className="text-gray-600">128, City Road, London,England, EC1V 2NX</p>
-              <div className="text-gray-600 flex items-center mt-2">
-                <Phone size={16} className="mr-2 text-brand-500" />
-                <a href="tel:+44-7570-631159" className="hover:text-brand-500 transition-colors">
-                  +44-7570-631159
-                </a>
-              </div>
               <div className="mt-3">
                 <Button 
                   variant="outline" 
@@ -159,12 +154,6 @@ const Footer = () => {
               <p className="text-gray-600">Lemon Adv, & Pub. LLC</p>
               <p className="text-gray-600">Damas 14 Office Tower, Suite #1948</p>
               <p className="text-gray-600">Al Zahra Street, Sharjah, United Arab Emirates</p>
-              <div className="text-gray-600 flex items-center mt-2">
-                <Phone size={16} className="mr-2 text-brand-500" />
-                <a href="tel:+971-6-5629519" className="hover:text-brand-500 transition-colors">
-                  +971-6-5629519
-                </a>
-              </div>
               <div className="mt-3">
                 <Button 
                   variant="outline" 
@@ -195,21 +184,26 @@ const Footer = () => {
                   </Button>
                 </Link>
                 
-                <Popover>
-                  <PopoverTrigger asChild>
+                <Dialog>
+                  <DialogTrigger asChild>
                     <Button variant="outline" className="border-brand-400 text-brand-500 hover:bg-brand-100">
                       <Calendar className="mr-2 h-4 w-4" />
                       Book a Meeting
                     </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0">
-                    {/* Google Calendar embed */}
-                    <div className="p-4" id="calendar-container">
-                      {/* The script will attach the button here */}
-                      <div className="w-full" id="calendar-button-container"></div>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>Schedule a Meeting</DialogTitle>
+                    </DialogHeader>
+                    <div className="flex justify-center py-4" id="calendar-container">
+                      <iframe 
+                        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true" 
+                        style={{ width: "100%", height: "600px", border: 0 }} 
+                        frameBorder="0"
+                      ></iframe>
                     </div>
-                  </PopoverContent>
-                </Popover>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>
@@ -238,10 +232,7 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Certifications/Icons */}
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center text-xs">ISO 27001</div>
-            </div>
+            {/* ISO certifications hidden as requested */}
           </div>
 
           {/* Subscribe */}
@@ -291,30 +282,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      
-      {/* Google Calendar Script */}
-      <script dangerouslySetInnerHTML={{ __html: `
-        // Add Google Calendar Scripts
-        const calendarCss = document.createElement('link');
-        calendarCss.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
-        calendarCss.rel = 'stylesheet';
-        document.head.appendChild(calendarCss);
-
-        const calendarScript = document.createElement('script');
-        calendarScript.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
-        calendarScript.async = true;
-        document.head.appendChild(calendarScript);
-
-        // Initialize Calendar Button
-        calendarScript.onload = function() {
-          window.calendar.schedulingButton.load({
-            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true',
-            color: '#039BE5',
-            label: 'Book an appointment',
-            target: document.getElementById('calendar-button-container'),
-          });
-        };
-      ` }} />
     </footer>
   );
 };
