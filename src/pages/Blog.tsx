@@ -39,7 +39,7 @@ const Blog: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Insightws</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Insights</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Insights, analysis and perspectives on evolving digital trends and innovations.
           </p>
