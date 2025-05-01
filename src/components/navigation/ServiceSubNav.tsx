@@ -21,7 +21,7 @@ const ListItem = React.forwardRef<
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
   return (
-    <li>
+    <li className="list-none">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -50,7 +50,7 @@ const RouterListItem = ({ title, to, className, icon: Icon }: {
   icon?: React.ElementType;
 }) => {
   return (
-    <li>
+    <li className="list-none">
       <NavigationMenuLink asChild>
         <Link
           to={to}
@@ -149,14 +149,16 @@ const ServiceSubNav = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-[500px]">
-                {services.map((service, index) => (
-                  <RouterListItem
-                    key={index}
-                    title={service.title}
-                    to={service.link}
-                    icon={service.icon}
-                  />
-                ))}
+                <ul className="col-span-2 list-none p-0 m-0 grid grid-cols-2 gap-2">
+                  {services.map((service, index) => (
+                    <RouterListItem
+                      key={index}
+                      title={service.title}
+                      to={service.link}
+                      icon={service.icon}
+                    />
+                  ))}
+                </ul>
                 
                 <div className="col-span-2 mt-2">
                   <Link 
