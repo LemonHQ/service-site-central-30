@@ -50,7 +50,7 @@ const BlogCarousel: React.FC = () => {
   return (
     <section className="section-padding bg-beige-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading title="Product Insights" subtitle="Expert perspectives on enterprise product strategy, design, and development" centered />
+        <SectionHeading title="Insights" subtitle="Our latest thoughts on an evolving digital world" centered />
         
         <div className="relative">
           <Carousel opts={{
