@@ -26,36 +26,36 @@ const CaseStudiesCarousel: React.FC = () => {
   // Example case studies with placeholder images
   const caseStudies: CaseStudy[] = [
     {
-      title: "Digital Transformation for Financial Services",
-      client: "Global Bank Inc.",
-      description: "Redesigned core banking products resulting in 40% increase in user engagement and 25% reduction in customer support calls.",
+      title: "Digital standardization",
+      client: "Liva Insurance",
+      description: "Standardized the sales journey for the motor insurance personal line of products for 3 markets",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/global-bank",
       industry: "Financial Services",
       service: "Digital Transformation"
     },
     {
-      title: "E-commerce Platform Optimization",
-      client: "Retail Giant Co.",
-      description: "Implemented personalization engine that increased conversion rate by 35% and average order value by 28% within three months.",
+      title: "Brand restructuring",
+      client: "Abdul Latif Jameel",
+      description: "Launch of new corporate Masterbrands in the market to support the new global positioning",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/retail-giant",
       industry: "Retail",
       service: "Platform Optimization"
     },
     {
-      title: "Healthcare Patient Portal",
-      client: "MediCare Systems",
-      description: "Built an intuitive patient portal that improved patient satisfaction scores by 45% and streamlined administrative processes.",
+      title: "Unifying brand experience",
+      client: "Abbott Freestyle Libre",
+      description: "A centralized digital platform that brings together localized content, consistent messaging, and a cohesive visual identity across all markets",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/medicare-systems",
       industry: "Healthcare",
       service: "Digital Product Design"
     },
     {
-      title: "Manufacturing IoT Integration",
-      client: "Industrial Solutions Ltd.",
-      description: "Developed IoT strategy and implementation plan that resulted in 18% operational efficiency improvements across 12 facilities.",
+      title: "Complying with local insurance regulations",
+      client: "RSA Bahrain",
+      description: "",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/industrial-solutions",
       industry: "Manufacturing",
