@@ -46,7 +46,7 @@ const CaseStudiesCarousel: React.FC = () => {
     {
       title: "Unifying brand experience",
       client: "Abbott Freestyle Libre",
-      description: "A centralized digital platform that brings together localized content, consistent messaging, and a cohesive visual identity across all markets",
+      description: "A centralized digital platform that brings together localized content, consistent messaging, and a cohesive visual identity across markets",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/medicare-systems",
       industry: "Healthcare",
@@ -64,7 +64,16 @@ const CaseStudiesCarousel: React.FC = () => {
      {
       title: "Goto market of budget insurance brand",
       client: "Kamal Insurance",
-      description: "Launch of a new brand and personal product for budget concious vehicle imsurance customers",
+      description: "Launch of a new brand and personal product for budget concious vehicle imsurance customers.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
+      link: "/case-studies/industrial-solutions",
+      industry: "Manufacturing",
+      service: "IoT Strategy"
+    },
+    {
+      title: "AI document recognition",
+      client: "Kamal Insurance",
+      description: "Accelerating validation of policy and claims processing documents using AI cognitive vision.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/industrial-solutions",
       industry: "Manufacturing",
