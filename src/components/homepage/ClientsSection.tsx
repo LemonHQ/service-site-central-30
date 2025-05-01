@@ -44,7 +44,7 @@ const ClientsSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Our Alliances" 
-          subtitle="We're proud to collaborate with industry leaders to drive data and excellence, positioning ourselves as a leading innovation company." 
+          subtitle="We're proud to collaborate with industry leaders to drive data and excellence, positioning ourselves as a leading strategic innovation partner." 
           centered 
         />
 
