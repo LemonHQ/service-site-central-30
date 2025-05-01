@@ -55,7 +55,16 @@ const CaseStudiesCarousel: React.FC = () => {
     {
       title: "Complying with local insurance regulations",
       client: "RSA Bahrain",
-      description: "",
+      description: "Launching a digital-first customer journey for purchasing motor policy online",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
+      link: "/case-studies/industrial-solutions",
+      industry: "Manufacturing",
+      service: "IoT Strategy"
+    },
+     {
+      title: "Goto market of budget insurance brand",
+      client: "Kamal Insurance",
+      description: "Launch of a new brand and personal product for budget concious vehicle imsurance customers",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
       link: "/case-studies/industrial-solutions",
       industry: "Manufacturing",
