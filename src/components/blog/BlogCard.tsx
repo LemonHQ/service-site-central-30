@@ -19,7 +19,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   });
 
   return (
-    <Link to={`/blog/${post.id}`} className="block h-full">
+    <Link to={`/insights/${post.id}`} className="block h-full">
       <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
         <div className="relative h-48 overflow-hidden">
           <img

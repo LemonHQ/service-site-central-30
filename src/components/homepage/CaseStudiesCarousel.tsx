@@ -30,7 +30,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "Liva Insurance",
       description: "Standardized the sales journey for the motor insurance personal line of products for 3 markets",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/global-bank",
+      link: "/case-studies/liva-insurance",
       industry: "Financial Services",
       service: "Digital Transformation"
     },
@@ -39,7 +39,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "Abdul Latif Jameel",
       description: "Launch of new corporate Masterbrands in the market to support the new global positioning",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/retail-giant",
+      link: "/case-studies/abdul-latif-jameel",
       industry: "Retail",
       service: "Platform Optimization"
     },
@@ -48,7 +48,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "Abbott Freestyle Libre",
       description: "A centralized digital platform that brings together localized content, consistent messaging, and a cohesive visual identity across markets",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/medicare-systems",
+      link: "/case-studies/abbott-freestyle",
       industry: "Healthcare",
       service: "Digital Product Design"
     },
@@ -57,7 +57,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "RSA Bahrain",
       description: "Launching a digital-first customer journey for purchasing motor policy online",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/industrial-solutions",
+      link: "/case-studies/rsa-bahrain",
       industry: "Manufacturing",
       service: "IoT Strategy"
     },
@@ -66,7 +66,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "Kamal Insurance",
       description: "Launch of a new brand and personal product for budget concious vehicle imsurance customers.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/industrial-solutions",
+      link: "/case-studies/kamal-insurance",
       industry: "Manufacturing",
       service: "IoT Strategy"
     },
@@ -75,7 +75,7 @@ const CaseStudiesCarousel: React.FC = () => {
       client: "Kamal Insurance",
       description: "Accelerating validation of policy and claims processing documents using AI cognitive vision.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&h=400&q=80",
-      link: "/case-studies/industrial-solutions",
+      link: "/case-studies/kamal-ai",
       industry: "Manufacturing",
       service: "IoT Strategy"
     },

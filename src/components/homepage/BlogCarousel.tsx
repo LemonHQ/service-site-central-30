@@ -59,7 +59,7 @@ const BlogCarousel: React.FC = () => {
             <CarouselContent className="-ml-4">
               {blogPosts.map((post, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Link to={`/blog/${post.slug}`} className="block h-full">
+                  <Link to={`/insights/${post.slug}`} className="block h-full">
                     <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
                       <div className="h-48 bg-gray-100">
                         <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
@@ -93,7 +93,7 @@ const BlogCarousel: React.FC = () => {
         </div>
         
         <div className="text-center mt-8">
-          <Link to="/blog">
+          <Link to="/insights">
             <Button>View All Articles</Button>
           </Link>
         </div>

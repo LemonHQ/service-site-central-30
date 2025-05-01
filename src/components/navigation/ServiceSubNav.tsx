@@ -43,11 +43,11 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 // Custom ListItem that works with React Router Link
-const RouterListItem = ({ title, to, children, className }: { 
+const RouterListItem = ({ title, to, className, icon: Icon }: { 
   title: string; 
   to: string; 
-  children: React.ReactNode;
   className?: string;
+  icon?: React.ElementType;
 }) => {
   return (
     <li>
@@ -55,14 +55,14 @@ const RouterListItem = ({ title, to, children, className }: {
         <Link
           to={to}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          <div className="text-sm font-medium leading-none flex items-center">
+            {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
+            <span>{title}</span>
+          </div>
         </Link>
       </NavigationMenuLink>
     </li>
@@ -74,67 +74,56 @@ const ServiceSubNav = () => {
   const services = [
     {
       title: 'Validating Product Ideas',
-      description: 'Transform concepts into validated opportunities',
       link: '/services/validating-product-ideas',
       icon: Lightbulb
     },
     {
       title: 'Ideating Product Concepts',
-      description: 'Generate breakthrough product concepts',
       link: '/services/ideating-product-concepts',
       icon: PenTool
     },
     {
       title: 'Designing Brand & Experiences',
-      description: 'Create cohesive, engaging customer experiences',
       link: '/services/designing-experiences',
       icon: Palette
     },
     {
       title: 'Launching New Products',
-      description: 'Accelerate time-to-market with expert launch strategies',
       link: '/services/launching-products',
       icon: Rocket
     },
     {
       title: 'Scaling Products',
-      description: 'Maximize growth with scalable architectures',
       link: '/services/scaling-products',
       icon: TrendingUp
     },
     {
       title: 'Expand Product Offerings',
-      description: 'Diversify and grow your product portfolio',
       link: '/services/expand-product-offerings',
       icon: LayersIcon
     },
     {
       title: 'Standardize Technology',
-      description: 'Create efficiency with technology standardization',
       link: '/services/standardize-technology',
       icon: Settings
     },
     {
       title: 'Pilot Emerging Tech',
-      description: 'Evaluate emerging technologies with low-risk pilots',
       link: '/services/pilot-emerging-tech',
       icon: Cpu
     },
     {
       title: 'Connect to Digital Ecosystems',
-      description: 'Integrate into broader digital ecosystems',
       link: '/services/connect-ecosystems',
       icon: Network
     },
     {
       title: 'Optimize Digital Portfolios',
-      description: 'Harmonize digital assets into cohesive portfolios',
       link: '/services/optimize-portfolios',
       icon: BarChart2
     },
     {
       title: 'Unify Brand Experiences',
-      description: 'Create consistent experiences across all touchpoints',
       link: '/services/unify-brand-experiences',
       icon: Users
     },
@@ -165,12 +154,8 @@ const ServiceSubNav = () => {
                     key={index}
                     title={service.title}
                     to={service.link}
-                  >
-                    <div className="flex items-start">
-                      <service.icon className="h-4 w-4 mr-2 text-brand-400 mt-0.5" />
-                      <span>{service.description}</span>
-                    </div>
-                  </RouterListItem>
+                    icon={service.icon}
+                  />
                 ))}
                 
                 <div className="col-span-2 mt-2">

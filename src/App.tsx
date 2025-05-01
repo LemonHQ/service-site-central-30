@@ -33,8 +33,10 @@ const App = () => (
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:postId" element={<BlogDetail />} />
+          <Route path="/insights" element={<Blog />} /> {/* Changed from /blog to /insights */}
+          <Route path="/blog" element={<Blog />} /> {/* Keep old route for backward compatibility */}
+          <Route path="/insights/:postId" element={<BlogDetail />} /> {/* Added new route */}
+          <Route path="/blog/:postId" element={<BlogDetail />} /> {/* Keep old route for backward compatibility */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
           <Route path="/lead-qualification" element={<LeadQualification />} />
