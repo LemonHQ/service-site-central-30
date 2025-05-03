@@ -70,7 +70,7 @@ const SectorChallenges: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Who we optimize for" 
-          subtitle="We solve the complex brand and product challenges that regulated industries face when transitioning to digital-first."
+          subtitle="We solve the complex challenges brand and product face when transitioning to digital-first."
           centered
         />
         
