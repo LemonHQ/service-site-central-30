@@ -11,7 +11,12 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   const clientLogos = [{
     name: "Abbott",
     logo: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Abbott_Laboratories_logo.svg"
-  }, {
+  }, 
+  {
+    name: "Informa",
+    logo: "https://www.wikicorporates.org/mediawiki/images/a/af/Informa-2018.svg"
+  },                   
+  {
     name: "Liva",
     logo: "https://companieslogo.com/img/orig/LIVA.OM-38255c53.svg"
   }, {
