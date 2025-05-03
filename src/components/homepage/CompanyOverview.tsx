@@ -93,7 +93,7 @@ const CompanyOverview: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Brands today are under increasing pressure to deliver digital-first experiences. 
-              We specialize in the complex realities enterprise brands face in today's modern digital commerce ecosystems: regulatory scrutiny, brand consistency across regions, multiple product lines, and accelerating expectations for digital growth. We're not just digital enablers — we're strategic partners who understand how to move regulated enterprises from idea to market to scale, safely and smartly.
+              We specialize in the complex realities enterprise brands face in today's modern digital commerce ecosystems: regulatory scrutiny, brand consistency across regions, multiple product lines, and accelerating expectations for digital growth. We're not just digital enablers — we're strategic partners who understand how to move multi-market, multi-product enterprises from idea to market to scale, safely and smartly.
             </p>
             
             <div className="space-y-4 mb-8">
