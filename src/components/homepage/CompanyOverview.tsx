@@ -19,7 +19,7 @@ const CompanyOverview: React.FC = () => {
   const targetPortfolios = 10;
 
   // Set up Intersection Observer to detect when stats are in viewport
-  useEffect(() => {
+  useEffect(() => { 
     const observer = new IntersectionObserver(
       ([entry]) => {
         // When stats enter viewport
