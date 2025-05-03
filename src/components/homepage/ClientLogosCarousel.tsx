@@ -15,7 +15,22 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   {
     name: "Informa",
     logo: "https://www.wikicorporates.org/mediawiki/images/a/af/Informa-2018.svg"
-  },                   
+  },  
+ {
+    name: "Bridgestone",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Bridgestone_logo.svg"
+  },
+  {
+    name: "Samsung",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
+  }, 
+  {
+    name: "RSA",
+    logo: "https://upload.wikimedia.org/wikipedia/en/8/8c/RSA_Insurance_Group_%28emblem%29.svg"
+  }, {
+    name: "Dubai Police",
+    logo: "https://vectorlogoseek.com/wp-content/uploads/2020/02/dubai-police-logo-vector.png"
+  },
   {
     name: "Liva",
     logo: "https://companieslogo.com/img/orig/LIVA.OM-38255c53.svg"
@@ -28,15 +43,6 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   }, {
     name: "RJC",
     logo: "https://portal.responsiblejewellery.com/images/default-source/default-album/logo-rjc2020-rgb-1bd66e1ff6e234a39b027614b28874303.png"
-  }, {
-    name: "Samsung",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
-  }, {
-    name: "RSA",
-    logo: "https://upload.wikimedia.org/wikipedia/en/8/8c/RSA_Insurance_Group_%28emblem%29.svg"
-  }, {
-    name: "Dubai Police",
-    logo: "https://vectorlogoseek.com/wp-content/uploads/2020/02/dubai-police-logo-vector.png"
   }];
 
   // Create a plugin instance for autoplay
