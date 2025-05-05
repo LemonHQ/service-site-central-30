@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Google's Gemini AI integrated into search (late 2024)</h4> 
       <p>Google's next-gen LLM Gemini (the successor to PaLM 2) was custom-built to enhance search. By late 2024, Google confirmed that Gemini is being used to generate richer answers in SGE. Gemini's multimodal and reasoning abilities allow it to handle more complex queries. At Google I/O 2024, the company demonstrated how AI could answer entirely new types of questions that search engines struggled with before.</p>
-      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/AI-overview-intent.png" />
+      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/AI-overview-intent.png" style="margin: 0 auto;"/>
       <p>For example, you can describe an intricate need ("I need a gift for a 10-year-old who loves astronomy and dinosaurs") and the AI can parse that and suggest creative product ideas. In 2025, Google also expanded AI summaries to more healthcare queries and introduced features like comparative overlays for medical information, showing their commitment to domain-specific improvements. All these updates aim to make the AI results more accurate, comprehensive, and trustworthy – critical for regulated fields.</p>
       
       
@@ -68,15 +68,8 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Financial services (Banking & Investment)</h4>
       <p>Consumers are using AI chatbots to seek quick financial advice and product recommendations in a conversational way. Instead of parsing fine print on bank websites, a user might ask an AI assistant: "What's the best savings account for high interest rates?" or "How do I apply for a mortgage?"</p>      
-      <ul>
-        <li>
-          <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>
-        </li>
-        <li>
-          <p><strong>Credit Cards and Loans:</strong> AI assistants are being used to evaluate consumer finance products. A user could query, "Find me the top 3 travel credit cards with low annual fees," and the AI will likely enumerate a few card options, citing their perks and fees. ChatGPT tends to give very straightforward, advisory answers in finance, and research shows it can even rival traditional robo-advisors in certain advice scenarios (though with caveats).</p>
-        </li>
-      </ul>
-            
+      <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>      
+      <p><strong>Credit Cards and Loans:</strong> AI assistants are being used to evaluate consumer finance products. A user could query, "Find me the top 3 travel credit cards with low annual fees," and the AI will likely enumerate a few card options, citing their perks and fees. ChatGPT tends to give very straightforward, advisory answers in finance, and research shows it can even rival traditional robo-advisors in certain advice scenarios (though with caveats).</p>
       
       
       <h4>Insurance</h4>
