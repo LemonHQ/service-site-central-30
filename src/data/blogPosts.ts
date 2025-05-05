@@ -68,21 +68,41 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Financial services (Banking & Investment)</h4>
       <p>Consumers are using AI chatbots to seek quick financial advice and product recommendations in a conversational way. Instead of parsing fine print on bank websites, a user might ask an AI assistant: "What's the best savings account for high interest rates?" or "How do I apply for a mortgage?"</p>      
-      <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>      
-      <p><strong>Credit Cards and Loans:</strong> AI assistants are being used to evaluate consumer finance products. A user could query, "Find me the top 3 travel credit cards with low annual fees," and the AI will likely enumerate a few card options, citing their perks and fees. ChatGPT tends to give very straightforward, advisory answers in finance, and research shows it can even rival traditional robo-advisors in certain advice scenarios (though with caveats).</p>
+      <ul>
+        <li>
+            <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>      
+        </li>
+        <li>
+          <p><strong>Credit Cards and Loans:</strong> AI assistants are being used to evaluate consumer finance products. A user could query, "Find me the top 3 travel credit cards with low annual fees," and the AI will likely enumerate a few card options, citing their perks and fees. ChatGPT tends to give very straightforward, advisory answers in finance, and research shows it can even rival traditional robo-advisors in certain advice scenarios (though with caveats).</p>
+        </li>
+      </ul>
+      
+      
       
       
       <h4>Insurance</h4>
       <p>Insurance products are complex and often not well understood by consumers – a perfect scenario for AI guidance. Users are beginning to lean on generative AI to demystify policies and providers:</p>
-      <p><strong>Product recommendation:</strong> Rather than calling an insurance agent, someone might ask an AI, "What insurance do I need as a freelancer?" The assistant could outline necessary coverage (health, disability, liability, etc.) and even list popular insurers or plans that fit the profile.</p>
-      <p><strong>Complex coverage questions:</strong> Insurance is filled with "it depends" scenarios, and AI chat is surprisingly adept at handling these nuances through conversation. A user could ask, "Does my travel insurance cover trip cancellation due to illness?" and get a tailored explanation, possibly followed by "What are some insurers that offer robust trip cancellation coverage?" The AI might cite a few top-rated plans.</p>
+      <ul>
+        <li>
+            <p><strong>Product recommendation:</strong> Rather than calling an insurance agent, someone might ask an AI, "What insurance do I need as a freelancer?" The assistant could outline necessary coverage (health, disability, liability, etc.) and even list popular insurers or plans that fit the profile.</p>      
+        </li>
+        <li>
+          <p><strong>Complex coverage questions:</strong> Insurance is filled with "it depends" scenarios, and AI chat is surprisingly adept at handling these nuances through conversation. A user could ask, "Does my travel insurance cover trip cancellation due to illness?" and get a tailored explanation, possibly followed by "What are some insurers that offer robust trip cancellation coverage?" The AI might cite a few top-rated plans.</p>
+        </li>
+      </ul>
+      
       
       
       <h4>Healthcare</h4>
       <p>Healthcare is one of the most impacted industries in this AI search revolution – analysts found that healthcare queries see "extreme" levels of AI-generated answers in Google's SGE, more than any other category.</p>
-      <p><strong>Symptom and treatment searches:</strong> Patients often search symptoms or treatment options before deciding on care. Now, asking an AI, "How is Type 2 diabetes treated?" might yield an organized answer describing diet, exercise, medications (with drug brand names), and possibly mention leading healthcare providers or programs.</p>
-      <p><strong>Health Product Recommendations:</strong> Consumers also use AI to discover health-related products (supplements, medical devices, insurance plans). For example, "What's a good over-the-counter allergy medicine that won't cause drowsiness?" could get an answer listing a couple of antihistamine brands with rationale.</p>
-      
+      <ul>
+        <li>
+          <p><strong>Symptom and treatment searches:</strong> Patients often search symptoms or treatment options before deciding on care. Now, asking an AI, "How is Type 2 diabetes treated?" might yield an organized answer describing diet, exercise, medications (with drug brand names), and possibly mention leading healthcare providers or programs.</p>
+        </li>
+        <li>
+          <p><strong>Health Product Recommendations:</strong> Consumers also use AI to discover health-related products (supplements, medical devices, insurance plans). For example, "What's a good over-the-counter allergy medicine that won't cause drowsiness?" could get an answer listing a couple of antihistamine brands with rationale.</p>
+        </li>
+      </ul>
       
       <h3>Why Brands Must Monitor and Track AI-Generated Results</h3>      
       <p>For brands in finance, insurance, and healthcare, the rise of generative AI in discovery is a double-edged sword: it presents new opportunities to reach customers, but also risks if you're not represented accurately. AI assistants can become the "source of truth" about your brand for consumers who use them. This makes it vital to actively monitor, measure and track your company or products in AI-driven conversations and search results.</p>
