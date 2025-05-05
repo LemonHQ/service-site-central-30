@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Clock, Calendar, Share, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const BlogDetail: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -49,11 +50,10 @@ const BlogDetail: React.FC = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
           
           <div className="flex items-center mb-8">
-            <img 
-              src={post.author.avatar} 
-              alt={post.author.name}
-              className="h-12 w-12 rounded-full mr-4"
-            />
+            <Avatar className="h-12 w-12 mr-4">
+              <AvatarImage src={post.author.avatar} alt={post.author.name} />
+              <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+            </Avatar>
             <div>
               <p className="font-medium">{post.author.name}</p>
               <p className="text-gray-600 text-sm">{post.author.role}</p>
@@ -100,11 +100,10 @@ const BlogDetail: React.FC = () => {
           <div className="mb-12">
             <Card className="bg-gray-50">
               <CardContent className="p-6 flex items-center">
-                <img 
-                  src={post.author.avatar} 
-                  alt={post.author.name}
-                  className="h-20 w-20 rounded-full mr-6"
-                />
+                <Avatar className="h-20 w-20 mr-6">
+                  <AvatarImage src={post.author.avatar} alt={post.author.name} />
+                  <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+                </Avatar>
                 <div>
                   <h4 className="text-xl font-semibold mb-1">About {post.author.name}</h4>
                   <p className="text-gray-600 mb-2">{post.author.role}</p>

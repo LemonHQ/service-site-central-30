@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
 import { BlogPost } from '@/data/blogPosts';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -45,11 +46,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
           
           <div className="flex items-center mt-auto pt-4">
-            <img 
-              src={post.author.avatar} 
-              alt={post.author.name}
-              className="h-8 w-8 rounded-full mr-3"
-            />
+            <Avatar className="h-8 w-8 mr-3">
+              <AvatarImage src={post.author.avatar} alt={post.author.name} />
+              <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+            </Avatar>
             <span className="text-sm font-medium">{post.author.name}</span>
           </div>
           
