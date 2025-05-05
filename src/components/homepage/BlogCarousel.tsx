@@ -5,47 +5,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import SectionHeading from '../ui/SectionHeading';
 import { Button } from '@/components/ui/button';
-
-interface BlogPost {
-  title: string;
-  excerpt: string;
-  image: string;
-  date: string;
-  slug: string;
-  category: string;
-}
+import { blogPosts } from '@/data/blogPosts';
 
 const BlogCarousel: React.FC = () => {
-  // Example blog posts with placeholder images
-  const blogPosts: BlogPost[] = [{
-    title: "The Future of Enterprise Product Development",
-    excerpt: "Discover how AI, machine learning, and predictive analytics are reshaping product development strategies for enterprise organizations.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=400&q=80",
-    date: "April 15, 2023",
-    slug: "future-enterprise-product-development",
-    category: "Innovation"
-  }, {
-    title: "Building Products that Scale: Architecture Considerations",
-    excerpt: "Learn the key architectural patterns and principles that enable products to scale effectively from thousands to millions of users.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&h=400&q=80",
-    date: "March 22, 2023",
-    slug: "building-products-that-scale",
-    category: "Technology"
-  }, {
-    title: "Validating Product Ideas: A Data-Driven Approach",
-    excerpt: "Move beyond gut feelings with a structured framework for validating product concepts using quantitative and qualitative methods.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80",
-    date: "February 8, 2023",
-    slug: "validating-product-ideas",
-    category: "Strategy"
-  }, {
-    title: "Enterprise UX: Balancing Complexity and Usability",
-    excerpt: "Strategies for designing intuitive user experiences while accommodating the complex requirements of enterprise applications.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=400&q=80",
-    date: "January 17, 2023",
-    slug: "enterprise-ux-complexity-usability",
-    category: "Design"
-  }];
+  // Use the first 4 blog posts from our data source
+  const displayPosts = blogPosts.slice(0, 4);
 
   return (
     <section className="section-padding bg-beige-50">
@@ -57,19 +21,23 @@ const BlogCarousel: React.FC = () => {
             align: "start"
           }} className="w-full">
             <CarouselContent className="-ml-4">
-              {blogPosts.map((post, index) => (
+              {displayPosts.map((post, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Link to={`/insights/${post.slug}`} className="block h-full">
+                  <Link to={`/insights/${post.id}`} className="block h-full">
                     <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
                       <div className="h-48 bg-gray-100">
-                        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                        <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover" />
                       </div>
                       <CardContent className="pt-6">
                         <div className="mb-3 flex justify-between items-center">
                           <span className="text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
                             {post.category}
                           </span>
-                          <span className="text-xs text-gray-500">{post.date}</span>
+                          <span className="text-xs text-gray-500">{new Date(post.publishDate).toLocaleDateString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric'
+                          })}</span>
                         </div>
                         <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
                         <p className="text-gray-600 text-sm">{post.excerpt}</p>
