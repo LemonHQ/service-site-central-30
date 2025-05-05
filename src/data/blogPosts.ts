@@ -20,9 +20,7 @@ export const blogPosts: BlogPost[] = [
     id: 'generative-ai-brand-discovery',
     title: 'How Generative AI is reshaping brand and product discovery',
     excerpt: 'Explore how AI assistants are transforming the way consumers find, evaluate, and choose products and services across industries.',
-    content: `
-      <h2>How Generative AI is Reshaping Brand and Product Discovery</h2>
-      
+    content: `      
       <p>In a recent report from Adobe Analytics, search traffic to US retail websites from Generative AI sources has jumped 1,200%. Generative AI has moved from novelty to a mainstream tool that millions now use to find information – including recommendations on brands, services, and products. ChatGPT reached 1 million users in just five days and now draws over 400 million monthly users, illustrating how rapidly consumers have embraced AI assistants. This surge is massively disrupting how people search and discover products online.</p>
       
       <p>Crucially, it's not just Google's realm anymore: users are turning to conversational AI platforms like OpenAI's ChatGPT, Google's upcoming Gemini, Meta's Llama 2, and even Amazon's new "Rufus" AI assistant for shopping. In regulated sectors such as finance, insurance, and healthcare – where trust and accurate information are paramount – generative AI is already transforming how consumers find and evaluate offerings.</p>
@@ -110,28 +108,28 @@ export const blogPosts: BlogPost[] = [
       <h4>Information Sources and References</h4>
       
       <ul>
-        <li>How AI Fueled Black Friday Shopping This Year</li>
-        <li>Adobe Analytics: Traffic to US Retail Websites from Generative AI Sources Jumps 1,200%</li>
-        <li>AI search is starting to kill Google's 'ten blue links'</li>
-        <li>The Future of Product Data: Trends in PXM and Beyond</li>
-        <li>Amazon's AI shopping assistant Rufus is projected to indirectly boost operating profits by $700 million this year</li>
-        <li>From 'catch up' to 'catch us': How Google quietly took the lead in enterprise AI</li>
-        <li>Google leans further into AI-generated overviews for its search engine</li>
-        <li>Perplexity Releases Internal Knowledge Search and Spaces</li>
-        <li>Adobe Analytics: GenAI Traffic to Retail Websites Doubles Every 2 Months</li>
-        <li>More consumers using genAI tools to research purchases: Adobe</li>
+        <li><a href="https://www.barrons.com/articles/black-friday-shopping-cyber-monday-d31144da?utm_source=chatgpt.com" target="_blank">How AI Fueled Black Friday Shopping This Year</a></li>
+        <li><a href="https://www.vktr.com/the-wire/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200/?utm_source=chatgpt.com" target="_blank">Adobe Analytics: Traffic to US Retail Websites from Generative AI Sources Jumps 1,200%</a></li>
+        <li><a href="https://www.theverge.com/ai-artificial-intelligence/631352/ai-search-adobe-analytics-google-perplexity-openai?utm_source=chatgpt.com" target="_blank">AI search is starting to kill Google's 'ten blue links'</a></li>
+        <li><a href="https://syndigo.com/blog/future-of-product-data-pxm-trends-2025/?utm_source=chatgpt.com" target="_blank">The Future of Product Data: Trends in PXM and Beyond</a></li>
+        <li><a href="https://www.businessinsider.com/amazon-predicts-700-million-potential-gain-ai-assistant-rufus-2025-4?utm_source=chatgpt.com" target="_blank">Amazon's AI shopping assistant Rufus is projected to indirectly boost operating profits by $700 million this year</a></li>
+        <li><a href="https://venturebeat.com/ai/from-catch-up-to-catch-us-how-google-quietly-took-the-lead-in-enterprise-ai/?utm_source=chatgpt.com" target="_blank">From 'catch up' to 'catch us': How Google quietly took the lead in enterprise AI</a></li>
+        <li><a href="https://apnews.com/article/google-search-artificial-intelligence-overviews-c4061a38b5e186f7abc41ee011da329f" target="_blank">Google leans further into AI-generated overviews for its search engine</a></li>
+        <li><a href="https://www.vktr.com/ai-news/perplexity-releases-internal-knowledge-search-and-spaces/?utm_source=chatgpt.com" target="_blank">Perplexity Releases Internal Knowledge Search and Spaces</a></li>
+        <li><a href="https://www.pymnts.com/artificial-intelligence-2/2025/adobe-analytics-genai-traffic-to-retail-websites-doubles-every-2-months/?utm_source=chatgpt.com" target="_blank">Adobe Analytics: GenAI Traffic to Retail Websites Doubles Every 2 Months</a></li>
+        <li><a href="https://martech.org/more-consumers-using-genai-tools-to-research-purchases-adobe/?utm_source=chatgpt.com" target="_blank">More consumers using genAI tools to research purchases: Adobe</a></li>
       </ul>
     `,
     author: {
-      name: 'Emma Rodriguez',
-      role: 'Digital Strategy Director',
+        name: 'Husain Mohsin',
+      role: 'Enterprise Partner',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
     },
-    category: 'Strategy',
-    tags: ['AI', 'Digital Marketing', 'Customer Experience', 'Product Discovery'],
+    category: 'Emerging tech',
+    tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
     featuredImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
     publishDate: '2025-05-04',
-    readTime: 15
+    readTime: 8
   },
   {
     id: 'future-enterprise-product-development',
