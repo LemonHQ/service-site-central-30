@@ -65,10 +65,11 @@ export const blogPosts: BlogPost[] = [
       
       <h3>What this shift means for regulated brands</h3> 
       <p>The upshot of these upgrades is that consumers in 2025 expect fast, personalized answers from AI, and the AI tools are increasingly able to deliver. In finance, insurance, and healthcare, consumers are beginning to use these platforms to get answers that were once provided by advisors, agents, or curated search results.</p>
-      
+       <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/Side-by-side-searching.png" />
       
       <h4>Financial services (Banking & Investment)</h4>
       <p>Consumers are using AI chatbots to seek quick financial advice and product recommendations in a conversational way. Instead of parsing fine print on bank websites, a user might ask an AI assistant: "What's the best savings account for high interest rates?" or "How do I apply for a mortgage?"</p>      
+      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/Best+credit+card+for+students.png" />
       <ul>
         <li>
             <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>      
@@ -96,6 +97,7 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Healthcare</h4>
       <p>Healthcare is one of the most impacted industries in this AI search revolution – analysts found that healthcare queries see "extreme" levels of AI-generated answers in Google's SGE, more than any other category.</p>
+      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/AI-overviews.png" />
       <ul>
         <li>
           <p><strong>Symptom and treatment searches:</strong> Patients often search symptoms or treatment options before deciding on care. Now, asking an AI, "How is Type 2 diabetes treated?" might yield an organized answer describing diet, exercise, medications (with drug brand names), and possibly mention leading healthcare providers or programs.</p>
@@ -105,14 +107,14 @@ export const blogPosts: BlogPost[] = [
         </li>
       </ul>
       
-      <h3>Why Brands Must Monitor and Track AI-Generated Results</h3>      
+      <h3>Why brands must monitor and track AI-generated results</h3>      
       <p>For brands in finance, insurance, and healthcare, the rise of generative AI in discovery is a double-edged sword: it presents new opportunities to reach customers, but also risks if you're not represented accurately. AI assistants can become the "source of truth" about your brand for consumers who use them. This makes it vital to actively monitor, measure and track your company or products in AI-driven conversations and search results.</p>
       
-      <h4>Monitor AI Outputs Regularly</h4>
+      <h4>Monitor AI outputs regularly</h4>
       <p>It's important to treat AI answers as a new type of "search result" to monitor. Just as companies track their Google search rankings or social media mentions, they should now be checking what ChatGPT, Bing Chat, Bard, etc., say about them. This could mean literally asking the AI, "What is your opinion of [my company]?" or "Which [product type] do you recommend and why?" and seeing if your brand appears and how it's described.</p>
       
       
-      <h4>Embrace AI on Owned Channels</h4>
+      <h4>Embrace AI on owned channels</h4>
       <p>Brands shouldn't just react to others' AI – they can deploy their own. Many banks, insurers, and healthcare providers are starting to use GPT-powered chatbots on their websites or apps to guide customers. These can be tuned to provide compliant, up-to-date info and can hand off to human agents when needed.</p>
       
       
