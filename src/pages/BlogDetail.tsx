@@ -75,7 +75,7 @@ const BlogDetail: React.FC = () => {
           </div>
           
           <div 
-            className="prose prose-lg max-w-none mb-12"
+            className="prose prose-lg max-w-none mb-12 [&_img]:py-6"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           
