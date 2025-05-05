@@ -1,3 +1,4 @@
+
 import React, { useMemo } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -74,7 +75,7 @@ const BlogDetail: React.FC = () => {
           </div>
           
           <div 
-            className="prose prose-lg max-w-none mb-12 [&_img]:py-6 [&_img]:rounded-lg"
+            className="prose prose-lg max-w-none mb-12 [&_img]:py-6 [&_img]:rounded-lg [&_h3:contains('Google\'s_Gemini_AI_integrated_into_search')_+_*_img]:mx-auto [&_h3:contains('Google\'s_Gemini_AI_integrated_into_search')_+_*_img]:block"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           
