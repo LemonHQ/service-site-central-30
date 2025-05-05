@@ -47,6 +47,7 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Google's Gemini AI integrated into search (late 2024)</h4> 
       <p>Google's next-gen LLM Gemini (the successor to PaLM 2) was custom-built to enhance search. By late 2024, Google confirmed that Gemini is being used to generate richer answers in SGE. Gemini's multimodal and reasoning abilities allow it to handle more complex queries. At Google I/O 2024, the company demonstrated how AI could answer entirely new types of questions that search engines struggled with before.</p>
+      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/AI-overview-intent.png" />
       <p>For example, you can describe an intricate need ("I need a gift for a 10-year-old who loves astronomy and dinosaurs") and the AI can parse that and suggest creative product ideas. In 2025, Google also expanded AI summaries to more healthcare queries and introduced features like comparative overlays for medical information, showing their commitment to domain-specific improvements. All these updates aim to make the AI results more accurate, comprehensive, and trustworthy – critical for regulated fields.</p>
       
       
