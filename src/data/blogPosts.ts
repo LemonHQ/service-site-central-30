@@ -54,6 +54,7 @@ export const blogPosts: BlogPost[] = [
       
       <h4>Amazon's Rufus fully deployed (2024)</h4>      
       <p>After a testing period, Amazon's Rufus shopping AI was rolled out to all US customers in September 2024. Throughout 2024, Amazon improved Rufus's ability to handle a broad range of shopping questions. By analyzing product manuals, customer reviews, and even community Q&A content, Rufus became better at answering detailed product questions (e.g. compatibility concerns, ingredient safety in cosmetics).</p>
+      <img src="https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/amazon-rufus.png" style="margin: 0 auto;"/>
       <p>Amazon also reports refining Rufus with feedback from tens of millions of customer interactions. This feedback loop helped the AI provide more relevant recommendations. For instance, if users frequently ask whether a certain mascara is a "clean beauty" product, Rufus learns to proactively mention product safety or ingredient info. By 2025, Amazon predicts its AI assistant will significantly boost customer engagement and sales – an internal projection even estimated a $700M profit impact from Rufus, as more shoppers find what they need faster.</p>
       
       
