@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     },
     category: 'Emerging tech',
     tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
-    featuredImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
+    featuredImage: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/amazon-rufus-in-action.jpg',
     publishDate: '2025-05-04',
     readTime: 8
   },
