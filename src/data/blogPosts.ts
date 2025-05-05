@@ -38,12 +38,15 @@ export const blogPosts: BlogPost[] = [
       
       <p>Many of the consumer-facing AI tools got significant improvements in 2024–2025 that make them even more useful for product research and recommendations:</p>
 
+      <ul>
+      <li>
       <p>&nbsp;</p>
       <h4>OpenAI ChatGPT Gets Web Browsing & Plugins (2024)</h4>
       <p>&nbsp;</p>
-      
       <p>Originally, ChatGPT's knowledge cut off in 2021, limiting its usefulness for new products. In 2024, OpenAI re-enabled and enhanced ChatGPT's web browsing capability, allowing it to pull current information from the internet when needed. This means ChatGPT can now fetch the latest data – for instance, 2024's newest insurance plans or current interest rates – instead of relying solely on its training data. OpenAI also expanded the plugin ecosystem, which includes plugins for shopping (e.g. Instacart, Klarna) that let ChatGPT search product databases in real time. These upgrades make ChatGPT far more adept at product discovery tasks, from finding up-to-date prices to checking if a particular item is in stock or if a new financial product has launched.</p>
-
+      </li>
+  
+      <li>
       <p>&nbsp;</p>
       <h4>Google's Gemini AI integrated into Search (late 2024)</h4>
       <p>&nbsp;</p>
@@ -51,7 +54,9 @@ export const blogPosts: BlogPost[] = [
       <p>Google's next-gen LLM Gemini (the successor to PaLM 2) was custom-built to enhance search. By late 2024, Google confirmed that Gemini is being used to generate richer answers in SGE. Gemini's multimodal and reasoning abilities allow it to handle more complex queries. At Google I/O 2024, the company demonstrated how AI could answer entirely new types of questions that search engines struggled with before.</p>
       
       <p>For example, you can describe an intricate need ("I need a gift for a 10-year-old who loves astronomy and dinosaurs") and the AI can parse that and suggest creative product ideas. In 2025, Google also expanded AI summaries to more healthcare queries and introduced features like comparative overlays for medical information, showing their commitment to domain-specific improvements. All these updates aim to make the AI results more accurate, comprehensive, and trustworthy – critical for regulated fields.</p>
-      
+      </li>
+
+      <li>
       <p>&nbsp;</p>
       <h4>Amazon's Rufus Fully Deployed (2024)</h4>
       <p>&nbsp;</p>
@@ -59,13 +64,16 @@ export const blogPosts: BlogPost[] = [
       <p>After a testing period, Amazon's Rufus shopping AI was rolled out to all US customers in September 2024. Throughout 2024, Amazon improved Rufus's ability to handle a broad range of shopping questions. By analyzing product manuals, customer reviews, and even community Q&A content, Rufus became better at answering detailed product questions (e.g. compatibility concerns, ingredient safety in cosmetics).</p>
       
       <p>Amazon also reports refining Rufus with feedback from tens of millions of customer interactions. This feedback loop helped the AI provide more relevant recommendations. For instance, if users frequently ask whether a certain mascara is a "clean beauty" product, Rufus learns to proactively mention product safety or ingredient info. By 2025, Amazon predicts its AI assistant will significantly boost customer engagement and sales – an internal projection even estimated a $700M profit impact from Rufus, as more shoppers find what they need faster.</p>
-      
+      </li>
+
+      <li>      
       <p>&nbsp;</p>
       <h4>Perplexity AI and Others – Enhanced Answer Engines</h4>
       <p>&nbsp;</p>
-      
       <p>Smaller AI search players continued to innovate. Perplexity introduced features like "internal knowledge search" and community sharing (Spaces) in late 2024. These allow users to trust it not just for public web info but also for personal or proprietary data (think of uploading a PDF of your insurance policy and asking questions about it).</p>
+      </li>
       
+      <ul>
       <p>While not specific to one industry, such features can be extremely useful in regulated domains – e.g. a doctor could upload clinical guidelines and have the AI answer questions, or a financial advisor could query an AI on internal research documents. Additionally, Microsoft's AI Co-pilot integration across Windows and Office (late 2023) means more users have an AI at their fingertips, which could be used to search the web or internal data without opening a browser. Apple is also rebuilding Siri with generative AI capabilities – we may soon see voice-driven product queries (like asking your iPhone, "Compare health insurance plans for me") become far more fluent and detailed than Siri's current abilities.</p>
       
       <p>&nbsp;</p>
