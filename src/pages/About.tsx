@@ -88,7 +88,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-6">About ElevateDigital</h1>
             <p className="text-xl md:text-2xl mb-8 text-brand-100">
-              We're a team of scaling experts enabling multi-product, multi-market enterprise brands create exceptional scalable digital brands, product and customers experiences.
+              We're a team of scaling experts enabling multi-product, multi-market enterprise brands create digital eco-system ready brands, product and customers experiences.
             </p>
           </div>
         </div>
@@ -101,13 +101,13 @@ const About = () => {
             <div>
               <SectionHeading 
                 title="Our Story" 
-                subtitle="Founded in 2010, ElevateDigital has grown from a small product strategy consultancy to a full-service digital product partner for enterprise brands worldwide."
+                subtitle="Founded in 2008, LemonHQ has grown from a boutique strategic digital consultancy to an eco-system digital partner for enterprise brands worldwide looking to launch, scale and expand their digital-firt portfolios."
               />
               <p className="text-gray-600 mb-6">
-                Our journey began with a simple mission: to help businesses create digital products that truly serve their customers' needs while driving business growth. Over the years, we've expanded our capabilities and expertise, but that core mission remains unchanged.
+                Our journey began with a simple mission: to help businesses create digital-first products that truly serve their customers' needs today and tomorrow. Over the years, we've expanded our capabilities and expertise, but that core mission remains unchanged.
               </p>
               <p className="text-gray-600">
-                Today, we work with leading enterprise brands across industries, bringing together strategic thinking, design excellence, and technical expertise to solve complex product challenges and create exceptional digital experiences.
+                Today, we work with leading enterprise brands across regulated sectors, bringing together strategic thinking, design excellence, and technical expertise to solve complex eco-system challenges and create exceptional digital-first experiences.
               </p>
             </div>
             
@@ -166,7 +166,7 @@ const About = () => {
             <div className="order-1 md:order-2">
               <h3 className="text-2xl font-semibold mb-4 text-brand-700">A Holistic Method</h3>
               <p className="text-gray-600 mb-6">
-                Our approach integrates strategic business thinking with human-centered design and technological expertise. We don't just focus on what's possible today; we help you build for the future while delivering immediate value.
+                Our approach integrates strategic platform thinking with human-centered design and technological expertise. We don't just focus on what's possible today; we help you build for the future while delivering immediate value.
               </p>
               
               <div className="space-y-4 mb-6">
@@ -177,17 +177,17 @@ const About = () => {
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <p className="text-gray-600">Research-backed insights that drive decisions</p>
+                  <p className="text-gray-600">Data-backed insights that drive decisions</p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <p className="text-gray-600">Rapid prototyping and validation to reduce risk</p>
+                  <p className="text-gray-600">Multi-stage product design to reduce risk</p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <p className="text-gray-600">Scalable solutions designed for enterprise needs</p>
+                  <p className="text-gray-600">Scalable solutions designed for digital enterprise needs</p>
                 </div>
               </div>
             </div>
