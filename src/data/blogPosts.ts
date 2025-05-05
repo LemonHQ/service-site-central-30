@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
     author: {
         name: 'Husain Mohsin',
       role: 'Enterprise Partner',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
+      avatar: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/husain-mohsin-profile-pic.png'
     },
     category: 'Emerging tech',
     tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
