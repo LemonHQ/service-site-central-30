@@ -20,7 +20,7 @@ const SpotlightCarousel: React.FC = () => {
     }}>
         <div className="container mx-auto">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">
+            <h1 className="mb-6 animate-fade-in font-light text-gray-50">
               {content.title}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-brand-100 animate-slide-in">
