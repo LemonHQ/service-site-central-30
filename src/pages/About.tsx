@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
@@ -84,7 +83,7 @@ const About = () => {
       {/* Our Story Section */}
       <section className="section-padding">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <SectionHeading title="Our Story" subtitle="Founded in 2008, LemonHQ has grown from a boutique strategic digital consultancy to an eco-system digital partner for enterprise brands worldwide looking to launch, scale and expand their digital-firt portfolios." />
               <p className="text-gray-600 mb-6">
