@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
       <p>At LemonHQ, we have developed the capability to measure brand representation and tracking for the leading LLMs. Knowing where your brand or product stands in today's AI-enabled landscapes is critical to decision making and staying ahead, request a free AI assessment report of your brand or product <a href="/contact">here</a>.</p>
       
       
-      <h4>Information Sources and References</h4>
+      <h4>Information sources and references</h4>
      
       
       <ul>
