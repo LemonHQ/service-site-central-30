@@ -18,7 +18,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 'generative-ai-brand-discovery',
-    title: 'How Generative AI is Reshaping Brand and Product Discovery',
+    title: 'How Generative AI is reshaping brand and product discovery',
     excerpt: 'Explore how AI assistants are transforming the way consumers find, evaluate, and choose products and services across industries.',
     content: `
       <h2>How Generative AI is Reshaping Brand and Product Discovery</h2>
