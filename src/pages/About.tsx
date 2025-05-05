@@ -88,7 +88,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-6">About ElevateDigital</h1>
             <p className="text-xl md:text-2xl mb-8 text-brand-100">
-              We're a team of product experts passionate about helping enterprise brands create exceptional digital products and experiences.
+              We're a team of scaling experts enabling multi-product, multi-market enterprise brands create exceptional scalable digital brands, product and customers experiences.
             </p>
           </div>
         </div>
