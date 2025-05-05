@@ -94,24 +94,51 @@
     @apply bg-background text-foreground font-sans;
   }
 
+  /* Heading styles with brand colors and descending sizes */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-light tracking-tight;
+    @apply font-display font-light tracking-tight mt-8 mb-4;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-5xl sm:text-6xl md:text-7xl text-brand-700;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-4xl sm:text-5xl md:text-6xl text-brand-600;
   }
 
   h3 {
-    @apply text-2xl sm:text-3xl;
+    @apply text-3xl sm:text-4xl md:text-5xl text-brand-500;
   }
 
   h4 {
-    @apply text-xl sm:text-2xl;
+    @apply text-2xl sm:text-3xl text-brand-400;
+  }
+
+  h5 {
+    @apply text-xl sm:text-2xl text-accent-600;
+  }
+
+  h6 {
+    @apply text-lg sm:text-xl text-accent-500;
+  }
+
+  /* List styles */
+  ul {
+    @apply list-disc pl-6 my-4 space-y-2;
+  }
+
+  ol {
+    @apply list-decimal pl-6 my-4 space-y-2;
+  }
+
+  li {
+    @apply pl-2;
+  }
+
+  /* Nested lists */
+  ul ul, ol ol, ul ol, ol ul {
+    @apply my-2;
   }
 
   .section-padding {

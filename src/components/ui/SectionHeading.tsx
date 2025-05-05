@@ -17,15 +17,15 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <div className={cn(
-      'py-8 md:py-12',
+      'py-10 md:py-16',
       centered ? 'text-center' : '',
       className
     )}>
-      <h2 className="text-4xl md:text-5xl font-light text-brand-700 mb-6">
+      <h2 className="text-4xl md:text-5xl font-light text-brand-700">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">
           {subtitle}
         </p>
       )}
