@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
-import ServiceCard from '@/components/ui/ServiceCard';
+import ServiceCard from '../components/ui/ServiceCard';
 import CtaSection from '../components/ui/CtaSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
