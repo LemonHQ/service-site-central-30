@@ -1,16 +1,23 @@
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, Clock, Calendar, Share, Tag } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Share, Tag, Copy, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { 
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger
+} from "@/components/ui/hover-card";
+import { useToast } from "@/hooks/use-toast";
 
 const BlogDetail: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
+  const { toast } = useToast();
   
   // Find the blog post based on the URL parameter
   const post = useMemo(() => {
@@ -35,6 +42,39 @@ const BlogDetail: React.FC = () => {
       .filter(p => p.category === post.category && p.id !== post.id)
       .slice(0, 3);
   }, [post]);
+
+  // Handle copy to clipboard
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    toast({
+      title: "Link copied",
+      description: "The article URL has been copied to your clipboard.",
+    });
+  };
+
+  // Social sharing handlers
+  const handleShare = (platform: string) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title);
+    
+    let shareUrl = '';
+    
+    switch (platform) {
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        break;
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+        break;
+      default:
+        return;
+    }
+    
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  };
   
   return (
     <MainLayout>
@@ -91,8 +131,54 @@ const BlogDetail: React.FC = () => {
               ))}
               
               <div className="ml-auto flex items-center">
-                <Share className="h-4 w-4 mr-2" />
-                <span>Share this article</span>
+                <HoverCard openDelay={100} closeDelay={200}>
+                  <HoverCardTrigger asChild>
+                    <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-800">
+                      <Share className="h-4 w-4 mr-2" />
+                      <span>Share</span>
+                    </Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-auto p-2" align="end">
+                    <div className="flex gap-2">
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="rounded-full bg-white hover:bg-blue-50" 
+                        onClick={() => handleShare('facebook')}
+                        aria-label="Share on Facebook"
+                      >
+                        <Facebook className="h-4 w-4 text-blue-600" />
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="rounded-full bg-white hover:bg-blue-50" 
+                        onClick={() => handleShare('twitter')}
+                        aria-label="Share on Twitter"
+                      >
+                        <Twitter className="h-4 w-4 text-blue-400" />
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="rounded-full bg-white hover:bg-blue-50" 
+                        onClick={() => handleShare('linkedin')}
+                        aria-label="Share on LinkedIn"
+                      >
+                        <Linkedin className="h-4 w-4 text-blue-700" />
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="rounded-full bg-white hover:bg-gray-50" 
+                        onClick={handleCopyLink}
+                        aria-label="Copy link"
+                      >
+                        <Copy className="h-4 w-4 text-gray-600" />
+                      </Button>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               </div>
             </div>
           </div>
