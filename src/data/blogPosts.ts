@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
       <p>In a recent report from Adobe Analytics, search traffic to US retail websites from Generative AI sources has jumped 1,200%. Generative AI has moved from novelty to a mainstream tool that millions now use to find information – including recommendations on brands, services, and products. ChatGPT reached 1 million users in just five days and now draws over 400 million monthly users, illustrating how rapidly consumers have embraced AI assistants. This surge is massively disrupting how people search and discover products online.</p>
       
       <p>Crucially, it's not just Google's realm anymore: users are turning to conversational AI platforms like OpenAI's ChatGPT, Google's upcoming Gemini, Meta's Llama 2, and even Amazon's new "Rufus" AI assistant for shopping. In regulated sectors such as finance, insurance, and healthcare – where trust and accurate information are paramount – generative AI is already transforming how consumers find and evaluate offerings.</p>
-      <h3>The Buying Journey Becomes Conversational</h3>
+      <h3>The buying journey becomes conversational</h3>
 
       
       <p>One notable change is that the buying journey is becoming an interactive conversation. Instead of performing one-off searches, consumers are engaging in extended back-and-forth dialogues with AI chatbots throughout the buying funnel. As one industry expert observes, shoppers are now having "a series of questions through the entire customer journey or purchase funnel" with AI, rather than a single query-and-click – an iterative conversation that guides their decisions step by step.</p>
@@ -33,37 +33,37 @@ export const blogPosts: BlogPost[] = [
       <p>For example, a consumer might start by asking a chatbot which product category fits their needs, then inquire about specific features, compare alternatives, and finally confirm the best choice. This conversational approach keeps the AI assistant "between the brand and the individual, basically guiding the conversation about the product" as the consumer moves toward a purchase. In practical terms, an AI assistant can educate the buyer on product specs, clarify usage questions, and even handle objections in real time, much like a personal shopping advisor available 24/7.</p>
       
       
-      <h3>Recent Upgrades (Late 2024– Early 2025)</h3>
+      <h3>Recent upgrades (Late 2024– Early 2025)</h3>
       
       <p>Many of the consumer-facing AI tools got significant improvements in 2024–2025 that make them even more useful for product research and recommendations:</p>
 
       
       
-      <h4>OpenAI ChatGPT Gets Web Browsing & Plugins (2024)</h4>
+      <h4>OpenAI ChatGPT gets web browsing & plugins (2024)</h4>
       <p>Originally, ChatGPT's knowledge cut off in 2021, limiting its usefulness for new products. In 2024, OpenAI re-enabled and enhanced ChatGPT's web browsing capability, allowing it to pull current information from the internet when needed. This means ChatGPT can now fetch the latest data – for instance, 2024's newest insurance plans or current interest rates – instead of relying solely on its training data. OpenAI also expanded the plugin ecosystem, which includes plugins for shopping (e.g. Instacart, Klarna) that let ChatGPT search product databases in real time. These upgrades make ChatGPT far more adept at product discovery tasks, from finding up-to-date prices to checking if a particular item is in stock or if a new financial product has launched.</p>
   
       
-      <h4>Google's Gemini AI integrated into Search (late 2024)</h4> 
+      <h4>Google's Gemini AI integrated into search (late 2024)</h4> 
       <p>Google's next-gen LLM Gemini (the successor to PaLM 2) was custom-built to enhance search. By late 2024, Google confirmed that Gemini is being used to generate richer answers in SGE. Gemini's multimodal and reasoning abilities allow it to handle more complex queries. At Google I/O 2024, the company demonstrated how AI could answer entirely new types of questions that search engines struggled with before.</p>
       <p>For example, you can describe an intricate need ("I need a gift for a 10-year-old who loves astronomy and dinosaurs") and the AI can parse that and suggest creative product ideas. In 2025, Google also expanded AI summaries to more healthcare queries and introduced features like comparative overlays for medical information, showing their commitment to domain-specific improvements. All these updates aim to make the AI results more accurate, comprehensive, and trustworthy – critical for regulated fields.</p>
       
       
       
-      <h4>Amazon's Rufus Fully Deployed (2024)</h4>      
+      <h4>Amazon's Rufus fully deployed (2024)</h4>      
       <p>After a testing period, Amazon's Rufus shopping AI was rolled out to all US customers in September 2024. Throughout 2024, Amazon improved Rufus's ability to handle a broad range of shopping questions. By analyzing product manuals, customer reviews, and even community Q&A content, Rufus became better at answering detailed product questions (e.g. compatibility concerns, ingredient safety in cosmetics).</p>
       <p>Amazon also reports refining Rufus with feedback from tens of millions of customer interactions. This feedback loop helped the AI provide more relevant recommendations. For instance, if users frequently ask whether a certain mascara is a "clean beauty" product, Rufus learns to proactively mention product safety or ingredient info. By 2025, Amazon predicts its AI assistant will significantly boost customer engagement and sales – an internal projection even estimated a $700M profit impact from Rufus, as more shoppers find what they need faster.</p>
       
       
-      <h4>Perplexity AI and Others – Enhanced Answer Engines</h4>
+      <h4>Perplexity AI and others – Enhanced Answer Engines</h4>
       <p>Smaller AI search players continued to innovate. Perplexity introduced features like "internal knowledge search" and community sharing (Spaces) in late 2024. These allow users to trust it not just for public web info but also for personal or proprietary data (think of uploading a PDF of your insurance policy and asking questions about it).</p>
       <p>While not specific to one industry, such features can be extremely useful in regulated domains – e.g. a doctor could upload clinical guidelines and have the AI answer questions, or a financial advisor could query an AI on internal research documents. Additionally, Microsoft's AI Co-pilot integration across Windows and Office (late 2023) means more users have an AI at their fingertips, which could be used to search the web or internal data without opening a browser. Apple is also rebuilding Siri with generative AI capabilities – we may soon see voice-driven product queries (like asking your iPhone, "Compare health insurance plans for me") become far more fluent and detailed than Siri's current abilities.</p>
       
       
-      <h3>What This Shift Means for Regulated Industries</h3> 
+      <h3>What this shift means for regulated brands</h3> 
       <p>The upshot of these upgrades is that consumers in 2025 expect fast, personalized answers from AI, and the AI tools are increasingly able to deliver. In finance, insurance, and healthcare, consumers are beginning to use these platforms to get answers that were once provided by advisors, agents, or curated search results.</p>
       
       
-      <h4>Financial Services (Banking & Investment)</h4>
+      <h4>Financial services (Banking & Investment)</h4>
       <p>Consumers are using AI chatbots to seek quick financial advice and product recommendations in a conversational way. Instead of parsing fine print on bank websites, a user might ask an AI assistant: "What's the best savings account for high interest rates?" or "How do I apply for a mortgage?"</p>      
       <p><strong>Product Comparisons:</strong> A generative AI can instantly compare financial products. For example, Google's AI Overview might summarize "how to apply for a mortgage" with step-by-step guidance and even list AI-generated snippets of the nearest bank branches or loan officers if relevant. Under the new SGE, a query like that yields an AI answer explaining the process, whereas previously a user had to click a bank's website or a how-to article.</p>      
       <p><strong>Credit Cards and Loans:</strong> AI assistants are being used to evaluate consumer finance products. A user could query, "Find me the top 3 travel credit cards with low annual fees," and the AI will likely enumerate a few card options, citing their perks and fees. ChatGPT tends to give very straightforward, advisory answers in finance, and research shows it can even rival traditional robo-advisors in certain advice scenarios (though with caveats).</p>
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
     author: {
         name: 'Husain Mohsin',
       role: 'Enterprise Partner',
-      avatar: '/lovable-uploads/07103c7f-b1e8-4bf2-980b-910c09b2f043.png'
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
     },
     category: 'Emerging tech',
     tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
