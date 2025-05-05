@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
     featuredImage: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/insights/amazon-rufus-in-action.jpg',
     publishDate: '2025-05-04',
-    readTime: 8
+    readTime: 4
   },
   {
     id: 'future-enterprise-product-development',
