@@ -129,6 +129,7 @@ export const blogPosts: BlogPost[] = [
       <p>&nbsp;</p>
       
       <p>Brands shouldn't just react to others' AI – they can deploy their own. Many banks, insurers, and healthcare providers are starting to use GPT-powered chatbots on their websites or apps to guide customers. These can be tuned to provide compliant, up-to-date info and can hand off to human agents when needed.</p>
+      <br />
       
       <h3>Conclusion</h3>
       
