@@ -40,7 +40,7 @@ const BlogDetail: React.FC = () => {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="mb-6">
           <Link to="/blog" className="inline-flex items-center text-brand-400 hover:text-brand-500">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to insights
           </Link>
         </div>
         
