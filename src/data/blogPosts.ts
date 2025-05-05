@@ -140,11 +140,8 @@ export const blogPosts: BlogPost[] = [
       
       <p>At LemonHQ, we have developed the capability to measure brand representation and tracking for the leading LLMs. Knowing where your brand or product stands in today's AI-enabled landscapes is critical to decision making and staying ahead, request a free AI assessment report of your brand or product <a href="/contact">here</a>.</p>
       
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
       <h4>Information Sources and References</h4>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+     
       
       <ul>
         <li><a href="https://www.barrons.com/articles/black-friday-shopping-cyber-monday-d31144da?utm_source=chatgpt.com" target="_blank">How AI Fueled Black Friday Shopping This Year</a></li>
