@@ -1,10 +1,13 @@
+
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import CtaSection from '../components/ui/CtaSection';
 import ProductJourney from '../components/homepage/ProductJourney';
 import TeamMemberDrawer, { TeamMember } from '../components/about/TeamMemberDrawer';
-import { CheckCircle, Clock, Users, Lightbulb, Target } from 'lucide-react';
+import { CheckCircle, Clock, Users, Lightbulb, Target, Image } from 'lucide-react';
+import { Card, CardContent } from '../components/ui/card';
+
 const About = () => {
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -93,10 +96,13 @@ const About = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg">
-                {/* Replace with actual image */}
-                <div className="w-full h-full bg-gray-300 rounded-lg"></div>
-              </div>
+              <Card className="overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                  alt="Team collaboration" 
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
+              </Card>
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-200 rounded-lg -z-10"></div>
             </div>
           </div>
