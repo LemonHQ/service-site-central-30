@@ -25,7 +25,6 @@ export const blogPosts: BlogPost[] = [
       <p>In a recent report from Adobe Analytics, search traffic to US retail websites from Generative AI sources has jumped 1,200%. Generative AI has moved from novelty to a mainstream tool that millions now use to find information – including recommendations on brands, services, and products. ChatGPT reached 1 million users in just five days and now draws over 400 million monthly users, illustrating how rapidly consumers have embraced AI assistants. This surge is massively disrupting how people search and discover products online.</p>
       
       <p>Crucially, it's not just Google's realm anymore: users are turning to conversational AI platforms like OpenAI's ChatGPT, Google's upcoming Gemini, Meta's Llama 2, and even Amazon's new "Rufus" AI assistant for shopping. In regulated sectors such as finance, insurance, and healthcare – where trust and accurate information are paramount – generative AI is already transforming how consumers find and evaluate offerings.</p>
-      <br />
       <h3>The Buying Journey Becomes Conversational</h3>
 
       
