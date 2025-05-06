@@ -23,12 +23,12 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Learn how established consumer brands are successfully building direct-to-consumer channels while maintaining existing distribution channels and partnerships.',
     content: `
       <h2>Introduction: The New Digital Imperative</h2>
+      <p>In an era of rapidly shifting consumer behavior, traditional enterprise brands are under pressure to reinvent themselves for the digital age. The COVID-19 pandemic dramatically accelerated online commerce – U.S. e-commerce sales jumped 44% in 2020 alone  – and consumers across all demographics have grown comfortable shopping online. More importantly, customers now expect richer, direct engagement with brands and seamless experiences across channels. This has prompted many established companies to experiment with direct-to-consumer (D2C) models, looking beyond their legacy retail channels to capture new value. As one industry observer noted, if brands master e-commerce and logistics to deliver fast, convenient service, they can “build brands, grow margins and sell on a site filled with their products” – but if they fail, they risk damaging their reputation. In short, going digital and D2C is no longer optional; it’s a strategic imperative for survival and growth. </p>
+      <p>Yet transforming into a digital- and D2C-driven business is no easy feat for legacy enterprises. This article explores the structural and operational challenges that hold traditional brands back, and the strategic shifts required to embrace digital-first customer experiences. It is tailored for brand, product, and digital leaders seeking practical insights on how to capture new forms of value through D2C strategies and better meet evolving customer needs. We’ll also highlight examples of heritage brands navigating this transformation – from North America to Europe – and discuss the importance of agility, personalization, data infrastructure, and omnichannel capabilities in scaling digital portfolios successfully.</p>
       
-      <p>The retail landscape has shifted dramatically in recent years, with direct-to-consumer (D2C) brands disrupting traditional retail models and changing consumer expectations. Established brands that once relied exclusively on retail partnerships are now recognizing the strategic importance of building their own direct relationships with consumers. However, this transition presents unique challenges for traditional brands compared to digital-native startups.</p>
+      <h2>Old Structures vs. New Realities: key challenges for legacy brands</h2>
       
-      <h3>Why Traditional Brands Need D2C Strategies</h3>
-      
-      <p>For established consumer brands, D2C isn't just another sales channel—it's increasingly becoming a strategic imperative. Here's why:</p>
+      <p>For many incumbent brands, the journey to digital maturity and D2C adoption is fraught with internal hurdles. Several structural and operational challenges commonly stand in the way:</p>
       
       <ul>
         <li><strong>First-party data ownership:</strong> Direct consumer relationships provide valuable data that can inform product development, marketing, and overall business strategy</li>
