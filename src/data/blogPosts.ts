@@ -39,155 +39,54 @@ export const blogPosts: BlogPost[] = [
       <h2>New value creation opportunities in Direct-to-Consumer models</h2>
       <p>Why should a legacy brand go through the pain of embracing D2C? Simply put, a well-executed D2C strategy can unlock powerful new forms of value that traditional retail channels cannot match. A Boston Consulting Group analysis summed it up: a D2C channel (when done right) allows a company to “collect valuable consumer data, personalize the experience, quickly launch and test new products, and grow the business.” In other words, D2C opens the door to capabilities that are increasingly critical in today’s consumer markets. Here are some of the key benefits and value drivers for brands:</p>
       <ul>
-        <li><strong>First-Party customer data and insights:</strong> </li>
-        <li><strong>Personalized Customer Experiences:</strong> </li>
-        <li><strong>Agility in product development and marketing:</strong> </li>
-        <li><strong>Greater margin and control:</strong> </li>
-        <li><strong>New revenue streams and business models:</strong> </li>
-        <li><strong>Alignment with evolving customer expectations:</strong> </li>
+        <li><strong>First-Party customer data and insights:</strong> D2C interactions provide something that selling through middlemen never could – a direct data link to the end customer. When a consumer buys from a brand’s own website or app, the company can gather rich data about that customer’s preferences, behavior, and feedback. Over time this builds a trove of first-party data that can inform everything from product development to marketing strategy. For example, Levi Strauss & Co. found that its pivot to D2C (through its own stores and site) generated a wealth of data enabling “faster, even predictive responses” to customer trends. By analyzing its D2C data, Levi’s gained better insight into emerging preferences – like a shift toward casualwear and looser fits – and could adjust production and inventory accordingly. In fact, this feedback loop has allowed Levi’s to cut product development cycles by up to 50% in some cases. The direct customer link is turning into a primary source of consumer insight for many brands.</li>
+        <li><strong>Personalized Customer Experiences:</strong> Hand-in-hand with data comes the ability to personalize. Through D2C channels, brands can tailor the experience to individual customers in ways that mass retail simply can’t. This might mean personalized product recommendations, targeted content, or custom promotions based on a shopper’s history and interests. Nike provides a great example – the sportswear giant has invested heavily in digital membership programs and apps to personalize engagement. Nearly 70% of Nike’s digital sales now come from members who use its apps, where they receive tailored offers (like early access to new sneakers) and content aligned to their preferences. Nike uses data science to send precision marketing messages via its SNKRS app, factoring in each member’s engagement and past purchase attempts. This kind of one-to-one personalization drives higher conversion and loyalty. More broadly, D2C lets brands craft a cohesive omnichannel journey – they can recognize the same customer as she moves from a website to a mobile app to a physical store, and ensure consistent, personalized treatment throughout.</li>
+        <li><strong>Agility in product development and marketing:</strong> D2C channels give brands a sandbox to launch and test new ideas quickly with real customers. Instead of persuading a retailer to stock a new product and waiting months for sales data, a company can drop a limited release on its own site and get immediate feedback. This agility accelerates innovation cycles. BCG observes that leading companies use D2C platforms to pilot “new innovative products on a smaller scale with a faster time to market, then adjust based on consumer feedback.” If a concept resonates, it can be scaled up; if not, the company can fail fast with minimal losses. D2C also enables agile marketing – brands can run micro-campaigns or A/B test messages directly with their audience, something much harder to do when the customer relationship is owned by a retailer. During the 2020 lockdowns, for instance, PepsiCo spun up two D2C websites (Snacks.com and PantryShop.com) in just 30 days to respond to sudden shifts in demand. That rapid experiment, aimed at “quickly meet[ing] consumers’ evolving needs”, was a radical departure from the slow, big-wholesale way of operating. It showcased how a traditionally B2B2C company could act in an agile, startup-like fashion via a direct channel. </li>
+        <li><strong>Greater margin and control:</strong> Selling direct also means cutting out the retail middleman, which can improve margins (or at least protect margins under pressure). Brands have more control over pricing and promotions in D2C – no need to worry about a retailer marking down your product without notice. As BCG notes, owning the “storefront” frees brands from adjacent competitors or private labels driving down prices, allowing them to set price and pack sizes as they see fit. D2C can thus be margin accretive, especially for premium brands. It also gives full control over merchandising and brand presentation. A company’s own site or store can showcase the full breadth of the product range (not just what a third-party buyer selects) and present it in a brand-authentic way. Levi’s, for example, uses its D2C channels to highlight a wider assortment and cross-promote categories that might be overlooked in a crowded department store rack. This control over the brand experience can strengthen brand equity in the long run.</li>
+        <li><strong>New revenue streams and business models:</strong> D2C opens the door to revenue streams beyond traditional one-time sales. Many brands are experimenting with subscriptions, memberships, and services as part of their D2C portfolio. A classic example is Peloton, which turned exercise equipment into a subscription platform – about 20% of Peloton’s revenue now comes from subscriptions, with a 93% retention rate, and analysts attribute up to 85% of the company’s valuation to its subscription business (versus hardware sales). While not every brand will emulate Peloton, traditional product companies are indeed bundling services or loyalty programs to create recurring revenue. We see consumer goods giants offering subscription boxes (e.g. grooming products, meal kits) and memberships with perks for buying direct. These models not only provide steady income but also deepen customer engagement (for instance, members of Nike’s loyalty program shop more frequently and at higher value). Additionally, brands can monetize their direct relationship through upsells like customization – Coca-Cola’s “Share a Coke” D2C program is a famous case where consumers pay a premium for personalized Coke bottles ordered online. In short, D2C channels let brands be creative in how they deliver value to customers (and capture value back).</li>
+        <li><strong>Alignment with evolving customer expectations:</strong> Last but not least, a D2C strategy aligns companies with how today’s customers increasingly prefer to shop. Modern consumers expect convenience, speed, and connection. They want to buy when and how it’s easiest for them – whether that means on their phone at midnight or via a social media shop – and they gravitate toward brands that offer a smooth, direct relationship. The pandemic only cemented these expectations, as many people discovered the ease of ordering straight from brands. As BCG put it, D2C “aligns with the way many consumers want to interact with brands.” Even in categories that long relied on in-person retail (from grocery to luxury fashion), more consumers now seek out direct online options. By meeting customers where they are – and providing the kind of personalized, engaging experience they seek – traditional brands can stay relevant and even increase loyalty. In fact, a well-run D2C channel can enhance a brand’s relationship with its customers in ways that wholesale channels never could, building community and advocacy over time.</li>
       </ul>
       
-      <h4>2. Organizational Structure</h4>
-      
-      <p>Traditional companies often have structures built around wholesale relationships rather than direct consumer engagement. Success in D2C typically requires:</p>
+      <h2>Strategic shifts to embrace digital-first experiences</h2>
+      <p>Unlocking these D2C benefits requires more than launching a brand or product online – it demands fundamental shifts in strategy, culture, and operations. Traditional enterprises must reinvent themselves as digital-first, customer-centric organizations. The following strategic priorities are key for brand, product, and digital leaders aiming to foster true digital-native customer experiences:</p>
       
       <ul>
-        <li>Cross-functional teams that break down silos between digital, marketing, and operations</li>
-        <li>New skill sets in areas like digital marketing, UX design, and e-commerce operations</li>
-        <li>Different KPIs and success metrics focused on lifetime value rather than one-time sales</li>
+        <li><strong>Put the customer (and Data) at the center</strong>Legacy companies need to shift from a channel-driven mindset to a customer-centric mindset. This means mapping out the customer journey across all touchpoints and identifying pain points and opportunities to delight the customer. Every decision – whether introducing a new digital feature or reworking a policy – should start with “How does this improve the customer experience?” In practice, being customer-centric today is heavily data-driven. Companies must invest in capturing and analyzing customer data from every source (online interactions, in-store visits, customer service calls, etc.) to gain a 360-degree view. A solid data infrastructure is crucial: data should be unified, shareable, and fit for purpose across the organization. Brands like Nike have gone so far as to acquire data analytics firms to boost their personalization and demand-sensing capabilities. The end goal is to use data insights to continually optimize the experience – for example, using real-time customer feedback to tweak a website UI, or leveraging purchase history to curate a more relevant product assortment for each user. Customer-centric, data-informed decision making may require new tools (CRM systems, customer data platforms) and new skills (data scientists, analysts), but it forms the foundation of any successful digital transformation.</li>
+        <li><strong>Break down silos with cross-functional teams</strong>To deliver seamless omnichannel experiences, internal silos have to be dismantled. Brands should encourage much tighter collaboration between traditionally separate functions – e.g. e-commerce, IT, marketing, supply chain, and store operations need to work in concert. Many organizations are establishing cross-functional “digital venture” teams or D2C business units with end-to-end responsibility, cutting across departmental lines. Others integrate digital objectives into every team’s goals so that everyone is rowing in the same direction. The organizational structure may need updating as well: for instance, creating a Chief Digital Officer role or digital task forces that report directly to top leadership can help break through bureaucracy. The bottom line is that serving a digital-native customer often requires blurring the old boundaries – the marketing team might coordinate with IT daily to implement a new personalization feature, or the product development team might rely on analytics from the digital team to decide on a new offering. Companies must foster a culture of collaboration and information sharing, replacing the old silo mentality with a shared mission around customer experience. </li>
+        <li><strong>Foster an agile, learning culture</strong>Traditional brands have to overcome their cultural inertia by instilling a culture that rewards agility and innovation. This is a significant change management effort. Leadership must actively champion the digital agenda and help employees see the personal benefit in embracing change. One approach is to start with “lighthouse” digital projects that demonstrate quick wins, helping convert skeptics as they see positive results. Additionally, companies should empower teams to experiment without fear of failure. In a digital context, not every new idea will work – and that’s okay, as long as you learn and iterate. Adopting agile methodologies (scrum teams, sprints, rapid prototyping) can structure this experimentation. For example, a D2C team might run a series of A/B tests on a website banner or launch a limited pilot of a new service, then iterate based on metrics. To make this possible, decision-making can’t be business-as-usual; teams need the autonomy to make changes quickly. At successful transformers, decisions and investments are made in weeks, not months. Hierarchies are flattened and employees are “empowered to suggest and implement digital solutions” at all levels. Upskilling and recruiting are also part of the puzzle – brands may need to hire experienced e-commerce managers, UX designers, data engineers, etc., and provide extensive training to existing staff to build a digitally savvy workforce. The goal is a nimble organization that responds to market feedback in real time, rather than sticking to annual planning cycles.</li>
+        <li><strong>Modernize technology and infrastructure</strong>A modern digital customer experience rests on modern technology. Thus, legacy brands must be willing to upgrade their infrastructure and integrate new platforms. This could mean migrating off an old ERP that doesn’t interface with e-commerce systems, adopting a scalable cloud-based commerce platform, or implementing APIs to connect previously siloed systems. In some cases, it requires identifying which legacy systems “are not worth retrofitting” – accumulating technical debt will only hinder your ability to scale digitally. Instead, companies should replace or re-architect those components in line with their transformation goals. Many firms are now adopting microservices and headless architecture for flexibility, as well as leveraging SaaS tools for quick deployment of capabilities (for instance, using a third-party logistics partner to handle D2C fulfillment rather than building it all in-house at the start). Data architecture is equally important: investing in a robust data pipeline and governance ensures that insights can flow freely and be trusted across the enterprise. The technology modernization should enable two critical things: omnichannel integration and personalization at scale. Omnichannel integration means a customer’s activities on the mobile app, website, and physical store are all connected (e.g. the ability to buy online and return in-store, or an associate in-store having access to the customer’s online wishlist). Personalization at scale means the systems can deliver individualized content/recommendations to millions of customers simultaneously – which often involves AI and real-time decision engines crunching all that customer data. Legacy IT environments may struggle with these tasks, so a deliberate tech transformation roadmap is needed. While this requires capital investment, the payoff is enabling the kind of experiences digital-native consumers expect. </li>
+        <li><strong>Build omnichannel excellence</strong>Embracing D2C does not mean abandoning other channels; rather, it means orchestrating channels to work together in a complementary way. Customers should experience a brand, not a channel – whether they’re on Instagram, the brand’s website, or in a mall. Therefore, traditional brands need to develop true omnichannel capabilities. This might include unifying inventory across channels (so that an online order can be fulfilled from a store, or a store purchase can be delivered to home if not in stock locally), and linking loyalty programs so that shoppers earn and redeem rewards whether they buy in person or online. Many leading retailers and brands in North America and Europe have rolled out services like curbside pickup, buy-online-pickup-in-store (BOPIS), or ship-from-store to blend online convenience with offline immediacy. Importantly, omnichannel strategy also entails consistent messaging – for example, a customer who abandons an online cart might receive a follow-up email and also see a related offer next time they open the brand’s mobile app or visit a store kiosk. Achieving this consistency requires internal coordination (tying back to breaking silos) and often a single view of the customer through data integration. European fashion retailer Zara (Inditex), for instance, invested in integrating its online and physical stock systems, enabling services like in-store pickup and making the shopping journey more fluid. Similarly, Levi’s expanded its Red Tab loyalty program to Europe with a unified approach so that customers earn points and get personalized offers across both Levi’s stores and its e-commerce site. The companies that get omnichannel right create a seamless experience where the customer hardly notices which channel they are in at any given moment – they can discover on social media, buy online, exchange in store, etc., all with ease. This is a significant shift from the siloed channel strategies of the past, but it’s increasingly what consumers expect. </li>
+        <li><strong>Measure and iterate based on market signals</strong>Finally, a strategic shift is to adopt a more experimental, metrics-driven approach to scaling new initiatives. Traditional enterprises often bet big on ideas and roll them out on a large scale (due to historically needing scale for retail distribution). In the digital world, it’s usually smarter to start small, prove the concept, and then scale up quickly if successful. Leaders should encourage a test-and-learn mentality: set hypotheses, define KPIs (e.g. conversion rate, customer acquisition cost, lifetime value), and let the data guide the next steps. If an experiment shows positive signals, allocate more capital; if it underperforms, iterate or shut it down swiftly. This capital-efficient approach prevents huge sunk costs and keeps the organization responsive to market feedback. We saw this with the PepsiCo example – launching two D2C sites as a low-risk experiment during the pandemic, which could then be evaluated for long-term viability. Many CPG firms likewise tried D2C pilots (like Kraft Heinz’s Heinz to Home in the UK) to gauge consumer interest; those that resonated are being continued or expanded. An insights-driven approach also means using analytics to spot trends or issues in real time – for instance, monitoring social media and customer reviews to catch early warning signs of changing preferences or product problems, then responding before it’s too late. In essence, companies must become more externally aware and adaptable, tuning their strategies based on what the market is saying. The era of rigid five-year plans is over; in a fast-evolving digital landscape, continuous improvement and agility are the name of the game. </li>
       </ul>
       
-      <h4>3. Technology Ecosystem</h4>
+      <h2>Conclusion: thriving in a Direct-to-Consumer era</h2>
       
-      <p>Legacy systems designed for wholesale operations aren't typically equipped for direct consumer engagement. Brands need to develop:</p>
+      <p>Traditional enterprises that successfully scale their digital portfolios and embrace D2C strategies position themselves to capture immense new value and stay relevant in a customer-driven era. They also future-proof their business against disruptors. The journey isn’t easy – it demands breaking old habits, overhauling systems, and taking some calculated risks. Structural obstacles like legacy silos and cultural inertia are real, but as we’ve seen, they can be overcome with strong leadership and a clear vision. The prize on the other side is a business that is far more in tune with its customers, more agile in responding to market shifts, and able to unlock revenue streams that simply weren’t accessible in the purely wholesale model</p>
+      <p>For brand, product, and digital leaders, the mandate is to champion this transformation with a blend of boldness and pragmatism. That means setting a compelling digital vision and rallying the organization around it, while also delivering quick wins (like pilot projects or improved metrics) that build momentum and confidence. It means investing in the right technology and talent, but also rethinking processes and incentives to engrain a digital-first, customer-first philosophy. And it means continuously listening to customers and refining the approach – the work is never “done” in a fast-evolving digital landscape.</p>
+      <p>The encouraging news is that even legacy brands can and have made the leap. Companies like Nike, Levi’s, and others show that heritage can be an asset, not a hindrance, if coupled with innovation. These brands leveraged their strengths (strong brand equity, quality products) and amplified them through new digital channels and capabilities. By doing so, they are writing the playbook for how to remain cultural and market leaders in the 21st century. As one executive noted, D2C success for big brands “works best when brands are culturally relevant first” – established companies must ensure their brand still resonates, then use D2C to deepen that relevance with today’s digitally savvy consumers.</p>
+      <p>In conclusion, scaling digital is a challenging but rewarding path for traditional enterprises. Those that navigate the structural challenges and wholeheartedly embrace D2C will find themselves with more loyal customers, stronger control of their destiny, and new avenues for growth in an increasingly direct world. In the words of a recent industry analysis: “Adversity often provides opportunity – and DTC fits the bill here.” The opportunity is there for the taking, and the time to act is now. Brands that seize it and evolve will not only capture new forms of value, but also ensure they remain vibrant and competitive for decades to come.</p>
       
+      
+      <h2>Information sources and references</h2>
       <ul>
-        <li>Modern e-commerce platforms with seamless user experiences</li>
-        <li>Robust customer data platforms that unify consumer information</li>
-        <li>Flexible fulfillment systems capable of handling individual orders</li>
+        <li><a href="https://www.ey.com/en_us/insights/strategy-transactions/how-to-drive-profitable-growth-via-d2c#:~:text=The%20recent%20pandemic%20has%20contributed,ii" target="_blank">How to drive profitable growth via D2C </a></li>
+        <li><a href="https://www.inkl.com/news/direct-to-consumer-dtc-a-fad-or-the-beginning-of-a-trend#:~:text=Today%2C%20companies%20need%20to%20master,site%20filled%20with%20their%20products" target="_blank">Food & Beverage Giants Like Pepsi And Kraft Heinz Tap Into Direct To Consumer. Is It A Fad Or The Beginning Of A Trend? </a></li>
+        <li><a href="https://www.stibosystems.com/blog/5-common-reasons-why-manufacturers-fail-at-digital-transformation#:~:text=Many%20manufacturing%20facilities%20operate%20with,does%20not%20allow%20for%20integrations" target="_blank">5 Common Reasons Why Manufacturers Fail at Digital Transformation </a></li>
+        <li><a href="https://www.bcg.com/publications/2021/direct-to-consumer-strategy-business-benefits#:~:text=The%20attitude%20toward%20direct,the%20experience%2C%20quickly%20launch%20and" target="_blank">Even Big Brands Need a Direct-to-Consumer Strategy </a></li>
+        <li><a href="https://www.inc.com/bruce-crumley/big-shift-to-direct-to-consumer-stores-pays-off-for-levis.html" target="_blank">Big Shift to Direct-to-Consumer Stores Pays Off for Levis  </a></li>
+        <li><a href="https://www.marketingweek.com/nike-dtc-strategy/" target="_blank">Nike credits ‘innovation, brand strength and scale’ for DTC success  </a></li>
       </ul>
-      
-      <h3>Successful Approaches from Leading Brands</h3>
-      
-      <p>Despite these challenges, many established brands have successfully implemented D2C strategies. Here are some noteworthy approaches:</p>
-      
-      <h4>Nike's Consumer Direct Strategy</h4>
-      
-      <p>Nike has been at the forefront of the D2C shift with its "Consumer Direct Acceleration" strategy. Key elements include:</p>
-      
-      <ul>
-        <li>Scaling back partnerships with undifferentiated retailers while doubling down on direct channels</li>
-        <li>Creating exclusive products and experiences available only through Nike-owned channels</li>
-        <li>Using their ecosystem of apps (Nike, SNKRS, Training Club) to build direct relationships before, during, and after purchases</li>
-        <li>Leveraging data from digital channels to influence product development and inventory management</li>
-      </ul>
-      
-      <p>The results have been impressive, with D2C now representing over 40% of Nike's revenue and driving higher margins for the business.</p>
-      
-      <h4>PepsiCo's Test and Learn Approach</h4>
-      
-      <p>PepsiCo has approached D2C more cautiously but effectively through targeted initiatives:</p>
-      
-      <ul>
-        <li>Creating direct channels for specific brands and occasions (like Pantryshop.com for bundle purchases)</li>
-        <li>Using D2C as a testing ground for new products before wider retail distribution</li>
-        <li>Focusing on product categories where direct delivery adds particular value (beverages, perishables)</li>
-      </ul>
-      
-      <p>This approach allows PepsiCo to gain D2C capabilities and consumer insights while maintaining strong retail partnerships.</p>
-      
-      <h4>L'Oréal's Augmented Retail Strategy</h4>
-      
-      <p>L'Oréal has focused on creating digital experiences that enhance rather than replace traditional retail:</p>
-      
-      <ul>
-        <li>Developing AR/VR technologies like virtual try-on that work across owned and partner channels</li>
-        <li>Creating personalized recommendation engines powered by user data from direct channels</li>
-        <li>Building digital services around products (like skin analysis tools) that strengthen brand relationships</li>
-      </ul>
-      
-      <p>This strategy recognizes that beauty consumers often shop across multiple channels and creates value in each context.</p>
-      
-      <h3>Building a Balanced D2C Strategy</h3>
-      
-      <p>For traditional brands exploring or expanding D2C capabilities, several principles can help create successful strategies:</p>
-      
-      <h4>1. Start with the Consumer, Not the Channel</h4>
-      
-      <p>The most effective D2C strategies focus on solving genuine consumer pain points rather than simply creating another sales channel. This could mean:</p>
-      
-      <ul>
-        <li>Offering products or variants not widely available in retail</li>
-        <li>Creating services or subscriptions that enhance the product experience</li>
-        <li>Providing education or community that adds value beyond the transaction</li>
-      </ul>
-      
-      <h4>2. Use D2C as an Innovation Engine</h4>
-      
-      <p>Direct channels provide an invaluable opportunity to learn quickly and iterate. Brands can:</p>
-      
-      <ul>
-        <li>Test new products or packaging with lower volumes before retail rollout</li>
-        <li>Experiment with messaging and positioning in real-time</li>
-        <li>Gather rich qualitative feedback directly from consumers</li>
-      </ul>
-      
-      <h4>3. Create Differentiated Channel Experiences</h4>
-      
-      <p>Rather than replicating the same offering across all channels, successful brands create distinct value propositions for each:</p>
-      
-      <ul>
-        <li>Exclusive products or early access for direct customers</li>
-        <li>Enhanced services or personalization in owned channels</li>
-        <li>Complementary experiences between digital and physical touchpoints</li>
-      </ul>
-      
-      <h4>4. Take a Long-Term View of Economics</h4>
-      
-      <p>Building direct relationships requires investment before returns. Brands should:</p>
-      
-      <ul>
-        <li>Focus on customer lifetime value rather than first-order profitability</li>
-        <li>Consider the full impact of D2C data and insights across the business</li>
-        <li>Balance customer acquisition with retention and relationship building</li>
-      </ul>
-      
-      <h3>The Future of Brand-Retail Relationships</h3>
-      
-      <p>As more traditional brands develop D2C capabilities, we're seeing the emergence of new models that balance direct and retail channels:</p>
-      
-      <ul>
-        <li><strong>Digitally-influenced retail:</strong> Brands using online engagement to drive offline purchases, with technologies like scan-in-store or buy online, pickup in-store</li>
-        <li><strong>Selective partnerships:</strong> Brands focusing on fewer, deeper retail relationships with shared data and integrated experiences</li>
-        <li><strong>Retail as experience:</strong> Physical stores evolving toward showroom models where direct fulfillment handles the logistics</li>
-      </ul>
-      
-      <h3>Conclusion: From Either/Or to Both/And</h3>
-      
-      <p>The most successful traditional brands are moving beyond seeing D2C and retail as competing channels. Instead, they're developing strategies that use each channel's strengths while creating a cohesive overall consumer experience. By thinking of D2C as part of an integrated commercial strategy rather than a standalone initiative, brands can maintain valuable retail partnerships while building the direct consumer relationships that will be critical for future growth and resilience.</p>
-      
-      <h4>Key Takeaways for Traditional Brands</h4>
-      
-      <ul>
-        <li>Start with clear strategic objectives for D2C beyond simply driving direct sales</li>
-        <li>Invest in the organizational capabilities needed for consumer-direct relationships</li>
-        <li>Create transparent communication with retail partners about your D2C approach</li>
-        <li>Focus on differentiated experiences rather than channel competition</li>
-        <li>Use D2C data to improve your entire business, not just direct channels</li>
-      </ul>
-      
-      <p>The brands that will thrive in the coming decade won't be those that choose between direct and retail models, but those that thoughtfully integrate both into a seamless consumer experience.</p>
     `,
     author: {
-      name: 'Rebecca Martinez',
-      role: 'Head of Digital Strategy',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
+       name: 'Husain Mohsin',
+        role: 'Enterprise Partner',
+        avatar: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/husain-mohsin-profile-pic.png'
     },
     category: 'Strategy',
     tags: ['D2C', 'E-commerce', 'Digital Transformation', 'Retail Strategy'],
     featuredImage: '/lovable-uploads/ba018974-289d-46da-8314-1fbcf10caa7e.png',
     publishDate: '2025-05-06',
-    readTime: 11
+    readTime: 8
   },
   {
     id: 'generative-ai-brand-discovery',
@@ -315,8 +214,8 @@ export const blogPosts: BlogPost[] = [
     `,
     author: {
         name: 'Husain Mohsin',
-      role: 'Enterprise Partner',
-      avatar: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/husain-mohsin-profile-pic.png'
+        role: 'Enterprise Partner',
+        avatar: 'https://lemonhqmedia.s3.us-east-1.amazonaws.com/assets/images/husain-mohsin-profile-pic.png'
     },
     category: 'Emerging tech',
     tags: ['AI', 'Digital product', 'Customer Experience', 'Brand, Product Discovery'],
