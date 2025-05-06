@@ -194,25 +194,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-gray-50" id="team">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Our Leadership Team" subtitle="Meet the experts who lead our client engagements and drive our company vision" centered />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm transition-transform hover:scale-105 cursor-pointer" onClick={() => handleTeamMemberClick(member)}>
-                <div className="h-48 bg-gray-300 overflow-hidden">
-                  {member.image ? <img src={member.image} alt={member.name} className="w-full h-full object-cover" /> : <div className="w-full h-full bg-gray-300"></div>}
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-brand-400 mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
+      {/* Team Section - Hidden as requested */}
+      {/* Removed "Our Leadership Team" section */}
 
       {/* Careers Section */}
       <section className="section-padding" id="careers">
@@ -283,7 +266,7 @@ const About = () => {
       {/* CTA Section */}
       <CtaSection title="Ready to Work Together?" subtitle="Let's discuss how we can help transform your digital product strategy." buttonText="Get in Touch" buttonLink="/contact" />
 
-      {/* Team Member Drawer */}
+      {/* Team Member Drawer - Keep this for potential future use */}
       <TeamMemberDrawer member={selectedTeamMember} open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </MainLayout>;
 };
