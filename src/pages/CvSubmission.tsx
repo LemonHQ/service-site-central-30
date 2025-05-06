@@ -7,7 +7,7 @@ import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { Button } from '../components/ui/button';
 import { toast } from '../components/ui/sonner';
-import { FileUpload } from 'lucide-react';
+import { Upload } from 'lucide-react';
 
 const CvSubmission = () => {
   const [name, setName] = useState('');
@@ -134,7 +134,7 @@ const CvSubmission = () => {
                     <label className="block w-full">
                       <div className="flex items-center justify-center w-full px-4 py-6 border-2 border-dashed border-gray-300 rounded-md">
                         <div className="space-y-1 text-center">
-                          <FileUpload className="mx-auto h-12 w-12 text-gray-400" />
+                          <Upload className="mx-auto h-12 w-12 text-gray-400" />
                           <div className="flex text-sm text-gray-600">
                             <label htmlFor="cv-upload" className="relative cursor-pointer rounded-md font-medium text-brand-400 hover:text-brand-500">
                               <span>Upload a file</span>
