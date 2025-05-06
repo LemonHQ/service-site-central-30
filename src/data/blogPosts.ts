@@ -189,7 +189,7 @@ export const blogPosts: BlogPost[] = [
     },
     category: 'Strategy',
     tags: ['D2C', 'E-commerce', 'Digital Transformation', 'Retail Strategy'],
-    featuredImage: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1',
+    featuredImage: '/lovable-uploads/ba018974-289d-46da-8314-1fbcf10caa7e.png',
     publishDate: '2025-05-06',
     readTime: 11
   },
