@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import CtaSection from '../components/ui/CtaSection';
@@ -6,6 +8,7 @@ import ProductJourney from '../components/homepage/ProductJourney';
 import TeamMemberDrawer, { TeamMember } from '../components/about/TeamMemberDrawer';
 import { CheckCircle, Clock, Users, Lightbulb, Target, Image } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 
 const About = () => {
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember | null>(null);
@@ -209,9 +212,9 @@ const About = () => {
               <p className="text-gray-600 mb-6">
                 We offer competitive compensation, flexible work arrangements, and a supportive environment where your ideas and contributions are valued.
               </p>
-              <a href="#" className="btn-primary">
-                View Open Positions
-              </a>
+              <Link to="/cv-submission" className="btn-primary">
+                Submit Your CV
+              </Link>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
