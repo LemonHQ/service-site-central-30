@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
@@ -14,7 +13,7 @@ import { caseStudies } from '@/data/caseStudies';
 import { blogPosts } from '@/data/blogPosts';
 import { 
   Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users,
+  LayersIcon, Settings, Cpu, Network, BarChart2, Users, Library,
   CheckCircle, FileChartColumn, BookOpenText, Award
 } from 'lucide-react';
 
@@ -396,4 +395,3 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
-
