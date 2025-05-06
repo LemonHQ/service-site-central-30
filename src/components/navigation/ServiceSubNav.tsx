@@ -12,7 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { 
   Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users 
+  LayersIcon, Settings, Cpu, Network, BarChart2, Users, Library 
 } from 'lucide-react';
 
 // Navigation menu item component for consistent styling
@@ -126,6 +126,11 @@ const ServiceSubNav = () => {
       title: 'Unify Brand Experiences',
       link: '/services/unify-brand-experiences',
       icon: Users
+    },
+    {
+      title: 'Standardize Digital Portfolio',
+      link: '/services/standardize-digital-portfolio',
+      icon: Library
     },
   ];
 

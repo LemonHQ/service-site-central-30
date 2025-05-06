@@ -9,7 +9,8 @@ import {
   Database, 
   Expand,
   ArrowUp,
-  FlaskConical
+  FlaskConical,
+  Library
 } from 'lucide-react';
 
 interface ExpansionStrategyProps {
@@ -68,6 +69,12 @@ const ProductExpansion: React.FC = () => {
       title: "Pilot Emerging Tech",
       description: "Rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation in regulated environments.",
       color: "bg-amber-100"
+    },
+    {
+      icon: <Library className="h-8 w-8 text-indigo-500" />,
+      title: "Standardize Digital Portfolio",
+      description: "Establish consistent patterns and templates across your digital product catalog to improve efficiency, governance, and user experience.",
+      color: "bg-indigo-100"
     }
   ];
 
