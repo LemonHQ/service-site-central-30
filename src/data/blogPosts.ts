@@ -19,10 +19,10 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 'traditional-brands-d2c-strategies',
-    title: 'Scaling Digital: How Traditional Brands Can Win with D2C Strategies',
-    excerpt: 'Learn how established consumer brands are successfully building direct-to-consumer channels while maintaining retail partnerships.',
+    title: 'Scaling Digital: How traditional brands can win with D2C strategies',
+    excerpt: 'Learn how established consumer brands are successfully building direct-to-consumer channels while maintaining existing distribution channels and partnerships.',
     content: `
-      <h2>Scaling Digital: How Traditional Brands Can Win with D2C Strategies</h2>
+      <h2>Introduction: The New Digital Imperative</h2>
       
       <p>The retail landscape has shifted dramatically in recent years, with direct-to-consumer (D2C) brands disrupting traditional retail models and changing consumer expectations. Established brands that once relied exclusively on retail partnerships are now recognizing the strategic importance of building their own direct relationships with consumers. However, this transition presents unique challenges for traditional brands compared to digital-native startups.</p>
       
