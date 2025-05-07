@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
                   In a recent report from Adobe Analytics, search traffic to US retail websites from Generative AI sources has jumped 1,200%. Generative AI has moved from novelty to a mainstream tool that millions now use to find information &ndash; including recommendations on brands, services, and products. ChatGPT reached 1 million users in just five days and now draws over 400 million monthly users, illustrating how rapidly consumers have embraced AI assistants. This surge is massively disrupting how people search and discover products online.&nbsp;
                 </p>
                 <p>&nbsp;</p>
-                  <img src=""/assets/imgs/ChatGPT-Users-increase.png" />
+                  <img src="/assets/imgs/ChatGPT-Users-increase.png" />
                 <p>
                   Crucially, it&rsquo;s not just Google&rsquo;s realm anymore: users are turning to conversational AI platforms like OpenAI&rsquo;s ChatGPT, Google&rsquo;s upcoming Gemini, Meta&rsquo;s Llama 2, and even Amazon&rsquo;s new &ldquo;Rufus&rdquo; AI assistant for shopping. In regulated sectors such as finance, insurance, and healthcare &ndash; where trust and accurate information are paramount &ndash; generative AI is already transforming how consumers find and evaluate offerings.
                 </p>
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
                       AI summaries to more healthcare queries
                     </strong>
                     and introduced features like comparative overlays for medical information, showing their commitment to domain-specific improvements. All these updates aim to make the AI results more accurate, comprehensive, and trustworthy &ndash; critical for regulated fields.
-                    <img src=""/assets/imgs/AI-overview-intent.png" />
+                    <img src="/assets/imgs/AI-overview-intent.png" />
                   </li>
                 </ul>
                 <ul>
@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
                       $700M profit impact
                     </strong>
                     from Rufus, as more shoppers find what they need faster.
-                    <img src=""/assets/imgs/amazon-rufus.png" />
+                    <img src="/assets/imgs/amazon-rufus.png" />
                   </li>
                 </ul>
                 <ul>
@@ -129,7 +129,7 @@ export const blogPosts: BlogPost[] = [
                   </strong>
                   from AI, and the AI tools are increasingly able to deliver.&nbsp;
                 </p>
-                <img src=""/assets/imgs/AI-overviews.png" />
+                <img src="/assets/imgs/AI-overviews.png" />
                 <p>
                   In finance, insurance, and healthcare, consumers are beginning to use these platforms to get answers that were once provided by advisors, agents, or curated search results. Below, we explore specific use cases and implications in these sectors.
                 </p>
