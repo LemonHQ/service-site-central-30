@@ -5,12 +5,16 @@ export const blogPosts: BlogPost[] = [
     id: 'the-rise-of-headless-cms',
     title: 'The Rise of Headless CMS: A New Era for Digital Experiences',
     excerpt: 'Discover how headless CMS is revolutionizing content management and empowering developers to create seamless digital experiences across all channels.',
-    author: 'Alex Johnson',
-    authorAvatar: '/placeholder.svg',
+    author: {
+      name: 'Alex Johnson',
+      avatar: '/placeholder.svg'
+    },
     date: '2024-01-25',
+    publishDate: '2024-01-25',
     category: 'Technology',
     tags: ['CMS', 'Headless', 'Digital Experience', 'Web Development'],
     featuredImage: '/placeholder.svg',
+    readTime: 8,
     content: `
       <p>In today's rapidly evolving digital landscape, businesses need to deliver compelling content experiences across a multitude of channels and devices. Traditional content management systems (CMS) are struggling to keep up with these demands, leading to the rise of a new approach: headless CMS.</p>
 
@@ -57,12 +61,16 @@ export const blogPosts: BlogPost[] = [
     id: 'the-power-of-ai-in-marketing',
     title: 'The Power of AI in Marketing: Transforming Strategies and Results',
     excerpt: 'Explore how artificial intelligence is revolutionizing marketing, enabling personalized experiences, data-driven decisions, and improved ROI.',
-    author: 'Emily Carter',
-    authorAvatar: '/placeholder.svg',
+    author: {
+      name: 'Emily Carter',
+      avatar: '/placeholder.svg'
+    },
     date: '2024-02-14',
+    publishDate: '2024-02-14',
     category: 'Marketing',
     tags: ['AI', 'Marketing Automation', 'Personalization', 'Data Analysis'],
     featuredImage: '/placeholder.svg',
+    readTime: 10,
     content: `
       <p>Artificial intelligence (AI) is rapidly transforming the marketing landscape, empowering businesses to create more personalized experiences, make data-driven decisions, and achieve improved results. From automating repetitive tasks to analyzing vast amounts of data, AI is revolutionizing the way marketers operate.</p>
 
@@ -101,12 +109,16 @@ export const blogPosts: BlogPost[] = [
     id: 'the-importance-of-ux-design',
     title: 'The Importance of UX Design: Creating User-Centered Experiences',
     excerpt: 'Understand why user experience (UX) design is crucial for creating successful digital products and how it can improve customer satisfaction and business outcomes.',
-    author: 'Sophia Lee',
-    authorAvatar: '/placeholder.svg',
+    author: {
+      name: 'Sophia Lee',
+      avatar: '/placeholder.svg'
+    },
     date: '2024-03-10',
+    publishDate: '2024-03-10',
     category: 'Design',
     tags: ['UX Design', 'User Experience', 'Usability', 'User Research'],
     featuredImage: '/placeholder.svg',
+    readTime: 7,
     content: `
       <p>In today's digital age, user experience (UX) design has become a critical factor in the success of any digital product. UX design focuses on creating user-centered experiences that are intuitive, efficient, and enjoyable. By understanding user needs and behaviors, UX designers can create products that meet user expectations and achieve business goals.</p>
 
@@ -154,12 +166,16 @@ export const blogPosts: BlogPost[] = [
     id: 'the-future-of-e-commerce',
     title: 'The Future of E-Commerce: Trends and Innovations to Watch',
     excerpt: 'Explore the emerging trends and innovations that are shaping the future of e-commerce, from personalized shopping experiences to AI-powered automation.',
-    author: 'David Chen',
-    authorAvatar: '/placeholder.svg',
+    author: {
+      name: 'David Chen',
+      avatar: '/placeholder.svg'
+    },
     date: '2024-04-20',
+    publishDate: '2024-04-20',
     category: 'E-Commerce',
     tags: ['E-Commerce', 'Online Retail', 'Digital Commerce', 'Innovation'],
     featuredImage: '/placeholder.svg',
+    readTime: 9,
     content: `
       <p>E-commerce is constantly evolving, driven by technological advancements, changing consumer behaviors, and increasing competition. To stay ahead of the curve, businesses need to understand the emerging trends and innovations that are shaping the future of e-commerce.</p>
 
@@ -196,12 +212,17 @@ export const blogPosts: BlogPost[] = [
     id: 'ai-digital-ecosystems-segment-of-one',
     title: 'AI and Digital Ecosystems Converge to Realize the "Segment-of-One" Personalization Vision',
     excerpt: 'How artificial intelligence and interconnected digital platforms are finally enabling true individualized experiences at scale.',
-    author: 'Sarah Mitchell',
-    authorAvatar: '/placeholder.svg',
+    author: {
+      name: 'Sarah Mitchell',
+      avatar: '/placeholder.svg',
+      role: 'Chief Digital Strategist'
+    },
     date: '2024-05-06',
+    publishDate: '2024-05-06',
     category: 'Digital Strategy',
     tags: ['AI', 'Personalization', 'Digital Ecosystems', 'Customer Experience'],
     featuredImage: '/placeholder.svg',
+    readTime: 11,
     content: `
       <p>For decades, marketers have chased the elusive "segment-of-one" - the ability to deliver truly personalized experiences to each individual consumer. What was once a distant aspiration is rapidly becoming reality as artificial intelligence and digital ecosystems converge to transform how businesses engage with their customers.</p>
 

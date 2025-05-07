@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
-import { BlogPost } from '@/data/blogPosts';
+import { BlogPost } from '@/types/blog';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BlogCardProps {
@@ -18,6 +18,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
     day: 'numeric',
     year: 'numeric'
   });
+
+  // Get author initial safely
+  const authorInitial = post.author && post.author.name ? post.author.name.charAt(0) : '?';
 
   return (
     <Link to={`/insights/${post.id}`} className="block h-full">
@@ -47,10 +50,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           
           <div className="flex items-center mt-auto pt-4">
             <Avatar className="h-8 w-8 mr-3">
-              <AvatarImage src={post.author.avatar} alt={post.author.name} />
-              <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+              <AvatarImage src={post.author?.avatar} alt={post.author?.name || 'Author'} />
+              <AvatarFallback>{authorInitial}</AvatarFallback>
             </Avatar>
-            <span className="text-sm font-medium">{post.author.name}</span>
+            <span className="text-sm font-medium">{post.author?.name || 'Anonymous'}</span>
           </div>
           
           <div className="flex items-center text-brand-400 hover:text-brand-500 font-medium mt-4">
