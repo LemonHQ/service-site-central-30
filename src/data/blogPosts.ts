@@ -16,9 +16,6 @@ export const blogPosts: BlogPost[] = [
     featuredImage: '/placeholder.svg',
     readTime: 8,
     content: `
-                    <h1>
-                  How generative AI is reshaping brand and product discovery
-                </h1>
                 <p>
                   In a recent report from Adobe Analytics, search traffic to US retail websites from Generative AI sources has jumped 1,200%. Generative AI has moved from novelty to a mainstream tool that millions now use to find information &ndash; including recommendations on brands, services, and products. ChatGPT reached 1 million users in just five days and now draws over 400 million monthly users, illustrating how rapidly consumers have embraced AI assistants. This surge is massively disrupting how people search and discover products online.&nbsp;
                 </p>
