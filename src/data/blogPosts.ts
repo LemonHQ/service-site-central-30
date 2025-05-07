@@ -424,52 +424,52 @@ export const blogPosts: BlogPost[] = [
                 <h2>Information sources and references</h2>
                 <ul>
                   <li>
-                    <a href="https://www.barrons.com/articles/black-friday-shopping-cyber-monday-d31144da?utm_source=chatgpt.com">
+                    <a href="https://www.barrons.com/articles/black-friday-shopping-cyber-monday-d31144da?utm_source=chatgpt.com" target="_blank">
                       How AI Fueled Black Friday Shopping This Year
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.vktr.com/the-wire/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200/?utm_source=chatgpt.com">
+                    <a href="https://www.vktr.com/the-wire/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200/?utm_source=chatgpt.com" target="_blank">
                       Adobe Analytics: Traffic to US Retail Websites from Generative AI Sources Jumps 1,200%
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.theverge.com/ai-artificial-intelligence/631352/ai-search-adobe-analytics-google-perplexity-openai?utm_source=chatgpt.com">
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/631352/ai-search-adobe-analytics-google-perplexity-openai?utm_source=chatgpt.com" target="_blank">
                       AI search is starting to kill Google&rsquo;s &lsquo;ten blue links&rsquo;
                     </a>
                   </li>
                   <li>
-                    <a href="https://syndigo.com/blog/future-of-product-data-pxm-trends-2025/?utm_source=chatgpt.com">
+                    <a href="https://syndigo.com/blog/future-of-product-data-pxm-trends-2025/?utm_source=chatgpt.com" target="_blank">
                       The Future of Product Data: Trends in PXM and Beyond
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.businessinsider.com/amazon-predicts-700-million-potential-gain-ai-assistant-rufus-2025-4?utm_source=chatgpt.com">
+                    <a href="https://www.businessinsider.com/amazon-predicts-700-million-potential-gain-ai-assistant-rufus-2025-4?utm_source=chatgpt.com" target="_blank">
                       Amazon's AI shopping assistant Rufus is projected to indirectly boost operating profits by $700 million this year
                     </a>
                   </li>
                   <li>
-                    <a href="https://venturebeat.com/ai/from-catch-up-to-catch-us-how-google-quietly-took-the-lead-in-enterprise-ai/?utm_source=chatgpt.com">
+                    <a href="https://venturebeat.com/ai/from-catch-up-to-catch-us-how-google-quietly-took-the-lead-in-enterprise-ai/?utm_source=chatgpt.com" target="_blank">
                       From &lsquo;catch up&rsquo; to &lsquo;catch us&rsquo;: How Google quietly took the lead in enterprise AI
                     </a>
                   </li>
                   <li>
-                    <a href="https://apnews.com/article/google-search-artificial-intelligence-overviews-c4061a38b5e186f7abc41ee011da329f">
+                    <a href="https://apnews.com/article/google-search-artificial-intelligence-overviews-c4061a38b5e186f7abc41ee011da329f" target="_blank">
                       Google leans further into AI-generated overviews for its search engine
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.vktr.com/ai-news/perplexity-releases-internal-knowledge-search-and-spaces/?utm_source=chatgpt.com">
+                    <a href="https://www.vktr.com/ai-news/perplexity-releases-internal-knowledge-search-and-spaces/?utm_source=chatgpt.com" target="_blank">
                       Perplexity Releases Internal Knowledge Search and Spaces
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.pymnts.com/artificial-intelligence-2/2025/adobe-analytics-genai-traffic-to-retail-websites-doubles-every-2-months/?utm_source=chatgpt.com">
+                    <a href="https://www.pymnts.com/artificial-intelligence-2/2025/adobe-analytics-genai-traffic-to-retail-websites-doubles-every-2-months/?utm_source=chatgpt.com"> target="_blank"
                       Adobe Analytics: GenAI Traffic to Retail Websites Doubles Every 2 Months
                     </a>
                   </li>
                   <li>
-                    <a href="https://martech.org/more-consumers-using-genai-tools-to-research-purchases-adobe/?utm_source=chatgpt.com">
+                    <a href="https://martech.org/more-consumers-using-genai-tools-to-research-purchases-adobe/?utm_source=chatgpt.com" target="_blank">
                       More consumers using genAI tools to research purchases: Adobe
                     </a>
                   </li>
@@ -620,12 +620,7 @@ export const blogPosts: BlogPost[] = [
               &ndash; they can recognize the same customer as she moves from a website to a mobile app to a physical store, and ensure consistent, personalized treatment throughout.
             </li>
           </ul>
-          <p>
-            <a href="https://unsplash.com/photos/person-holding-white-and-red-love-print-wall-decor-unwG7xmIy3k">
-              <br />
-              <br />
-            </a>
-          </p>
+            <img src="/assets/imgs/samuel-lopes-unwG7xmIy3k-unsplash.jpg" />
           <ul>
             <li>
               <strong>
@@ -650,12 +645,7 @@ export const blogPosts: BlogPost[] = [
               , was a radical departure from the slow, big-wholesale way of operating. It showcased how a traditionally B2B2C company could act in an agile, startup-like fashion via a direct channel.
             </li>
           </ul>
-          <p>
-            <a href="https://www.snacks.com/">
-              <br />
-              <br />
-            </a>
-          </p>
+           <img src="/assets/imgs/snacks.com.png" />
           <ul>
             <li>
               <strong>
@@ -874,32 +864,32 @@ export const blogPosts: BlogPost[] = [
           </h2>
           <ul>
             <li>
-              <a href="https://www.ey.com/en_us/insights/strategy-transactions/how-to-drive-profitable-growth-via-d2c#:~:text=The%20recent%20pandemic%20has%20contributed,ii">
+              <a href="https://www.ey.com/en_us/insights/strategy-transactions/how-to-drive-profitable-growth-via-d2c#:~:text=The%20recent%20pandemic%20has%20contributed,ii" target="_blank">
                 How to drive profitable growth via D2C
               </a>
             </li>
             <li>
-              <a href="https://www.inkl.com/news/direct-to-consumer-dtc-a-fad-or-the-beginning-of-a-trend#:~:text=Today%2C%20companies%20need%20to%20master,site%20filled%20with%20their%20products">
+              <a href="https://www.inkl.com/news/direct-to-consumer-dtc-a-fad-or-the-beginning-of-a-trend#:~:text=Today%2C%20companies%20need%20to%20master,site%20filled%20with%20their%20products" target="_blank">
                 Food &amp; Beverage Giants Like Pepsi And Kraft Heinz Tap Into Direct To Consumer. Is It A Fad Or The Beginning Of A Trend?
               </a>
             </li>
             <li>
-              <a href="https://www.stibosystems.com/blog/5-common-reasons-why-manufacturers-fail-at-digital-transformation#:~:text=Many%20manufacturing%20facilities%20operate%20with,does%20not%20allow%20for%20integrations">
+              <a href="https://www.stibosystems.com/blog/5-common-reasons-why-manufacturers-fail-at-digital-transformation#:~:text=Many%20manufacturing%20facilities%20operate%20with,does%20not%20allow%20for%20integrations" target="_blank">
                 5 Common Reasons Why Manufacturers Fail at Digital Transformation
               </a>
             </li>
             <li>
-              <a href="https://www.bcg.com/publications/2021/direct-to-consumer-strategy-business-benefits#:~:text=The%20attitude%20toward%20direct,the%20experience%2C%20quickly%20launch%20and">
+              <a href="https://www.bcg.com/publications/2021/direct-to-consumer-strategy-business-benefits#:~:text=The%20attitude%20toward%20direct,the%20experience%2C%20quickly%20launch%20and" target="_blank">
                 Even Big Brands Need a Direct-to-Consumer Strategy
               </a>
             </li>
             <li>
-              <a href="https://www.inc.com/bruce-crumley/big-shift-to-direct-to-consumer-stores-pays-off-for-levis.html">
+              <a href="https://www.inc.com/bruce-crumley/big-shift-to-direct-to-consumer-stores-pays-off-for-levis.html" target="_blank">
                 Big Shift to Direct-to-Consumer Stores Pays Off for Levis&nbsp;
               </a>
             </li>
             <li>
-              <a href="https://www.marketingweek.com/nike-dtc-strategy/">
+              <a href="https://www.marketingweek.com/nike-dtc-strategy/" target="_blank">
                 Nike credits &lsquo;innovation, brand strength and scale&rsquo; for DTC success
               </a>
             </li>
