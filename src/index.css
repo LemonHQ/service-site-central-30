@@ -123,6 +123,11 @@
     @apply text-xs sm:text-sm md:text-base text-accent-500; /* ~25% smaller than h5 */
   }
 
+  /* Link styles - adding on-brand styling */
+  a {
+    @apply text-brand-400 hover:text-brand-500 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
+  }
+
   /* List styles */
   ul {
     @apply list-disc pl-6 my-4 space-y-2;
@@ -165,15 +170,38 @@
   }
 
   .nav-link {
-    @apply text-gray-600 hover:text-brand-400 transition-colors duration-300;
+    @apply text-gray-600 hover:text-brand-400 transition-colors duration-300 border-b-0;
   }
 
   .active-nav-link {
-    @apply text-brand-400 font-medium;
+    @apply text-brand-400 font-medium border-b-0;
   }
 
   .gradient-text {
     @apply bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent;
+  }
+  
+  /* New link styles */
+  .link {
+    @apply text-brand-400 hover:text-brand-500 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
+  }
+  
+  .link-accent {
+    @apply text-accent-400 hover:text-accent-500 transition-colors duration-300 font-medium border-b-0;
+  }
+  
+  .link-subtle {
+    @apply text-gray-500 hover:text-brand-400 transition-colors duration-300 border-b-0;
+  }
+  
+  .link-nav {
+    @apply text-gray-600 hover:text-brand-400 transition-colors duration-300 border-b-0;
+  }
+  
+  /* Prose content links styling */
+  .prose {
+    @apply [&_a]:text-brand-400 [&_a]:transition-colors [&_a]:duration-300 [&_a]:border-b 
+           [&_a]:border-brand-400/30 [&_a:hover]:text-brand-500 [&_a:hover]:border-brand-500;
   }
 }
 
