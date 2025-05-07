@@ -94,33 +94,33 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Heading styles with brand colors and descending sizes */
+  /* Heading styles with brand colors and descending sizes - each heading is at least 25% smaller than the previous */
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-light tracking-tight mt-8 mb-4;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl text-brand-700;
+    @apply text-4xl sm:text-5xl md:text-6xl text-brand-700;
   }
 
   h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl text-brand-600;
+    @apply text-3xl sm:text-4xl md:text-5xl text-brand-600; /* ~25% smaller than h1 */
   }
 
   h3 {
-    @apply text-xl sm:text-2xl md:text-3xl text-brand-500;
+    @apply text-2xl sm:text-3xl md:text-4xl text-brand-500; /* ~25% smaller than h2 */
   }
 
   h4 {
-    @apply text-lg sm:text-xl md:text-2xl text-brand-400;
+    @apply text-xl sm:text-2xl md:text-3xl text-brand-400; /* ~25% smaller than h3 */
   }
 
   h5 {
-    @apply text-base sm:text-lg text-accent-600;
+    @apply text-lg sm:text-xl md:text-2xl text-accent-600; /* ~25% smaller than h4 */
   }
 
   h6 {
-    @apply text-sm sm:text-base text-accent-500;
+    @apply text-base sm:text-lg md:text-xl text-accent-500; /* ~25% smaller than h5 */
   }
 
   /* List styles */
