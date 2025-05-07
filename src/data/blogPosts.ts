@@ -7,13 +7,13 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Brands in finance, insurance, and healthcare should treat AI platforms as the new battleground for customer mindshare.',
     author: {
       name: 'Husain Mohsin',
-      avatar: 'assets/imgs/husain-mohsin-profile-pic.png'
+      avatar: '/assets/imgs/husain-mohsin-profile-pic.png'
     },
     date: '2024-01-25',
     publishDate: '2024-01-25',
     category: 'Technology',
     tags: ['CMS', 'Headless', 'Digital Experience', 'Web Development'],
-    featuredImage: 'assets/imgs/amazon-rufus-in-action.jpg',
+    featuredImage: '/assets/imgs/amazon-rufus-in-action.jpg',
     readTime: 8,
     content: `
                 <p>
