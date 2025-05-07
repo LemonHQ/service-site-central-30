@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -70,6 +69,7 @@ const RouterListItem = ({ title, to, className, icon: Icon }: {
 };
 
 const ServiceSubNav = () => {
+  console.log("Rendering ServiceSubNav component");
   // All services data - matching the data in Services.tsx
   const services = [
     {

@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
-import ServiceCard from '../components/ui/ServiceCard';
+import ServiceCard from '@/components/ui/ServiceCard';
 import CtaSection from '../components/ui/CtaSection';
 import { 
   Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+  console.log("Rendering Services component");
   // All services data
   const allServices = [
     {

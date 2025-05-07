@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
-import ServiceCard from '../components/ui/ServiceCard';
+import ServiceCard from '@/components/ui/ServiceCard';
 import CtaSection from '../components/ui/CtaSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -160,7 +160,9 @@ const serviceRelations = {
 };
 
 const ServiceDetail = () => {
+  console.log("Rendering ServiceDetail component");
   const { serviceId } = useParams<{ serviceId: string }>();
+  console.log("ServiceId:", serviceId);
   const serviceData = serviceId ? servicesData[serviceId as keyof typeof servicesData] : null;
   const relationData = serviceId ? serviceRelations[serviceId as keyof typeof serviceRelations] : null;
   
@@ -372,15 +374,18 @@ const ServiceDetail = () => {
             {Object.entries(servicesData)
               .filter(([id]) => id !== serviceId)
               .slice(0, 3)
-              .map(([id, service]) => (
-                <ServiceCard
-                  key={id}
-                  title={service.title}
-                  description={service.description}
-                  link={`/services/${id}`}
-                  icon={service.icon}
-                />
-              ))}
+              .map(([id, service]) => {
+                console.log(`Creating ServiceCard for ${service.title}`);
+                return (
+                  <ServiceCard
+                    key={id}
+                    title={service.title}
+                    description={service.description}
+                    link={`/services/${id}`}
+                    icon={service.icon}
+                  />
+                );
+              })}
           </div>
         </div>
       </section>
