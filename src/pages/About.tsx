@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
@@ -285,8 +284,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CtaSection title="Talk to us today to explore what's possible?" subtitle="Schedule a one to one connect with our scaling expert" buttonText="Get in Touch" buttonLink="/contact" />
+      {/* CTA Section - Updated to open dialog instead of navigating */}
+      <CtaSection 
+        title="Talk to us today to explore what's possible?" 
+        subtitle="Schedule a one to one connect with our scaling expert" 
+        buttonText="Book a Meeting" 
+        secondaryButtonText="Contact Us" 
+        secondaryButtonLink="/contact" 
+      />
 
       {/* Team Member Drawer - Keep this for potential future use */}
       <TeamMemberDrawer member={selectedTeamMember} open={drawerOpen} onClose={() => setDrawerOpen(false)} />

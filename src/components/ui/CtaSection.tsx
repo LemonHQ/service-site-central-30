@@ -9,7 +9,7 @@ interface CtaSectionProps {
   title: string;
   subtitle: string;
   buttonText: string;
-  buttonLink: string;
+  buttonLink?: string; // Made optional since we'll use dialog
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
 }
