@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react'; // Added CheckCircle import
 
 interface LinkItem {
   name: string;
