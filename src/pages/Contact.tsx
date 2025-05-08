@@ -85,20 +85,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <a href="mailto:create@lemonhq.io" className="text-brand-400 hover:text-brand-500">
-                      create@lemonhq.io
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-brand-100 p-3 rounded-full mr-4">
-                    <Phone className="w-5 h-5 text-brand-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Phone</h4>
-                    <a href="tel:+1-800-123-4567" className="text-brand-400 hover:text-brand-500">
-                      +1 (800) 123-4567
+                    <a href="mailto:create@lemonhq.co.uk" className="text-brand-400 hover:text-brand-500">
+                      create@lemonhq.co.uk
                     </a>
                   </div>
                 </div>
@@ -108,11 +96,24 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-brand-500" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Office</h4>
+                    <h4 className="font-semibold mb-1">UK & Europe</h4>
                     <address className="not-italic text-gray-600">
-                      123 Innovation Way<br />
-                      Suite 400<br />
-                      San Francisco, CA 94103
+                      Lemon Marketing & Consultancy Ltd, <br />
+                      128, City Road, London,England, EC1V 2NX
+                    </address>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-brand-100 p-3 rounded-full mr-4">
+                    <MapPin className="w-5 h-5 text-brand-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Middle East</h4>
+                    <address className="not-italic text-gray-600">
+                      Lemon Adv, & Pub. LLC<br />
+                      Damas 14 Office Tower, Suite #1948<br />
+                      Al Zahra Street, Sharjah, United Arab Emirates
                     </address>
                   </div>
                 </div>
