@@ -13,7 +13,10 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Add a simple test to verify connection
-supabase.from('contact_submissions').select('count', { count: 'exact', head: true })
+// Use Promise.resolve to ensure we're working with a full Promise implementation
+Promise.resolve(
+  supabase.from('contact_submissions').select('count', { count: 'exact', head: true })
+)
   .then(response => {
     if (response.error) {
       console.error('Supabase connection error:', response.error);
