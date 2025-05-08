@@ -1,3 +1,4 @@
+
 import { supabase } from '@/lib/supabase';
 import { z } from 'zod';
 
@@ -13,9 +14,40 @@ export const formSchema = z.object({
 export type ContactFormValues = z.infer<typeof formSchema>;
 
 export const submitContactForm = async (formData: ContactFormValues) => {
-  // If supabase client is not available (missing environment variables), store in localStorage instead
-  if (!supabase) {
-    console.log('Supabase not available, storing submission in localStorage');
+  try {
+    const { data, error } = await supabase
+      .from('contact_submissions')
+      .insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone || null,
+          service: formData.service || null,
+          message: formData.message,
+          created_at: new Date().toISOString(),
+        }
+      ]);
+
+    if (error) {
+      console.error('Error submitting contact form:', error);
+      // Fallback to localStorage if there's an error with Supabase
+      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+      const newSubmission = {
+        ...formData,
+        id: `submission-${Date.now()}`,
+        created_at: new Date().toISOString(),
+      };
+      submissions.push(newSubmission);
+      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+      console.log('Saved submission to localStorage as fallback');
+      return newSubmission;
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    // Fallback to localStorage for any unexpected errors
     const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
     const newSubmission = {
       ...formData,
@@ -24,27 +56,7 @@ export const submitContactForm = async (formData: ContactFormValues) => {
     };
     submissions.push(newSubmission);
     localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+    console.log('Saved submission to localStorage due to unexpected error');
     return newSubmission;
   }
-  
-  // Otherwise use Supabase
-  const { data, error } = await supabase
-    .from('contact_submissions')
-    .insert([
-      {
-        name: formData.name,
-        email: formData.email,
-        company: formData.company,
-        phone: formData.phone || null,
-        service: formData.service || null,
-        message: formData.message,
-        created_at: new Date().toISOString(),
-      }
-    ]);
-
-  if (error) {
-    throw error;
-  }
-
-  return data;
 };
