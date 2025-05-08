@@ -33,12 +33,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: 'Test User',
-      email: 'test@example.com',
-      company: 'Test Company',
-      phone: '123-456-7890',
-      service: 'validating-product-ideas',
-      message: 'This is a test message to verify Supabase integration is working correctly.',
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: '',
     }
   });
 
