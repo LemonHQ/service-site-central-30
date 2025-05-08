@@ -9,10 +9,13 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Check if the contact_submissions table exists, if not, log a message
-supabase
-  .from('contact_submissions')
-  .select('*')
-  .limit(1)
+// Using Promise.resolve to ensure we have access to .catch
+Promise.resolve(
+  supabase
+    .from('contact_submissions')
+    .select('*')
+    .limit(1)
+)
   .then(() => {
     console.log('Successfully connected to Supabase and found contact_submissions table');
   })
