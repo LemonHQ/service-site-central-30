@@ -198,8 +198,35 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section - Hidden as requested */}
-      {/* Removed "Our Leadership Team" section */}
+      {/* Team Section - Unhide as requested */}
+      <section className="section-padding bg-gray-50" id="team">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading title="Our Leadership Team" subtitle="Meet the experienced professionals leading our company" centered />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {teamMembers.map((member, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer"
+                onClick={() => handleTeamMemberClick(member)}
+              >
+                <div className="aspect-w-3 aspect-h-4 relative overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-64 object-cover object-center"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-xl mb-1">{member.name}</h3>
+                  <p className="text-brand-400 mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Careers Section */}
       <section className="section-padding" id="careers">
