@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { LucideIcon } from 'lucide-react';
 
-// Adding console log to debug component loading
-console.log("ServiceCard component is being loaded");
-
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -22,7 +19,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   icon: Icon,
   className,
 }) => {
-  console.log(`Rendering ServiceCard: ${title}`);
   return (
     <Link
       to={link}

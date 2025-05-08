@@ -373,18 +373,15 @@ const ServiceDetail = () => {
             {Object.entries(servicesData)
               .filter(([id]) => id !== serviceId)
               .slice(0, 3)
-              .map(([id, service]) => {
-                console.log(`Creating ServiceCard for ${service.title}`);
-                return (
-                  <ServiceCard
-                    key={id}
-                    title={service.title}
-                    description={service.description}
-                    link={`/services/${id}`}
-                    icon={service.icon}
-                  />
-                );
-              })}
+              .map(([id, service]) => (
+                <ServiceCard
+                  key={id}
+                  title={service.title}
+                  description={service.description}
+                  link={`/services/${id}`}
+                  icon={service.icon}
+                />
+              ))}
           </div>
         </div>
       </section>
