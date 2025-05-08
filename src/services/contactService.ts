@@ -1,4 +1,3 @@
-
 import { supabase } from '@/lib/supabase';
 import { z } from 'zod';
 
@@ -14,30 +13,38 @@ export const formSchema = z.object({
 export type ContactFormValues = z.infer<typeof formSchema>;
 
 export const submitContactForm = async (formData: ContactFormValues) => {
-  try {
-    const { data, error } = await supabase
-      .from('contact_submissions')
-      .insert([
-        {
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          phone: formData.phone || null,
-          service: formData.service || null,
-          message: formData.message,
-          created_at: new Date().toISOString(),
-        }
-      ]);
+  // If supabase client is not available (missing environment variables), store in localStorage instead
+  if (!supabase) {
+    console.log('Supabase not available, storing submission in localStorage');
+    const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+    const newSubmission = {
+      ...formData,
+      id: `submission-${Date.now()}`,
+      created_at: new Date().toISOString(),
+    };
+    submissions.push(newSubmission);
+    localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+    return newSubmission;
+  }
+  
+  // Otherwise use Supabase
+  const { data, error } = await supabase
+    .from('contact_submissions')
+    .insert([
+      {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone || null,
+        service: formData.service || null,
+        message: formData.message,
+        created_at: new Date().toISOString(),
+      }
+    ]);
 
-    if (error) {
-      console.error('Error submitting form to Supabase:', error);
-      throw error;
-    }
-
-    console.log('Form submission successful:', data);
-    return data;
-  } catch (error) {
-    console.error('Exception during form submission:', error);
+  if (error) {
     throw error;
   }
+
+  return data;
 };
