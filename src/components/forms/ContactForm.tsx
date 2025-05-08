@@ -16,16 +16,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useNavigate } from 'react-router-dom';
-import { submitContactForm, formSchema, ContactFormValues } from '@/services/contactService';
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  company: z.string().min(1, { message: "Company name is required." }),
-  phone: z.string().optional(),
-  service: z.string().optional(),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
+import { submitContactForm, ContactFormValues, formSchema } from '@/services/contactService';
 
 type FormValues = z.infer<typeof formSchema>;
 
