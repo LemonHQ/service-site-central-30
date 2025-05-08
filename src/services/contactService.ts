@@ -15,19 +15,26 @@ export type ContactFormValues = z.infer<typeof formSchema>;
 
 export const submitContactForm = async (formData: ContactFormValues) => {
   try {
+    console.log('Starting submission to Supabase...');
+    
+    const submissionData = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone || null,
+      service: formData.service || null,
+      message: formData.message,
+      created_at: new Date().toISOString(),
+    };
+    
+    console.log('Prepared submission data:', submissionData);
+    
     const { data, error } = await supabase
       .from('contact_submissions')
-      .insert([
-        {
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          phone: formData.phone || null,
-          service: formData.service || null,
-          message: formData.message,
-          created_at: new Date().toISOString(),
-        }
-      ]);
+      .insert([submissionData])
+      .select();
+
+    console.log('Supabase response:', { data, error });
 
     if (error) {
       console.error('Error submitting contact form:', error);
@@ -44,6 +51,7 @@ export const submitContactForm = async (formData: ContactFormValues) => {
       return newSubmission;
     }
 
+    console.log('Successfully submitted to Supabase:', data);
     return data;
   } catch (error) {
     console.error('Unexpected error:', error);

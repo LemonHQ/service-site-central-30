@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -32,21 +33,23 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      message: '',
+      name: 'Test User',
+      email: 'test@example.com',
+      company: 'Test Company',
+      phone: '123-456-7890',
+      service: 'validating-product-ideas',
+      message: 'This is a test message to verify Supabase integration is working correctly.',
     }
   });
 
   const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
+    console.log('Submitting form with data:', data);
     
     try {
       // Submit form data to Supabase
-      await submitContactForm(data);
+      const result = await submitContactForm(data);
+      console.log('Submission result:', result);
       
       // Success notification
       toast({
