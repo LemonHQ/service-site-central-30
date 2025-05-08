@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,6 +16,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useNavigate } from 'react-router-dom';
+import { submitContactForm, formSchema, ContactFormValues } from '@/services/contactService';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -38,7 +38,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  const form = useForm<FormValues>({
+  const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -50,18 +50,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
     }
   });
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
     
     try {
-      // Store form data (in localStorage for now)
-      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-      submissions.push({
-        ...data,
-        id: `submission-${Date.now()}`,
-        createdAt: new Date().toISOString(),
-      });
-      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+      // Submit form data to Supabase
+      await submitContactForm(data);
       
       // Success notification
       toast({
@@ -75,6 +69,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
       // Redirect to thank you page
       navigate('/thank-you');
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "There was a problem submitting your form. Please try again.",
