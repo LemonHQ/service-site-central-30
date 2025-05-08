@@ -177,25 +177,11 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="bg-brand-400 hover:bg-brand-500">
-                      Contact Us
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[650px]">
-                    <DialogHeader>
-                      <DialogTitle>Schedule a Meeting</DialogTitle>
-                    </DialogHeader>
-                    <div className="flex justify-center py-4" id="calendar-container">
-                      <iframe 
-                        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true" 
-                        style={{ width: "100%", height: "600px", border: 0 }} 
-                        frameBorder="0"
-                      ></iframe>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <Link to="/contact">
+                  <Button className="bg-brand-400 hover:bg-brand-500">
+                    Contact Us
+                  </Button>
+                </Link>
                 
                 <Dialog>
                   <DialogTrigger asChild>
