@@ -83,12 +83,12 @@ const ProductJourney: React.FC = () => {
       details: 'As your product grows, we help you scale both technically and operationally. Our focus includes performance optimization, architecture refinement, and operational excellence to support increasing demand and complexity.'
     },
     {
-      id: 'grow',
+      id: 'expand',
       icon: <TrendingUp className="h-8 w-8 text-accent-400" />,
-      title: 'Grow',
+      title: 'Expand',
       description: 'Drive continuous improvement through data-driven insights and product evolution strategies.',
       color: 'bg-beige-100',
-      details: 'Product growth requires continuous refinement based on user behavior, market trends, and business objectives. Our data-driven approach identifies opportunities for feature enhancements, optimizations, and strategic pivots.'
+      details: 'Product expansion requires continuous refinement based on user behavior, market trends, and business objectives. Our data-driven approach identifies opportunities for feature enhancements, optimizations, and strategic pivots.'
     }
   ];
 
@@ -96,8 +96,8 @@ const ProductJourney: React.FC = () => {
     <section className="section-padding bg-ivory-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Product Journey" 
-          subtitle="We partner with you through every stage of the product lifecycle, from initial concept to ongoing growth"
+          title="Expansion Journey" 
+          subtitle="We partner with you through every stage of the product lifecycle, from initial concept, launch to scale"
           centered
           className="mb-16"
         />
