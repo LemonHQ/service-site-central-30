@@ -1,59 +1,14 @@
+
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
+import { Mail, MapPin } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import ContactForm from '@/components/forms/ContactForm';
+
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [loading, setLoading] = useState(false);
   const [bookingDialogOpen, setBookingDialogOpen] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Message Sent",
-        description: "Thank you for reaching out. We'll get back to you shortly."
-      });
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 1500);
-  };
   return <MainLayout>
       {/* Hero Section */}
       <section className="bg-brand-100 py-16 md:py-24">
@@ -122,88 +77,10 @@ const Contact = () => {
             
             {/* Contact Form */}
             <div className="lg:col-span-8">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-                <h2 className="text-2xl font-semibold mb-6">Request a Consultation</h2>
-                
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Full Name *
-                      </label>
-                      <Input id="name" name="name" required value={formData.name} onChange={handleChange} placeholder="Your name" />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address *
-                      </label>
-                      <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="your.email@company.com" />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                        Company Name *
-                      </label>
-                      <Input id="company" name="company" required value={formData.company} onChange={handleChange} placeholder="Your company" />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number
-                      </label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="(123) 456-7890" />
-                    </div>
-                    
-                    <div className="md:col-span-2">
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                        Service of Interest
-                      </label>
-                      <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400">
-                        <option value="">Select a service</option>
-                        <option value="validating-product-ideas">Validating Product Ideas</option>
-                        <option value="ideating-product-concepts">Ideating Product Concepts</option>
-                        <option value="designing-experiences">Designing Brand & Customer Experiences</option>
-                        <option value="launching-products">Launching New Products</option>
-                        <option value="scaling-products">Scaling Products</option>
-                        <option value="expand-product-offerings">Expand Product Offerings</option>
-                        <option value="standardize-technology">Standardize Technology</option>
-                        <option value="pilot-emerging-tech">Pilot Emerging Tech</option>
-                        <option value="connect-ecosystems">Connect to Digital Ecosystems</option>
-                        <option value="optimize-portfolios">Optimize Digital Portfolios</option>
-                        <option value="unify-brand-experiences">Unify Brand Experiences</option>
-                        <option value="other">Other / Not Sure</option>
-                      </select>
-                    </div>
-                    
-                    <div className="md:col-span-2">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                        Message *
-                      </label>
-                      <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} placeholder="Please tell us about your project or inquiry" className="min-h-[150px]" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-col md:flex-row md:justify-between gap-4">
-                    <Button type="submit" className="md:w-auto bg-brand-400 hover:bg-brand-500" disabled={loading}>
-                      {loading ? 'Sending...' : 'Submit Request'}
-                    </Button>
-                    
-                    <Button type="button" variant="outline" className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100" onClick={() => setBookingDialogOpen(true)}>
-                      <Calendar className="h-4 w-4" />
-                      Request Consultation
-                    </Button>
-                  </div>
-                </form>
-              </div>
+              <ContactForm onOpenBookingDialog={() => setBookingDialogOpen(true)} />
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="mt-12">
-        
       </section>
 
       {/* Booking Dialog */}
