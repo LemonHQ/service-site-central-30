@@ -898,111 +898,8 @@ export const blogPosts: BlogPost[] = [
     `
   },
   {
-    id: 'the-importance-of-ux-design',
-    title: 'The Importance of UX Design: Creating User-Centered Experiences',
-    excerpt: 'Understand why user experience (UX) design is crucial for creating successful digital products and how it can improve customer satisfaction and business outcomes.',
-    author: {
-      name: 'Sophia Lee',
-      avatar: '/placeholder.svg'
-    },
-    date: '2024-03-10',
-    publishDate: '2024-03-10',
-    category: 'Design',
-    tags: ['UX Design', 'User Experience', 'Usability', 'User Research'],
-    featuredImage: '/placeholder.svg',
-    readTime: 7,
-    content: `
-      <p>In today's digital age, user experience (UX) design has become a critical factor in the success of any digital product. UX design focuses on creating user-centered experiences that are intuitive, efficient, and enjoyable. By understanding user needs and behaviors, UX designers can create products that meet user expectations and achieve business goals.</p>
-
-      <h2>What is UX Design?</h2>
-      <p>UX design is the process of designing digital products that are easy to use, effective, and enjoyable. It involves understanding user needs, conducting user research, creating wireframes and prototypes, and testing designs with users.</p>
-      
-      <p>The goal of UX design is to create products that provide a seamless and satisfying experience for users, leading to increased customer satisfaction and loyalty.</p>
-
-      <h2>Why is UX Design Important?</h2>
-      <p>UX design is important for several reasons:</p>
-      
-      <ul>
-        <li><strong>Improved Customer Satisfaction:</strong> UX design can improve customer satisfaction by creating products that are easy to use and meet user needs.</li>
-        <li><strong>Increased Conversion Rates:</strong> UX design can increase conversion rates by making it easier for users to complete desired actions, such as making a purchase or signing up for a newsletter.</li>
-        <li><strong>Reduced Support Costs:</strong> UX design can reduce support costs by creating products that are intuitive and require less user assistance.</li>
-        <li><strong>Enhanced Brand Reputation:</strong> UX design can enhance brand reputation by creating products that are perceived as user-friendly and trustworthy.</li>
-      </ul>
-
-      <h2>The UX Design Process</h2>
-      <p>The UX design process typically involves the following steps:</p>
-      
-      <ul>
-        <li><strong>User Research:</strong> Understanding user needs, behaviors, and goals through surveys, interviews, and usability testing.</li>
-        <li><strong>Information Architecture:</strong> Organizing and structuring content in a way that is easy for users to navigate.</li>
-        <li><strong>Wireframing:</strong> Creating low-fidelity prototypes to visualize the layout and functionality of a product.</li>
-        <li><strong>Prototyping:</strong> Developing interactive prototypes to test the user experience and gather feedback.</li>
-        <li><strong>Usability Testing:</strong> Testing designs with users to identify usability issues and areas for improvement.</li>
-      </ul>
-
-      <h2>Best Practices for UX Design</h2>
-      <p>Here are some best practices for UX design:</p>
-      
-      <ul>
-        <li><strong>Focus on User Needs:</strong> Always prioritize user needs and goals when designing a product.</li>
-        <li><strong>Keep it Simple:</strong> Avoid unnecessary complexity and strive for simplicity in design.</li>
-        <li><strong>Provide Clear Feedback:</strong> Provide users with clear feedback on their actions and the status of the system.</li>
-        <li><strong>Be Consistent:</strong> Maintain consistency in design elements and interactions throughout the product.</li>
-        <li><strong>Test and Iterate:</strong> Continuously test designs with users and iterate based on feedback.</li>
-      </ul>
-      
-      <p>UX design is essential for creating successful digital products that meet user needs and achieve business goals. By focusing on user experience, businesses can improve customer satisfaction, increase conversion rates, and enhance their brand reputation.</p>
-    `
-  },
-  {
-    id: 'the-future-of-e-commerce',
-    title: 'The Future of E-Commerce: Trends and Innovations to Watch',
-    excerpt: 'Explore the emerging trends and innovations that are shaping the future of e-commerce, from personalized shopping experiences to AI-powered automation.',
-    author: {
-      name: 'David Chen',
-      avatar: '/placeholder.svg'
-    },
-    date: '2024-04-20',
-    publishDate: '2024-04-20',
-    category: 'E-Commerce',
-    tags: ['E-Commerce', 'Online Retail', 'Digital Commerce', 'Innovation'],
-    featuredImage: '/placeholder.svg',
-    readTime: 9,
-    content: `
-      <p>E-commerce is constantly evolving, driven by technological advancements, changing consumer behaviors, and increasing competition. To stay ahead of the curve, businesses need to understand the emerging trends and innovations that are shaping the future of e-commerce.</p>
-
-      <h2>Personalized Shopping Experiences</h2>
-      <p>Personalization is becoming increasingly important in e-commerce. Customers expect personalized shopping experiences that are tailored to their individual needs and preferences. Businesses are using AI and machine learning to analyze customer data and create personalized product recommendations, offers, and content.</p>
-      
-      <p>Personalized shopping experiences can lead to increased customer satisfaction, loyalty, and sales.</p>
-
-      <h2>AI-Powered Automation</h2>
-      <p>AI is also being used to automate many of the tasks involved in e-commerce, such as inventory management, order processing, and customer service. AI-powered automation can improve efficiency, reduce costs, and free up employees to focus on more strategic initiatives.</p>
-      
-      <p>For example, AI-powered chatbots can provide instant customer support, answer questions, and resolve issues, reducing the need for human customer service agents.</p>
-
-      <h2>Mobile Commerce</h2>
-      <p>Mobile commerce continues to grow in importance as more and more consumers use their smartphones and tablets to shop online. Businesses need to optimize their e-commerce websites and apps for mobile devices to provide a seamless shopping experience for mobile users.</p>
-      
-      <p>Mobile-friendly websites and apps should be fast, easy to navigate, and optimized for touchscreens.</p>
-
-      <h2>Social Commerce</h2>
-      <p>Social commerce is the practice of selling products directly through social media platforms. Social commerce is becoming increasingly popular as social media platforms add new features that make it easier for businesses to sell products to their followers.</p>
-      
-      <p>Social commerce can be a great way to reach new customers, increase brand awareness, and drive sales.</p>
-
-      <h2>Voice Commerce</h2>
-      <p>Voice commerce is the practice of selling products through voice assistants, such as Amazon Alexa and Google Assistant. Voice commerce is still in its early stages, but it has the potential to become a major force in e-commerce as voice assistants become more popular.</p>
-      
-      <p>To succeed in voice commerce, businesses need to optimize their product listings for voice search and provide a seamless shopping experience for voice users.</p>
-
-      <h2>The Future of E-Commerce</h2>
-      <p>The future of e-commerce is likely to be characterized by personalized shopping experiences, AI-powered automation, mobile commerce, social commerce, and voice commerce. Businesses that embrace these trends and innovations will be well-positioned to succeed in the ever-evolving world of e-commerce.</p>
-    `
-  },
-  {
-    id: 'ai-digital-ecosystems-segment-of-one',
-    title: 'AI and Digital Ecosystems Converge to Realize the "Segment-of-One" Personalization Vision',
+    id: 'personalization-a-usd-2-trillion-opportunity',
+    title: 'Personalization a $2 trillion opportunity',
     excerpt: 'How artificial intelligence and interconnected digital platforms are finally enabling true individualized experiences at scale.',
     author: {
       name: 'Husain Mohsin',
@@ -1011,8 +908,8 @@ export const blogPosts: BlogPost[] = [
     date: '2025-05-05',
     publishDate: '2025-05-05',
     category: 'Strategy',
-    tags: ['CMS', 'Headless', 'Digital Experience', 'Web Development'],
-    featuredImage: '/assets/imgs/amazon-rufus-in-action.jpg',
+    tags: ['Digital Platforms', 'AI', 'Personalizaion', 'Scale'],
+    featuredImage: '/assets/imgs/joachim-schnurle-GYpv7oh1G_A-unsplash.jpg',
     readTime: 8,
     content: `
     <h2>
