@@ -77,7 +77,8 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-6 font-thin text-slate-50">About LemonHQ</h1>
             <p className="text-xl md:text-2xl mb-8 text-brand-100">
-              We're a team of scaling experts enabling multi-product, multi-market enterprise brands create digital eco-system ready brands, product and customers experiences.
+            We have a global footprint with distributed teams across multiple regions, enabling us to seamlessly collaborate with clients anywhere in the world while providing localized expertise at scale.
+              {/*We're a team of scaling experts enabling multi-product, multi-market enterprise brands create digital eco-system ready brands, product and customers experiences.*/}
             </p>
           </div>
         </div>
