@@ -16,38 +16,29 @@ const About = () => {
 
   // Team members with expanded data
   const teamMembers: TeamMember[] = [{
-    name: 'Sarah Johnson',
-    role: 'CEO & Founder',
-    bio: '15+ years of experience in digital product strategy for Fortune 500 companies.',
-    fullBio: 'Sarah founded ElevateDigital in 2010 after leading digital transformation initiatives at several Fortune 500 companies. With an MBA from Harvard Business School and a background in computer science, she combines business acumen with deep technical knowledge to help enterprises navigate the complex digital landscape. Sarah is a frequent speaker at industry conferences and has been recognized as one of the Top 50 Women in Tech by Forbes.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80',
-    linkedin: 'https://linkedin.com/in/sarahjohnson',
-    email: 'sarah.johnson@elevatedigital.com'
+    name: 'Husain Mohsin',
+    role: 'Enterprise Partner',
+    bio: '20+ years of experience lauching and expanding product portfolios for enterprise brands to new markets.',
+    fullBio: 'With a proven track record in driving brand and product digitalization, Husain works with enterprise brand, product and market leaders to expand their digital presence, optimize their strategies, and scale effectively across diverse markets. His expertise spans across the digital landscape, from leveraging data-driven insights and a comprehensive understanding of global business dynamics, Husain ensures that brands not only grow but thrive in competitive digital ecosystems. His focus on innovation, efficiency and sustainable growth makes him a trusted ally for brands looking to expand their footprint and innovate with new business models. Through customized strategies and scalable solutions, Husain supports enterprises in building lasting relationships with their customers, growing their digital assets, and achieving long-term success across multiple markets.',
+    image: '/assets/imgs/husain-mohsin-profile-pic-old.png',
+    linkedin: 'https://www.linkedin.com/in/husainmohsin/',
+    email: 'h.mohsin@lemonhq.co.uk'
   }, {
-    name: 'Michael Chen',
-    role: 'Chief Technology Officer',
-    bio: 'Former tech lead at major tech companies with expertise in enterprise architecture.',
-    fullBio: 'Michael brings over 20 years of experience in enterprise software development and architecture. Before joining ElevateDigital, he was the VP of Engineering at a leading cloud services provider and previously held senior positions at Google and Microsoft. He specializes in scalable architecture, cloud infrastructure, and helping enterprises modernize their technology stacks. Michael holds a Ph.D. in Computer Science from MIT and has numerous patents in distributed systems.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    linkedin: 'https://linkedin.com/in/michaelchen',
-    email: 'michael.chen@elevatedigital.com'
+    name: 'Abdul Majeed',
+    role: 'Digital Product Expert',
+    bio: 'Former enterprise solutions architect at major tech companies with expertise in enterprise digital portfolios.',
+    fullBio: 'Abdul Majeed is a seasoned Digital Product Expert with extensive experience in accelerating goto market of digital products. His expertise spans across the entire product lifecycle—from ideation and design to development and launch—allowing him to craft digital solutions that are both functional and forward-thinking. Abdul Majeed is known for his strategic approach, always focused on driving growth, enhancing user engagement, and optimizing product performance. With a strong background in data-driven decision-making and agile methodologies, Abdul Majeed brings efficiency and clarity to complex digital product challenges. His ability to navigate the ever-evolving digital landscape makes him a valuable partner for businesses aiming to stay ahead of the curve and deliver exceptional digital products to the market..',
+    image: '/assets/imgs/Abdul-Majeed-Abdul-Hameed.jpeg',
+    linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
+    email: 'a.majeed@lemonhq.co.uk'
   }, {
-    name: 'Alicia Rodriguez',
-    role: 'Head of Design',
+    name: 'Mustafa Turab Ali',
+    role: 'Digital scaling advisor',
     bio: 'Award-winning designer specializing in brand identity and user experience design.',
-    fullBio: "Alicia leads our design practice, bringing a unique blend of creative vision and strategic thinking to client projects. Her work has been recognized with multiple industry awards, including Red Dot and IDEA Design Awards. Before ElevateDigital, she was Design Director at a global branding agency, working with brands like Nike, Apple, and Coca-Cola. Alicia holds a Master's in Design from Rhode Island School of Design and teaches UX design at several leading universities.",
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80',
-    linkedin: 'https://linkedin.com/in/aliciarodriguez',
-    twitter: 'https://twitter.com/aliciarodesign',
-    email: 'alicia.rodriguez@elevatedigital.com'
-  }, {
-    name: 'David Park',
-    role: 'Product Strategy Director',
-    bio: 'Product strategy expert with experience launching over 30 successful enterprise products.',
-    fullBio: "David specializes in product strategy and go-to-market planning for enterprise software and services. In his career spanning 18 years, he has helped launch over 30 successful products across fintech, healthcare, and retail sectors. Prior to ElevateDigital, David was a Senior Product Manager at Salesforce and a consultant with McKinsey's Digital Practice. He holds an MBA from Wharton and is certified in Agile and Design Thinking methodologies.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-    linkedin: 'https://linkedin.com/in/davidpark',
-    email: 'david.park@elevatedigital.com'
+    fullBio: "With a deep understanding of both the technical and operational aspects of scaling digital solutions, Mustafa Ali helps businesses enhance the performance, reliability, and scalability of their software products. He works closely with organizations to ensure that their digital products can seamlessly scale to meet the demands of a growing user base, all while maintaining the highest standards of quality. Whether working on large-scale systems or guiding companies through the challenges of digital transformation, Mustafa Ali ensures that businesses are equipped with the tools and strategies needed to scale effectively while maintaining a seamless user experience. His commitment to excellence and quality makes him a trusted advisor for organizations looking to accelerate their growth in the digital space.",
+    image: '/assets/imgs/Mustafa-turab-ali.jpeg',
+    linkedin: 'https://www.linkedin.com/in/mustafaturabali82/',
+    email: 'm.ali@lemonhq.co.uk'
   }];
 
   // Values
@@ -201,7 +192,7 @@ const About = () => {
       {/* Team Section - Unhide as requested */}
       <section className="section-padding bg-gray-50" id="team">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Our Leadership Team" subtitle="Meet the experienced professionals leading our company" centered />
+          <SectionHeading title="Our Team" subtitle="Meet the scaling experts leading digitalization" centered />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {teamMembers.map((member, index) => (
@@ -235,7 +226,7 @@ const About = () => {
             <div>
               <SectionHeading title="Join Our Team" subtitle="We're always looking for talented individuals to help us create exceptional digital products." />
               <p className="text-gray-600 mb-6">
-                At ElevateDigital, we foster a culture of innovation, collaboration, and continuous learning. Our team members work on challenging projects for leading brands, with opportunities to grow their skills and make a real impact.
+                At LemonHQ, we foster a culture of innovation, collaboration, and continuous learning. Our team members work on challenging projects for leading brands, with opportunities to grow their skills and make a real impact.
               </p>
               <p className="text-gray-600 mb-6">
                 We offer competitive compensation, flexible work arrangements, and a supportive environment where your ideas and contributions are valued.
@@ -295,7 +286,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <CtaSection title="Ready to Work Together?" subtitle="Let's discuss how we can help transform your digital product strategy." buttonText="Get in Touch" buttonLink="/contact" />
+      <CtaSection title="Talk to us today to explore what's possible?" subtitle="Schedule a one to one connect with our scaling expert" buttonText="Get in Touch" buttonLink="/contact" />
 
       {/* Team Member Drawer - Keep this for potential future use */}
       <TeamMemberDrawer member={selectedTeamMember} open={drawerOpen} onClose={() => setDrawerOpen(false)} />
