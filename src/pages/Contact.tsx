@@ -202,10 +202,7 @@ const Contact = () => {
 
       {/* Map Section */}
       <section className="mt-12">
-        <div className="h-96 bg-gray-200">
-          {/* Replace with an actual map integration */}
-          
-        </div>
+        
       </section>
 
       {/* Booking Dialog */}
