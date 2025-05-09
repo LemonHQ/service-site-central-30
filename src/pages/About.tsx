@@ -30,7 +30,7 @@ const About = () => {
     image: '/assets/imgs/Abdul-Majeed-Abdul-Hameed.jpeg',
     linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
     email: 'a.majeed@lemonhq.co.uk'
-  }, {
+  },{/*} {
     name: 'Mustafa Turab Ali',
     role: 'Digital scaling advisor',
     bio: 'Award-winning designer specializing in brand identity and user experience design.',
@@ -38,7 +38,7 @@ const About = () => {
     image: '/assets/imgs/Mustafa-turab-ali.jpeg',
     linkedin: 'https://www.linkedin.com/in/mustafaturabali82/',
     email: 'm.ali@lemonhq.co.uk'
-  }];
+  }*/} ];
 
   // Values
   const values = [{
