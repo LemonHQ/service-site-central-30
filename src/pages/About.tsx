@@ -1,19 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import TeamMemberDrawer from '../components/about/TeamMemberDrawer';
+import TeamMemberDrawer, { TeamMember } from '../components/about/TeamMemberDrawer';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CtaSection from '../components/ui/CtaSection';
 import SectionHeading from '../components/ui/SectionHeading';
-
-// Define the TeamMember type to match what's expected by TeamMemberDrawer
-interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  // Add any other required properties here
-}
 
 const About = () => {
   // Sample team member data
@@ -21,6 +13,16 @@ const About = () => {
     name: "John Doe",
     role: "CEO",
     bio: "John has over 15 years of experience in the industry."
+  };
+
+  // State to control the drawer
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Function to open the drawer with a specific team member
+  const openMemberDrawer = (member: TeamMember) => {
+    setSelectedMember(member);
+    setIsDrawerOpen(true);
   };
 
   return (
@@ -40,10 +42,32 @@ const About = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TeamMemberDrawer teamMember={teamMember} />
+            {/* Team member card that opens the drawer when clicked */}
+            <div 
+              className="cursor-pointer bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              onClick={() => openMemberDrawer(teamMember)}
+            >
+              <div className="mb-4 aspect-square overflow-hidden rounded-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                  alt={teamMember.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-semibold text-xl">{teamMember.name}</h3>
+              <p className="text-brand-500">{teamMember.role}</p>
+              <p className="mt-2 text-gray-600 line-clamp-3">{teamMember.bio}</p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Pass the correct props to TeamMemberDrawer */}
+      <TeamMemberDrawer 
+        member={selectedMember} 
+        open={isDrawerOpen} 
+        onClose={() => setIsDrawerOpen(false)}
+      />
 
       {/* CTA Section */}
       <CtaSection 
