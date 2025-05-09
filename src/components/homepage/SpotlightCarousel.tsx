@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 const SpotlightCarousel: React.FC = () => {
   const content = {
     title: "Expanding and scaling digital portfolios for multi-market enterprise brands",
-    description: "In today's competitive and highly evolving markets, launching and scaling digital portfolios isn't just about speed — it's about precision, compliance, and protecting brand integrity across every region and channel.",
+    description: "In today's competitive and highly evolving markets, launching and scaling digital portfolios uniformly isn't just about speed — it's about precision, compliance, and protecting brand integrity across every region and channel.",
     buttonText: "Explore Our Services",
     buttonLink: "/services",
     secondaryButtonText: "Contact Us",
