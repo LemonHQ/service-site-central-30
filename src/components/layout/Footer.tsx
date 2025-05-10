@@ -8,14 +8,17 @@ import LocationInfo from '../footer/LocationInfo';
 import ContactSection from '../footer/ContactSection';
 import NewsletterSubscribe from '../footer/NewsletterSubscribe';
 import Copyright from '../footer/Copyright';
-import { mainServices } from '@/data/services';
 
 const Footer = () => {
-  // Service links - Updated with actual services from our data structure
-  const serviceLinks = mainServices.map(service => ({
-    name: service.title,
-    path: `/services/${service.slug}`
-  }));
+  // Service links - Updated with direct URLs
+  const serviceLinks = [
+    { name: 'Unify Brand Experiences', path: '/unify-brand-experiences' },
+    { name: 'Digitalize Product Lines', path: '/digitalize-product-lines' },
+    { name: 'Expand Product Offerings', path: '/expand-product-offerings' },
+    { name: 'Scale Digital Experiences', path: '/scale-digital-experiences' },
+    { name: 'Pilot Emerging Tech', path: '/pilot-emerging-tech' },
+    { name: 'Standardize Digital Portfolio', path: '/standardize-digital-portfolio' }
+  ];
 
   // Industry links
   const industryLinks = [

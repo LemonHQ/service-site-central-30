@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,6 +21,14 @@ import LeadQualification from "./pages/LeadQualification";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 
+// Import new service landing pages
+import UnifyBrandPage from "./pages/services/UnifyBrandPage";
+import DigitalizeProductPage from "./pages/services/DigitalizeProductPage";
+import ExpandOfferingsPage from "./pages/services/ExpandOfferingsPage";
+import ScaleExperiencesPage from "./pages/services/ScaleExperiencesPage";
+import PilotTechPage from "./pages/services/PilotTechPage";
+import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -35,7 +42,15 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
           
-          {/* New service structure routes */}
+          {/* Direct routes to service landing pages */}
+          <Route path="/unify-brand-experiences" element={<UnifyBrandPage />} />
+          <Route path="/digitalize-product-lines" element={<DigitalizeProductPage />} />
+          <Route path="/expand-product-offerings" element={<ExpandOfferingsPage />} />
+          <Route path="/scale-digital-experiences" element={<ScaleExperiencesPage />} />
+          <Route path="/pilot-emerging-tech" element={<PilotTechPage />} />
+          <Route path="/standardize-digital-portfolio" element={<StandardizePortfolioPage />} />
+          
+          {/* Keep the service structure routes for backward compatibility */}
           <Route path="/services/:serviceSlug" element={<MainServicePage />} />
           <Route path="/services/:serviceSlug/:subServiceSlug" element={<SubServicePage />} />
           

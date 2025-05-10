@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import ServiceSubNav from '../navigation/ServiceSubNav';
-import { mainServices, subServices } from '@/data/services';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +17,16 @@ const Header = () => {
     { name: 'Insights', path: '/insights' }, // Changed from Resources to Insights
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
+  ];
+
+  // Service items with direct URLs
+  const serviceItems = [
+    { name: "Unify Brand Experiences", path: "/unify-brand-experiences" },
+    { name: "Digitalize Product Lines", path: "/digitalize-product-lines" },
+    { name: "Expand Product Offerings", path: "/expand-product-offerings" },
+    { name: "Scale Digital Experiences", path: "/scale-digital-experiences" },
+    { name: "Pilot Emerging Tech", path: "/pilot-emerging-tech" },
+    { name: "Standardize Digital Portfolio", path: "/standardize-digital-portfolio" }
   ];
 
   const isActive = (path: string) => {
@@ -108,7 +118,12 @@ const Header = () => {
             {/* What We Do - with sub-menu */}
             <div className="flex flex-col">
               <button 
-                className={`flex items-center justify-between text-lg py-2 ${location.pathname.startsWith('/services') ? 'text-brand-600 font-medium' : ''}`}
+                className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/unify-brand-experiences') || 
+                  location.pathname.includes('/digitalize-product-lines') || 
+                  location.pathname.includes('/expand-product-offerings') || 
+                  location.pathname.includes('/scale-digital-experiences') || 
+                  location.pathname.includes('/pilot-emerging-tech') || 
+                  location.pathname.includes('/standardize-digital-portfolio') ? 'text-brand-600 font-medium' : ''}`}
                 onClick={() => toggleMobileService('services')}
               >
                 <span>What We Do</span>
@@ -117,15 +132,15 @@ const Header = () => {
               
               {mobileExpandedService === 'services' && (
                 <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
-                  {mainServices.map((service) => (
-                    <div key={service.id}>
+                  {serviceItems.map((service) => (
+                    <div key={service.name}>
                       <Link
-                        to={`/services/${service.slug}`}
+                        to={service.path}
                         className="flex items-center py-2 text-gray-700 hover:text-brand-500"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <ChevronRight className="h-3 w-3 mr-2" />
-                        <span>{service.title}</span>
+                        <span>{service.name}</span>
                       </Link>
                     </div>
                   ))}

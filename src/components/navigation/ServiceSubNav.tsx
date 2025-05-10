@@ -9,7 +9,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { mainServices } from '@/data/services';
 import { ChevronRight } from 'lucide-react';
 
 // Navigation menu item component for consistent styling
@@ -75,6 +74,40 @@ const RouterListItem = ({ title, to, className, icon: Icon, description }: {
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
 
+  // Updated service items with direct URLs
+  const serviceItems = [
+    {
+      title: "Unify Brand Experiences",
+      url: "/unify-brand-experiences",
+      description: "Create consistent, compliant brand and product experiences across all touchpoints, regions, and business units."
+    },
+    {
+      title: "Digitalize Product Lines",
+      url: "/digitalize-product-lines",
+      description: "Transform legacy offerings into modern, scalable digital products built for today's markets and tomorrow's expectations."
+    },
+    {
+      title: "Expand Product Offerings",
+      url: "/expand-product-offerings",
+      description: "Identify, validate, and launch new services, bundles, and adjacent solutions that deepen customer value and drive growth."
+    },
+    {
+      title: "Scale Digital Experiences",
+      url: "/scale-digital-experiences",
+      description: "Build the systems, standards, and operating models that power sustainable, enterprise-grade digital expansion."
+    },
+    {
+      title: "Pilot Emerging Tech",
+      url: "/pilot-emerging-tech",
+      description: "Rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation."
+    },
+    {
+      title: "Standardize Digital Portfolio",
+      url: "/standardize-digital-portfolio",
+      description: "Establish consistent patterns and templates across your digital product catalog to improve efficiency and user experience."
+    }
+  ];
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -96,13 +129,12 @@ const ServiceSubNav = () => {
               
               <div className="overflow-y-auto max-h-[500px]">
                 <div className="space-y-1">
-                  {mainServices.map((service) => (
-                    <div key={service.id} className="mb-3">
+                  {serviceItems.map((service) => (
+                    <div key={service.title} className="mb-3">
                       <RouterListItem
                         title={service.title}
-                        to={`/services/${service.slug}`}
-                        icon={service.icon}
-                        description={service.shortDescription}
+                        to={service.url}
+                        description={service.description}
                         className="font-semibold pb-1"
                       />
                     </div>
