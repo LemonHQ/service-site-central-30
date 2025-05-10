@@ -1,5 +1,4 @@
 
-// Updated InsurancePage.tsx without the processes prop
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Shield, FileCheck, ClipboardList, LineChart, Users } from 'lucide-react';
@@ -41,28 +40,6 @@ const InsurancePage = () => {
           title: "Customer Engagement Tools",
           description: "Build stronger relationships with policyholders through personalized digital experiences.",
           icon: Users
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Discovery",
-          description: "Deep analysis of your current systems, customer needs, and market opportunities."
-        },
-        {
-          number: 2,
-          title: "Solution Design",
-          description: "Creation of secure, compliant digital insurance solutions aligned with your business strategy."
-        },
-        {
-          number: 3,
-          title: "Development",
-          description: "Agile implementation with continuous testing for security, compliance, and user experience."
-        },
-        {
-          number: 4,
-          title: "Deployment & Support",
-          description: "Carefully managed rollout and ongoing optimization of your digital insurance solutions."
         }
       ]}
       benefits={[
