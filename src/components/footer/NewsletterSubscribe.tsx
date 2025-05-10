@@ -20,6 +20,7 @@ const formSchema = z.object({
 
 const NewsletterSubscribe: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -34,7 +35,10 @@ const NewsletterSubscribe: React.FC = () => {
       const success = await subscribeToNewsletter(values.email);
       
       if (success) {
+        setIsSuccess(true);
         form.reset();
+        // Reset success message after 5 seconds
+        setTimeout(() => setIsSuccess(false), 5000);
       }
     } finally {
       setIsSubmitting(false);
@@ -70,13 +74,19 @@ const NewsletterSubscribe: React.FC = () => {
           
           <Button 
             type="submit" 
-            className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors"
+            className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors whitespace-nowrap"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
       </Form>
+      
+      {isSuccess && (
+        <div className="mt-2 text-sm text-green-600">
+          Thank you for subscribing to our newsletter!
+        </div>
+      )}
       
       <div className="mt-6">
         <img 

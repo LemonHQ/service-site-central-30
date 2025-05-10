@@ -1,84 +1,31 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import ServiceCard from '../components/ui/ServiceCard';
 import CtaSection from '../components/ui/CtaSection';
-import { 
-  Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users 
-} from 'lucide-react';
+import { servicesData } from '@/data/servicesData';
 
 const Services = () => {
   console.log("Rendering Services component");
-  // All services data
-  const allServices = [
-    {
-      title: 'Validating Product Ideas',
-      description: 'Transform innovative concepts into validated opportunities with market research, user testing, prototyping, and data analytics.',
-      link: '/services/validating-product-ideas',
-      icon: Lightbulb
-    },
-    {
-      title: 'Ideating Product Concepts',
-      description: 'Generate breakthrough product concepts through collaborative workshops, design thinking, and strategic innovation frameworks.',
-      link: '/services/ideating-product-concepts',
-      icon: PenTool
-    },
-    {
-      title: 'Designing Brand & Customer Experiences',
-      description: 'Create cohesive, engaging brand and customer experiences that build emotional connections and drive loyalty.',
-      link: '/services/designing-experiences',
-      icon: Palette
-    },
-    {
-      title: 'Launching New Brands & Products',
-      description: 'Accelerate time-to-market and maximize impact with expert launch strategies, go-to-market planning, and execution.',
-      link: '/services/launching-products',
-      icon: Rocket
-    },
-    {
-      title: 'Scaling Products',
-      description: 'Maximize growth potential with scalable architectures, optimization frameworks, and performance tuning.',
-      link: '/services/scaling-products',
-      icon: TrendingUp
-    },
-    {
-      title: 'Expand Product Offerings',
-      description: 'Diversify and grow your product portfolio through strategic planning, market analysis, and opportunity mapping.',
-      link: '/services/expand-product-offerings',
-      icon: LayersIcon
-    },
-    {
-      title: 'Standardize Technology',
-      description: 'Create efficiency and consistency across your organization with technology standardization and integration services.',
-      link: '/services/standardize-technology',
-      icon: Settings
-    },
-    {
-      title: 'Pilot Emerging Tech',
-      description: 'Evaluate and integrate emerging technologies with low-risk pilot programs and proofs of concept.',
-      link: '/services/pilot-emerging-tech',
-      icon: Cpu
-    },
-    {
-      title: 'Connect to Digital Ecosystems',
-      description: 'Integrate your products and services into broader digital ecosystems to increase reach and add customer value.',
-      link: '/services/connect-ecosystems',
-      icon: Network
-    },
-    {
-      title: 'Optimize Digital Portfolios',
-      description: 'Harmonize your digital assets into coherent, high-performing portfolios that maximize business value.',
-      link: '/services/optimize-portfolios',
-      icon: BarChart2
-    },
-    {
-      title: 'Unify Brand Experiences',
-      description: 'Create consistent, compelling brand experiences across all customer touchpoints and platforms.',
-      link: '/services/unify-brand-experiences',
-      icon: Users
-    },
+  
+  // Group services into main and secondary categories
+  const mainServices = [
+    'unify-brand-experiences',
+    'digitalize-product-lines',
+    'expand-product-offerings',
+    'scale-digital-experiences',
+    'pilot-emerging-tech',
+    'standardize-digital-portfolio',
+  ];
+
+  const secondaryServices = [
+    'validating-product-ideas',
+    'ideating-product-concepts',
+    'designing-experiences',
+    'launching-products',
+    'scaling-products',
   ];
 
   return (
@@ -87,7 +34,7 @@ const Services = () => {
       <section className="bg-brand-100 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 text-brand-700">What We Do</h1>
+            <h1 className="mb-6 text-4xl md:text-5xl font-bold text-brand-700">What We Do</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-700">
               Comprehensive digital product services for enterprise brands seeking to innovate and transform.
             </p>
@@ -95,31 +42,60 @@ const Services = () => {
         </div>
       </section>
 
-      {/* All Services Section */}
-      <section className="section-padding">
+      {/* Main Services Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading 
-            title="Full Service Offerings" 
-            subtitle="From validating initial concepts to scaling mature products, our comprehensive services support the entire product lifecycle."
+            title="Core Service Areas" 
+            subtitle="Strategic services designed to help enterprises navigate their digital transformation journey."
             centered
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                link={service.link}
-                icon={service.icon}
-              />
-            ))}
+            {mainServices.map((serviceId) => {
+              const service = servicesData[serviceId];
+              return (
+                <ServiceCard
+                  key={serviceId}
+                  title={service.title}
+                  description={service.description}
+                  link={`/services/${serviceId}`}
+                  icon={service.icon}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading 
+            title="Additional Services" 
+            subtitle="Specialized services that complement our core offerings and provide targeted solutions for specific needs."
+            centered
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {secondaryServices.map((serviceId) => {
+              const service = servicesData[serviceId];
+              return (
+                <ServiceCard
+                  key={serviceId}
+                  title={service.title}
+                  description={service.description}
+                  link={`/services/${serviceId}`}
+                  icon={service.icon}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Methodology Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -175,8 +151,11 @@ const Services = () => {
             
             <div className="relative">
               <div className="aspect-w-3 aspect-h-2 bg-gray-200 rounded-lg">
-                {/* Replace with actual image */}
-                <div className="w-full h-full bg-gray-300 rounded-lg"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" 
+                  alt="Team collaboration" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
               <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-brand-200 rounded-lg -z-10"></div>
               <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-brand-300 rounded-lg -z-10"></div>

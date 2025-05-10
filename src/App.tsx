@@ -19,6 +19,12 @@ import CaseStudyDetail from "./pages/CaseStudyDetail";
 import LeadQualification from "./pages/LeadQualification";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
+import UnifyBrandExperiences from "./pages/services/UnifyBrandExperiences";
+import DigitalizeProductLines from "./pages/services/DigitalizeProductLines";
+import ExpandProductOfferings from "./pages/services/ExpandProductOfferings";
+import ScaleDigitalExperiences from "./pages/services/ScaleDigitalExperiences";
+import PilotEmergingTech from "./pages/services/PilotEmergingTech";
+import StandardizeDigitalPortfolio from "./pages/services/StandardizeDigitalPortfolio";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +49,15 @@ const App = () => (
           <Route path="/lead-qualification" element={<LeadQualification />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/cv-submission" element={<CvSubmission />} />
+          
+          {/* New service pages */}
+          <Route path="/services/unify-brand-experiences" element={<UnifyBrandExperiences />} />
+          <Route path="/services/digitalize-product-lines" element={<DigitalizeProductLines />} />
+          <Route path="/services/expand-product-offerings" element={<ExpandProductOfferings />} />
+          <Route path="/services/scale-digital-experiences" element={<ScaleDigitalExperiences />} />
+          <Route path="/services/pilot-emerging-tech" element={<PilotEmergingTech />} />
+          <Route path="/services/standardize-digital-portfolio" element={<StandardizeDigitalPortfolio />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
