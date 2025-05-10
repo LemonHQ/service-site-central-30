@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Library, FileText, Grid, Layers, Sparkles } from 'lucide-react';
@@ -14,6 +15,8 @@ const StandardizePortfolioPage = () => {
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       quotePanel={serviceQuotes['standardize-digital-portfolio']}
+      featuredCaseStudy="healthcare-patient-portal"
+      showConsultingPanel={true}
       features={[
         {
           title: "Digital Product Taxonomy",
