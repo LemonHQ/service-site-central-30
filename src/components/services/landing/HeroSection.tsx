@@ -57,7 +57,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <img
               src={heroImage}
               alt={`${title} - Hero Image`}
-              className={`rounded-xl shadow-lg max-h-[500px] object-cover ${isAiHeroImage ? 'border-2 border-brand-300' : ''}`}
+              className={`rounded-xl shadow-lg w-full h-[400px] object-cover object-center ${isAiHeroImage ? 'border-2 border-brand-300' : ''}`}
             />
             {isAiHeroImage && (
               <div className="absolute bottom-2 right-2 bg-brand-100 text-brand-600 text-xs px-2 py-1 rounded-md opacity-80">
