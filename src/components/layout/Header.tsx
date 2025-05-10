@@ -8,7 +8,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -99,97 +98,99 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`${isActive('/')} font-medium`}
-            >
-              Home
-            </Link>
-            
-            {/* Service SubNav - what we do */}
-            <div className="relative flex items-center">
-              <ServiceSubNav />
-            </div>
-
-            {/* Our Approach dropdown - added new */}
-            <div className="relative">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}>
-                      Our Approach
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
-                        {approachItems.map((item) => (
-                          <Link 
-                            to={item.path} 
-                            key={item.name}
-                            className="flex flex-col group rounded-md p-3 hover:bg-accent"
-                          >
-                            <div className="overflow-hidden rounded-md mb-2">
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                className="h-32 w-full object-cover transition-transform group-hover:scale-105"
-                              />
-                            </div>
-                            <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
-                            <p className="text-xs text-muted-foreground">{item.description}</p>
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-
-            {/* Industries dropdown */}
-            <div className="relative">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}>
-                      Industries
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
-                        {industryItems.map((industry) => (
-                          <Link 
-                            to={industry.path} 
-                            key={industry.name}
-                            className="flex flex-col group rounded-md p-3 hover:bg-accent"
-                          >
-                            <div className="overflow-hidden rounded-md mb-2">
-                              <img 
-                                src={industry.image} 
-                                alt={industry.name} 
-                                className="h-32 w-full object-cover transition-transform group-hover:scale-105"
-                              />
-                            </div>
-                            <h3 className="text-sm font-medium group-hover:text-brand-600">{industry.name}</h3>
-                            <p className="text-xs text-muted-foreground">{industry.description}</p>
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-            
-            {navLinks.slice(1).map((link) => (
+          {/* Desktop Navigation - Updated with equal spacing */}
+          <nav className="hidden md:flex items-center">
+            <div className="flex items-center space-x-6 xl:space-x-8">
               <Link 
-                key={link.name} 
-                to={link.path} 
-                className={`${isActive(link.path)} font-medium`}
+                to="/" 
+                className={`${isActive('/')} font-medium px-1`}
               >
-                {link.name}
+                Home
               </Link>
-            ))}
+              
+              {/* Service SubNav - what we do */}
+              <div className="relative flex items-center px-1">
+                <ServiceSubNav />
+              </div>
+
+              {/* Our Approach dropdown */}
+              <div className="px-1">
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}>
+                        Our Approach
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
+                          {approachItems.map((item) => (
+                            <Link 
+                              to={item.path} 
+                              key={item.name}
+                              className="flex flex-col group rounded-md p-3 hover:bg-accent"
+                            >
+                              <div className="overflow-hidden rounded-md mb-2">
+                                <img 
+                                  src={item.image} 
+                                  alt={item.name} 
+                                  className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                                />
+                              </div>
+                              <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
+                              <p className="text-xs text-muted-foreground">{item.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
+
+              {/* Industries dropdown */}
+              <div className="px-1">
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}>
+                        Industries
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
+                          {industryItems.map((industry) => (
+                            <Link 
+                              to={industry.path} 
+                              key={industry.name}
+                              className="flex flex-col group rounded-md p-3 hover:bg-accent"
+                            >
+                              <div className="overflow-hidden rounded-md mb-2">
+                                <img 
+                                  src={industry.image} 
+                                  alt={industry.name} 
+                                  className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                                />
+                              </div>
+                              <h3 className="text-sm font-medium group-hover:text-brand-600">{industry.name}</h3>
+                              <p className="text-xs text-muted-foreground">{industry.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
+              
+              {navLinks.slice(1).map((link) => (
+                <Link 
+                  key={link.name} 
+                  to={link.path} 
+                  className={`${isActive(link.path)} font-medium px-1`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </nav>
 
           {/* CTA Button - Now links to lead qualification journey */}
