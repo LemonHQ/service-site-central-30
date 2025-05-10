@@ -24,7 +24,6 @@ export interface ServiceLandingProps {
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   features: ServiceFeature[];
-  processes?: ServiceProcess[];
   benefits: string[];
   heroImage: string;
   isAiHeroImage?: boolean;

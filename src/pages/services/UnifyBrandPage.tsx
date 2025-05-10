@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { BadgeCheck, Library, Globe, BarChart2, Network, Layers, Shield, Settings, Database } from 'lucide-react';
+import { BadgeCheck, Library, Globe, BarChart2, Network, Layers, Shield, Settings, Database, Upload, FileCheck } from 'lucide-react';
 
 const UnifyBrandPage = () => {
   return (
@@ -39,6 +39,16 @@ const UnifyBrandPage = () => {
           icon: Database
         },
         {
+          title: "Build once, deploy globally",
+          description: "Create assets once and reuse them across markets to save time and cost.",
+          icon: Upload
+        },
+        {
+          title: "Protect brand integrity",
+          description: "Control brand usage across teams and regions to ensure quality and compliance.",
+          icon: Shield
+        },
+        {
           title: "Consistent Brand Experiences",
           description: "Align every touchpoint to reinforce your brand across platforms.",
           icon: BadgeCheck
@@ -51,7 +61,7 @@ const UnifyBrandPage = () => {
         {
           title: "IP Protection and Control",
           description: "Protect brand identity and assets through controlled access and usage.",
-          icon: Shield
+          icon: FileCheck
         },
         {
           title: "Integrated Brand Governance",
