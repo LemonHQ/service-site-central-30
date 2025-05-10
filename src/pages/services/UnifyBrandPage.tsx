@@ -12,6 +12,14 @@ const UnifyBrandPage = () => {
       ctaText="Start Your Brand Transformation"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+      quotePanel={{
+        quote: "Brands that deliver consistent experiences across all touchpoints see 33% higher customer loyalty and 23% more revenue growth than those who don't.",
+        author: "Blake Morgan",
+        authorTitle: "Customer Experience Futurist",
+        imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+        sourceText: "Forbes: 100 Of The Most Customer-Centric Companies",
+        sourceUrl: "https://www.forbes.com/sites/blakemorgan/2019/06/30/100-of-the-most-customer-centric-companies/?sh=2b97596663c3"
+      }}
       features={[
         {
           title: "Strategic Brand Expansion",

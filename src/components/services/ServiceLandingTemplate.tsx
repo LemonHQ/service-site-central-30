@@ -7,6 +7,7 @@ import BenefitsSection from './landing/BenefitsSection';
 import RelatedServicesSection from './landing/RelatedServicesSection';
 import FaqSection from './landing/FaqSection';
 import CtaSection from './landing/CtaSection';
+import QuotePanel from './landing/QuotePanel';
 import { LucideIcon } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import BlogCard from '@/components/blog/BlogCard';
@@ -32,6 +33,14 @@ export interface ServiceLandingProps {
     description: string;
     link: string;
   }>;
+  quotePanel?: {
+    quote: string;
+    author?: string;
+    authorTitle?: string;
+    imageUrl?: string;
+    sourceText?: string;
+    sourceUrl?: string;
+  };
   faqs?: Array<{
     question: string;
     answer: string;
@@ -51,6 +60,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   heroImage,
   isAiHeroImage = false,
   relatedServices,
+  quotePanel,
   faqs = []
 }) => {
   // Get a selection of case studies and blog posts
@@ -72,6 +82,17 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       />
       
       <FeaturesSection features={features} />
+      
+      {quotePanel && (
+        <QuotePanel
+          quote={quotePanel.quote}
+          author={quotePanel.author}
+          authorTitle={quotePanel.authorTitle}
+          imageUrl={quotePanel.imageUrl}
+          sourceText={quotePanel.sourceText}
+          sourceUrl={quotePanel.sourceUrl}
+        />
+      )}
       
       <BenefitsSection benefits={benefits} />
       
