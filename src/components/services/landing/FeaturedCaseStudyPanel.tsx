@@ -15,10 +15,10 @@ const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
   label = "FEATURED CASE STUDY"
 }) => {
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-brand-600 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="flex justify-center md:justify-start mb-2">
-          <div className="text-xs tracking-wider font-medium text-gray-400">
+          <div className="text-xs tracking-wider font-medium text-gray-300">
             [ {label} ]
           </div>
         </div>
@@ -54,14 +54,14 @@ const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
             <Link to={`/case-studies/${caseStudy.id}`}>
               <Button 
                 variant="outline"
-                className="bg-transparent hover:bg-white hover:text-black text-white border border-white"
+                className="bg-transparent hover:bg-white hover:text-brand-600 text-white border border-white"
               >
                 See Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             
             {caseStudy.testimonial && (
-              <div className="mt-12 border-t border-gray-800 pt-8">
+              <div className="mt-12 border-t border-gray-100/20 pt-8">
                 <blockquote className="text-lg font-light italic mb-4">
                   "{caseStudy.testimonial.quote}"
                 </blockquote>
@@ -69,7 +69,7 @@ const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
                 <div className="flex items-center">
                   <div>
                     <p className="font-medium">{caseStudy.testimonial.author}</p>
-                    <p className="text-sm text-gray-400">{caseStudy.testimonial.position}</p>
+                    <p className="text-sm text-gray-300">{caseStudy.testimonial.position}</p>
                   </div>
                 </div>
               </div>

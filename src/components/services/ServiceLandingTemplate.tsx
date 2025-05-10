@@ -117,10 +117,6 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
         <FeaturedCaseStudyPanel caseStudy={selectedCaseStudy} />
       )}
       
-      {showConsultingPanel && (
-        <ConsultingPanel />
-      )}
-      
       <RelatedServicesSection relatedServices={relatedServices} />
 
       {/* Case Studies Carousel Section */}
@@ -192,6 +188,11 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
           </div>
         </div>
       </section>
+      
+      {/* Show consulting panel above FAQs */}
+      {showConsultingPanel && (
+        <ConsultingPanel />
+      )}
       
       {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
       
