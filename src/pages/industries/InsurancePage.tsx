@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Shield, FileCheck, ClipboardList, LineChart, Users } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const InsurancePage = () => {
   return (
@@ -15,6 +16,14 @@ const InsurancePage = () => {
       secondaryCtaLink="/case-studies"
       heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
+      quotePanel={{
+        quote: "Insurance companies that implement digital-first customer experiences reduce policy acquisition costs by 43% and increase retention rates by 29% compared to industry averages.",
+        author: "Accenture Insurance",
+        authorTitle: "Financial Services Technology Research",
+        imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "The Future of Insurance: Personalized, Digital, and Connected",
+        sourceUrl: "https://www.accenture.com/us-en/industries/insurance-index"
+      }}
       features={[
         {
           title: "Digital Policy Management",
@@ -42,6 +51,8 @@ const InsurancePage = () => {
           icon: Users
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions tailored for modern insurance companies and their unique challenges"
       benefits={[
         "Reduced operational costs through automation",
         "Improved customer acquisition and retention",
@@ -82,7 +93,9 @@ const InsurancePage = () => {
           answer: "Implementation timelines vary based on complexity, but our approach emphasizes quick wins through phased delivery. Basic digital experiences can often be launched within 3-6 months, with more complex enterprise solutions taking 6-12 months for full implementation."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

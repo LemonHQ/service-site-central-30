@@ -1,6 +1,8 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const ExpandOfferingsPage = () => {
   return (
@@ -11,6 +13,14 @@ const ExpandOfferingsPage = () => {
       ctaText="Expand Your Digital Portfolio"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+      quotePanel={{
+        quote: "Leaders in digital product innovation achieve 2.7x higher revenue growth compared to their industry peers through systematic expansion of their digital offerings.",
+        author: "BCG Digital Ventures",
+        authorTitle: "Corporate Innovation and Digital Product Development",
+        imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Digital Product Innovation: The New Growth Engine",
+        sourceUrl: "https://www.bcg.com/digital-bcg/digital-ventures"
+      }}
       features={[
         {
           title: "Market Opportunity Analysis",
@@ -38,6 +48,8 @@ const ExpandOfferingsPage = () => {
           icon: LineChart
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions to help you identify and develop new revenue streams"
       benefits={[
         "Diversified revenue streams to drive growth",
         "Deeper customer relationships through expanded value",
@@ -78,7 +90,9 @@ const ExpandOfferingsPage = () => {
           answer: "Timelines vary based on complexity, but our approach typically enables initial market testing within 4-8 weeks and full-scale launches within 3-6 months, significantly faster than traditional product development cycles."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

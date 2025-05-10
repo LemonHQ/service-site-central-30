@@ -1,6 +1,8 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Heart, FileChartColumn, Users, Shield, Network } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const HealthcarePage = () => {
   return (
@@ -14,6 +16,14 @@ const HealthcarePage = () => {
       secondaryCtaLink="/contact"
       heroImage="https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
       isAiHeroImage={false}
+      quotePanel={{
+        quote: "Healthcare organizations that implement digital-first patient experiences see 62% higher patient satisfaction scores and 28% improvement in clinical outcomes.",
+        author: "NEJM Catalyst",
+        authorTitle: "Innovations in Care Delivery",
+        imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Digital Health and the Future of Healthcare Delivery",
+        sourceUrl: "https://catalyst.nejm.org/topics/digital-health"
+      }}
       features={[
         {
           title: "Patient Experience Platforms",
@@ -41,6 +51,8 @@ const HealthcarePage = () => {
           icon: Users
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions designed for healthcare's unique challenges and compliance requirements"
       benefits={[
         "Enhanced patient engagement and satisfaction",
         "Reduced administrative burden for clinical staff",
@@ -81,7 +93,9 @@ const HealthcarePage = () => {
           answer: "Our healthcare applications implement multiple security layers including end-to-end encryption, role-based access controls, multi-factor authentication, comprehensive audit logging, secure API architecture, regular vulnerability assessments, and continuous security monitoring to protect sensitive patient data."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

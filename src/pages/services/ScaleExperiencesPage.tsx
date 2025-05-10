@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Database, Globe, Shield, BarChart2, Settings } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const ScaleExperiencesPage = () => {
   return (
@@ -12,6 +13,14 @@ const ScaleExperiencesPage = () => {
       ctaText="Scale Your Digital Presence"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      quotePanel={{
+        quote: "Organizations with scalable digital platforms achieve 3x faster time-to-market and 60% lower technology costs compared to those with rigid legacy systems.",
+        author: "Gartner Research",
+        authorTitle: "Technology Research and Advisory",
+        imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Future of Applications: Delivering the Composable Enterprise",
+        sourceUrl: "https://www.gartner.com/en/information-technology/insights/applications-strategy"
+      }}
       features={[
         {
           title: "Scalable Architecture Design",
@@ -39,6 +48,8 @@ const ScaleExperiencesPage = () => {
           icon: Shield
         },
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions to help your digital platforms grow efficiently and reliably"
       benefits={[
         "Improved performance and reliability",
         "Reduced downtime and data loss",
@@ -80,7 +91,9 @@ const ScaleExperiencesPage = () => {
             "We use a variety of monitoring tools to track performance metrics such as CPU usage, memory usage, and network traffic.",
         },
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

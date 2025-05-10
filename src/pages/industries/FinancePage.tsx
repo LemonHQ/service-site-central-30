@@ -1,6 +1,8 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Banknote, CreditCard, TrendingUp, Shield, Network } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const FinancePage = () => {
   return (
@@ -14,6 +16,14 @@ const FinancePage = () => {
       secondaryCtaLink="/case-studies"
       heroImage="https://images.unsplash.com/photo-1551038247-3d9af20df552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
+      quotePanel={{
+        quote: "Financial institutions that successfully execute digital transformation strategies increase customer acquisition by up to 25% while reducing operational costs by up to 35%.",
+        author: "Boston Consulting Group",
+        authorTitle: "Financial Services Practice",
+        imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Digital Strategy in Banking",
+        sourceUrl: "https://www.bcg.com/industries/financial-institutions/banking"
+      }}
       features={[
         {
           title: "Digital Banking Transformation",
@@ -41,6 +51,8 @@ const FinancePage = () => {
           icon: Network
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions tailored for the unique challenges of financial services"
       benefits={[
         "Enhanced customer acquisition and retention",
         "Reduced operational costs through automation",
@@ -81,7 +93,9 @@ const FinancePage = () => {
           answer: "Compliance is integrated throughout our development process with regulatory requirements documented at the outset, regular reviews with compliance stakeholders, built-in audit trails, and documentation aligned with regulatory frameworks specific to your markets."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

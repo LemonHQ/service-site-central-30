@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const DigitalizeProductPage = () => {
   return (
@@ -12,6 +13,14 @@ const DigitalizeProductPage = () => {
       ctaText="Digitalize Your Products"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      quotePanel={{
+        quote: "Companies that effectively digitalize their product lines see up to 36% higher revenue growth compared to industry averages.",
+        author: "McKinsey Digital",
+        authorTitle: "Global Business Consultancy",
+        imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Digital Strategy in a Time of Crisis",
+        sourceUrl: "https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/digital-strategy-in-a-time-of-crisis"
+      }}
       features={[
         {
           title: "Cloud-Native Development",
@@ -44,6 +53,8 @@ const DigitalizeProductPage = () => {
           icon: Users
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Comprehensive solutions for transforming traditional products into digital experiences"
       benefits={[
         "New revenue streams from digital products",
         "Improved customer engagement and loyalty",
@@ -83,7 +94,9 @@ const DigitalizeProductPage = () => {
           answer: "We follow industry best practices for security and compliance, including secure coding, penetration testing, and data encryption. We also work with our clients to develop security policies and procedures."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

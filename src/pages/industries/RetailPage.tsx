@@ -1,6 +1,8 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { ShoppingBag, Store, Users, TrendingUp, BarChart } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const RetailPage = () => {
   return (
@@ -14,6 +16,14 @@ const RetailPage = () => {
       secondaryCtaLink="/case-studies"
       heroImage="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
+      quotePanel={{
+        quote: "Retailers who effectively combine digital and physical channels see 40% higher conversion rates and 30% higher customer lifetime value.",
+        author: "Harvard Business Review",
+        authorTitle: "Retail Innovation Analysis",
+        imageUrl: "https://images.unsplash.com/photo-1573612664822-d7d347da7b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        sourceText: "Reinventing the Customer Experience in Retail",
+        sourceUrl: "https://hbr.org/topic/customer-experience"
+      }}
       features={[
         {
           title: "Omnichannel Experience Design",
@@ -41,6 +51,8 @@ const RetailPage = () => {
           icon: TrendingUp
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Solutions designed specifically for modern retail challenges"
       benefits={[
         "Increased online and in-store conversion rates",
         "Enhanced customer loyalty and repeat purchases",
@@ -81,7 +93,9 @@ const RetailPage = () => {
           answer: "Our approach combines customer data platforms, machine learning algorithms, and content management systems to deliver personalized product recommendations, targeted promotions, custom content, and tailored shopping journeys based on customer preferences, purchase history, and browsing behavior."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 
