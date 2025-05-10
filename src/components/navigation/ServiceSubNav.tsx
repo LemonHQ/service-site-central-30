@@ -9,7 +9,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { ChevronRight } from 'lucide-react';
 
 // Navigation menu item component for consistent styling
 const ListItem = React.forwardRef<
@@ -139,15 +138,6 @@ const ServiceSubNav = () => {
                       />
                     </div>
                   ))}
-                  
-                  <div className="pt-2 mt-2 border-t">
-                    <Link 
-                      to="/services"
-                      className="block w-full text-center py-2 bg-brand-100 hover:bg-brand-200 text-brand-700 rounded transition-colors"
-                    >
-                      View All Services
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>

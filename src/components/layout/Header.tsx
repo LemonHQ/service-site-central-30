@@ -17,6 +17,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mobileExpandedService, setMobileExpandedService] = useState<string | null>(null);
   const [mobileExpandedIndustry, setMobileExpandedIndustry] = useState<string | null>(null);
+  const [mobileExpandedApproach, setMobileExpandedApproach] = useState<string | null>(null);
   const location = useLocation();
 
   // Navigation links - Updated order with Industries before Contact
@@ -45,6 +46,12 @@ const Header = () => {
     { name: "Healthcare", path: "/industries/healthcare", image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80", description: "Patient-centered digital solutions" },
     { name: "Retail", path: "/industries/retail", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Omnichannel retail experiences" }
   ];
+  
+  // Our Approach items
+  const approachItems = [
+    { name: "Co-Create", path: "/approach/co-create", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Collaborative innovation approach" },
+    { name: "Extend", path: "/approach/extend", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Expert-as-a-service delivery model" }
+  ];
 
   const isActive = (path: string) => {
     if (path === '/') {
@@ -68,6 +75,14 @@ const Header = () => {
       setMobileExpandedIndustry(null);
     } else {
       setMobileExpandedIndustry(industryId);
+    }
+  };
+  
+  const toggleMobileApproach = (approachId: string) => {
+    if (mobileExpandedApproach === approachId) {
+      setMobileExpandedApproach(null);
+    } else {
+      setMobileExpandedApproach(approachId);
     }
   };
 
@@ -98,7 +113,41 @@ const Header = () => {
               <ServiceSubNav />
             </div>
 
-            {/* Industries dropdown - moved before About and Contact */}
+            {/* Our Approach dropdown - added new */}
+            <div className="relative">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}>
+                      Our Approach
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
+                        {approachItems.map((item) => (
+                          <Link 
+                            to={item.path} 
+                            key={item.name}
+                            className="flex flex-col group rounded-md p-3 hover:bg-accent"
+                          >
+                            <div className="overflow-hidden rounded-md mb-2">
+                              <img 
+                                src={item.image} 
+                                alt={item.name} 
+                                className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                              />
+                            </div>
+                            <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
+                            <p className="text-xs text-muted-foreground">{item.description}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            {/* Industries dropdown */}
             <div className="relative">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -203,18 +252,39 @@ const Header = () => {
                       </Link>
                     </div>
                   ))}
-                  <Link
-                    to="/services"
-                    className="flex items-center py-2 text-brand-600 font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    View All Services
-                  </Link>
                 </div>
               )}
             </div>
             
-            {/* Industries - with sub-menu - moved up before About and Contact */}
+            {/* Our Approach - with sub-menu - added new */}
+            <div className="flex flex-col">
+              <button 
+                className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}
+                onClick={() => toggleMobileApproach('approach')}
+              >
+                <span>Our Approach</span>
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileExpandedApproach === 'approach' ? 'transform rotate-180' : ''}`} />
+              </button>
+              
+              {mobileExpandedApproach === 'approach' && (
+                <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
+                  {approachItems.map((item) => (
+                    <div key={item.name}>
+                      <Link
+                        to={item.path}
+                        className="flex items-center py-2 text-gray-700 hover:text-brand-500"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <ChevronRight className="h-3 w-3 mr-2" />
+                        <span>{item.name}</span>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* Industries - with sub-menu */}
             <div className="flex flex-col">
               <button 
                 className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}

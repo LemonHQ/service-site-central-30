@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import Pages
 import Home from "./pages/Home";
-import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import MainServicePage from "./pages/MainServicePage";
 import SubServicePage from "./pages/SubServicePage";
@@ -28,6 +27,10 @@ import ExpandOfferingsPage from "./pages/services/ExpandOfferingsPage";
 import ScaleExperiencesPage from "./pages/services/ScaleExperiencesPage";
 import PilotTechPage from "./pages/services/PilotTechPage";
 import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage";
+
+// Import approach pages
+import CoCreatePage from "./pages/approach/CoCreatePage";
+import ExtendPage from "./pages/approach/ExtendPage";
 
 // Import industry landing pages
 import InsurancePage from "./pages/industries/InsurancePage";
@@ -51,8 +54,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:serviceId" element={<ServiceDetail />} />
           
           {/* Direct routes to service landing pages */}
           <Route path="/unify-brand-experiences" element={<UnifyBrandPage />} />
@@ -61,6 +62,10 @@ const App = () => (
           <Route path="/scale-digital-experiences" element={<ScaleExperiencesPage />} />
           <Route path="/pilot-emerging-tech" element={<PilotTechPage />} />
           <Route path="/standardize-digital-portfolio" element={<StandardizePortfolioPage />} />
+          
+          {/* Approach pages */}
+          <Route path="/approach/co-create" element={<CoCreatePage />} />
+          <Route path="/approach/extend" element={<ExtendPage />} />
           
           {/* Industry landing pages */}
           <Route path="/industries/insurance" element={<InsurancePage />} />

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Library, FileText, Grid, Layers, Sparkles } from 'lucide-react';
@@ -10,7 +11,7 @@ const StandardizePortfolioPage = () => {
       description="We help organizations create standardized digital experiences that improve efficiency and brand consistency. Our approach unifies disparate digital properties through shared components, design systems, and governance frameworks."
       ctaText="Standardize Your Digital Portfolio"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1586169828064-5691837935ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+      heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       features={[
         {
           title: "Digital Product Taxonomy",
