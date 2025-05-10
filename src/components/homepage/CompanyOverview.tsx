@@ -79,7 +79,7 @@ const CompanyOverview: React.FC = () => {
       if (currentStep >= steps) {
         clearInterval(timer);
       }
-    }, stepTime);
+    }, stepTime); 
 
     return () => clearInterval(timer);
   }, [isVisible]);
