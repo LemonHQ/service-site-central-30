@@ -8,9 +8,16 @@ interface SelectableBoxProps {
   label: string;
   selected: boolean;
   onClick: () => void;
+  className?: string;
 }
 
-const SelectableBox: React.FC<SelectableBoxProps> = ({ id, label, selected, onClick }) => {
+const SelectableBox: React.FC<SelectableBoxProps> = ({ 
+  id, 
+  label, 
+  selected, 
+  onClick,
+  className 
+}) => {
   return (
     <div
       id={id}
@@ -20,7 +27,8 @@ const SelectableBox: React.FC<SelectableBoxProps> = ({ id, label, selected, onCl
         "hover:shadow-md flex items-center justify-between",
         selected ? 
           "border-brand-500 bg-brand-100 shadow-sm text-brand-700 font-medium" : 
-          "border-gray-200 bg-white text-gray-700"
+          "border-gray-200 bg-white text-gray-700",
+        className
       )}
     >
       <span className="font-medium">{label}</span>
