@@ -3,8 +3,9 @@ import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, Users, Lightbulb, Repeat, BarChart } from 'lucide-react';
+import { CheckCircle, Users, Lightbulb, Repeat, BarChart, ArrowRight, Zap, FlaskConical, History } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import ServiceCard from '@/components/ui/ServiceCard';
 
 const CoCreatePage = () => {
   return (
@@ -38,6 +39,159 @@ const CoCreatePage = () => {
                 alt="Co-Create - Hero Image"
                 className="rounded-xl shadow-lg w-full h-[400px] object-cover object-center"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4">The benefits of starting a Co-Create for your business</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Our collaborative approach delivers tangible advantages to organizations looking to accelerate innovation and digital transformation.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <CheckCircle className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Accelerate Time-to-Market</h3>
+              <p className="text-gray-600">Reduce development cycles by 40-60% through collaborative workflows and rapid prototyping.</p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Users className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Cross-functional Expertise</h3>
+              <p className="text-gray-600">Access designers, engineers, and product specialists in a dedicated innovation team.</p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Innovation Catalyst</h3>
+              <p className="text-gray-600">Structured workshops and techniques to break through conventional thinking patterns.</p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <BarChart className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Measurable Outcomes</h3>
+              <p className="text-gray-600">Define clear KPIs and success metrics aligned with your business objectives.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Service Offerings Section */}
+      <section className="py-16 bg-beige-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4">Access these services through Co-Create</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Our Co-Create model can be applied across a wide range of digital innovation needs, from product design to emerging technology exploration.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <ServiceCard
+              title="Digital Product Design"
+              description="Create user-centric digital products through collaborative ideation, prototyping, and testing."
+              link="/services/digital-product-design"
+              icon={FlaskConical}
+            />
+            
+            <ServiceCard
+              title="Rapid Prototyping"
+              description="Transform concepts into functional prototypes within days, not weeks or months."
+              link="/services/rapid-prototyping"
+              icon={Zap}
+            />
+            
+            <ServiceCard
+              title="Technology Modernization"
+              description="Reimagine legacy systems with modern architectures and technology stacks."
+              link="/services/technology-modernization"
+              icon={History}
+            />
+            
+            <ServiceCard
+              title="Innovation Workshops"
+              description="Structured sessions to solve complex challenges and generate breakthrough ideas."
+              link="/services/innovation-workshops"
+              icon={Lightbulb}
+            />
+          </div>
+        </div>
+      </section>
+      
+      {/* Exploration Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4">Take your business to the next level</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Discover how our Co-Create approach can help you address specific business challenges and create meaningful impact.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Innovation Workshop" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">Innovation Workshops</h3>
+                <p className="text-gray-600 mb-4">
+                  Facilitated sessions to generate breakthrough ideas and solve complex business challenges.
+                </p>
+                <Link to="/services/innovation-workshops" className="inline-flex items-center text-brand-500 hover:text-brand-600">
+                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Digital Product Development" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">Digital Product Development</h3>
+                <p className="text-gray-600 mb-4">
+                  End-to-end product development from concept to market launch with continuous validation.
+                </p>
+                <Link to="/services/digital-product-development" className="inline-flex items-center text-brand-500 hover:text-brand-600">
+                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Technology Exploration" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">Technology Exploration</h3>
+                <p className="text-gray-600 mb-4">
+                  Explore and validate emerging technologies to understand their impact on your business.
+                </p>
+                <Link to="/services/technology-exploration" className="inline-flex items-center text-brand-500 hover:text-brand-600">
+                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
