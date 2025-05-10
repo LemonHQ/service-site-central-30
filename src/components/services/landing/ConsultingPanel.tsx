@@ -27,7 +27,7 @@ const ConsultingPanel: React.FC<ConsultingPanelProps> = ({
   const { toast } = useToast();
   
   return (
-    <section className="bg-ivory-200 text-brand-600 py-16">
+    <section className="bg-soft-purple text-brand-600 py-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-3/5 mb-8 md:mb-0">
@@ -60,6 +60,7 @@ const ConsultingPanel: React.FC<ConsultingPanelProps> = ({
                 <Button 
                   className="bg-brand-500 hover:bg-brand-600 text-white border-none text-lg px-6 py-6 h-auto"
                   variant="default"
+                  aria-label={ctaText}
                 >
                   {ctaText} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -74,6 +75,7 @@ const ConsultingPanel: React.FC<ConsultingPanelProps> = ({
                     style={{ width: "100%", height: "600px", border: 0 }} 
                     frameBorder="0"
                     aria-describedby="calendar-description"
+                    title="Google Calendar Appointment Scheduling"
                   ></iframe>
                   <span id="calendar-description" className="sr-only">
                     Google Calendar appointment scheduling page
@@ -96,7 +98,7 @@ const ConsultingPanel: React.FC<ConsultingPanelProps> = ({
               </div>
               
               <div className="absolute top-4 right-4 bg-brand-500 p-2 rounded hover:bg-brand-600 transition-colors">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white border-none">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white border-none" aria-label="LinkedIn Profile">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                   <span className="sr-only">LinkedIn Profile</span>
                 </a>

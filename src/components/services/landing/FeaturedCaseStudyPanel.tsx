@@ -15,7 +15,7 @@ const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
   label = "FEATURED CASE STUDY"
 }) => {
   return (
-    <section className="bg-beige-100 text-brand-600 py-16">
+    <section className="bg-ivory-200 text-brand-600 py-16">
       <div className="container mx-auto px-4">
         
         <div className="flex flex-col md:flex-row items-center">

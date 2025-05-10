@@ -10,13 +10,9 @@ import CtaSection from './landing/CtaSection';
 import IndustryQuotePanel from './landing/IndustryQuotePanel';
 import FeaturedCaseStudyPanel from './landing/FeaturedCaseStudyPanel';
 import ConsultingPanel from './landing/ConsultingPanel';
-import { LucideIcon } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import BlogCard from '@/components/blog/BlogCard';
-import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
-import { blogPosts } from '@/data/blogPosts';
+import CaseStudiesCarousel from './landing/CaseStudiesCarousel';
+import InsightsCarousel from './landing/InsightsCarousel';
 import { caseStudies } from '@/data/caseStudies';
-import SectionHeading from '@/components/ui/SectionHeading';
 import { QuoteData } from '@/data/quotes';
 
 export interface ServiceLandingProps {
@@ -69,10 +65,6 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   faqs = [],
   children
 }) => {
-  // Get a selection of case studies and blog posts
-  const featuredCaseStudies = caseStudies.slice(0, 6);
-  const featuredBlogPosts = blogPosts.slice(0, 6);
-  
   // Find the selected case study if an ID is provided
   const selectedCaseStudy = featuredCaseStudy 
     ? caseStudies.find(cs => cs.id === featuredCaseStudy) 
@@ -119,75 +111,9 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       
       <RelatedServicesSection relatedServices={relatedServices} />
 
-      {/* Case Studies Carousel Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <SectionHeading 
-            title="Case Studies" 
-            subtitle="See how we've helped organizations achieve their goals" 
-            centered
-          />
-          
-          <div className="mt-8">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {featuredCaseStudies.map((caseStudy) => (
-                  <CarouselItem key={caseStudy.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <CaseStudyCard caseStudy={caseStudy} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-center gap-2 mt-8">
-                <CarouselPrevious className="static translate-y-0" />
-                <CarouselNext className="static translate-y-0" />
-              </div>
-            </Carousel>
-          </div>
-        </div>
-      </section>
+      <CaseStudiesCarousel />
       
-      {/* Insights Carousel Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <SectionHeading 
-            title="Insights" 
-            subtitle="Latest thinking on digital transformation" 
-            centered
-          />
-          
-          <div className="mt-8">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {featuredBlogPosts.map((post) => (
-                  <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <BlogCard post={post} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-center gap-2 mt-8">
-                <CarouselPrevious className="static translate-y-0" />
-                <CarouselNext className="static translate-y-0" />
-              </div>
-            </Carousel>
-          </div>
-        </div>
-      </section>
+      <InsightsCarousel />
       
       {/* Show consulting panel above FAQs */}
       {showConsultingPanel && (
