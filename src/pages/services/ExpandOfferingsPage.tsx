@@ -13,7 +13,8 @@ const ExpandOfferingsPage = () => {
       ctaLink="/lead-qualification"
       secondaryCtaText="See Our Process"
       secondaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      heroImage="/lovable-uploads/expand-offerings-ai-hero.png"
+      isAiHeroImage={true}
       features={[
         {
           title: "Market Opportunity Analysis",

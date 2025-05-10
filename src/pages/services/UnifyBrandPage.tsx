@@ -13,7 +13,8 @@ const UnifyBrandPage = () => {
       ctaLink="/lead-qualification"
       secondaryCtaText="View Our Work"
       secondaryCtaLink="/case-studies"
-      heroImage="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      heroImage="/lovable-uploads/unify-brand-ai-hero.png"
+      isAiHeroImage={true}
       features={[
         {
           title: "Brand Consistency Framework",

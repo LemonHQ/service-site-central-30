@@ -29,6 +29,12 @@ import ScaleExperiencesPage from "./pages/services/ScaleExperiencesPage";
 import PilotTechPage from "./pages/services/PilotTechPage";
 import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage";
 
+// Import industry landing pages
+import InsurancePage from "./pages/industries/InsurancePage";
+import FinancePage from "./pages/industries/FinancePage";
+import HealthcarePage from "./pages/industries/HealthcarePage";
+import RetailPage from "./pages/industries/RetailPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -49,6 +55,12 @@ const App = () => (
           <Route path="/scale-digital-experiences" element={<ScaleExperiencesPage />} />
           <Route path="/pilot-emerging-tech" element={<PilotTechPage />} />
           <Route path="/standardize-digital-portfolio" element={<StandardizePortfolioPage />} />
+          
+          {/* Industry landing pages */}
+          <Route path="/industries/insurance" element={<InsurancePage />} />
+          <Route path="/industries/finance" element={<FinancePage />} />
+          <Route path="/industries/healthcare" element={<HealthcarePage />} />
+          <Route path="/industries/retail" element={<RetailPage />} />
           
           {/* Keep the service structure routes for backward compatibility */}
           <Route path="/services/:serviceSlug" element={<MainServicePage />} />

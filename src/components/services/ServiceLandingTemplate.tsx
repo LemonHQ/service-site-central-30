@@ -32,6 +32,7 @@ export interface ServiceLandingProps {
   processes: ServiceProcess[];
   benefits: string[];
   heroImage: string;
+  isAiHeroImage?: boolean;
   relatedServices: Array<{
     title: string;
     description: string;
@@ -55,6 +56,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   processes,
   benefits,
   heroImage,
+  isAiHeroImage = false,
   relatedServices,
   faqs = []
 }) => {
@@ -91,8 +93,13 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
               <img
                 src={heroImage}
                 alt={`${title} - Hero Image`}
-                className="rounded-xl shadow-lg max-h-[500px] object-cover"
+                className={`rounded-xl shadow-lg max-h-[500px] object-cover ${isAiHeroImage ? 'border-2 border-brand-300' : ''}`}
               />
+              {isAiHeroImage && (
+                <div className="absolute bottom-2 right-2 bg-brand-100 text-brand-600 text-xs px-2 py-1 rounded-md opacity-80">
+                  AI Generated
+                </div>
+              )}
             </div>
           </div>
         </div>
