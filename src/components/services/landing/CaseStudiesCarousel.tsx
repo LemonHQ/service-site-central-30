@@ -9,14 +9,13 @@ interface CaseStudiesCarouselProps {
 }
 
 const CaseStudiesCarousel: React.FC<CaseStudiesCarouselProps> = ({ limit = 6 }) => {
-  const featuredCaseStudies = caseStudies.slice(0, limit);
-  
   return (
     <CarouselSection
       title="Case Studies"
       subtitle="See how we've helped organizations achieve their goals"
-      items={featuredCaseStudies}
+      items={caseStudies}
       renderItem={(caseStudy) => <CaseStudyCard caseStudy={caseStudy} />}
+      limit={limit}
     />
   );
 };

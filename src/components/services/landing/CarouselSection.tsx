@@ -3,21 +3,26 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import SectionHeading from '@/components/ui/SectionHeading';
 
-interface CarouselSectionProps {
+interface CarouselSectionProps<T> {
   title: string;
   subtitle: string;
-  items: any[];
-  renderItem: (item: any) => React.ReactNode;
+  items: T[];
+  renderItem: (item: T) => React.ReactNode;
   bgColor?: string;
+  limit?: number;
 }
 
-const CarouselSection: React.FC<CarouselSectionProps> = ({
+function CarouselSection<T>({
   title,
   subtitle,
   items,
   renderItem,
-  bgColor = "bg-white"
-}) => {
+  bgColor = "bg-white",
+  limit
+}: CarouselSectionProps<T>) {
+  // Apply limit if specified
+  const displayItems = limit ? items.slice(0, limit) : items;
+  
   return (
     <section className={`py-16 ${bgColor}`}>
       <div className="container mx-auto px-4">
@@ -36,7 +41,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
             className="w-full"
           >
             <CarouselContent>
-              {items.map((item, index) => (
+              {displayItems.map((item: any, index) => (
                 <CarouselItem key={item.id || index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     {renderItem(item)}
@@ -53,6 +58,6 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
       </div>
     </section>
   );
-};
+}
 
 export default CarouselSection;

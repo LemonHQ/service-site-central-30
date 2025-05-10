@@ -9,15 +9,14 @@ interface InsightsCarouselProps {
 }
 
 const InsightsCarousel: React.FC<InsightsCarouselProps> = ({ limit = 6 }) => {
-  const featuredBlogPosts = blogPosts.slice(0, limit);
-  
   return (
     <CarouselSection
       title="Insights"
       subtitle="Latest thinking on digital transformation"
-      items={featuredBlogPosts}
+      items={blogPosts}
       renderItem={(post) => <BlogCard post={post} />}
       bgColor="bg-gray-50"
+      limit={limit}
     />
   );
 };

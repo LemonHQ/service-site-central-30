@@ -115,7 +115,6 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       
       <InsightsCarousel />
       
-      {/* Show consulting panel above FAQs */}
       {showConsultingPanel && (
         <ConsultingPanel />
       )}
