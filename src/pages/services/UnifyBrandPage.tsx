@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { ArrowRight, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
+import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 
 const UnifyBrandPage = () => {
   return (
@@ -52,6 +53,8 @@ const UnifyBrandPage = () => {
           icon: Settings
         }
       ]}
+      featuresTitle="Use cases we solve for"
+      featuresSubtitle="Comprehensive solutions to unify your brand experience across all touchpoints"
       benefits={[
         "Enhanced brand recognition and trust through consistency",
         "Faster time-to-market for new products and campaigns",
@@ -91,7 +94,9 @@ const UnifyBrandPage = () => {
           answer: "We're technology agnostic and can work with your existing tech stack. Common technologies include Figma, Adobe XD, Storybook, and custom component libraries for your development framework."
         }
       ]}
-    />
+    >
+      <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
+    </ServiceLandingTemplate>
   );
 };
 

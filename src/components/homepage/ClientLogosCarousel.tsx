@@ -1,11 +1,16 @@
+
 import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import AutoplayType from 'embla-carousel-autoplay';
+
 interface ClientLogosCarouselProps {
   title?: string;
+  subtitle?: string;
 }
+
 const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
-  title = "Trusted by leading enterprise brands"
+  title = "Trusted by leading enterprise brands",
+  subtitle
 }) => {
   // Top enterprise brand logos
   const clientLogos = [{
@@ -49,6 +54,7 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
 
   // Create a plugin instance for autoplay
   const [plugin, setPlugin] = useState<any>(null);
+  
   useEffect(() => {
     // Initialize the autoplay plugin
     const autoplayPlugin = AutoplayType({
@@ -62,22 +68,39 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
       if (plugin) plugin.stop();
     };
   }, []);
-  return <section className="py-12 bg-beige-100">
+  
+  return (
+    <section className="py-12 bg-beige-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-gray-500 mb-8">{title}</p>
-        <Carousel opts={{
-        align: "start",
-        loop: true
-      }} plugins={plugin ? [plugin] : []} className="w-full">
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-semibold text-gray-700 mb-2">{title}</h3>
+          {subtitle && <p className="text-gray-500">{subtitle}</p>}
+        </div>
+        <Carousel 
+          opts={{
+            align: "start",
+            loop: true
+          }} 
+          plugins={plugin ? [plugin] : []} 
+          className="w-full"
+        >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {clientLogos.map((client, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
+            {clientLogos.map((client, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="h-16 flex items-center justify-center p-2">
-                  <img src={client.logo} alt={`${client.name} logo`} className="h-8 w-32 object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`} 
+                    className="h-8 w-32 object-contain grayscale hover:grayscale-0 transition-all" 
+                  />
                 </div>
-              </CarouselItem>)}
+              </CarouselItem>
+            ))}
           </CarouselContent>
         </Carousel>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ClientLogosCarousel;

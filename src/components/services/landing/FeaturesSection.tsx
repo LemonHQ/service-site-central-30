@@ -12,15 +12,21 @@ export interface ServiceFeature {
 
 interface FeaturesSectionProps {
   features: ServiceFeature[];
+  title?: string;
+  subtitle?: string;
 }
 
-const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) => {
+const FeaturesSection: React.FC<FeaturesSectionProps> = ({ 
+  features,
+  title = "Key Features", 
+  subtitle = "Explore how our solution creates value for your organization" 
+}) => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="Key Features"
-          subtitle="Explore how our solution creates value for your organization"
+          title={title}
+          subtitle={subtitle}
           centered
         />
         

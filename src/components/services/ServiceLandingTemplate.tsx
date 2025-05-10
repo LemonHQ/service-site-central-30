@@ -25,6 +25,8 @@ export interface ServiceLandingProps {
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   features: ServiceFeature[];
+  featuresTitle?: string;
+  featuresSubtitle?: string;
   benefits: string[];
   heroImage: string;
   isAiHeroImage?: boolean;
@@ -45,6 +47,7 @@ export interface ServiceLandingProps {
     question: string;
     answer: string;
   }>;
+  children?: React.ReactNode;
 }
 
 const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
@@ -56,12 +59,15 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   secondaryCtaText,
   secondaryCtaLink,
   features,
+  featuresTitle,
+  featuresSubtitle,
   benefits,
   heroImage,
   isAiHeroImage = false,
   relatedServices,
   quotePanel,
-  faqs = []
+  faqs = [],
+  children
 }) => {
   // Get a selection of case studies and blog posts
   const featuredCaseStudies = caseStudies.slice(0, 6);
@@ -81,7 +87,11 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
         isAiHeroImage={isAiHeroImage}
       />
       
-      <FeaturesSection features={features} />
+      <FeaturesSection 
+        features={features} 
+        title={featuresTitle}
+        subtitle={featuresSubtitle}
+      />
       
       {quotePanel && (
         <QuotePanel
@@ -93,6 +103,8 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
           sourceUrl={quotePanel.sourceUrl}
         />
       )}
+
+      {children}
       
       <BenefitsSection benefits={benefits} />
       
