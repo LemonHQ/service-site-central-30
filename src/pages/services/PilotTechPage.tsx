@@ -39,28 +39,6 @@ const PilotTechPage = () => {
           icon: BarChart2
         }
       ]}
-      processes={[
-        {
-          number: 1,
-          title: "Discovery",
-          description: "Identify high-impact technology opportunities aligned with business objectives."
-        },
-        {
-          number: 2,
-          title: "Proof of Concept",
-          description: "Rapid development and testing of minimum viable solutions."
-        },
-        {
-          number: 3,
-          title: "Validation",
-          description: "Rigorous testing and refinement based on user feedback and performance data."
-        },
-        {
-          number: 4,
-          title: "Scaling Strategy",
-          description: "Development of implementation roadmap for production deployment."
-        }
-      ]}
       benefits={[
         "De-risked technology adoption through validated pilots",
         "Accelerated innovation cycle times",

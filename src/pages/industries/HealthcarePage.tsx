@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Heart, FileChartColumn, Users, Shield, Network } from 'lucide-react';
@@ -40,28 +39,6 @@ const HealthcarePage = () => {
           title: "Provider Collaboration Tools",
           description: "Develop solutions that enhance communication between healthcare teams.",
           icon: Users
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Needs Assessment",
-          description: "Analysis of current workflows, patient journeys, and system integration requirements."
-        },
-        {
-          number: 2,
-          title: "Compliant Solution Design",
-          description: "Creation of HIPAA-compliant digital solutions that address identified needs."
-        },
-        {
-          number: 3,
-          title: "Secure Implementation",
-          description: "Development with security and compliance validation at every stage."
-        },
-        {
-          number: 4,
-          title: "Training & Adoption",
-          description: "Comprehensive support to ensure successful adoption by clinical and administrative users."
         }
       ]}
       benefits={[

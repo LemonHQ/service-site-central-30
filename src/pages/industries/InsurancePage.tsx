@@ -1,4 +1,5 @@
 
+// Updated InsurancePage.tsx without the processes prop
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Shield, FileCheck, ClipboardList, LineChart, Users } from 'lucide-react';

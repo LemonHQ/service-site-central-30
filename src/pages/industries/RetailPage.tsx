@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { ShoppingBag, Store, Users, TrendingUp, BarChart } from 'lucide-react';
@@ -40,28 +39,6 @@ const RetailPage = () => {
           title: "Digital Growth Strategies",
           description: "Create and execute plans for expanding digital revenue channels and market reach.",
           icon: TrendingUp
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Customer Journey Mapping",
-          description: "Analysis of current shopping experiences across all channels and touchpoints."
-        },
-        {
-          number: 2,
-          title: "Solution Architecture",
-          description: "Design of integrated digital experiences aligned with your brand and customer needs."
-        },
-        {
-          number: 3,
-          title: "Agile Implementation",
-          description: "Iterative development and testing with continuous feedback from stakeholders."
-        },
-        {
-          number: 4,
-          title: "Measurement & Optimization",
-          description: "Ongoing refinement based on customer behavior data and business metrics."
         }
       ]}
       benefits={[

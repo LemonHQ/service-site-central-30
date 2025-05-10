@@ -1,73 +1,55 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Database, Code, Workflow, Lightbulb, Share2 } from 'lucide-react';
+import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-react';
 
 const DigitalizeProductPage = () => {
   return (
     <ServiceLandingTemplate
       title="Digitalize Product Lines"
-      subtitle="Transform physical products and services into digital experiences"
-      description="We help organizations reimagine physical products and services as digital experiences. Our approach combines deep product strategy with technical expertise to create digital offerings that extend your reach and open new revenue streams."
-      ctaText="Transform Your Products"
+      subtitle="Transform legacy offerings into modern digital products"
+      description="We help organizations transform traditional products and services into modern digital experiences. Our approach leverages cloud, mobile, and data analytics to create new revenue streams and improve customer engagement."
+      ctaText="Digitalize Your Products"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       features={[
         {
-          title: "Digital Product Strategy",
-          description: "Develop comprehensive strategies to transform physical products and services into digital offerings.",
+          title: "Cloud-Native Development",
+          description: "Build scalable and resilient digital products on leading cloud platforms.",
+          icon: Cloud
+        },
+        {
+          title: "Mobile-First Design",
+          description: "Create engaging mobile experiences that reach customers on any device.",
+          icon: Rocket
+        },
+        {
+          title: "Data-Driven Insights",
+          description: "Leverage data analytics to personalize experiences and optimize product performance.",
           icon: Lightbulb
         },
         {
-          title: "Legacy System Modernization",
-          description: "Transform outdated systems into flexible, cloud-native digital platforms.",
-          icon: Database
+          title: "Secure & Compliant",
+          description: "Ensure your digital products meet the highest standards for security and compliance.",
+          icon: ShieldCheck
         },
         {
           title: "API-First Architecture",
-          description: "Create scalable, interoperable digital products with API-first design principles.",
-          icon: Code
+          description: "Design products with open APIs for seamless integration with other systems.",
+          icon: FileCode2
         },
         {
-          title: "Digital Process Automation",
-          description: "Automate manual processes to increase efficiency and improve customer experience.",
-          icon: Workflow
-        },
-        {
-          title: "Omnichannel Integration",
-          description: "Ensure seamless product experiences across all digital channels and touchpoints.",
-          icon: Share2
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Discovery",
-          description: "Deep analysis of existing products, market opportunities, and digital transformation potential."
-        },
-        {
-          number: 2,
-          title: "Strategy & Design",
-          description: "Development of digital product strategy and experience design aligned with business goals."
-        },
-        {
-          number: 3,
-          title: "Development",
-          description: "Agile implementation of digital products with continuous testing and refinement."
-        },
-        {
-          number: 4,
-          title: "Scaling & Optimization",
-          description: "Ongoing enhancements and scaling of digital products based on market feedback and performance data."
+          title: "Customer-Centric Design",
+          description: "Focus on user needs and preferences to create delightful product experiences.",
+          icon: Users
         }
       ]}
       benefits={[
-        "Expanded market reach and accessibility",
-        "New revenue streams through digital business models",
-        "Improved customer engagement and satisfaction",
-        "Reduced operational costs through automation",
-        "Faster time-to-market for product enhancements",
-        "Data-driven insights to inform product decisions",
-        "Increased agility to respond to market changes"
+        "New revenue streams from digital products",
+        "Improved customer engagement and loyalty",
+        "Reduced costs through automation and efficiency",
+        "Faster time-to-market for new products",
+        "Better data-driven decision making",
+        "Increased agility and innovation"
       ]}
       relatedServices={[
         {
@@ -76,28 +58,28 @@ const DigitalizeProductPage = () => {
           link: "/expand-product-offerings"
         },
         {
-          title: "Pilot Emerging Tech",
-          description: "Prototype and validate AI, automation, and other emerging technologies.",
-          link: "/pilot-emerging-tech"
-        },
-        {
           title: "Scale Digital Experiences",
           description: "Build systems and operating models that power sustainable digital expansion.",
           link: "/scale-digital-experiences"
+        },
+        {
+          title: "Standardize Digital Portfolio",
+          description: "Establish consistent patterns across your digital product catalog.",
+          link: "/standardize-digital-portfolio"
         }
       ]}
       faqs={[
         {
-          question: "How do you approach the digitalization of complex physical products?",
-          answer: "We start by identifying the core value proposition and customer needs, then determine which aspects can be enhanced through digital capabilities. This might involve adding digital interfaces, connecting to IoT platforms, creating companion apps, or completely reimagining the product experience."
+          question: "What types of products can be digitalized?",
+          answer: "Almost any product or service can be digitalized, from physical goods to traditional services. The key is to identify how digital technologies can create new value for customers."
         },
         {
-          question: "What industries have you helped digitalize product lines?",
-          answer: "We've worked across multiple industries including healthcare, financial services, manufacturing, retail, and professional services, helping transform everything from physical documents to complex machinery into digital-first experiences."
+          question: "How long does it take to digitalize a product line?",
+          answer: "The timeline varies depending on the complexity of the product and the scope of the project. However, we typically aim to deliver initial results within 3-6 months."
         },
         {
-          question: "How do you ensure regulatory compliance during product digitalization?",
-          answer: "Compliance is integrated throughout our process, not added as an afterthought. We conduct thorough regulatory assessments at the outset, incorporate compliance requirements into design specifications, and implement validation procedures to ensure all digital products meet relevant industry regulations."
+          question: "How do you ensure the security of digital products?",
+          answer: "We follow industry best practices for security and compliance, including secure coding, penetration testing, and data encryption. We also work with our clients to develop security policies and procedures."
         }
       ]}
     />

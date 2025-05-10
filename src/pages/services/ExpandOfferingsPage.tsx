@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
@@ -37,28 +36,6 @@ const ExpandOfferingsPage = () => {
           title: "Go-to-Market Planning",
           description: "Comprehensive launch planning to ensure successful market entry and early adoption.",
           icon: LineChart
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Opportunity Scanning",
-          description: "Systematic research to identify high-potential product and service opportunities."
-        },
-        {
-          number: 2,
-          title: "Concept Development",
-          description: "Creation and refinement of product concepts with clear value propositions."
-        },
-        {
-          number: 3,
-          title: "Validation & Testing",
-          description: "Rapid prototyping and market testing to validate demand and refine offerings."
-        },
-        {
-          number: 4,
-          title: "Launch & Scale",
-          description: "Strategic go-to-market execution and ongoing optimization based on market feedback."
         }
       ]}
       benefits={[

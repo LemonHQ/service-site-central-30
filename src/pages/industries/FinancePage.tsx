@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Banknote, CreditCard, TrendingUp, Shield, Network } from 'lucide-react';
@@ -40,28 +39,6 @@ const FinancePage = () => {
           title: "Open Banking Implementation",
           description: "Develop secure API infrastructures for open banking initiatives and fintech partnerships.",
           icon: Network
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Discovery",
-          description: "Deep analysis of your current systems, customer needs, and market opportunities."
-        },
-        {
-          number: 2,
-          title: "Solution Design",
-          description: "Creation of secure, compliant digital solutions aligned with your business strategy."
-        },
-        {
-          number: 3,
-          title: "Development",
-          description: "Agile implementation with continuous testing for security and compliance."
-        },
-        {
-          number: 4,
-          title: "Deployment & Support",
-          description: "Carefully managed rollout and ongoing optimization of your digital solutions."
         }
       ]}
       benefits={[

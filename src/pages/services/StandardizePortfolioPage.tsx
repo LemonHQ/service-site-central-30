@@ -39,28 +39,6 @@ const StandardizePortfolioPage = () => {
           icon: Sparkles
         }
       ]}
-      processes={[
-        {
-          number: 1,
-          title: "Portfolio Audit",
-          description: "Comprehensive assessment of existing digital products and patterns."
-        },
-        {
-          number: 2,
-          title: "Standards Development",
-          description: "Creation of digital standards, guidelines, and reusable components."
-        },
-        {
-          number: 3,
-          title: "Implementation Planning",
-          description: "Strategic roadmap for applying standards across your digital portfolio."
-        },
-        {
-          number: 4,
-          title: "Governance Establishment",
-          description: "Development of processes to maintain and evolve standards over time."
-        }
-      ]}
       benefits={[
         "Accelerated product development through reusable components",
         "Reduced development and maintenance costs",

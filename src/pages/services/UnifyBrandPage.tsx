@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { BadgeCheck, Library, Globe, BarChart2, Network, Layers, Shield, Settings, Database, Upload, FileCheck } from 'lucide-react';
+import { ArrowRight, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
 
 const UnifyBrandPage = () => {
   return (
@@ -15,57 +15,32 @@ const UnifyBrandPage = () => {
       features={[
         {
           title: "Strategic Brand Expansion",
-          description: "Grow into new markets and offerings with clarity, control, and cohesion.",
-          icon: Globe
+          description: "Grow across markets and channels with a unified identity that supports both masterbrand and sub-brand strategies.",
+          icon: ArrowRight
         },
         {
           title: "Reusable Brand Infrastructure",
-          description: "Deploy scalable templates and systems to reduce duplication and speed up delivery.",
-          icon: Layers
+          description: "Build once and deploy globally with modular templates and systems that cut duplication and speed delivery.",
+          icon: ArrowDown
         },
         {
-          title: "Masterbrand-Led Growth",
-          description: "Expand under a unified identity while giving sub-brands room to flex.",
-          icon: Network
-        },
-        {
-          title: "Market Localization at Scale",
-          description: "Adapt global experiences locally—without losing consistency or speed.",
+          title: "Localized Global Consistency",
+          description: "Maintain global consistency while enabling local adaptation through structured localization frameworks.",
           icon: Globe
         },
         {
-          title: "Centralized Brand Management",
-          description: "Control assets, messaging, and delivery from a single, centralized hub.",
+          title: "Centralized Brand Operations",
+          description: "Manage assets, messaging, and delivery from a central platform to align teams and partners.",
           icon: Database
         },
         {
-          title: "Build once, deploy globally",
-          description: "Create assets once and reuse them across markets to save time and cost.",
-          icon: Upload
-        },
-        {
-          title: "Protect brand integrity",
-          description: "Control brand usage across teams and regions to ensure quality and compliance.",
+          title: "Brand Integrity & IP Protection",
+          description: "Protect brand identity and IP with access control, usage rights, and built-in compliance.",
           icon: Shield
         },
         {
-          title: "Consistent Brand Experiences",
-          description: "Align every touchpoint to reinforce your brand across platforms.",
-          icon: BadgeCheck
-        },
-        {
-          title: "Scalable Design & Brand Libraries",
-          description: "Provide teams with modular systems and approved assets that grow with you.",
-          icon: Library
-        },
-        {
-          title: "IP Protection and Control",
-          description: "Protect brand identity and assets through controlled access and usage.",
-          icon: FileCheck
-        },
-        {
-          title: "Integrated Brand Governance",
-          description: "Enforce quality and accountability with embedded standards and workflows.",
+          title: "Governance & Quality Control",
+          description: "Ensure brand consistency and execution quality through embedded standards and approval workflows.",
           icon: Settings
         }
       ]}
