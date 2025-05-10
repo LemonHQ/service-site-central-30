@@ -1,8 +1,8 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Library, FileText, Grid, Layers, Sparkles } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import { serviceQuotes } from '@/data/quotes';
 
 const StandardizePortfolioPage = () => {
   return (
@@ -13,14 +13,7 @@ const StandardizePortfolioPage = () => {
       ctaText="Standardize Your Digital Portfolio"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-      quotePanel={{
-        quote: "Organizations with standardized digital portfolios reduce development costs by up to 40% and accelerate time-to-market by up to 50% for new digital initiatives.",
-        author: "Forrester Research",
-        authorTitle: "Digital Experience Research",
-        imageUrl: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "The Total Economic Impact of Design Systems",
-        sourceUrl: "https://www.forrester.com/report/design-systems-drive-digital-transformation"
-      }}
+      quotePanel={serviceQuotes['standardize-digital-portfolio']}
       features={[
         {
           title: "Digital Product Taxonomy",

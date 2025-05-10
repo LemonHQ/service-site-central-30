@@ -1,8 +1,8 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Brain, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import { serviceQuotes } from '@/data/quotes';
 
 const PilotTechPage = () => {
   return (
@@ -13,14 +13,7 @@ const PilotTechPage = () => {
       ctaText="Pilot New Technologies"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-      quotePanel={{
-        quote: "Companies that effectively pilot emerging technologies before full implementation are 2.5x more likely to achieve successful digital transformation outcomes.",
-        author: "Deloitte Digital",
-        authorTitle: "Digital Transformation Practice",
-        imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "Technology Pilot Programs: De-risking Digital Transformation",
-        sourceUrl: "https://www2.deloitte.com/us/en/insights/topics/digital-transformation.html"
-      }}
+      quotePanel={serviceQuotes['pilot-emerging-tech']}
       features={[
         {
           title: "AI & Machine Learning Prototyping",

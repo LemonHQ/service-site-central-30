@@ -7,7 +7,7 @@ import BenefitsSection from './landing/BenefitsSection';
 import RelatedServicesSection from './landing/RelatedServicesSection';
 import FaqSection from './landing/FaqSection';
 import CtaSection from './landing/CtaSection';
-import QuotePanel from './landing/QuotePanel';
+import IndustryQuotePanel from './landing/IndustryQuotePanel';
 import { LucideIcon } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import BlogCard from '@/components/blog/BlogCard';
@@ -15,6 +15,7 @@ import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
 import { blogPosts } from '@/data/blogPosts';
 import { caseStudies } from '@/data/caseStudies';
 import SectionHeading from '@/components/ui/SectionHeading';
+import { QuoteData } from '@/data/quotes';
 
 export interface ServiceLandingProps {
   title: string;
@@ -35,14 +36,7 @@ export interface ServiceLandingProps {
     description: string;
     link: string;
   }>;
-  quotePanel?: {
-    quote: string;
-    author?: string;
-    authorTitle?: string;
-    imageUrl?: string;
-    sourceText?: string;
-    sourceUrl?: string;
-  };
+  quotePanel?: QuoteData;
   faqs?: Array<{
     question: string;
     answer: string;
@@ -94,7 +88,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       />
       
       {quotePanel && (
-        <QuotePanel
+        <IndustryQuotePanel
           quote={quotePanel.quote}
           author={quotePanel.author}
           authorTitle={quotePanel.authorTitle}

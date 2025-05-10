@@ -1,8 +1,8 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { ShoppingBag, Store, Users, TrendingUp, BarChart } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import { serviceQuotes } from '@/data/quotes';
 
 const RetailPage = () => {
   return (
@@ -16,14 +16,7 @@ const RetailPage = () => {
       secondaryCtaLink="/case-studies"
       heroImage="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
-      quotePanel={{
-        quote: "Retailers who effectively combine digital and physical channels see 40% higher conversion rates and 30% higher customer lifetime value.",
-        author: "Harvard Business Review",
-        authorTitle: "Retail Innovation Analysis",
-        imageUrl: "https://images.unsplash.com/photo-1573612664822-d7d347da7b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "Reinventing the Customer Experience in Retail",
-        sourceUrl: "https://hbr.org/topic/customer-experience"
-      }}
+      quotePanel={serviceQuotes['retail']}
       features={[
         {
           title: "Omnichannel Experience Design",

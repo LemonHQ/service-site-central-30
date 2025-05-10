@@ -3,6 +3,7 @@ import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import { serviceQuotes } from '@/data/quotes';
 
 const ExpandOfferingsPage = () => {
   return (
@@ -13,14 +14,7 @@ const ExpandOfferingsPage = () => {
       ctaText="Expand Your Digital Portfolio"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-      quotePanel={{
-        quote: "Leaders in digital product innovation achieve 2.7x higher revenue growth compared to their industry peers through systematic expansion of their digital offerings.",
-        author: "BCG Digital Ventures",
-        authorTitle: "Corporate Innovation and Digital Product Development",
-        imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "Digital Product Innovation: The New Growth Engine",
-        sourceUrl: "https://www.bcg.com/digital-bcg/digital-ventures"
-      }}
+      quotePanel={serviceQuotes['expand-product-offerings']}
       features={[
         {
           title: "Market Opportunity Analysis",
