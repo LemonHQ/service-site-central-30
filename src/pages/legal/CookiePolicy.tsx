@@ -44,6 +44,36 @@ const CookiePolicy = () => {
             These cookies help us understand how visitors interact with our website by collecting and reporting
             information anonymously. They help us improve our website and services.
           </p>
+          <table className="border-collapse border border-gray-300 my-4 w-full">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-2 text-left">Name</th>
+                <th className="border border-gray-300 p-2 text-left">Provider</th>
+                <th className="border border-gray-300 p-2 text-left">Purpose</th>
+                <th className="border border-gray-300 p-2 text-left">Expiry</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 p-2">_ga</td>
+                <td className="border border-gray-300 p-2">Google Analytics</td>
+                <td className="border border-gray-300 p-2">Registers a unique ID used to generate statistical data on how you use the website</td>
+                <td className="border border-gray-300 p-2">2 years</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">_gid</td>
+                <td className="border border-gray-300 p-2">Google Analytics</td>
+                <td className="border border-gray-300 p-2">Registers a unique ID used to generate statistical data on how you use the website</td>
+                <td className="border border-gray-300 p-2">24 hours</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">_gat</td>
+                <td className="border border-gray-300 p-2">Google Analytics</td>
+                <td className="border border-gray-300 p-2">Used to throttle request rate</td>
+                <td className="border border-gray-300 p-2">1 minute</td>
+              </tr>
+            </tbody>
+          </table>
           
           <h3 className="text-xl font-medium mt-6 mb-3">Functionality Cookies</h3>
           <p>
@@ -62,6 +92,18 @@ const CookiePolicy = () => {
             You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer
             and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually
             adjust some preferences every time you visit a site, and some services and functionalities may not work.
+          </p>
+          <p className="mt-4">
+            Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies,
+            including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org" className="text-blue-600 hover:underline">www.aboutcookies.org</a> or 
+            <a href="https://www.allaboutcookies.org" className="text-blue-600 hover:underline">www.allaboutcookies.org</a>.
+          </p>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Your Consent</h2>
+          <p>
+            By continuing to use our website, you are agreeing to our placing cookies on your computer or device in accordance 
+            with the terms of this Cookie Policy. If you do not wish to accept cookies from our website, please either disable cookies
+            in your browser settings or refrain from using our website.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to This Cookie Policy</h2>

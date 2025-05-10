@@ -1,20 +1,15 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Globe, Users, BadgeCheck, Gauge, Palette } from 'lucide-react';
 
 const UnifyBrandPage = () => {
   return (
     <ServiceLandingTemplate
       title="Unify Brand Experiences"
-      subtitle="Create consistent, compliant brand experiences across all touchpoints"
-      description="We help enterprises create consistent, compliant brand and product experiences across all customer touchpoints, regions, and business units. Our approach combines strategic brand governance with technical implementation to ensure your brand's integrity is maintained at scale."
-      ctaText="Get Started"
+      subtitle="Create cohesive experiences across all customer touchpoints"
+      description="We help organizations build unified brand experiences that deliver consistent messaging and functionality across web, mobile, and physical touchpoints. Our approach aligns digital products with your brand strategy to strengthen customer connections and build trust."
+      ctaText="Start Your Brand Transformation"
       ctaLink="/lead-qualification"
-      secondaryCtaText="View Our Work"
-      secondaryCtaLink="/case-studies"
-      heroImage="/lovable-uploads/unify-brand-ai-hero.png"
-      isAiHeroImage={true}
+      heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
       features={[
         {
           title: "Brand Consistency Framework",

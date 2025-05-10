@@ -1,20 +1,15 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Expand, Target, LineChart, Search, Network } from 'lucide-react';
 
 const ExpandOfferingsPage = () => {
   return (
     <ServiceLandingTemplate
       title="Expand Product Offerings"
-      subtitle="Identify, validate, and launch new services that drive growth"
-      description="We help enterprises identify, validate, and launch new services, bundles, and adjacent solutions that deepen customer value and drive growth. Our methodology combines market intelligence with rapid experimentation to minimize risk and maximize impact."
-      ctaText="Explore Opportunities"
+      subtitle="Innovate and grow your digital portfolio"
+      description="We help organizations identify and develop new digital products and services that align with customer needs and business goals. Our approach combines market research, customer insights, and rapid prototyping to accelerate innovation and drive growth."
+      ctaText="Expand Your Digital Portfolio"
       ctaLink="/lead-qualification"
-      secondaryCtaText="See Our Process"
-      secondaryCtaLink="/contact"
-      heroImage="/lovable-uploads/expand-offerings-ai-hero.png"
-      isAiHeroImage={true}
+      heroImage="https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
       features={[
         {
           title: "Market Opportunity Analysis",

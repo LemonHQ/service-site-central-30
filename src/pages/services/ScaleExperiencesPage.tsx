@@ -1,108 +1,99 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { ArrowUp, Shield, Server, Users, Settings } from 'lucide-react';
 
 const ScaleExperiencesPage = () => {
   return (
     <ServiceLandingTemplate
       title="Scale Digital Experiences"
-      subtitle="Build systems and operating models that power sustainable growth"
-      description="We help enterprises build the systems, standards, and operating models that power sustainable, enterprise-grade digital expansion. Our approach ensures your digital experiences maintain quality and performance while scaling to meet growing demands and new markets."
+      subtitle="Build systems that support rapid growth"
+      description="We help organizations create scalable digital platforms that can grow with your business. Our approach focuses on building flexible architectures and development practices that allow you to quickly adapt to changing market conditions and customer needs."
       ctaText="Scale Your Digital Presence"
       ctaLink="/lead-qualification"
-      secondaryCtaText="Learn Our Methodology"
-      secondaryCtaLink="/contact"
-      heroImage="/lovable-uploads/scale-experiences-ai-hero.png"
-      isAiHeroImage={true}
+      heroImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       features={[
         {
           title: "Scalable Architecture Design",
-          description: "Create technical foundations that flex and scale with your business growth.",
-          icon: Server
+          description: "Create flexible architectures that can handle increasing traffic and data volumes.",
         },
         {
-          title: "Performance Optimization",
-          description: "Enhance digital experience performance and reliability at scale.",
-          icon: ArrowUp
+          title: "Automated Deployment Pipelines",
+          description: "Implement CI/CD pipelines for rapid and reliable deployments.",
         },
         {
-          title: "DevOps Transformation",
-          description: "Implement DevOps practices for faster, more reliable digital experience delivery.",
-          icon: Settings
+          title: "Cloud Infrastructure Management",
+          description: "Optimize cloud infrastructure for performance and cost efficiency.",
         },
         {
-          title: "Digital Governance Framework",
-          description: "Establish governance models that balance innovation with control.",
-          icon: Shield
+          title: "Performance Monitoring and Optimization",
+          description: "Implement monitoring tools and practices to ensure optimal performance.",
         },
         {
-          title: "Digital Operating Model",
-          description: "Design organizational structures and processes optimized for digital delivery.",
-          icon: Users
-        }
+          title: "Disaster Recovery Planning",
+          description: "Develop strategies to minimize downtime and data loss.",
+        },
       ]}
       processes={[
         {
           number: 1,
           title: "Assessment",
-          description: "Comprehensive evaluation of current digital capabilities, bottlenecks, and scaling challenges."
+          description: "Evaluate current infrastructure and identify scalability bottlenecks.",
         },
         {
           number: 2,
-          title: "Architecture & Strategy",
-          description: "Development of scalable architecture and operational strategies aligned with growth objectives."
+          title: "Architecture Design",
+          description: "Design a scalable architecture that meets your business needs.",
         },
         {
           number: 3,
           title: "Implementation",
-          description: "Phased implementation of technical and organizational changes to enable scaling."
+          description: "Implement the architecture using best practices and automated tools.",
         },
         {
           number: 4,
-          title: "Optimization",
-          description: "Continuous improvement of systems and processes based on performance data and growth patterns."
-        }
+          title: "Testing and Optimization",
+          description: "Test the architecture and optimize it for performance and cost efficiency.",
+        },
       ]}
       benefits={[
-        "Increased capacity to handle growing user demand",
-        "Consistent experience quality across all markets",
-        "Reduced operational overhead through automation",
-        "Faster deployment of updates and new features",
-        "Enhanced security and compliance at scale",
-        "More efficient resource utilization",
-        "Improved disaster recovery and business continuity"
+        "Improved performance and reliability",
+        "Reduced downtime and data loss",
+        "Increased agility and responsiveness",
+        "Lower infrastructure costs",
+        "Better customer experience",
       ]}
       relatedServices={[
         {
-          title: "Digitalize Product Lines",
-          description: "Transform legacy offerings into modern, scalable digital products.",
-          link: "/digitalize-product-lines"
-        },
-        {
-          title: "Standardize Digital Portfolio",
-          description: "Establish consistent patterns across your digital product catalog.",
-          link: "/standardize-digital-portfolio"
-        },
-        {
           title: "Unify Brand Experiences",
-          description: "Create consistent, compliant brand experiences across all touchpoints.",
-          link: "/unify-brand-experiences"
-        }
+          description: "Create consistent experiences across all customer touchpoints.",
+          link: "/unify-brand-experiences",
+        },
+        {
+          title: "Digitalize Product Lines",
+          description: "Transform physical products and services into digital experiences.",
+          link: "/digitalize-product-lines",
+        },
+        {
+          title: "Expand Product Offerings",
+          description: "Innovate and grow your digital portfolio.",
+          link: "/expand-product-offerings",
+        },
       ]}
       faqs={[
         {
-          question: "What are the most common challenges companies face when scaling digital experiences?",
-          answer: "The most common challenges include performance degradation under increased load, inconsistent user experiences across channels, governance complexity, technical debt that slows innovation, and organizational structures that aren't optimized for digital delivery."
+          question: "How do you ensure scalability?",
+          answer:
+            "We use a variety of techniques to ensure scalability, including load balancing, caching, and database optimization.",
         },
         {
-          question: "How do you approach security when scaling digital systems?",
-          answer: "Security is integrated throughout our scaling methodology, including automated security testing in CI/CD pipelines, zero-trust architecture principles, comprehensive monitoring, and regular penetration testing to ensure security scales alongside your digital footprint."
+          question: "How do you handle disaster recovery?",
+          answer:
+            "We develop disaster recovery plans that include regular backups, failover systems, and data replication.",
         },
         {
-          question: "What technologies do you recommend for scalable digital experiences?",
-          answer: "While we're technology-agnostic, we often recommend cloud-native architectures, containerization, microservices for specific use cases, robust API management, and serverless computing where appropriate to enable cost-effective scaling."
-        }
+          question: "How do you monitor performance?",
+          answer:
+            "We use a variety of monitoring tools to track performance metrics such as CPU usage, memory usage, and network traffic.",
+        },
       ]}
     />
   );

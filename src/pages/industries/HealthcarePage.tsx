@@ -13,7 +13,7 @@ const HealthcarePage = () => {
       ctaLink="/lead-qualification"
       secondaryCtaText="Learn Our Approach"
       secondaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1576671534544-01ceef508461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      heroImage="https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
       isAiHeroImage={false}
       features={[
         {

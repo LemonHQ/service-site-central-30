@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Database, Code, Workflow, Lightbulb, Share2 } from 'lucide-react';
@@ -7,14 +6,11 @@ const DigitalizeProductPage = () => {
   return (
     <ServiceLandingTemplate
       title="Digitalize Product Lines"
-      subtitle="Transform legacy offerings into modern, scalable digital products"
-      description="We help enterprises transform their legacy offerings into modern, scalable digital products built for today's markets and tomorrow's expectations. Our approach combines deep product strategy with technical expertise to create digital experiences that drive growth and customer satisfaction."
-      ctaText="Start Your Transformation"
+      subtitle="Transform physical products and services into digital experiences"
+      description="We help organizations reimagine physical products and services as digital experiences. Our approach combines deep product strategy with technical expertise to create digital offerings that extend your reach and open new revenue streams."
+      ctaText="Transform Your Products"
       ctaLink="/lead-qualification"
-      secondaryCtaText="Explore Case Studies"
-      secondaryCtaLink="/case-studies"
-      heroImage="/lovable-uploads/digitalize-product-ai-hero.png"
-      isAiHeroImage={true}
+      heroImage="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       features={[
         {
           title: "Digital Product Strategy",

@@ -1,20 +1,15 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { FlaskConical, Zap, Brain, History, BarChart } from 'lucide-react';
 
 const PilotTechPage = () => {
   return (
     <ServiceLandingTemplate
       title="Pilot Emerging Tech"
-      subtitle="Prototype and validate AI, automation, and other emerging technologies"
-      description="We help enterprises rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation in regulated environments. Our approach reduces risk while accelerating adoption of transformative technologies."
-      ctaText="Explore Possibilities"
+      subtitle="Test and implement innovative technologies"
+      description="We help organizations evaluate and implement emerging technologies like AI, blockchain, and IoT through focused pilot programs. Our approach minimizes risk while allowing you to explore new capabilities that could transform your business."
+      ctaText="Pilot New Technologies"
       ctaLink="/lead-qualification"
-      secondaryCtaText="View Case Studies"
-      secondaryCtaLink="/case-studies"
-      heroImage="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"
-      isAiHeroImage={false}
+      heroImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       features={[
         {
           title: "AI & Machine Learning Prototyping",

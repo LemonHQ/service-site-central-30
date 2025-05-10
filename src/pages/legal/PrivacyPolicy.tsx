@@ -31,6 +31,17 @@ const PrivacyPolicy = () => {
             <li>Communications and feedback you provide to us</li>
           </ul>
           
+          <h3 className="text-xl font-medium mt-6 mb-3">Information We Collect Automatically</h3>
+          <p>
+            When you access or use our services, we may automatically collect information about you, including:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li>Log and usage data (IP address, browser type, referring/exit pages, operating system, date/time stamps, clickstream data)</li>
+            <li>Device information (hardware model, operating system, unique device identifiers)</li>
+            <li>Location information (general location based on IP address)</li>
+            <li>Cookies and similar technologies (see our Cookie Policy for more information)</li>
+          </ul>
+          
           <h2 className="text-2xl font-semibold mt-8 mb-4">How We Use Your Information</h2>
           <p>
             We use the information we collect to:
@@ -64,6 +75,20 @@ const PrivacyPolicy = () => {
             absolute security.
           </p>
           
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Data Retention</h2>
+          <p>
+            We retain personal information for as long as necessary to fulfill the purposes for which it was collected, 
+            including for the purposes of satisfying any legal, accounting, or reporting requirements, or to resolve disputes.
+          </p>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">International Data Transfers</h2>
+          <p>
+            Your information may be transferred to, and processed in, countries other than the country in which you reside. 
+            These countries may have different data protection laws than your country. By using our services, you consent to 
+            the transfer of your information to countries outside your country of residence, including the United States, 
+            where our central databases operate.
+          </p>
+          
           <h2 className="text-2xl font-semibold mt-8 mb-4">Your Rights</h2>
           <p>
             Depending on your location, you may have certain rights regarding your personal information, such as:
@@ -75,6 +100,16 @@ const PrivacyPolicy = () => {
             <li>The right to restrict or object to our processing of your personal information</li>
             <li>The right to data portability</li>
           </ul>
+          <p className="mt-4">
+            To exercise these rights, please contact us using the details provided below.
+          </p>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time in response to changing legal, technical, or business developments. 
+            When we update our Privacy Policy, we will take appropriate measures to inform you, consistent with the significance 
+            of the changes we make.
+          </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
           <p>

@@ -20,7 +20,7 @@ const Footer = () => {
     { name: 'Standardize Digital Portfolio', path: '/standardize-digital-portfolio' }
   ];
 
-  // Industry links - Removed specified industries
+  // Industry links
   const industryLinks = [
     { name: 'Insurance', path: '/industries/insurance' },
     { name: 'Finance', path: '/industries/finance' },
@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <FooterLinks title="What We Do" links={serviceLinks} />
           <FooterLinks title="Industries" links={industryLinks} />
-          <FooterLinks title="Company" links={companyLinks} showIcon={true} />
+          <FooterLinks title="Company" links={companyLinks} showIcon={false} />
         </div>
 
         {/* Separator */}

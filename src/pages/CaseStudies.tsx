@@ -3,11 +3,8 @@ import React, { useState, useMemo } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { caseStudies } from '@/data/caseStudies';
 import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
-import SearchInput from '@/components/ui/SearchInput';
 
 const CaseStudies: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  
   // Get all unique industries for filtering
   const industries = useMemo(() => {
     const uniqueIndustries = new Set(caseStudies.map(cs => cs.industry));
@@ -16,23 +13,16 @@ const CaseStudies: React.FC = () => {
   
   const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
   
-  // Filter case studies based on search term and selected industry
+  // Filter case studies based on selected industry
   const filteredCaseStudies = useMemo(() => {
     return caseStudies.filter(caseStudy => {
-      const matchesSearch = 
-        searchTerm === '' || 
-        caseStudy.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        caseStudy.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        caseStudy.client.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        caseStudy.industry.toLowerCase().includes(searchTerm.toLowerCase());
-      
       const matchesIndustry = 
         selectedIndustry === 'All Industries' || 
         caseStudy.industry === selectedIndustry;
       
-      return matchesSearch && matchesIndustry;
+      return matchesIndustry;
     });
-  }, [searchTerm, selectedIndustry]);
+  }, [selectedIndustry]);
   
   return (
     <MainLayout>
@@ -42,14 +32,6 @@ const CaseStudies: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore how we've helped organizations across industries transform their digital capabilities and achieve remarkable results.
           </p>
-        </div>
-        
-        <div className="max-w-3xl mx-auto mb-10">
-          <SearchInput 
-            placeholder="Search case studies by name, industry, or keywords..."
-            onChange={setSearchTerm}
-            className="w-full"
-          />
         </div>
         
         <div className="flex gap-2 justify-center mb-8 flex-wrap">
@@ -71,7 +53,7 @@ const CaseStudies: React.FC = () => {
         {filteredCaseStudies.length === 0 ? (
           <div className="text-center py-16">
             <h3 className="text-2xl font-semibold text-gray-700">No case studies found</h3>
-            <p className="text-gray-500 mt-2">Try adjusting your search or filter criteria</p>
+            <p className="text-gray-500 mt-2">Try adjusting your filter criteria</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

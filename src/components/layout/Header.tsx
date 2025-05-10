@@ -19,7 +19,7 @@ const Header = () => {
   const [mobileExpandedIndustry, setMobileExpandedIndustry] = useState<string | null>(null);
   const location = useLocation();
 
-  // Navigation links - Updated with Industries
+  // Navigation links - Updated order with Industries before Contact
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Our Work', path: '/case-studies' },
@@ -40,10 +40,10 @@ const Header = () => {
 
   // Industry items
   const industryItems = [
-    { name: "Insurance", path: "/industries/insurance" },
-    { name: "Finance", path: "/industries/finance" },
-    { name: "Healthcare", path: "/industries/healthcare" },
-    { name: "Retail", path: "/industries/retail" }
+    { name: "Insurance", path: "/industries/insurance", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Digital solutions for insurance providers" },
+    { name: "Finance", path: "/industries/finance", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Transformative tech for financial services" },
+    { name: "Healthcare", path: "/industries/healthcare", image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80", description: "Patient-centered digital solutions" },
+    { name: "Retail", path: "/industries/retail", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Omnichannel retail experiences" }
   ];
 
   const isActive = (path: string) => {
@@ -98,7 +98,7 @@ const Header = () => {
               <ServiceSubNav />
             </div>
 
-            {/* Industries dropdown */}
+            {/* Industries dropdown - moved before About and Contact */}
             <div className="relative">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -107,20 +107,23 @@ const Header = () => {
                       Industries
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="grid w-[400px] gap-3 p-4">
+                      <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
                         {industryItems.map((industry) => (
-                          <NavigationMenuLink 
+                          <Link 
+                            to={industry.path} 
                             key={industry.name}
-                            asChild
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="flex flex-col group rounded-md p-3 hover:bg-accent"
                           >
-                            <Link to={industry.path} className="flex items-center">
-                              <ChevronRight className="h-4 w-4 mr-2 text-brand-500" />
-                              <div>
-                                <div className="text-sm font-medium">{industry.name}</div>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
+                            <div className="overflow-hidden rounded-md mb-2">
+                              <img 
+                                src={industry.image} 
+                                alt={industry.name} 
+                                className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                              />
+                            </div>
+                            <h3 className="text-sm font-medium group-hover:text-brand-600">{industry.name}</h3>
+                            <p className="text-xs text-muted-foreground">{industry.description}</p>
+                          </Link>
                         ))}
                       </div>
                     </NavigationMenuContent>
@@ -211,7 +214,7 @@ const Header = () => {
               )}
             </div>
             
-            {/* Industries - with sub-menu */}
+            {/* Industries - with sub-menu - moved up before About and Contact */}
             <div className="flex flex-col">
               <button 
                 className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}
