@@ -1,8 +1,7 @@
-
 import React, { createContext, useContext, useState } from 'react';
 import { Step1Data, Step2Data, Step3Data } from './schema';
 import { useToast } from '@/hooks/use-toast';
-import { supabaseClient } from '@/integrations/supabase/client';
+import { supabase } from '@/integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
 
 interface LeadQualificationContextValue {
@@ -55,7 +54,7 @@ export const LeadQualificationProvider: React.FC<LeadQualificationProviderProps>
         ...step3Data,
       };
 
-      const { error } = await supabaseClient
+      const { error } = await supabase
         .from('lead_qualifications')
         .insert([formData]);
 
