@@ -55,10 +55,17 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
     setLoading(true);
     
     try {
-      // Store form data in Supabase
+      // Store form data in Supabase - fixed to match expected schema
       const { error } = await supabase
         .from('contact_submissions')
-        .insert([data]);
+        .insert({
+          name: data.name,
+          email: data.email,
+          company: data.company,
+          phone: data.phone || null,
+          service: data.service || null,
+          message: data.message
+        });
       
       if (error) {
         throw error;

@@ -1,4 +1,5 @@
-import { Cog6Tooth, BarChartSquare, Code, Brush, LayoutDashboard, LucideIcon, SearchCode, Network, Cloud, Database as DatabaseIcon, BrainCircuit, Rocket } from "lucide-react";
+
+import { Cog, BarChart, Code, Brush, LayoutDashboard, LucideIcon, Search, Network, Cloud, Database as DatabaseIcon, BrainCircuit, Rocket } from "lucide-react";
 
 export type MainService = {
   id: string;
@@ -130,7 +131,7 @@ export const subServices: SubService[] = [
     description:
       "Implement DevOps practices with our expert DevOps implementation services.",
     shortDescription: "Expert DevOps implementation services.",
-    icon: Cog6Tooth,
+    icon: Cog,
     benefits: [
       "Faster time to market",
       "Improved quality",
@@ -145,7 +146,7 @@ export const subServices: SubService[] = [
     description:
       "Build machine learning models with our expert machine learning model building services.",
     shortDescription: "Expert machine learning model building services.",
-    icon: BarChartSquare,
+    icon: BarChart,
     benefits: [
       "Improved decision making",
       "Increased efficiency",
@@ -160,7 +161,7 @@ export const subServices: SubService[] = [
     description:
       "Build natural language processing applications with our expert natural language processing services.",
     shortDescription: "Expert natural language processing services.",
-    icon: SearchCode,
+    icon: Search,
     benefits: [
       "Improved customer service",
       "Increased efficiency",

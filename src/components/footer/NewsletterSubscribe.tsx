@@ -20,12 +20,14 @@ const NewsletterSubscribe: React.FC = () => {
     try {
       console.log('Attempting to subscribe email:', email);
       
-      // Store email in Supabase
-      const { error, data } = await supabase
+      // Store email in Supabase - fixed to match expected schema
+      const { error } = await supabase
         .from('newsletter_subscriptions')
-        .insert([{ email }]);
+        .insert({
+          email: email
+        });
       
-      console.log('Subscription response:', { error, data });
+      console.log('Subscription response:', { error });
       
       if (error) {
         // Handle unique constraint violation gracefully
