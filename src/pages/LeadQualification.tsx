@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -10,6 +11,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Check, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { supabase } from '@/integrations/supabase/client';
 
 // Define the form schema for each step
 const step1Schema = z.object({
@@ -101,6 +103,7 @@ const LeadQualification = () => {
     step2?: Step2Data;
     step3?: Step3Data;
   }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -180,26 +183,54 @@ const LeadQualification = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleStep3Submit = (data: Step3Data) => {
+  const handleStep3Submit = async (data: Step3Data) => {
     setFormData(prev => ({ ...prev, step3: data }));
     
-    // Submit all data
+    // Compile all data from all steps
     const allData = {
       ...formData.step1,
       ...formData.step2,
       ...data
     };
     
-    console.log("Form submitted with data:", allData);
-    
-    // Show success message
-    toast({
-      title: "Submission Successful",
-      description: "Thank you for your interest! Our team will contact you shortly.",
-    });
-    
-    // Redirect to thank you page instead of home page
-    navigate('/thank-you');
+    try {
+      setIsSubmitting(true);
+      
+      // Save to Supabase
+      const { error } = await supabase
+        .from('lead_qualifications')
+        .insert({
+          email: data.email,
+          timeframe: data.timeframe,
+          sectors: formData.step1?.sectors || [],
+          markets: formData.step1?.markets || "",
+          brands: formData.step1?.brands || "",
+          products: formData.step1?.products || "",
+          challenges: formData.step2?.challenges || []
+        });
+      
+      if (error) {
+        throw error;
+      }
+      
+      // Show success message
+      toast({
+        title: "Submission Successful",
+        description: "Thank you for your interest! Our team will contact you shortly.",
+      });
+      
+      // Redirect to thank you page
+      navigate('/thank-you');
+    } catch (error) {
+      console.error("Error submitting lead qualification form:", error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your information. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Toggle a sector selection
@@ -445,8 +476,12 @@ const LeadQualification = () => {
                 >
                   Back
                 </Button>
-                <Button type="submit" className="bg-brand-500 hover:bg-brand-600">
-                  Submit
+                <Button 
+                  type="submit" 
+                  className="bg-brand-500 hover:bg-brand-600"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </div>
             </form>

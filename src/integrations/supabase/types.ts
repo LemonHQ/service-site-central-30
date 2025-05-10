@@ -42,6 +42,42 @@ export type Database = {
         }
         Relationships: []
       }
+      lead_qualifications: {
+        Row: {
+          brands: string
+          challenges: string[]
+          created_at: string
+          email: string
+          id: string
+          markets: string
+          products: string
+          sectors: string[]
+          timeframe: string
+        }
+        Insert: {
+          brands: string
+          challenges: string[]
+          created_at?: string
+          email: string
+          id?: string
+          markets: string
+          products: string
+          sectors: string[]
+          timeframe: string
+        }
+        Update: {
+          brands?: string
+          challenges?: string[]
+          created_at?: string
+          email?: string
+          id?: string
+          markets?: string
+          products?: string
+          sectors?: string[]
+          timeframe?: string
+        }
+        Relationships: []
+      }
       newsletter_subscriptions: {
         Row: {
           created_at: string
