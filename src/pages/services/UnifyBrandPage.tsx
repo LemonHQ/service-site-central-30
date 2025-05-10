@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { ArrowRight, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
@@ -14,6 +15,8 @@ const UnifyBrandPage = () => {
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
       quotePanel={serviceQuotes['unify-brand-experiences']}
+      featuredCaseStudy="global-bank-digital-transformation"
+      showConsultingPanel={true}
       features={[
         {
           title: "Strategic Brand Expansion",

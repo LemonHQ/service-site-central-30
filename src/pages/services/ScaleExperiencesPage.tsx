@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Database, Globe, Shield, BarChart2, Settings } from 'lucide-react';
@@ -14,6 +15,8 @@ const ScaleExperiencesPage = () => {
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       quotePanel={serviceQuotes['scale-digital-experiences']}
+      featuredCaseStudy="e-commerce-platform-redesign"
+      showConsultingPanel={true}
       features={[
         {
           title: "Scalable Architecture Design",

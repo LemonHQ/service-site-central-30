@@ -8,6 +8,8 @@ import RelatedServicesSection from './landing/RelatedServicesSection';
 import FaqSection from './landing/FaqSection';
 import CtaSection from './landing/CtaSection';
 import IndustryQuotePanel from './landing/IndustryQuotePanel';
+import FeaturedCaseStudyPanel from './landing/FeaturedCaseStudyPanel';
+import ConsultingPanel from './landing/ConsultingPanel';
 import { LucideIcon } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import BlogCard from '@/components/blog/BlogCard';
@@ -37,6 +39,8 @@ export interface ServiceLandingProps {
     link: string;
   }>;
   quotePanel?: QuoteData;
+  featuredCaseStudy?: string; // ID of the featured case study
+  showConsultingPanel?: boolean;
   faqs?: Array<{
     question: string;
     answer: string;
@@ -60,12 +64,19 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   isAiHeroImage = false,
   relatedServices,
   quotePanel,
+  featuredCaseStudy,
+  showConsultingPanel = false,
   faqs = [],
   children
 }) => {
   // Get a selection of case studies and blog posts
   const featuredCaseStudies = caseStudies.slice(0, 6);
   const featuredBlogPosts = blogPosts.slice(0, 6);
+  
+  // Find the selected case study if an ID is provided
+  const selectedCaseStudy = featuredCaseStudy 
+    ? caseStudies.find(cs => cs.id === featuredCaseStudy) 
+    : null;
 
   return (
     <MainLayout>
@@ -101,6 +112,14 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       {children}
       
       <BenefitsSection benefits={benefits} />
+      
+      {selectedCaseStudy && (
+        <FeaturedCaseStudyPanel caseStudy={selectedCaseStudy} />
+      )}
+      
+      {showConsultingPanel && (
+        <ConsultingPanel />
+      )}
       
       <RelatedServicesSection relatedServices={relatedServices} />
 
