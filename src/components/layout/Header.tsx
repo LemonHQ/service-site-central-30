@@ -4,17 +4,26 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import ServiceSubNav from '../navigation/ServiceSubNav';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mobileExpandedService, setMobileExpandedService] = useState<string | null>(null);
+  const [mobileExpandedIndustry, setMobileExpandedIndustry] = useState<string | null>(null);
   const location = useLocation();
 
-  // Navigation links - Updated names
+  // Navigation links - Updated with Industries
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Our Work', path: '/case-studies' },
-    { name: 'Insights', path: '/insights' }, // Changed from Resources to Insights
+    { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -27,6 +36,14 @@ const Header = () => {
     { name: "Scale Digital Experiences", path: "/scale-digital-experiences" },
     { name: "Pilot Emerging Tech", path: "/pilot-emerging-tech" },
     { name: "Standardize Digital Portfolio", path: "/standardize-digital-portfolio" }
+  ];
+
+  // Industry items
+  const industryItems = [
+    { name: "Insurance", path: "/industries/insurance" },
+    { name: "Finance", path: "/industries/finance" },
+    { name: "Healthcare", path: "/industries/healthcare" },
+    { name: "Retail", path: "/industries/retail" }
   ];
 
   const isActive = (path: string) => {
@@ -43,6 +60,14 @@ const Header = () => {
       setMobileExpandedService(null);
     } else {
       setMobileExpandedService(serviceId);
+    }
+  };
+
+  const toggleMobileIndustry = (industryId: string) => {
+    if (mobileExpandedIndustry === industryId) {
+      setMobileExpandedIndustry(null);
+    } else {
+      setMobileExpandedIndustry(industryId);
     }
   };
 
@@ -71,6 +96,37 @@ const Header = () => {
             {/* Service SubNav - what we do */}
             <div className="relative flex items-center">
               <ServiceSubNav />
+            </div>
+
+            {/* Industries dropdown */}
+            <div className="relative">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}>
+                      Industries
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid w-[400px] gap-3 p-4">
+                        {industryItems.map((industry) => (
+                          <NavigationMenuLink 
+                            key={industry.name}
+                            asChild
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <Link to={industry.path} className="flex items-center">
+                              <ChevronRight className="h-4 w-4 mr-2 text-brand-500" />
+                              <div>
+                                <div className="text-sm font-medium">{industry.name}</div>
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
             
             {navLinks.slice(1).map((link) => (
@@ -151,6 +207,34 @@ const Header = () => {
                   >
                     View All Services
                   </Link>
+                </div>
+              )}
+            </div>
+            
+            {/* Industries - with sub-menu */}
+            <div className="flex flex-col">
+              <button 
+                className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}
+                onClick={() => toggleMobileIndustry('industries')}
+              >
+                <span>Industries</span>
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileExpandedIndustry === 'industries' ? 'transform rotate-180' : ''}`} />
+              </button>
+              
+              {mobileExpandedIndustry === 'industries' && (
+                <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
+                  {industryItems.map((industry) => (
+                    <div key={industry.name}>
+                      <Link
+                        to={industry.path}
+                        className="flex items-center py-2 text-gray-700 hover:text-brand-500"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <ChevronRight className="h-3 w-3 mr-2" />
+                        <span>{industry.name}</span>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>

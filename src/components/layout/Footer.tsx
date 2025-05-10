@@ -20,48 +20,30 @@ const Footer = () => {
     { name: 'Standardize Digital Portfolio', path: '/standardize-digital-portfolio' }
   ];
 
-  // Industry links - Updated with direct links to industry pages
+  // Industry links - Removed specified industries
   const industryLinks = [
     { name: 'Insurance', path: '/industries/insurance' },
     { name: 'Finance', path: '/industries/finance' },
     { name: 'Healthcare', path: '/industries/healthcare' },
     { name: 'Retail', path: '/industries/retail' },
-    { name: 'Small and Mid Level Enterprises', path: '/industries/sme' },
-    { name: 'Construction', path: '/industries/construction' },
-    { name: 'Logistics', path: '/industries/logistics' },
   ];
 
-  // Quick links - Renamed Blog to Resources
-  const quickLinks = [
-    { name: 'Resources', path: '/blog' },
-    { name: 'Events', path: '/events' },
-    { name: 'Our Work', path: '/case-studies' },
-    { name: 'Guides', path: '/guides' },
-    { name: 'Talks', path: '/talks' },
-    { name: 'Serverless', path: '/serverless' },
-    { name: 'Serverless Tools', path: '/serverless-tools' },
-    { name: 'Serverless Architecture', path: '/serverless-architecture' },
-  ];
-
-  // Company links
+  // Company links - Updated
   const companyLinks = [
-    { name: 'About us', path: '/about' },
-    { name: 'Your Next Tech Leader', path: '/about#tech-leader' },
-    { name: 'AntVerse', path: '/antverse' },
-    { name: 'Careers', path: '/careers' },
+    { name: 'About Us', path: '/about' },
     { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Brand Guidelines', path: '/brand-guidelines' },
-    { name: 'Trust Center', path: '/trust-center' },
+    { name: 'Terms and Conditions', path: '/terms-and-conditions' },
+    { name: 'Cookie Policy', path: '/cookie-policy' },
+    { name: 'Disclaimer', path: '/disclaimer' },
   ];
 
   return (
     <footer className="bg-white text-gray-700 pt-16 pb-8 border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <FooterLinks title="What We Do" links={serviceLinks} />
           <FooterLinks title="Industries" links={industryLinks} />
-          <FooterLinks title="Quick links" links={quickLinks} />
           <FooterLinks title="Company" links={companyLinks} showIcon={true} />
         </div>
 

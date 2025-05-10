@@ -21,7 +21,7 @@ import LeadQualification from "./pages/LeadQualification";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 
-// Import new service landing pages
+// Import service landing pages
 import UnifyBrandPage from "./pages/services/UnifyBrandPage";
 import DigitalizeProductPage from "./pages/services/DigitalizeProductPage";
 import ExpandOfferingsPage from "./pages/services/ExpandOfferingsPage";
@@ -34,6 +34,12 @@ import InsurancePage from "./pages/industries/InsurancePage";
 import FinancePage from "./pages/industries/FinancePage";
 import HealthcarePage from "./pages/industries/HealthcarePage";
 import RetailPage from "./pages/industries/RetailPage";
+
+// Import legal pages
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsAndConditions from "./pages/legal/TermsAndConditions";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import Disclaimer from "./pages/legal/Disclaimer";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +67,12 @@ const App = () => (
           <Route path="/industries/finance" element={<FinancePage />} />
           <Route path="/industries/healthcare" element={<HealthcarePage />} />
           <Route path="/industries/retail" element={<RetailPage />} />
+          
+          {/* Legal pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           
           {/* Keep the service structure routes for backward compatibility */}
           <Route path="/services/:serviceSlug" element={<MainServicePage />} />
