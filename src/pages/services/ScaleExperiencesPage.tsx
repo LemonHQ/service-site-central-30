@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Database, GitBranch, Cloud, BarChart2, Shield } from 'lucide-react';
+import { Database, Globe, Shield, BarChart2, Settings } from 'lucide-react';
 
 const ScaleExperiencesPage = () => {
   return (
@@ -21,12 +21,12 @@ const ScaleExperiencesPage = () => {
         {
           title: "Automated Deployment Pipelines",
           description: "Implement CI/CD pipelines for rapid and reliable deployments.",
-          icon: GitBranch
+          icon: Globe
         },
         {
           title: "Cloud Infrastructure Management",
           description: "Optimize cloud infrastructure for performance and cost efficiency.",
-          icon: Cloud
+          icon: Settings
         },
         {
           title: "Performance Monitoring and Optimization",
@@ -37,28 +37,6 @@ const ScaleExperiencesPage = () => {
           title: "Disaster Recovery Planning",
           description: "Develop strategies to minimize downtime and data loss.",
           icon: Shield
-        },
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Assessment",
-          description: "Evaluate current infrastructure and identify scalability bottlenecks.",
-        },
-        {
-          number: 2,
-          title: "Architecture Design",
-          description: "Design a scalable architecture that meets your business needs.",
-        },
-        {
-          number: 3,
-          title: "Implementation",
-          description: "Implement the architecture using best practices and automated tools.",
-        },
-        {
-          number: 4,
-          title: "Testing and Optimization",
-          description: "Test the architecture and optimize it for performance and cost efficiency.",
         },
       ]}
       benefits={[

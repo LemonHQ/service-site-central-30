@@ -4,7 +4,6 @@ import MainLayout from '@/components/layout/MainLayout';
 import HeroSection from './landing/HeroSection';
 import FeaturesSection, { ServiceFeature } from './landing/FeaturesSection';
 import BenefitsSection from './landing/BenefitsSection';
-import ProcessSection, { ServiceProcess } from './landing/ProcessSection';
 import RelatedServicesSection from './landing/RelatedServicesSection';
 import FaqSection from './landing/FaqSection';
 import CtaSection from './landing/CtaSection';
@@ -25,7 +24,7 @@ export interface ServiceLandingProps {
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   features: ServiceFeature[];
-  processes: ServiceProcess[];
+  processes?: ServiceProcess[];
   benefits: string[];
   heroImage: string;
   isAiHeroImage?: boolean;
@@ -49,7 +48,6 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   secondaryCtaText,
   secondaryCtaLink,
   features,
-  processes,
   benefits,
   heroImage,
   isAiHeroImage = false,
@@ -77,8 +75,6 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       <FeaturesSection features={features} />
       
       <BenefitsSection benefits={benefits} />
-      
-      <ProcessSection processes={processes} />
       
       <RelatedServicesSection relatedServices={relatedServices} />
 

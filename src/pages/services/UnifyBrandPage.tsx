@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { BadgeCheck, Library, Globe, BarChart2, Network } from 'lucide-react';
+import { BadgeCheck, Library, Globe, BarChart2, Network, Layers, Shield, Settings, Database } from 'lucide-react';
 
 const UnifyBrandPage = () => {
   return (
@@ -14,51 +14,49 @@ const UnifyBrandPage = () => {
       heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
       features={[
         {
-          title: "Centralized Channel Management",
-          description: "Coordinate and manage all brand touchpoints from a single unified platform for consistency and efficiency.",
-          icon: BadgeCheck
-        },
-        {
-          title: "Standard Brand Library",
-          description: "Create and maintain a comprehensive library of brand assets and guidelines accessible across the organization.",
-          icon: Library
-        },
-        {
-          title: "Market Localizations",
-          description: "Adapt brand experiences to local markets while maintaining global brand consistency and standards.",
+          title: "Strategic Brand Expansion",
+          description: "Grow into new markets and offerings with clarity, control, and cohesion.",
           icon: Globe
         },
         {
-          title: "Brand Portfolio Monitoring",
-          description: "Track brand performance metrics and analytics across all channels to ensure consistent customer experiences.",
-          icon: BarChart2
+          title: "Reusable Brand Infrastructure",
+          description: "Deploy scalable templates and systems to reduce duplication and speed up delivery.",
+          icon: Layers
         },
         {
-          title: "Multi-brand Ecosystem Alignment",
-          description: "Harmonize multiple brands within your portfolio to create coherent customer journeys across your ecosystem.",
+          title: "Masterbrand-Led Growth",
+          description: "Expand under a unified identity while giving sub-brands room to flex.",
           icon: Network
-        }
-      ]}
-      processes={[
-        {
-          number: 1,
-          title: "Discovery & Audit",
-          description: "Comprehensive analysis of existing brand touchpoints, inconsistencies, and opportunities."
         },
         {
-          number: 2,
-          title: "Strategy Development",
-          description: "Creation of brand unification strategy aligned with business objectives and customer needs."
+          title: "Market Localization at Scale",
+          description: "Adapt global experiences locally—without losing consistency or speed.",
+          icon: Globe
         },
         {
-          number: 3,
-          title: "Design System Creation",
-          description: "Development of scalable design system with component library and usage guidelines."
+          title: "Centralized Brand Management",
+          description: "Control assets, messaging, and delivery from a single, centralized hub.",
+          icon: Database
         },
         {
-          number: 4,
-          title: "Implementation",
-          description: "Phased rollout of unified brand experiences across channels and markets."
+          title: "Consistent Brand Experiences",
+          description: "Align every touchpoint to reinforce your brand across platforms.",
+          icon: BadgeCheck
+        },
+        {
+          title: "Scalable Design & Brand Libraries",
+          description: "Provide teams with modular systems and approved assets that grow with you.",
+          icon: Library
+        },
+        {
+          title: "IP Protection and Control",
+          description: "Protect brand identity and assets through controlled access and usage.",
+          icon: Shield
+        },
+        {
+          title: "Integrated Brand Governance",
+          description: "Enforce quality and accountability with embedded standards and workflows.",
+          icon: Settings
         }
       ]}
       benefits={[
