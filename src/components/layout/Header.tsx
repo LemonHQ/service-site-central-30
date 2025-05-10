@@ -98,9 +98,9 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Updated with equal spacing */}
+          {/* Desktop Navigation - Updated with reduced spacing */}
           <nav className="hidden md:flex items-center">
-            <div className="flex items-center space-x-6 xl:space-x-8">
+            <div className="flex items-center space-x-3 xl:space-x-4">
               <Link 
                 to="/" 
                 className={`${isActive('/')} font-medium px-1`}
@@ -113,12 +113,14 @@ const Header = () => {
                 <ServiceSubNav />
               </div>
 
-              {/* Our Approach dropdown */}
+              {/* Our Approach dropdown - removed background fill */}
               <div className="px-1">
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}>
+                      <NavigationMenuTrigger 
+                        className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent`}
+                      >
                         Our Approach
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -147,12 +149,14 @@ const Header = () => {
                 </NavigationMenu>
               </div>
 
-              {/* Industries dropdown */}
+              {/* Industries dropdown - removed background fill */}
               <div className="px-1">
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''}`}>
+                      <NavigationMenuTrigger 
+                        className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent`}
+                      >
                         Industries
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
