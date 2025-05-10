@@ -1,15 +1,47 @@
 
 import React, { useState } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from '@/components/ui/sonner';
 
 const NewsletterSubscribe: React.FC = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle subscription logic here
-    console.log('Subscribing email:', email);
-    // Reset form
-    setEmail('');
+    
+    if (!email || !email.includes('@')) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Store email in Supabase
+      const { error } = await supabase
+        .from('newsletter_subscriptions')
+        .insert([{ email }]);
+      
+      if (error) {
+        // Handle unique constraint violation gracefully
+        if (error.code === '23505') {
+          toast.info('You are already subscribed to our newsletter!');
+        } else {
+          throw error;
+        }
+      } else {
+        toast.success('Thanks for subscribing to our newsletter!');
+      }
+      
+      // Reset form
+      setEmail('');
+    } catch (error) {
+      console.error('Error subscribing to newsletter:', error);
+      toast.error('Failed to subscribe. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -26,12 +58,14 @@ const NewsletterSubscribe: React.FC = () => {
           placeholder="Enter email address" 
           className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 flex-grow"
           required
+          disabled={isSubmitting}
         />
         <button 
           type="submit" 
           className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors"
+          disabled={isSubmitting}
         >
-          Subscribe
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
       

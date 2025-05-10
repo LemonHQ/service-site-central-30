@@ -1,18 +1,16 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { 
-  Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users, Library 
-} from 'lucide-react';
+import { mainServices } from '@/data/services';
+import { ChevronRight } from 'lucide-react';
 
 // Navigation menu item component for consistent styling
 const ListItem = React.forwardRef<
@@ -42,11 +40,12 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 // Custom ListItem that works with React Router Link
-const RouterListItem = ({ title, to, className, icon: Icon }: { 
+const RouterListItem = ({ title, to, className, icon: Icon, description }: { 
   title: string; 
   to: string; 
   className?: string;
   icon?: React.ElementType;
+  description?: string;
 }) => {
   return (
     <li className="list-none">
@@ -58,10 +57,15 @@ const RouterListItem = ({ title, to, className, icon: Icon }: {
             className
           )}
         >
-          <div className="text-sm font-medium leading-none flex items-center">
+          <div className="flex items-center">
             {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
-            <span>{title}</span>
+            <span className="text-sm font-medium">{title}</span>
           </div>
+          {description && (
+            <p className="line-clamp-2 mt-1 text-xs text-muted-foreground">
+              {description}
+            </p>
+          )}
         </Link>
       </NavigationMenuLink>
     </li>
@@ -70,69 +74,6 @@ const RouterListItem = ({ title, to, className, icon: Icon }: {
 
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
-  // All services data - matching the data in Services.tsx
-  const services = [
-    {
-      title: 'Validating Product Ideas',
-      link: '/services/validating-product-ideas',
-      icon: Lightbulb
-    },
-    {
-      title: 'Ideating Product Concepts',
-      link: '/services/ideating-product-concepts',
-      icon: PenTool
-    },
-    {
-      title: 'Designing Brand & Experiences',
-      link: '/services/designing-experiences',
-      icon: Palette
-    },
-    {
-      title: 'Launching New Products',
-      link: '/services/launching-products',
-      icon: Rocket
-    },
-    {
-      title: 'Scaling Products',
-      link: '/services/scaling-products',
-      icon: TrendingUp
-    },
-    {
-      title: 'Expand Product Offerings',
-      link: '/services/expand-product-offerings',
-      icon: LayersIcon
-    },
-    {
-      title: 'Standardize Technology',
-      link: '/services/standardize-technology',
-      icon: Settings
-    },
-    {
-      title: 'Pilot Emerging Tech',
-      link: '/services/pilot-emerging-tech',
-      icon: Cpu
-    },
-    {
-      title: 'Connect to Digital Ecosystems',
-      link: '/services/connect-ecosystems',
-      icon: Network
-    },
-    {
-      title: 'Optimize Digital Portfolios',
-      link: '/services/optimize-portfolios',
-      icon: BarChart2
-    },
-    {
-      title: 'Unify Brand Experiences',
-      link: '/services/unify-brand-experiences',
-      icon: Users
-    },
-    {
-      title: 'Standardize Digital Portfolio',
-      link: '/services/standardize-digital-portfolio',
-      icon: Library
-    },
-  ];
 
   return (
     <NavigationMenu>
@@ -140,7 +81,7 @@ const ServiceSubNav = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-base">What We Do</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 w-[600px] lg:w-[700px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 w-[600px] lg:w-[760px]">
               <div className="relative overflow-hidden rounded-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" 
@@ -153,25 +94,28 @@ const ServiceSubNav = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-[500px]">
-                <ul className="col-span-2 list-none p-0 m-0 grid grid-cols-2 gap-2">
-                  {services.map((service, index) => (
-                    <RouterListItem
-                      key={index}
-                      title={service.title}
-                      to={service.link}
-                      icon={service.icon}
-                    />
+              <div className="overflow-y-auto max-h-[500px]">
+                <div className="space-y-1">
+                  {mainServices.map((service) => (
+                    <div key={service.id} className="mb-3">
+                      <RouterListItem
+                        title={service.title}
+                        to={`/services/${service.slug}`}
+                        icon={service.icon}
+                        description={service.shortDescription}
+                        className="font-semibold pb-1"
+                      />
+                    </div>
                   ))}
-                </ul>
-                
-                <div className="col-span-2 mt-2">
-                  <Link 
-                    to="/services"
-                    className="block w-full text-center py-2 bg-brand-100 hover:bg-brand-200 text-brand-700 rounded transition-colors"
-                  >
-                    View All Services
-                  </Link>
+                  
+                  <div className="pt-2 mt-2 border-t">
+                    <Link 
+                      to="/services"
+                      className="block w-full text-center py-2 bg-brand-100 hover:bg-brand-200 text-brand-700 rounded transition-colors"
+                    >
+                      View All Services
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,3 +127,8 @@ const ServiceSubNav = () => {
 };
 
 export default ServiceSubNav;
+
+// We need to manually re-export NavigationMenuLink from the UI components
+// since we're using it in this file
+import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
+export { NavigationMenuLink };

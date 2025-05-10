@@ -1,196 +1,121 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
-import ServiceCard from '@/components/ui/ServiceCard';
-import CtaSection from '../components/ui/CtaSection';
-import { 
-  Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users 
-} from 'lucide-react';
+import { mainServices, subServices } from '@/data/services';
+import { ArrowRight } from 'lucide-react';
 
 const Services = () => {
-  console.log("Rendering Services component");
-  // All services data
-  const allServices = [
-    {
-      title: 'Validating Product Ideas',
-      description: 'Transform innovative concepts into validated opportunities with market research, user testing, prototyping, and data analytics.',
-      link: '/services/validating-product-ideas',
-      icon: Lightbulb
-    },
-    {
-      title: 'Ideating Product Concepts',
-      description: 'Generate breakthrough product concepts through collaborative workshops, design thinking, and strategic innovation frameworks.',
-      link: '/services/ideating-product-concepts',
-      icon: PenTool
-    },
-    {
-      title: 'Designing Brand & Customer Experiences',
-      description: 'Create cohesive, engaging brand and customer experiences that build emotional connections and drive loyalty.',
-      link: '/services/designing-experiences',
-      icon: Palette
-    },
-    {
-      title: 'Launching New Brands & Products',
-      description: 'Accelerate time-to-market and maximize impact with expert launch strategies, go-to-market planning, and execution.',
-      link: '/services/launching-products',
-      icon: Rocket
-    },
-    {
-      title: 'Scaling Products',
-      description: 'Maximize growth potential with scalable architectures, optimization frameworks, and performance tuning.',
-      link: '/services/scaling-products',
-      icon: TrendingUp
-    },
-    {
-      title: 'Expand Product Offerings',
-      description: 'Diversify and grow your product portfolio through strategic planning, market analysis, and opportunity mapping.',
-      link: '/services/expand-product-offerings',
-      icon: LayersIcon
-    },
-    {
-      title: 'Standardize Technology',
-      description: 'Create efficiency and consistency across your organization with technology standardization and integration services.',
-      link: '/services/standardize-technology',
-      icon: Settings
-    },
-    {
-      title: 'Pilot Emerging Tech',
-      description: 'Evaluate and integrate emerging technologies with low-risk pilot programs and proofs of concept.',
-      link: '/services/pilot-emerging-tech',
-      icon: Cpu
-    },
-    {
-      title: 'Connect to Digital Ecosystems',
-      description: 'Integrate your products and services into broader digital ecosystems to increase reach and add customer value.',
-      link: '/services/connect-ecosystems',
-      icon: Network
-    },
-    {
-      title: 'Optimize Digital Portfolios',
-      description: 'Harmonize your digital assets into coherent, high-performing portfolios that maximize business value.',
-      link: '/services/optimize-portfolios',
-      icon: BarChart2
-    },
-    {
-      title: 'Unify Brand Experiences',
-      description: 'Create consistent, compelling brand experiences across all customer touchpoints and platforms.',
-      link: '/services/unify-brand-experiences',
-      icon: Users
-    },
-  ];
-
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-brand-100 py-16 md:py-24">
+      <section className="bg-brand-50 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 text-brand-700">What We Do</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700">
-              Comprehensive digital product services for enterprise brands seeking to innovate and transform.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Services</h1>
+            <p className="text-xl mb-8 text-gray-700">
+              We offer a comprehensive suite of digital product services to help enterprises 
+              validate, design, launch, and scale products that drive business growth.
             </p>
           </div>
         </div>
       </section>
 
-      {/* All Services Section */}
-      <section className="section-padding">
+      {/* Main Services Section */}
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading 
-            title="Full Service Offerings" 
-            subtitle="From validating initial concepts to scaling mature products, our comprehensive services support the entire product lifecycle."
+          <SectionHeading
+            title="What We Do"
+            subtitle="Our main service areas helping enterprises with their digital transformation journey"
             centered
           />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                link={service.link}
-                icon={service.icon}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-brand-700">
-                Our Product Development Methodology
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We approach product development as a systematic yet creative process, combining proven methodologies with innovative thinking to drive results.
-              </p>
+          
+          <div className="mt-12 space-y-16">
+            {mainServices.map((service, index) => {
+              const Icon = service.icon;
+              const relatedSubServices = subServices.filter(s => s.parentId === service.id);
               
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-brand-400 text-white flex items-center justify-center mr-3">1</span>
-                    Discover & Define
-                  </h3>
-                  <p className="text-gray-600 ml-11">Research, stakeholder interviews, and problem definition to establish clear goals.</p>
+              return (
+                <div 
+                  key={service.id} 
+                  className={`flex flex-col lg:flex-row gap-8 lg:gap-16 ${
+                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                  }`}
+                >
+                  <div className="flex-1">
+                    <img 
+                      src={service.coverImage} 
+                      alt={service.title}
+                      className="rounded-xl shadow-md w-full h-64 lg:h-80 object-cover"
+                    />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="bg-brand-50 p-3 rounded-lg w-fit mb-4">
+                      {Icon && <Icon className="h-6 w-6 text-brand-600" />}
+                    </div>
+                    
+                    <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    {relatedSubServices.length > 0 && (
+                      <div className="mb-6">
+                        <h4 className="font-medium mb-3">Specialized Services:</h4>
+                        <ul className="space-y-2">
+                          {relatedSubServices.map((subService) => (
+                            <li key={subService.id}>
+                              <Link 
+                                to={`/services/${service.slug}/${subService.slug}`}
+                                className="flex items-center text-brand-600 hover:text-brand-700"
+                              >
+                                <div className="h-1.5 w-1.5 bg-brand-500 rounded-full mr-2"></div>
+                                <span>{subService.title}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
+                    <Link 
+                      to={`/services/${service.slug}`}
+                      className="flex items-center text-brand-600 font-medium hover:text-brand-700"
+                    >
+                      <span>Learn more about {service.title}</span>
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </div>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-brand-400 text-white flex items-center justify-center mr-3">2</span>
-                    Ideate & Conceptualize
-                  </h3>
-                  <p className="text-gray-600 ml-11">Generate innovative solutions through collaborative workshops and design thinking.</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-brand-400 text-white flex items-center justify-center mr-3">3</span>
-                    Prototype & Validate
-                  </h3>
-                  <p className="text-gray-600 ml-11">Build and test rapid prototypes to validate concepts with real users.</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-brand-400 text-white flex items-center justify-center mr-3">4</span>
-                    Build & Launch
-                  </h3>
-                  <p className="text-gray-600 ml-11">Develop production-ready products with thorough quality assurance and strategic launch planning.</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-brand-400 text-white flex items-center justify-center mr-3">5</span>
-                    Measure & Optimize
-                  </h3>
-                  <p className="text-gray-600 ml-11">Continuous improvement through data analysis, user feedback, and performance optimization.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-w-3 aspect-h-2 bg-gray-200 rounded-lg">
-                {/* Replace with actual image */}
-                <div className="w-full h-full bg-gray-300 rounded-lg"></div>
-              </div>
-              <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-brand-200 rounded-lg -z-10"></div>
-              <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-brand-300 rounded-lg -z-10"></div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <CtaSection 
-        title="Ready to Transform Your Products?"
-        subtitle="Let's discuss how our services can address your specific challenges and opportunities."
-        buttonText="Contact Us Now"
-        buttonLink="/contact"
-      />
+      <section className="py-16 md:py-24 bg-brand-600 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your digital experience?</h2>
+            <p className="text-xl mb-8 text-brand-100">
+              Let's discuss how our services can help your organization achieve its goals.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/contact">
+                <button className="px-8 py-3 bg-white text-brand-600 rounded-md font-medium hover:bg-brand-100 transition-colors">
+                  Get in Touch
+                </button>
+              </Link>
+              <Link to="/lead-qualification">
+                <button className="px-8 py-3 border border-white text-white rounded-md font-medium hover:bg-brand-700 transition-colors">
+                  Start Your Project
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 };

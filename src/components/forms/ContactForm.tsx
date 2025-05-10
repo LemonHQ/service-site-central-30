@@ -17,6 +17,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -54,14 +55,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
     setLoading(true);
     
     try {
-      // Store form data (in localStorage for now)
-      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-      submissions.push({
-        ...data,
-        id: `submission-${Date.now()}`,
-        createdAt: new Date().toISOString(),
-      });
-      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+      // Store form data in Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([data]);
+      
+      if (error) {
+        throw error;
+      }
       
       // Success notification
       toast({
@@ -75,6 +76,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
       // Redirect to thank you page
       navigate('/thank-you');
     } catch (error) {
+      console.error('Error submitting contact form:', error);
       toast({
         title: "Error",
         description: "There was a problem submitting your form. Please try again.",
@@ -160,17 +162,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
                       className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
                     >
                       <option value="">Select a service</option>
-                      <option value="validating-product-ideas">Validating Product Ideas</option>
-                      <option value="ideating-product-concepts">Ideating Product Concepts</option>
-                      <option value="designing-experiences">Designing Brand & Customer Experiences</option>
-                      <option value="launching-products">Launching New Products</option>
-                      <option value="scaling-products">Scaling Products</option>
-                      <option value="expand-product-offerings">Expand Product Offerings</option>
-                      <option value="standardize-technology">Standardize Technology</option>
-                      <option value="pilot-emerging-tech">Pilot Emerging Tech</option>
-                      <option value="connect-ecosystems">Connect to Digital Ecosystems</option>
-                      <option value="optimize-portfolios">Optimize Digital Portfolios</option>
                       <option value="unify-brand-experiences">Unify Brand Experiences</option>
+                      <option value="digitalize-product-lines">Digitalize Product Lines</option>
+                      <option value="expand-product-offerings">Expand Product Offerings</option>
+                      <option value="scale-digital-experiences">Scale Digital Experiences</option>
+                      <option value="pilot-emerging-tech">Pilot Emerging Tech</option>
+                      <option value="standardize-digital-portfolio">Standardize Digital Portfolio</option>
                       <option value="other">Other / Not Sure</option>
                     </select>
                   </FormControl>

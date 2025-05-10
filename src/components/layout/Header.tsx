@@ -1,12 +1,13 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import ServiceSubNav from '../navigation/ServiceSubNav';
+import { mainServices, subServices } from '@/data/services';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileExpandedService, setMobileExpandedService] = useState<string | null>(null);
   const location = useLocation();
 
   // Navigation links - Updated names
@@ -26,6 +27,14 @@ const Header = () => {
   };
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const toggleMobileService = (serviceId: string) => {
+    if (mobileExpandedService === serviceId) {
+      setMobileExpandedService(null);
+    } else {
+      setMobileExpandedService(serviceId);
+    }
+  };
 
   return (
     <header className="sticky top-0 bg-white border-b border-gray-100 z-50">
@@ -87,34 +96,66 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 animate-fade-in">
-          <nav className="flex flex-col space-y-4 py-6 px-8">
+          <nav className="flex flex-col space-y-2 py-6 px-8">
             <Link 
               to="/" 
-              className={`${isActive('/')} text-lg`}
+              className={`${isActive('/')} text-lg py-2`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              to="/services"
-              className={`${isActive('/services')} text-lg`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              What We Do
-            </Link>
+            
+            {/* What We Do - with sub-menu */}
+            <div className="flex flex-col">
+              <button 
+                className={`flex items-center justify-between text-lg py-2 ${location.pathname.startsWith('/services') ? 'text-brand-600 font-medium' : ''}`}
+                onClick={() => toggleMobileService('services')}
+              >
+                <span>What We Do</span>
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileExpandedService === 'services' ? 'transform rotate-180' : ''}`} />
+              </button>
+              
+              {mobileExpandedService === 'services' && (
+                <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
+                  {mainServices.map((service) => (
+                    <div key={service.id}>
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="flex items-center py-2 text-gray-700 hover:text-brand-500"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <ChevronRight className="h-3 w-3 mr-2" />
+                        <span>{service.title}</span>
+                      </Link>
+                    </div>
+                  ))}
+                  <Link
+                    to="/services"
+                    className="flex items-center py-2 text-brand-600 font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    View All Services
+                  </Link>
+                </div>
+              )}
+            </div>
+            
+            {/* Other main nav links */}
             {navLinks.slice(1).map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path} 
-                className={`${isActive(link.path)} text-lg`}
+                className={`${isActive(link.path)} text-lg py-2`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
+            
             <Link 
               to="/lead-qualification" 
               onClick={() => setIsMenuOpen(false)}
+              className="pt-2"
             >
               <Button className="w-full mt-2 bg-brand-400 hover:bg-brand-500">
                 Get Started

@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
+import MainServicePage from "./pages/MainServicePage";
+import SubServicePage from "./pages/SubServicePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -32,6 +34,11 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
+          
+          {/* New service structure routes */}
+          <Route path="/services/:serviceSlug" element={<MainServicePage />} />
+          <Route path="/services/:serviceSlug/:subServiceSlug" element={<SubServicePage />} />
+          
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/insights" element={<Blog />} /> {/* Changed from /blog to /insights */}

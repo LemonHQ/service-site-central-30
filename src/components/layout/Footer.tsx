@@ -8,17 +8,14 @@ import LocationInfo from '../footer/LocationInfo';
 import ContactSection from '../footer/ContactSection';
 import NewsletterSubscribe from '../footer/NewsletterSubscribe';
 import Copyright from '../footer/Copyright';
+import { mainServices } from '@/data/services';
 
 const Footer = () => {
-  // Service links - Updated with actual services
-  const serviceLinks = [
-    { name: 'Validating Product Ideas', path: '/services/validating-product-ideas' },
-    { name: 'Ideating Product Concepts', path: '/services/ideating-product-concepts' },
-    { name: 'Designing Brand & Customer Experiences', path: '/services/designing-experiences' },
-    { name: 'Launching New Products', path: '/services/launching-products' },
-    { name: 'Scaling Products', path: '/services/scaling-products' },
-    { name: 'Expand Product Offerings', path: '/services/expand-product-offerings' },
-  ];
+  // Service links - Updated with actual services from our data structure
+  const serviceLinks = mainServices.map(service => ({
+    name: service.title,
+    path: `/services/${service.slug}`
+  }));
 
   // Industry links
   const industryLinks = [
