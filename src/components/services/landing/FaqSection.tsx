@@ -1,29 +1,16 @@
 
 import React from 'react';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { trackEvent, EventCategory, EventName } from '@/services/analytics';
-
-interface Faq {
-  question: string;
-  answer: string;
-}
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface FaqSectionProps {
-  faqs: Faq[];
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
-  if (!faqs || faqs.length === 0) return null;
-  
-  // Track when a user interacts with a FAQ
-  const handleFaqClick = (question: string, index: number) => {
-    trackEvent(EventName.CLICK, EventCategory.CONTENT, {
-      section: 'faq',
-      question: question,
-      questionIndex: index
-    });
-  };
-  
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -33,17 +20,19 @@ const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
           centered
         />
         
-        <div className="max-w-3xl mx-auto mt-8 space-y-6">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className="border-b border-gray-200 pb-6 cursor-pointer"
-              onClick={() => handleFaqClick(faq.question, index)}
-            >
-              <h3 className="text-lg font-semibold mb-2 text-brand-600">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
-            </div>
-          ))}
+        <div className="mt-8 max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="text-left font-semibold text-lg text-brand-600">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

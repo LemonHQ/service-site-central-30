@@ -9,6 +9,12 @@ import RelatedServicesSection from './landing/RelatedServicesSection';
 import FaqSection from './landing/FaqSection';
 import CtaSection from './landing/CtaSection';
 import { LucideIcon } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import BlogCard from '@/components/blog/BlogCard';
+import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
+import { blogPosts } from '@/data/blogPosts';
+import { caseStudies } from '@/data/caseStudies';
+import SectionHeading from '@/components/ui/SectionHeading';
 
 export interface ServiceLandingProps {
   title: string;
@@ -50,6 +56,10 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   relatedServices,
   faqs = []
 }) => {
+  // Get a selection of case studies and blog posts
+  const featuredCaseStudies = caseStudies.slice(0, 6);
+  const featuredBlogPosts = blogPosts.slice(0, 6);
+
   return (
     <MainLayout>
       <HeroSection
@@ -71,6 +81,76 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       <ProcessSection processes={processes} />
       
       <RelatedServicesSection relatedServices={relatedServices} />
+
+      {/* Case Studies Carousel Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <SectionHeading 
+            title="Case Studies" 
+            subtitle="See how we've helped organizations achieve their goals" 
+            centered
+          />
+          
+          <div className="mt-8">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {featuredCaseStudies.map((caseStudy) => (
+                  <CarouselItem key={caseStudy.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <CaseStudyCard caseStudy={caseStudy} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-2 mt-8">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </section>
+      
+      {/* Insights Carousel Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <SectionHeading 
+            title="Insights" 
+            subtitle="Latest thinking on digital transformation" 
+            centered
+          />
+          
+          <div className="mt-8">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {featuredBlogPosts.map((post) => (
+                  <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <BlogCard post={post} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-2 mt-8">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </section>
       
       {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
       

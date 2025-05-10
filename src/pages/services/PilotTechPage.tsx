@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Brain, FlaskConical, Zap, History, BarChart } from 'lucide-react';
+import { Brain, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
 
 const PilotTechPage = () => {
   return (
@@ -36,7 +36,7 @@ const PilotTechPage = () => {
         {
           title: "Impact Measurement",
           description: "Quantify business outcomes and ROI of emerging technology initiatives.",
-          icon: BarChart
+          icon: BarChart2
         }
       ]}
       processes={[

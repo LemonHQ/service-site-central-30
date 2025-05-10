@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { BadgeCheck, Globe, Palette, Users, Gauge } from 'lucide-react';
+import { BadgeCheck, Library, Globe, BarChart2, Network } from 'lucide-react';
 
 const UnifyBrandPage = () => {
   return (
@@ -14,29 +14,29 @@ const UnifyBrandPage = () => {
       heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
       features={[
         {
-          title: "Brand Consistency Framework",
-          description: "Develop a comprehensive framework to ensure brand consistency across all digital touchpoints.",
+          title: "Centralized Channel Management",
+          description: "Coordinate and manage all brand touchpoints from a single unified platform for consistency and efficiency.",
           icon: BadgeCheck
         },
         {
-          title: "Cross-Channel Experience Design",
-          description: "Create cohesive brand experiences that span web, mobile, social, and physical touchpoints.",
+          title: "Standard Brand Library",
+          description: "Create and maintain a comprehensive library of brand assets and guidelines accessible across the organization.",
+          icon: Library
+        },
+        {
+          title: "Market Localizations",
+          description: "Adapt brand experiences to local markets while maintaining global brand consistency and standards.",
           icon: Globe
         },
         {
-          title: "Design System Implementation",
-          description: "Build and implement scalable design systems that enforce brand standards while enabling innovation.",
-          icon: Palette
+          title: "Brand Portfolio Monitoring",
+          description: "Track brand performance metrics and analytics across all channels to ensure consistent customer experiences.",
+          icon: BarChart2
         },
         {
-          title: "Multi-Market Brand Governance",
-          description: "Establish governance models that balance global brand integrity with regional market needs.",
-          icon: Users
-        },
-        {
-          title: "Brand Performance Measurement",
-          description: "Implement metrics and analytics to measure brand consistency and its impact on business outcomes.",
-          icon: Gauge
+          title: "Multi-brand Ecosystem Alignment",
+          description: "Harmonize multiple brands within your portfolio to create coherent customer journeys across your ecosystem.",
+          icon: Network
         }
       ]}
       processes={[

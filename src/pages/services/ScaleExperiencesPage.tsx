@@ -1,5 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
+import { Database, GitBranch, Cloud, BarChart2, Shield } from 'lucide-react';
 
 const ScaleExperiencesPage = () => {
   return (
@@ -14,22 +16,27 @@ const ScaleExperiencesPage = () => {
         {
           title: "Scalable Architecture Design",
           description: "Create flexible architectures that can handle increasing traffic and data volumes.",
+          icon: Database
         },
         {
           title: "Automated Deployment Pipelines",
           description: "Implement CI/CD pipelines for rapid and reliable deployments.",
+          icon: GitBranch
         },
         {
           title: "Cloud Infrastructure Management",
           description: "Optimize cloud infrastructure for performance and cost efficiency.",
+          icon: Cloud
         },
         {
           title: "Performance Monitoring and Optimization",
           description: "Implement monitoring tools and practices to ensure optimal performance.",
+          icon: BarChart2
         },
         {
           title: "Disaster Recovery Planning",
           description: "Develop strategies to minimize downtime and data loss.",
+          icon: Shield
         },
       ]}
       processes={[
