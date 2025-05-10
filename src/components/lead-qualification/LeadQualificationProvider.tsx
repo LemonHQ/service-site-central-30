@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState } from 'react';
 import { Step1Data, Step2Data, Step3Data } from './schema';
 import { useToast } from '@/hooks/use-toast';
@@ -48,15 +49,21 @@ export const LeadQualificationProvider: React.FC<LeadQualificationProviderProps>
     try {
       setIsSubmitting(true);
       
+      // Ensure all required fields are properly set with non-optional values
+      // This fixes the TypeScript error with the Supabase insert
       const formData = {
-        ...step1Data,
-        ...step2Data,
-        ...step3Data,
+        sectors: step1Data.sectors,
+        markets: step1Data.markets || '',
+        brands: step1Data.brands || '',
+        products: step1Data.products || '',
+        challenges: step2Data.challenges,
+        timeframe: step3Data.timeframe,
+        email: step3Data.email
       };
 
       const { error } = await supabase
         .from('lead_qualifications')
-        .insert([formData]);
+        .insert(formData);
 
       if (error) {
         throw error;

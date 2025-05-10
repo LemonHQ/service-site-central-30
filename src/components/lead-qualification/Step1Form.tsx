@@ -2,13 +2,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
-import { ArrowRight } from 'lucide-react';
 import SelectableBox from './SelectableBox';
 import NumberOption from './NumberOption';
 import { Step1Data, step1Schema } from './schema';
 import { sectors, numberOptions } from './formConstants';
+import LeadFormButton from './LeadFormButton';
 
 interface Step1FormProps {
   defaultValues: Step1Data;
@@ -98,9 +97,15 @@ const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
         </div>
 
         <div className="pt-4 flex justify-end">
-          <Button type="submit" className="bg-brand-500 hover:bg-brand-600 w-full md:w-auto">
-            Continue <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <LeadFormButton 
+            type="submit" 
+            variant="primary" 
+            icon="right-arrow"
+            fullWidth={true} 
+            className="md:w-auto"
+          >
+            Continue
+          </LeadFormButton>
         </div>
       </form>
     </div>

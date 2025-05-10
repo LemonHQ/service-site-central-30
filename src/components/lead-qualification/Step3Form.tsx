@@ -2,12 +2,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { Step3Data, step3Schema } from './schema';
 import { timeframes } from './formConstants';
+import LeadFormButton from './LeadFormButton';
 
 interface Step3FormProps {
   defaultValues: Step3Data;
@@ -80,20 +80,22 @@ const Step3Form: React.FC<Step3FormProps> = ({
         </div>
 
         <div className="pt-4 flex justify-between">
-          <Button 
+          <LeadFormButton 
             type="button" 
-            variant="outline" 
+            variant="back"
+            icon="left-arrow"
             onClick={onBack}
           >
             Back
-          </Button>
-          <Button 
-            type="submit" 
-            className="bg-brand-500 hover:bg-brand-600"
-            disabled={isSubmitting}
+          </LeadFormButton>
+          
+          <LeadFormButton 
+            type="submit"
+            variant="primary"
+            isSubmitting={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </Button>
+            Submit
+          </LeadFormButton>
         </div>
       </form>
     </div>
