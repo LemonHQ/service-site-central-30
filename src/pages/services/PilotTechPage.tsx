@@ -13,8 +13,8 @@ const PilotTechPage = () => {
       ctaLink="/lead-qualification"
       secondaryCtaText="View Case Studies"
       secondaryCtaLink="/case-studies"
-      heroImage="/lovable-uploads/pilot-tech-ai-hero.png"
-      isAiHeroImage={true}
+      heroImage="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"
+      isAiHeroImage={false}
       features={[
         {
           title: "AI & Machine Learning Prototyping",

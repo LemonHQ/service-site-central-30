@@ -20,15 +20,15 @@ const Footer = () => {
     { name: 'Standardize Digital Portfolio', path: '/standardize-digital-portfolio' }
   ];
 
-  // Industry links
+  // Industry links - Updated with direct links to industry pages
   const industryLinks = [
-    { name: 'Small and mid level enterprises', path: '/industries/sme' },
+    { name: 'Insurance', path: '/industries/insurance' },
+    { name: 'Finance', path: '/industries/finance' },
     { name: 'Healthcare', path: '/industries/healthcare' },
-    { name: 'Fintech', path: '/industries/fintech' },
+    { name: 'Retail', path: '/industries/retail' },
+    { name: 'Small and Mid Level Enterprises', path: '/industries/sme' },
     { name: 'Construction', path: '/industries/construction' },
     { name: 'Logistics', path: '/industries/logistics' },
-    { name: 'Social & NGO', path: '/industries/social-ngo' },
-    { name: 'Insurtech', path: '/industries/insurtech' },
   ];
 
   // Quick links - Renamed Blog to Resources

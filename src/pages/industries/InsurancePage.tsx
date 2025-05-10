@@ -1,107 +1,107 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Shield, BadgeCheck, Umbrella, FileChartColumn, Heart } from 'lucide-react';
+import { Shield, FileCheck, ClipboardList, LineChart, Users } from 'lucide-react';
 
 const InsurancePage = () => {
   return (
     <ServiceLandingTemplate
       title="Insurance Industry Solutions"
-      subtitle="Digital transformation solutions for the modern insurance enterprise"
-      description="We help insurance providers modernize their digital presence, streamline claims processing, and create personalized customer experiences that increase retention and satisfaction. Our solutions combine industry expertise with cutting-edge technology to address the unique challenges facing insurers today."
+      subtitle="Digital transformation solutions for insurance carriers and brokers"
+      description="We help insurance companies modernize their digital customer experiences and streamline operations through strategic technology solutions. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
       ctaText="Transform Your Insurance Business"
       ctaLink="/lead-qualification"
-      secondaryCtaText="Schedule a Consultation"
-      secondaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      secondaryCtaText="View Case Studies"
+      secondaryCtaLink="/case-studies"
+      heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
       features={[
         {
-          title: "Claims Process Digitalization",
-          description: "Streamline and automate claims processing with intelligent workflows and digital interfaces.",
-          icon: FileChartColumn
+          title: "Digital Policy Management",
+          description: "Streamline policy administration with intuitive digital interfaces for customers and agents.",
+          icon: FileCheck
         },
         {
-          title: "Policyholder Portal Development",
-          description: "Create intuitive self-service experiences that empower customers and reduce operational costs.",
+          title: "Claims Process Automation",
+          description: "Accelerate claims processing with intelligent automation and digital-first experiences.",
+          icon: ClipboardList
+        },
+        {
+          title: "Insurance Analytics Platform",
+          description: "Make data-driven decisions with advanced analytics and reporting capabilities.",
+          icon: LineChart
+        },
+        {
+          title: "Regulatory Compliance Solutions",
+          description: "Ensure adherence to evolving insurance regulations across multiple jurisdictions.",
           icon: Shield
         },
         {
-          title: "Risk Assessment Modernization",
-          description: "Implement data-driven risk evaluation tools to improve accuracy and reduce underwriting time.",
-          icon: BadgeCheck
-        },
-        {
-          title: "Insurance Product Innovation",
-          description: "Design and develop digital-first insurance offerings tailored to emerging market needs.",
-          icon: Umbrella
-        },
-        {
-          title: "Customer Experience Enhancement",
-          description: "Build personalized experiences that strengthen relationships and improve retention rates.",
-          icon: Heart
+          title: "Customer Engagement Tools",
+          description: "Build stronger relationships with policyholders through personalized digital experiences.",
+          icon: Users
         }
       ]}
       processes={[
         {
           number: 1,
-          title: "Assessment",
-          description: "Comprehensive analysis of your current digital infrastructure and customer journeys."
+          title: "Discovery",
+          description: "Deep analysis of your current systems, customer needs, and market opportunities."
         },
         {
           number: 2,
-          title: "Strategic Roadmap",
-          description: "Development of a prioritized digital transformation plan aligned with business objectives."
+          title: "Solution Design",
+          description: "Creation of secure, compliant digital insurance solutions aligned with your business strategy."
         },
         {
           number: 3,
-          title: "Implementation",
-          description: "Agile delivery of solutions with continuous stakeholder feedback and refinement."
+          title: "Development",
+          description: "Agile implementation with continuous testing for security, compliance, and user experience."
         },
         {
           number: 4,
-          title: "Optimization",
-          description: "Ongoing performance analysis and enhancement based on user feedback and metrics."
+          title: "Deployment & Support",
+          description: "Carefully managed rollout and ongoing optimization of your digital insurance solutions."
         }
       ]}
       benefits={[
-        "Reduced claims processing time by up to 70%",
-        "Increased customer satisfaction and retention rates",
-        "Lower operational costs through automation",
-        "Enhanced data security and regulatory compliance",
-        "Improved risk assessment accuracy",
-        "Greater agility to adapt to changing market conditions",
-        "Increased cross-selling and upselling opportunities"
+        "Reduced operational costs through automation",
+        "Improved customer acquisition and retention",
+        "Accelerated claims processing and settlement",
+        "Enhanced fraud detection and prevention",
+        "Seamless compliance with insurance regulations",
+        "Increased agent productivity and satisfaction",
+        "Better data-driven underwriting decisions"
       ]}
       relatedServices={[
         {
           title: "Digitalize Product Lines",
-          description: "Transform legacy insurance products into modern, scalable digital offerings.",
+          description: "Transform traditional insurance products into modern, scalable digital offerings.",
           link: "/digitalize-product-lines"
         },
         {
-          title: "Unify Brand Experiences",
-          description: "Create consistent customer experiences across all touchpoints and channels.",
-          link: "/unify-brand-experiences"
+          title: "Pilot Emerging Tech",
+          description: "Safely test AI, blockchain, and other emerging insurance technologies.",
+          link: "/pilot-emerging-tech"
         },
         {
-          title: "Scale Digital Experiences",
-          description: "Build systems that support sustainable growth and expansion.",
-          link: "/scale-digital-experiences"
+          title: "Standardize Digital Portfolio",
+          description: "Create consistent experiences across your insurance product catalog.",
+          link: "/standardize-digital-portfolio"
         }
       ]}
       faqs={[
         {
-          question: "How can digital transformation help us improve our claims process?",
-          answer: "Digital transformation can reduce claims processing time by up to 70% through automation, real-time data integration, mobile-first interfaces for documentation submission, and AI-powered initial assessments, all while improving customer satisfaction and reducing operational costs."
+          question: "How do you ensure security and compliance in insurance applications?",
+          answer: "We build security and compliance into every layer of our solutions with encryption, role-based access controls, audit trails, and regular security testing. Our development process incorporates insurance-specific regulatory requirements from the start to ensure all solutions meet applicable standards across jurisdictions."
         },
         {
-          question: "What security measures do you implement for insurance applications?",
-          answer: "We implement comprehensive security measures including end-to-end encryption, multi-factor authentication, regular security audits, compliance with industry regulations (GDPR, HIPAA), secure API integrations, and continuous monitoring systems to protect sensitive policyholder data."
+          question: "Can you integrate with legacy insurance systems?",
+          answer: "Yes, we specialize in creating modern digital experiences that integrate with legacy policy administration, claims management, and underwriting systems. We use APIs, microservices, and middleware approaches that preserve your existing infrastructure investments while enabling innovation."
         },
         {
-          question: "How long does a typical insurance digital transformation project take?",
-          answer: "The timeline varies based on scope, but typically ranges from 3-6 months for initial implementations like a policyholder portal, to 12-18 months for a comprehensive enterprise-wide digital transformation. We use an iterative approach to deliver value incrementally throughout the process."
+          question: "How long does it typically take to implement a new digital insurance solution?",
+          answer: "Implementation timelines vary based on complexity, but our approach emphasizes quick wins through phased delivery. Basic digital experiences can often be launched within 3-6 months, with more complex enterprise solutions taking 6-12 months for full implementation."
         }
       ]}
     />
