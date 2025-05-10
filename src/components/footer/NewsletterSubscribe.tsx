@@ -18,16 +18,21 @@ const NewsletterSubscribe: React.FC = () => {
     setIsSubmitting(true);
     
     try {
+      console.log('Attempting to subscribe email:', email);
+      
       // Store email in Supabase
-      const { error } = await supabase
+      const { error, data } = await supabase
         .from('newsletter_subscriptions')
         .insert([{ email }]);
+      
+      console.log('Subscription response:', { error, data });
       
       if (error) {
         // Handle unique constraint violation gracefully
         if (error.code === '23505') {
           toast.info('You are already subscribed to our newsletter!');
         } else {
+          console.error('Subscription error:', error);
           throw error;
         }
       } else {
