@@ -2,12 +2,17 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import usePageTracking from '@/hooks/usePageTracking';
 
 interface MainLayoutProps {
   children: React.ReactNode;
+  pageTitle?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, pageTitle }) => {
+  // Track page view when the layout is mounted
+  usePageTracking(pageTitle);
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
