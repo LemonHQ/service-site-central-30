@@ -10,14 +10,14 @@ import NewsletterSubscribe from '../footer/NewsletterSubscribe';
 import Copyright from '../footer/Copyright';
 
 const Footer = () => {
-  // Service links - Updated with actual services including new ones
+  // Service links - Updated with actual services
   const serviceLinks = [
-    { name: 'Unify Brand Experiences', path: '/services/unify-brand-experiences' },
-    { name: 'Digitalize Product Lines', path: '/services/digitalize-product-lines' },
+    { name: 'Validating Product Ideas', path: '/services/validating-product-ideas' },
+    { name: 'Ideating Product Concepts', path: '/services/ideating-product-concepts' },
+    { name: 'Designing Brand & Customer Experiences', path: '/services/designing-experiences' },
+    { name: 'Launching New Products', path: '/services/launching-products' },
+    { name: 'Scaling Products', path: '/services/scaling-products' },
     { name: 'Expand Product Offerings', path: '/services/expand-product-offerings' },
-    { name: 'Scale Digital Experiences', path: '/services/scale-digital-experiences' },
-    { name: 'Pilot Emerging Tech', path: '/services/pilot-emerging-tech' },
-    { name: 'Standardize Digital Portfolio', path: '/services/standardize-digital-portfolio' },
   ];
 
   // Industry links

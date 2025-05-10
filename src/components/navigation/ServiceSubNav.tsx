@@ -11,10 +11,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import ServiceCard from "@/components/ui/ServiceCard";
-import { servicesData } from "@/data/servicesData";
 import { 
   Lightbulb, PenTool, Palette, Rocket, TrendingUp, 
-  LayersIcon, Settings, Cpu, Network, BarChart2, Users, Library, Monitor
+  LayersIcon, Settings, Cpu, Network, BarChart2, Users, Library 
 } from 'lucide-react';
 
 // Navigation menu item component for consistent styling
@@ -73,43 +72,8 @@ const RouterListItem = ({ title, to, className, icon: Icon }: {
 
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
-  
-  // Get main service categories
-  const mainServices = [
-    {
-      title: 'Unify Brand Experiences',
-      link: '/services/unify-brand-experiences',
-      icon: Users
-    },
-    {
-      title: 'Digitalize Product Lines',
-      link: '/services/digitalize-product-lines',
-      icon: Monitor
-    },
-    {
-      title: 'Expand Product Offerings',
-      link: '/services/expand-product-offerings',
-      icon: LayersIcon
-    },
-    {
-      title: 'Scale Digital Experiences',
-      link: '/services/scale-digital-experiences',
-      icon: TrendingUp
-    },
-    {
-      title: 'Pilot Emerging Tech',
-      link: '/services/pilot-emerging-tech',
-      icon: Cpu
-    },
-    {
-      title: 'Standardize Digital Portfolio',
-      link: '/services/standardize-digital-portfolio',
-      icon: Library
-    },
-  ];
-
-  // Additional service sub-categories
-  const additionalServices = [
+  // All services data - matching the data in Services.tsx
+  const services = [
     {
       title: 'Validating Product Ideas',
       link: '/services/validating-product-ideas',
@@ -136,9 +100,39 @@ const ServiceSubNav = () => {
       icon: TrendingUp
     },
     {
+      title: 'Expand Product Offerings',
+      link: '/services/expand-product-offerings',
+      icon: LayersIcon
+    },
+    {
       title: 'Standardize Technology',
       link: '/services/standardize-technology',
       icon: Settings
+    },
+    {
+      title: 'Pilot Emerging Tech',
+      link: '/services/pilot-emerging-tech',
+      icon: Cpu
+    },
+    {
+      title: 'Connect to Digital Ecosystems',
+      link: '/services/connect-ecosystems',
+      icon: Network
+    },
+    {
+      title: 'Optimize Digital Portfolios',
+      link: '/services/optimize-portfolios',
+      icon: BarChart2
+    },
+    {
+      title: 'Unify Brand Experiences',
+      link: '/services/unify-brand-experiences',
+      icon: Users
+    },
+    {
+      title: 'Standardize Digital Portfolio',
+      link: '/services/standardize-digital-portfolio',
+      icon: Library
     },
   ];
 
@@ -161,10 +155,9 @@ const ServiceSubNav = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 gap-2 overflow-y-auto max-h-[500px]">
-                <h3 className="font-semibold px-3 pt-2">Main Service Areas</h3>
-                <ul className="list-none p-0 m-0 grid grid-cols-1 gap-2">
-                  {mainServices.map((service, index) => (
+              <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-[500px]">
+                <ul className="col-span-2 list-none p-0 m-0 grid grid-cols-2 gap-2">
+                  {services.map((service, index) => (
                     <RouterListItem
                       key={index}
                       title={service.title}
@@ -174,19 +167,7 @@ const ServiceSubNav = () => {
                   ))}
                 </ul>
                 
-                <h3 className="font-semibold px-3 pt-4 mt-2">Additional Services</h3>
-                <ul className="list-none p-0 m-0 grid grid-cols-1 gap-2">
-                  {additionalServices.map((service, index) => (
-                    <RouterListItem
-                      key={index}
-                      title={service.title}
-                      to={service.link}
-                      icon={service.icon}
-                    />
-                  ))}
-                </ul>
-                
-                <div className="mt-2">
+                <div className="col-span-2 mt-2">
                   <Link 
                     to="/services"
                     className="block w-full text-center py-2 bg-brand-100 hover:bg-brand-200 text-brand-700 rounded transition-colors"
