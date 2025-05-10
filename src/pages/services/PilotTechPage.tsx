@@ -1,5 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
+import { Brain, FlaskConical, Zap, History, BarChart } from 'lucide-react';
 
 const PilotTechPage = () => {
   return (

@@ -1,5 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
+import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
 
 const ExpandOfferingsPage = () => {
   return (
