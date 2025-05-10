@@ -17,11 +17,6 @@ const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
   return (
     <section className="bg-brand-600 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center md:justify-start mb-2">
-          <div className="text-xs tracking-wider font-medium text-gray-300">
-            [ {label} ]
-          </div>
-        </div>
         
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 order-2 md:order-1">
