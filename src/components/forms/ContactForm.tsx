@@ -17,7 +17,15 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useNavigate } from 'react-router-dom';
-import { submitContactForm, ContactFormValues, formSchema } from '@/services/contactService';
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  company: z.string().min(1, { message: "Company name is required." }),
+  phone: z.string().optional(),
+  service: z.string().optional(),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -30,7 +38,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  const form = useForm<ContactFormValues>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -42,14 +50,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
     }
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
+  const onSubmit = async (data: FormValues) => {
     setLoading(true);
-    console.log('Submitting form with data:', data);
     
     try {
-      // Submit form data to Supabase
-      const result = await submitContactForm(data);
-      console.log('Submission result:', result);
+      // Store form data (in localStorage for now)
+      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+      submissions.push({
+        ...data,
+        id: `submission-${Date.now()}`,
+        createdAt: new Date().toISOString(),
+      });
+      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
       
       // Success notification
       toast({
@@ -63,7 +75,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
       // Redirect to thank you page
       navigate('/thank-you');
     } catch (error) {
-      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "There was a problem submitting your form. Please try again.",

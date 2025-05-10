@@ -4,7 +4,6 @@ import SectionHeading from '../ui/SectionHeading';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
-import ServiceCard from '../ui/ServiceCard';
 import { 
   Globe, 
   Database, 

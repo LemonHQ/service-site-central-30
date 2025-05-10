@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -79,7 +78,7 @@ const CompanyOverview: React.FC = () => {
       if (currentStep >= steps) {
         clearInterval(timer);
       }
-    }, stepTime); 
+    }, stepTime);
 
     return () => clearInterval(timer);
   }, [isVisible]);
@@ -94,12 +93,12 @@ const CompanyOverview: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Brands today are under increasing pressure to deliver digital-first experiences. 
-              We specialize in the complex realities enterprise brands face in today's modern digital ecosystems: regulatory scrutiny, brand consistency, uniformity, standards and reusability. We're not just digital enablers — we're strategic partners who understand how to move multi-market, multi-product enterprises from idea to market to scale, reliably and efficiently.
+              We specialize in the complex realities enterprise brands face in today's modern digital commerce ecosystems: regulatory scrutiny, brand consistency across regions, multiple product lines, and accelerating expectations for digital growth. We're not just digital enablers — we're strategic partners who understand how to move multi-market, multi-product enterprises from idea to market to scale, reliably and efficiently.
             </p>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <div className="bg-brand-100 p-2 rounded-full mr-4 self-start mt-1">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
@@ -109,7 +108,7 @@ const CompanyOverview: React.FC = () => {
               </div>
             
               <div className="flex items-start">
-                <div className="bg-brand-100 p-2 rounded-full mr-4 self-start mt-1">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Users className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
@@ -119,7 +118,7 @@ const CompanyOverview: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-brand-100 p-2 rounded-full mr-4 self-start mt-1">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
@@ -129,7 +128,7 @@ const CompanyOverview: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-brand-100 p-2 rounded-full mr-4 self-start mt-1">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Database className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>

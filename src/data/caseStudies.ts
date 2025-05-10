@@ -21,98 +21,17 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'Expanding-and-Modernizing-Motor-Insurance',
-    title: 'Expanding and Modernizing Motor Insurance',
-    client: 'Liva Insurance',
-    industry: 'Finance',
-    services: ['Goto markete', 'Product design', 'Development','Expansion'],
-    summary: 'Modernized and expanded a traditional sales journey to open up new possibilities ',
-    challenge: 'Liva faced significant challenges in expanding their motor insurance offerings to meet the needs of a rapidly changing, digital-first market. Traditional insurance processes were slowing down customer acquisition and limiting the scope for growth, particularly in the Direct-to-Consumer (D2C) sector. Furthermore, Liva needed to modernize its infrastructure to seamlessly serve both individual and enterprise customers, including brokers and partners, while maintaining a user-friendly experience. The company aimed to expand its customer base across multiple channels and improve the overall policy management process.',
-    solution: `<p data-start="1105" data-end="1320">To drive both expansion and modernization, we implemented a comprehensive digital solution that would allow Liva to stay ahead of industry trends and meet diverse customer demands. The core of the solution included:</p>
-                <ul data-start="1322" data-end="3292">
-                  <li data-start="1322" data-end="1627">
-                    <p data-start="1324" data-end="1627"><strong data-start="1324" data-end="1355">Modernizing the D2C Journey</strong>: We created a fully digital motor insurance product that provided customers with a seamless experience, from obtaining a quote to purchasing and managing their policies. This modernized the buying journey for individual consumers, improving accessibility and convenience.</p>
-                  </li>
-                  <li data-start="1631" data-end="1977">
-                    <p data-start="1633" data-end="1977"><strong data-start="1633" data-end="1675">End-to-End Policy Lifecycle Management</strong>: The solution empowered customers to manage their motor insurance policies with ease&mdash;renewing, transferring, canceling, and updating policies directly within the platform. This full-service lifecycle management was integrated into the digital experience, eliminating the need for manual interventions.</p>
-                  </li>
-                  <li data-start="1981" data-end="2288">
-                    <p data-start="1983" data-end="2288"><strong data-start="1983" data-end="2017">Expansion to Multiple Channels</strong>: In addition to a strong D2C offering, we expanded the platform to support enterprise customers, partners, brokers, and direct sales teams. This broadening of the platform&rsquo;s reach enabled Liva to engage a wider audience, from large organizations to individual consumers.</p>
-                  </li>
-                  <li data-start="2292" data-end="2561">
-                    <p data-start="2294" data-end="2561"><strong data-start="2294" data-end="2342">Integration with Vehicle Licensing Authority</strong>: We enabled a single-click quote feature by integrating the platform with the vehicle licensing authority, streamlining the process for customers to quickly receive accurate quotes based on their vehicle&rsquo;s information.</p>
-                  </li>
-                  <li data-start="2565" data-end="2885">
-                    <p data-start="2567" data-end="2885"><strong data-start="2567" data-end="2598">Customizable Policy Options</strong>: The solution allowed customers to customize their motor insurance policies by adding add-ons like roadside assistance and including additional drivers. It also offered both third-party and comprehensive policies, providing flexibility to cater to a wider range of customer preferences.</p>
-                  </li>
-                  <li data-start="2887" data-end="3292">
-                    <p data-start="2889" data-end="3292"><strong data-start="2889" data-end="2939">Integration with Omantel for Flexible Payments</strong>: To enhance the purchasing process, we integrated the platform with Omantel, a leading telecom provider, allowing Omantel customers to purchase policies using their Omantel credit lines and take advantage of EMI (Equated Monthly Installment) options. This opened up a new avenue for policy sales, making insurance more accessible to a broader audience.</p>
-                  </li>
-                </ul>`,
-    results: `<p data-start="3317" data-end="3463">
-                  The expansion and modernization efforts led to significant improvements for Liva, both in terms of operational efficiency and customer experience:
-                </p>
-                <ul data-start="3465" data-end="5401">
-                  <li data-start="3465" data-end="3742">
-                    <p data-start="3467" data-end="3742">
-                      <strong data-start="3467" data-end="3492">
-                        Expanded Market Reach
-                      </strong>
-                      : By offering a versatile platform that could cater to both individual and enterprise customers, Liva was able to grow its market footprint across multiple channels&mdash;direct, brokers, and partners&mdash;leading to increased sales and a broader customer base.
-                    </p>
-                  </li>
-                  <li data-start="3746" data-end="4141">
-                    <p data-start="3748" data-end="4141">
-                      <strong data-start="3748" data-end="3803">
-                        Broker Issued Policies Resulting in Direct Renewals
-                      </strong>
-                      : A notable outcome was the surge in broker-issued policies that subsequently resulted in direct renewals by customers. As these customers engaged directly with the platform for their renewals, Liva successfully acquired second and third-party customers, further growing their customer base while reducing acquisition costs significantly.
-                    </p>
-                  </li>
-                  <li data-start="4143" data-end="4389">
-                    <p data-start="4145" data-end="4389">
-                      <strong data-start="4145" data-end="4171">
-                        Streamlined Operations
-                      </strong>
-                      : The modernization of policy management enabled Liva to automate key processes, resulting in a more efficient operation that reduced reliance on manual tasks, enhanced speed, and improved accuracy across the business.
-                    </p>
-                  </li>
-                  <li data-start="4393" data-end="4654">
-                    <p data-start="4395" data-end="4654">
-                      <strong data-start="4395" data-end="4427">
-                        Enhanced Customer Experience
-                      </strong>
-                      : With a fully digital platform that provided a smooth, self-service experience, customers could easily get quotes, purchase policies, and manage their coverage. This improved satisfaction and fostered greater customer loyalty.
-                    </p>
-                  </li>
-                  <li data-start="4658" data-end="4923">
-                    <p data-start="4660" data-end="4923">
-                      <strong data-start="4660" data-end="4696">
-                        Increased Flexibility and Growth
-                      </strong>
-                      : The expansion of the platform to accommodate enterprise customers, brokers, and direct sales teams allowed Liva to scale its operations more efficiently, facilitating new business opportunities and increasing revenue streams.
-                    </p>
-                  </li>
-                  <li data-start="4927" data-end="5155">
-                    <p data-start="4929" data-end="5155">
-                      <strong data-start="4929" data-end="4956">
-                        Agile Policy Management
-                      </strong>
-                      : The ability to manage the full policy lifecycle digitally resulted in quicker turnaround times for renewals, cancellations, and updates, enhancing customer satisfaction and reducing service delays.
-                    </p>
-                  </li>
-                  <li data-start="5157" data-end="5401">
-                    <p data-start="5159" data-end="5401">
-                      <strong data-start="5159" data-end="5212">
-                        New Revenue Streams with Flexible Payment Options
-                      </strong>
-                      : The integration with Omantel enabled a new revenue stream by offering an easier payment option for customers through credit lines and EMIs, expanding the accessibility of Liva's policies.
-                    </p>
-                  </li>
-                </ul>
-`,
+    id: 'global-bank-digital-transformation',
+    title: 'Global Bank Digital Transformation',
+    client: 'First Global Bank',
+    industry: 'Banking & Finance',
+    services: ['UX Design', 'Mobile Development', 'Cloud Migration'],
+    summary: 'Helping a leading global bank transform their customer experience with a modern digital banking platform that increased mobile transactions by 230%.',
+    challenge: 'First Global Bank was struggling with an outdated digital infrastructure that was causing customer dissatisfaction and limiting growth. Their legacy systems were unable to support modern banking features, and their mobile app had poor ratings. They needed a complete digital transformation to remain competitive in an increasingly digital banking landscape.',
+    solution: 'We implemented a comprehensive digital transformation strategy, rebuilding their entire digital banking ecosystem from the ground up. This included redesigning the user experience, developing new mobile applications for iOS and Android, and migrating their core banking services to a cloud-based infrastructure. We also implemented a microservices architecture to ensure scalability and future flexibility.',
+    results: 'Within six months of launch, the bank saw a 230% increase in mobile transactions, a 45% reduction in customer service calls, and their app rating improved from 2.3 to 4.8 stars. Customer satisfaction scores increased by 35%, and the bank was able to launch new features at 4x their previous speed.',
     testimonial: {
-      quote: "The digital transformation executed has fundamentally changed how we serve our customers. We're now seen as an innovation leader in the insurance sector.",
+      quote: "The digital transformation executed by Elevate Digital has fundamentally changed how we serve our customers. We're now seen as an innovation leader in the banking sector.",
       author: 'Sarah Johnson',
       position: 'CTO, First Global Bank'
     },
