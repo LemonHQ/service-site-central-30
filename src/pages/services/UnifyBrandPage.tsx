@@ -22,8 +22,8 @@ const UnifyBrandPage = () => {
       featuredCaseStudy="global-bank-digital-transformation"
       showConsultingPanel={true}
       customerProfiles={customerProfiles}
-      customerProfilesTitle="Who We Work With"
-      customerProfilesSubtitle="Tailored brand solutions for organizations at every stage of growth"
+      customerProfilesTitle="Who is unify brand experience for"
+      customerProfilesSubtitle="With you at different stages of your brand journey"
       features={[
         {
           title: "Strategic Brand Expansion",

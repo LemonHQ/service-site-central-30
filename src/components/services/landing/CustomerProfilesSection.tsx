@@ -17,7 +17,7 @@ interface CustomerProfilesSectionProps {
 const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
   profiles,
   title = "Customer Profiles",
-  subtitle = "Tailored solutions for organizations at different stages",
+  subtitle = "With you at different stages of your brand journey",
   className
 }) => {
   // Track expanded state for each profile
