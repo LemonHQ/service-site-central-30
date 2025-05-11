@@ -22,23 +22,7 @@ const About = () => {
     image: '/assets/imgs/husain-mohsin-profile-pic-old.png',
     linkedin: 'https://www.linkedin.com/in/husainmohsin/',
     email: 'h.mohsin@lemonhq.co.uk'
-  }, {
-    name: 'Abdul Majeed',
-    role: 'Digital Product Expert',
-    bio: 'Former enterprise solutions architect at major tech companies with expertise in enterprise digital portfolios.',
-    fullBio: 'Abdul Majeed is a seasoned Digital Product Expert with extensive experience in accelerating goto market of digital products. His expertise spans across the entire product lifecycle—from ideation and design to development and launch—allowing him to craft digital solutions that are both functional and forward-thinking. Abdul Majeed is known for his strategic approach, always focused on driving growth, enhancing user engagement, and optimizing product performance. With a strong background in data-driven decision-making and agile methodologies, Abdul Majeed brings efficiency and clarity to complex digital product challenges. His ability to navigate the ever-evolving digital landscape makes him a valuable partner for businesses aiming to stay ahead of the curve and deliver exceptional digital products to the market..',
-    image: '/assets/imgs/Abdul-Majeed-Abdul-Hameed.jpeg',
-    linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
-    email: 'a.majeed@lemonhq.co.uk'
-  }, {
-    name: 'Mustafa Turab Ali',
-    role: 'Digital scaling advisor',
-    bio: 'Award-winning designer specializing in brand identity and user experience design.',
-    fullBio: "With a deep understanding of both the technical and operational aspects of scaling digital solutions, Mustafa Ali helps businesses enhance the performance, reliability, and scalability of their software products. He works closely with organizations to ensure that their digital products can seamlessly scale to meet the demands of a growing user base, all while maintaining the highest standards of quality. Whether working on large-scale systems or guiding companies through the challenges of digital transformation, Mustafa Ali ensures that businesses are equipped with the tools and strategies needed to scale effectively while maintaining a seamless user experience. His commitment to excellence and quality makes him a trusted advisor for organizations looking to accelerate their growth in the digital space.",
-    image: '/assets/imgs/Mustafa-turab-ali.jpeg',
-    linkedin: 'https://www.linkedin.com/in/mustafaturabali82/',
-    email: 'm.ali@lemonhq.co.uk'
-  }];
+  }, ];
 
   // Values
   const values = [{
@@ -61,6 +45,18 @@ const About = () => {
     setDrawerOpen(true);
   };
   return <MainLayout>
+    {/*
+    
+{
+    name: 'Abdul Majeed',
+    role: 'Digital Product Expert',
+    bio: 'Former enterprise solutions architect at major tech companies with expertise in enterprise digital portfolios.',
+    fullBio: 'Abdul Majeed is a seasoned Digital Product Expert with extensive experience in accelerating goto market of digital products. His expertise spans across the entire product lifecycle—from ideation and design to development and launch—allowing him to craft digital solutions that are both functional and forward-thinking. Abdul Majeed is known for his strategic approach, always focused on driving growth, enhancing user engagement, and optimizing product performance. With a strong background in data-driven decision-making and agile methodologies, Abdul Majeed brings efficiency and clarity to complex digital product challenges. His ability to navigate the ever-evolving digital landscape makes him a valuable partner for businesses aiming to stay ahead of the curve and deliver exceptional digital products to the market..',
+    image: '/assets/imgs/Abdul-Majeed-Abdul-Hameed.jpeg',
+    linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
+    email: 'a.majeed@lemonhq.co.uk'
+  },     
+    */}
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-brand-700 to-brand-600 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
