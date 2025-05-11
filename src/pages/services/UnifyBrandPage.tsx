@@ -4,8 +4,12 @@ import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate
 import { ArrowRight, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
+import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
 
 const UnifyBrandPage = () => {
+  // Get customer profiles for this service
+  const customerProfiles = getCustomerProfilesByServiceSlug('unify-brand-experiences');
+
   return (
     <ServiceLandingTemplate
       title="Unify Brand Experiences"
@@ -17,6 +21,9 @@ const UnifyBrandPage = () => {
       quotePanel={serviceQuotes['unify-brand-experiences']}
       featuredCaseStudy="global-bank-digital-transformation"
       showConsultingPanel={true}
+      customerProfiles={customerProfiles}
+      customerProfilesTitle="Who We Work With"
+      customerProfilesSubtitle="Tailored brand solutions for organizations at every stage of growth"
       features={[
         {
           title: "Strategic Brand Expansion",

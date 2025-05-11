@@ -12,8 +12,10 @@ import FeaturedCaseStudyPanel from './landing/FeaturedCaseStudyPanel';
 import ConsultingPanel from './landing/ConsultingPanel';
 import CaseStudiesCarousel from './landing/CaseStudiesCarousel';
 import InsightsCarousel from './landing/InsightsCarousel';
+import CustomerProfilesSection from './landing/CustomerProfilesSection';
 import { caseStudies } from '@/data/caseStudies';
 import { QuoteData } from '@/data/quotes';
+import { CustomerProfile } from '@/data/customerProfiles';
 
 export interface ServiceLandingProps {
   title: string;
@@ -41,6 +43,9 @@ export interface ServiceLandingProps {
     question: string;
     answer: string;
   }>;
+  customerProfiles?: CustomerProfile[];
+  customerProfilesTitle?: string;
+  customerProfilesSubtitle?: string;
   children?: React.ReactNode;
 }
 
@@ -63,6 +68,9 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   featuredCaseStudy,
   showConsultingPanel = false,
   faqs = [],
+  customerProfiles,
+  customerProfilesTitle,
+  customerProfilesSubtitle,
   children
 }) => {
   // Find the selected case study if an ID is provided
@@ -104,6 +112,15 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       {children}
       
       <BenefitsSection benefits={benefits} />
+      
+      {customerProfiles && customerProfiles.length > 0 && (
+        <CustomerProfilesSection 
+          profiles={customerProfiles}
+          title={customerProfilesTitle}
+          subtitle={customerProfilesSubtitle}
+          className="bg-white"
+        />
+      )}
       
       {selectedCaseStudy && (
         <FeaturedCaseStudyPanel caseStudy={selectedCaseStudy} />
