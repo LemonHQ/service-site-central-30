@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,9 +31,6 @@ import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage"
 // Import approach pages
 import CoCreatePage from "./pages/approach/CoCreatePage";
 import ExtendPage from "./pages/approach/ExtendPage";
-
-// Import assessment pages
-import CoCreateAssessment from "./pages/assessment/CoCreateAssessment";
 
 // Import industry landing pages
 import InsurancePage from "./pages/industries/InsurancePage";
@@ -70,9 +66,6 @@ const App = () => (
           {/* Approach pages */}
           <Route path="/approach/co-create" element={<CoCreatePage />} />
           <Route path="/approach/extend" element={<ExtendPage />} />
-          
-          {/* Assessment pages */}
-          <Route path="/assessment/co-create" element={<CoCreateAssessment />} />
           
           {/* Industry landing pages */}
           <Route path="/industries/insurance" element={<InsurancePage />} />
