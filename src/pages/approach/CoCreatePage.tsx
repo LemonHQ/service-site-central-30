@@ -1,3 +1,4 @@
+
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,9 @@ import { CheckCircle, Users, Lightbulb, Repeat, BarChart, ArrowRight, Zap, Flask
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ServiceCard from '@/components/ui/ServiceCard';
 import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
+import { H1, H2, H3, H4, Lead, Paragraph } from '@/components/ui/Typography';
+import SectionHeading from '@/components/ui/SectionHeading';
+
 const CoCreatePage = () => {
   return <MainLayout>
       {/* Hero Section */}
@@ -13,15 +17,11 @@ const CoCreatePage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-brand-600 mb-4">
-                Co-Create
-              </h1>
-              <p className="text-xl text-brand-400 mb-8">Demand for personalization</p>
-              <div className="text-gray-600 text-lg mb-8 space-y-4">
-                <p>
-                  In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments.                  
-                </p>
-              </div>
+              <H1>Co-Create</H1>
+              <Lead className="text-brand-400 mb-8">Demand for personalization</Lead>
+              <Paragraph className="mb-8">
+                In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments.
+              </Paragraph>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/lead-qualification">
                   <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
@@ -40,42 +40,43 @@ const CoCreatePage = () => {
       {/* Benefits Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">The benefits of Co-creation</h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Our Co-Create model brings your team and our experts together in collaborative environments designed to accelerate unbundling, build alignment, and deliver impactful business outcomes.
-          </p>
+          <SectionHeading 
+            title="The benefits of Co-creation"
+            subtitle="Our Co-Create model brings your team and our experts together in collaborative environments designed to accelerate unbundling, build alignment, and deliver impactful business outcomes."
+            centered
+          />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Faster product-market fit</h3>
-              <p className="text-gray-600">Validate real customer needs early and shape solutions that resonate—before you commit full-scale resources.</p>
+              <H4 className="mb-2">Faster product-market fit</H4>
+              <Paragraph>Validate real customer needs early and shape solutions that resonate—before you commit full-scale resources.</Paragraph>
             </div>
             
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Stronger differentiation</h3>
-              <p className="text-gray-600">Stand out with offerings that are precise, relevant, and built with the end customer segment in mind.</p>
+              <H4 className="mb-2">Stronger differentiation</H4>
+              <Paragraph>Stand out with offerings that are precise, relevant, and built with the end customer segment in mind.</Paragraph>
             </div>
             
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Actionable innovation</h3>
-              <p className="text-gray-600">Uncover fresh opportunities, niche use cases, and value models hidden in your customer or partner ecosystem.</p>
+              <H4 className="mb-2">Actionable innovation</H4>
+              <Paragraph>Uncover fresh opportunities, niche use cases, and value models hidden in your customer or partner ecosystem.</Paragraph>
             </div>
 
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Less risk, more alignment</h3>
-              <p className="text-gray-600">Minimize missteps and internal friction by involving brand, product, market, channel teams from day one.</p>
+              <H4 className="mb-2">Less risk, more alignment</H4>
+              <Paragraph>Minimize missteps and internal friction by involving brand, product, market, channel teams from day one.</Paragraph>
             </div>
 
 
@@ -83,38 +84,37 @@ const CoCreatePage = () => {
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Execution-ready frameworks</h3>
-              <p className="text-gray-600">Turn strategy into speed with assets, prototypes, and modular systems ready for market deployment.</p>
+              <H4 className="mb-2">Execution-ready frameworks</H4>
+              <Paragraph>Turn strategy into speed with assets, prototypes, and modular systems ready for market deployment.</Paragraph>
             </div>
 
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Customer-centricity at scale</h3>
-              <p className="text-gray-600">Design for flexibility—so your product can flex across regions, verticals, or partner channels without losing focus.</p>
+              <H4 className="mb-2">Customer-centricity at scale</H4>
+              <Paragraph>Design for flexibility—so your product can flex across regions, verticals, or partner channels without losing focus.</Paragraph>
             </div>
 
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <BarChart className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Measurable outcomes</h3>
-              <p className="text-gray-600">Define clear KPIs and success metrics aligned with your business objectives.</p>
+              <H4 className="mb-2">Measurable outcomes</H4>
+              <Paragraph>Define clear KPIs and success metrics aligned with your business objectives.</Paragraph>
             </div>
           </div>
         </div>
       </section>
       
-
-      
       {/* Service Offerings Section */}
       <section className="py-16 bg-beige-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Access these services through Co-Create</h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Our Co-Create model can be applied across a wide range of digital innovation needs, from product design to emerging technology exploration.
-          </p>
+          <SectionHeading 
+            title="Access these services through Co-Create"
+            subtitle="Our Co-Create model can be applied across a wide range of digital innovation needs, from product design to emerging technology exploration."
+            centered
+          />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ServiceCard title="Digital Product Design" description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical} />
@@ -133,15 +133,15 @@ const CoCreatePage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold mb-6">Co-Create in Action</h2>
-              <p className="text-gray-600 mb-4">
+              <H2 className="mb-6">Co-Create in Action</H2>
+              <Paragraph className="mb-4">
                 A leading insurance provider needed to reimagine their claims process to improve customer satisfaction 
                 and reduce operational costs.
-              </p>
-              <p className="text-gray-600 mb-4">
+              </Paragraph>
+              <Paragraph className="mb-4">
                 Through our Co-Create approach, we brought together their claims specialists, customer service teams, 
                 and our product designers for a 6-week engagement.
-              </p>
+              </Paragraph>
               
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3">
@@ -170,11 +170,14 @@ const CoCreatePage = () => {
           </div>
         </div>
       </section>
+      
+      {/* Insights Carousel Section - Before FAQ */}
+      <InsightsCarousel limit={3} />
 
     {/* FAQ Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <H3 className="text-center mb-6">Frequently Asked Questions</H3>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -237,10 +240,10 @@ const CoCreatePage = () => {
       {/* CTA Section */}
       <section className="bg-brand-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl mb-6 text-slate-50 font-normal">Ready to explore?</h2>
-          <p className="mb-8 max-w-2xl mx-auto text-lg font-light">
+          <H2 className="mb-6 text-slate-50 font-normal">Ready to explore?</H2>
+          <Lead className="mb-8 max-w-2xl mx-auto font-light text-white">
             Assess your readiness for a co-creation journey
-          </p>
+          </Lead>
           <Link to="/approach/co-create-assessment">
             <Button size="lg" className="bg-white text-brand-600 hover:bg-gray-100">
               Take the assessment
@@ -248,11 +251,7 @@ const CoCreatePage = () => {
           </Link>
         </div>
       </section>
-      
-
-      
-      {/* Insights Carousel Section - Added before FAQ */}
-      <InsightsCarousel limit={3} />      
     </MainLayout>;
 };
+
 export default CoCreatePage;
