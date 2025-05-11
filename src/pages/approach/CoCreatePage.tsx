@@ -123,36 +123,28 @@ const CoCreatePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ServiceCard
               title="Digital Product Design"
-              description="Create user-centric digital products through collaborative ideation, prototyping, and testing."
-              link="/services/digital-product-design"
-              icon={FlaskConical}
+              description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical}
             />
             
             <ServiceCard
               title="Rapid Prototyping"
-              description="Transform concepts into functional prototypes within days, not weeks or months."
-              link="/services/rapid-prototyping"
-              icon={Zap}
+              description="Transform concepts into functional prototypes within days, not weeks or months." icon={Zap}
             />
             
             <ServiceCard
               title="Technology Modernization"
-              description="Reimagine legacy systems with modern architectures and technology stacks."
-              link="/services/technology-modernization"
-              icon={History}
+              description="Reimagine legacy systems with modern architectures and technology stacks." icon={History}
             />
             
             <ServiceCard
               title="Innovation Workshops"
-              description="Structured sessions to solve complex challenges and generate breakthrough ideas."
-              link="/services/innovation-workshops"
-              icon={Lightbulb}
+              description="Structured sessions to solve complex challenges and generate breakthrough ideas." icon={Lightbulb}
             />
           </div>
         </div>
       </section>
       
-      {/* Exploration Section */}
+      {/* Exploration Section 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Take your business to the next level</h2>
@@ -220,7 +212,7 @@ const CoCreatePage = () => {
           </div>
         </div>
       </section>
-
+      */}
       {/* How It Works 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -359,7 +351,7 @@ const CoCreatePage = () => {
                 How long does a typical Co-Create engagement last?
               </AccordionTrigger>
               <AccordionContent>
-                Co-Create engagements typically run between 4-12 weeks, depending on the complexity of the challenge. 
+                Co-Create engagements typically run between 1-4 weeks, depending on the complexity of the challenge. 
                 We often start with a 2-day kickoff workshop followed by sprint cycles of 1-2 weeks each.
               </AccordionContent>
             </AccordionItem>
@@ -402,14 +394,13 @@ const CoCreatePage = () => {
       {/* CTA Section */}
       <section className="bg-brand-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Co-Create Your Next Innovation?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to explore?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Start a conversation about how our collaborative approach can help you solve complex challenges and build 
-            better digital products.
+            Assess your readiness for a co-creation journey
           </p>
           <Link to="/lead-qualification">
             <Button size="lg" className="bg-white text-brand-600 hover:bg-gray-100">
-              Start Your Co-Create Journey
+              Take the assessment
             </Button>
           </Link>
         </div>
