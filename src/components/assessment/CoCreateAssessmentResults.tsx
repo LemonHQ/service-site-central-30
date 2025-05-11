@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { Award, Check, Star } from 'lucide-react';
+import { Award, Check, ChevronDown, Star } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface AssessmentResult {
@@ -161,6 +161,7 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
   const detailedResults = getDetailedResults();
   const maxTotalScore = 30;
   const scorePercentage = Math.round((score / maxTotalScore) * 100);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
 
   return (
     <div className="bg-white shadow-md rounded-lg p-8">
@@ -182,49 +183,15 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
           </div>
         </div>
         
-        <div className="flex items-end mb-4">
-          <span className={`text-5xl font-bold ${readiness.color}`}>{score}</span>
-          <span className="text-gray-500 ml-2 mb-1">/ {maxTotalScore}</span>
-        </div>
-        
-        <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
-          <div 
-            className={`h-4 rounded-full transition-all duration-1000 ${
-              scorePercentage >= 75 ? "bg-green-500" : 
-              scorePercentage >= 50 ? "bg-yellow-500" : 
-              scorePercentage >= 25 ? "bg-orange-500" : "bg-red-500"
-            }`}
-            style={{ width: `${scorePercentage}%` }}
-          ></div>
-        </div>
-        
-        <h3 className="text-xl font-semibold mb-2">Your Co-Creation Journey Stage:</h3>
-        <div className={`p-4 rounded-lg border ${
-          scorePercentage >= 75 ? "border-green-200 bg-green-50" : 
-          scorePercentage >= 50 ? "border-yellow-200 bg-yellow-50" : 
-          scorePercentage >= 25 ? "border-orange-200 bg-orange-50" : "border-red-200 bg-red-50"
-        }`}>
-          <h4 className={`font-semibold text-lg mb-1 ${readiness.color}`}>{readiness.stage}</h4>
-          <p className="text-gray-700">{readiness.stageDesc}</p>
-        </div>
-      </div>
-      
-      <div className="bg-gray-50 rounded-lg p-6 mb-8">
-        <h3 className="text-xl font-semibold mb-2">What This Means</h3>
-        <p className="text-gray-700 mb-4">{readiness.description}</p>
-        <div className="border-t border-gray-200 pt-4 mt-4">
-          <p className="text-sm text-gray-600">A complete assessment report has been sent to your email with personalized recommendations based on your responses and readiness level.</p>
-        </div>
-      </div>
-      
-      <div className="mb-8">
-        <Accordion type="single" collapsible className="bg-white border rounded-lg">
-          <AccordionItem value="detailed-results">
-            <AccordionTrigger className="p-4 text-lg font-medium">
-              View Detailed Results
-            </AccordionTrigger>
-            <AccordionContent className="px-4 pb-4">
-              <div className="space-y-6">
+        <Accordion type="single" collapsible className="mb-4" value={isAccordionOpen ? "score-details" : ""} onValueChange={(val) => setIsAccordionOpen(!!val)}>
+          <AccordionItem value="score-details" className="border-none">
+            <div className="flex items-end cursor-pointer" onClick={() => setIsAccordionOpen(!isAccordionOpen)}>
+              <span className={`text-5xl font-bold ${readiness.color}`}>{score}</span>
+              <span className="text-gray-500 ml-2 mb-1">/ {maxTotalScore}</span>
+              <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isAccordionOpen ? 'rotate-180' : ''}`} />
+            </div>
+            <AccordionContent>
+              <div className="space-y-6 mt-4">
                 {detailedResults.map((result, index) => (
                   <div key={index} className="border-b pb-4">
                     <div className="flex justify-between items-center mb-2">
@@ -255,6 +222,35 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+        
+        <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
+          <div 
+            className={`h-4 rounded-full transition-all duration-1000 ${
+              scorePercentage >= 75 ? "bg-green-500" : 
+              scorePercentage >= 50 ? "bg-yellow-500" : 
+              scorePercentage >= 25 ? "bg-orange-500" : "bg-red-500"
+            }`}
+            style={{ width: `${scorePercentage}%` }}
+          ></div>
+        </div>
+        
+        <h3 className="text-xl font-semibold mb-2">Your Co-Creation Journey Stage:</h3>
+        <div className={`p-4 rounded-lg border ${
+          scorePercentage >= 75 ? "border-green-200 bg-green-50" : 
+          scorePercentage >= 50 ? "border-yellow-200 bg-yellow-50" : 
+          scorePercentage >= 25 ? "border-orange-200 bg-orange-50" : "border-red-200 bg-red-50"
+        }`}>
+          <h4 className={`font-semibold text-lg mb-1 ${readiness.color}`}>{readiness.stage}</h4>
+          <p className="text-gray-700">{readiness.stageDesc}</p>
+        </div>
+      </div>
+      
+      <div className="bg-gray-50 rounded-lg p-6 mb-8">
+        <h3 className="text-xl font-semibold mb-2">What This Means</h3>
+        <p className="text-gray-700 mb-4">{readiness.description}</p>
+        <div className="border-t border-gray-200 pt-4 mt-4">
+          <p className="text-sm text-gray-600">A complete assessment report has been sent to your email with personalized recommendations based on your responses and readiness level.</p>
+        </div>
       </div>
       
       <div className="bg-brand-50 border border-brand-200 rounded-lg p-6">
