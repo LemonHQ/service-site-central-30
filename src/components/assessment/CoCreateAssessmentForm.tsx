@@ -4,7 +4,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
-import SelectableBox from "@/components/lead-qualification/SelectableBox";
 
 interface CoCreateAssessmentFormProps {
   step: number;
@@ -75,31 +74,31 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               {/* Question 1 */}
               <div>
                 <p className="text-sm font-medium mb-2">How would you describe your current offering portfolio?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                      onClick={() => handleSingleChoice('question1', 0)}>
-                    <RadioGroupItem id="q1-opt1" value="0" checked={answers.question1 === 0} />
+                <RadioGroup 
+                  value={answers.question1.toString()}
+                  onValueChange={(value) => handleSingleChoice('question1', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q1-opt1" value="0" />
                     <Label htmlFor="q1-opt1" className="cursor-pointer text-sm">Single unified product</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                      onClick={() => handleSingleChoice('question1', 2)}>
-                    <RadioGroupItem id="q1-opt2" value="2" checked={answers.question1 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q1-opt2" value="2" />
                     <Label htmlFor="q1-opt2" className="cursor-pointer text-sm">Multiple products for different segments</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                      onClick={() => handleSingleChoice('question1', 1)}>
-                    <RadioGroupItem id="q1-opt3" value="1" checked={answers.question1 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q1-opt3" value="1" />
                     <Label htmlFor="q1-opt3" className="cursor-pointer text-sm">Multiple offerings with overlapping value</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                      onClick={() => handleSingleChoice('question1', 3)}>
-                    <RadioGroupItem id="q1-opt4" value="3" checked={answers.question1 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q1-opt4" value="3" />
                     <Label htmlFor="q1-opt4" className="cursor-pointer text-sm">Legacy-heavy suite in need of rework</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
               
               {/* Question 2 */}
@@ -156,61 +155,61 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               {/* Question 3 */}
               <div>
                 <p className="text-sm font-medium mb-2">How well are your customer segments defined?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question3', 0)}>
-                    <RadioGroupItem id="q3-opt1" value="0" checked={answers.question3 === 0} />
+                <RadioGroup 
+                  value={answers.question3.toString()}
+                  onValueChange={(value) => handleSingleChoice('question3', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q3-opt1" value="0" />
                     <Label htmlFor="q3-opt1" className="cursor-pointer text-sm">Not defined</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question3', 1)}>
-                    <RadioGroupItem id="q3-opt2" value="1" checked={answers.question3 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q3-opt2" value="1" />
                     <Label htmlFor="q3-opt2" className="cursor-pointer text-sm">Partially defined</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question3', 2)}>
-                    <RadioGroupItem id="q3-opt3" value="2" checked={answers.question3 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q3-opt3" value="2" />
                     <Label htmlFor="q3-opt3" className="cursor-pointer text-sm">Well defined with insights</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question3', 3)}>
-                    <RadioGroupItem id="q3-opt4" value="3" checked={answers.question3 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q3-opt4" value="3" />
                     <Label htmlFor="q3-opt4" className="cursor-pointer text-sm">Continuously validated</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
               
               {/* Question 4 */}
               <div>
                 <p className="text-sm font-medium mb-2">How confident are you that your offerings meet specific customer needs?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question4', 0)}>
-                    <RadioGroupItem id="q4-opt1" value="0" checked={answers.question4 === 0} />
+                <RadioGroup 
+                  value={answers.question4.toString()}
+                  onValueChange={(value) => handleSingleChoice('question4', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q4-opt1" value="0" />
                     <Label htmlFor="q4-opt1" className="cursor-pointer text-sm">Low</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question4', 1)}>
-                    <RadioGroupItem id="q4-opt2" value="1" checked={answers.question4 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q4-opt2" value="1" />
                     <Label htmlFor="q4-opt2" className="cursor-pointer text-sm">Moderate</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question4', 2)}>
-                    <RadioGroupItem id="q4-opt3" value="2" checked={answers.question4 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q4-opt3" value="2" />
                     <Label htmlFor="q4-opt3" className="cursor-pointer text-sm">High</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question4', 3)}>
-                    <RadioGroupItem id="q4-opt4" value="3" checked={answers.question4 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q4-opt4" value="3" />
                     <Label htmlFor="q4-opt4" className="cursor-pointer text-sm">Proven with data</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
             </div>
           </div>
@@ -225,31 +224,31 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               {/* Question 5 */}
               <div>
                 <p className="text-sm font-medium mb-2">How does your organization validate new ideas before launch?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question5', 0)}>
-                    <RadioGroupItem id="q5-opt1" value="0" checked={answers.question5 === 0} />
+                <RadioGroup 
+                  value={answers.question5.toString()}
+                  onValueChange={(value) => handleSingleChoice('question5', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q5-opt1" value="0" />
                     <Label htmlFor="q5-opt1" className="cursor-pointer text-sm">Intuition or internal input</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question5', 1)}>
-                    <RadioGroupItem id="q5-opt2" value="1" checked={answers.question5 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q5-opt2" value="1" />
                     <Label htmlFor="q5-opt2" className="cursor-pointer text-sm">Occasional pilots/testing</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question5', 2)}>
-                    <RadioGroupItem id="q5-opt3" value="2" checked={answers.question5 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q5-opt3" value="2" />
                     <Label htmlFor="q5-opt3" className="cursor-pointer text-sm">Structured discovery cycles</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question5', 3)}>
-                    <RadioGroupItem id="q5-opt4" value="3" checked={answers.question5 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q5-opt4" value="3" />
                     <Label htmlFor="q5-opt4" className="cursor-pointer text-sm">Co-create with customers</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
               
               {/* Question 6 */}
@@ -303,63 +302,64 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                 </div>
               </div>
               
-              {/* Question 7 & 8 */}
+              {/* Question 7 */}
               <div>
                 <p className="text-sm font-medium mb-2">Are teams aligned on innovation goals and metrics?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question7', 0)}>
-                    <RadioGroupItem id="q7-opt1" value="0" checked={answers.question7 === 0} />
+                <RadioGroup 
+                  value={answers.question7.toString()}
+                  onValueChange={(value) => handleSingleChoice('question7', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q7-opt1" value="0" />
                     <Label htmlFor="q7-opt1" className="cursor-pointer text-sm">Rarely</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question7', 1)}>
-                    <RadioGroupItem id="q7-opt2" value="1" checked={answers.question7 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q7-opt2" value="1" />
                     <Label htmlFor="q7-opt2" className="cursor-pointer text-sm">Somewhat</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question7', 2)}>
-                    <RadioGroupItem id="q7-opt3" value="2" checked={answers.question7 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q7-opt3" value="2" />
                     <Label htmlFor="q7-opt3" className="cursor-pointer text-sm">Mostly aligned</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question7', 3)}>
-                    <RadioGroupItem id="q7-opt4" value="3" checked={answers.question7 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q7-opt4" value="3" />
                     <Label htmlFor="q7-opt4" className="cursor-pointer text-sm">Fully aligned</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
               
+              {/* Question 8 */}
               <div>
                 <p className="text-sm font-medium mb-2">How easy is it for teams to move from idea to execution?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question8', 0)}>
-                    <RadioGroupItem id="q8-opt1" value="0" checked={answers.question8 === 0} />
+                <RadioGroup 
+                  value={answers.question8.toString()}
+                  onValueChange={(value) => handleSingleChoice('question8', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q8-opt1" value="0" />
                     <Label htmlFor="q8-opt1" className="cursor-pointer text-sm">Difficult—lots of friction</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question8', 1)}>
-                    <RadioGroupItem id="q8-opt2" value="1" checked={answers.question8 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q8-opt2" value="1" />
                     <Label htmlFor="q8-opt2" className="cursor-pointer text-sm">Slow, but manageable</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question8', 2)}>
-                    <RadioGroupItem id="q8-opt3" value="2" checked={answers.question8 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q8-opt3" value="2" />
                     <Label htmlFor="q8-opt3" className="cursor-pointer text-sm">Efficient in defined tracks</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question8', 3)}>
-                    <RadioGroupItem id="q8-opt4" value="3" checked={answers.question8 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q8-opt4" value="3" />
                     <Label htmlFor="q8-opt4" className="cursor-pointer text-sm">Agile and collaborative</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
             </div>
           </div>
@@ -374,31 +374,31 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               {/* Question 9 */}
               <div>
                 <p className="text-sm font-medium mb-2">How open is your organization to external collaboration?</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question9', 0)}>
-                    <RadioGroupItem id="q9-opt1" value="0" checked={answers.question9 === 0} />
+                <RadioGroup 
+                  value={answers.question9.toString()}
+                  onValueChange={(value) => handleSingleChoice('question9', parseInt(value))}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                >
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q9-opt1" value="0" />
                     <Label htmlFor="q9-opt1" className="cursor-pointer text-sm">We prefer to keep it in-house</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question9', 1)}>
-                    <RadioGroupItem id="q9-opt2" value="1" checked={answers.question9 === 1} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q9-opt2" value="1" />
                     <Label htmlFor="q9-opt2" className="cursor-pointer text-sm">Open to short-term partners</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question9', 2)}>
-                    <RadioGroupItem id="q9-opt3" value="2" checked={answers.question9 === 2} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q9-opt3" value="2" />
                     <Label htmlFor="q9-opt3" className="cursor-pointer text-sm">Seek co-creation partners</Label>
                   </div>
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
-                       onClick={() => handleSingleChoice('question9', 3)}>
-                    <RadioGroupItem id="q9-opt4" value="3" checked={answers.question9 === 3} />
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <RadioGroupItem id="q9-opt4" value="3" />
                     <Label htmlFor="q9-opt4" className="cursor-pointer text-sm">Already work this way</Label>
                   </div>
-                </div>
+                </RadioGroup>
               </div>
               
               {/* Question 10 */}
