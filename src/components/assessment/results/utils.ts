@@ -26,7 +26,8 @@ export interface ReadinessLevel {
   level: string;
   description: string;
   color: string;
-  icon: React.ReactNode;
+  icon: "award" | "star" | "check";
+  iconColor: string;
   stage: string;
   stageDesc: string;
 }
@@ -40,7 +41,8 @@ export const getReadinessLevel = (score: number): ReadinessLevel => {
       level: "High Readiness",
       description: "Your organization shows strong indicators for co-creation success. Your processes, culture, and capabilities align well with collaborative innovation approaches.",
       color: "text-green-600",
-      icon: <Award className="h-10 w-10 text-green-600" />,
+      icon: "award",
+      iconColor: "text-green-600",
       stage: "Scaling & Optimizing",
       stageDesc: "You're ready to scale collaborative innovation and optimize for maximum impact across your organization."
     };
@@ -49,7 +51,8 @@ export const getReadinessLevel = (score: number): ReadinessLevel => {
       level: "Moderate Readiness",
       description: "Your organization has many of the key elements for successful co-creation, but some areas could be strengthened to maximize impact.",
       color: "text-yellow-600",
-      icon: <Star className="h-10 w-10 text-yellow-600" />,
+      icon: "star",
+      iconColor: "text-yellow-600",
       stage: "Expanding & Growing",
       stageDesc: "You're well-positioned to grow your co-creation capabilities and expand their application across your organization."
     };
@@ -58,7 +61,8 @@ export const getReadinessLevel = (score: number): ReadinessLevel => {
       level: "Developing Readiness",
       description: "Your organization shows promising potential, but may need to strengthen key capabilities before embarking on extensive co-creation initiatives.",
       color: "text-orange-500",
-      icon: <Check className="h-10 w-10 text-orange-500" />,
+      icon: "check",
+      iconColor: "text-orange-500",
       stage: "Building & Developing",
       stageDesc: "You're in the process of building the foundational elements needed for successful co-creation partnerships."
     };
@@ -67,7 +71,8 @@ export const getReadinessLevel = (score: number): ReadinessLevel => {
       level: "Early Stage",
       description: "Your organization may benefit from foundational capability building before investing significantly in co-creation approaches.",
       color: "text-red-500",
-      icon: <Check className="h-10 w-10 text-red-500" />,
+      icon: "check",
+      iconColor: "text-red-500",
       stage: "Exploring & Learning",
       stageDesc: "You're at the beginning of your co-creation journey, with opportunities to learn and establish core capabilities."
     };

@@ -1,15 +1,7 @@
 
 import React from 'react';
 import { Award, Check, Star } from 'lucide-react';
-
-interface ReadinessLevel {
-  level: string;
-  description: string;
-  color: string;
-  icon: React.ReactNode;
-  stage: string;
-  stageDesc: string;
-}
+import { ReadinessLevel } from './utils';
 
 interface ReadinessLevelDisplayProps {
   readiness: ReadinessLevel;
@@ -17,12 +9,25 @@ interface ReadinessLevelDisplayProps {
 }
 
 const ReadinessLevelDisplay: React.FC<ReadinessLevelDisplayProps> = ({ readiness, scorePercentage }) => {
+  const renderIcon = () => {
+    switch (readiness.icon) {
+      case 'award':
+        return <Award className={`h-10 w-10 ${readiness.iconColor}`} />;
+      case 'star':
+        return <Star className={`h-10 w-10 ${readiness.iconColor}`} />;
+      case 'check':
+        return <Check className={`h-10 w-10 ${readiness.iconColor}`} />;
+      default:
+        return <Check className={`h-10 w-10 ${readiness.iconColor}`} />;
+    }
+  };
+
   return (
     <>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-semibold">Your Readiness Score</h2>
         <div className="flex items-center space-x-2">
-          {readiness.icon}
+          {renderIcon()}
           <span className={`text-lg font-bold ${readiness.color}`}>{readiness.level}</span>
         </div>
       </div>
