@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -19,9 +18,8 @@ const Header = () => {
   const [mobileExpandedApproach, setMobileExpandedApproach] = useState<string | null>(null);
   const location = useLocation();
 
-  // Navigation links - Updated order with Industries before Contact
+  // Navigation links - Removed 'Home' from the array
   const navLinks = [
-    { name: 'Home', path: '/' },
     { name: 'Our Work', path: '/case-studies' },
     { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
@@ -49,7 +47,7 @@ const Header = () => {
   // Our Approach items
   const approachItems = [
     { name: "Co-Create", path: "/approach/co-create", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Collaborative innovation approach" },
-    { name: "Extend", path: "/approach/extend", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Expert-as-a-service delivery model" }
+    { name: "Extend", path: "/approach/extend", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Expert-as-a-service delivery model" }
   ];
 
   const isActive = (path: string) => {
@@ -85,6 +83,7 @@ const Header = () => {
     }
   };
 
+  
   return (
     <header className="sticky top-0 bg-white border-b border-gray-100 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,23 +97,16 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Updated with reduced spacing */}
+          {/* Desktop Navigation - Updated with consistent spacing and removed Home link */}
           <nav className="hidden md:flex items-center">
-            <div className="flex items-center space-x-3 xl:space-x-4">
-              <Link 
-                to="/" 
-                className={`${isActive('/')} font-medium px-1`}
-              >
-                Home
-              </Link>
-              
+            <div className="flex items-center space-x-6">
               {/* Service SubNav - what we do */}
-              <div className="relative flex items-center px-1">
+              <div className="relative flex items-center">
                 <ServiceSubNav />
               </div>
 
-              {/* Our Approach dropdown - removed background fill */}
-              <div className="px-1">
+              {/* Our Approach dropdown - with consistent spacing */}
+              <div>
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -149,8 +141,8 @@ const Header = () => {
                 </NavigationMenu>
               </div>
 
-              {/* Industries dropdown - removed background fill */}
-              <div className="px-1">
+              {/* Industries dropdown - with consistent spacing */}
+              <div>
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -185,26 +177,18 @@ const Header = () => {
                 </NavigationMenu>
               </div>
               
-              {navLinks.slice(1).map((link) => (
+              {/* Main nav links with consistent spacing */}
+              {navLinks.map((link) => (
                 <Link 
                   key={link.name} 
                   to={link.path} 
-                  className={`${isActive(link.path)} font-medium px-1`}
+                  className={`${isActive(link.path)} font-medium`}
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
           </nav>
-
-          {/* CTA Button - Now links to lead qualification journey */}
-          <div className="hidden md:block">
-            <Link to="/lead-qualification">
-              <Button className="bg-brand-400 hover:bg-brand-500">
-                Get Started
-              </Button>
-            </Link>
-          </div>
 
           {/* Mobile Menu Button */}
           <button 
@@ -216,7 +200,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Updated to match desktop changes */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 animate-fade-in">
           <nav className="flex flex-col space-y-2 py-6 px-8">
@@ -261,7 +245,7 @@ const Header = () => {
               )}
             </div>
             
-            {/* Our Approach - with sub-menu - added new */}
+            {/* Our Approach - with sub-menu */}
             <div className="flex flex-col">
               <button 
                 className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}
@@ -317,8 +301,8 @@ const Header = () => {
               )}
             </div>
             
-            {/* Other main nav links */}
-            {navLinks.slice(1).map((link) => (
+            {/* Main nav links */}
+            {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path} 
@@ -328,16 +312,6 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            
-            <Link 
-              to="/lead-qualification" 
-              onClick={() => setIsMenuOpen(false)}
-              className="pt-2"
-            >
-              <Button className="w-full mt-2 bg-brand-400 hover:bg-brand-500">
-                Get Started
-              </Button>
-            </Link>
           </nav>
         </div>
       )}
