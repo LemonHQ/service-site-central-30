@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Link } from 'react-router-dom';
@@ -117,13 +116,33 @@ const CoCreatePage = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard title="Digital Product Design" description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical} />
+            <ServiceCard 
+              title="Digital Product Design" 
+              description="Create user-centric digital products through collaborative ideation, prototyping, and testing." 
+              icon={FlaskConical} 
+              link="/services/design-new-experiences" 
+            />
             
-            <ServiceCard title="Rapid Prototyping" description="Transform concepts into functional prototypes within days, not weeks or months." icon={Zap} />
+            <ServiceCard 
+              title="Rapid Prototyping" 
+              description="Transform concepts into functional prototypes within days, not weeks or months." 
+              icon={Zap} 
+              link="/services/digitalize-product-lines" 
+            />
             
-            <ServiceCard title="Technology Modernization" description="Reimagine legacy systems with modern architectures and technology stacks." icon={History} />
+            <ServiceCard 
+              title="Technology Modernization" 
+              description="Reimagine legacy systems with modern architectures and technology stacks." 
+              icon={History} 
+              link="/services/modernize-architecture" 
+            />
             
-            <ServiceCard title="Innovation Workshops" description="Structured sessions to solve complex challenges and generate breakthrough ideas." icon={Lightbulb} />
+            <ServiceCard 
+              title="Innovation Workshops" 
+              description="Structured sessions to solve complex challenges and generate breakthrough ideas." 
+              icon={Lightbulb} 
+              link="/services/innovate-with-ai" 
+            />
           </div>
         </div>
       </section>
