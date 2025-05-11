@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Link } from 'react-router-dom';
@@ -6,10 +5,8 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Lightbulb, Repeat, BarChart, ArrowRight, Zap, FlaskConical, History } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ServiceCard from '@/components/ui/ServiceCard';
-
 const CoCreatePage = () => {
-  return (
-    <MainLayout>
+  return <MainLayout>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-beige-50 to-white py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -33,11 +30,7 @@ const CoCreatePage = () => {
               </div>
             </div>
             <div className="flex justify-center relative">
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Co-Create - Hero Image"
-                className="rounded-xl shadow-lg w-full h-[400px] object-cover object-center"
-              />
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Co-Create - Hero Image" className="rounded-xl shadow-lg w-full h-[400px] object-cover object-center" />
             </div>
           </div>
         </div>
@@ -121,31 +114,19 @@ const CoCreatePage = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard
-              title="Digital Product Design"
-              description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical}
-            />
+            <ServiceCard title="Digital Product Design" description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical} />
             
-            <ServiceCard
-              title="Rapid Prototyping"
-              description="Transform concepts into functional prototypes within days, not weeks or months." icon={Zap}
-            />
+            <ServiceCard title="Rapid Prototyping" description="Transform concepts into functional prototypes within days, not weeks or months." icon={Zap} />
             
-            <ServiceCard
-              title="Technology Modernization"
-              description="Reimagine legacy systems with modern architectures and technology stacks." icon={History}
-            />
+            <ServiceCard title="Technology Modernization" description="Reimagine legacy systems with modern architectures and technology stacks." icon={History} />
             
-            <ServiceCard
-              title="Innovation Workshops"
-              description="Structured sessions to solve complex challenges and generate breakthrough ideas." icon={Lightbulb}
-            />
+            <ServiceCard title="Innovation Workshops" description="Structured sessions to solve complex challenges and generate breakthrough ideas." icon={Lightbulb} />
           </div>
         </div>
       </section>
       
       {/* Exploration Section 
-      <section className="py-16 bg-white">
+       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Take your business to the next level</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
@@ -211,10 +192,10 @@ const CoCreatePage = () => {
             </div>
           </div>
         </div>
-      </section>
-      */}
+       </section>
+       */}
       {/* How It Works 
-      <section className="py-16 bg-gray-50">
+       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How Co-Create Works</h2>
           
@@ -250,10 +231,10 @@ const CoCreatePage = () => {
             </div>
           </div>
         </div>
-      </section>
-      */}
+       </section>
+       */}
       {/* Benefits Section 
-      <section className="py-16 bg-white">
+       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Co-Create Benefits</h2>
           
@@ -291,8 +272,8 @@ const CoCreatePage = () => {
             </div>
           </div>
         </div>
-      </section>
-      */}
+       </section>
+       */}
       {/* Case Study Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -330,11 +311,7 @@ const CoCreatePage = () => {
             </div>
             
             <div className="lg:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
-                alt="Co-Create Workshop" 
-                className="rounded-xl shadow-lg w-full h-[400px] object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Co-Create Workshop" className="rounded-xl shadow-lg w-full h-[400px] object-cover" />
             </div>
           </div>
         </div>
@@ -394,8 +371,8 @@ const CoCreatePage = () => {
       {/* CTA Section */}
       <section className="bg-brand-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to explore?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl mb-6 font-normal text-slate-50">Ready to explore?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto font-thin">
             Assess your readiness for a co-creation journey
           </p>
           <Link to="/lead-qualification">
@@ -405,8 +382,6 @@ const CoCreatePage = () => {
           </Link>
         </div>
       </section>
-    </MainLayout>
-  );
+    </MainLayout>;
 };
-
 export default CoCreatePage;
