@@ -9,6 +9,93 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      co_create_assessments: {
+        Row: {
+          created_at: string
+          cross_functional_execution: string
+          cross_functional_execution_score: number
+          customer_segments: string
+          customer_segments_score: number
+          email: string
+          exploration_planning: string[]
+          exploration_planning_score: number
+          external_collaboration: string
+          external_collaboration_score: number
+          id: string
+          internal_capabilities: string[]
+          internal_capabilities_score: number
+          name: string
+          offering_portfolio: string
+          offering_portfolio_score: number
+          offerings_confidence: string
+          offerings_confidence_score: number
+          partnership_support: string[]
+          partnership_support_score: number
+          score_category: string
+          team_alignment: string
+          team_alignment_score: number
+          total_score: number
+          validation_approach: string
+          validation_approach_score: number
+        }
+        Insert: {
+          created_at?: string
+          cross_functional_execution: string
+          cross_functional_execution_score: number
+          customer_segments: string
+          customer_segments_score: number
+          email: string
+          exploration_planning?: string[]
+          exploration_planning_score: number
+          external_collaboration: string
+          external_collaboration_score: number
+          id?: string
+          internal_capabilities?: string[]
+          internal_capabilities_score: number
+          name: string
+          offering_portfolio: string
+          offering_portfolio_score: number
+          offerings_confidence: string
+          offerings_confidence_score: number
+          partnership_support?: string[]
+          partnership_support_score: number
+          score_category: string
+          team_alignment: string
+          team_alignment_score: number
+          total_score: number
+          validation_approach: string
+          validation_approach_score: number
+        }
+        Update: {
+          created_at?: string
+          cross_functional_execution?: string
+          cross_functional_execution_score?: number
+          customer_segments?: string
+          customer_segments_score?: number
+          email?: string
+          exploration_planning?: string[]
+          exploration_planning_score?: number
+          external_collaboration?: string
+          external_collaboration_score?: number
+          id?: string
+          internal_capabilities?: string[]
+          internal_capabilities_score?: number
+          name?: string
+          offering_portfolio?: string
+          offering_portfolio_score?: number
+          offerings_confidence?: string
+          offerings_confidence_score?: number
+          partnership_support?: string[]
+          partnership_support_score?: number
+          score_category?: string
+          team_alignment?: string
+          team_alignment_score?: number
+          total_score?: number
+          validation_approach?: string
+          validation_approach_score?: number
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           company: string
