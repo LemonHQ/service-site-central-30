@@ -74,10 +74,14 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
   };
 
   // Function to render a checkbox option with improved click handling
-  const renderCheckboxOption = (id: string, isChecked: boolean, label: string, onChange: () => void) => {
+  const renderCheckboxOption = (id: string, question: string, value: number, label: string, isChecked: boolean) => {
     return (
       <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50">
-        <Checkbox id={id} checked={isChecked} onCheckedChange={onChange} />
+        <Checkbox 
+          id={id} 
+          checked={isChecked} 
+          onCheckedChange={() => handleMultiChoice(question, value)} 
+        />
         <Label htmlFor={id} className="cursor-pointer text-sm flex-grow">{label}</Label>
       </div>
     );
@@ -93,7 +97,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
             <div className="space-y-5">
               {/* Question 1 */}
               <div>
-                <p className="text-sm font-medium mb-2">How would you describe your current offering portfolio?</p>
+                <p className="text-base font-medium mb-2">How would you describe your current offering portfolio?</p>
                 <RadioGroup 
                   value={answers.question1.toString()}
                   onValueChange={(value) => handleSingleChoice('question1', parseInt(value))}
@@ -108,48 +112,53 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               
               {/* Question 2 */}
               <div>
-                <p className="text-sm font-medium mb-2">Are you currently exploring or planning any of the following?</p>
+                <p className="text-base font-medium mb-2">Are you currently exploring or planning any of the following?</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {renderCheckboxOption(
                     "q2-opt1",
-                    answers.question2.includes(1),
+                    "question2", 
+                    1,
                     "Launching a new product or sub-brand",
-                    () => handleMultiChoice('question2', 1)
+                    answers.question2.includes(1)
                   )}
                   
                   {renderCheckboxOption(
                     "q2-opt2",
-                    answers.question2.includes(1),
+                    "question2",
+                    2,
                     "Repositioning an existing offering",
-                    () => handleMultiChoice('question2', 1)
+                    answers.question2.includes(2)
                   )}
                   
                   {renderCheckboxOption(
                     "q2-opt3",
-                    answers.question2.includes(1),
+                    "question2",
+                    3,
                     "Entering a new customer segment",
-                    () => handleMultiChoice('question2', 1)
+                    answers.question2.includes(3)
                   )}
                   
                   {renderCheckboxOption(
                     "q2-opt4",
-                    answers.question2.includes(1),
+                    "question2",
+                    4,
                     "Rationalizing or unbundling product lines",
-                    () => handleMultiChoice('question2', 1)
+                    answers.question2.includes(4)
                   )}
                   
                   {renderCheckboxOption(
                     "q2-opt5",
-                    answers.question2.includes(0),
+                    "question2",
+                    0,
                     "None of the above",
-                    () => handleMultiChoice('question2', 0)
+                    answers.question2.includes(0)
                   )}
                 </div>
               </div>
               
               {/* Question 3 & 4 */}
               <div>
-                <p className="text-sm font-medium mb-2">How well are your customer segments defined?</p>
+                <p className="text-base font-medium mb-2">How well are your customer segments defined?</p>
                 <RadioGroup 
                   value={answers.question3.toString()}
                   onValueChange={(value) => handleSingleChoice('question3', parseInt(value))}
@@ -163,7 +172,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               </div>
               
               <div>
-                <p className="text-sm font-medium mb-2">How confident are you that your offerings meet specific customer needs?</p>
+                <p className="text-base font-medium mb-2">How confident are you that your offerings meet specific customer needs?</p>
                 <RadioGroup 
                   value={answers.question4.toString()}
                   onValueChange={(value) => handleSingleChoice('question4', parseInt(value))}
@@ -187,7 +196,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
             <div className="space-y-5">
               {/* Question 5 */}
               <div>
-                <p className="text-sm font-medium mb-2">How does your organization validate new ideas?</p>
+                <p className="text-base font-medium mb-2">How does your organization validate new ideas?</p>
                 <RadioGroup 
                   value={answers.question5.toString()}
                   onValueChange={(value) => handleSingleChoice('question5', parseInt(value))}
@@ -202,48 +211,53 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               
               {/* Question 6 */}
               <div>
-                <p className="text-sm font-medium mb-2">What internal capabilities do you have to support innovation?</p>
+                <p className="text-base font-medium mb-2">What internal capabilities do you have to support innovation?</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {renderCheckboxOption(
                     "q6-opt1",
-                    answers.question6.includes(1),
+                    "question6",
+                    1,
                     "Research & insight",
-                    () => handleMultiChoice('question6', 1)
+                    answers.question6.includes(1)
                   )}
                   
                   {renderCheckboxOption(
-                    "q6-opt2",
-                    answers.question6.includes(1),
+                    "q6-opt2", 
+                    "question6", 
+                    2,
                     "Experience or service design",
-                    () => handleMultiChoice('question6', 1)
+                    answers.question6.includes(2)
                   )}
                   
                   {renderCheckboxOption(
                     "q6-opt3",
-                    answers.question6.includes(1),
+                    "question6",
+                    3,
                     "Prototyping & testing",
-                    () => handleMultiChoice('question6', 1)
+                    answers.question6.includes(3)
                   )}
                   
                   {renderCheckboxOption(
                     "q6-opt4",
-                    answers.question6.includes(1),
+                    "question6",
+                    4,
                     "Go-to-market readiness",
-                    () => handleMultiChoice('question6', 1)
+                    answers.question6.includes(4)
                   )}
                   
                   {renderCheckboxOption(
                     "q6-opt5",
-                    answers.question6.includes(0),
+                    "question6",
+                    0,
                     "None",
-                    () => handleMultiChoice('question6', 0)
+                    answers.question6.includes(0)
                   )}
                 </div>
               </div>
               
               {/* Question 7 & 8 */}
               <div>
-                <p className="text-sm font-medium mb-2">Are teams aligned on innovation goals and metrics?</p>
+                <p className="text-base font-medium mb-2">Are teams aligned on innovation goals and metrics?</p>
                 <RadioGroup 
                   value={answers.question7.toString()}
                   onValueChange={(value) => handleSingleChoice('question7', parseInt(value))}
@@ -257,7 +271,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               </div>
               
               <div>
-                <p className="text-sm font-medium mb-2">How easy is it for teams to move from idea to execution?</p>
+                <p className="text-base font-medium mb-2">How easy is it for teams to move from idea to execution?</p>
                 <RadioGroup 
                   value={answers.question8.toString()}
                   onValueChange={(value) => handleSingleChoice('question8', parseInt(value))}
@@ -281,7 +295,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
             <div className="space-y-5">
               {/* Question 9 */}
               <div>
-                <p className="text-sm font-medium mb-2">How open is your organization to external collaboration?</p>
+                <p className="text-base font-medium mb-2">How open is your organization to external collaboration?</p>
                 <RadioGroup 
                   value={answers.question9.toString()}
                   onValueChange={(value) => handleSingleChoice('question9', parseInt(value))}
@@ -296,48 +310,54 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
               
               {/* Question 10 */}
               <div>
-                <p className="text-sm font-medium mb-2">What support would you value from a co-creation partner?</p>
+                <p className="text-base font-medium mb-2">What support would you value from a co-creation partner?</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {renderCheckboxOption(
                     "q10-opt1",
-                    answers.question10.includes(1),
+                    "question10",
+                    1,
                     "Strategy & discovery",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(1)
                   )}
                   
                   {renderCheckboxOption(
                     "q10-opt2",
-                    answers.question10.includes(1),
+                    "question10",
+                    2,
                     "Experience design",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(2)
                   )}
                   
                   {renderCheckboxOption(
                     "q10-opt3",
-                    answers.question10.includes(1),
+                    "question10",
+                    3,
                     "Prototyping & validation",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(3)
                   )}
                   
                   {renderCheckboxOption(
                     "q10-opt4",
-                    answers.question10.includes(1),
+                    "question10",
+                    4,
                     "Market testing",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(4)
                   )}
                   
                   {renderCheckboxOption(
                     "q10-opt5",
-                    answers.question10.includes(1),
+                    "question10",
+                    5,
                     "Launch planning",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(5)
                   )}
                   
                   {renderCheckboxOption(
                     "q10-opt6",
-                    answers.question10.includes(1),
+                    "question10",
+                    6,
                     "Stakeholder alignment",
-                    () => handleMultiChoice('question10', 1)
+                    answers.question10.includes(6)
                   )}
                 </div>
               </div>
