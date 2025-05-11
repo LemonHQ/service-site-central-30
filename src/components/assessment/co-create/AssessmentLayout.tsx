@@ -25,11 +25,13 @@ const AssessmentLayout: React.FC<AssessmentLayoutProps> = ({
 }) => {
   return (
     <MainLayout pageTitle="Co-Create Assessment">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-brand-600 text-center">{title}</h1>
+          <h1 className="text-3xl font-bold mb-6 text-brand-600 text-center">{title}</h1>
           {currentStep < 5 && (
-            <ProgressIndicator steps={steps} currentStep={currentStep} />
+            <div className="mb-6">
+              <ProgressIndicator steps={steps} currentStep={currentStep} />
+            </div>
           )}
           {children}
         </div>

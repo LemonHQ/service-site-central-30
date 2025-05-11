@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { CircleCheck, ArrowRight, Download, Sparkles } from 'lucide-react';
+import { CircleCheck, ArrowRight, Download, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { AssessmentData } from './assessmentSchema';
 import { MAX_SCORE } from './assessmentConstants';
 
@@ -12,15 +12,7 @@ interface ResultsDisplayProps {
 
 const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ assessmentData }) => {
   const { scores, name } = assessmentData;
-  
-  // Function to get background color based on score
-  const getScoreColor = (score: number, maxScore: number) => {
-    const percentage = (score / maxScore) * 100;
-    if (percentage >= 75) return "bg-green-500";
-    if (percentage >= 50) return "bg-yellow-500";
-    if (percentage >= 25) return "bg-orange-400";
-    return "bg-red-500";
-  };
+  const [showDetails, setShowDetails] = useState(false);
   
   // Function to get category description
   const getCategoryDescription = (category: string) => {
@@ -49,7 +41,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ assessmentData }) => {
       </div>
 
       <div className="bg-brand-50 border border-brand-100 rounded-lg p-6 mb-8">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-4">
           <div>
             <h3 className="text-xl font-semibold text-brand-600">Your Co-Create Readiness Score</h3>
             <p className="text-brand-500">
@@ -57,13 +49,19 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ assessmentData }) => {
             </p>
           </div>
           
-          <div className="flex items-center mt-4 md:mt-0">
+          <div 
+            className="flex items-center mt-4 md:mt-0 cursor-pointer bg-white rounded-lg px-4 py-2 border border-brand-200 hover:shadow-md transition-all"
+            onClick={() => setShowDetails(!showDetails)}
+          >
             <div className="text-center">
               <div className="text-3xl font-bold text-brand-700">
                 {scores.totalScore}
                 <span className="text-xl text-brand-400">/{MAX_SCORE}</span>
               </div>
-              <div className="text-sm text-brand-500">Total Score</div>
+              <div className="text-sm text-brand-500 flex items-center">
+                {showDetails ? 'Hide details' : 'Show details'}
+                {showDetails ? <ChevronUp className="ml-1 h-4 w-4" /> : <ChevronDown className="ml-1 h-4 w-4" />}
+              </div>
             </div>
           </div>
         </div>
@@ -72,19 +70,23 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ assessmentData }) => {
           {getCategoryDescription(scores.scoreCategory)}
         </p>
         
-        <h4 className="font-semibold mb-3">Score Breakdown</h4>
-        <div className="space-y-3">
-          <ScoreBar label="Offering Portfolio" score={scores.offeringPortfolioScore} maxScore={3} />
-          <ScoreBar label="Exploration Planning" score={scores.explorationPlanningScore} maxScore={4} />
-          <ScoreBar label="Customer Segments" score={scores.customerSegmentsScore} maxScore={3} />
-          <ScoreBar label="Offerings Confidence" score={scores.offeringsConfidenceScore} maxScore={3} />
-          <ScoreBar label="Validation Approach" score={scores.validationApproachScore} maxScore={3} />
-          <ScoreBar label="Internal Capabilities" score={scores.internalCapabilitiesScore} maxScore={4} />
-          <ScoreBar label="Team Alignment" score={scores.teamAlignmentScore} maxScore={3} />
-          <ScoreBar label="Cross-Functional Execution" score={scores.crossFunctionalExecutionScore} maxScore={3} />
-          <ScoreBar label="External Collaboration" score={scores.externalCollaborationScore} maxScore={3} />
-          <ScoreBar label="Partnership Support" score={scores.partnershipSupportScore} maxScore={3} />
-        </div>
+        {showDetails && (
+          <div className="mt-6">
+            <h4 className="font-semibold mb-3">Score Breakdown</h4>
+            <div className="space-y-3">
+              <ScoreBar label="Offering Portfolio" score={scores.offeringPortfolioScore} maxScore={3} />
+              <ScoreBar label="Exploration Planning" score={scores.explorationPlanningScore} maxScore={4} />
+              <ScoreBar label="Customer Segments" score={scores.customerSegmentsScore} maxScore={3} />
+              <ScoreBar label="Offerings Confidence" score={scores.offeringsConfidenceScore} maxScore={3} />
+              <ScoreBar label="Validation Approach" score={scores.validationApproachScore} maxScore={3} />
+              <ScoreBar label="Internal Capabilities" score={scores.internalCapabilitiesScore} maxScore={4} />
+              <ScoreBar label="Team Alignment" score={scores.teamAlignmentScore} maxScore={3} />
+              <ScoreBar label="Cross-Functional Execution" score={scores.crossFunctionalExecutionScore} maxScore={3} />
+              <ScoreBar label="External Collaboration" score={scores.externalCollaborationScore} maxScore={3} />
+              <ScoreBar label="Partnership Support" score={scores.partnershipSupportScore} maxScore={3} />
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="bg-gray-50 border border-gray-100 rounded-lg p-6 mb-8">
