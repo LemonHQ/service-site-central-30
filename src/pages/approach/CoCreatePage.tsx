@@ -122,176 +122,35 @@ const CoCreatePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ServiceCard
               title="Digital Product Design"
-              description="Create user-centric digital products through collaborative ideation, prototyping, and testing." icon={FlaskConical}
+              description="Create user-centric digital products through collaborative ideation, prototyping, and testing."
+              icon={FlaskConical}
+              link="/services/digital-product-design"
             />
             
             <ServiceCard
               title="Rapid Prototyping"
-              description="Transform concepts into functional prototypes within days, not weeks or months." icon={Zap}
+              description="Transform concepts into functional prototypes within days, not weeks or months."
+              icon={Zap}
+              link="/services/rapid-prototyping"
             />
             
             <ServiceCard
               title="Technology Modernization"
-              description="Reimagine legacy systems with modern architectures and technology stacks." icon={History}
+              description="Reimagine legacy systems with modern architectures and technology stacks."
+              icon={History}
+              link="/services/technology-modernization"
             />
             
             <ServiceCard
               title="Innovation Workshops"
-              description="Structured sessions to solve complex challenges and generate breakthrough ideas." icon={Lightbulb}
+              description="Structured sessions to solve complex challenges and generate breakthrough ideas."
+              icon={Lightbulb}
+              link="/services/innovation-workshops"
             />
           </div>
         </div>
       </section>
       
-      {/* Exploration Section 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Take your business to the next level</h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Discover how our Co-Create approach can help you address specific business challenges and create meaningful impact.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Innovation Workshop" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-brand-600">Innovation Workshops</h3>
-                <p className="text-gray-600 mb-4">
-                  Facilitated sessions to generate breakthrough ideas and solve complex business challenges.
-                </p>
-                <Link to="/services/innovation-workshops" className="inline-flex items-center text-brand-500 hover:text-brand-600">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Digital Product Development" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-brand-600">Digital Product Development</h3>
-                <p className="text-gray-600 mb-4">
-                  End-to-end product development from concept to market launch with continuous validation.
-                </p>
-                <Link to="/services/digital-product-development" className="inline-flex items-center text-brand-500 hover:text-brand-600">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Technology Exploration" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-brand-600">Technology Exploration</h3>
-                <p className="text-gray-600 mb-4">
-                  Explore and validate emerging technologies to understand their impact on your business.
-                </p>
-                <Link to="/services/technology-exploration" className="inline-flex items-center text-brand-500 hover:text-brand-600">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
-      {/* How It Works 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">How Co-Create Works</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-brand-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Cross-functional Teams</h3>
-              <p className="text-gray-600">
-                We bring together product specialists, designers, engineers, and your stakeholders into dedicated innovation teams.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4">
-                <Lightbulb className="h-6 w-6 text-brand-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Structured Workshops</h3>
-              <p className="text-gray-600">
-                Our facilitated sessions use proven ideation techniques to quickly move from problems to validated solutions.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4">
-                <Repeat className="h-6 w-6 text-brand-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Rapid Iteration</h3>
-              <p className="text-gray-600">
-                We develop functional prototypes, gather feedback, and refine solutions in accelerated development cycles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
-      {/* Benefits Section 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Co-Create Benefits</h2>
-          
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-            <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-brand-400 mt-1 mr-3 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Accelerated Time-to-Value</h3>
-                <p className="text-gray-600">Cut delivery timelines by 30-50% through parallel workflows and reduced handoffs.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-brand-400 mt-1 mr-3 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Enhanced Stakeholder Alignment</h3>
-                <p className="text-gray-600">Build consensus and shared understanding through collaborative problem-solving.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-brand-400 mt-1 mr-3 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Knowledge Transfer</h3>
-                <p className="text-gray-600">Your team learns our methods and approaches to innovation, enhancing your internal capabilities.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-brand-400 mt-1 mr-3 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Better Solutions</h3>
-                <p className="text-gray-600">Diverse perspectives and iterative testing lead to more innovative, user-centered products.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
       {/* Case Study Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
