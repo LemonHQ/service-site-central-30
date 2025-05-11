@@ -18,7 +18,7 @@ interface ConsultingPanelProps {
 const ConsultingPanel: React.FC<ConsultingPanelProps> = ({
   title = "Schedule a call with our",
   subtitle = "Product Design Expert",
-  description = "Every product design challenge is different. That's why we offer you a free consulting session with one of our in-house experts.",
+  description = "Every brand challenge is different. That's why we offer you a no obligations consulting session with one of our in-house experts.",
   expertName = "Husain Mohsin",
   expertTitle = "HEAD OF DESIGN",
   expertImage = "/assets/imgs/husain-mohsin-profile-pic.png",
