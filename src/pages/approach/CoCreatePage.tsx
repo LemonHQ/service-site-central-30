@@ -18,17 +18,16 @@ const CoCreatePage = () => {
               <h1 className="text-4xl lg:text-5xl font-bold text-brand-600 mb-4">
                 Co-Create
               </h1>
-              <p className="text-xl text-brand-400 mb-8">Collaborative innovation approach</p>
+              <p className="text-xl text-brand-400 mb-8">Demand for personalization</p>
               <div className="text-gray-600 text-lg mb-8 space-y-4">
                 <p>
-                  Our Co-Create model brings your team and our experts together in collaborative environments 
-                  designed to accelerate innovation, build alignment, and deliver impactful digital solutions.
+                  In today’s fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments.                  
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/lead-qualification">
                   <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
-                    Start a Co-Create Engagement
+                    How it works
                   </Button>
                 </Link>
               </div>
@@ -47,9 +46,9 @@ const CoCreatePage = () => {
       {/* Benefits Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">The benefits of starting a Co-Create for your business</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">The benefits of Co-creation</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Our collaborative approach delivers tangible advantages to organizations looking to accelerate innovation and digital transformation.
+            Our Co-Create model brings your team and our experts together in collaborative environments designed to accelerate unbundling, build alignment, and deliver impactful business outcomes.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -57,31 +56,56 @@ const CoCreatePage = () => {
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Accelerate Time-to-Market</h3>
-              <p className="text-gray-600">Reduce development cycles by 40-60% through collaborative workflows and rapid prototyping.</p>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Faster product-market fit</h3>
+              <p className="text-gray-600">Validate real customer needs early and shape solutions that resonate—before you commit full-scale resources.</p>
             </div>
             
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Cross-functional Expertise</h3>
-              <p className="text-gray-600">Access designers, engineers, and product specialists in a dedicated innovation team.</p>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Stronger differentiation</h3>
+              <p className="text-gray-600">Stand out with offerings that are precise, relevant, and built with the end customer segment in mind.</p>
             </div>
             
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Innovation Catalyst</h3>
-              <p className="text-gray-600">Structured workshops and techniques to break through conventional thinking patterns.</p>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Actionable innovation</h3>
+              <p className="text-gray-600">Uncover fresh opportunities, niche use cases, and value models hidden in your customer or partner ecosystem.</p>
             </div>
-            
+
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Less risk, more alignment</h3>
+              <p className="text-gray-600">Minimize missteps and internal friction by involving brand, product, market, channel teams from day one.</p>
+            </div>
+
+
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Execution-ready frameworks</h3>
+              <p className="text-gray-600">Turn strategy into speed with assets, prototypes, and modular systems ready for market deployment.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="h-8 w-8 text-brand-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Customer-centricity at scale</h3>
+              <p className="text-gray-600">Design for flexibility—so your product can flex across regions, verticals, or partner channels without losing focus.</p>
+            </div>
+
             <div className="flex flex-col items-center text-center p-6 bg-beige-50 rounded-lg hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                 <BarChart className="h-8 w-8 text-brand-500" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-brand-600">Measurable Outcomes</h3>
+              <h3 className="text-xl font-semibold mb-2 text-brand-600">Measurable outcomes</h3>
               <p className="text-gray-600">Define clear KPIs and success metrics aligned with your business objectives.</p>
             </div>
           </div>
@@ -197,7 +221,7 @@ const CoCreatePage = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How Co-Create Works</h2>
@@ -235,8 +259,8 @@ const CoCreatePage = () => {
           </div>
         </div>
       </section>
-      
-      {/* Benefits Section */}
+      */}
+      {/* Benefits Section 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Co-Create Benefits</h2>
@@ -276,7 +300,7 @@ const CoCreatePage = () => {
           </div>
         </div>
       </section>
-      
+      */}
       {/* Case Study Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
