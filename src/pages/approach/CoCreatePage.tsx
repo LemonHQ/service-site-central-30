@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Link } from 'react-router-dom';
@@ -21,7 +20,7 @@ const CoCreatePage = () => {
               <p className="text-xl text-brand-400 mb-8">Demand for personalization</p>
               <div className="text-gray-600 text-lg mb-8 space-y-4">
                 <p>
-                  In today’s fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments.                  
+                  In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments.                  
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -398,7 +397,7 @@ const CoCreatePage = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Assess your readiness for a co-creation journey
           </p>
-          <Link to="/lead-qualification">
+          <Link to="/approach/co-create-assessment">
             <Button size="lg" className="bg-white text-brand-600 hover:bg-gray-100">
               Take the assessment
             </Button>

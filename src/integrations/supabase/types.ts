@@ -9,6 +9,60 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      co_create_assessments: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          question1_answer: number
+          question10_answers: number[]
+          question2_answers: number[]
+          question3_answer: number
+          question4_answer: number
+          question5_answer: number
+          question6_answers: number[]
+          question7_answer: number
+          question8_answer: number
+          question9_answer: number
+          total_score: number
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          question1_answer: number
+          question10_answers: number[]
+          question2_answers: number[]
+          question3_answer: number
+          question4_answer: number
+          question5_answer: number
+          question6_answers: number[]
+          question7_answer: number
+          question8_answer: number
+          question9_answer: number
+          total_score: number
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          question1_answer?: number
+          question10_answers?: number[]
+          question2_answers?: number[]
+          question3_answer?: number
+          question4_answer?: number
+          question5_answer?: number
+          question6_answers?: number[]
+          question7_answer?: number
+          question8_answer?: number
+          question9_answer?: number
+          total_score?: number
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           company: string
