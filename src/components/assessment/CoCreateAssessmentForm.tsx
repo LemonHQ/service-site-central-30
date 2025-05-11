@@ -63,14 +63,34 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
     });
   };
 
+  // Function to render a radio option with improved click handling
+  const renderRadioOption = (id: string, value: string, label: string, name: string, currentValue: string) => {
+    return (
+      <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50">
+        <RadioGroupItem id={id} value={value} />
+        <Label htmlFor={id} className="cursor-pointer text-sm flex-grow">{label}</Label>
+      </div>
+    );
+  };
+
+  // Function to render a checkbox option with improved click handling
+  const renderCheckboxOption = (id: string, isChecked: boolean, label: string, onChange: () => void) => {
+    return (
+      <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50">
+        <Checkbox id={id} checked={isChecked} onCheckedChange={onChange} />
+        <Label htmlFor={id} className="cursor-pointer text-sm flex-grow">{label}</Label>
+      </div>
+    );
+  };
+
   const renderStep = () => {
     switch (step) {
       case 0: // Step 1: Product Portfolio & Market Strategy
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4 text-brand-600">Product Portfolio & Market Strategy</h2>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Product Strategy</h2>
             
-            <div className="space-y-6">
+            <div className="space-y-5">
               {/* Question 1 */}
               <div>
                 <p className="text-sm font-medium mb-2">How would you describe your current offering portfolio?</p>
@@ -79,80 +99,55 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question1', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q1-opt1" value="0" />
-                    <Label htmlFor="q1-opt1" className="cursor-pointer text-sm">Single unified product</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q1-opt2" value="2" />
-                    <Label htmlFor="q1-opt2" className="cursor-pointer text-sm">Multiple products for different segments</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q1-opt3" value="1" />
-                    <Label htmlFor="q1-opt3" className="cursor-pointer text-sm">Multiple offerings with overlapping value</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q1-opt4" value="3" />
-                    <Label htmlFor="q1-opt4" className="cursor-pointer text-sm">Legacy-heavy suite in need of rework</Label>
-                  </div>
+                  {renderRadioOption("q1-opt1", "0", "Single unified product", "question1", answers.question1.toString())}
+                  {renderRadioOption("q1-opt2", "2", "Multiple products for different segments", "question1", answers.question1.toString())}
+                  {renderRadioOption("q1-opt3", "1", "Multiple offerings with overlapping value", "question1", answers.question1.toString())}
+                  {renderRadioOption("q1-opt4", "3", "Legacy-heavy suite in need of rework", "question1", answers.question1.toString())}
                 </RadioGroup>
               </div>
               
               {/* Question 2 */}
               <div>
-                <p className="text-sm font-medium mb-2">Are you currently exploring or planning any of the following? (Select all that apply)</p>
+                <p className="text-sm font-medium mb-2">Are you currently exploring or planning any of the following?</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q2-opt1" 
-                      checked={answers.question2.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question2', 1)}
-                    />
-                    <Label htmlFor="q2-opt1" className="cursor-pointer text-sm">Launching a new product or sub-brand</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q2-opt1",
+                    answers.question2.includes(1),
+                    "Launching a new product or sub-brand",
+                    () => handleMultiChoice('question2', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q2-opt2" 
-                      checked={answers.question2.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question2', 1)}
-                    />
-                    <Label htmlFor="q2-opt2" className="cursor-pointer text-sm">Repositioning an existing offering</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q2-opt2",
+                    answers.question2.includes(1),
+                    "Repositioning an existing offering",
+                    () => handleMultiChoice('question2', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q2-opt3" 
-                      checked={answers.question2.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question2', 1)}
-                    />
-                    <Label htmlFor="q2-opt3" className="cursor-pointer text-sm">Entering a new customer segment</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q2-opt3",
+                    answers.question2.includes(1),
+                    "Entering a new customer segment",
+                    () => handleMultiChoice('question2', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q2-opt4" 
-                      checked={answers.question2.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question2', 1)}
-                    />
-                    <Label htmlFor="q2-opt4" className="cursor-pointer text-sm">Rationalizing or unbundling product lines</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q2-opt4",
+                    answers.question2.includes(1),
+                    "Rationalizing or unbundling product lines",
+                    () => handleMultiChoice('question2', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q2-opt5" 
-                      checked={answers.question2.includes(0)} 
-                      onCheckedChange={() => handleMultiChoice('question2', 0)}
-                    />
-                    <Label htmlFor="q2-opt5" className="cursor-pointer text-sm">None of the above</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q2-opt5",
+                    answers.question2.includes(0),
+                    "None of the above",
+                    () => handleMultiChoice('question2', 0)
+                  )}
                 </div>
               </div>
               
-              {/* Question 3 */}
+              {/* Question 3 & 4 */}
               <div>
                 <p className="text-sm font-medium mb-2">How well are your customer segments defined?</p>
                 <RadioGroup 
@@ -160,29 +155,13 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question3', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q3-opt1" value="0" />
-                    <Label htmlFor="q3-opt1" className="cursor-pointer text-sm">Not defined</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q3-opt2" value="1" />
-                    <Label htmlFor="q3-opt2" className="cursor-pointer text-sm">Partially defined</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q3-opt3" value="2" />
-                    <Label htmlFor="q3-opt3" className="cursor-pointer text-sm">Well defined with insights</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q3-opt4" value="3" />
-                    <Label htmlFor="q3-opt4" className="cursor-pointer text-sm">Continuously validated</Label>
-                  </div>
+                  {renderRadioOption("q3-opt1", "0", "Not defined", "question3", answers.question3.toString())}
+                  {renderRadioOption("q3-opt2", "1", "Partially defined", "question3", answers.question3.toString())}
+                  {renderRadioOption("q3-opt3", "2", "Well defined with insights", "question3", answers.question3.toString())}
+                  {renderRadioOption("q3-opt4", "3", "Continuously validated", "question3", answers.question3.toString())}
                 </RadioGroup>
               </div>
               
-              {/* Question 4 */}
               <div>
                 <p className="text-sm font-medium mb-2">How confident are you that your offerings meet specific customer needs?</p>
                 <RadioGroup 
@@ -190,25 +169,10 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question4', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q4-opt1" value="0" />
-                    <Label htmlFor="q4-opt1" className="cursor-pointer text-sm">Low</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q4-opt2" value="1" />
-                    <Label htmlFor="q4-opt2" className="cursor-pointer text-sm">Moderate</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q4-opt3" value="2" />
-                    <Label htmlFor="q4-opt3" className="cursor-pointer text-sm">High</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q4-opt4" value="3" />
-                    <Label htmlFor="q4-opt4" className="cursor-pointer text-sm">Proven with data</Label>
-                  </div>
+                  {renderRadioOption("q4-opt1", "0", "Low", "question4", answers.question4.toString())}
+                  {renderRadioOption("q4-opt2", "1", "Moderate", "question4", answers.question4.toString())}
+                  {renderRadioOption("q4-opt3", "2", "High", "question4", answers.question4.toString())}
+                  {renderRadioOption("q4-opt4", "3", "Proven with data", "question4", answers.question4.toString())}
                 </RadioGroup>
               </div>
             </div>
@@ -218,91 +182,66 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
       case 1: // Step 2: Innovation Process & Capabilities
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4 text-brand-600">Innovation Process & Capabilities</h2>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Innovation Process</h2>
             
-            <div className="space-y-6">
+            <div className="space-y-5">
               {/* Question 5 */}
               <div>
-                <p className="text-sm font-medium mb-2">How does your organization validate new ideas before launch?</p>
+                <p className="text-sm font-medium mb-2">How does your organization validate new ideas?</p>
                 <RadioGroup 
                   value={answers.question5.toString()}
                   onValueChange={(value) => handleSingleChoice('question5', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q5-opt1" value="0" />
-                    <Label htmlFor="q5-opt1" className="cursor-pointer text-sm">Intuition or internal input</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q5-opt2" value="1" />
-                    <Label htmlFor="q5-opt2" className="cursor-pointer text-sm">Occasional pilots/testing</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q5-opt3" value="2" />
-                    <Label htmlFor="q5-opt3" className="cursor-pointer text-sm">Structured discovery cycles</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q5-opt4" value="3" />
-                    <Label htmlFor="q5-opt4" className="cursor-pointer text-sm">Co-create with customers</Label>
-                  </div>
+                  {renderRadioOption("q5-opt1", "0", "Intuition or internal input", "question5", answers.question5.toString())}
+                  {renderRadioOption("q5-opt2", "1", "Occasional pilots/testing", "question5", answers.question5.toString())}
+                  {renderRadioOption("q5-opt3", "2", "Structured discovery cycles", "question5", answers.question5.toString())}
+                  {renderRadioOption("q5-opt4", "3", "Co-create with customers", "question5", answers.question5.toString())}
                 </RadioGroup>
               </div>
               
               {/* Question 6 */}
               <div>
-                <p className="text-sm font-medium mb-2">What internal capabilities do you have to support innovation? (Select all that apply)</p>
+                <p className="text-sm font-medium mb-2">What internal capabilities do you have to support innovation?</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q6-opt1" 
-                      checked={answers.question6.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question6', 1)}
-                    />
-                    <Label htmlFor="q6-opt1" className="cursor-pointer text-sm">Research & insight</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q6-opt1",
+                    answers.question6.includes(1),
+                    "Research & insight",
+                    () => handleMultiChoice('question6', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q6-opt2" 
-                      checked={answers.question6.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question6', 1)}
-                    />
-                    <Label htmlFor="q6-opt2" className="cursor-pointer text-sm">Experience or service design</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q6-opt2",
+                    answers.question6.includes(1),
+                    "Experience or service design",
+                    () => handleMultiChoice('question6', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q6-opt3" 
-                      checked={answers.question6.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question6', 1)}
-                    />
-                    <Label htmlFor="q6-opt3" className="cursor-pointer text-sm">Prototyping & testing</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q6-opt3",
+                    answers.question6.includes(1),
+                    "Prototyping & testing",
+                    () => handleMultiChoice('question6', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q6-opt4" 
-                      checked={answers.question6.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question6', 1)}
-                    />
-                    <Label htmlFor="q6-opt4" className="cursor-pointer text-sm">Go-to-market readiness</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q6-opt4",
+                    answers.question6.includes(1),
+                    "Go-to-market readiness",
+                    () => handleMultiChoice('question6', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q6-opt5" 
-                      checked={answers.question6.includes(0)} 
-                      onCheckedChange={() => handleMultiChoice('question6', 0)}
-                    />
-                    <Label htmlFor="q6-opt5" className="cursor-pointer text-sm">None</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q6-opt5",
+                    answers.question6.includes(0),
+                    "None",
+                    () => handleMultiChoice('question6', 0)
+                  )}
                 </div>
               </div>
               
-              {/* Question 7 */}
+              {/* Question 7 & 8 */}
               <div>
                 <p className="text-sm font-medium mb-2">Are teams aligned on innovation goals and metrics?</p>
                 <RadioGroup 
@@ -310,29 +249,13 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question7', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q7-opt1" value="0" />
-                    <Label htmlFor="q7-opt1" className="cursor-pointer text-sm">Rarely</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q7-opt2" value="1" />
-                    <Label htmlFor="q7-opt2" className="cursor-pointer text-sm">Somewhat</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q7-opt3" value="2" />
-                    <Label htmlFor="q7-opt3" className="cursor-pointer text-sm">Mostly aligned</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q7-opt4" value="3" />
-                    <Label htmlFor="q7-opt4" className="cursor-pointer text-sm">Fully aligned</Label>
-                  </div>
+                  {renderRadioOption("q7-opt1", "0", "Rarely", "question7", answers.question7.toString())}
+                  {renderRadioOption("q7-opt2", "1", "Somewhat", "question7", answers.question7.toString())}
+                  {renderRadioOption("q7-opt3", "2", "Mostly aligned", "question7", answers.question7.toString())}
+                  {renderRadioOption("q7-opt4", "3", "Fully aligned", "question7", answers.question7.toString())}
                 </RadioGroup>
               </div>
               
-              {/* Question 8 */}
               <div>
                 <p className="text-sm font-medium mb-2">How easy is it for teams to move from idea to execution?</p>
                 <RadioGroup 
@@ -340,25 +263,10 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question8', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q8-opt1" value="0" />
-                    <Label htmlFor="q8-opt1" className="cursor-pointer text-sm">Difficult—lots of friction</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q8-opt2" value="1" />
-                    <Label htmlFor="q8-opt2" className="cursor-pointer text-sm">Slow, but manageable</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q8-opt3" value="2" />
-                    <Label htmlFor="q8-opt3" className="cursor-pointer text-sm">Efficient in defined tracks</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q8-opt4" value="3" />
-                    <Label htmlFor="q8-opt4" className="cursor-pointer text-sm">Agile and collaborative</Label>
-                  </div>
+                  {renderRadioOption("q8-opt1", "0", "Difficult—lots of friction", "question8", answers.question8.toString())}
+                  {renderRadioOption("q8-opt2", "1", "Slow, but manageable", "question8", answers.question8.toString())}
+                  {renderRadioOption("q8-opt3", "2", "Efficient in defined tracks", "question8", answers.question8.toString())}
+                  {renderRadioOption("q8-opt4", "3", "Agile and collaborative", "question8", answers.question8.toString())}
                 </RadioGroup>
               </div>
             </div>
@@ -368,9 +276,9 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
       case 2: // Step 3: Collaboration & Your Information
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4 text-brand-600">Collaboration & Your Information</h2>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Collaboration & Information</h2>
             
-            <div className="space-y-6">
+            <div className="space-y-5">
               {/* Question 9 */}
               <div>
                 <p className="text-sm font-medium mb-2">How open is your organization to external collaboration?</p>
@@ -379,85 +287,58 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   onValueChange={(value) => handleSingleChoice('question9', parseInt(value))}
                   className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 >
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q9-opt1" value="0" />
-                    <Label htmlFor="q9-opt1" className="cursor-pointer text-sm">We prefer to keep it in-house</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q9-opt2" value="1" />
-                    <Label htmlFor="q9-opt2" className="cursor-pointer text-sm">Open to short-term partners</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q9-opt3" value="2" />
-                    <Label htmlFor="q9-opt3" className="cursor-pointer text-sm">Seek co-creation partners</Label>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <RadioGroupItem id="q9-opt4" value="3" />
-                    <Label htmlFor="q9-opt4" className="cursor-pointer text-sm">Already work this way</Label>
-                  </div>
+                  {renderRadioOption("q9-opt1", "0", "We prefer to keep it in-house", "question9", answers.question9.toString())}
+                  {renderRadioOption("q9-opt2", "1", "Open to short-term partners", "question9", answers.question9.toString())}
+                  {renderRadioOption("q9-opt3", "2", "Seek co-creation partners", "question9", answers.question9.toString())}
+                  {renderRadioOption("q9-opt4", "3", "Already work this way", "question9", answers.question9.toString())}
                 </RadioGroup>
               </div>
               
               {/* Question 10 */}
               <div>
-                <p className="text-sm font-medium mb-2">What support would you value from a co-creation partner? (Select all that apply)</p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt1" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt1" className="cursor-pointer text-sm">Strategy & discovery</Label>
-                  </div>
+                <p className="text-sm font-medium mb-2">What support would you value from a co-creation partner?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {renderCheckboxOption(
+                    "q10-opt1",
+                    answers.question10.includes(1),
+                    "Strategy & discovery",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt2" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt2" className="cursor-pointer text-sm">Experience design</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q10-opt2",
+                    answers.question10.includes(1),
+                    "Experience design",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt3" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt3" className="cursor-pointer text-sm">Prototyping & validation</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q10-opt3",
+                    answers.question10.includes(1),
+                    "Prototyping & validation",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt4" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt4" className="cursor-pointer text-sm">Market testing</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q10-opt4",
+                    answers.question10.includes(1),
+                    "Market testing",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt5" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt5" className="cursor-pointer text-sm">Launch planning</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q10-opt5",
+                    answers.question10.includes(1),
+                    "Launch planning",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                   
-                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                    <Checkbox 
-                      id="q10-opt6" 
-                      checked={answers.question10.includes(1)} 
-                      onCheckedChange={() => handleMultiChoice('question10', 1)}
-                    />
-                    <Label htmlFor="q10-opt6" className="cursor-pointer text-sm">Stakeholder alignment</Label>
-                  </div>
+                  {renderCheckboxOption(
+                    "q10-opt6",
+                    answers.question10.includes(1),
+                    "Stakeholder alignment",
+                    () => handleMultiChoice('question10', 1)
+                  )}
                 </div>
               </div>
               
@@ -504,7 +385,7 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
             className="bg-brand-400 h-2 rounded-full transition-all duration-300" 
-            style={{ width: `${(step / 3) * 100}%` }}
+            style={{ width: `${((step + 1) / 3) * 100}%` }}
           ></div>
         </div>
         <p className="text-right mt-1 text-xs text-gray-600">Step {step + 1} of 3</p>
