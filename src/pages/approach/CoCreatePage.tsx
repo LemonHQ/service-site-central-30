@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Lightbulb, Repeat, BarChart, ArrowRight, Zap, FlaskConical, History } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ServiceCard from '@/components/ui/ServiceCard';
+import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
 
 const CoCreatePage = () => {
   return (
@@ -111,6 +112,9 @@ const CoCreatePage = () => {
         </div>
       </section>
       
+      {/* Insights Carousel Section - Added before FAQ */}
+      <InsightsCarousel limit={3} />
+      
       {/* Service Offerings Section */}
       <section className="py-16 bg-beige-50">
         <div className="container mx-auto px-4">
@@ -199,36 +203,45 @@ const CoCreatePage = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left">
-                How long does a typical Co-Create engagement last?
+              <AccordionTrigger className="text-left text-base">
+                <span className="flex items-center">
+                  <span className="text-brand-500 font-semibold mr-2">1.</span>
+                  How long does a typical Co-Create engagement last?
+                </span>
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent className="text-sm pl-6">
                 Co-Create engagements typically run between 1-4 weeks, depending on the complexity of the challenge. 
                 We often start with a 2-day kickoff workshop followed by sprint cycles of 1-2 weeks each.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left">
-                How many people from my organization need to be involved?
+              <AccordionTrigger className="text-left text-base">
+                <span className="flex items-center">
+                  <span className="text-brand-500 font-semibold mr-2">2.</span>
+                  How many people from my organization need to be involved?
+                </span>
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent className="text-sm pl-6">
                 A core team of 3-5 stakeholders from your organization typically participates throughout the engagement, 
                 with additional subject matter experts joining for specific workshops or review sessions as needed.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left">
-                Can Co-Create be conducted remotely?
+              <AccordionTrigger className="text-left text-base">
+                <span className="flex items-center">
+                  <span className="text-brand-500 font-semibold mr-2">3.</span>
+                  Can Co-Create be conducted remotely?
+                </span>
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent className="text-sm pl-6">
                 Yes, we've developed highly effective virtual Co-Create experiences using digital collaboration tools. 
                 While we recommend in-person sessions when possible, our remote approach delivers comparable outcomes 
                 with added flexibility and global participation.
@@ -236,10 +249,13 @@ const CoCreatePage = () => {
             </AccordionItem>
             
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left">
-                What happens after the Co-Create engagement ends?
+              <AccordionTrigger className="text-left text-base">
+                <span className="flex items-center">
+                  <span className="text-brand-500 font-semibold mr-2">4.</span>
+                  What happens after the Co-Create engagement ends?
+                </span>
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent className="text-sm pl-6">
                 After Co-Create, you'll have validated prototypes, detailed implementation plans, and technical requirements. 
                 Many clients transition into our full development services to bring the solution to market, while others 
                 implement with their internal teams using our specifications.
