@@ -66,420 +66,428 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
 
   const renderStep = () => {
     switch (step) {
-      case 0:
+      case 0: // Step 1: Product Portfolio & Market Strategy
         return (
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How would you describe your current offering portfolio?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q1-option1"
-                label="Single unified product"
-                selected={answers.question1 === 0}
-                onClick={() => handleSingleChoice('question1', 0)}
-              />
-              <SelectableBox
-                id="q1-option2"
-                label="Multiple products for different segments"
-                selected={answers.question1 === 2}
-                onClick={() => handleSingleChoice('question1', 2)}
-              />
-              <SelectableBox
-                id="q1-option3"
-                label="Multiple offerings with overlapping value"
-                selected={answers.question1 === 1}
-                onClick={() => handleSingleChoice('question1', 1)}
-              />
-              <SelectableBox
-                id="q1-option4"
-                label="Legacy-heavy suite in need of rework"
-                selected={answers.question1 === 3}
-                onClick={() => handleSingleChoice('question1', 3)}
-              />
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Product Portfolio & Market Strategy</h2>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div>
+                <p className="text-sm font-medium mb-2">How would you describe your current offering portfolio?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleSingleChoice('question1', 0)}>
+                    <RadioGroupItem id="q1-opt1" value="0" checked={answers.question1 === 0} />
+                    <Label htmlFor="q1-opt1" className="cursor-pointer text-sm">Single unified product</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleSingleChoice('question1', 2)}>
+                    <RadioGroupItem id="q1-opt2" value="2" checked={answers.question1 === 2} />
+                    <Label htmlFor="q1-opt2" className="cursor-pointer text-sm">Multiple products for different segments</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleSingleChoice('question1', 1)}>
+                    <RadioGroupItem id="q1-opt3" value="1" checked={answers.question1 === 1} />
+                    <Label htmlFor="q1-opt3" className="cursor-pointer text-sm">Multiple offerings with overlapping value</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleSingleChoice('question1', 3)}>
+                    <RadioGroupItem id="q1-opt4" value="3" checked={answers.question1 === 3} />
+                    <Label htmlFor="q1-opt4" className="cursor-pointer text-sm">Legacy-heavy suite in need of rework</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Question 2 */}
+              <div>
+                <p className="text-sm font-medium mb-2">Are you currently exploring or planning any of the following? (Select all that apply)</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q2-opt1" 
+                      checked={answers.question2.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question2', 1)}
+                    />
+                    <Label htmlFor="q2-opt1" className="cursor-pointer text-sm">Launching a new product or sub-brand</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q2-opt2" 
+                      checked={answers.question2.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question2', 1)}
+                    />
+                    <Label htmlFor="q2-opt2" className="cursor-pointer text-sm">Repositioning an existing offering</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q2-opt3" 
+                      checked={answers.question2.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question2', 1)}
+                    />
+                    <Label htmlFor="q2-opt3" className="cursor-pointer text-sm">Entering a new customer segment</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q2-opt4" 
+                      checked={answers.question2.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question2', 1)}
+                    />
+                    <Label htmlFor="q2-opt4" className="cursor-pointer text-sm">Rationalizing or unbundling product lines</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q2-opt5" 
+                      checked={answers.question2.includes(0)} 
+                      onCheckedChange={() => handleMultiChoice('question2', 0)}
+                    />
+                    <Label htmlFor="q2-opt5" className="cursor-pointer text-sm">None of the above</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Question 3 */}
+              <div>
+                <p className="text-sm font-medium mb-2">How well are your customer segments defined?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question3', 0)}>
+                    <RadioGroupItem id="q3-opt1" value="0" checked={answers.question3 === 0} />
+                    <Label htmlFor="q3-opt1" className="cursor-pointer text-sm">Not defined</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question3', 1)}>
+                    <RadioGroupItem id="q3-opt2" value="1" checked={answers.question3 === 1} />
+                    <Label htmlFor="q3-opt2" className="cursor-pointer text-sm">Partially defined</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question3', 2)}>
+                    <RadioGroupItem id="q3-opt3" value="2" checked={answers.question3 === 2} />
+                    <Label htmlFor="q3-opt3" className="cursor-pointer text-sm">Well defined with insights</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question3', 3)}>
+                    <RadioGroupItem id="q3-opt4" value="3" checked={answers.question3 === 3} />
+                    <Label htmlFor="q3-opt4" className="cursor-pointer text-sm">Continuously validated</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Question 4 */}
+              <div>
+                <p className="text-sm font-medium mb-2">How confident are you that your offerings meet specific customer needs?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question4', 0)}>
+                    <RadioGroupItem id="q4-opt1" value="0" checked={answers.question4 === 0} />
+                    <Label htmlFor="q4-opt1" className="cursor-pointer text-sm">Low</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question4', 1)}>
+                    <RadioGroupItem id="q4-opt2" value="1" checked={answers.question4 === 1} />
+                    <Label htmlFor="q4-opt2" className="cursor-pointer text-sm">Moderate</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question4', 2)}>
+                    <RadioGroupItem id="q4-opt3" value="2" checked={answers.question4 === 2} />
+                    <Label htmlFor="q4-opt3" className="cursor-pointer text-sm">High</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question4', 3)}>
+                    <RadioGroupItem id="q4-opt4" value="3" checked={answers.question4 === 3} />
+                    <Label htmlFor="q4-opt4" className="cursor-pointer text-sm">Proven with data</Label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         );
       
-      case 1:
+      case 1: // Step 2: Innovation Process & Capabilities
         return (
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">Are you currently exploring or planning any of the following?</h2>
-            <p className="text-gray-600 mb-4">(Select all that apply)</p>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q2-option1" 
-                  checked={answers.question2.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question2', 1)}
-                />
-                <Label htmlFor="q2-option1" className="text-base font-normal cursor-pointer">Launching a new product or sub-brand</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q2-option2" 
-                  checked={answers.question2.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question2', 1)}
-                />
-                <Label htmlFor="q2-option2" className="text-base font-normal cursor-pointer">Repositioning an existing offering</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q2-option3" 
-                  checked={answers.question2.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question2', 1)}
-                />
-                <Label htmlFor="q2-option3" className="text-base font-normal cursor-pointer">Entering a new customer segment or market</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q2-option4" 
-                  checked={answers.question2.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question2', 1)}
-                />
-                <Label htmlFor="q2-option4" className="text-base font-normal cursor-pointer">Rationalizing or unbundling product lines</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q2-option5" 
-                  checked={answers.question2.includes(0)} 
-                  onCheckedChange={() => handleMultiChoice('question2', 0)}
-                />
-                <Label htmlFor="q2-option5" className="text-base font-normal cursor-pointer">None of the above</Label>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 2:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How well are your customer segments defined across product lines?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q3-option1"
-                label="Not defined"
-                selected={answers.question3 === 0}
-                onClick={() => handleSingleChoice('question3', 0)}
-              />
-              <SelectableBox
-                id="q3-option2"
-                label="Partially defined (basic personas or market groups)"
-                selected={answers.question3 === 1}
-                onClick={() => handleSingleChoice('question3', 1)}
-              />
-              <SelectableBox
-                id="q3-option3"
-                label="Well defined with behavioral or industry insights"
-                selected={answers.question3 === 2}
-                onClick={() => handleSingleChoice('question3', 2)}
-              />
-              <SelectableBox
-                id="q3-option4"
-                label="Continuously validated and data-backed"
-                selected={answers.question3 === 3}
-                onClick={() => handleSingleChoice('question3', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 3:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How confident are you that your current offerings meet the specific needs of different customer segments?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q4-option1"
-                label="Low"
-                selected={answers.question4 === 0}
-                onClick={() => handleSingleChoice('question4', 0)}
-              />
-              <SelectableBox
-                id="q4-option2"
-                label="Moderate"
-                selected={answers.question4 === 1}
-                onClick={() => handleSingleChoice('question4', 1)}
-              />
-              <SelectableBox
-                id="q4-option3"
-                label="High"
-                selected={answers.question4 === 2}
-                onClick={() => handleSingleChoice('question4', 2)}
-              />
-              <SelectableBox
-                id="q4-option4"
-                label="Proven with usage, feedback, or conversion data"
-                selected={answers.question4 === 3}
-                onClick={() => handleSingleChoice('question4', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 4:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How does your organization validate new ideas before launch?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q5-option1"
-                label="We rely on intuition or internal input"
-                selected={answers.question5 === 0}
-                onClick={() => handleSingleChoice('question5', 0)}
-              />
-              <SelectableBox
-                id="q5-option2"
-                label="We run occasional pilots or internal testing"
-                selected={answers.question5 === 1}
-                onClick={() => handleSingleChoice('question5', 1)}
-              />
-              <SelectableBox
-                id="q5-option3"
-                label="We run structured discovery and testing cycles"
-                selected={answers.question5 === 2}
-                onClick={() => handleSingleChoice('question5', 2)}
-              />
-              <SelectableBox
-                id="q5-option4"
-                label="We co-create with customers and business teams"
-                selected={answers.question5 === 3}
-                onClick={() => handleSingleChoice('question5', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 5:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">What internal capabilities do you have to support innovation?</h2>
-            <p className="text-gray-600 mb-4">(Select all that apply)</p>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q6-option1" 
-                  checked={answers.question6.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question6', 1)}
-                />
-                <Label htmlFor="q6-option1" className="text-base font-normal cursor-pointer">Research & insight</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q6-option2" 
-                  checked={answers.question6.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question6', 1)}
-                />
-                <Label htmlFor="q6-option2" className="text-base font-normal cursor-pointer">Experience or service design</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q6-option3" 
-                  checked={answers.question6.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question6', 1)}
-                />
-                <Label htmlFor="q6-option3" className="text-base font-normal cursor-pointer">Prototyping & testing</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q6-option4" 
-                  checked={answers.question6.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question6', 1)}
-                />
-                <Label htmlFor="q6-option4" className="text-base font-normal cursor-pointer">Go-to-market readiness</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q6-option5" 
-                  checked={answers.question6.includes(0)} 
-                  onCheckedChange={() => handleMultiChoice('question6', 0)}
-                />
-                <Label htmlFor="q6-option5" className="text-base font-normal cursor-pointer">None</Label>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 6:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">Are business, product, brand, and digital teams aligned on innovation goals and success metrics?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q7-option1"
-                label="Rarely"
-                selected={answers.question7 === 0}
-                onClick={() => handleSingleChoice('question7', 0)}
-              />
-              <SelectableBox
-                id="q7-option2"
-                label="Somewhat"
-                selected={answers.question7 === 1}
-                onClick={() => handleSingleChoice('question7', 1)}
-              />
-              <SelectableBox
-                id="q7-option3"
-                label="Mostly aligned"
-                selected={answers.question7 === 2}
-                onClick={() => handleSingleChoice('question7', 2)}
-              />
-              <SelectableBox
-                id="q7-option4"
-                label="Fully aligned with shared frameworks"
-                selected={answers.question7 === 3}
-                onClick={() => handleSingleChoice('question7', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 7:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How easy is it for cross-functional teams to move from idea to execution?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q8-option1"
-                label="Difficult—lots of handoffs and friction"
-                selected={answers.question8 === 0}
-                onClick={() => handleSingleChoice('question8', 0)}
-              />
-              <SelectableBox
-                id="q8-option2"
-                label="Slow, but manageable"
-                selected={answers.question8 === 1}
-                onClick={() => handleSingleChoice('question8', 1)}
-              />
-              <SelectableBox
-                id="q8-option3"
-                label="Efficient in defined tracks"
-                selected={answers.question8 === 2}
-                onClick={() => handleSingleChoice('question8', 2)}
-              />
-              <SelectableBox
-                id="q8-option4"
-                label="Agile and collaborative"
-                selected={answers.question8 === 3}
-                onClick={() => handleSingleChoice('question8', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 8:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">How open is your organization to external collaboration for experience and product innovation?</h2>
-            <div className="space-y-4">
-              <SelectableBox
-                id="q9-option1"
-                label="We prefer to keep it in-house"
-                selected={answers.question9 === 0}
-                onClick={() => handleSingleChoice('question9', 0)}
-              />
-              <SelectableBox
-                id="q9-option2"
-                label="Open to short-term partners"
-                selected={answers.question9 === 1}
-                onClick={() => handleSingleChoice('question9', 1)}
-              />
-              <SelectableBox
-                id="q9-option3"
-                label="Actively seek strategic co-creation partners"
-                selected={answers.question9 === 2}
-                onClick={() => handleSingleChoice('question9', 2)}
-              />
-              <SelectableBox
-                id="q9-option4"
-                label="Already work this way across teams"
-                selected={answers.question9 === 3}
-                onClick={() => handleSingleChoice('question9', 3)}
-              />
-            </div>
-          </div>
-        );
-
-      case 9:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">What support would you most value from a co-creation partner?</h2>
-            <p className="text-gray-600 mb-4">(Select all that apply)</p>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option1" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option1" className="text-base font-normal cursor-pointer">Strategy & discovery</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option2" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option2" className="text-base font-normal cursor-pointer">Experience design</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option3" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option3" className="text-base font-normal cursor-pointer">Prototyping & validation</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option4" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option4" className="text-base font-normal cursor-pointer">Market testing</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option5" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option5" className="text-base font-normal cursor-pointer">Launch planning</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox 
-                  id="q10-option6" 
-                  checked={answers.question10.includes(1)} 
-                  onCheckedChange={() => handleMultiChoice('question10', 1)}
-                />
-                <Label htmlFor="q10-option6" className="text-base font-normal cursor-pointer">Stakeholder alignment</Label>
-              </div>
-            </div>
-          </div>
-        );
-
-      case 10:
-        return (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-brand-600">Your Information</h2>
-            <p className="text-gray-600 mb-6">Please provide your information to receive your assessment results.</p>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Innovation Process & Capabilities</h2>
+            
             <div className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Enter your full name"
-                  value={userData.name}
-                  onChange={(e) => setUserData(prev => ({ ...prev, name: e.target.value }))}
-                />
+              {/* Question 5 */}
+              <div>
+                <p className="text-sm font-medium mb-2">How does your organization validate new ideas before launch?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question5', 0)}>
+                    <RadioGroupItem id="q5-opt1" value="0" checked={answers.question5 === 0} />
+                    <Label htmlFor="q5-opt1" className="cursor-pointer text-sm">Intuition or internal input</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question5', 1)}>
+                    <RadioGroupItem id="q5-opt2" value="1" checked={answers.question5 === 1} />
+                    <Label htmlFor="q5-opt2" className="cursor-pointer text-sm">Occasional pilots/testing</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question5', 2)}>
+                    <RadioGroupItem id="q5-opt3" value="2" checked={answers.question5 === 2} />
+                    <Label htmlFor="q5-opt3" className="cursor-pointer text-sm">Structured discovery cycles</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question5', 3)}>
+                    <RadioGroupItem id="q5-opt4" value="3" checked={answers.question5 === 3} />
+                    <Label htmlFor="q5-opt4" className="cursor-pointer text-sm">Co-create with customers</Label>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={userData.email}
-                  onChange={(e) => setUserData(prev => ({ ...prev, email: e.target.value }))}
-                />
+              
+              {/* Question 6 */}
+              <div>
+                <p className="text-sm font-medium mb-2">What internal capabilities do you have to support innovation? (Select all that apply)</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q6-opt1" 
+                      checked={answers.question6.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question6', 1)}
+                    />
+                    <Label htmlFor="q6-opt1" className="cursor-pointer text-sm">Research & insight</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q6-opt2" 
+                      checked={answers.question6.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question6', 1)}
+                    />
+                    <Label htmlFor="q6-opt2" className="cursor-pointer text-sm">Experience or service design</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q6-opt3" 
+                      checked={answers.question6.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question6', 1)}
+                    />
+                    <Label htmlFor="q6-opt3" className="cursor-pointer text-sm">Prototyping & testing</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q6-opt4" 
+                      checked={answers.question6.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question6', 1)}
+                    />
+                    <Label htmlFor="q6-opt4" className="cursor-pointer text-sm">Go-to-market readiness</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q6-opt5" 
+                      checked={answers.question6.includes(0)} 
+                      onCheckedChange={() => handleMultiChoice('question6', 0)}
+                    />
+                    <Label htmlFor="q6-opt5" className="cursor-pointer text-sm">None</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Question 7 & 8 */}
+              <div>
+                <p className="text-sm font-medium mb-2">Are teams aligned on innovation goals and metrics?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question7', 0)}>
+                    <RadioGroupItem id="q7-opt1" value="0" checked={answers.question7 === 0} />
+                    <Label htmlFor="q7-opt1" className="cursor-pointer text-sm">Rarely</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question7', 1)}>
+                    <RadioGroupItem id="q7-opt2" value="1" checked={answers.question7 === 1} />
+                    <Label htmlFor="q7-opt2" className="cursor-pointer text-sm">Somewhat</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question7', 2)}>
+                    <RadioGroupItem id="q7-opt3" value="2" checked={answers.question7 === 2} />
+                    <Label htmlFor="q7-opt3" className="cursor-pointer text-sm">Mostly aligned</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question7', 3)}>
+                    <RadioGroupItem id="q7-opt4" value="3" checked={answers.question7 === 3} />
+                    <Label htmlFor="q7-opt4" className="cursor-pointer text-sm">Fully aligned</Label>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-sm font-medium mb-2">How easy is it for teams to move from idea to execution?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question8', 0)}>
+                    <RadioGroupItem id="q8-opt1" value="0" checked={answers.question8 === 0} />
+                    <Label htmlFor="q8-opt1" className="cursor-pointer text-sm">Difficult—lots of friction</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question8', 1)}>
+                    <RadioGroupItem id="q8-opt2" value="1" checked={answers.question8 === 1} />
+                    <Label htmlFor="q8-opt2" className="cursor-pointer text-sm">Slow, but manageable</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question8', 2)}>
+                    <RadioGroupItem id="q8-opt3" value="2" checked={answers.question8 === 2} />
+                    <Label htmlFor="q8-opt3" className="cursor-pointer text-sm">Efficient in defined tracks</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question8', 3)}>
+                    <RadioGroupItem id="q8-opt4" value="3" checked={answers.question8 === 3} />
+                    <Label htmlFor="q8-opt4" className="cursor-pointer text-sm">Agile and collaborative</Label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 2: // Step 3: Collaboration & Your Information
+        return (
+          <div>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Collaboration & Your Information</h2>
+            
+            <div className="space-y-6">
+              {/* Question 9 */}
+              <div>
+                <p className="text-sm font-medium mb-2">How open is your organization to external collaboration?</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question9', 0)}>
+                    <RadioGroupItem id="q9-opt1" value="0" checked={answers.question9 === 0} />
+                    <Label htmlFor="q9-opt1" className="cursor-pointer text-sm">We prefer to keep it in-house</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question9', 1)}>
+                    <RadioGroupItem id="q9-opt2" value="1" checked={answers.question9 === 1} />
+                    <Label htmlFor="q9-opt2" className="cursor-pointer text-sm">Open to short-term partners</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question9', 2)}>
+                    <RadioGroupItem id="q9-opt3" value="2" checked={answers.question9 === 2} />
+                    <Label htmlFor="q9-opt3" className="cursor-pointer text-sm">Seek co-creation partners</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                       onClick={() => handleSingleChoice('question9', 3)}>
+                    <RadioGroupItem id="q9-opt4" value="3" checked={answers.question9 === 3} />
+                    <Label htmlFor="q9-opt4" className="cursor-pointer text-sm">Already work this way</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Question 10 */}
+              <div>
+                <p className="text-sm font-medium mb-2">What support would you value from a co-creation partner? (Select all that apply)</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt1" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt1" className="cursor-pointer text-sm">Strategy & discovery</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt2" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt2" className="cursor-pointer text-sm">Experience design</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt3" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt3" className="cursor-pointer text-sm">Prototyping & validation</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt4" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt4" className="cursor-pointer text-sm">Market testing</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt5" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt5" className="cursor-pointer text-sm">Launch planning</Label>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2 p-2 border rounded hover:bg-gray-50 cursor-pointer">
+                    <Checkbox 
+                      id="q10-opt6" 
+                      checked={answers.question10.includes(1)} 
+                      onCheckedChange={() => handleMultiChoice('question10', 1)}
+                    />
+                    <Label htmlFor="q10-opt6" className="cursor-pointer text-sm">Stakeholder alignment</Label>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Contact Information */}
+              <div className="space-y-4 pt-2">
+                <h3 className="text-sm font-medium">Your Information</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="name" className="text-sm">Full Name</Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      placeholder="Your name"
+                      value={userData.name}
+                      onChange={(e) => setUserData(prev => ({ ...prev, name: e.target.value }))}
+                      className="mt-1"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="email" className="text-sm">Email Address</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="Your email"
+                      value={userData.email}
+                      onChange={(e) => setUserData(prev => ({ ...prev, email: e.target.value }))}
+                      className="mt-1"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -492,14 +500,14 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
 
   return (
     <div>
-      <div className="mb-8 bg-beige-50 rounded-lg p-3">
-        <div className="w-full bg-gray-200 rounded-full h-2.5">
+      <div className="mb-4 bg-beige-50 rounded-lg p-3">
+        <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
-            className="bg-brand-400 h-2.5 rounded-full transition-all duration-300" 
-            style={{ width: `${(step / 10) * 100}%` }}
+            className="bg-brand-400 h-2 rounded-full transition-all duration-300" 
+            style={{ width: `${(step / 3) * 100}%` }}
           ></div>
         </div>
-        <p className="text-right mt-2 text-sm text-gray-600">Step {step + 1} of 11</p>
+        <p className="text-right mt-1 text-xs text-gray-600">Step {step + 1} of 3</p>
       </div>
       
       {renderStep()}

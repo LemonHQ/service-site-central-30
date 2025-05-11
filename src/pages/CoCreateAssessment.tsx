@@ -97,7 +97,7 @@ const CoCreateAssessment = () => {
   };
 
   const handleNextStep = () => {
-    if (step === 10) {
+    if (step === 2) {
       handleSubmit();
     } else {
       setStep(step + 1);
@@ -131,8 +131,8 @@ const CoCreateAssessment = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         {!isSubmitted ? (
-          <div className="bg-white shadow-md rounded-lg p-8">
-            <h1 className="text-3xl font-bold text-brand-600 mb-8">Co-Create Readiness Assessment</h1>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h1 className="text-2xl font-bold text-brand-600 mb-6">Co-Create Readiness Assessment</h1>
             
             <CoCreateAssessmentForm 
               step={step}
@@ -142,7 +142,7 @@ const CoCreateAssessment = () => {
               setUserData={setUserData}
             />
             
-            <div className="flex justify-between mt-8">
+            <div className="flex justify-between mt-6">
               {step > 0 && (
                 <Button 
                   variant="outline" 
@@ -157,7 +157,7 @@ const CoCreateAssessment = () => {
                   onClick={handleNextStep}
                   disabled={isLoading}
                 >
-                  {step < 10 ? 'Next' : 'Complete Assessment'}
+                  {step < 2 ? 'Next' : 'Complete Assessment'}
                 </Button>
               </div>
             </div>
