@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from 'react-router-dom';
+import { Award, Check, Star } from 'lucide-react';
 
 interface AssessmentResult {
   score: number;
@@ -19,9 +20,13 @@ interface AssessmentResult {
     question10: number[];
   };
   resetAssessment: () => void;
+  userData: {
+    name: string;
+    email: string;
+  };
 }
 
-const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers, resetAssessment }) => {
+const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers, resetAssessment, userData }) => {
   const [showDetails, setShowDetails] = useState(false);
   
   const getReadinessLevel = () => {
@@ -32,25 +37,37 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
       return {
         level: "High Readiness",
         description: "Your organization shows strong indicators for co-creation success. Your processes, culture, and capabilities align well with collaborative innovation approaches.",
-        color: "text-green-600"
+        color: "text-green-600",
+        icon: <Award className="h-10 w-10 text-green-600" />,
+        stage: "Scaling & Optimizing",
+        stageDesc: "You're ready to scale collaborative innovation and optimize for maximum impact across your organization."
       };
     } else if (percentage >= 50) {
       return {
         level: "Moderate Readiness",
         description: "Your organization has many of the key elements for successful co-creation, but some areas could be strengthened to maximize impact.",
-        color: "text-yellow-600"
+        color: "text-yellow-600",
+        icon: <Star className="h-10 w-10 text-yellow-600" />,
+        stage: "Expanding & Growing",
+        stageDesc: "You're well-positioned to grow your co-creation capabilities and expand their application across your organization."
       };
     } else if (percentage >= 25) {
       return {
         level: "Developing Readiness",
         description: "Your organization shows promising potential, but may need to strengthen key capabilities before embarking on extensive co-creation initiatives.",
-        color: "text-orange-500"
+        color: "text-orange-500",
+        icon: <Check className="h-10 w-10 text-orange-500" />,
+        stage: "Building & Developing",
+        stageDesc: "You're in the process of building the foundational elements needed for successful co-creation partnerships."
       };
     } else {
       return {
         level: "Early Stage",
         description: "Your organization may benefit from foundational capability building before investing significantly in co-creation approaches.",
-        color: "text-red-500"
+        color: "text-red-500",
+        icon: <Check className="h-10 w-10 text-red-500" />,
+        stage: "Exploring & Learning",
+        stageDesc: "You're at the beginning of your co-creation journey, with opportunities to learn and establish core capabilities."
       };
     }
   };
@@ -148,11 +165,24 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
 
   return (
     <div className="bg-white shadow-md rounded-lg p-8">
-      <h1 className="text-3xl font-bold text-brand-600 mb-2">Your Co-Create Readiness Assessment</h1>
-      <p className="text-gray-600 mb-8">Thank you for completing the assessment!</p>
+      <div className="flex items-center justify-center mb-8">
+        <div className="bg-brand-50 p-4 rounded-full">
+          <Check className="h-12 w-12 text-brand-500" />
+        </div>
+      </div>
       
-      <div className="bg-beige-50 rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold mb-2">Your Readiness Score</h2>
+      <h1 className="text-3xl font-bold text-brand-600 mb-2 text-center">Thank You, {userData.name}!</h1>
+      <p className="text-gray-600 mb-8 text-center">Your co-create readiness assessment has been completed successfully.</p>
+      
+      <div className="bg-beige-50 rounded-lg p-6 mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-semibold">Your Readiness Score</h2>
+          <div className="flex items-center space-x-2">
+            {readiness.icon}
+            <span className={`text-lg font-bold ${readiness.color}`}>{readiness.level}</span>
+          </div>
+        </div>
+        
         <div className="flex items-end mb-4">
           <span className={`text-5xl font-bold ${readiness.color}`}>{score}</span>
           <span className="text-gray-500 ml-2 mb-1">/ {maxTotalScore}</span>
@@ -169,8 +199,24 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
           ></div>
         </div>
         
-        <h3 className={`text-xl font-semibold ${readiness.color} mb-2`}>{readiness.level}</h3>
-        <p className="text-gray-700">{readiness.description}</p>
+        <h3 className="text-xl font-semibold mb-2">Your Co-Creation Journey Stage:</h3>
+        <div className={`p-4 rounded-lg border ${
+          scorePercentage >= 75 ? "border-green-200 bg-green-50" : 
+          scorePercentage >= 50 ? "border-yellow-200 bg-yellow-50" : 
+          scorePercentage >= 25 ? "border-orange-200 bg-orange-50" : "border-red-200 bg-red-50"
+        }`}>
+          <h4 className={`font-semibold text-lg mb-1 ${readiness.color}`}>{readiness.stage}</h4>
+          <p className="text-gray-700">{readiness.stageDesc}</p>
+        </div>
+      </div>
+      
+      <div className="bg-gray-50 rounded-lg p-6 mb-8">
+        <h3 className="text-xl font-semibold mb-2">What This Means</h3>
+        <p className="text-gray-700 mb-4">{readiness.description}</p>
+        <div className="border-t border-gray-200 pt-4 mt-4">
+          <p className="text-brand-600 font-medium">We've sent your detailed assessment report to: <span className="font-semibold">{userData.email}</span></p>
+          <p className="text-sm text-gray-600 mt-2">Your report includes personalized recommendations based on your responses and readiness level.</p>
+        </div>
       </div>
       
       <div className="flex flex-col md:flex-row gap-6 mb-8">

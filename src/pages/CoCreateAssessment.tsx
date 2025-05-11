@@ -87,7 +87,7 @@ const CoCreateAssessment = () => {
       if (error) throw error;
       
       setIsSubmitted(true);
-      toast.success("Assessment completed successfully!");
+      toast.success("Assessment completed! Results have been sent to your email.");
     } catch (error) {
       console.error("Error submitting assessment:", error);
       toast.error("There was an error submitting your assessment. Please try again.");
@@ -97,10 +97,21 @@ const CoCreateAssessment = () => {
   };
 
   const handleNextStep = () => {
-    if (step === 2) {
-      handleSubmit();
-    } else {
+    // For questions sections
+    if (step < 2) {
       setStep(step + 1);
+      return;
+    }
+    
+    // For user information section (step 2)
+    if (step === 2) {
+      setStep(step + 1);
+      return;
+    }
+    
+    // Submit form on last step
+    if (step === 3) {
+      handleSubmit();
     }
   };
 
@@ -125,6 +136,20 @@ const CoCreateAssessment = () => {
     setUserData({ name: '', email: '' });
     setTotalScore(0);
     setIsSubmitted(false);
+  };
+
+  // Check if current step needs to be validated
+  const isCurrentStepValid = () => {
+    if (step === 0) {
+      return answers.question1 >= 0 && answers.question3 >= 0 && answers.question4 >= 0;
+    } else if (step === 1) {
+      return answers.question5 >= 0 && answers.question7 >= 0 && answers.question8 >= 0;
+    } else if (step === 2) {
+      return answers.question9 >= 0;
+    } else if (step === 3) {
+      return userData.name.trim() !== '' && userData.email.trim() !== '';
+    }
+    return true;
   };
 
   return (
@@ -155,9 +180,9 @@ const CoCreateAssessment = () => {
               <div className="ml-auto">
                 <Button 
                   onClick={handleNextStep}
-                  disabled={isLoading}
+                  disabled={isLoading || !isCurrentStepValid()}
                 >
-                  {step < 2 ? 'Next' : 'Complete Assessment'}
+                  {step < 3 ? 'Next' : 'Complete Assessment'}
                 </Button>
               </div>
             </div>
@@ -167,6 +192,7 @@ const CoCreateAssessment = () => {
             score={totalScore} 
             answers={answers}
             resetAssessment={resetAssessment}
+            userData={userData}
           />
         )}
       </div>

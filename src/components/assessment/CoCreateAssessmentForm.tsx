@@ -287,10 +287,10 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
           </div>
         );
 
-      case 2: // Step 3: Collaboration & Your Information
+      case 2: // Step 3: Collaboration Questions
         return (
           <div>
-            <h2 className="text-xl font-semibold mb-4 text-brand-600">Collaboration & Information</h2>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Collaboration Approach</h2>
             
             <div className="space-y-5">
               {/* Question 9 */}
@@ -361,34 +361,48 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
                   )}
                 </div>
               </div>
+            </div>
+          </div>
+        );
+
+      case 3: // Step 4: Contact Information (moved to a separate step)
+        return (
+          <div>
+            <h2 className="text-xl font-semibold mb-4 text-brand-600">Your Information</h2>
+            
+            <div className="space-y-4">
+              <p className="text-base font-medium mb-4">
+                Great job! You've completed all the assessment questions. Please provide your information below to receive your detailed results by email.
+              </p>
               
-              {/* Contact Information */}
-              <div className="space-y-4 pt-2">
-                <h3 className="text-sm font-medium">Your Information</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="name" className="text-sm">Full Name</Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Your name"
-                      value={userData.name}
-                      onChange={(e) => setUserData(prev => ({ ...prev, name: e.target.value }))}
-                      className="mt-1"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email" className="text-sm">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Your email"
-                      value={userData.email}
-                      onChange={(e) => setUserData(prev => ({ ...prev, email: e.target.value }))}
-                      className="mt-1"
-                    />
-                  </div>
+              <div className="space-y-4 bg-beige-50 p-5 rounded-lg">
+                <div>
+                  <Label htmlFor="name" className="text-base font-medium">Full Name</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    value={userData.name}
+                    onChange={(e) => setUserData(prev => ({ ...prev, name: e.target.value }))}
+                    className="mt-2"
+                  />
                 </div>
+                
+                <div>
+                  <Label htmlFor="email" className="text-base font-medium">Email Address</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Your email"
+                    value={userData.email}
+                    onChange={(e) => setUserData(prev => ({ ...prev, email: e.target.value }))}
+                    className="mt-2"
+                  />
+                </div>
+                
+                <p className="text-sm text-gray-600 mt-2">
+                  Your assessment results will be emailed to you and displayed on the next page.
+                </p>
               </div>
             </div>
           </div>
@@ -405,10 +419,10 @@ const CoCreateAssessmentForm: React.FC<CoCreateAssessmentFormProps> = ({ step, a
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
             className="bg-brand-400 h-2 rounded-full transition-all duration-300" 
-            style={{ width: `${((step + 1) / 3) * 100}%` }}
+            style={{ width: `${((step + 1) / 4) * 100}%` }}
           ></div>
         </div>
-        <p className="text-right mt-1 text-xs text-gray-600">Step {step + 1} of 3</p>
+        <p className="text-right mt-1 text-xs text-gray-600">Step {step + 1} of 4</p>
       </div>
       
       {renderStep()}
