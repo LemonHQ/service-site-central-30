@@ -32,6 +32,104 @@ const CoCreateAssessment = () => {
   
   const navigate = useNavigate();
 
+  // Map of questions text for data storage
+  const questionsData = {
+    question1: {
+      text: "How would you describe your current offering portfolio?",
+      options: [
+        { value: 0, text: "Single unified product" },
+        { value: 2, text: "Multiple products for different segments" },
+        { value: 1, text: "Multiple offerings with overlapping value" },
+        { value: 3, text: "Legacy-heavy suite in need of rework" }
+      ]
+    },
+    question2: {
+      text: "Are you currently exploring or planning any of the following?",
+      options: [
+        { value: 1, text: "Launching a new product or sub-brand" },
+        { value: 2, text: "Repositioning an existing offering" },
+        { value: 3, text: "Entering a new customer segment" },
+        { value: 4, text: "Rationalizing or unbundling product lines" },
+        { value: 0, text: "None of the above" }
+      ]
+    },
+    question3: {
+      text: "How well are your customer segments defined?",
+      options: [
+        { value: 0, text: "Not defined" },
+        { value: 1, text: "Partially defined" },
+        { value: 2, text: "Well defined with insights" },
+        { value: 3, text: "Continuously validated" }
+      ]
+    },
+    question4: {
+      text: "How confident are you that your offerings meet specific customer needs?",
+      options: [
+        { value: 0, text: "Low" },
+        { value: 1, text: "Moderate" },
+        { value: 2, text: "High" },
+        { value: 3, text: "Proven with data" }
+      ]
+    },
+    question5: {
+      text: "How does your organization validate new ideas?",
+      options: [
+        { value: 0, text: "Intuition or internal input" },
+        { value: 1, text: "Occasional pilots/testing" },
+        { value: 2, text: "Structured discovery cycles" },
+        { value: 3, text: "Co-create with customers" }
+      ]
+    },
+    question6: {
+      text: "What internal capabilities do you have to support innovation?",
+      options: [
+        { value: 1, text: "Research & insight" },
+        { value: 2, text: "Experience or service design" },
+        { value: 3, text: "Prototyping & testing" },
+        { value: 4, text: "Go-to-market readiness" },
+        { value: 0, text: "None" }
+      ]
+    },
+    question7: {
+      text: "Are teams aligned on innovation goals and metrics?",
+      options: [
+        { value: 0, text: "Rarely" },
+        { value: 1, text: "Somewhat" },
+        { value: 2, text: "Mostly aligned" },
+        { value: 3, text: "Fully aligned" }
+      ]
+    },
+    question8: {
+      text: "How easy is it for teams to move from idea to execution?",
+      options: [
+        { value: 0, text: "Difficult—lots of friction" },
+        { value: 1, text: "Slow, but manageable" },
+        { value: 2, text: "Efficient in defined tracks" },
+        { value: 3, text: "Agile and collaborative" }
+      ]
+    },
+    question9: {
+      text: "How open is your organization to external collaboration?",
+      options: [
+        { value: 0, text: "We prefer to keep it in-house" },
+        { value: 1, text: "Open to short-term partners" },
+        { value: 2, text: "Seek co-creation partners" },
+        { value: 3, text: "Already work this way" }
+      ]
+    },
+    question10: {
+      text: "What support would you value from a co-creation partner?",
+      options: [
+        { value: 1, text: "Strategy & discovery" },
+        { value: 2, text: "Experience design" },
+        { value: 3, text: "Prototyping & validation" },
+        { value: 4, text: "Market testing" },
+        { value: 5, text: "Launch planning" },
+        { value: 6, text: "Stakeholder alignment" }
+      ]
+    }
+  };
+
   const calculateScore = () => {
     let score = 0;
     
@@ -68,6 +166,74 @@ const CoCreateAssessment = () => {
     setTotalScore(score);
     
     try {
+      // Create selected options text mapping
+      const getSelectedOptionsText = (questionKey: string, selectedValues: number | number[]) => {
+        const question = questionsData[questionKey as keyof typeof questionsData];
+        if (Array.isArray(selectedValues)) {
+          return selectedValues.map(value => {
+            const option = question.options.find(opt => opt.value === value);
+            return option ? option.text : '';
+          });
+        } else {
+          const option = question.options.find(opt => opt.value === selectedValues);
+          return option ? option.text : '';
+        }
+      };
+      
+      // Build complete questions data for storing
+      const completeQuestionsData = {
+        question1: {
+          question: questionsData.question1.text,
+          answer: answers.question1,
+          answerText: getSelectedOptionsText('question1', answers.question1)
+        },
+        question2: {
+          question: questionsData.question2.text,
+          answers: answers.question2,
+          answersText: getSelectedOptionsText('question2', answers.question2)
+        },
+        question3: {
+          question: questionsData.question3.text,
+          answer: answers.question3,
+          answerText: getSelectedOptionsText('question3', answers.question3)
+        },
+        question4: {
+          question: questionsData.question4.text,
+          answer: answers.question4,
+          answerText: getSelectedOptionsText('question4', answers.question4)
+        },
+        question5: {
+          question: questionsData.question5.text,
+          answer: answers.question5,
+          answerText: getSelectedOptionsText('question5', answers.question5)
+        },
+        question6: {
+          question: questionsData.question6.text,
+          answers: answers.question6,
+          answersText: getSelectedOptionsText('question6', answers.question6)
+        },
+        question7: {
+          question: questionsData.question7.text,
+          answer: answers.question7,
+          answerText: getSelectedOptionsText('question7', answers.question7)
+        },
+        question8: {
+          question: questionsData.question8.text,
+          answer: answers.question8,
+          answerText: getSelectedOptionsText('question8', answers.question8)
+        },
+        question9: {
+          question: questionsData.question9.text,
+          answer: answers.question9,
+          answerText: getSelectedOptionsText('question9', answers.question9)
+        },
+        question10: {
+          question: questionsData.question10.text,
+          answers: answers.question10,
+          answersText: getSelectedOptionsText('question10', answers.question10)
+        }
+      };
+
       const { error } = await supabase.from('co_create_assessments').insert({
         name: userData.name,
         email: userData.email,
@@ -81,7 +247,8 @@ const CoCreateAssessment = () => {
         question8_answer: answers.question8,
         question9_answer: answers.question9,
         question10_answers: answers.question10,
-        total_score: score
+        total_score: score,
+        questions_data: completeQuestionsData
       });
       
       if (error) throw error;

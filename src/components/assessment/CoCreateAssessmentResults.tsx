@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from 'react-router-dom';
 import { Award, Check, Star } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface AssessmentResult {
   score: number;
@@ -27,7 +27,6 @@ interface AssessmentResult {
 }
 
 const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers, resetAssessment, userData }) => {
-  const [showDetails, setShowDetails] = useState(false);
   
   const getReadinessLevel = () => {
     const maxScore = 30; // Maximum possible score
@@ -172,7 +171,7 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
       </div>
       
       <h1 className="text-3xl font-bold text-brand-600 mb-2 text-center">Thank You, {userData.name}!</h1>
-      <p className="text-gray-600 mb-8 text-center">Your co-create readiness assessment has been completed successfully.</p>
+      <p className="text-gray-600 mb-8 text-center">Your co-create readiness assessment has been completed successfully. A detailed report has been sent to <span className="font-semibold">{userData.email}</span>.</p>
       
       <div className="bg-beige-50 rounded-lg p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
@@ -214,60 +213,48 @@ const CoCreateAssessmentResults: React.FC<AssessmentResult> = ({ score, answers,
         <h3 className="text-xl font-semibold mb-2">What This Means</h3>
         <p className="text-gray-700 mb-4">{readiness.description}</p>
         <div className="border-t border-gray-200 pt-4 mt-4">
-          <p className="text-brand-600 font-medium">We've sent your detailed assessment report to: <span className="font-semibold">{userData.email}</span></p>
-          <p className="text-sm text-gray-600 mt-2">Your report includes personalized recommendations based on your responses and readiness level.</p>
+          <p className="text-sm text-gray-600">A complete assessment report has been sent to your email with personalized recommendations based on your responses and readiness level.</p>
         </div>
       </div>
       
-      <div className="flex flex-col md:flex-row gap-6 mb-8">
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="outline" className="flex-1">
+      <div className="mb-8">
+        <Accordion type="single" collapsible className="bg-white border rounded-lg">
+          <AccordionItem value="detailed-results">
+            <AccordionTrigger className="p-4 text-lg font-medium">
               View Detailed Results
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-            <DialogHeader>
-              <DialogTitle className="text-2xl text-brand-600">Detailed Assessment Results</DialogTitle>
-              <DialogDescription>
-                Your score breakdown by section
-              </DialogDescription>
-            </DialogHeader>
-            
-            <div className="space-y-6 mt-4">
-              {detailedResults.map((result, index) => (
-                <div key={index} className="border-b pb-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-medium text-lg">{result.question}</h3>
-                    <div>
-                      <span className={`font-semibold ${
-                        result.score/result.maxScore >= 0.7 ? "text-green-600" : 
-                        result.score/result.maxScore >= 0.4 ? "text-yellow-600" : 
-                        "text-orange-500"
-                      }`}>{result.score}</span>
-                      <span className="text-gray-500">/{result.maxScore}</span>
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4">
+              <div className="space-y-6">
+                {detailedResults.map((result, index) => (
+                  <div key={index} className="border-b pb-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <h3 className="font-medium text-lg">{result.question}</h3>
+                      <div>
+                        <span className={`font-semibold ${
+                          result.score/result.maxScore >= 0.7 ? "text-green-600" : 
+                          result.score/result.maxScore >= 0.4 ? "text-yellow-600" : 
+                          "text-orange-500"
+                        }`}>{result.score}</span>
+                        <span className="text-gray-500">/{result.maxScore}</span>
+                      </div>
                     </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                      <div 
+                        className={`h-2 rounded-full ${
+                          result.score/result.maxScore >= 0.7 ? "bg-green-500" : 
+                          result.score/result.maxScore >= 0.4 ? "bg-yellow-500" : 
+                          "bg-orange-500"
+                        }`}
+                        style={{ width: `${(result.score / result.maxScore) * 100}%` }}
+                      ></div>
+                    </div>
+                    <p className="text-gray-600">{result.feedback}</p>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                    <div 
-                      className={`h-2 rounded-full ${
-                        result.score/result.maxScore >= 0.7 ? "bg-green-500" : 
-                        result.score/result.maxScore >= 0.4 ? "bg-yellow-500" : 
-                        "bg-orange-500"
-                      }`}
-                      style={{ width: `${(result.score / result.maxScore) * 100}%` }}
-                    ></div>
-                  </div>
-                  <p className="text-gray-600">{result.feedback}</p>
-                </div>
-              ))}
-            </div>
-          </DialogContent>
-        </Dialog>
-        
-        <Button className="flex-1" onClick={resetAssessment}>
-          Take Assessment Again
-        </Button>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
       
       <div className="bg-brand-50 border border-brand-200 rounded-lg p-6">

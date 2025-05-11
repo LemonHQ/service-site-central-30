@@ -25,6 +25,7 @@ export type Database = {
           question7_answer: number
           question8_answer: number
           question9_answer: number
+          questions_data: Json | null
           total_score: number
         }
         Insert: {
@@ -42,6 +43,7 @@ export type Database = {
           question7_answer: number
           question8_answer: number
           question9_answer: number
+          questions_data?: Json | null
           total_score: number
         }
         Update: {
@@ -59,6 +61,7 @@ export type Database = {
           question7_answer?: number
           question8_answer?: number
           question9_answer?: number
+          questions_data?: Json | null
           total_score?: number
         }
         Relationships: []
