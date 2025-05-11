@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -97,8 +98,8 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Updated with consistent spacing and removed Home link */}
-          <nav className="hidden md:flex items-center">
+          {/* Desktop Navigation - Updated with center alignment */}
+          <nav className="hidden md:flex flex-1 justify-center items-center">
             <div className="flex items-center space-x-6">
               {/* Service SubNav - what we do */}
               <div className="relative flex items-center">
@@ -189,6 +190,9 @@ const Header = () => {
               ))}
             </div>
           </nav>
+
+          {/* Placeholder div to balance the flex layout for proper centering */}
+          <div className="hidden md:block w-[100px]"></div>
 
           {/* Mobile Menu Button */}
           <button 
