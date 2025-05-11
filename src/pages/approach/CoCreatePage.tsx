@@ -126,29 +126,25 @@ const CoCreatePage = () => {
             <ServiceCard
               title="Digital Product Design"
               description="Create user-centric digital products through collaborative ideation, prototyping, and testing."
-              icon={FlaskConical}
-              link="/services/digital-product-design"
+              icon={FlaskConical}              
             />
             
             <ServiceCard
               title="Rapid Prototyping"
               description="Transform concepts into functional prototypes within days, not weeks or months."
-              icon={Zap}
-              link="/services/rapid-prototyping"
+              icon={Zap}             
             />
             
             <ServiceCard
               title="Technology Modernization"
               description="Reimagine legacy systems with modern architectures and technology stacks."
-              icon={History}
-              link="/services/technology-modernization"
+              icon={History}             
             />
             
             <ServiceCard
               title="Innovation Workshops"
               description="Structured sessions to solve complex challenges and generate breakthrough ideas."
-              icon={Lightbulb}
-              link="/services/innovation-workshops"
+              icon={Lightbulb}              
             />
           </div>
         </div>
