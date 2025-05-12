@@ -38,7 +38,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="text-gray-600 text-lg mb-8 space-y-4">
               <p>{description}</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <Link to={ctaLink}>
                 <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
                   {ctaText}
@@ -51,7 +52,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   </Button>
                 </Link>
               )}
-            </div>
+            </div> */}
+
           </div>
           <div className="flex justify-center relative">
             <img
