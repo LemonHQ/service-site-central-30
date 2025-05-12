@@ -19,7 +19,7 @@ const defaultSteps: Step[] = [
 const LeadQualificationLayout: React.FC<LeadQualificationLayoutProps> = ({ 
   children, 
   currentStep,
-  title = "Lead Qualification",
+  title = "Getting Started",
   steps = defaultSteps
 }) => {
   return (

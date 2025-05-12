@@ -6,7 +6,7 @@ import Step1Form from '../components/lead-qualification/Step1Form';
 import Step2Form from '../components/lead-qualification/Step2Form';
 import Step3Form from '../components/lead-qualification/Step3Form';
 
-const LeadQualificationContent = () => {
+const GettingStartedContent = () => {
   const {
     step1Data,
     step2Data,
@@ -39,7 +39,7 @@ const LeadQualificationContent = () => {
   const handleBackToStep2 = () => setCurrentStep(2);
 
   return (
-    <LeadQualificationLayout currentStep={currentStep}>
+    <LeadQualificationLayout currentStep={currentStep} title="Getting Started">
       {currentStep === 1 && (
         <Step1Form 
           defaultValues={step1Data}
@@ -67,12 +67,12 @@ const LeadQualificationContent = () => {
   );
 };
 
-const LeadQualification = () => {
+const GettingStarted = () => {
   return (
     <LeadQualificationProvider>
-      <LeadQualificationContent />
+      <GettingStartedContent />
     </LeadQualificationProvider>
   );
 };
 
-export default LeadQualification;
+export default GettingStarted;

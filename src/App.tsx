@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,7 +17,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
-import LeadQualification from "./pages/LeadQualification";
+import GettingStarted from "./pages/GettingStarted";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 import CoCreateAssessment from "./pages/CoCreateAssessment";
@@ -95,7 +96,8 @@ const App = () => (
           <Route path="/blog/:postId" element={<BlogDetail />} /> {/* Keep old route for backward compatibility */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
-          <Route path="/lead-qualification" element={<LeadQualification />} />
+          <Route path="/getting-started" element={<GettingStarted />} />
+          <Route path="/lead-qualification" element={<GettingStarted />} /> {/* Redirect old route to new one */}
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/cv-submission" element={<CvSubmission />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
