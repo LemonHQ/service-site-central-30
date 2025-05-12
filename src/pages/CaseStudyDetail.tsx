@@ -88,13 +88,19 @@ const CaseStudyDetail: React.FC = () => {
           {/* Challenge */}
           <div className="bg-gray-50 rounded-lg p-6 lg:p-8">
             <h3 className="text-xl font-semibold mb-4">The Challenge</h3>
-            <p className="text-gray-700">{caseStudy.challenge}</p>
+            <div 
+              className="text-gray-700"
+              dangerouslySetInnerHTML={{ __html: caseStudy.challenge }}
+            ></div>
           </div>
           
           {/* Solution */}
           <div className="bg-brand-50 rounded-lg p-6 lg:p-8">
             <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
-            <p className="text-gray-700">{caseStudy.solution}</p>
+            <div 
+              className="text-gray-700"
+              dangerouslySetInnerHTML={{ __html: caseStudy.solution }}
+            ></div>
           </div>
           
           {/* Results */}
@@ -102,7 +108,10 @@ const CaseStudyDetail: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 flex items-center">
               <Award className="mr-2 h-5 w-5 text-green-600" /> Results
             </h3>
-            <p className="text-gray-700">{caseStudy.results}</p>
+            <div 
+              className="text-gray-700"
+              dangerouslySetInnerHTML={{ __html: caseStudy.results }}
+            ></div>
           </div>
         </div>
         
