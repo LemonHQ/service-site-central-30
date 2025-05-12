@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FlaskConical, Zap, History, Lightbulb } from 'lucide-react';
+import { FlaskConical, Zap, Scale, Palette } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { cn } from '@/lib/utils';
 
@@ -46,13 +46,13 @@ const ServicesSection = () => {
           <ServiceCard 
             title="Technology assessments" 
             description="Reimagine customer experiences without legacy systems and technology constraints." 
-            icon={History}
+            icon={Scale}
           />
           
           <ServiceCard 
             title="Design Studio" 
             description="Visualize your end products and experiences shaped by your brand and design playbooks." 
-            icon={Lightbulb}
+            icon={Palette}
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckCircle, Users, Lightbulb, BarChart } from 'lucide-react';
+import { Clock, Medal, Lightbulb, BarChart, Layers, Users, Target } from 'lucide-react';
 import { H4, Paragraph } from '@/components/ui/Typography';
 import SectionHeading from '@/components/ui/SectionHeading';
 import BenefitCard from './BenefitCard';
@@ -9,12 +9,12 @@ const benefits = [
   {
     title: 'Faster product-market fit',
     description: 'Validate real customer needs early and shape solutions that resonate—before you commit full-scale resources.',
-    icon: CheckCircle
+    icon: Clock
   },
   {
     title: 'Stronger differentiation',
     description: 'Stand out with offerings that are precise, relevant, and built with the end customer segment in mind.',
-    icon: Users
+    icon: Medal
   },
   {
     title: 'Actionable innovation',
@@ -24,17 +24,17 @@ const benefits = [
   {
     title: 'Less risk, more alignment',
     description: 'Minimize missteps and internal friction by involving brand, product, market, channel teams from day one.',
-    icon: Lightbulb
+    icon: Target
   },
   {
     title: 'Execution-ready frameworks',
     description: 'Turn strategy into speed with assets, prototypes, and modular systems ready for market deployment.',
-    icon: Lightbulb
+    icon: Layers
   },
   {
     title: 'Customer-centricity at scale',
     description: 'Design for flexibility—so your product can flex across regions, verticals, or partner channels without losing focus.',
-    icon: Lightbulb
+    icon: Users
   },
   {
     title: 'Measurable outcomes',
