@@ -38,12 +38,12 @@ export const caseStudies: CaseStudy[] = [
 <p><strong>Enhanced customer experience</strong><strong><br /></strong>The self-service platform delivered a frictionless experience&mdash;making it easier for customers to manage policies end-to-end. This increased satisfaction, loyalty, and repeat engagement.</p>
 <p><strong>Multi-channel scalability:</strong><strong><br /></strong>With support for enterprise clients, brokers, and direct sales from a single platform, Liva scaled its reach efficiently&mdash;enabling new business models and revenue streams without added complexity.</p>`,
 
-    featuredImage: '/assets/imgs/quote.png',
+    featuredImage: '/assets/imgs/d2c.png',
     images: [
       '/assets/imgs/quote.png',
       '/assets/imgs/driver.png',
-      '/assets/imgs/d2c.png',
-      'public/assets/imgs/renew.png'
+      '/assets/imgs/success.png',
+      '/assets/imgs/renew.png'
     ],
     date: '2025-12-01'
   },
