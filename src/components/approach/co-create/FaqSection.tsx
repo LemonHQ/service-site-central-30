@@ -14,11 +14,11 @@ const faqItems = [
   },
   {
     question: 'Can Co-Create be conducted remotely?',
-    answer: 'Yes, we've developed highly effective virtual Co-Create experiences using digital collaboration tools. While we recommend in-person sessions when possible, our remote approach delivers comparable outcomes with added flexibility and global participation.'
+    answer: "Yes, we've developed highly effective virtual Co-Create experiences using digital collaboration tools. While we recommend in-person sessions when possible, our remote approach delivers comparable outcomes with added flexibility and global participation."
   },
   {
     question: 'What happens after the Co-Create engagement ends?',
-    answer: 'After Co-Create, you'll have validated prototypes, detailed implementation plans, and technical requirements. Many clients transition into our full development services to bring the solution to market, while others implement with their internal teams using our specifications.'
+    answer: "After Co-Create, you'll have validated prototypes, detailed implementation plans, and technical requirements. Many clients transition into our full development services to bring the solution to market, while others implement with their internal teams using our specifications."
   }
 ];
 
