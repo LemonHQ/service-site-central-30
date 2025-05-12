@@ -29,11 +29,13 @@ const SpotlightCarousel: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
+            {/**
               <Link to={content.buttonLink}>
                 <Button className="bg-white text-brand-600 hover:bg-brand-100 py-6 px-8 text-lg">
                   {content.buttonText}
                 </Button>
               </Link>
+               */}
               <Link to={content.secondaryButtonLink}>
                 
               </Link>
