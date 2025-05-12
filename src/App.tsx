@@ -32,6 +32,7 @@ import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage"
 
 // Import approach pages
 import CoCreatePage from "./pages/approach/CoCreatePage";
+import CoCreateTestPage from "./pages/approach/CoCreateTestPage"; // Added the new test page
 import ExtendPage from "./pages/approach/ExtendPage";
 
 // Import industry landing pages
@@ -67,6 +68,7 @@ const App = () => (
           
           {/* Approach pages */}
           <Route path="/approach/co-create" element={<CoCreatePage />} />
+          <Route path="/approach/co-create-test" element={<CoCreateTestPage />} /> {/* Added new test route */}
           <Route path="/approach/extend" element={<ExtendPage />} />
           <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
           
