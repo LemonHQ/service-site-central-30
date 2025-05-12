@@ -48,8 +48,8 @@ const Home = () => {
       {/* High Impact Quote Section */}
       <QuotePanel 
         quote="Staying relevant requires unlearning what's outdated, co-creating what's next, and scaling what works"
-        author="LemonHQ"
-        authorTitle="Digital Innovation Leaders"
+        author="Husain Mohsin"
+        authorTitle="Enterprise Partner"
         className="my-16"
       />
       
