@@ -21,7 +21,7 @@ const CaptureAttentionHero = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <CountdownTimer />
+            {/* <CountdownTimer /> */}
             
             <H1>Build thriving <span className="text-brand-500">digital ecosystems</span></H1>
             
@@ -35,22 +35,20 @@ const CaptureAttentionHero = () => {
             </Lead>
             
             <Paragraph className="mb-8">
-              In today's interconnected markets, standalone products fail. Our Co-Create framework 
-              helps you design platforms that connect to broader digital ecosystems—enabling partnerships, 
-              extending your market reach, and creating value that isolated products simply cannot match.
+               In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments extending your market reach, and creating value that isolated products simply cannot match.
             </Paragraph>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/approach/co-create-assessment">
                 <Button size="lg" className="bg-brand-600 hover:bg-brand-700 w-full sm:w-auto">
-                  Assess Your Ecosystem Readiness <ArrowRight className="ml-2 h-4 w-4" />
+                  Assess your ecosystem readiness <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/lead-qualification">
+              {/* <Link to="/lead-qualification">
                 <Button size="lg" variant="outline" className="border-brand-300 text-brand-700 hover:bg-brand-50 w-full sm:w-auto">
                   Schedule Consultation
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
           
