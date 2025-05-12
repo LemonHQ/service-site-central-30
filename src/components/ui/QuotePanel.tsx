@@ -50,11 +50,15 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
               </div>
             )}
           </div>
+
+          {/* Visual elements inspired by the uploaded image */}
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-yellow-400 rounded-full opacity-20 transform translate-x-1/2 translate-y-1/2"></div>
+          <div className="absolute top-0 right-24 w-16 h-16 bg-accent-300 rounded-full opacity-20 transform -translate-y-1/2"></div>
         </div>
       </div>
       
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-700 to-accent-400 opacity-10"></div>
+      {/* Enhanced background gradient with blue and yellow tones inspired by the image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 via-brand-600 to-yellow-500 opacity-20"></div>
     </section>
   );
 };
