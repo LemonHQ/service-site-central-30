@@ -37,16 +37,13 @@ export const caseStudies: CaseStudy[] = [
 <p><strong>Operational efficiencies through digitalization</strong><strong><br /></strong>Digitalizing policy lifecycle services streamlined internal processes, cut down manual workload, and accelerated turnaround times across quoting, renewal, and servicing. Sales teams were able to pursue leads and close more deals quicker.</p>
 <p><strong>Enhanced customer experience</strong><strong><br /></strong>The self-service platform delivered a frictionless experience&mdash;making it easier for customers to manage policies end-to-end. This increased satisfaction, loyalty, and repeat engagement.</p>
 <p><strong>Multi-channel scalability:</strong><strong><br /></strong>With support for enterprise clients, brokers, and direct sales from a single platform, Liva scaled its reach efficiently&mdash;enabling new business models and revenue streams without added complexity.</p>`,
-    testimonial: {
-      quote: "The digital transformation executed by Elevate Digital has fundamentally changed how we serve our customers. We're now seen as an innovation leader in the banking sector.",
-      author: 'Sarah Johnson',
-      position: 'CTO, First Global Bank'
-    },
-    featuredImage: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+
+    featuredImage: '/assets/imgs/quote.png',
     images: [
-      'https://images.unsplash.com/photo-1563986768609-322da13575f3',
-      'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f',
-      'https://images.unsplash.com/photo-1622675363311-3e1904dc1885'
+      '/assets/imgs/quote.png',
+      '/assets/imgs/driver.png',
+      '/assets/imgs/d2c.png',
+      'public/assets/imgs/renew.png'
     ],
     date: '2025-12-01'
   },
