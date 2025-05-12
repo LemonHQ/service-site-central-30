@@ -12,8 +12,8 @@ const InsurancePage = () => {
       description="We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
       ctaText="hello"
       ctaLink=""
-      secondaryCtaText="hello"
-      secondaryCtaLink=""
+      secondaryCtaText="Getting Started"
+      secondaryCtaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
       quotePanel={{
