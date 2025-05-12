@@ -245,14 +245,13 @@ const CaseStudyDetail: React.FC = () => {
             </div>
           </div>
         )}
-        
         {/* CTA Section */}
         <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to transform your business?</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4"> Ready to explore?</h3>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Let's discuss how our team can help you achieve similar results with a customized digital strategy.
+            Assess your readiness for a co-creation journey today,
           </p>
-          <Link to="/contact">
+          <Link to="/approach/co-create-assessment">
             <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
               Get Started
             </Button>
