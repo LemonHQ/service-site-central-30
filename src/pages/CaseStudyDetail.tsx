@@ -1,15 +1,30 @@
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 import { caseStudies } from '@/data/caseStudies';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Building, Award, Quote } from 'lucide-react';
+import { ArrowLeft, Calendar, Building, Award, Quote, ArrowRight, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogClose,
+} from '@/components/ui/dialog';
 
 const CaseStudyDetail: React.FC = () => {
   const { caseStudyId } = useParams<{ caseStudyId: string }>();
+  const [imageIndex, setImageIndex] = useState<number | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   
   // Find the case study based on the URL parameter
   const caseStudy = useMemo(() => {
@@ -27,6 +42,24 @@ const CaseStudyDetail: React.FC = () => {
     day: 'numeric',
     year: 'numeric'
   });
+
+  // Open lightbox with specific image
+  const openLightbox = (index: number) => {
+    setImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  // Navigate to next image in lightbox
+  const nextImage = () => {
+    if (imageIndex === null) return;
+    setImageIndex((imageIndex + 1) % caseStudy.images.length);
+  };
+
+  // Navigate to previous image in lightbox
+  const prevImage = () => {
+    if (imageIndex === null) return;
+    setImageIndex((imageIndex - 1 + caseStudy.images.length) % caseStudy.images.length);
+  };
   
   return (
     <MainLayout>
@@ -115,21 +148,89 @@ const CaseStudyDetail: React.FC = () => {
           </div>
         </div>
         
-        {/* Additional Images */}
+        {/* Project Gallery - Carousel */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {caseStudy.images.map((image, index) => (
-              <div key={index} className="rounded-lg overflow-hidden h-64">
-                <img 
-                  src={image} 
-                  alt={`${caseStudy.title} - Image ${index+1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {caseStudy.images.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-1">
+                  <div 
+                    className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
+                    onClick={() => openLightbox(index)}
+                  >
+                    <img 
+                      src={image} 
+                      alt={`${caseStudy.title} - Image ${index+1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-4">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
         </div>
+        
+        {/* Lightbox for fullscreen image view */}
+        <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
+          <DialogOverlay className="bg-black/80" />
+          <DialogContent className="max-w-screen-lg max-h-[90vh] p-0 bg-transparent border-none shadow-none">
+            <div className="relative w-full h-full">
+              <div className="flex items-center justify-center h-full">
+                {imageIndex !== null && caseStudy.images[imageIndex] && (
+                  <img 
+                    src={caseStudy.images[imageIndex]} 
+                    alt={`${caseStudy.title} - Full view`}
+                    className="max-h-[85vh] max-w-full object-contain"
+                  />
+                )}
+              </div>
+              
+              <div className="absolute top-0 right-0 p-4">
+                <DialogClose asChild>
+                  <Button variant="outline" size="icon" className="rounded-full bg-black/50 hover:bg-black/70 border-none text-white">
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                  </Button>
+                </DialogClose>
+              </div>
+              
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 p-4">
+                <Button 
+                  variant="outline" 
+                  size="icon"
+                  className="rounded-full bg-black/50 hover:bg-black/70 border-none text-white"
+                  onClick={prevImage}
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  <span className="sr-only">Previous image</span>
+                </Button>
+              </div>
+              
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 p-4">
+                <Button 
+                  variant="outline" 
+                  size="icon"
+                  className="rounded-full bg-black/50 hover:bg-black/70 border-none text-white"
+                  onClick={nextImage}
+                >
+                  <ArrowRight className="h-4 w-4" />
+                  <span className="sr-only">Next image</span>
+                </Button>
+              </div>
+              
+              <div className="absolute bottom-4 left-0 right-0 text-center text-white">
+                {imageIndex !== null && (
+                  <span>{imageIndex + 1} of {caseStudy.images.length}</span>
+                )}
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
         
         {/* Testimonial */}
         {caseStudy.testimonial && (
