@@ -36,9 +36,9 @@ const FrictionReducerFAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <H2 className="mb-4">Ecosystem Strategy FAQs</H2>
+            <H2 className="mb-4">FAQs</H2>
             <Paragraph>
-              Common questions about building digital ecosystem platforms
+              Common questions about building digital  platforms
             </Paragraph>
           </div>
           
