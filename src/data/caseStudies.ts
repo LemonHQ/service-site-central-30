@@ -51,7 +51,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'e-commerce-platform-redesign',
     title: 'E-Commerce Platform Redesign',
     client: 'Retail Universe',
-    industry: 'Retail',
+    industry: 'Finance',
     services: ['UI/UX Design', 'Web Development', 'Conversion Optimization'],
     summary: 'Completely reimagining the digital shopping experience for a major retailer, resulting in a 65% increase in conversion rates and 40% boost in average order value.',
     challenge: 'Retail Universe was experiencing high cart abandonment rates and poor mobile conversion. Their e-commerce platform was difficult to navigate, slow to load, and didn\'t effectively showcase their products. They needed a complete redesign that would improve the customer journey and increase sales.',
