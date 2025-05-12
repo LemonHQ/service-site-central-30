@@ -2,7 +2,7 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Headphones, Sparkles } from "lucide-react";
-import { H3 } from './Typography';
+import { H3 } from '@/components/ui/Typography';
 
 interface QuotePanelProps {
   quote: string;
