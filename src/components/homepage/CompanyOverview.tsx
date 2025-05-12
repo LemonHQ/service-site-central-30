@@ -137,7 +137,7 @@ const CompanyOverview: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+            {/** 
             <div className="flex justify-center">
               <Link to="/approach/co-create">
                 <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
@@ -151,7 +151,9 @@ const CompanyOverview: React.FC = () => {
                   Extend
                 </Button>
               </Link>
-            </div>            
+            </div>   
+          */}
+
           </div>
           
           <div className="relative">
