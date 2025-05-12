@@ -6,11 +6,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqItems = [
   {
     question: "How long does a typical Co-Create engagement last?",
-    answer: "Our standard Co-Create framework is a 5-week process, though we can accelerate to as little as 3 weeks for urgent needs. For more complex products or organizations with multiple stakeholders, we may extend to 7-8 weeks to ensure proper validation and alignment."
+    answer: "Our standard Co-Create framework is a 4-week process, though we can accelerate to as little as 3 weeks for urgent needs. For more complex products or organizations with multiple stakeholders, we may extend to 7-8 weeks to ensure proper validation and alignment."
   },
   {
     question: "Who from my organization needs to be involved?",
-    answer: "For optimal results, we recommend a core team of 3-5 key stakeholders (typically from product, marketing, technology, and customer experience) who participate throughout the engagement. Additional subject matter experts join for specific workshops or review sessions as needed. We work with your schedule constraints to maximize participation while minimizing disruption."
+    answer: "For optimal results, we recommend a core team of 3-5 key stakeholders (typically from product, marketing, technology, and customer experience) who participate throughout the engagement. Additional subject matter experts join for specific sessions or review sessions as needed. We work with your schedule constraints to maximize participation while minimizing disruption."
   },
   {
     question: "What if we already have a product idea—do we still need Co-Create?",
@@ -25,8 +25,8 @@ const faqItems = [
     answer: "By the end of Co-Create, you'll have validated prototypes, detailed implementation plans, and technical requirements. Many clients transition into our full development services to bring the solution to market, while others implement with their internal teams using our specifications. Either way, we provide a complete handoff package and offer optional ongoing support to ensure successful execution."
   },
   {
-    question: "How is Co-Create different from other design thinking or workshop approaches?",
-    answer: "Unlike generic design thinking workshops that often yield theoretical concepts, Co-Create is intensely practical and results-driven. We focus on rapidly creating testable prototypes and validating them with real users from your target segments. Our framework is specifically tailored for enterprise products and incorporates both business viability and technical feasibility alongside user desirability."
+    question: "How is Co-Create different from other design thinking or collaborative approaches?",
+    answer: "Unlike generic design thinking sessions that often yield theoretical concepts, Co-Create is intensely practical and results-driven. We focus on rapidly creating testable prototypes and validating them with real users from your target segments. Our framework is specifically tailored for enterprise products and incorporates both business viability and technical feasibility alongside user desirability."
   }
 ];
 
@@ -46,9 +46,12 @@ const FrictionReducerFAQ = () => {
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
                 <AccordionTrigger className="text-left py-4">
-                  <span className="font-medium text-lg text-gray-800">{item.question}</span>
+                  <span className="text-base text-gray-800">
+                    <span className="font-medium text-brand-600 mr-2">{index + 1}.</span>
+                    {item.question}
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-6">
+                <AccordionContent className="text-sm text-gray-600 pb-6 pl-6">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -63,8 +66,8 @@ const FrictionReducerFAQ = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-medium text-lg text-gray-800 mb-2">Still have questions?</h4>
-                <Paragraph className="mb-0">
+                <h4 className="font-medium text-base text-gray-800 mb-2">Still have questions?</h4>
+                <Paragraph className="text-sm mb-0">
                   Contact our team directly at <a href="mailto:co-create@elevatedigital.com" className="text-brand-600 hover:underline">co-create@elevatedigital.com</a> 
                   or book a 15-minute consultation to discuss your specific needs.
                 </Paragraph>

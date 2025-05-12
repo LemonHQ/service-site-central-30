@@ -91,7 +91,7 @@ const SolutionSection = () => {
           <div className="flex items-start gap-4">
             <CheckCircle className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />
             <div>
-              <H4 className="text-brand-700 mb-2">Not just another workshop</H4>
+              <H4 className="text-brand-700 mb-2">Not just another methodology</H4>
               <Paragraph>
                 Co-Create isn't a theoretical exercise. It's a proven, repeatable framework that 
                 delivers tangible artifacts: validated prototypes, user journey maps, technical 

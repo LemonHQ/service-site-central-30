@@ -105,8 +105,10 @@ const ProofSection = () => {
           </div>
         </div>
         
-        {/* Benefits Section - using the original component */}
-        <BenefitsSection />
+        {/* Benefits Section with a different background color */}
+        <div className="bg-slate-50 py-8 rounded-lg">
+          <BenefitsSection />
+        </div>
       </div>
     </section>
   );

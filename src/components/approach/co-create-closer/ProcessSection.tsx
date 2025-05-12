@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { CheckCircle, Users, Lightbulb, Gauge, Rocket, ChevronRight } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
@@ -6,14 +5,14 @@ import { H2, H4, Paragraph } from '@/components/ui/Typography';
 const processSteps = [
   {
     step: 1,
-    title: "Discovery & Alignment",
+    title: "Differentiation & Alignment",
     description: "We identify your target segments, map existing pain points, and align stakeholders on business objectives.",
     duration: "Week 1",
     deliverables: ["Target segment profiles", "Pain point analysis", "Success metrics definition"]
   },
   {
     step: 2,
-    title: "Co-Creation Workshop",
+    title: "Co-Creation Session",
     description: "Cross-functional teams collaborate to generate and prioritize solution concepts based on user needs.",
     duration: "Week 2",
     deliverables: ["Solution concepts", "Prioritization matrix", "Initial wireframes"]
@@ -31,13 +30,6 @@ const processSteps = [
     description: "Prototypes undergo rigorous testing with actual users from your target segments to validate assumptions.",
     duration: "Week 4",
     deliverables: ["User testing results", "Refined prototype", "Feature prioritization"]
-  },
-  {
-    step: 5,
-    title: "Execution Planning",
-    description: "Develop a detailed implementation plan including technical requirements and go-to-market strategy.",
-    duration: "Week 5",
-    deliverables: ["Technical requirements", "Development timeline", "Go-to-market playbook"]
   }
 ];
 
@@ -55,7 +47,7 @@ const ProcessSection = () => {
           <H2 className="mb-6">The Co-Create Process</H2>
           
           <Paragraph className="text-lg">
-            Our structured 5-week process takes you from problem definition to validated solution, 
+            Our structured 4-week process takes you from problem definition to validated solution, 
             with clear deliverables and milestones at each step.
           </Paragraph>
         </div>
@@ -207,19 +199,6 @@ const ProcessSection = () => {
                     <div className="flex items-start">
                       <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
                       <p className="text-sm">Products validated at this stage are 3x more likely to succeed in market</p>
-                    </div>
-                  </div>
-                )}
-                
-                {step.step === 5 && (
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <Rocket className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Detailed execution planning ensures seamless handoff to development teams</p>
-                    </div>
-                    <div className="flex items-start">
-                      <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Clear requirements reduce development time by 28% on average</p>
                     </div>
                   </div>
                 )}
