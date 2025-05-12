@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
       'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f',
       'https://images.unsplash.com/photo-1622675363311-3e1904dc1885'
     ],
-    date: '2023-08-15'
+    date: '2025-12-01'
   },
   {
     id: 'e-commerce-platform-redesign',
