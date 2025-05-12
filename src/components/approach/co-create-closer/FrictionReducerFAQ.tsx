@@ -5,28 +5,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqItems = [
   {
-    question: "How do you balance building core product features versus ecosystem integrations?",
-    answer: "Our Co-Create process uses a value-driven approach to prioritize both product features and ecosystem integrations. We identify which core features deliver immediate user value while designing integration points that enable future growth. This balanced approach ensures your product meets immediate market needs while building the foundation for broader ecosystem participation."
+    question: "How do you identify the right target customers for our product?",
+    answer: "We use a systematic approach to identify and validate target customers by analyzing your market segments, conducting user interviews, and evaluating customer pain points. This approach combines your internal business knowledge with external market research to pinpoint the most promising customer segments where your product can solve meaningful problems and create value."
   },
   {
-    question: "How do you involve our target users in the product development process?",
-    answer: "We engage target users at multiple points throughout the 4-week process. In Week 1, we conduct user interviews and needs assessments to inform the product vision. During Week 3's prototype development, we incorporate user feedback on early designs. Week 4 is dedicated to structured user testing sessions with your specific user segments to validate and refine the product before launch."
+    question: "How do you measure product-market fit during the Co-Create process?",
+    answer: "We establish clear metrics aligned with Dan Olsen's product-market fit pyramid to measure how well your product meets customer needs. These typically include engagement metrics (usage frequency, session duration), retention metrics (return rate, churn), and satisfaction metrics (NPS, user feedback). We define these metrics early in the process and use them to validate the product concept with real users."
   },
   {
-    question: "What technical prerequisites are needed for product development?",
-    answer: "While technical requirements vary by product, our process is adaptable to your current technical maturity. For early-stage products, we focus on validating the core concept and creating a technical roadmap. For more mature products, we can incorporate existing codebases and APIs. Our Co-Create process works regardless of where you are in your product journey."
+    question: "How do you handle the tension between MVP features and future ecosystem connectivity?",
+    answer: "We focus on creating a minimal viable product that delivers core value while architecting for future flexibility. The process involves prioritizing features based on your target customers' most urgent needs while designing the underlying architecture to support future ecosystem integrations. This balanced approach ensures you can deliver immediate value while positioning your product for long-term ecosystem success."
   },
   {
-    question: "How do we protect our product's intellectual property while enabling ecosystem connections?",
-    answer: "This is a common concern we address during the Ecosystem Landscape Mapping phase. We help you design a product strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations. We can also assist with drafting appropriate legal frameworks for ecosystem partnerships."
+    question: "What if we discover our initial product hypothesis is wrong during the process?",
+    answer: "This is actually a valuable outcome of the Co-Create process. Dan Olsen's methodology embraces the principle of validated learning - better to discover issues early before significant resources are invested. If we find that the initial hypothesis needs adjustment, we'll pivot based on the insights gathered and refine the target customer, problem statement, or solution approach accordingly."
   },
   {
-    question: "Who from our organization needs to be involved in the Co-Create process?",
-    answer: "For optimal results, we recommend a core team of 3-5 key stakeholders spanning product management, engineering, and business development. We'll also need access to your target users for research and testing sessions. Our collaborative approach is designed to create alignment across these different perspectives while minimizing the time commitment required from your team."
+    question: "How do we involve our existing customers in the process if we're enhancing a current product?",
+    answer: "For existing products, we incorporate your current customers into the process through targeted research sessions and prototype testing. We analyze usage data of your existing product, conduct interviews with different customer segments, and involve them in validation of new features. This approach helps ensure that enhancements address actual customer needs while maintaining compatibility with existing workflows."
   },
   {
     question: "What happens after the 4-week Co-Create process ends?",
-    answer: "After completing the Co-Create process, you'll have a validated product prototype, technical implementation roadmap, and go-to-market strategy. Many clients transition to our implementation services for development, while others use our specifications with their internal teams. We also offer ongoing product enhancement support and can assist with executing your ecosystem strategy after launch."
+    answer: "After completing the Co-Create process, you'll have a validated product concept, prioritized feature set, and product-market fit metrics to guide development. Many clients transition to our implementation services for development, while others use our specifications with their internal teams. We also offer ongoing support for iterative product enhancement and can assist with executing your product roadmap after launch."
   }
 ];
 
@@ -38,7 +38,7 @@ const FrictionReducerFAQ = () => {
           <div className="text-center mb-10">
             <H2 className="mb-4">FAQs</H2>
             <Paragraph>
-              Common questions about our product Co-Create process
+              Common questions about our product-market fit Co-Create process
             </Paragraph>
           </div>
           
@@ -66,10 +66,10 @@ const FrictionReducerFAQ = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-medium text-base text-gray-800 mb-2">Have specific product development questions?</h4>
+                <h4 className="font-medium text-base text-gray-800 mb-2">Have specific product-market fit questions?</h4>
                 <Paragraph className="text-sm mb-0">
                   Contact our product strategy team at <a href="mailto:product@elevatedigital.com" className="text-brand-600 hover:underline">product@elevatedigital.com</a> 
-                  or book a 15-minute consultation to discuss your specific product challenges.
+                  or book a 15-minute consultation to discuss your product-market fit challenges.
                 </Paragraph>
               </div>
             </div>

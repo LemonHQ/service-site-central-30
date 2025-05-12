@@ -1,36 +1,36 @@
 
 import React, { useState } from 'react';
-import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock, Package, Database, Zap, ArrowRight } from 'lucide-react';
+import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock, Package, Database, Zap, ArrowRight, Target, MoveRight, LineChart } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 
 const processSteps = [
   {
     step: 1,
-    title: "User & Product Stakeholder Alignment",
-    description: "We align product vision with user needs by engaging directly with target users and key product stakeholders to identify core value propositions and product opportunities.",
+    title: "Target Customer & Problem Definition",
+    description: "We identify your target customers and deeply understand their underserved needs through customer interviews, research, and stakeholder alignment sessions to determine the most valuable problems to solve.",
     duration: "Week 1",
-    deliverables: ["User needs assessment", "Product vision canvas", "Stakeholder alignment report"]
+    deliverables: ["Customer persona profiles", "Problem hypothesis", "Customer needs framework", "Market opportunity assessment"]
   },
   {
     step: 2,
-    title: "Ecosystem Landscape Mapping",
-    description: "We map the digital ecosystem landscape to identify strategic integration opportunities and position your product within the broader market context.",
+    title: "Value Proposition & Positioning",
+    description: "We develop a compelling value proposition that addresses the target customer's needs and positions your product within the competitive ecosystem landscape to create unique differentiation.",
     duration: "Week 2",
-    deliverables: ["Ecosystem opportunity map", "Competitive positioning matrix", "Integration value framework"]
+    deliverables: ["Value proposition canvas", "Competitive positioning matrix", "Feature prioritization framework", "Ecosystem opportunity map"]
   },
   {
     step: 3,
-    title: "Product Prototype Development",
-    description: "We develop interactive prototypes of your product's core features while designing the foundations for ecosystem connectivity and future scaling.",
+    title: "MVP Feature Set & Prototype",
+    description: "We define the minimum viable product feature set and develop interactive prototypes that demonstrate the core value proposition while enabling future ecosystem connectivity.",
     duration: "Week 3",
-    deliverables: ["Interactive product prototype", "Platform architecture model", "Technical implementation roadmap"]
+    deliverables: ["MVP feature specification", "Interactive product prototype", "User journey maps", "Technical implementation roadmap"]
   },
   {
     step: 4,
-    title: "Target User Validation",
-    description: "We validate the product with target users through structured testing sessions, gathering feedback to refine both the core product experience and ecosystem strategy.",
+    title: "Product-Market Fit Validation",
+    description: "We validate the product solution with target users through structured testing sessions to gather feedback, refine the product concept, and establish metrics for measuring product-market fit.",
     duration: "Week 4",
-    deliverables: ["User testing insights", "Product refinement plan", "Go-to-market strategy"]
+    deliverables: ["User testing results", "Product-market fit metrics", "Iteration plan", "Go-to-market strategy"]
   }
 ];
 
@@ -48,8 +48,8 @@ const ProcessSection = () => {
           <H2 className="mb-6">The Product Co-Create Process</H2>
           
           <Paragraph className="text-lg">
-            Our structured 4-week process transforms your product vision into a market-ready 
-            solution validated by real users and designed for ecosystem integration.
+            Our structured 4-week process follows Dan Olsen's proven product-market fit methodology to transform your 
+            idea into a market-validated solution with ecosystem integration potential.
           </Paragraph>
         </div>
         
@@ -155,12 +155,12 @@ const ProcessSection = () => {
                 {step.step === 1 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products built with direct user input are 3x more likely to meet market needs</p>
+                      <Target className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products focused on specific customer needs are 3x more likely to achieve product-market fit</p>
                     </div>
                     <div className="flex items-start">
-                      <Package className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Stakeholder alignment reduces product development timeline by 40%</p>
+                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Clear customer problem definition reduces development waste by 40%</p>
                     </div>
                   </div>
                 )}
@@ -168,12 +168,12 @@ const ProcessSection = () => {
                 {step.step === 2 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products that map ecosystem opportunities see 75% higher integration rates</p>
+                      <MoveRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Strong value propositions increase adoption rates by 75%</p>
                     </div>
                     <div className="flex items-start">
                       <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Understanding market positioning unlocks 2.5x more partnership opportunities</p>
+                      <p className="text-sm">Ecosystem-aware positioning creates 2.5x more partnership opportunities</p>
                     </div>
                   </div>
                 )}
@@ -182,11 +182,11 @@ const ProcessSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Interactive prototypes reduce development rework by 60%</p>
+                      <p className="text-sm">MVP prototypes reduce development rework by 60%</p>
                     </div>
                     <div className="flex items-start">
                       <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products designed with ecosystem connectivity grow 3x faster in their first year</p>
+                      <p className="text-sm">Products designed with future integration in mind grow 3x faster</p>
                     </div>
                   </div>
                 )}
@@ -194,12 +194,12 @@ const ProcessSection = () => {
                 {step.step === 4 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">User-validated products achieve 80% higher adoption rates</p>
+                      <LineChart className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products with defined PMF metrics reach profitability 2x faster</p>
                     </div>
                     <div className="flex items-start">
-                      <ArrowRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products with a clear go-to-market strategy reach profitability 2x faster</p>
+                      <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">User-validated products achieve 80% higher retention rates</p>
                     </div>
                   </div>
                 )}
