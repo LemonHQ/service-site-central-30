@@ -138,7 +138,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       
       {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
       
-      <CtaSection ctaText={ctaText} ctaLink={ctaLink} />
+      {/* <CtaSection ctaText={ctaText} ctaLink={ctaLink} /> */}
     </MainLayout>
   );
 };
