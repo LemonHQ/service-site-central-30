@@ -5,28 +5,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqItems = [
   {
-    question: "How do I identify the right ecosystem opportunities for my products?",
-    answer: "Our Co-Create process begins with ecosystem mapping to identify partnership opportunities. We analyze your existing capabilities, market trends, customer journey touchpoints, and potential ecosystem partners to determine where you can create maximum value through integration."
+    question: "How do you balance building core product features versus platform capabilities?",
+    answer: "Our Co-Create process uses a value-driven approach to prioritize both product features and platform capabilities. We identify which core features deliver immediate customer value while designing platform components that enable future ecosystem growth. This balanced approach ensures your product has market fit today while building the foundation for tomorrow's ecosystem opportunities."
   },
   {
-    question: "What technical prerequisites are needed for ecosystem participation?",
-    answer: "While technical requirements vary by ecosystem, we typically recommend having API capabilities, scalable infrastructure, and identity management solutions. However, our Co-Create process works even if you don't have these prerequisites yet—we'll help you develop an implementation roadmap tailored to your current technical maturity."
+    question: "What technical prerequisites are needed for product-platform integration?",
+    answer: "While technical requirements vary by product, we typically recommend having API capabilities, modular architecture, and identity management solutions. However, our Co-Create process works even if you don't have these prerequisites yet—we'll help you develop an implementation roadmap tailored to your current technical maturity."
   },
   {
-    question: "How do we balance ecosystem openness with IP protection?",
-    answer: "This is a common concern we address during the Platform Co-Creation phase. We help you design an ecosystem strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations."
+    question: "How do we balance product innovation with IP protection?",
+    answer: "This is a common concern we address during the Product Architecture & Platform Design phase. We help you design a strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations."
   },
   {
-    question: "Who from my organization needs to be involved in ecosystem planning?",
-    answer: "For optimal results, we recommend a core team of 5-7 key stakeholders spanning product, technology, business development, and strategy. Additional subject matter experts join for specific sessions as needed. Our ecosystem mapping sessions are designed to create alignment across these different perspectives."
+    question: "Who from my organization needs to be involved in the Co-Create process?",
+    answer: "For optimal results, we recommend a core team of 5-7 key stakeholders spanning product management, engineering, business development, and strategy. Additional subject matter experts join for specific sessions as needed. Our collaborative sessions are designed to create alignment across these different perspectives."
   },
   {
-    question: "How long does it take to see results from ecosystem participation?",
-    answer: "Early benefits like strategic clarity and internal alignment are immediate. Technical integration prototypes are typically ready within 3-4 weeks. Most organizations see initial ecosystem partnership deals within 3-6 months, with substantial market impact in 9-12 months as integrations mature and network effects increase."
+    question: "How long does it take to see results from the Co-Create process?",
+    answer: "Early benefits like product vision clarity and internal alignment are immediate. Technical prototypes are typically ready within 3-4 weeks. Most organizations achieve initial product-market validation within 3 months, with substantial ecosystem growth in 6-9 months as integrations mature and network effects increase."
   },
   {
     question: "What happens after the Co-Create strategic sessions end?",
-    answer: "After completing the Co-Create process, you'll have an ecosystem strategy, platform architecture blueprint, API specifications, and partnership models. Many clients transition to our implementation services for technical development, while others use our specifications with their internal teams. We also offer ongoing ecosystem development support to help you grow your partner network."
+    answer: "After completing the Co-Create process, you'll have a product blueprint, platform architecture, API specifications, and go-to-market strategy. Many clients transition to our implementation services for technical development, while others use our specifications with their internal teams. We also offer ongoing product enhancement and ecosystem development support."
   }
 ];
 
@@ -38,7 +38,7 @@ const FrictionReducerFAQ = () => {
           <div className="text-center mb-10">
             <H2 className="mb-4">FAQs</H2>
             <Paragraph>
-              Common questions about building digital  platforms
+              Common questions about building product-platform ecosystems
             </Paragraph>
           </div>
           
@@ -66,10 +66,10 @@ const FrictionReducerFAQ = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-medium text-base text-gray-800 mb-2">Have ecosystem-specific questions?</h4>
+                <h4 className="font-medium text-base text-gray-800 mb-2">Have product or ecosystem-specific questions?</h4>
                 <Paragraph className="text-sm mb-0">
-                  Contact our ecosystem strategy team at <a href="mailto:ecosystems@elevatedigital.com" className="text-brand-600 hover:underline">ecosystems@elevatedigital.com</a> 
-                  or book a 15-minute consultation to discuss your specific ecosystem challenges.
+                  Contact our product strategy team at <a href="mailto:product@elevatedigital.com" className="text-brand-600 hover:underline">product@elevatedigital.com</a> 
+                  or book a 15-minute consultation to discuss your specific product challenges.
                 </Paragraph>
               </div>
             </div>

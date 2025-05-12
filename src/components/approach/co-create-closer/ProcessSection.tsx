@@ -1,36 +1,36 @@
 
 import React, { useState } from 'react';
-import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock } from 'lucide-react';
+import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock, Package, Database, Zap, ArrowRight } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 
 const processSteps = [
   {
     step: 1,
-    title: "Ecosystem Positioning",
-    description: "We map the digital ecosystem landscape, identify partnership opportunities, and align stakeholders on platform strategy.",
+    title: "Product Vision & Ecosystem Mapping",
+    description: "We define your product vision and map the digital ecosystem landscape to identify how your product can create maximum value through strategic integrations.",
     duration: "Week 1",
-    deliverables: ["Ecosystem opportunity map", "Partnership model canvas", "Platform capability assessment"]
+    deliverables: ["Product vision canvas", "Ecosystem opportunity map", "Integration value framework"]
   },
   {
     step: 2,
-    title: "Platform Co-Creation",
-    description: "Cross-functional teams collaborate to define platform architecture, APIs, and integration patterns that enable ecosystem participation.",
+    title: "Product Architecture & Platform Design",
+    description: "We design your core product capabilities alongside the platform components that will enable ecosystem participation and growth.",
     duration: "Week 2",
-    deliverables: ["Platform architecture blueprint", "API design patterns", "Integration roadmap"]
+    deliverables: ["Product capability blueprint", "Platform architecture model", "API design patterns"]
   },
   {
     step: 3,
-    title: "Ecosystem Prototyping",
-    description: "We develop working prototypes of core platform capabilities and test integration scenarios with potential ecosystem partners.",
+    title: "Product Prototyping & Partner Testing",
+    description: "We build working prototypes of your product's core features and test integration scenarios with potential ecosystem partners.",
     duration: "Week 3",
-    deliverables: ["API prototypes", "Integration demos", "Partner onboarding flows"]
+    deliverables: ["Product feature prototypes", "API integration demos", "Partner feedback framework"]
   },
   {
     step: 4,
-    title: "Ecosystem Validation",
-    description: "Prototype testing with actual ecosystem partners validates the platform strategy and refines technical requirements.",
+    title: "Go-to-Market & Ecosystem Strategy",
+    description: "We develop your product's go-to-market strategy alongside an ecosystem growth plan to accelerate adoption and network effects.",
     duration: "Week 4",
-    deliverables: ["Partner feedback analysis", "Technical requirement specs", "Ecosystem scaling plan"]
+    deliverables: ["Product launch roadmap", "Ecosystem partner playbook", "Scaling strategy"]
   }
 ];
 
@@ -45,11 +45,11 @@ const ProcessSection = () => {
             <span className="text-sm font-medium">How It Works</span>
           </div>
           
-          <H2 className="mb-6">The Ecosystem Co-Create Process</H2>
+          <H2 className="mb-6">The Product Co-Create Process</H2>
           
           <Paragraph className="text-lg">
-            Our structured 4-week process transforms your product vision into a scalable 
-            platform strategy, designed to thrive in connected digital ecosystems.
+            Our structured 4-week process transforms your product vision into a market-ready 
+            solution, designed with platform capabilities for ecosystem growth.
           </Paragraph>
         </div>
         
@@ -155,12 +155,12 @@ const ProcessSection = () => {
                 {step.step === 1 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Identifying the right ecosystem position determines your platform's market potential</p>
+                      <Package className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">A clear product vision aligned with ecosystem opportunities creates 2x more market impact</p>
                     </div>
                     <div className="flex items-start">
                       <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">74% of successful platforms started with clear ecosystem mapping</p>
+                      <p className="text-sm">83% of successful products start with ecosystem mapping to identify integration value</p>
                     </div>
                   </div>
                 )}
@@ -168,12 +168,12 @@ const ProcessSection = () => {
                 {step.step === 2 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Cross-functional collaboration ensures your platform meets both technical and business ecosystem needs</p>
+                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products designed with platform capabilities from the start scale 3x faster</p>
                     </div>
                     <div className="flex items-start">
-                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Platforms with well-designed architecture attract 3x more ecosystem partners</p>
+                      <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Well-designed APIs reduce integration costs by 65% and accelerate ecosystem adoption</p>
                     </div>
                   </div>
                 )}
@@ -181,12 +181,12 @@ const ProcessSection = () => {
                 {step.step === 3 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Ecosystem prototyping reduces integration friction with potential partners</p>
+                      <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Prototype testing with real users reduces product failure risk by 78%</p>
                     </div>
                     <div className="flex items-start">
-                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">API prototyping reduces ecosystem integration costs by up to 65%</p>
+                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Partner validation ensures your product creates mutual value across the ecosystem</p>
                     </div>
                   </div>
                 )}
@@ -194,12 +194,12 @@ const ProcessSection = () => {
                 {step.step === 4 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Partner validation ensures your platform creates mutual value across the ecosystem</p>
+                      <ArrowRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products with integrated ecosystem strategies achieve 4x faster market adoption</p>
                     </div>
                     <div className="flex items-start">
-                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Ecosystem-validated platforms achieve market growth 4x faster than non-validated solutions</p>
+                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">A clear partner playbook increases ecosystem participation by 120% in the first year</p>
                     </div>
                   </div>
                 )}
