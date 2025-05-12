@@ -58,7 +58,7 @@ const CaseStudySection = () => {
                 </div>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center">
                 <Link to="/case-studies/expanding-and-standardizing-motor-insurance-for-a-digital-future">
                   <Button className="bg-brand-500 hover:bg-brand-600 text-white">
                     Read the full case study

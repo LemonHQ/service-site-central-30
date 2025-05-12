@@ -2,7 +2,23 @@
 import React from 'react';
 import { FlaskConical, Zap, History, Lightbulb } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
-import ServiceCard from '@/components/ui/ServiceCard';
+import { cn } from '@/lib/utils';
+
+// Non-clickable service card component
+const ServiceCard = ({ title, description, icon: Icon }) => {
+  return (
+    <div className={cn(
+      'block bg-ivory-100 p-6 rounded-xl transition-all duration-300 hover:shadow-sm',
+      'border border-beige-300/30'
+    )}>
+      <div className="mb-4">
+        {Icon && <Icon className="w-10 h-10 text-teal-400" />}
+      </div>
+      <h3 className="text-xl font-semibold mb-2 text-brand-400">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+};
 
 const ServicesSection = () => {
   return (
@@ -18,29 +34,25 @@ const ServicesSection = () => {
           <ServiceCard 
             title="Product Lab" 
             description="Structured sessions to uncover insights from end product users and stakeholders." 
-            icon={FlaskConical} 
-            link="/services/design-new-experiences" 
+            icon={FlaskConical}
           />
           
           <ServiceCard 
             title="Rapid Prototyping" 
             description="Transform concepts into functional prototypes within days, not weeks or months." 
-            icon={Zap} 
-            link="/services/digitalize-product-lines" 
+            icon={Zap}
           />
           
           <ServiceCard 
             title="Technology assessments" 
             description="Reimagine customer experiences without legacy systems and technology constraints." 
-            icon={History} 
-            link="/services/modernize-architecture" 
+            icon={History}
           />
           
           <ServiceCard 
             title="Design Studio" 
             description="Visualize your end products and experiences shaped by your brand and design playbooks." 
-            icon={Lightbulb} 
-            link="/services/innovate-with-ai" 
+            icon={Lightbulb}
           />
         </div>
       </div>
