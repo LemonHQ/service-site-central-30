@@ -5,28 +5,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqItems = [
   {
-    question: "How do you balance building core product features versus platform capabilities?",
-    answer: "Our Co-Create process uses a value-driven approach to prioritize both product features and platform capabilities. We identify which core features deliver immediate customer value while designing platform components that enable future ecosystem growth. This balanced approach ensures your product has market fit today while building the foundation for tomorrow's ecosystem opportunities."
+    question: "How do you balance building core product features versus ecosystem integrations?",
+    answer: "Our Co-Create process uses a value-driven approach to prioritize both product features and ecosystem integrations. We identify which core features deliver immediate user value while designing integration points that enable future growth. This balanced approach ensures your product meets immediate market needs while building the foundation for broader ecosystem participation."
   },
   {
-    question: "What technical prerequisites are needed for product-platform integration?",
-    answer: "While technical requirements vary by product, we typically recommend having API capabilities, modular architecture, and identity management solutions. However, our Co-Create process works even if you don't have these prerequisites yet—we'll help you develop an implementation roadmap tailored to your current technical maturity."
+    question: "How do you involve our target users in the product development process?",
+    answer: "We engage target users at multiple points throughout the 4-week process. In Week 1, we conduct user interviews and needs assessments to inform the product vision. During Week 3's prototype development, we incorporate user feedback on early designs. Week 4 is dedicated to structured user testing sessions with your specific user segments to validate and refine the product before launch."
   },
   {
-    question: "How do we balance product innovation with IP protection?",
-    answer: "This is a common concern we address during the Product Architecture & Platform Design phase. We help you design a strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations."
+    question: "What technical prerequisites are needed for product development?",
+    answer: "While technical requirements vary by product, our process is adaptable to your current technical maturity. For early-stage products, we focus on validating the core concept and creating a technical roadmap. For more mature products, we can incorporate existing codebases and APIs. Our Co-Create process works regardless of where you are in your product journey."
   },
   {
-    question: "Who from my organization needs to be involved in the Co-Create process?",
-    answer: "For optimal results, we recommend a core team of 5-7 key stakeholders spanning product management, engineering, business development, and strategy. Additional subject matter experts join for specific sessions as needed. Our collaborative sessions are designed to create alignment across these different perspectives."
+    question: "How do we protect our product's intellectual property while enabling ecosystem connections?",
+    answer: "This is a common concern we address during the Ecosystem Landscape Mapping phase. We help you design a product strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations. We can also assist with drafting appropriate legal frameworks for ecosystem partnerships."
   },
   {
-    question: "How long does it take to see results from the Co-Create process?",
-    answer: "Early benefits like product vision clarity and internal alignment are immediate. Technical prototypes are typically ready within 3-4 weeks. Most organizations achieve initial product-market validation within 3 months, with substantial ecosystem growth in 6-9 months as integrations mature and network effects increase."
+    question: "Who from our organization needs to be involved in the Co-Create process?",
+    answer: "For optimal results, we recommend a core team of 3-5 key stakeholders spanning product management, engineering, and business development. We'll also need access to your target users for research and testing sessions. Our collaborative approach is designed to create alignment across these different perspectives while minimizing the time commitment required from your team."
   },
   {
-    question: "What happens after the Co-Create strategic sessions end?",
-    answer: "After completing the Co-Create process, you'll have a product blueprint, platform architecture, API specifications, and go-to-market strategy. Many clients transition to our implementation services for technical development, while others use our specifications with their internal teams. We also offer ongoing product enhancement and ecosystem development support."
+    question: "What happens after the 4-week Co-Create process ends?",
+    answer: "After completing the Co-Create process, you'll have a validated product prototype, technical implementation roadmap, and go-to-market strategy. Many clients transition to our implementation services for development, while others use our specifications with their internal teams. We also offer ongoing product enhancement support and can assist with executing your ecosystem strategy after launch."
   }
 ];
 
@@ -38,7 +38,7 @@ const FrictionReducerFAQ = () => {
           <div className="text-center mb-10">
             <H2 className="mb-4">FAQs</H2>
             <Paragraph>
-              Common questions about building product-platform ecosystems
+              Common questions about our product Co-Create process
             </Paragraph>
           </div>
           
@@ -66,7 +66,7 @@ const FrictionReducerFAQ = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-medium text-base text-gray-800 mb-2">Have product or ecosystem-specific questions?</h4>
+                <h4 className="font-medium text-base text-gray-800 mb-2">Have specific product development questions?</h4>
                 <Paragraph className="text-sm mb-0">
                   Contact our product strategy team at <a href="mailto:product@elevatedigital.com" className="text-brand-600 hover:underline">product@elevatedigital.com</a> 
                   or book a 15-minute consultation to discuss your specific product challenges.

@@ -6,31 +6,31 @@ import { H2, H4, Paragraph } from '@/components/ui/Typography';
 const processSteps = [
   {
     step: 1,
-    title: "Product Vision & Ecosystem Mapping",
-    description: "We define your product vision and map the digital ecosystem landscape to identify how your product can create maximum value through strategic integrations.",
+    title: "User & Product Stakeholder Alignment",
+    description: "We align product vision with user needs by engaging directly with target users and key product stakeholders to identify core value propositions and product opportunities.",
     duration: "Week 1",
-    deliverables: ["Product vision canvas", "Ecosystem opportunity map", "Integration value framework"]
+    deliverables: ["User needs assessment", "Product vision canvas", "Stakeholder alignment report"]
   },
   {
     step: 2,
-    title: "Product Architecture & Platform Design",
-    description: "We design your core product capabilities alongside the platform components that will enable ecosystem participation and growth.",
+    title: "Ecosystem Landscape Mapping",
+    description: "We map the digital ecosystem landscape to identify strategic integration opportunities and position your product within the broader market context.",
     duration: "Week 2",
-    deliverables: ["Product capability blueprint", "Platform architecture model", "API design patterns"]
+    deliverables: ["Ecosystem opportunity map", "Competitive positioning matrix", "Integration value framework"]
   },
   {
     step: 3,
-    title: "Product Prototyping & Partner Testing",
-    description: "We build working prototypes of your product's core features and test integration scenarios with potential ecosystem partners.",
+    title: "Product Prototype Development",
+    description: "We develop interactive prototypes of your product's core features while designing the foundations for ecosystem connectivity and future scaling.",
     duration: "Week 3",
-    deliverables: ["Product feature prototypes", "API integration demos", "Partner feedback framework"]
+    deliverables: ["Interactive product prototype", "Platform architecture model", "Technical implementation roadmap"]
   },
   {
     step: 4,
-    title: "Go-to-Market & Ecosystem Strategy",
-    description: "We develop your product's go-to-market strategy alongside an ecosystem growth plan to accelerate adoption and network effects.",
+    title: "Target User Validation",
+    description: "We validate the product with target users through structured testing sessions, gathering feedback to refine both the core product experience and ecosystem strategy.",
     duration: "Week 4",
-    deliverables: ["Product launch roadmap", "Ecosystem partner playbook", "Scaling strategy"]
+    deliverables: ["User testing insights", "Product refinement plan", "Go-to-market strategy"]
   }
 ];
 
@@ -49,7 +49,7 @@ const ProcessSection = () => {
           
           <Paragraph className="text-lg">
             Our structured 4-week process transforms your product vision into a market-ready 
-            solution, designed with platform capabilities for ecosystem growth.
+            solution validated by real users and designed for ecosystem integration.
           </Paragraph>
         </div>
         
@@ -155,12 +155,12 @@ const ProcessSection = () => {
                 {step.step === 1 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Package className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">A clear product vision aligned with ecosystem opportunities creates 2x more market impact</p>
+                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products built with direct user input are 3x more likely to meet market needs</p>
                     </div>
                     <div className="flex items-start">
-                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">83% of successful products start with ecosystem mapping to identify integration value</p>
+                      <Package className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Stakeholder alignment reduces product development timeline by 40%</p>
                     </div>
                   </div>
                 )}
@@ -168,12 +168,12 @@ const ProcessSection = () => {
                 {step.step === 2 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products designed with platform capabilities from the start scale 3x faster</p>
+                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products that map ecosystem opportunities see 75% higher integration rates</p>
                     </div>
                     <div className="flex items-start">
-                      <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Well-designed APIs reduce integration costs by 65% and accelerate ecosystem adoption</p>
+                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Understanding market positioning unlocks 2.5x more partnership opportunities</p>
                     </div>
                   </div>
                 )}
@@ -181,12 +181,12 @@ const ProcessSection = () => {
                 {step.step === 3 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Prototype testing with real users reduces product failure risk by 78%</p>
+                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Interactive prototypes reduce development rework by 60%</p>
                     </div>
                     <div className="flex items-start">
-                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Partner validation ensures your product creates mutual value across the ecosystem</p>
+                      <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products designed with ecosystem connectivity grow 3x faster in their first year</p>
                     </div>
                   </div>
                 )}
@@ -194,12 +194,12 @@ const ProcessSection = () => {
                 {step.step === 4 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <ArrowRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products with integrated ecosystem strategies achieve 4x faster market adoption</p>
+                      <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">User-validated products achieve 80% higher adoption rates</p>
                     </div>
                     <div className="flex items-start">
-                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">A clear partner playbook increases ecosystem participation by 120% in the first year</p>
+                      <ArrowRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products with a clear go-to-market strategy reach profitability 2x faster</p>
                     </div>
                   </div>
                 )}
