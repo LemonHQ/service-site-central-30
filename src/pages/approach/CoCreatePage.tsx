@@ -117,8 +117,8 @@ const CoCreatePage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ServiceCard 
-              title="Digital Product Design" 
-              description="Create user-centric digital products through collaborative ideation, prototyping, and testing." 
+              title="Product Lab" 
+              description="Structured sessions to uncover insights from end product users and stakeholders." 
               icon={FlaskConical} 
               link="/services/design-new-experiences" 
             />
@@ -131,15 +131,15 @@ const CoCreatePage = () => {
             />
             
             <ServiceCard 
-              title="Technology Modernization" 
-              description="Reimagine legacy systems with modern architectures and technology stacks." 
+              title="Technology assessments" 
+              description="Reimagine customer experiences without legacy systems and technology constraints." 
               icon={History} 
               link="/services/modernize-architecture" 
             />
             
             <ServiceCard 
-              title="Innovation Workshops" 
-              description="Structured sessions to solve complex challenges and generate breakthrough ideas." 
+              title="Design Studio" 
+              description="Visualize your end products and experiences shaped by your brand and design playbooks." 
               icon={Lightbulb} 
               link="/services/innovate-with-ai" 
             />
