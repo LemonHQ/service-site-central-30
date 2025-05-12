@@ -2,6 +2,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import CtaSection from '../components/ui/CtaSection';
+import QuotePanel from '../components/ui/QuotePanel';
 
 // Import homepage components
 import SpotlightCarousel from '../components/homepage/SpotlightCarousel';
@@ -43,7 +44,15 @@ const Home = () => {
       
       {/* Blog Articles Carousel */}
       <BlogCarousel />
-
+      
+      {/* High Impact Quote Section */}
+      <QuotePanel 
+        quote="Staying relevant requires unlearning what's outdated, co-creating what's next, and scaling what works"
+        author="LemonHQ"
+        authorTitle="Digital Innovation Leaders"
+        className="my-16"
+      />
+      
     </MainLayout>
   );
 };
