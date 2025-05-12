@@ -4,17 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { BarChart, Users, Lightbulb, Clock, ExternalLink } from 'lucide-react';
 import { H2, H3, H4, Paragraph } from '@/components/ui/Typography';
-import BenefitsSection from '@/components/services/landing/BenefitsSection';
-
-const benefits = [
-  'Faster product-market fit with early customer validation',
-  'Stronger differentiation through precise, relevant offerings',
-  'Actionable innovation that uncovers fresh opportunities',
-  'Less risk and better alignment across teams',
-  'Execution-ready frameworks and prototypes',
-  'Customer-centricity that scales across regions',
-  'Measurable outcomes with clear business impact'
-];
+import BenefitsSection from '@/components/approach/co-create/BenefitsSection';
 
 const ProofSection = () => {
   return (
@@ -115,8 +105,8 @@ const ProofSection = () => {
           </div>
         </div>
         
-        {/* Benefits Section - replacing testimonials and industry recognition */}
-        <BenefitsSection benefits={benefits} />
+        {/* Benefits Section - using the original component */}
+        <BenefitsSection />
       </div>
     </section>
   );
