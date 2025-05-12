@@ -4,20 +4,16 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { BarChart, Users, Lightbulb, Clock, ExternalLink } from 'lucide-react';
 import { H2, H3, H4, Paragraph } from '@/components/ui/Typography';
+import BenefitsSection from '@/components/services/landing/BenefitsSection';
 
-const testimonials = [
-  {
-    quote: "The Co-Create workshop helped us identify critical gaps in our customer journey that we'd been overlooking for years. Within 6 weeks, we had a validated solution that's now driving 30% of our new revenue.",
-    author: "Sarah Chen",
-    title: "Chief Digital Officer",
-    company: "Global Insurance Provider"
-  },
-  {
-    quote: "We were skeptical about another 'innovation workshop,' but the results speak for themselves. Our product team is now aligned with our business goals, and we launched in half the time of previous initiatives.",
-    author: "Michael Reeves",
-    title: "VP of Product",
-    company: "Financial Services Enterprise"
-  }
+const benefits = [
+  'Faster product-market fit with early customer validation',
+  'Stronger differentiation through precise, relevant offerings',
+  'Actionable innovation that uncovers fresh opportunities',
+  'Less risk and better alignment across teams',
+  'Execution-ready frameworks and prototypes',
+  'Customer-centricity that scales across regions',
+  'Measurable outcomes with clear business impact'
 ];
 
 const ProofSection = () => {
@@ -119,55 +115,8 @@ const ProofSection = () => {
           </div>
         </div>
         
-        {/* Testimonials */}
-        <div className="mb-12">
-          <div className="text-center mb-10">
-            <H3 className="mb-2">What Clients Say</H3>
-            <div className="h-1 w-20 bg-brand-300 mx-auto"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-50 p-6 rounded-lg relative">
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-brand-500 text-white flex items-center justify-center rounded-full">
-                  "
-                </div>
-                <Paragraph className="italic mb-6">
-                  "{testimonial.quote}"
-                </Paragraph>
-                <div>
-                  <p className="font-bold text-gray-800">{testimonial.author}</p>
-                  <p className="text-sm text-gray-600">{testimonial.title}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Industry validation */}
-        <div className="bg-slate-50 p-6 rounded-lg">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <H4 className="mb-4">Industry Recognition</H4>
-              <Paragraph>
-                Our Co-Create methodology has been featured in leading publications and
-                recognized for its effectiveness in delivering customer-centric products.
-              </Paragraph>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="w-32 h-12 bg-white rounded flex items-center justify-center shadow-sm">
-                <span className="text-gray-400 text-xs">INDUSTRY LOGO</span>
-              </div>
-              <div className="w-32 h-12 bg-white rounded flex items-center justify-center shadow-sm">
-                <span className="text-gray-400 text-xs">INDUSTRY LOGO</span>
-              </div>
-              <div className="w-32 h-12 bg-white rounded flex items-center justify-center shadow-sm">
-                <span className="text-gray-400 text-xs">INDUSTRY LOGO</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Benefits Section - replacing testimonials and industry recognition */}
+        <BenefitsSection benefits={benefits} />
       </div>
     </section>
   );
