@@ -1,4 +1,3 @@
-
 import React, { useMemo, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -20,7 +19,7 @@ import {
   DialogOverlay,
   DialogClose,
 } from '@/components/ui/dialog';
-import RelatedServicesSection from '@/components/services/landing/RelatedServicesSection';
+import RelatedCaseStudiesSection from '@/components/case-studies/RelatedCaseStudiesSection';
 
 const CaseStudyDetail: React.FC = () => {
   const { caseStudyId } = useParams<{ caseStudyId: string }>();
@@ -47,12 +46,7 @@ const CaseStudyDetail: React.FC = () => {
   // Find related case studies with the same industry
   const relatedCaseStudies = caseStudies
     .filter(cs => cs.industry === caseStudy.industry && cs.id !== caseStudyId)
-    .slice(0, 3)
-    .map(cs => ({
-      title: cs.title,
-      description: cs.summary,
-      link: `/case-studies/${cs.id}`
-    }));
+    .slice(0, 3);
 
   // Open lightbox with specific image
   const openLightbox = (index: number) => {
@@ -274,8 +268,8 @@ const CaseStudyDetail: React.FC = () => {
         
         {/* Related Case Studies */}
         {relatedCaseStudies.length > 0 && (
-          <RelatedServicesSection 
-            relatedServices={relatedCaseStudies}
+          <RelatedCaseStudiesSection 
+            relatedCaseStudies={relatedCaseStudies}
           />
         )}
       </div>
