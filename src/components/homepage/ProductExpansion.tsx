@@ -99,7 +99,7 @@ const ProductExpansion: React.FC = () => {
             />
           ))}
         </div>
-        
+        {/** 
         <div className="text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Ready to operationalize your digital strategy? Our strategic approach enables you to navigate every stage of your digital maturity journey with confidence and assurance.
@@ -110,6 +110,7 @@ const ProductExpansion: React.FC = () => {
             </Button>
           </Link>
         </div>
+      */}
       </div>
     </section>
   );
