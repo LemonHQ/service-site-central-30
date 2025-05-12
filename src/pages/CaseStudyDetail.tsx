@@ -20,6 +20,7 @@ import {
   DialogOverlay,
   DialogClose,
 } from '@/components/ui/dialog';
+import RelatedServicesSection from '@/components/services/landing/RelatedServicesSection';
 
 const CaseStudyDetail: React.FC = () => {
   const { caseStudyId } = useParams<{ caseStudyId: string }>();
@@ -42,6 +43,16 @@ const CaseStudyDetail: React.FC = () => {
     day: 'numeric',
     year: 'numeric'
   });
+
+  // Find related case studies with the same industry
+  const relatedCaseStudies = caseStudies
+    .filter(cs => cs.industry === caseStudy.industry && cs.id !== caseStudyId)
+    .slice(0, 3)
+    .map(cs => ({
+      title: cs.title,
+      description: cs.summary,
+      link: `/case-studies/${cs.id}`
+    }));
 
   // Open lightbox with specific image
   const openLightbox = (index: number) => {
@@ -148,31 +159,33 @@ const CaseStudyDetail: React.FC = () => {
           </div>
         </div>
         
-        {/* Project Gallery - Carousel */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
-          <Carousel className="w-full">
-            <CarouselContent>
-              {caseStudy.images.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-1">
-                  <div 
-                    className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
-                    onClick={() => openLightbox(index)}
-                  >
-                    <img 
-                      src={image} 
-                      alt={`${caseStudy.title} - Image ${index+1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center gap-4 mt-4">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </Carousel>
+        {/* Project Gallery - Carousel with contrasting background */}
+        <div className="py-16 bg-brand-100 rounded-lg mb-16">
+          <div className="container mx-auto px-4">
+            <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
+            <Carousel className="w-full">
+              <CarouselContent>
+                {caseStudy.images.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-1">
+                    <div 
+                      className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
+                      onClick={() => openLightbox(index)}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`${caseStudy.title} - Image ${index+1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-4 mt-4">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            </Carousel>
+          </div>
         </div>
         
         {/* Lightbox for fullscreen image view */}
@@ -245,9 +258,10 @@ const CaseStudyDetail: React.FC = () => {
             </div>
           </div>
         )}
+
         {/* CTA Section */}
-        <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4"> Ready to explore?</h3>
+        <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12 mb-16">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to explore?</h3>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             Assess your readiness for a co-creation journey today,
           </p>
@@ -257,6 +271,13 @@ const CaseStudyDetail: React.FC = () => {
             </Button>
           </Link>
         </div>
+        
+        {/* Related Case Studies */}
+        {relatedCaseStudies.length > 0 && (
+          <RelatedServicesSection 
+            relatedServices={relatedCaseStudies}
+          />
+        )}
       </div>
     </MainLayout>
   );
