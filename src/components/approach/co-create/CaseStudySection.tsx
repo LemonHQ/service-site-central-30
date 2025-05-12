@@ -59,7 +59,7 @@ const CaseStudySection = () => {
               </div>
 
               <div className="mt-8">
-                <Link to="/case-studies/motor-insurance-digital-future">
+                <Link to="/case-studies/expanding-and-standardizing-motor-insurance-for-a-digital-future">
                   <Button className="bg-brand-500 hover:bg-brand-600 text-white">
                     Read the full case study
                   </Button>
