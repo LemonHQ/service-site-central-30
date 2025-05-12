@@ -7,9 +7,9 @@ import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 const InsurancePage = () => {
   return (
     <ServiceLandingTemplate
-      title="Insurance Industry Solutions"
-      subtitle="Digital transformation solutions for insurance carriers and brokers"
-      description="We help insurance companies modernize their digital customer experiences and streamline operations through strategic technology solutions. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
+      title="Insurance"
+      subtitle="Digital modernization for multi-line carriers"
+      description="We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
       ctaText="Transform Your Insurance Business"
       ctaLink="/lead-qualification"
       secondaryCtaText="View Case Studies"
@@ -17,12 +17,12 @@ const InsurancePage = () => {
       heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
       quotePanel={{
-        quote: "Insurance companies that implement digital-first customer experiences reduce policy acquisition costs by 43% and increase retention rates by 29% compared to industry averages.",
-        author: "Accenture Insurance",
-        authorTitle: "Financial Services Technology Research",
+        quote: "Personalization can reduce acquisition costs by as much as 50%, lift revenues by 5-15%, and increase the efficiency of marketing spend by 10-30%.",
+        author: "Mckinsey",
+        authorTitle: "Growth, Marketing & Sales",
         imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "The Future of Insurance: Personalized, Digital, and Connected",
-        sourceUrl: "https://www.accenture.com/us-en/industries/insurance-index"
+        sourceText: "The future of personalization—and how to get ready for it",
+        sourceUrl: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-future-of-personalization-and-how-to-get-ready-for-it"
       }}
       features={[
         {
@@ -54,12 +54,12 @@ const InsurancePage = () => {
       featuresTitle="Use cases we solve for"
       featuresSubtitle="Solutions tailored for modern insurance companies and their unique challenges"
       benefits={[
-        "Reduced operational costs through automation",
-        "Improved customer acquisition and retention",
+        "Reduced operational costs through digitalization",
+        "Improve customer acquisition and retention",
         "Accelerated claims processing and settlement",
         "Enhanced fraud detection and prevention",
         "Seamless compliance with insurance regulations",
-        "Increased agent productivity and satisfaction",
+        "Increased direct sales productivity ",
         "Better data-driven underwriting decisions"
       ]}
       relatedServices={[
