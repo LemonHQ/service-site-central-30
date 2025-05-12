@@ -10,7 +10,7 @@ const InsurancePage = () => {
       title="Insurance"
       subtitle="Digital modernization for multi-line carriers"
       description="We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
-      ctaText=""
+      ctaText="hello"
       ctaLink=""
       secondaryCtaText="hello"
       secondaryCtaLink=""
