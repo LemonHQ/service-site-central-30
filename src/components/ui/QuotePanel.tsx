@@ -55,9 +55,9 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
               {/* Subtle spotlight highlight behind the text */}
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-accent-300/30 to-transparent rounded-full blur-md"></div>
               
-              <H2 className="text-white font-light italic relative z-10">
+              <H3 className="text-white font-light italic relative z-10">
                 {quote}
-              </H2>
+              </H3>
             </blockquote>
             {(author || authorTitle) && (
               <div className="mt-6 text-right">
