@@ -33,27 +33,27 @@ const SolutionCard = ({ title, problem, solution, icon: Icon }) => {
 const SolutionSection = () => {
   const solutions = [
     {
-      title: "Platform Strategy Lab",
+      title: "Product roadmap",
       problem: "Siloed products that can't connect to wider ecosystems, limiting growth and market reach",
-      solution: "Strategic sessions to map ecosystem opportunities and design platform capabilities that enable multi-market participation",
+      solution: "Strategic sessions to map product roadmap and design platform capabilities that enable multi-market participation",
       icon: Network
     },
     {
-      title: "Ecosystem Prototyping",
-      problem: "Inability to test ecosystem integration before costly development of connection points",
-      solution: "Rapidly develop and test API prototypes, partnership models, and digital touchpoints across ecosystem partners",
+      title: "Prototyping",
+      problem: "Inability to validate product capabilities and integration before costly development of connection points",
+      solution: "Rapidly develop and test user ready prototypes, models, and digital touchpoints",
       icon: Layers
     },
     {
       title: "Integration Architecture",
-      problem: "Legacy systems and technical debt that prevent seamless ecosystem participation",
-      solution: "Design scalable integration patterns that enable your products to connect to multiple ecosystem players while maintaining control",
+      problem: "Legacy systems and technical debt that prevent seamless platform participation",
+      solution: "Design scalable integration patterns that enable your products to connect to multiple backend systems while maintaining control",
       icon: Link2
     },
     {
-      title: "Ecosystem Design Studio",
-      problem: "Disjointed user experiences when customers move between your products and ecosystem partners",
-      solution: "Create coherent cross-ecosystem journeys that maintain your brand identity while enabling frictionless partner integration",
+      title: "Design Studio",
+      problem: "Disjointed user experiences when customers move between your products and touchpoints",
+      solution: "Create coherent cross-ecosystem journeys that maintain your brand identity while enabling frictionless backend integration",
       icon: Globe
     }
   ];
@@ -66,12 +66,10 @@ const SolutionSection = () => {
             <span className="text-sm font-medium">The Ecosystem Solution</span>
           </div>
           
-          <H2 className="mb-6">Create Connected Digital Ecosystems</H2>
+          <H2 className="mb-6">Create multi-product ecosystems</H2>
           
           <Paragraph className="text-lg">
-            Stop developing isolated products and start building interconnected digital ecosystems. 
-            Our Co-Create framework helps your organization design platforms that enable partnerships, 
-            integrate with complementary services, and create exponential value across markets.
+            Our Co-Create framework enables your organization to design create extensible multi-product platforms that integrate with complementary services, and create exponential value across markets.
           </Paragraph>
         </div>
         
