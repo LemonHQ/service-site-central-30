@@ -69,7 +69,7 @@ const ProblemSection = () => {
           </div>
           <Paragraph className="mt-4 text-red-800">
            CG's research indicates that over $50 billion of capital is lost annually due to failed ecosystem investments, highlighting the substantial financial risks associated with mismanaging or not participating in digital ecosystems.
-           (<a href="https://web-assets.bcg.com/img-src/BCG-Why-Do-Most-Business-Ecosystems-Fail-Jun-2020_tcm9-252663.pdf?utm_source=chatgpt.com">BCG, 2020</a>)
+           (<a href="https://web-assets.bcg.com/img-src/BCG-Why-Do-Most-Business-Ecosystems-Fail-Jun-2020_tcm9-252663.pdf?utm_source=chatgpt.com" target="_blank">BCG, 2020</a>)
           </Paragraph>
         </div>
       </div>
