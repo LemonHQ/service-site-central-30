@@ -13,17 +13,17 @@ const problemCards = [
   {
     icon: <Ban className="h-8 w-8 text-red-500" />,
     title: "Integration Inefficiencies",
-    description: "Organizations waste millions developing proprietary solutions instead of leveraging ecosystem partners for faster market reach."
+    description: "Organizations waste millions developing proprietary solutions instead of leveraging platform approach for faster time to market."
   },
   {
     icon: <Network className="h-8 w-8 text-red-500" />,
-    title: "Platform Inconsistency",
-    description: "Without a cohesive ecosystem strategy, products use different technologies and standards, making integration costly and complex."
+    title: "Product Inconsistencies",
+    description: "Without a cohesive plarform strategy, products use different technologies, stacks and standards, making expansion costly and complex ."
   },
   {
     icon: <Globe className="h-8 w-8 text-red-500" />,
-    title: "Limited Ecosystem Participation",
-    description: "Single-purpose products cannot easily integrate with emerging ecosystem opportunities, leading to market isolation."
+    title: "Limited Extensibility",
+    description: "Single-purpose products cannot easily extend to multiple markets and other product lines."
   }
 ];
 
