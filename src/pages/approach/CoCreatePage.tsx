@@ -147,8 +147,8 @@ const CoCreatePage = () => {
         </div>
       </section>
 
-      {/* Case Study Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Case Study Section - UPDATED BACKGROUND COLOR AND CONTENT */}
+      <section className="py-16 bg-brand-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
@@ -164,7 +164,7 @@ const CoCreatePage = () => {
               
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center">
                     <BarChart className="h-5 w-5 text-brand-600" />
                   </div>
                   <div>
@@ -173,12 +173,38 @@ const CoCreatePage = () => {
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center">
                     <BarChart className="h-5 w-5 text-brand-600" />
                   </div>
                   <div>
                     <span className="text-lg font-medium">62% increase in customer satisfaction scores</span>
                   </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-brand-600" />
+                  </div>
+                  <div>
+                    <span className="text-lg font-medium">85% of customers reported easier claims navigation</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center">
+                    <Lightbulb className="h-5 w-5 text-brand-600" />
+                  </div>
+                  <div>
+                    <span className="text-lg font-medium">28% reduction in customer support calls</span>
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <Link to="/case-studies/motor-insurance-digital-future">
+                    <Button className="bg-brand-500 hover:bg-brand-600 text-white">
+                      Read the full case study
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -193,7 +219,7 @@ const CoCreatePage = () => {
       {/* Insights Carousel Section - Before FAQ */}
       <InsightsCarousel limit={3} />
 
-    {/* FAQ Section */}
+      {/* FAQ Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-2xl">
           <H3 className="text-center mb-6">Frequently Asked Questions</H3>
