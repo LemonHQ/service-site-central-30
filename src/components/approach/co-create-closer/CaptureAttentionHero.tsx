@@ -10,7 +10,7 @@ const CountdownTimer = () => {
   return (
     <div className="flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-lg w-fit">
       <Clock className="h-4 w-4" />
-      <span className="text-sm font-medium">Limited availability for Q3 Co-Create workshops</span>
+      <span className="text-sm font-medium">Limited availability for Q3 digital ecosystem strategy sessions</span>
     </div>
   );
 };
@@ -23,27 +23,27 @@ const CaptureAttentionHero = () => {
           <div className="space-y-6">
             <CountdownTimer />
             
-            <H1>Stop launching <span className="text-red-500 line-through decoration-2">failed</span> products</H1>
+            <H1>Build thriving <span className="text-brand-500">digital ecosystems</span></H1>
             
             <div className="flex items-center gap-3 bg-brand-50 p-3 rounded-md border border-brand-100">
-              <span className="text-3xl font-bold text-brand-600">76%</span>
-              <Paragraph className="text-brand-600">of enterprises waste resources on products that don't meet market needs</Paragraph>
+              <span className="text-3xl font-bold text-brand-600">82%</span>
+              <Paragraph className="text-brand-600">of high-growth companies attribute success to digital ecosystem participation</Paragraph>
             </div>
             
             <Lead className="text-brand-700 font-semibold">
-              Co-Create: The framework that eliminates guesswork from product development
+              Co-Create: The framework that transforms siloed products into connected ecosystem platforms
             </Lead>
             
             <Paragraph className="mb-8">
-              In today's hyper-competitive markets, generic products fail. Our Co-Create framework 
-              brings your team and our experts together to build targeted solutions that customers 
-              actually want—before you invest millions in development.
+              In today's interconnected markets, standalone products fail. Our Co-Create framework 
+              helps you design platforms that connect to broader digital ecosystems—enabling partnerships, 
+              extending your market reach, and creating value that isolated products simply cannot match.
             </Paragraph>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/approach/co-create-assessment">
                 <Button size="lg" className="bg-brand-600 hover:bg-brand-700 w-full sm:w-auto">
-                  Assess Your Readiness <ArrowRight className="ml-2 h-4 w-4" />
+                  Assess Your Ecosystem Readiness <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link to="/lead-qualification">
@@ -56,20 +56,20 @@ const CaptureAttentionHero = () => {
           
           <div className="relative">
             <div className="absolute -top-6 -left-6 bg-white p-3 rounded-lg shadow-lg z-10 max-w-[180px]">
-              <p className="text-xs font-medium text-red-500">Traditional Approach</p>
-              <p className="text-sm">12-18 months to market</p>
-              <p className="text-sm">60%+ budget overruns</p>
+              <p className="text-xs font-medium text-red-500">Siloed Approach</p>
+              <p className="text-sm">Isolated products</p>
+              <p className="text-sm">Limited market reach</p>
             </div>
             
             <div className="absolute -bottom-6 -right-6 bg-brand-500 p-3 rounded-lg shadow-lg z-10 max-w-[180px]">
-              <p className="text-xs font-medium text-white">Co-Create Approach</p>
-              <p className="text-sm text-white">4-6 weeks to validation</p>
-              <p className="text-sm text-white">85% success rate</p>
+              <p className="text-xs font-medium text-white">Ecosystem Approach</p>
+              <p className="text-sm text-white">Connected platforms</p>
+              <p className="text-sm text-white">Multi-market integration</p>
             </div>
             
             <img 
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-              alt="Co-Create Workshop" 
+              alt="Digital Ecosystem Collaboration" 
               className={cn(
                 "rounded-xl shadow-lg w-full h-[400px] object-cover object-center",
                 "border-4 border-white"

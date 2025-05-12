@@ -5,28 +5,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqItems = [
   {
-    question: "How long does a typical Co-Create engagement last?",
-    answer: "Our standard Co-Create framework is a 4-week process, though we can accelerate to as little as 3 weeks for urgent needs. For more complex products or organizations with multiple stakeholders, we may extend to 7-8 weeks to ensure proper validation and alignment."
+    question: "How do I identify the right ecosystem opportunities for my products?",
+    answer: "Our Co-Create process begins with ecosystem mapping to identify partnership opportunities. We analyze your existing capabilities, market trends, customer journey touchpoints, and potential ecosystem partners to determine where you can create maximum value through integration."
   },
   {
-    question: "Who from my organization needs to be involved?",
-    answer: "For optimal results, we recommend a core team of 3-5 key stakeholders (typically from product, marketing, technology, and customer experience) who participate throughout the engagement. Additional subject matter experts join for specific sessions or review sessions as needed. We work with your schedule constraints to maximize participation while minimizing disruption."
+    question: "What technical prerequisites are needed for ecosystem participation?",
+    answer: "While technical requirements vary by ecosystem, we typically recommend having API capabilities, scalable infrastructure, and identity management solutions. However, our Co-Create process works even if you don't have these prerequisites yet—we'll help you develop an implementation roadmap tailored to your current technical maturity."
   },
   {
-    question: "What if we already have a product idea—do we still need Co-Create?",
-    answer: "Absolutely. In fact, having existing product concepts makes the Co-Create process even more valuable. We can help validate assumptions, identify potential user experience issues before development, and strengthen your product-market fit. Many clients find that Co-Create helps them prioritize the most valuable features and avoid costly detours."
+    question: "How do we balance ecosystem openness with IP protection?",
+    answer: "This is a common concern we address during the Platform Co-Creation phase. We help you design an ecosystem strategy with tiered API access, well-defined partnership agreements, and strategic capabilities that maintain your competitive advantage while enabling beneficial integrations."
   },
   {
-    question: "Can Co-Create be conducted remotely or does it require in-person sessions?",
-    answer: "We've developed highly effective virtual Co-Create experiences using digital collaboration tools that deliver comparable outcomes to in-person sessions. That said, for teams that can meet in person, we recommend at least the initial kickoff and final readout be conducted face-to-face for maximum engagement. We offer flexible hybrid approaches based on your team's location and preferences."
+    question: "Who from my organization needs to be involved in ecosystem planning?",
+    answer: "For optimal results, we recommend a core team of 5-7 key stakeholders spanning product, technology, business development, and strategy. Additional subject matter experts join for specific sessions as needed. Our ecosystem mapping sessions are designed to create alignment across these different perspectives."
   },
   {
-    question: "What happens after the Co-Create engagement ends?",
-    answer: "By the end of Co-Create, you'll have validated prototypes, detailed implementation plans, and technical requirements. Many clients transition into our full development services to bring the solution to market, while others implement with their internal teams using our specifications. Either way, we provide a complete handoff package and offer optional ongoing support to ensure successful execution."
+    question: "How long does it take to see results from ecosystem participation?",
+    answer: "Early benefits like strategic clarity and internal alignment are immediate. Technical integration prototypes are typically ready within 3-4 weeks. Most organizations see initial ecosystem partnership deals within 3-6 months, with substantial market impact in 9-12 months as integrations mature and network effects increase."
   },
   {
-    question: "How is Co-Create different from other design thinking or collaborative approaches?",
-    answer: "Unlike generic design thinking sessions that often yield theoretical concepts, Co-Create is intensely practical and results-driven. We focus on rapidly creating testable prototypes and validating them with real users from your target segments. Our framework is specifically tailored for enterprise products and incorporates both business viability and technical feasibility alongside user desirability."
+    question: "What happens after the Co-Create strategic sessions end?",
+    answer: "After completing the Co-Create process, you'll have an ecosystem strategy, platform architecture blueprint, API specifications, and partnership models. Many clients transition to our implementation services for technical development, while others use our specifications with their internal teams. We also offer ongoing ecosystem development support to help you grow your partner network."
   }
 ];
 
@@ -36,9 +36,9 @@ const FrictionReducerFAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <H2 className="mb-4">Common Questions</H2>
+            <H2 className="mb-4">Ecosystem Strategy FAQs</H2>
             <Paragraph>
-              Everything you need to know about our Co-Create approach
+              Common questions about building digital ecosystem platforms
             </Paragraph>
           </div>
           
@@ -66,10 +66,10 @@ const FrictionReducerFAQ = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-medium text-base text-gray-800 mb-2">Still have questions?</h4>
+                <h4 className="font-medium text-base text-gray-800 mb-2">Have ecosystem-specific questions?</h4>
                 <Paragraph className="text-sm mb-0">
-                  Contact our team directly at <a href="mailto:co-create@elevatedigital.com" className="text-brand-600 hover:underline">co-create@elevatedigital.com</a> 
-                  or book a 15-minute consultation to discuss your specific needs.
+                  Contact our ecosystem strategy team at <a href="mailto:ecosystems@elevatedigital.com" className="text-brand-600 hover:underline">ecosystems@elevatedigital.com</a> 
+                  or book a 15-minute consultation to discuss your specific ecosystem challenges.
                 </Paragraph>
               </div>
             </div>

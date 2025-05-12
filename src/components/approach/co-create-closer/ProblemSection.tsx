@@ -1,29 +1,29 @@
 
 import React from 'react';
-import { AlertTriangle, TrendingDown, Ban, ArrowDownRight } from 'lucide-react';
+import { Share2, Network, Ban, Globe } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 import { Card, CardContent } from '@/components/ui/card';
 
 const problemCards = [
   {
-    icon: <TrendingDown className="h-8 w-8 text-red-500" />,
-    title: "Shrinking Market Share",
-    description: "Generic, one-size-fits-all products are losing market share to targeted solutions that address specific customer pain points."
+    icon: <Share2 className="h-8 w-8 text-red-500" />,
+    title: "Ecosystem Fragmentation",
+    description: "Companies with isolated products are being outperformed by those who build connected platforms that participate in multiple ecosystems."
   },
   {
     icon: <Ban className="h-8 w-8 text-red-500" />,
-    title: "Wasted Development",
-    description: "Enterprises spend millions developing features customers don't want while missing the ones they actually need."
+    title: "Integration Inefficiencies",
+    description: "Organizations waste millions developing proprietary solutions instead of leveraging ecosystem partners for faster market reach."
   },
   {
-    icon: <AlertTriangle className="h-8 w-8 text-red-500" />,
-    title: "Internal Misalignment",
-    description: "Without a shared vision, product, marketing, and sales teams work at cross-purposes, delaying launches and confusing customers."
+    icon: <Network className="h-8 w-8 text-red-500" />,
+    title: "Platform Inconsistency",
+    description: "Without a cohesive ecosystem strategy, products use different technologies and standards, making integration costly and complex."
   },
   {
-    icon: <ArrowDownRight className="h-8 w-8 text-red-500" />,
-    title: "Declining Customer Loyalty",
-    description: "Today's customers expect personalization. Generic offerings lead to higher churn and reduced lifetime value."
+    icon: <Globe className="h-8 w-8 text-red-500" />,
+    title: "Limited Ecosystem Participation",
+    description: "Single-purpose products cannot easily integrate with emerging ecosystem opportunities, leading to market isolation."
   }
 ];
 
@@ -32,16 +32,16 @@ const ProblemSection = () => {
     <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <H2 className="mb-6">Why Traditional Product Development Is Failing Enterprise Brands</H2>
+          <H2 className="mb-6">Why Siloed Products Limit Your Digital Ecosystem Potential</H2>
           
           <div className="flex justify-center mb-8">
             <div className="h-1 w-20 bg-red-500"></div>
           </div>
           
           <Paragraph className="text-lg">
-            The days of building one product for all customers are over. 
-            In an age of hyper-personalization, enterprises that fail to segment and target 
-            their offerings are facing existential threats from more agile competitors.
+            The era of standalone products is ending. Today's most successful enterprises 
+            build platforms that connect to broader digital ecosystems, enabling partnerships 
+            and creating value networks that isolated products simply cannot match.
           </Paragraph>
         </div>
         
@@ -63,13 +63,13 @@ const ProblemSection = () => {
         
         <div className="mt-12 p-6 bg-red-50 rounded-lg border border-red-100">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="text-3xl font-bold text-red-600 whitespace-nowrap">The Cost of Inaction</div>
+            <div className="text-3xl font-bold text-red-600 whitespace-nowrap">The Cost of Isolation</div>
             <div className="w-full h-0.5 bg-red-200"></div>
-            <div className="text-xl font-semibold text-red-600">$4.12M</div>
+            <div className="text-xl font-semibold text-red-600">$8.2M</div>
           </div>
           <Paragraph className="mt-4 text-red-800">
-            Average cost of a failed enterprise product launch, including development costs, 
-            opportunity costs, and market share loss (McKinsey, 2023)
+            Average annual opportunity cost for enterprises that fail to participate in digital ecosystems, 
+            including missed partnership revenue, limited market access, and competitive disadvantage (McKinsey Digital, 2023)
           </Paragraph>
         </div>
       </div>

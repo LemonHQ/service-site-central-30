@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { FlaskConical, Zap, Scale, Palette, CheckCircle, ArrowRight } from 'lucide-react';
+import { Network, Layers, Link2, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 import { cn } from '@/lib/utils';
 
@@ -33,28 +33,28 @@ const SolutionCard = ({ title, problem, solution, icon: Icon }) => {
 const SolutionSection = () => {
   const solutions = [
     {
-      title: "Product Lab",
-      problem: "Products built without real user insights fail to address actual customer needs",
-      solution: "Structured sessions with end users and stakeholders to uncover actionable insights and pain points",
-      icon: FlaskConical
+      title: "Platform Strategy Lab",
+      problem: "Siloed products that can't connect to wider ecosystems, limiting growth and market reach",
+      solution: "Strategic sessions to map ecosystem opportunities and design platform capabilities that enable multi-market participation",
+      icon: Network
     },
     {
-      title: "Rapid Prototyping",
-      problem: "Months spent developing features customers don't actually want",
-      solution: "Transform concepts into functional prototypes within days, allowing immediate user testing and validation",
-      icon: Zap
+      title: "Ecosystem Prototyping",
+      problem: "Inability to test ecosystem integration before costly development of connection points",
+      solution: "Rapidly develop and test API prototypes, partnership models, and digital touchpoints across ecosystem partners",
+      icon: Layers
     },
     {
-      title: "Technology Assessments",
-      problem: "Legacy systems constrain innovation and limit customer experience",
-      solution: "Reimagine experiences without technical constraints, then build practical implementation paths",
-      icon: Scale
+      title: "Integration Architecture",
+      problem: "Legacy systems and technical debt that prevent seamless ecosystem participation",
+      solution: "Design scalable integration patterns that enable your products to connect to multiple ecosystem players while maintaining control",
+      icon: Link2
     },
     {
-      title: "Design Studio",
-      problem: "Disjointed products that don't align with brand standards or user expectations",
-      solution: "Visualize cohesive products and experiences shaped by your brand guidelines and design system",
-      icon: Palette
+      title: "Ecosystem Design Studio",
+      problem: "Disjointed user experiences when customers move between your products and ecosystem partners",
+      solution: "Create coherent cross-ecosystem journeys that maintain your brand identity while enabling frictionless partner integration",
+      icon: Globe
     }
   ];
 
@@ -63,15 +63,15 @@ const SolutionSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-block bg-brand-100 text-brand-700 px-4 py-1 rounded-full mb-4">
-            <span className="text-sm font-medium">The Co-Create Solution</span>
+            <span className="text-sm font-medium">The Ecosystem Solution</span>
           </div>
           
-          <H2 className="mb-6">Stop Guessing What Your Customers Want</H2>
+          <H2 className="mb-6">Create Connected Digital Ecosystems</H2>
           
           <Paragraph className="text-lg">
-            Our Co-Create framework brings your team and our experts together in collaborative 
-            environments designed to validate hypotheses, build alignment, and deliver impactful 
-            products that resonate with your exact target segments.
+            Stop developing isolated products and start building interconnected digital ecosystems. 
+            Our Co-Create framework helps your organization design platforms that enable partnerships, 
+            integrate with complementary services, and create exponential value across markets.
           </Paragraph>
         </div>
         
@@ -91,11 +91,11 @@ const SolutionSection = () => {
           <div className="flex items-start gap-4">
             <CheckCircle className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />
             <div>
-              <H4 className="text-brand-700 mb-2">Not just another methodology</H4>
+              <H4 className="text-brand-700 mb-2">Beyond isolated products</H4>
               <Paragraph>
-                Co-Create isn't a theoretical exercise. It's a proven, repeatable framework that 
-                delivers tangible artifacts: validated prototypes, user journey maps, technical 
-                requirements, and execution roadmaps.
+                Co-Create isn't just another product development methodology. It's a strategic framework for 
+                designing digital offerings that thrive in connected ecosystems, creating value beyond 
+                what any single product could deliver in isolation.
               </Paragraph>
             </div>
           </div>

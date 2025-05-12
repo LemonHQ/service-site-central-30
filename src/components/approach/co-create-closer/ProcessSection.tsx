@@ -1,35 +1,36 @@
+
 import React, { useState } from 'react';
-import { CheckCircle, Users, Lightbulb, Gauge, Rocket, ChevronRight } from 'lucide-react';
+import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 
 const processSteps = [
   {
     step: 1,
-    title: "Differentiation & Alignment",
-    description: "We identify your target segments, map existing pain points, and align stakeholders on business objectives.",
+    title: "Ecosystem Positioning",
+    description: "We map the digital ecosystem landscape, identify partnership opportunities, and align stakeholders on platform strategy.",
     duration: "Week 1",
-    deliverables: ["Target segment profiles", "Pain point analysis", "Success metrics definition"]
+    deliverables: ["Ecosystem opportunity map", "Partnership model canvas", "Platform capability assessment"]
   },
   {
     step: 2,
-    title: "Co-Creation Session",
-    description: "Cross-functional teams collaborate to generate and prioritize solution concepts based on user needs.",
+    title: "Platform Co-Creation",
+    description: "Cross-functional teams collaborate to define platform architecture, APIs, and integration patterns that enable ecosystem participation.",
     duration: "Week 2",
-    deliverables: ["Solution concepts", "Prioritization matrix", "Initial wireframes"]
+    deliverables: ["Platform architecture blueprint", "API design patterns", "Integration roadmap"]
   },
   {
     step: 3,
-    title: "Rapid Prototyping",
-    description: "We transform the leading concepts into interactive prototypes for immediate testing and feedback.",
+    title: "Ecosystem Prototyping",
+    description: "We develop working prototypes of core platform capabilities and test integration scenarios with potential ecosystem partners.",
     duration: "Week 3",
-    deliverables: ["Interactive prototypes", "Technical feasibility assessment", "Development roadmap"]
+    deliverables: ["API prototypes", "Integration demos", "Partner onboarding flows"]
   },
   {
     step: 4,
-    title: "Validation & Refinement",
-    description: "Prototypes undergo rigorous testing with actual users from your target segments to validate assumptions.",
+    title: "Ecosystem Validation",
+    description: "Prototype testing with actual ecosystem partners validates the platform strategy and refines technical requirements.",
     duration: "Week 4",
-    deliverables: ["User testing results", "Refined prototype", "Feature prioritization"]
+    deliverables: ["Partner feedback analysis", "Technical requirement specs", "Ecosystem scaling plan"]
   }
 ];
 
@@ -44,11 +45,11 @@ const ProcessSection = () => {
             <span className="text-sm font-medium">How It Works</span>
           </div>
           
-          <H2 className="mb-6">The Co-Create Process</H2>
+          <H2 className="mb-6">The Ecosystem Co-Create Process</H2>
           
           <Paragraph className="text-lg">
-            Our structured 4-week process takes you from problem definition to validated solution, 
-            with clear deliverables and milestones at each step.
+            Our structured 4-week process transforms your product vision into a scalable 
+            platform strategy, designed to thrive in connected digital ecosystems.
           </Paragraph>
         </div>
         
@@ -113,7 +114,7 @@ const ProcessSection = () => {
                 </Paragraph>
                 
                 <div className="flex items-center text-brand-700 mb-4">
-                  <Gauge className="w-5 h-5 mr-2" />
+                  <Clock className="w-5 h-5 mr-2" />
                   <span className="font-medium">{step.duration}</span>
                 </div>
                 
@@ -154,12 +155,12 @@ const ProcessSection = () => {
                 {step.step === 1 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Alignment at this stage prevents costly pivots later in the process</p>
+                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Identifying the right ecosystem position determines your platform's market potential</p>
                     </div>
                     <div className="flex items-start">
-                      <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">76% of project failures stem from misaligned objectives at the outset</p>
+                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">74% of successful platforms started with clear ecosystem mapping</p>
                     </div>
                   </div>
                 )}
@@ -168,11 +169,11 @@ const ProcessSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Cross-functional collaboration breaks down silos and surfaces insights no single team would find</p>
+                      <p className="text-sm">Cross-functional collaboration ensures your platform meets both technical and business ecosystem needs</p>
                     </div>
                     <div className="flex items-start">
-                      <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Diverse perspectives increase innovation potential by 35%</p>
+                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Platforms with well-designed architecture attract 3x more ecosystem partners</p>
                     </div>
                   </div>
                 )}
@@ -180,12 +181,12 @@ const ProcessSection = () => {
                 {step.step === 3 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Rocket className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Rapid prototyping lets you test ideas before investing in full development</p>
+                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Ecosystem prototyping reduces integration friction with potential partners</p>
                     </div>
                     <div className="flex items-start">
-                      <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Prototyping reduces development costs by up to 60%</p>
+                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">API prototyping reduces ecosystem integration costs by up to 65%</p>
                     </div>
                   </div>
                 )}
@@ -194,11 +195,11 @@ const ProcessSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <Users className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">User validation eliminates assumptions and confirms product-market fit</p>
+                      <p className="text-sm">Partner validation ensures your platform creates mutual value across the ecosystem</p>
                     </div>
                     <div className="flex items-start">
-                      <Lightbulb className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products validated at this stage are 3x more likely to succeed in market</p>
+                      <Network className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Ecosystem-validated platforms achieve market growth 4x faster than non-validated solutions</p>
                     </div>
                   </div>
                 )}
