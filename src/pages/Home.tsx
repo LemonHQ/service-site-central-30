@@ -44,15 +44,6 @@ const Home = () => {
       {/* Blog Articles Carousel */}
       <BlogCarousel />
 
-      {/* CTA Section */}
-      <CtaSection 
-        title="Ready to Transform Your Product Strategy?"
-        subtitle="Schedule a consultation with our product experts to discuss your challenges and opportunities."
-        buttonText="Request Consultation"
-        buttonLink="/contact"
-        secondaryButtonText="Learn More"
-        secondaryButtonLink="/services"
-      />
     </MainLayout>
   );
 };
