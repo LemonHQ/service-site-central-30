@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -13,6 +14,7 @@ import { Upload, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Checkbox } from '../components/ui/checkbox';
 import { supabase } from '../integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Define form schema with validation
 const formSchema = z.object({
@@ -296,7 +298,7 @@ const CvSubmission = () => {
                       htmlFor="consent" 
                       className="text-gray-700 font-normal"
                     >
-                      I agree to the processing of my personal data for recruitment purposes and I consent to be contacted about current and future job opportunities. *
+                      I agree to the <Link to="/legal/terms-and-conditions" className="text-brand-500 hover:underline" target="_blank" rel="noopener noreferrer">Terms and Conditions</Link> and consent to be contacted about current and future job opportunities. *
                     </Label>
                     {errors.consent && (
                       <p className="mt-1 text-sm text-red-500">{errors.consent.message}</p>
