@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import MainLayout from '@/components/layout/MainLayout';
-import { H2, Lead, Paragraph } from '@/components/ui/Typography';
+import { H2, Lead, Paragraph, H3 } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { supabase } from '@/integrations/supabase/client';
+import { CheckCircle, Clock, Users, Calendar } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const WebinarSignupPage: React.FC = () => {
   const navigate = useNavigate();
@@ -67,16 +69,146 @@ const WebinarSignupPage: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
+  // What you'll learn items
+  const learningPoints = [
+    'How to identify ecosystem opportunities within your current product lines',
+    'Practical frameworks for unbundling traditional offerings into modular solutions',
+    'Step-by-step process to map your ecosystem partners and integration points',
+    'Methods to measure and optimize ecosystem performance',
+    'Real-world case studies of successful ecosystem transformations'
+  ];
+
+  // Webinar details
+  const webinarDetails = [
+    { icon: Clock, text: '90 minutes of focused strategy and insights' },
+    { icon: Calendar, text: 'Interactive session with Q&A opportunities' },
+    { icon: Users, text: 'Limited to 25 participants for meaningful engagement' }
+  ];
   
   return (
     <MainLayout pageTitle="90-Minute Ecosystem Strategy Session Registration">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-b from-brand-50 to-white">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="inline-block px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">
+                Limited Spots Available
+              </span>
+              <H2 className="text-brand-700">90-Minute Ecosystem Strategy Session</H2>
+              <Lead className="mt-4 mb-6 text-gray-600">
+                Transform your product strategy with our expert-led workshop on building thriving digital ecosystems
+              </Lead>
+              
+              <div className="space-y-3 mt-6">
+                {webinarDetails.map((detail, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="bg-brand-100 p-2 rounded-full">
+                      <detail.icon className="w-4 h-4 text-brand-600" />
+                    </div>
+                    <span className="text-gray-700">{detail.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                alt="Ecosystem Strategy Session" 
+                className="rounded-xl shadow-lg object-cover w-full h-[350px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* What You'll Learn Section */}
+      <div className="bg-white py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <H3 className="text-brand-600">What You'll Learn</H3>
+            <Paragraph className="mt-3 max-w-2xl mx-auto">
+              Join our ecosystem strategists for a focused 90-minute session designed to help you unlock new growth paths through ecosystem thinking
+            </Paragraph>
+          </div>
+          
+          <div className="max-w-3xl mx-auto grid gap-4 md:gap-6">
+            {learningPoints.map((point, index) => (
+              <div 
+                key={index}
+                className={cn(
+                  "flex items-start gap-3 p-4 rounded-lg",
+                  index % 2 === 0 ? "bg-beige-50" : "bg-white border border-gray-100"
+                )}
+              >
+                <CheckCircle className="w-5 h-5 text-brand-500 mt-1 shrink-0" />
+                <Paragraph>{point}</Paragraph>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Who Should Attend */}
+      <div className="bg-gray-50 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <H3 className="text-center text-brand-600 mb-8">Who Should Attend</H3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="font-semibold text-lg mb-2 text-brand-700">Product Leaders</div>
+                <Paragraph>Seeking to transform traditional offerings into ecosystem-ready platforms with multiple integration points</Paragraph>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="font-semibold text-lg mb-2 text-brand-700">Digital Strategists</div>
+                <Paragraph>Looking to identify new channels and partnership models to extend their market reach</Paragraph>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="font-semibold text-lg mb-2 text-brand-700">Innovation Directors</div>
+                <Paragraph>Responsible for creating new digital experiences that connect with partner ecosystems</Paragraph>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="font-semibold text-lg mb-2 text-brand-700">C-Suite Executives</div>
+                <Paragraph>With responsibility for digital transformation and growth through partnerships</Paragraph>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Logos carousel */}
+      <div className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <H3 className="text-brand-600">Ecosystems We've Worked With</H3>
+            <Paragraph className="mt-3">
+              We've helped these organizations build and scale their digital ecosystems
+            </Paragraph>
+          </div>
+          
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
+            {['UAE Pass', 'Royal Oman Police', 'Omantel', 'Twilio', 'TuneProtect', 'LinkedIn', 'Google', 'Spotify', 'RTA UAE'].map((logo, index) => (
+              <div key={index} className="w-[120px] h-[60px] bg-gray-100 rounded flex items-center justify-center">
+                <span className="text-gray-500 font-medium text-sm">{logo}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Registration Form */}
       <div className="bg-brand-50 py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <H2 className="mb-4">Register for our 90-Minute Ecosystem Strategy Session</H2>
+              <H2 className="mb-4">Register for the Ecosystem Strategy Session</H2>
               <Lead className="text-gray-600">
-                Join our expert strategists for a focused session to map your ecosystem opportunities
+                Secure your spot in our exclusive 90-minute workshop
               </Lead>
             </div>
             
@@ -198,7 +330,7 @@ const WebinarSignupPage: React.FC = () => {
                     className="w-full bg-brand-600 hover:bg-brand-700"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Submitting...' : 'Register for the Strategy Session'}
+                    {isSubmitting ? 'Submitting...' : 'Sign up for the Strategy Session'}
                   </Button>
                 </div>
                 
