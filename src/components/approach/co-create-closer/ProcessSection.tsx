@@ -5,31 +5,31 @@ import { H2, H4, Paragraph } from '@/components/ui/Typography';
 const processSteps = [
   {
     step: 1,
-    title: "Target Customer & Problem Definition",
-    description: "We identify your target customers and deeply understand their underserved needs through customer interviews, research, and stakeholder alignment sessions to determine the most valuable problems to solve.",
+    title: "Target customer",
+    description: "Deeply understanding your target users and their underserved needs through customer interviews, research, and stakeholder alignment sessions to determine the most valuable problems to solve.",
     duration: "Week 1",
-    deliverables: ["Customer persona profiles", "Problem hypothesis", "Customer needs framework", "Market opportunity assessment"]
+    deliverables: ["User profiles", "Problem hypothesis", "Customer needs", "Stakeholder requirements"]
   },
   {
     step: 2,
-    title: "Digital Landscape Evaluation",
-    description: "We assess the core systems and platforms that can support your new digital experiences, mapping integration points and identifying ecosystem opportunities that will increase your product's value.",
+    title: "Digital landscape evaluation",
+    description: "We develop user journey maps and assess the core systems and platforms that will support the new digital experience, mapping integration points and identifying ecosystem opportunities that will influence the product's capabilities.",
     duration: "Week 2",
-    deliverables: ["System capability assessment", "Ecosystem opportunity map", "Integration framework", "Technical architecture blueprint"]
+    deliverables: ["Systems assessment", "Business requirements document", "Integration requirements", "Product capabilities","User journeys"]
   },
   {
     step: 3,
-    title: "User Experience & Prototype",
-    description: "We develop user journey maps and interactive prototypes that demonstrate the core value proposition while enabling future ecosystem connectivity, focusing on the most critical user flows.",
+    title: "User Experience Prototype",
+    description: "We develop interactive prototypes that demonstrate the core value proposition while enabling future ecosystem connectivity, focusing on the most critical user flows.",
     duration: "Week 3",
-    deliverables: ["User journey maps", "Experience wireframes", "Interactive prototype", "Feature prioritization framework"]
+    deliverables: [ "Experience wireframes", "Interactive prototype"]
   },
   {
     step: 4,
-    title: "Prototype Validation",
+    title: "Validation",
     description: "We validate the prototype with target users through structured testing sessions to gather feedback, refine the product concept, and establish metrics for measuring product-market fit.",
     duration: "Week 4",
-    deliverables: ["User testing results", "Product-market fit metrics", "Iteration plan", "Go-to-market strategy"]
+    deliverables: ["User testing", "Product-market fit metrics", "Iteration plan"]
   }
 ];
 
