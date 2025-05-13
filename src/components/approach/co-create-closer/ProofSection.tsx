@@ -26,12 +26,12 @@ const ProofSection = () => {
                 <span className="text-sm font-medium">Featured Case Study</span>
               </div>
               
-              <H3 className="mb-4">Reinventing Claims Processing for a Digital Future</H3>
+              <H3 className="mb-4">Reinventing claims processing for a digital future</H3>
               
               <Paragraph className="mb-6">
-                A leading insurance provider needed to reimagine their claims process to improve customer 
+                A leading insurance provider needed to reinvent their claims process to improve customer 
                 satisfaction and reduce operational costs. Through our Co-Create approach, we brought 
-                together their claims specialists, customer service teams, and our product designers 
+                together their claims specialists, customer service teams, commercial stakeholders and our product team
                 for a 6-week engagement.
               </Paragraph>
               
@@ -42,7 +42,7 @@ const ProofSection = () => {
                     <span className="font-medium text-gray-700">Timeline</span>
                   </div>
                   <p className="text-brand-700 font-bold">6 Weeks</p>
-                  <p className="text-sm text-gray-600">From kickoff to validated prototype</p>
+                  <p className="text-sm text-gray-600">From requirements to validated prototype</p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg">
@@ -50,7 +50,7 @@ const ProofSection = () => {
                     <Users className="h-5 w-5 text-brand-600 mr-2" />
                     <span className="font-medium text-gray-700">Team Size</span>
                   </div>
-                  <p className="text-brand-700 font-bold">12 People</p>
+                  <p className="text-brand-700 font-bold">6 People</p>
                   <p className="text-sm text-gray-600">Cross-functional participants</p>
                 </div>
               </div>
@@ -70,12 +70,12 @@ const ProofSection = () => {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">40%</div>
+                  <div className="text-3xl font-bold text-brand-700 mb-1">25%</div>
                   <p className="text-sm text-center text-gray-600">Reduction in claims processing time</p>
                 </div>
                 
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">62%</div>
+                  <div className="text-3xl font-bold text-brand-700 mb-1">30%</div>
                   <p className="text-sm text-center text-gray-600">Increase in customer satisfaction scores</p>
                 </div>
                 
@@ -90,7 +90,7 @@ const ProofSection = () => {
                 </div>
               </div>
               
-              <div className="p-4 bg-green-50 rounded-lg border border-green-100">
+              {/* <div className="p-4 bg-green-50 rounded-lg border border-green-100">
                 <div className="flex items-start">
                   <BarChart className="h-6 w-6 text-green-600 mr-3 mt-1" />
                   <div>
@@ -100,7 +100,7 @@ const ProofSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
