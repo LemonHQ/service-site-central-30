@@ -1,12 +1,6 @@
 
 import React from 'react';
-import { H2, Paragraph } from '@/components/ui/Typography';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import FaqSection from '@/components/ui/FaqSection';
 
 const faqs = [
   {
@@ -33,36 +27,12 @@ const faqs = [
 
 const RapidIterationFAQ = () => {
   return (
-    <section className="py-16 bg-green-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <H2 className="mb-6">Frequently Asked Questions</H2>
-          
-          <div className="flex justify-center mb-8">
-            <div className="h-1 w-20 bg-green-500"></div>
-          </div>
-          
-          <Paragraph className="text-lg">
-            Get answers to common questions about our rapid iteration approach
-          </Paragraph>
-        </div>
-        
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg font-medium text-gray-800">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
-    </section>
+    <FaqSection 
+      faqs={faqs}
+      title="Frequently Asked Questions"
+      subtitle="Get answers to common questions about our rapid iteration approach"
+      backgroundColor="bg-green-50"
+    />
   );
 };
 

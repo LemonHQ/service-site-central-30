@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { H3 } from '@/components/ui/Typography';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import FaqSection from '@/components/ui/FaqSection';
 
 const faqItems = [
   {
@@ -22,30 +21,13 @@ const faqItems = [
   }
 ];
 
-const FaqSection = () => {
+const FaqSectionComponent = () => {
   return (
-    <section className="py-12 bg-white">
-      <div className="container mx-auto px-4 max-w-2xl">
-        <H3 className="text-center mb-6">Frequently Asked Questions</H3>
-        
-        <Accordion type="single" collapsible className="w-full">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className="text-left text-base">
-                <span className="flex items-center">
-                  <span className="text-brand-500 font-semibold mr-2">{index + 1}.</span>
-                  {item.question}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="text-sm pl-6">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
+    <FaqSection 
+      faqs={faqItems}
+      backgroundColor="bg-white"
+    />
   );
 };
 
-export default FaqSection;
+export default FaqSectionComponent;

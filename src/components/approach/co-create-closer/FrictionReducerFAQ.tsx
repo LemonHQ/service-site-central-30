@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { H2, Paragraph } from '@/components/ui/Typography';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import FaqSection from '@/components/ui/FaqSection';
 
 const faqItems = [
   {
@@ -32,51 +31,12 @@ const faqItems = [
 
 const FrictionReducerFAQ = () => {
   return (
-    <section className="py-16 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <H2 className="mb-4">FAQs</H2>
-            <Paragraph>
-              Common questions about our product-market fit Co-Create process
-            </Paragraph>
-          </div>
-          
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
-                <AccordionTrigger className="text-left py-4">
-                  <span className="text-base text-gray-800">
-                    <span className="font-medium text-brand-600 mr-2">{index + 1}.</span>
-                    {item.question}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="text-sm text-gray-600 pb-6 pl-6">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-          
-          <div className="mt-10 p-6 bg-brand-50 rounded-lg border border-brand-100">
-            <div className="flex items-start">
-              <div className="mr-4">
-                <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
-                  <span className="text-brand-700 font-bold">?</span>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-medium text-base text-gray-800 mb-2">Have specific product-market fit questions?</h4>
-                <Paragraph className="text-sm mb-0">
-                  Contact our product strategy team at <a href="mailto:create@lemonhq.co.uk" className="text-brand-600 hover:underline">create@lemonhq.co.uk</a> 
-                  or book a 15-minute consultation to discuss your product-market fit challenges.
-                </Paragraph>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FaqSection 
+      faqs={faqItems} 
+      title="FAQs"
+      subtitle="Common questions about our product-market fit Co-Create process"
+      backgroundColor="bg-slate-50"
+    />
   );
 };
 
