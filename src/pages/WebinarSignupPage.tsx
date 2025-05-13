@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { supabase } from '@/integrations/supabase/client';
 import { CheckCircle, Clock, Users, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import EcosystemPartnersCarousel from '@/components/approach/co-create-closer/EcosystemPartnersCarousel';
 
 const WebinarSignupPage: React.FC = () => {
   const navigate = useNavigate();
@@ -30,11 +31,29 @@ const WebinarSignupPage: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
+  const isWorkEmail = (email: string): boolean => {
+    // Simple check to exclude common personal email domains
+    const personalDomains = [
+      'gmail.com', 'yahoo.com', 'hotmail.com', 
+      'outlook.com', 'aol.com', 'icloud.com', 
+      'mail.com', 'protonmail.com', 'zoho.com',
+      'yandex.com', 'gmx.com', 'live.com'
+    ];
+    
+    const emailDomain = email.split('@')[1]?.toLowerCase();
+    return !!emailDomain && !personalDomains.includes(emailDomain);
+  };
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.first_name || !formData.last_name || !formData.email || !formData.company || !formData.job_title) {
       toast.error('Please fill out all required fields');
+      return;
+    }
+    
+    if (!isWorkEmail(formData.email)) {
+      toast.error('Please use your work email address');
       return;
     }
     
@@ -123,29 +142,165 @@ const WebinarSignupPage: React.FC = () => {
         </div>
       </div>
 
-      {/* What You'll Learn Section */}
+      {/* What You'll Learn + Registration Form Section */}
       <div className="bg-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <H3 className="text-brand-600">What You'll Learn</H3>
-            <Paragraph className="mt-3 max-w-2xl mx-auto">
-              Join our ecosystem strategists for a focused 90-minute session designed to help you unlock new growth paths through ecosystem thinking
-            </Paragraph>
-          </div>
-          
-          <div className="max-w-3xl mx-auto grid gap-4 md:gap-6">
-            {learningPoints.map((point, index) => (
-              <div 
-                key={index}
-                className={cn(
-                  "flex items-start gap-3 p-4 rounded-lg",
-                  index % 2 === 0 ? "bg-beige-50" : "bg-white border border-gray-100"
-                )}
-              >
-                <CheckCircle className="w-5 h-5 text-brand-500 mt-1 shrink-0" />
-                <Paragraph>{point}</Paragraph>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* What You'll Learn Section - Left Side */}
+            <div>
+              <H3 className="text-brand-600 mb-6">What You'll Learn</H3>
+              <Paragraph className="mb-8">
+                Join our ecosystem strategists for a focused 90-minute session designed to help you unlock new growth paths through ecosystem thinking
+              </Paragraph>
+              
+              <div className="grid gap-4 md:gap-6">
+                {learningPoints.map((point, index) => (
+                  <div 
+                    key={index}
+                    className={cn(
+                      "flex items-start gap-3 p-4 rounded-lg",
+                      index % 2 === 0 ? "bg-beige-50" : "bg-white border border-gray-100"
+                    )}
+                  >
+                    <CheckCircle className="w-5 h-5 text-brand-500 mt-1 shrink-0" />
+                    <Paragraph>{point}</Paragraph>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            {/* Registration Form - Right Side */}
+            <div>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <H3 className="text-center mb-6">Register for the Session</H3>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">
+                        First Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="first_name"
+                        name="first_name"
+                        value={formData.first_name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">
+                        Last Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="last_name"
+                        name="last_name"
+                        value={formData.last_name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      Work Email <span className="text-red-500">*</span>
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                    <div className="text-xs text-gray-500">Please use your company email address</div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                        Company <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="job_title" className="block text-sm font-medium text-gray-700">
+                        Job Title <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        id="job_title"
+                        name="job_title"
+                        value={formData.job_title}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                        Phone Number
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="industry" className="block text-sm font-medium text-gray-700">
+                        Industry
+                      </label>
+                      <Input
+                        id="industry"
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="questions" className="block text-sm font-medium text-gray-700">
+                      Questions or Topics
+                    </label>
+                    <Textarea
+                      id="questions"
+                      name="questions"
+                      value={formData.questions}
+                      onChange={handleChange}
+                      placeholder="Share any specific topics or questions you'd like to discuss during the session"
+                      className="h-32"
+                    />
+                  </div>
+                  
+                  <div className="pt-4">
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-brand-600 hover:bg-brand-700"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Sign up for the Strategy Session'}
+                    </Button>
+                  </div>
+                  
+                  <Paragraph className="text-xs text-gray-500 text-center mt-4">
+                    By registering, you agree to our <a href="/terms-and-conditions" className="text-brand-600 underline">Terms and Conditions</a> and <a href="/privacy-policy" className="text-brand-600 underline">Privacy Policy</a>.
+                  </Paragraph>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,167 +336,8 @@ const WebinarSignupPage: React.FC = () => {
         </div>
       </div>
       
-      {/* Logos carousel */}
-      <div className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <H3 className="text-brand-600">Ecosystems We've Worked With</H3>
-            <Paragraph className="mt-3">
-              We've helped these organizations build and scale their digital ecosystems
-            </Paragraph>
-          </div>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
-            {['UAE Pass', 'Royal Oman Police', 'Omantel', 'Twilio', 'TuneProtect', 'LinkedIn', 'Google', 'Spotify', 'RTA UAE'].map((logo, index) => (
-              <div key={index} className="w-[120px] h-[60px] bg-gray-100 rounded flex items-center justify-center">
-                <span className="text-gray-500 font-medium text-sm">{logo}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Registration Form */}
-      <div className="bg-brand-50 py-12 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <H2 className="mb-4">Register for the Ecosystem Strategy Session</H2>
-              <Lead className="text-gray-600">
-                Secure your spot in our exclusive 90-minute workshop
-              </Lead>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">
-                      First Name <span className="text-red-500">*</span>
-                    </label>
-                    <Input
-                      id="first_name"
-                      name="first_name"
-                      value={formData.first_name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">
-                      Last Name <span className="text-red-500">*</span>
-                    </label>
-                    <Input
-                      id="last_name"
-                      name="last_name"
-                      value={formData.last_name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                      Company <span className="text-red-500">*</span>
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="job_title" className="block text-sm font-medium text-gray-700">
-                      Job Title <span className="text-red-500">*</span>
-                    </label>
-                    <Input
-                      id="job_title"
-                      name="job_title"
-                      value={formData.job_title}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                      Phone Number
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="industry" className="block text-sm font-medium text-gray-700">
-                      Industry
-                    </label>
-                    <Input
-                      id="industry"
-                      name="industry"
-                      value={formData.industry}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="questions" className="block text-sm font-medium text-gray-700">
-                    Questions or Topics
-                  </label>
-                  <Textarea
-                    id="questions"
-                    name="questions"
-                    value={formData.questions}
-                    onChange={handleChange}
-                    placeholder="Share any specific topics or questions you'd like to discuss during the session"
-                    className="h-32"
-                  />
-                </div>
-                
-                <div className="pt-4">
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-brand-600 hover:bg-brand-700"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Sign up for the Strategy Session'}
-                  </Button>
-                </div>
-                
-                <Paragraph className="text-xs text-gray-500 text-center mt-4">
-                  By registering, you agree to our <a href="/terms-and-conditions" className="text-brand-600 underline">Terms and Conditions</a> and <a href="/privacy-policy" className="text-brand-600 underline">Privacy Policy</a>.
-                </Paragraph>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Ecosystem Partners Carousel (reused from Co-Create page) */}
+      <EcosystemPartnersCarousel />
     </MainLayout>
   );
 };
