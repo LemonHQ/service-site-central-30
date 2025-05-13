@@ -1,5 +1,8 @@
 
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import MainLayout from '../components/layout/MainLayout';
 import SectionHeading from '../components/ui/SectionHeading';
 import { Input } from '../components/ui/input';
@@ -7,55 +10,130 @@ import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { Button } from '../components/ui/button';
 import { toast } from '../components/ui/sonner';
-import { Upload } from 'lucide-react';
+import { Upload, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Checkbox } from '../components/ui/checkbox';
+import { supabase } from '../integrations/supabase/client';
+import { useNavigate } from 'react-router-dom';
+
+// Define form schema with validation
+const formSchema = z.object({
+  name: z.string().min(2, "Full name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  message: z.string().optional(),
+  file: z
+    .instanceof(File)
+    .refine(file => file.size <= 10 * 1024 * 1024, {
+      message: "File size should be less than 10MB"
+    })
+    .refine(file => {
+      const validTypes = [
+        "application/pdf", 
+        "application/msword", 
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      ];
+      return validTypes.includes(file.type);
+    }, {
+      message: "File must be PDF or Word document (.pdf, .doc, .docx)"
+    }),
+  consent: z.boolean().refine(val => val === true, {
+    message: "You must agree to the terms and conditions"
+  }),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const CvSubmission = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [filePreview, setFilePreview] = useState<string | null>(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const navigate = useNavigate();
+  
+  // Set up react-hook-form with zod validation
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      consent: false,
+    }
+  });
+  
+  const { register, handleSubmit, formState, setValue, watch } = form;
+  const { errors } = formState;
 
+  // Watch for file changes to show file preview
+  const selectedFile = watch('file');
+  
+  // Handle file selection
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
-      // Only allow PDF or DOC/DOCX files
-      if (file.type === "application/pdf" || 
-          file.type === "application/msword" || 
-          file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
-        setSelectedFile(file);
-      } else {
-        toast.error("Please upload a PDF or Word document");
-        e.target.value = "";
-      }
+      setValue('file', file);
+      setFilePreview(file.name);
     }
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!selectedFile) {
-      toast.error("Please upload your CV");
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      toast.success("Your CV has been submitted successfully!");
-      setName('');
-      setEmail('');
-      setPhone('');
-      setMessage('');
-      setSelectedFile(null);
-      setIsSubmitting(false);
+  
+  // Handle form submission
+  const onSubmit = async (data: FormValues) => {
+    try {
+      setIsSubmitting(true);
       
-      // Reset the file input
-      const fileInput = document.getElementById('cv-upload') as HTMLInputElement;
-      if (fileInput) fileInput.value = '';
-    }, 1500);
+      // Upload file to Supabase storage
+      const fileExtension = data.file.name.split('.').pop();
+      const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.${fileExtension}`;
+      const filePath = `${data.email.replace('@', '-at-')}/${fileName}`;
+      
+      // Upload file to storage
+      const { error: uploadError, data: uploadData } = await supabase.storage
+        .from('cv-uploads')
+        .upload(filePath, data.file, {
+          cacheControl: '3600',
+          upsert: false,
+          onUploadProgress: (progress) => {
+            const percent = (progress.loaded / progress.total) * 100;
+            setUploadProgress(Math.round(percent));
+          },
+        });
+        
+      if (uploadError) {
+        throw new Error(`Error uploading file: ${uploadError.message}`);
+      }
+      
+      // Create record in cv_submissions table
+      const { error: submissionError } = await supabase
+        .from('cv_submissions')
+        .insert({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          message: data.message || null,
+          file_path: filePath,
+          file_name: data.file.name,
+          file_type: data.file.type,
+          file_size: data.file.size,
+          consent_given: data.consent
+        });
+        
+      if (submissionError) {
+        throw new Error(`Error saving submission: ${submissionError.message}`);
+      }
+      
+      // Show success message
+      toast.success("Your CV has been submitted successfully!");
+      
+      // Redirect to thank you page
+      navigate('/thank-you');
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error(error.message || "Failed to submit your CV. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+      setUploadProgress(0);
+    }
   };
 
   return (
@@ -82,54 +160,62 @@ const CvSubmission = () => {
               centered
             />
             
-            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6">
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Full Name</Label>
+                  <Label htmlFor="name">Full Name *</Label>
                   <Input 
                     id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    {...register('name')}
                     placeholder="John Doe"
-                    required
+                    aria-invalid={errors.name ? "true" : "false"}
                   />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
+                  )}
                 </div>
                 
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">Email *</Label>
                   <Input 
                     id="email"
                     type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    {...register('email')}
                     placeholder="john@example.com"
-                    required
+                    aria-invalid={errors.email ? "true" : "false"}
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+                  )}
                 </div>
                 
                 <div>
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input 
                     id="phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    {...register('phone')}
                     placeholder="+1 (555) 123-4567"
                   />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
+                  )}
                 </div>
                 
                 <div>
                   <Label htmlFor="message">Additional Information</Label>
                   <Textarea 
                     id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    {...register('message')}
                     placeholder="Tell us about your interests, relevant experience, or anything else you'd like us to know"
                     rows={5}
                   />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+                  )}
                 </div>
                 
                 <div>
-                  <Label htmlFor="cv-upload">Upload Your CV (PDF or Word Document)</Label>
+                  <Label htmlFor="cv-upload">Upload Your CV (PDF or Word Document) *</Label>
                   <div className="mt-1 flex items-center">
                     <label className="block w-full">
                       <div className="flex items-center justify-center w-full px-4 py-6 border-2 border-dashed border-gray-300 rounded-md">
@@ -138,14 +224,13 @@ const CvSubmission = () => {
                           <div className="flex text-sm text-gray-600">
                             <label htmlFor="cv-upload" className="relative cursor-pointer rounded-md font-medium text-brand-400 hover:text-brand-500">
                               <span>Upload a file</span>
-                              <Input 
+                              <input 
                                 id="cv-upload"
-                                name="cv-upload"
+                                name="file"
                                 type="file"
                                 className="sr-only"
                                 accept=".pdf,.doc,.docx"
                                 onChange={handleFileChange}
-                                required
                               />
                             </label>
                             <p className="pl-1">or drag and drop</p>
@@ -155,11 +240,38 @@ const CvSubmission = () => {
                       </div>
                     </label>
                   </div>
-                  {selectedFile && (
-                    <p className="mt-2 text-sm text-green-600">
-                      Selected file: {selectedFile.name}
-                    </p>
+                  {filePreview && (
+                    <div className="mt-2 flex items-center text-sm text-green-600">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      Selected file: {filePreview}
+                    </div>
                   )}
+                  {errors.file && (
+                    <div className="mt-2 flex items-center text-sm text-red-500">
+                      <AlertCircle className="h-4 w-4 mr-2" />
+                      {errors.file.message}
+                    </div>
+                  )}
+                </div>
+                
+                <div className="flex items-start pt-4">
+                  <div className="flex items-center h-5">
+                    <Checkbox 
+                      id="consent"
+                      {...register('consent')}
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label 
+                      htmlFor="consent" 
+                      className="text-gray-700 font-normal"
+                    >
+                      I agree to the processing of my personal data for recruitment purposes and I consent to be contacted about current and future job opportunities. *
+                    </Label>
+                    {errors.consent && (
+                      <p className="mt-1 text-sm text-red-500">{errors.consent.message}</p>
+                    )}
+                  </div>
                 </div>
               </div>
               
@@ -169,7 +281,12 @@ const CvSubmission = () => {
                   className="w-full bg-brand-400 hover:bg-brand-500 text-white"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      {uploadProgress > 0 ? `Uploading... ${uploadProgress}%` : 'Submitting...'}
+                    </>
+                  ) : 'Submit Application'}
                 </Button>
               </div>
             </form>

@@ -105,6 +105,48 @@ export type Database = {
         }
         Relationships: []
       }
+      cv_submissions: {
+        Row: {
+          consent_given: boolean
+          created_at: string
+          email: string
+          file_name: string
+          file_path: string
+          file_size: number
+          file_type: string
+          id: string
+          message: string | null
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          consent_given?: boolean
+          created_at?: string
+          email: string
+          file_name: string
+          file_path: string
+          file_size: number
+          file_type: string
+          id?: string
+          message?: string | null
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          consent_given?: boolean
+          created_at?: string
+          email?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          file_type?: string
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
       lead_qualifications: {
         Row: {
           brands: string
