@@ -9,15 +9,15 @@ const EcosystemPartnersCarousel: React.FC = () => {
   const partnerLogos = [
     {
       name: "UAE Pass",
-      logo: "https://www.digitaldubai.ae/images/logo/DubaiNow_digital_dubai_uaepass.jpg" 
+      logo: "/assets/imgs/uae-pass-logo.svg" 
     },
     {
       name: "Royal Oman Police",
-      logo: "https://rop.gov.om/images/logo.png"
+      logo: "/assets/imgs/oman-police-logo.png"
     },
     {
       name: "Omantel",
-      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Omantel_logo.svg/1200px-Omantel_logo.svg.png"
+      logo: "/assets/imgs/omantel-logo.png"
     },
     {
       name: "Twilio",
@@ -25,7 +25,7 @@ const EcosystemPartnersCarousel: React.FC = () => {
     },
     {
       name: "TuneProtect",
-      logo: "https://www.tuneprotect.com/storage/app/media/images/Tune-Protect-Logo-400x400.png"
+      logo: "/assets/imgs/icon_TP_logo.png"
     },
     {
       name: "LinkedIn",
@@ -41,7 +41,7 @@ const EcosystemPartnersCarousel: React.FC = () => {
     },
     {
       name: "RTA UAE",
-      logo: "https://www.rta.ae/wps/wcm/connect/rta/8fad11e8-9a55-4ed0-bbc2-801a05d8fddf/RTA-LOGO.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-8fad11e8-9a55-4ed0-bbc2-801a05d8fddf-nQEBgJe"
+      logo: "/assets/imgs/RTA_Dubai_logo.png"
     }
   ];
 
