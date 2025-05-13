@@ -3,6 +3,7 @@ import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
 
 const DigitalizeProductPage = () => {
@@ -91,6 +92,7 @@ const DigitalizeProductPage = () => {
         }
       ]}
     >
+      <ProductJourney />
       <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
     </ServiceLandingTemplate>
   );
