@@ -7,9 +7,9 @@ import RapidIterationSolutionSection from '@/components/approach/co-innovate/Rap
 import TargetAudienceSection from '@/components/approach/co-innovate/TargetAudienceSection';
 import RapidIterationProcessSection from '@/components/approach/co-innovate/RapidIterationProcessSection';
 import RapidIterationFAQ from '@/components/approach/co-innovate/RapidIterationFAQ';
-import RapidIterationResponseSection from '@/components/approach/co-innovate/RapidIterationResponseSection';
-import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
+import RapidInnovationResponseSection from '@/components/approach/co-innovate/RapidInnovationResponseSection';
 import WebinarCtaSection from '@/components/approach/co-innovate/WebinarCtaSection';
+import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
 
 const CoInnovatePage = () => {
   return (
@@ -20,7 +20,7 @@ const CoInnovatePage = () => {
       <TargetAudienceSection />
       <RapidIterationProcessSection />
       <RapidIterationFAQ />
-      <RapidIterationResponseSection />
+      <RapidInnovationResponseSection />
       <WebinarCtaSection />
       <InsightsCarousel limit={3} />
     </MainLayout>
