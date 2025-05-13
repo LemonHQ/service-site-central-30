@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -45,10 +44,10 @@ const Header = () => {
     { name: "Retail", path: "/industries/retail", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Omnichannel retail experiences" }
   ];
   
-  // Our Approach items
+  // Our Approach items - Updated to include Co-Innovate and remove Extend
   const approachItems = [
     { name: "Co-Create", path: "/approach/co-create", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Collaborative innovation approach" },
-    { name: "Extend", path: "/approach/extend", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Expert-as-a-service delivery model" }
+    { name: "Co-Innovate", path: "/approach/co-innovate", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", description: "Rapid product innovation framework" }
   ];
 
   const isActive = (path: string) => {
@@ -249,7 +248,7 @@ const Header = () => {
               )}
             </div>
             
-            {/* Our Approach - with sub-menu */}
+            {/* Our Approach - with sub-menu - Updated items */}
             <div className="flex flex-col">
               <button 
                 className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}
