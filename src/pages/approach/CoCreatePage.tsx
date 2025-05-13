@@ -9,6 +9,7 @@ import ResponseSection from '@/components/approach/co-create-closer/ResponseSect
 import FrictionReducerFAQ from '@/components/approach/co-create-closer/FrictionReducerFAQ';
 import ProcessSection from '@/components/approach/co-create-closer/ProcessSection';
 import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
+import EcosystemPartnersCarousel from '@/components/approach/co-create-closer/EcosystemPartnersCarousel';
 
 const CoCreatePage = () => {
   return (
@@ -20,6 +21,7 @@ const CoCreatePage = () => {
       <ProofSection />
       <FrictionReducerFAQ />
       <ResponseSection />
+      <EcosystemPartnersCarousel />
       <InsightsCarousel limit={3} />
     </MainLayout>
   );

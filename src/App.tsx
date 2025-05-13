@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -20,6 +21,7 @@ import GettingStarted from "./pages/GettingStarted";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 import CoCreateAssessment from "./pages/CoCreateAssessment";
+import WebinarSignupPage from "./pages/WebinarSignupPage"; // Add import for new page
 
 // Import service landing pages
 import UnifyBrandPage from "./pages/services/UnifyBrandPage";
@@ -31,7 +33,7 @@ import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage"
 
 // Import approach pages
 import CoCreatePage from "./pages/approach/CoCreatePage";
-import CoInnovatePage from "./pages/approach/CoInnovatePage"; // Added new import
+import CoInnovatePage from "./pages/approach/CoInnovatePage";
 import CoCreateLegacyPage from "./pages/approach/CoCreateLegacyPage";
 import ExtendPage from "./pages/approach/ExtendPage";
 
@@ -68,10 +70,11 @@ const App = () => (
           
           {/* Approach pages */}
           <Route path="/approach/co-create" element={<CoCreatePage />} />
-          <Route path="/approach/co-innovate" element={<CoInnovatePage />} /> {/* Added new route */}
+          <Route path="/approach/co-innovate" element={<CoInnovatePage />} />
           <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} />
           <Route path="/approach/extend" element={<ExtendPage />} />
           <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
+          <Route path="/webinar-signup" element={<WebinarSignupPage />} /> {/* New route for webinar signup */}
           
           {/* Industry landing pages */}
           <Route path="/industries/insurance" element={<InsurancePage />} />
@@ -91,14 +94,14 @@ const App = () => (
           
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/insights" element={<Blog />} /> {/* Changed from /blog to /insights */}
-          <Route path="/blog" element={<Blog />} /> {/* Keep old route for backward compatibility */}
-          <Route path="/insights/:postId" element={<BlogDetail />} /> {/* Added new route */}
-          <Route path="/blog/:postId" element={<BlogDetail />} /> {/* Keep old route for backward compatibility */}
+          <Route path="/insights" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/insights/:postId" element={<BlogDetail />} />
+          <Route path="/blog/:postId" element={<BlogDetail />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
           <Route path="/getting-started" element={<GettingStarted />} />
-          <Route path="/lead-qualification" element={<GettingStarted />} /> {/* Redirect old route to new one */}
+          <Route path="/lead-qualification" element={<GettingStarted />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/cv-submission" element={<CvSubmission />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

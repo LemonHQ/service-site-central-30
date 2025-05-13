@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle, FileText, Calendar, ArrowRight, Network } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 import { Card, CardContent } from '@/components/ui/card';
+import EcosystemPartnersCarousel from './EcosystemPartnersCarousel';
 
 const ResponseSection = () => {
   return (
@@ -88,9 +89,9 @@ const ResponseSection = () => {
                   </li>
                 </ul>
                 
-                <Link to="/lead-qualification" className="w-full">
+                <Link to="/webinar-signup" className="w-full">
                   <Button className="w-full bg-brand-600 hover:bg-brand-700">
-                    Schedule Strategy Session
+                    Sign Up For The Session
                   </Button>
                 </Link>
               </CardContent>
@@ -123,31 +124,11 @@ const ResponseSection = () => {
                 
                 <Link to="/case-studies" className="w-full">
                   <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
-                    Download Resources
+                    Case Studies
                   </Button>
                 </Link>
               </CardContent>
             </Card>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-white">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Network className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-medium text-lg">Ecosystem Integration Partners</p>
-                  <p className="text-white/80">Our network includes over 50 ecosystem integration partners across industries.</p>
-                </div>
-              </div>
-              
-              <Link to="/lead-qualification">
-                <Button size="lg" className="bg-white text-brand-700 hover:bg-gray-100 whitespace-nowrap">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </div>
