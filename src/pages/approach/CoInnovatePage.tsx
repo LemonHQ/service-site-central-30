@@ -9,6 +9,7 @@ import RapidIterationProcessSection from '@/components/approach/co-innovate/Rapi
 import RapidIterationFAQ from '@/components/approach/co-innovate/RapidIterationFAQ';
 import RapidIterationResponseSection from '@/components/approach/co-innovate/RapidIterationResponseSection';
 import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
+import WebinarCtaSection from '@/components/approach/co-innovate/WebinarCtaSection';
 
 const CoInnovatePage = () => {
   return (
@@ -20,6 +21,7 @@ const CoInnovatePage = () => {
       <RapidIterationProcessSection />
       <RapidIterationFAQ />
       <RapidIterationResponseSection />
+      <WebinarCtaSection />
       <InsightsCarousel limit={3} />
     </MainLayout>
   );

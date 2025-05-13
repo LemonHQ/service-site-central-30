@@ -21,7 +21,8 @@ import GettingStarted from "./pages/GettingStarted";
 import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 import CoCreateAssessment from "./pages/CoCreateAssessment";
-import WebinarSignupPage from "./pages/WebinarSignupPage"; // Add import for new page
+import WebinarSignupPage from "./pages/WebinarSignupPage";
+import CoInnovateWebinarPage from "./pages/CoInnovateWebinarPage"; // Add import for new page
 
 // Import service landing pages
 import UnifyBrandPage from "./pages/services/UnifyBrandPage";
@@ -74,7 +75,8 @@ const App = () => (
           <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} />
           <Route path="/approach/extend" element={<ExtendPage />} />
           <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
-          <Route path="/webinar-signup" element={<WebinarSignupPage />} /> {/* New route for webinar signup */}
+          <Route path="/webinar-signup" element={<WebinarSignupPage />} />
+          <Route path="/co-innovate-webinar" element={<CoInnovateWebinarPage />} /> {/* New route for co-innovate webinar */}
           
           {/* Industry landing pages */}
           <Route path="/industries/insurance" element={<InsurancePage />} />
