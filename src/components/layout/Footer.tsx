@@ -32,7 +32,6 @@ const Footer = () => {
   const approachLinks = [
     { name: 'Co-Create', path: '/approach/co-create' },
     { name: 'Co-Innovate', path: '/approach/co-innovate' },
-    { name: 'Extend', path: '/approach/extend' },
   ];
 
   // Company links - Updated
