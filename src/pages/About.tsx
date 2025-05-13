@@ -112,7 +112,7 @@ const About = () => {
           <SectionHeading title="Our Approach" subtitle="We combine strategic thinking, design excellence, and technical expertise to deliver exceptional results." centered />
 
           {/* Product Journey Section */}
-          <ProductJourney />
+          {/* <ProductJourney /> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div className="order-2 md:order-1 relative">
