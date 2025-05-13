@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -86,21 +85,52 @@ const CvSubmission = () => {
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.${fileExtension}`;
       const filePath = `${data.email.replace('@', '-at-')}/${fileName}`;
       
-      // Upload file to storage
-      const { error: uploadError, data: uploadData } = await supabase.storage
-        .from('cv-uploads')
-        .upload(filePath, data.file, {
-          cacheControl: '3600',
-          upsert: false,
-          onUploadProgress: (progress) => {
-            const percent = (progress.loaded / progress.total) * 100;
-            setUploadProgress(Math.round(percent));
-          },
+      // Create a custom upload handler to track progress
+      const uploadFile = async () => {
+        // Create blob reader to track progress
+        const fileReader = new FileReader();
+        
+        // Set up promise to resolve when file is read
+        const readPromise = new Promise<ArrayBuffer>((resolve, reject) => {
+          fileReader.onload = () => {
+            resolve(fileReader.result as ArrayBuffer);
+          };
+          fileReader.onerror = (error) => {
+            reject(error);
+          };
+          
+          // Set up progress tracking
+          fileReader.onprogress = (event) => {
+            if (event.lengthComputable) {
+              const percent = (event.loaded / event.total) * 100;
+              setUploadProgress(Math.round(percent));
+            }
+          };
         });
         
-      if (uploadError) {
-        throw new Error(`Error uploading file: ${uploadError.message}`);
-      }
+        // Read the file as array buffer
+        fileReader.readAsArrayBuffer(data.file);
+        
+        // Wait for file to be read
+        const fileContent = await readPromise;
+        
+        // Upload the file to Supabase
+        const { error, data: uploadData } = await supabase.storage
+          .from('cv-uploads')
+          .upload(filePath, data.file, {
+            cacheControl: '3600',
+            upsert: false,
+          });
+          
+        if (error) {
+          throw new Error(`Error uploading file: ${error.message}`);
+        }
+        
+        return uploadData;
+      };
+      
+      // Upload the file and track progress
+      await uploadFile();
       
       // Create record in cv_submissions table
       const { error: submissionError } = await supabase
