@@ -28,6 +28,13 @@ const Footer = () => {
     { name: 'Retail', path: '/industries/retail' },
   ];
 
+  // Approach links - Added new section
+  const approachLinks = [
+    { name: 'Co-Create', path: '/approach/co-create' },
+    { name: 'Co-Innovate', path: '/approach/co-innovate' },
+    { name: 'Extend', path: '/approach/extend' },
+  ];
+
   // Company links - Updated
   const companyLinks = [
     { name: 'About Us', path: '/about' },
@@ -41,9 +48,10 @@ const Footer = () => {
     <footer className="bg-white text-gray-700 pt-16 pb-8 border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <FooterLinks title="What We Do" links={serviceLinks} />
           <FooterLinks title="Industries" links={industryLinks} />
+          <FooterLinks title="Our Approach" links={approachLinks} />
           <FooterLinks title="Company" links={companyLinks} showIcon={false} />
         </div>
 

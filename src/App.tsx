@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,7 +31,8 @@ import StandardizePortfolioPage from "./pages/services/StandardizePortfolioPage"
 
 // Import approach pages
 import CoCreatePage from "./pages/approach/CoCreatePage";
-import CoCreateLegacyPage from "./pages/approach/CoCreateLegacyPage"; // Renamed import
+import CoInnovatePage from "./pages/approach/CoInnovatePage"; // Added new import
+import CoCreateLegacyPage from "./pages/approach/CoCreateLegacyPage";
 import ExtendPage from "./pages/approach/ExtendPage";
 
 // Import industry landing pages
@@ -68,7 +68,8 @@ const App = () => (
           
           {/* Approach pages */}
           <Route path="/approach/co-create" element={<CoCreatePage />} />
-          <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} /> {/* Updated route path */}
+          <Route path="/approach/co-innovate" element={<CoInnovatePage />} /> {/* Added new route */}
+          <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} />
           <Route path="/approach/extend" element={<ExtendPage />} />
           <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
           
