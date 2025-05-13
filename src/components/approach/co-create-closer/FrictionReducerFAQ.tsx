@@ -68,7 +68,7 @@ const FrictionReducerFAQ = () => {
               <div>
                 <h4 className="font-medium text-base text-gray-800 mb-2">Have specific product-market fit questions?</h4>
                 <Paragraph className="text-sm mb-0">
-                  Contact our product strategy team at <a href="mailto:product@elevatedigital.com" className="text-brand-600 hover:underline">product@elevatedigital.com</a> 
+                  Contact our product strategy team at <a href="mailto:create@lemonhq.co.uk" className="text-brand-600 hover:underline">create@lemonhq.co.uk</a> 
                   or book a 15-minute consultation to discuss your product-market fit challenges.
                 </Paragraph>
               </div>

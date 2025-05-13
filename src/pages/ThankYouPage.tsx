@@ -37,12 +37,12 @@ const ThankYouPage = () => {
             >
               Return to Home
             </Button>
-            <Button
+            {/* <Button
               onClick={() => navigate('/services')}
               className="bg-brand-500 hover:bg-brand-600 px-6"
             >
               Explore Our Services
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
