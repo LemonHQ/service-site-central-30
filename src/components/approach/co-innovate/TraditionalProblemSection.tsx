@@ -32,7 +32,7 @@ const TraditionalProblemSection = () => {
     <section className="py-16 bg-beige-100">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <H2 className="mb-6">Why traditional innovation approaches fail</H2>
+          <H2 className="mb-6">Why traditional innovation approaches fall short</H2>
           
           <div className="flex justify-center mb-8">
             <div className="h-1 w-20 bg-brand-500"></div>
@@ -40,7 +40,7 @@ const TraditionalProblemSection = () => {
           
           <Paragraph className="text-lg">
             In today's fast-paced market, the traditional "big bet" approach to 
-            product innovation is increasingly risky. Organizations that invest 
+            product innovation is increasingly risky. Brands that invest 
             heavily in untested ideas often face expensive failures and missed 
             opportunities.
           </Paragraph>

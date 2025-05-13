@@ -17,7 +17,7 @@ const RapidIterationHero = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-2 rounded-lg w-fit">
               <Zap className="h-4 w-4" />
-              <span className="text-sm font-medium">Rapid Product Innovation</span>
+              <span className="text-sm font-medium">Rapid product Innovation</span>
             </div>
             
             <H1>Co-<span className="text-brand-600">Innovate</span></H1>
@@ -37,7 +37,7 @@ const RapidIterationHero = () => {
               momentum through quick action and accelerated learning.
             </Paragraph>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/getting-started">
                 <Button size="lg" className="bg-brand-600 hover:bg-brand-700 w-full sm:w-auto">
                   Get started with rapid iteration <ArrowRight className="ml-2 h-4 w-4" />
@@ -52,7 +52,7 @@ const RapidIterationHero = () => {
                 <Calendar className="mr-2 h-4 w-4" />
                 Talk to an innovation expert
               </Button>
-            </div>
+            </div> */}
           </div>
           
           <div className="relative">
