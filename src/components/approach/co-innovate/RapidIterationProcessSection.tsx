@@ -8,7 +8,7 @@ const processSteps = [
     number: 1,
     icon: <Search className="h-10 w-10 text-brand-600" />,
     title: "Identify",
-    description: "Define innovation opportunities and challenges. Focus on specific customer pain points or market gaps that can be addressed with limited resource commitment."
+    description: "Define the opportunities and current market challenges. Focus on very specific customer pain points or market gaps that can be addressed with limited resource commitment."
   },
   {
     number: 2,
@@ -20,7 +20,7 @@ const processSteps = [
     number: 3,
     icon: <Layers className="h-10 w-10 text-brand-600" />,
     title: "Prototype",
-    description: "Build the simplest possible version. Focus on core functionality that tests your hypothesis—nothing more. Speed is essential at this stage."
+    description: "Build the simplest possible functional prototype. Focus on core features that tests your hypothesis—nothing more."
   },
   {
     number: 4,
@@ -35,13 +35,13 @@ const RapidIterationProcessSection = () => {
     <section className="py-16 bg-beige-100">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <H2 className="mb-6">The 4-Step Rapid Iteration Process</H2>
+          <H2 className="mb-6">The 4-Step rapid iteration process</H2>
           <div className="flex justify-center mb-8">
             <div className="h-1 w-20 bg-brand-500"></div>
           </div>
           <Paragraph className="text-lg">
-            Our structured approach helps teams move quickly from idea to validated concept,
-            maximizing learning while minimizing risk.
+            Our structured approach helps brands move quickly from idea to validated concept,
+            maximizing learning and minimizing risk.
           </Paragraph>
         </div>
         
@@ -78,7 +78,7 @@ const RapidIterationProcessSection = () => {
         </div>
         
         <div className="mt-20 text-center">
-          <H3 className="text-brand-700 mb-6">Rapid Iteration is Cyclical</H3>
+          <H3 className="text-brand-700 mb-6">Rapid iteration is cyclical</H3>
           <div className="max-w-2xl mx-auto">
             <Paragraph>
               Each cycle of the process feeds into the next, creating a continuous loop of 

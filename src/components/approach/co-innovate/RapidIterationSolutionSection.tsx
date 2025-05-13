@@ -36,7 +36,7 @@ const RapidIterationSolutionSection = () => {
             <Zap className="h-6 w-6 text-brand-600" />
           </div>
           
-          <H2 className="mb-6">The Rapid Iteration Advantage</H2>
+          <H2 className="mb-6">The rapid iteration advantage</H2>
           
           <div className="flex justify-center mb-8">
             <div className="h-1 w-20 bg-brand-500"></div>
@@ -44,7 +44,7 @@ const RapidIterationSolutionSection = () => {
           
           <Paragraph className="text-lg">
             Co-Innovate creates safe spaces for experimentation through rapid iteration cycles.
-            This approach delivers quick wins and continuous learning while minimizing the risk 
+            This approach builds the momementum to deliver quick wins and enables continuous learning while minimizing the risk 
             typically associated with innovation initiatives.
           </Paragraph>
         </div>

@@ -32,7 +32,7 @@ const RapidIterationHero = () => {
             </Lead>
             
             <Paragraph className="mb-8">
-              Co-Innovate transforms how organizations approach product innovation through rapid 
+              Co-Innovate transforms how brands approach product innovation through rapid 
               iteration cycles that limit financial exposure, minimize brand risk, and generate 
               momentum through quick action and accelerated learning.
             </Paragraph>
