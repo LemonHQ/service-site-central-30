@@ -68,24 +68,24 @@ const ProofSection = () => {
               <H4 className="text-brand-700">Measurable Results</H4>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">5X</div>
-                  <p className="text-sm text-center text-gray-600">Faster product idea validation</p>
+                <div className="flex flex-col items-center p-4 bg-teal-100 rounded-lg border border-teal-200">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">5X</div>
+                  <p className="text-sm text-center text-teal-800">Faster product idea validation</p>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">3X</div>
-                  <p className="text-sm text-center text-gray-600">Increase in product decision making</p>
+                <div className="flex flex-col items-center p-4 bg-teal-100 rounded-lg border border-teal-200">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">3X</div>
+                  <p className="text-sm text-center text-teal-800">Increase in product decision making</p>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">85%</div>
-                  <p className="text-sm text-center text-gray-600">Satisfaction with the prototype built</p>
+                <div className="flex flex-col items-center p-4 bg-teal-100 rounded-lg border border-teal-200">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">85%</div>
+                  <p className="text-sm text-center text-teal-800">Satisfaction with the prototype built</p>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">100%</div>
-                  <p className="text-sm text-center text-gray-600">Stakeholder alignment on new initiative</p>
+                <div className="flex flex-col items-center p-4 bg-teal-100 rounded-lg border border-teal-200">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">100%</div>
+                  <p className="text-sm text-center text-teal-800">Stakeholder alignment on new initiative</p>
                 </div>
               </div>
               
