@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { Step3Data, step3Schema } from './schema';
 import { timeframes } from './formConstants';
 import LeadFormButton from './LeadFormButton';
+import { Checkbox } from '@/components/ui/checkbox';
 
 interface Step3FormProps {
   defaultValues: Step3Data;
@@ -77,6 +78,20 @@ const Step3Form: React.FC<Step3FormProps> = ({
           {form.formState.errors.email && (
             <p className="text-red-500 text-sm mt-1">{form.formState.errors.email.message}</p>
           )}
+        </div>
+
+        {/* Marketing Consent */}
+        <div className="flex items-center space-x-2">
+          <Checkbox
+            id="marketing_consent"
+            {...form.register("marketing_consent")}
+          />
+          <label
+            htmlFor="marketing_consent"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            I agree to receive marketing communications about relevant products and services
+          </label>
         </div>
 
         <div className="pt-4 flex justify-between">

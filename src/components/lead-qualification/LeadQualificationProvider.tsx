@@ -20,7 +20,7 @@ interface LeadQualificationContextValue {
 
 const defaultStep1Data: Step1Data = { sectors: [], markets: '', brands: '', products: '' };
 const defaultStep2Data: Step2Data = { challenges: [] };
-const defaultStep3Data: Step3Data = { timeframe: '', email: '' };
+const defaultStep3Data: Step3Data = { timeframe: '', email: '', marketing_consent: false };
 
 const LeadQualificationContext = createContext<LeadQualificationContextValue | null>(null);
 
@@ -58,7 +58,8 @@ export const LeadQualificationProvider: React.FC<LeadQualificationProviderProps>
         products: step1Data.products || '',
         challenges: step2Data.challenges,
         timeframe: step3Data.timeframe,
-        email: step3Data.email
+        email: step3Data.email,
+        marketing_consent: step3Data.marketing_consent || false
       };
 
       const { error } = await supabase

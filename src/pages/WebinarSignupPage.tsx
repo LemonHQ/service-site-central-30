@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -8,9 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { supabase } from '@/integrations/supabase/client';
-import { CheckCircle, Clock, Users, Calendar } from 'lucide-react';
+import { CheckCircle, Clock, Users, Calendar, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import EcosystemPartnersCarousel from '@/components/approach/co-create-closer/EcosystemPartnersCarousel';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const WebinarSignupPage: React.FC = () => {
   const navigate = useNavigate();
@@ -23,12 +23,18 @@ const WebinarSignupPage: React.FC = () => {
     job_title: '',
     phone: '',
     industry: '',
-    questions: ''
+    questions: '',
+    marketing_consent: false
   });
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setFormData(prev => ({ ...prev, [name]: checked }));
   };
   
   const isWorkEmail = (email: string): boolean => {
@@ -283,6 +289,23 @@ const WebinarSignupPage: React.FC = () => {
                       placeholder="Share any specific topics or questions you'd like to discuss during the session"
                       className="h-32"
                     />
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <Checkbox
+                      id="marketing_consent"
+                      name="marketing_consent"
+                      checked={formData.marketing_consent}
+                      onCheckedChange={(checked) => 
+                        setFormData(prev => ({ ...prev, marketing_consent: checked === true }))
+                      }
+                    />
+                    <label
+                      htmlFor="marketing_consent"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      I agree to receive marketing communications about relevant products and services
+                    </label>
                   </div>
                   
                   <div className="pt-4">

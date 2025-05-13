@@ -14,6 +14,7 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          marketing_consent: boolean | null
           name: string
           question1_answer: number
           question10_answers: number[]
@@ -32,6 +33,7 @@ export type Database = {
           created_at?: string
           email: string
           id?: string
+          marketing_consent?: boolean | null
           name: string
           question1_answer: number
           question10_answers: number[]
@@ -50,6 +52,7 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+          marketing_consent?: boolean | null
           name?: string
           question1_answer?: number
           question10_answers?: number[]
@@ -72,6 +75,7 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          marketing_consent: boolean | null
           message: string
           name: string
           phone: string | null
@@ -82,6 +86,7 @@ export type Database = {
           created_at?: string
           email: string
           id?: string
+          marketing_consent?: boolean | null
           message: string
           name: string
           phone?: string | null
@@ -92,6 +97,7 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+          marketing_consent?: boolean | null
           message?: string
           name?: string
           phone?: string | null
@@ -106,6 +112,7 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          marketing_consent: boolean | null
           markets: string
           products: string
           sectors: string[]
@@ -117,6 +124,7 @@ export type Database = {
           created_at?: string
           email: string
           id?: string
+          marketing_consent?: boolean | null
           markets: string
           products: string
           sectors: string[]
@@ -128,6 +136,7 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+          marketing_consent?: boolean | null
           markets?: string
           products?: string
           sectors?: string[]
@@ -140,16 +149,19 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          marketing_consent: boolean | null
         }
         Insert: {
           created_at?: string
           email: string
           id?: string
+          marketing_consent?: boolean | null
         }
         Update: {
           created_at?: string
           email?: string
           id?: string
+          marketing_consent?: boolean | null
         }
         Relationships: []
       }
@@ -163,6 +175,7 @@ export type Database = {
           industry: string | null
           job_title: string
           last_name: string
+          marketing_consent: boolean | null
           phone: string | null
           questions: string | null
         }
@@ -175,6 +188,7 @@ export type Database = {
           industry?: string | null
           job_title: string
           last_name: string
+          marketing_consent?: boolean | null
           phone?: string | null
           questions?: string | null
         }
@@ -187,6 +201,7 @@ export type Database = {
           industry?: string | null
           job_title?: string
           last_name?: string
+          marketing_consent?: boolean | null
           phone?: string | null
           questions?: string | null
         }

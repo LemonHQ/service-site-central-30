@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from '@/components/ui/sonner';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const NewsletterSubscribe: React.FC = () => {
   const [email, setEmail] = useState('');
+  const [marketingConsent, setMarketingConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubscribe = async (e: React.FormEvent) => {
@@ -24,7 +26,8 @@ const NewsletterSubscribe: React.FC = () => {
       const { error } = await supabase
         .from('newsletter_subscriptions')
         .insert({
-          email: email
+          email: email,
+          marketing_consent: marketingConsent
         });
       
       console.log('Subscription response:', { error });
@@ -43,6 +46,7 @@ const NewsletterSubscribe: React.FC = () => {
       
       // Reset form
       setEmail('');
+      setMarketingConsent(false);
     } catch (error) {
       console.error('Error subscribing to newsletter:', error);
       toast.error('Failed to subscribe. Please try again later.');
@@ -57,23 +61,39 @@ const NewsletterSubscribe: React.FC = () => {
       <p className="text-gray-600 mb-4">
         Our bi-weekly newsletter delivers serverless, AI, tech trends, podcasts and blogs straight to your inbox.
       </p>
-      <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
-        <input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter email address" 
-          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 flex-grow"
-          required
-          disabled={isSubmitting}
-        />
-        <button 
-          type="submit" 
-          className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-        </button>
+      <form onSubmit={handleSubscribe} className="space-y-3">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <input 
+            type="email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email address" 
+            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 flex-grow"
+            required
+            disabled={isSubmitting}
+          />
+          <button 
+            type="submit" 
+            className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          </button>
+        </div>
+        
+        <div className="flex items-center space-x-2">
+          <Checkbox 
+            id="newsletter-marketing-consent"
+            checked={marketingConsent}
+            onCheckedChange={(checked) => setMarketingConsent(checked === true)} 
+          />
+          <label 
+            htmlFor="newsletter-marketing-consent" 
+            className="text-sm text-gray-600"
+          >
+            I agree to receive marketing communications
+          </label>
+        </div>
       </form>
       
       <div className="mt-6">

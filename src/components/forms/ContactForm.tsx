@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/form';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -26,6 +27,7 @@ const formSchema = z.object({
   phone: z.string().optional(),
   service: z.string().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  marketing_consent: z.boolean().default(false)
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -48,6 +50,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
       phone: '',
       service: '',
       message: '',
+      marketing_consent: false
     }
   });
 
@@ -64,7 +67,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
           company: data.company,
           phone: data.phone || null,
           service: data.service || null,
-          message: data.message
+          message: data.message,
+          marketing_consent: data.marketing_consent
         });
       
       if (error) {
@@ -197,6 +201,26 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
                     />
                   </FormControl>
                   <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="marketing_consent"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 md:col-span-2">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="font-normal text-sm text-gray-700">
+                      I agree to receive marketing communications about relevant products and services
+                    </FormLabel>
+                  </div>
                 </FormItem>
               )}
             />
