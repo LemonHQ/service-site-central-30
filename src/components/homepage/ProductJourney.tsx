@@ -96,8 +96,8 @@ const ProductJourney: React.FC = () => {
     <section className="section-padding bg-ivory-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Product Journey" 
-          subtitle="We partner with you through every stage of the product lifecycle, from initial concept to ongoing growth"
+          title="Expansion Journey" 
+          subtitle="We partner with you through every stage of the expansion lifecycle, from initial concept to expanding to multiple products and markets"
           centered
           className="mb-16"
         />
