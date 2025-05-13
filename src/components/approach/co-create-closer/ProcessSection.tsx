@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { CheckCircle, Users, Network, Globe, Layers, ChevronRight, Clock, Package, Database, Zap, ArrowRight, Target, MoveRight, LineChart } from 'lucide-react';
+import { CheckCircle, Users, Map, Layout, Layers, ChevronRight, Clock, Package, Database, Zap, ArrowRight, Target, MoveRight, LineChart } from 'lucide-react';
 import { H2, H4, Paragraph } from '@/components/ui/Typography';
 
 const processSteps = [
@@ -13,22 +12,22 @@ const processSteps = [
   },
   {
     step: 2,
-    title: "Value Proposition & Positioning",
-    description: "We develop a compelling value proposition that addresses the target customer's needs and positions your product within the competitive ecosystem landscape to create unique differentiation.",
+    title: "Digital Landscape Evaluation",
+    description: "We assess the core systems and platforms that can support your new digital experiences, mapping integration points and identifying ecosystem opportunities that will increase your product's value.",
     duration: "Week 2",
-    deliverables: ["Value proposition canvas", "Competitive positioning matrix", "Feature prioritization framework", "Ecosystem opportunity map"]
+    deliverables: ["System capability assessment", "Ecosystem opportunity map", "Integration framework", "Technical architecture blueprint"]
   },
   {
     step: 3,
-    title: "MVP Feature Set & Prototype",
-    description: "We define the minimum viable product feature set and develop interactive prototypes that demonstrate the core value proposition while enabling future ecosystem connectivity.",
+    title: "User Experience & Prototype",
+    description: "We develop user journey maps and interactive prototypes that demonstrate the core value proposition while enabling future ecosystem connectivity, focusing on the most critical user flows.",
     duration: "Week 3",
-    deliverables: ["MVP feature specification", "Interactive product prototype", "User journey maps", "Technical implementation roadmap"]
+    deliverables: ["User journey maps", "Experience wireframes", "Interactive prototype", "Feature prioritization framework"]
   },
   {
     step: 4,
-    title: "Product-Market Fit Validation",
-    description: "We validate the product solution with target users through structured testing sessions to gather feedback, refine the product concept, and establish metrics for measuring product-market fit.",
+    title: "Prototype Validation",
+    description: "We validate the prototype with target users through structured testing sessions to gather feedback, refine the product concept, and establish metrics for measuring product-market fit.",
     duration: "Week 4",
     deliverables: ["User testing results", "Product-market fit metrics", "Iteration plan", "Go-to-market strategy"]
   }
@@ -169,12 +168,12 @@ const ProcessSection = () => {
                 {step.step === 2 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <MoveRight className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Strong value propositions increase adoption rates by 75%</p>
+                      <Layout className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Products with ecosystem integration grow revenue 2.5x faster</p>
                     </div>
                     <div className="flex items-start">
-                      <Globe className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Ecosystem-aware positioning creates 2.5x more partnership opportunities</p>
+                      <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Ecosystem-aware products create 3x more partnership opportunities</p>
                     </div>
                   </div>
                 )}
@@ -182,12 +181,12 @@ const ProcessSection = () => {
                 {step.step === 3 && (
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">MVP prototypes reduce development rework by 60%</p>
+                      <Map className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Clear journey maps reduce development rework by 60%</p>
                     </div>
                     <div className="flex items-start">
-                      <Database className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products designed with future integration in mind grow 3x faster</p>
+                      <Layers className="w-5 h-5 text-brand-600 mr-2 mt-1" />
+                      <p className="text-sm">Interactive prototypes increase stakeholder alignment by 75%</p>
                     </div>
                   </div>
                 )}
@@ -196,11 +195,11 @@ const ProcessSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <LineChart className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">Products with defined PMF metrics reach profitability 2x faster</p>
+                      <p className="text-sm">User-validated products achieve 80% higher retention rates</p>
                     </div>
                     <div className="flex items-start">
                       <Zap className="w-5 h-5 text-brand-600 mr-2 mt-1" />
-                      <p className="text-sm">User-validated products achieve 80% higher retention rates</p>
+                      <p className="text-sm">Products with defined PMF metrics reach profitability 2x faster</p>
                     </div>
                   </div>
                 )}
