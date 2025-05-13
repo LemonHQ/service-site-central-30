@@ -8,7 +8,6 @@ import TargetAudienceSection from '@/components/approach/co-innovate/TargetAudie
 import RapidIterationProcessSection from '@/components/approach/co-innovate/RapidIterationProcessSection';
 import RapidIterationFAQ from '@/components/approach/co-innovate/RapidIterationFAQ';
 import RapidInnovationResponseSection from '@/components/approach/co-innovate/RapidInnovationResponseSection';
-import WebinarCtaSection from '@/components/approach/co-innovate/WebinarCtaSection';
 import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
 
 const CoInnovatePage = () => {
@@ -21,7 +20,6 @@ const CoInnovatePage = () => {
       <RapidIterationProcessSection />
       <RapidIterationFAQ />
       <RapidInnovationResponseSection />
-      <WebinarCtaSection />
       <InsightsCarousel limit={3} />
     </MainLayout>
   );
