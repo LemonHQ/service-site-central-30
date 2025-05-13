@@ -26,13 +26,12 @@ const ProofSection = () => {
                 <span className="text-sm font-medium">Featured Case Study</span>
               </div>
               
-              <H3 className="mb-4">Reinventing claims processing for a digital future</H3>
+              <H3 className="mb-4">Reinventing travel insurance for a digital future</H3>
               
               <Paragraph className="mb-6">
-                A leading insurance provider needed to reinvent their claims process to improve customer 
-                satisfaction and reduce operational costs. Through our Co-Create approach, we brought 
-                together their claims specialists, customer service teams, commercial stakeholders and our product team
-                for a 6-week engagement.
+                A multi-line insurer needed to expand their travel insurance offering from B2B to direct customers. The traditional business model of relying on 
+                3rd party brokers and agents required manual multi-step processing by customer service teams on legacy backoffice systems. Through our Co-Create approach, we brought 
+                together their product, customer service, commercial, sales teams for a 4-week engagement to validate the new D2C travel offering.
               </Paragraph>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -41,7 +40,7 @@ const ProofSection = () => {
                     <Clock className="h-5 w-5 text-brand-600 mr-2" />
                     <span className="font-medium text-gray-700">Timeline</span>
                   </div>
-                  <p className="text-brand-700 font-bold">6 Weeks</p>
+                  <p className="text-brand-700 font-bold">4 Weeks</p>
                   <p className="text-sm text-gray-600">From requirements to validated prototype</p>
                 </div>
                 
@@ -70,23 +69,23 @@ const ProofSection = () => {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">25%</div>
-                  <p className="text-sm text-center text-gray-600">Reduction in claims processing time</p>
+                  <div className="text-3xl font-bold text-brand-700 mb-1">5X</div>
+                  <p className="text-sm text-center text-gray-600">Faster product idea validation</p>
                 </div>
                 
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">30%</div>
-                  <p className="text-sm text-center text-gray-600">Increase in customer satisfaction scores</p>
+                  <div className="text-3xl font-bold text-brand-700 mb-1">3X</div>
+                  <p className="text-sm text-center text-gray-600">Increase in product decision making</p>
                 </div>
                 
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
                   <div className="text-3xl font-bold text-brand-700 mb-1">85%</div>
-                  <p className="text-sm text-center text-gray-600">Of customers reported easier claims navigation</p>
+                  <p className="text-sm text-center text-gray-600">Satisfaction with the prototype built</p>
                 </div>
                 
                 <div className="flex flex-col items-center p-4 bg-white rounded-lg border border-brand-100">
-                  <div className="text-3xl font-bold text-brand-700 mb-1">28%</div>
-                  <p className="text-sm text-center text-gray-600">Reduction in customer support calls</p>
+                  <div className="text-3xl font-bold text-brand-700 mb-1">100%</div>
+                  <p className="text-sm text-center text-gray-600">Stakeholder alignment on new initiative</p>
                 </div>
               </div>
               
