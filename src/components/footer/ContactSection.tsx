@@ -11,8 +11,8 @@ const ContactSection: React.FC = () => {
       <h4 className="text-lg font-semibold text-brand-600">Get in Touch</h4>
       <div className="flex items-center">
         <Mail size={16} className="mr-2 text-brand-500" />
-        <a href="mailto:create@lemonhq.io" className="text-brand-500 hover:underline">
-          create@lemonhq.io
+        <a href="mailto:create@lemonhq.co.uk" className="text-brand-500 hover:underline">
+          create@lemonhq.co.uk
         </a>
       </div>
       

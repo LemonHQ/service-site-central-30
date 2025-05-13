@@ -118,7 +118,7 @@ const CookiePolicy = () => {
             If you have any questions about our use of cookies or this Cookie Policy, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> privacy@lemonhq.io<br />
+            <strong>Email:</strong> privacy@lemonhq.co.uk<br />
             <strong>Address:</strong> 128, City Road, London, England, EC1V 2NX
           </p>
         </div>

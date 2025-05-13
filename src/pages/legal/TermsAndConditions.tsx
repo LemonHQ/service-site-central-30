@@ -113,7 +113,7 @@ const TermsAndConditions = () => {
             If you have any questions about these Terms, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> legal@lemonhq.io<br />
+            <strong>Email:</strong> legal@lemonhq.co.uk<br />
             <strong>Address:</strong> 128, City Road, London, England, EC1V 2NX
           </p>
         </div>
