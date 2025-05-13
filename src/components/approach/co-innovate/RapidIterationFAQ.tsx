@@ -31,7 +31,7 @@ const RapidIterationFAQ = () => {
       faqs={faqs}
       title="Frequently Asked Questions"
       subtitle="Get answers to common questions about our rapid iteration approach"
-      backgroundColor="bg-green-50"
+      backgroundColor="bg-slate-50"
     />
   );
 };

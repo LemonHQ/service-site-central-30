@@ -25,7 +25,7 @@ const FaqSectionComponent = () => {
   return (
     <FaqSection 
       faqs={faqItems}
-      backgroundColor="bg-white"
+      backgroundColor="bg-slate-50"
     />
   );
 };
