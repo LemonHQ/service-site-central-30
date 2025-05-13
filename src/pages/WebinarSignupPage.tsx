@@ -60,7 +60,7 @@ const WebinarSignupPage: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Use type assertion to work around TypeScript error
+      // Use type assertion to work around TypeScript error with the new table
       const { error } = await (supabase as any).from('webinar_registrations').insert([formData]);
       
       if (error) {

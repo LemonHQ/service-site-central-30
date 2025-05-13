@@ -153,6 +153,45 @@ export type Database = {
         }
         Relationships: []
       }
+      webinar_registrations: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          industry: string | null
+          job_title: string
+          last_name: string
+          phone: string | null
+          questions: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          industry?: string | null
+          job_title: string
+          last_name: string
+          phone?: string | null
+          questions?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          industry?: string | null
+          job_title?: string
+          last_name?: string
+          phone?: string | null
+          questions?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
