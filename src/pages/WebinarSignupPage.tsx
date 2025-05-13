@@ -39,7 +39,8 @@ const WebinarSignupPage: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase.from('webinar_registrations').insert([formData]);
+      // Use type assertion to work around TypeScript error
+      const { error } = await (supabase as any).from('webinar_registrations').insert([formData]);
       
       if (error) {
         if (error.code === '23505') {
