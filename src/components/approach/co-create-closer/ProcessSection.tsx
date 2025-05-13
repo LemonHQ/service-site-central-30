@@ -48,8 +48,9 @@ const ProcessSection = () => {
           <H2 className="mb-6">The Product Co-Create Process</H2>
           
           <Paragraph className="text-lg">
-            Our structured 4-week process follows Dan Olsen's proven product-market fit methodology to transform your 
-            idea into a market-validated solution with ecosystem integration potential.
+            Our focused 4-week process helps transform your product idea into a validated concept, 
+            ready for development but without the execution phase. We guide you through the critical 
+            early stages that set the foundation for successful product development.
           </Paragraph>
         </div>
         
