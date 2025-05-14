@@ -33,15 +33,15 @@ const SolutionCard = ({ title, problem, solution, icon: Icon }) => {
 const SolutionSection = () => {
   const solutions = [
     {
-      title: "Product roadmap",
-      problem: "Siloed products that can't connect to wider ecosystems, limiting growth and market reach",
-      solution: "Strategic sessions to map product roadmap and design platform capabilities that enable multi-market participation",
+      title: "Platform roadmap",
+      problem: "Siloed initiatives that can't connect to wider ecosystems, limiting expansion and market reach",
+      solution: "Strategic sessions to map digital plaform roadmap that enable multi-market participation",
       icon: Network
     },
     {
       title: "Prototyping",
       problem: "Inability to validate product capabilities and integration before costly development of connection points",
-      solution: "Rapidly develop and test user ready prototypes, models, and digital touchpoints",
+      solution: "Rapidly develop and test functional interactive prototypes for each use case",
       icon: Layers
     },
     {
@@ -53,7 +53,7 @@ const SolutionSection = () => {
     {
       title: "Design Studio",
       problem: "Disjointed user experiences when customers move between your products and touchpoints",
-      solution: "Create coherent cross-ecosystem journeys that maintain your brand identity while enabling frictionless backend integration",
+      solution: "Create coherent cross-ecosystem journeys that maintain your brand identity while enabling frictionless customer experiences across touchpoints",
       icon: Globe
     }
   ];
