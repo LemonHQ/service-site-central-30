@@ -31,21 +31,21 @@ const ResponseSection = () => {
                   </div>
                 </div>
                 
-                <H4 className="text-center mb-4">Ecosystem Assessment</H4>
+                <H4 className="text-center mb-4">Ecosystem assessment</H4>
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">5-minute platform readiness quiz</span>
+                    <span className="text-sm">1-minute ecosystem readiness assessment</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Ecosystem opportunity analysis</span>
+                    <span className="text-sm">Ecosystem report</span>
                   </li>
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-sm">Personalized integration strategy</span>
-                  </li>
+                  </li> */}
                 </ul>
                 
                 <Link to="/approach/co-create-assessment" className="w-full">
@@ -57,9 +57,9 @@ const ResponseSection = () => {
             </Card>
             
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow border-0 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-700 text-white px-4 py-1 rounded-full">
+              {/* <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-700 text-white px-4 py-1 rounded-full">
                 <span className="text-sm font-medium">Most Popular</span>
-              </div>
+              </div> */}
               
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-6">
@@ -68,30 +68,30 @@ const ResponseSection = () => {
                   </div>
                 </div>
                 
-                <H4 className="text-center mb-4">Ecosystem Strategy Session</H4>
+                <H4 className="text-center mb-4">Intro to ecosystem strategy</H4>
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">90-minute ecosystem mapping</span>
+                    <span className="text-sm">30-minute ecosystem session with expert</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Platform capability assessment</span>
+                    <span className="text-sm">Why ecosystems now?</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Integration opportunity canvas</span>
+                    <span className="text-sm">How they create value?</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Ecosystem investment roadmap</span>
+                    <span className="text-sm">How can you gain a competitive edge?</span>
                   </li>
                 </ul>
                 
                 <Link to="/webinar-signup" className="w-full">
                   <Button className="w-full bg-brand-600 hover:bg-brand-700">
-                    Sign Up For The Session
+                    Learn more
                   </Button>
                 </Link>
               </CardContent>
@@ -105,21 +105,21 @@ const ResponseSection = () => {
                   </div>
                 </div>
                 
-                <H4 className="text-center mb-4">Ecosystem Success Stories</H4>
+                <H4 className="text-center mb-4">Success Stories</H4>
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-sm">Digital ecosystem case studies</span>
                   </li>
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-sm">Platform integration playbook</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-sm">Ecosystem ROI calculator</span>
-                  </li>
+                  </li> */}
                 </ul>
                 
                 <Link to="/case-studies" className="w-full">
