@@ -39,7 +39,7 @@ const ProblemSection = () => {
           </div>
           
           <Paragraph className="text-lg">
-            The era of standalone initiatives is outdated.. Today's most successful enterprises 
+            The era of disconnected initiatives is over. Today's most successful enterprises 
             build platforms that connect to broader digital ecosystems, enabling partnerships 
             and creating value networks that isolated products simply cannot match.
           </Paragraph>
