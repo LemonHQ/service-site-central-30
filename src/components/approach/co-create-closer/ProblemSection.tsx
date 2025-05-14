@@ -41,7 +41,7 @@ const ProblemSection = () => {
           <Paragraph className="text-lg">
             The era of disconnected initiatives is over. Today's most successful enterprises 
             build platforms that connect to broader digital ecosystems, enabling partnerships 
-            and creating value networks that isolated products simply cannot match.
+            and creating value networks that isolated initiatives simply cannot match.
           </Paragraph>
         </div>
         
