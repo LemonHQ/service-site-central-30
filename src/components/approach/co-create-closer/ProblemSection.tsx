@@ -32,14 +32,14 @@ const ProblemSection = () => {
     <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <H2 className="mb-6">Why siloed products limit your potential</H2>
+          <H2 className="mb-6">Why siloed initiatives limit your potential</H2>
           
           <div className="flex justify-center mb-8">
             <div className="h-1 w-20 bg-red-500"></div>
           </div>
           
           <Paragraph className="text-lg">
-            The era of standalone products is ending. Today's most successful enterprises 
+            The era of standalone initiatives is outdated.. Today's most successful enterprises 
             build platforms that connect to broader digital ecosystems, enabling partnerships 
             and creating value networks that isolated products simply cannot match.
           </Paragraph>
