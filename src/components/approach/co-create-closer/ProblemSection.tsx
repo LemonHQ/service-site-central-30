@@ -8,7 +8,7 @@ const problemCards = [
   {
     icon: <Share2 className="h-8 w-8 text-red-500" />,
     title: "Ecosystem Fragmentation",
-    description: "Companies with isolated products are being outperformed by those who build connected platforms that participate in multiple ecosystems."
+    description: "Companies with isolated initiatives are being outperformed by those who build connected platforms that participate in multiple ecosystems."
   },
   {
     icon: <Ban className="h-8 w-8 text-red-500" />,
@@ -18,12 +18,12 @@ const problemCards = [
   {
     icon: <Network className="h-8 w-8 text-red-500" />,
     title: "Product Inconsistencies",
-    description: "Without a cohesive plarform strategy, products use different technologies, stacks and standards, making expansion costly and complex ."
+    description: "Without a cohesive plarform strategy, initiatives use different technologies, stacks and standards, making expansion costly and complex ."
   },
   {
     icon: <Globe className="h-8 w-8 text-red-500" />,
     title: "Limited Extensibility",
-    description: "Single-purpose products cannot easily extend to multiple markets and other product lines."
+    description: "Single-purpose initiatives cannot easily extend to multiple markets and other product lines."
   }
 ];
 

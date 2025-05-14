@@ -69,7 +69,7 @@ const SolutionSection = () => {
           <H2 className="mb-6">Create multi-product ecosystems</H2>
           
           <Paragraph className="text-lg">
-            Our Co-Create framework enables your organization to design create extensible multi-product platforms that integrate with complementary services, and create exponential value across markets.
+            Our Co-Create framework enables your organization to design, create extensible multi-product, multi-market platforms that integrate with complementary services, partners and create exponential value across markets.
           </Paragraph>
         </div>
         
@@ -89,11 +89,11 @@ const SolutionSection = () => {
           <div className="flex items-start gap-4">
             <CheckCircle className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />
             <div>
-              <H4 className="text-brand-700 mb-2">Beyond isolated products</H4>
+              <H4 className="text-brand-700 mb-2">Beyond isolated initiatives</H4>
               <Paragraph>
-                Co-Create isn't just another product development methodology. It's a strategic framework for 
+                Co-Create isn't just another product goto market methodology. It's a strategic framework for 
                 designing digital offerings that thrive in connected ecosystems, creating value beyond 
-                what any single product could deliver in isolation.
+                what any single initiatives could deliver in isolation.
               </Paragraph>
             </div>
           </div>
