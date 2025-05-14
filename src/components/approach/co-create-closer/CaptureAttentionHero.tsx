@@ -31,11 +31,11 @@ const CaptureAttentionHero = () => {
             </div>
             
             <Lead className="text-brand-700 font-semibold">
-              Co-Create: The framework that transforms siloed products into connected ecosystem platforms
+              Co-Create: The framework that transforms siloed initiatives into connected ecosystem platforms
             </Lead>
             
             <Paragraph className="mb-8">
-               In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all products. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven solutions that resonate with specific segments extending your market reach, and creating value that isolated products simply cannot match.
+               In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all initiatives. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven packages that resonate with specific segments extending reach, and creating value that isolated products simply cannot match.
             </Paragraph>
             
             <div className="flex flex-col sm:flex-row gap-4">
