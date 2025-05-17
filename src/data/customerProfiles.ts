@@ -119,45 +119,44 @@ export const customerProfiles: ServiceCustomerProfiles = {
   'expand-product-offerings': [
     {
       type: 'early-stage',
-      title: 'Digital Transformers',
-      description: 'Companies taking their first steps in digitalizing existing product lines',
+      title: 'Early Expansion',
+      description: 'Move beyond a single product or market',
       challenges: [
-        'Limited digital expertise in-house',
-        'Uncertainty about digital product strategy',
-        'Legacy systems and processes',
+        'Product-market fit varies across regions or segments',
+        'Core product isn’t resonating with new audiences',
+        'Limited internal capacity to test new directions quickly',
         'Resistance to change'
       ],
-      serviceFit: 'Our product digitalization approach provides clear roadmaps, capability building, and expertise to ensure successful transformation of your product lines.',
+      serviceFit: 'We create modular product extensions, and test new offerings with minimal disruption to your core',
       icon: Check,
       colorClass: 'text-green-600',
       bgColorClass: 'bg-[#F2FCE2]'
     },
     {
       type: 'growth',
-      title: 'Digital Accelerators',
-      description: 'Organizations with some digital products looking to modernize their digital portfolio',
+      title: 'Portfolio Diversification',
+      description: 'Broaden your offering across use cases, personas, or industries',
       challenges: [
-        'Scaling digital infrastructure',
-        'Unifying customer experience across products',
-        'Building product development velocity',
-        'Measuring digital product performance'
+        'Fragmented product experiences across business units',
+        'Missed cross-sell and upsell opportunities',
+        'Innovation backlog due to siloed teams or tech constraints'
       ],
-      serviceFit: 'We help accelerate your digital product modernization with scalable platforms, shared components, and metrics frameworks that drive continuous improvement.',
+      serviceFit: 'We develop unified frameworks to extend products into new categories while preserving a consistent experience and backend architecture',
       icon: AlertTriangle,
       colorClass: 'text-amber-600',
       bgColorClass: 'bg-[#FEF7CD]'
     },
     {
       type: 'mature',
-      title: 'Digital Innovators',
-      description: 'Established digital companies seeking to innovate and optimize their product portfolio',
+      title: 'Market-Specific Scaling',
+      description: 'Tailor and roll out offerings across new geographies or verticals',
       challenges: [
-        'Finding new growth opportunities',
-        'Optimizing product development processes',
-        'Integrating emerging technologies',
+        'Slow localization or regulatory adaptation',
+        'Teams rebuilding similar features for different markets',
+        'Difficulty balancing global consistency with local relevance',
         'Maintaining competitive advantage'
       ],
-      serviceFit: 'Our innovation services help mature digital businesses evolve through emerging technology integration, optimization strategies, and next-generation product concepts.',
+      serviceFit: 'We create scalable experience models and toolkits that make market-specific rollout faster, lighter, and more cost-effective',
       icon: Info,
       colorClass: 'text-blue-600',
       bgColorClass: 'bg-[#D3E4FD]'
