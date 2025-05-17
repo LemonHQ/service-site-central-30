@@ -5,8 +5,12 @@ import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
+import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
 
 const DigitalizeProductPage = () => {
+   // Get customer profiles for this service
+    const customerProfiles = getCustomerProfilesByServiceSlug('digitalize-product-lines');
+
   return (
     <ServiceLandingTemplate
       title="Digitalize Product Lines"
@@ -18,6 +22,9 @@ const DigitalizeProductPage = () => {
       quotePanel={serviceQuotes['digitalize-product-lines']}
       featuredCaseStudy="snacks-direct-to-consumer"
       showConsultingPanel={true}
+      customerProfiles={customerProfiles}
+      customerProfilesTitle="Who is unify brand experience for"
+      customerProfilesSubtitle="With you at different stages of your brand journey"
       features={[
         {
           title: "Decouple products",
