@@ -20,12 +20,8 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   {
     name: "Samsung",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
-  },                       
+  },
   {
-    name: "Informa",
-    logo: "https://www.wikicorporates.org/mediawiki/images/a/af/Informa-2018.svg"
-  },  
- {
     name: "Bridgestone",
     logo: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Bridgestone_logo.svg"
   },
@@ -44,10 +40,20 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   {
     name: "Liva",
     logo: "https://companieslogo.com/img/orig/LIVA.OM-38255c53.svg"
-  }, {
+  }, 
+  {
     name: "Abdul Latif Jameel",
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Logo-Abdul-Latif-Jameel-co.png"
-  }, {
+  },                       
+  {
+    name: "Informa",
+    logo: "https://www.wikicorporates.org/mediawiki/images/a/af/Informa-2018.svg"
+  },  
+  {
+    name: "DWTC",
+    logo: "public/assets/imgs/DWTC-Logo-850x560.png"
+  },
+ {
     name: "OQ",
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_of_OQ_Chemicals.svg"
   }, {
