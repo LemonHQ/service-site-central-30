@@ -80,7 +80,7 @@ export const customerProfiles: ServiceCustomerProfiles = {
         'Legacy systems and processes',
         'Resistance to change'
       ],
-      serviceFit: 'Our product digitalization approach provides clear roadmaps, capability building, and change management to ensure successful transformation of your product lines.',
+      serviceFit: 'Our product digitalization approach provides clear roadmaps, capability building, and expertise to ensure successful transformation of your product lines.',
       icon: Check,
       colorClass: 'text-green-600',
       bgColorClass: 'bg-[#F2FCE2]'
@@ -88,14 +88,14 @@ export const customerProfiles: ServiceCustomerProfiles = {
     {
       type: 'growth',
       title: 'Digital Accelerators',
-      description: 'Organizations with some digital products looking to expand their digital portfolio',
+      description: 'Organizations with some digital products looking to modernize their digital portfolio',
       challenges: [
         'Scaling digital infrastructure',
         'Unifying customer experience across products',
         'Building product development velocity',
         'Measuring digital product performance'
       ],
-      serviceFit: 'We help accelerate your digital product expansion with scalable platforms, shared components, and metrics frameworks that drive continuous improvement.',
+      serviceFit: 'We help accelerate your digital product modernization with scalable platforms, shared components, and metrics frameworks that drive continuous improvement.',
       icon: AlertTriangle,
       colorClass: 'text-amber-600',
       bgColorClass: 'bg-[#FEF7CD]'

@@ -23,8 +23,8 @@ const DigitalizeProductPage = () => {
       featuredCaseStudy="snacks-direct-to-consumer"
       showConsultingPanel={true}
       customerProfiles={customerProfiles}
-      customerProfilesTitle="Who is unify brand experience for"
-      customerProfilesSubtitle="With you at different stages of your brand journey"
+      customerProfilesTitle="Who is digitalize product lines for"
+      customerProfilesSubtitle="With you at different stages of your product journey"
       features={[
         {
           title: "Decouple products",
