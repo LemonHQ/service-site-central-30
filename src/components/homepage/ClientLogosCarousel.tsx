@@ -51,7 +51,7 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
   },  
   {
     name: "DWTC",
-    logo: "public/assets/imgs/DWTC-Logo-850x560.png"
+    logo: "/assets/imgs/DWTC-Logo-850x560.png"
   },
  {
     name: "OQ",
