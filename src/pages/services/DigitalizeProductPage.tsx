@@ -10,8 +10,8 @@ const DigitalizeProductPage = () => {
   return (
     <ServiceLandingTemplate
       title="Digitalize Product Lines"
-      subtitle="Transform legacy offerings into modern digital products"
-      description="We help organizations transform traditional products and services into modern digital experiences. Our approach leverages cloud, mobile, and data analytics to create new revenue streams and improve customer engagement."
+      subtitle="Transform legacy products into modern digital offerings"
+      description="In an era of platform-based competition leading enterprises are re-architecting their core products into modular, insight-driven, platform-ready offerings ready to support new business models."
       ctaText="Digitalize Your Products"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -20,43 +20,43 @@ const DigitalizeProductPage = () => {
       showConsultingPanel={true}
       features={[
         {
-          title: "Cloud-Native Development",
-          description: "Build scalable and resilient digital products on leading cloud platforms.",
+          title: "Decouple products",
+          description: "Decompose traditional products into stand-alone offerings customized around a specific customer segment",
           icon: Cloud
         },
         {
-          title: "Mobile-First Design",
-          description: "Create engaging mobile experiences that reach customers on any device.",
+          title: "Monetize emerging business models",
+          description: "Repackage existing offerings into subscription-based digital services with tiered access and recurring revenue",
           icon: Rocket
         },
         {
-          title: "Data-Driven Insights",
-          description: "Leverage data analytics to personalize experiences and optimize product performance.",
+          title: "Accelerate sales pipelines",
+          description: "Expand product reach consistently across multiple customer touchpoints and partners",
           icon: Lightbulb
         },
         {
-          title: "Secure & Compliant",
-          description: "Ensure your digital products meet the highest standards for security and compliance.",
+          title: "Surface new capabilities",
+          description: "Extend the capability of the core product to unlock adjacent value streams and accelerate ecosystem integration",
           icon: ShieldCheck
         },
         {
-          title: "API-First Architecture",
-          description: "Design products with open APIs for seamless integration with other systems.",
+          title: "Derisk compliance",
+          description: "Embed regulatory adherence at the core, ensuring new product lines are market-ready, audit-ready, and regulator-proof",
           icon: FileCode2
         },
         {
-          title: "Customer-Centric Design",
-          description: "Focus on user needs and preferences to create delightful product experiences.",
+          title: "Modernize legacy experiences",
+          description: "Redesing product journeys and experiences for a digital-first customer",
           icon: Users
         }
       ]}
       featuresTitle="Use cases we solve for"
-      featuresSubtitle="Comprehensive solutions for transforming traditional products into digital experiences"
+      featuresSubtitle="Comprehensive solutions for transforming traditional products into modern digital-first experiences"
       benefits={[
         "New revenue streams from digital products",
         "Improved customer engagement and loyalty",
-        "Reduced costs through automation and efficiency",
-        "Faster time-to-market for new products",
+        "Reduced costs through standardization and efficiency",
+        "Faster time-to-market for new offers",
         "Better data-driven decision making",
         "Increased agility and innovation"
       ]}
