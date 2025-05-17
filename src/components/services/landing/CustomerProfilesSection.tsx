@@ -1,9 +1,7 @@
 
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React from 'react';
 import { CustomerProfile } from '@/data/customerProfiles';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { H3, Paragraph } from '@/components/ui/Typography';
 
@@ -20,16 +18,6 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
   subtitle = "With you at different stages of your brand journey",
   className
 }) => {
-  // Track expanded state for each profile
-  const [expandedStates, setExpandedStates] = useState<{[key: string]: boolean}>({});
-
-  const toggleExpanded = (profileTitle: string) => {
-    setExpandedStates(prev => ({
-      ...prev,
-      [profileTitle]: !prev[profileTitle]
-    }));
-  };
-
   if (!profiles || profiles.length === 0) {
     return null;
   }
@@ -45,7 +33,6 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {profiles.map((profile, index) => {
-            const isExpanded = !!expandedStates[profile.title];
             const Icon = profile.icon;
             
             return (
@@ -67,34 +54,21 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                 <CardContent className="p-6">
                   <Paragraph className="mb-4">{profile.description}</Paragraph>
                   
-                  <Collapsible 
-                    open={isExpanded} 
-                    onOpenChange={() => toggleExpanded(profile.title)}
-                    className="space-y-2"
-                  >
-                    <CollapsibleTrigger className="flex items-center justify-between w-full text-left py-2 text-sm font-medium text-brand-500 hover:text-brand-600">
-                      <span>View details</span>
-                      <ChevronDown 
-                        className={`h-4 w-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} 
-                      />
-                    </CollapsibleTrigger>
+                  <div className="mt-4 space-y-4">
+                    <div>
+                      <h4 className="text-sm font-semibold mb-2">Typical Challenges:</h4>
+                      <ul className="list-disc pl-6 space-y-1">
+                        {profile.challenges.map((challenge, i) => (
+                          <li key={i} className="text-gray-700 text-sm">{challenge}</li>
+                        ))}
+                      </ul>
+                    </div>
                     
-                    <CollapsibleContent className="mt-4 space-y-4 animate-accordion-down">
-                      <div>
-                        <h4 className="text-sm font-semibold mb-2">Typical Challenges:</h4>
-                        <ul className="list-disc pl-6 space-y-1">
-                          {profile.challenges.map((challenge, i) => (
-                            <li key={i} className="text-gray-700 text-sm">{challenge}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-sm font-semibold mb-2">How Our Services Help:</h4>
-                        <p className="text-gray-700 text-sm">{profile.serviceFit}</p>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
+                    <div>
+                      <h4 className="text-sm font-semibold mb-2">How Our Services Help:</h4>
+                      <p className="text-gray-700 text-sm">{profile.serviceFit}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             );
