@@ -5,43 +5,40 @@ import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-r
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
+import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
+
 
 const ExpandOfferingsPage = () => {
+  // Get customer profiles for this service
+  const customerProfiles = getCustomerProfilesByServiceSlug('expand-product-offerings');
   return (
     <ServiceLandingTemplate
       title="Expand Product Offerings"
       subtitle="Innovate and grow your digital portfolio"
-      description="We help organizations identify and develop new digital products and services that align with customer needs and business goals. Our approach combines market research, customer insights, and rapid prototyping to accelerate innovation and drive growth."
+      description=" We partner with leading enterprise brands to turn core strengths into new offerings tailored for emerging segments, untapped markets, and evolving customer needs."
       ctaText="Expand Your Digital Portfolio"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
       quotePanel={serviceQuotes['expand-product-offerings']}
       featuredCaseStudy="ai-powered-financial-advisor"
       showConsultingPanel={true}
+      customerProfiles={customerProfiles}
+      customerProfilesTitle="Who is expand product offerings for"
+      customerProfilesSubtitle="With you at different stages of your expansion journey"
       features={[
         {
-          title: "Market Opportunity Analysis",
-          description: "Identify untapped market segments and high-potential product opportunities through data-driven research.",
-          icon: Search
-        },
-        {
-          title: "Product Portfolio Strategy",
-          description: "Develop strategic frameworks for expanding your product portfolio in alignment with business objectives.",
+          title: "Build once, use everywhere",
+          description: "Reconfigure offerings to meet the specific needs of regional, sectoral, or demographic markets",
           icon: Target
         },
         {
-          title: "Rapid Prototyping & Validation",
-          description: "Quickly test new product concepts with target customers to validate demand before full investment.",
-          icon: Expand
-        },
-        {
-          title: "Digital Business Model Design",
-          description: "Create innovative revenue models and pricing strategies for new digital offerings.",
+          title: "Extend product lines to adjacent categories",
+          description: "Cross sell complementary products and services bundles customers are likely to need next",
           icon: Network
         },
         {
-          title: "Go-to-Market Planning",
-          description: "Comprehensive launch planning to ensure successful market entry and early adoption.",
+          title: "Segment specific expansion",
+          description: "Expand existing products into differentiated offerings based on distinct price points, feature sets, or service models",
           icon: LineChart
         }
       ]}

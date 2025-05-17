@@ -15,7 +15,7 @@ const DigitalizeProductPage = () => {
     <ServiceLandingTemplate
       title="Digitalize Product Lines"
       subtitle="Transform legacy products into modern digital offerings"
-      description="In an era of platform-based competition leading enterprises are re-architecting their core products into modular, insight-driven, platform-ready offerings ready to support new business models."
+      description="We partner with leading enterprises to re-architect their core products into modular, data-rich, and platform-ready offerings—designed to enable rapid innovation and unlock emerging business models."
       ctaText="Digitalize Your Products"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
