@@ -86,7 +86,7 @@ const ExpandOfferingsPage = () => {
       ]}
     >
        {/* Product Journey Section */}
-       <ProductJourney /> 
+       {/* <ProductJourney />  */}
 
       <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
     </ServiceLandingTemplate>
