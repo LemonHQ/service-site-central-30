@@ -5,7 +5,6 @@ import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
-import TargetAudienceSection from '@/components/approach/product-digitalization/TargetAudienceSection';
 
 const DigitalizeProductPage = () => {
   return (
@@ -93,7 +92,6 @@ const DigitalizeProductPage = () => {
         }
       ]}
     >
-      <TargetAudienceSection />
       <ProductJourney />
       <ClientLogosCarousel title="Our clients" subtitle="Enterprise brands we've partnered with to reimagine, reshape and redefine the way people experience their businesses." />
     </ServiceLandingTemplate>
