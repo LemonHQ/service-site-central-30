@@ -34,6 +34,14 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
     logo: "https://upload.wikimedia.org/wikipedia/en/8/8c/RSA_Insurance_Group_%28emblem%29.svg"
   }, 
   {
+    name: "DAMAC",
+    logo: "/assets/imgs/Damac_logo.svg"
+  }, 
+  {
+    name: "MERAAS",
+    logo: "/assets/imgs/Meraas-logo.svg"
+  }, 
+  {
     name: "Liva",
     logo: "https://companieslogo.com/img/orig/LIVA.OM-38255c53.svg"
   }, {
