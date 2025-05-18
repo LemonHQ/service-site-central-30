@@ -9,8 +9,8 @@ const ScaleExperiencesPage = () => {
   return (
     <ServiceLandingTemplate
       title="Scale Digital Experiences"
-      subtitle="Build systems that support rapid growth"
-      description="We help organizations create scalable digital platforms that can grow with your business. Our approach focuses on building flexible architectures and development practices that allow you to quickly adapt to changing market conditions and customer needs."
+      subtitle="Deliver unified, high-quality digital experiences—at enterprise scale"
+      description="We partner with leading enteprises to replace fragmented, inconsistent digital delivery with a scalable foundation that supports multiple brands, markets, and products—without sacrificing speed, flexibility, or experience quality."
       ctaText="Scale Your Digital Presence"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -19,39 +19,34 @@ const ScaleExperiencesPage = () => {
       showConsultingPanel={true}
       features={[
         {
-          title: "Scalable Architecture Design",
-          description: "Create flexible architectures that can handle increasing traffic and data volumes.",
+          title: "Market share expansion",
+          description: "Operationalize and scale early success to sustained, multi-market impact",
           icon: Database
         },
         {
-          title: "Automated Deployment Pipelines",
-          description: "Implement CI/CD pipelines for rapid and reliable deployments.",
+          title: "Distribution expansion",
+          description: "Apart from owned channels reach customers where they already are - 3rd party marketplaces, platforms and products",
+          icon: Database
+        },
+        {
+          title: "Vertical integration",
+          description: "Conenct upstream or downstream services seamlessly across the customer experience",
           icon: Globe
         },
         {
-          title: "Cloud Infrastructure Management",
-          description: "Optimize cloud infrastructure for performance and cost efficiency.",
+          title: "Horinzontal integration",
+          description: "Deliver a unified experience that reflects the full depth of your brand and product portfolios",
           icon: Settings
-        },
-        {
-          title: "Performance Monitoring and Optimization",
-          description: "Implement monitoring tools and practices to ensure optimal performance.",
-          icon: BarChart2
-        },
-        {
-          title: "Disaster Recovery Planning",
-          description: "Develop strategies to minimize downtime and data loss.",
-          icon: Shield
         },
       ]}
       featuresTitle="Use cases we solve for"
       featuresSubtitle="Solutions to help your digital platforms grow efficiently and reliably"
       benefits={[
-        "Improved performance and reliability",
-        "Reduced downtime and data loss",
-        "Increased agility and responsiveness",
-        "Lower infrastructure costs",
-        "Better customer experience",
+        "Build sustainable competitive moats",
+        "Convert early wins into multi-market opportunities",
+        "Respond to market signals faster",
+        "Bridge business unit siloes",
+        "Deliver experiences customers expect",
       ]}
       relatedServices={[
         {

@@ -19,8 +19,8 @@ const StandardizePortfolioPage = () => {
       showConsultingPanel={true}
       features={[
         {
-          title: "Digital Product Taxonomy",
-          description: "Create a structured classification system for your digital product portfolio.",
+          title: "Fragemented Experiences",
+          description: "",
           icon: Grid
         },
         {
