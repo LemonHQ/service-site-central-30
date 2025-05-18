@@ -1,6 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Maximize, Globe, Shield, BarChart2, Settings } from 'lucide-react';
+import { Maximize, Globe, Shield, BarChart2, Settings, Database } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 

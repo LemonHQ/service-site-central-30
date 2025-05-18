@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Monitor, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-react';
+import { Monitor, FileCode2, Rocket, Cloud, ShieldCheck, Users, Lightbulb } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';

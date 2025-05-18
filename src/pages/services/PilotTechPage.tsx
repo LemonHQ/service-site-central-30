@@ -1,6 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Lightbulb, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
+import { Lightbulb, FlaskConical, Zap, History, BarChart2, BrainCircuit } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
@@ -35,7 +36,7 @@ const PilotTechPage = () => {
         {
           title: "Hypothesis validation",
           description: "Run short, controlled pilots to test assumptions about new customer behaviors, market demand, or innovation bets",
-          icon: Brain
+          icon: BrainCircuit
         },
         {
           title: "Accelerate Time-to-Learning",
