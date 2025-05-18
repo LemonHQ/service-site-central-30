@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 
 // Navigation menu item component for consistent styling
@@ -21,7 +22,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-2.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
@@ -51,7 +52,7 @@ const RouterListItem = ({ title, to, className, icon: Icon, description }: {
         <Link
           to={to}
           className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none rounded-md p-2.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
         >
@@ -112,24 +113,26 @@ const ServiceSubNav = () => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-base">What We Do</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 w-[600px] lg:w-[760px]">
-              <div className="relative overflow-hidden rounded-lg">
-                <img 
-                  src="/assets/imgs/how-innovation-works.png" 
-                  alt="How innovation works" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                  <p className="font-medium">Innovating for enterprise brands</p>
-                  <p className="text-sm opacity-90">Solving for tomorrows problems today</p>
-                </div>
+          <NavigationMenuContent className="max-h-[450px] overflow-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 w-[500px] lg:w-[650px]">
+              <div className="relative overflow-hidden rounded-lg h-full">
+                <AspectRatio ratio={16 / 12} className="h-full">
+                  <img 
+                    src="/assets/imgs/how-innovation-works.png" 
+                    alt="How innovation works" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+                    <p className="font-medium text-sm">Innovating for enterprise brands</p>
+                    <p className="text-xs opacity-90">Solving for tomorrows problems today</p>
+                  </div>
+                </AspectRatio>
               </div>
               
-              <div className="overflow-y-auto max-h-[500px]">
+              <div className="overflow-y-auto max-h-[350px]">
                 <div className="space-y-1">
                   {serviceItems.map((service) => (
-                    <div key={service.title} className="mb-3">
+                    <div key={service.title} className="mb-1.5">
                       <RouterListItem
                         title={service.title}
                         to={service.url}
