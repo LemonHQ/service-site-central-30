@@ -9,7 +9,7 @@ const PilotTechPage = () => {
   return (
     <ServiceLandingTemplate
       title="Pilot Emerging Tech"
-      subtitle="Exweriment with confidence. Scale what works."
+      subtitle="Experiment with confidence. Scale what works."
       description="We partner with leading enterprise brands and digital leaders to explore and validate emerging technologies through focused, low-risk pilots—grounded in real business value, not hype. Sandboxed experiements, targeted use cases and testable experiences to make informed decisions"
       ctaText="Pilot New Technologies"
       ctaLink="/lead-qualification"
