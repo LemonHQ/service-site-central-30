@@ -90,7 +90,7 @@ const ServiceSubNav = () => {
           <NavigationMenuContent className="max-h-[450px] overflow-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 w-[500px] lg:w-[650px]">
               <div className="relative overflow-hidden rounded-lg h-full">
-                <AspectRatio ratio={16 / 12} className="h-full">
+                <AspectRatio ratio={12 / 16} className="h-full">
                   <img src="/assets/imgs/how-innovation-works.png" alt="How innovation works" className="w-full h-full object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
                     <p className="font-medium text-sm">Innovating for enterprise brands</p>
