@@ -121,7 +121,7 @@ const ServiceSubNav = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                  <p className="font-medium">Scaling and expanding enterprise brands</p>
+                  <p className="font-medium">Innovating for enterprise brands</p>
                   <p className="text-sm opacity-90">Solving for tomorrows problems today</p>
                 </div>
               </div>
