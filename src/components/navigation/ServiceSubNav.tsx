@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -40,7 +41,7 @@ const RouterListItem = ({
 }) => {
   return <li className="list-none">
       <NavigationMenuLink asChild>
-        <Link to={to} className={cn("block select-none rounded-md p-2.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground", className)}>
+        <Link to={to} className={cn("block select-none rounded-md p-3.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground", className)}>
           <div className="flex items-center">
             {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
             <span className="font-medium text-sm">{title}</span>
@@ -99,10 +100,10 @@ const ServiceSubNav = () => {
                 </AspectRatio>
               </div>
               
-              <div className="overflow-y-auto max-h-[350px]">
-                <div className="space-y-1">
-                  {serviceItems.map(service => <div key={service.title} className="mb-1.5">
-                      <RouterListItem title={service.title} to={service.url} description={service.description} className="font-semibold pb-1" />
+              <div className="overflow-y-auto max-h-[350px] py-2">
+                <div className="space-y-4">
+                  {serviceItems.map(service => <div key={service.title} className="mb-3">
+                      <RouterListItem title={service.title} to={service.url} description={service.description} className="font-semibold py-3" />
                     </div>)}
                 </div>
               </div>
