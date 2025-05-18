@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { CustomerProfile } from '@/data/customerProfiles';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { H3, Paragraph } from '@/components/ui/Typography';
+import { CustomerProfile } from '@/data/customerProfiles';
+import { cn } from '@/lib/utils';
 
 interface CustomerProfilesSectionProps {
   profiles: CustomerProfile[];
@@ -12,67 +11,38 @@ interface CustomerProfilesSectionProps {
   className?: string;
 }
 
-const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
+const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({ 
   profiles,
-  title = "Customer Profiles",
-  subtitle = "With you at different stages of your brand journey",
+  title = "Who We Serve",
+  subtitle = "Tailored solutions for various customer profiles",
   className
 }) => {
-  if (!profiles || profiles.length === 0) {
-    return null;
-  }
-
   return (
-    <section className={`py-16 ${className || ''}`}>
-      <div className="container mx-auto px-4">
-        <SectionHeading 
+    <section className={cn("py-16 md:py-24", className)}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
           title={title}
           subtitle={subtitle}
           centered
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {profiles.map((profile, index) => {
-            const Icon = profile.icon;
-            
-            return (
-              <Card key={index} className="overflow-hidden border-t-4 shadow-md hover:shadow-lg transition-shadow" style={{ borderTopColor: profile.colorClass.includes('green') ? '#4ADE80' : profile.colorClass.includes('amber') ? '#F59E0B' : '#3B82F6' }}>
-                <CardHeader className={`${profile.bgColorClass} pb-4`}>
-                  <div className="flex items-start gap-3">
-                    <div className={`p-2 rounded-full ${profile.bgColorClass} border-2`} style={{ borderColor: profile.colorClass.includes('green') ? '#4ADE80' : profile.colorClass.includes('amber') ? '#F59E0B' : '#3B82F6' }}>
-                      <Icon className={`h-5 w-5 ${profile.colorClass}`} />
-                    </div>
-                    <div>
-                      <p className={`text-sm font-medium ${profile.colorClass}`}>
-                        {profile.type === 'early-stage' ? 'EARLY-STAGE' : profile.type === 'growth' ? 'GROWTH' : 'MATURE'}
-                      </p>
-                      <H3 className="mt-1 mb-0">{profile.title}</H3>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {profiles.map((profile, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100"
+            >
+              <h3 className="text-xl font-semibold mb-4">{profile.title}</h3>
+              <div className="space-y-4">
+                {profile.characteristics.map((char, idx) => (
+                  <div key={idx}>
+                    <p className="font-medium text-brand-600">{char.title}</p>
+                    <p className="text-gray-600 text-sm mt-1">{char.description}</p>
                   </div>
-                </CardHeader>
-                
-                <CardContent className="p-6">
-                  <Paragraph className="mb-4">{profile.description}</Paragraph>
-                  
-                  <div className="mt-4 space-y-4">
-                    <div>
-                      <h4 className="text-sm font-semibold mb-2">Typical Challenges:</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        {profile.challenges.map((challenge, i) => (
-                          <li key={i} className="text-gray-700 text-sm">{challenge}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-sm font-semibold mb-2">How Our Services Help:</h4>
-                      <p className="text-gray-700 text-sm">{profile.serviceFit}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

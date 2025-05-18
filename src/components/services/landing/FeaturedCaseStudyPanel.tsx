@@ -1,78 +1,44 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { CaseStudy } from '@/data/caseStudies';
 
 interface FeaturedCaseStudyPanelProps {
-  caseStudy: CaseStudy;
-  label?: string;
+  caseStudy: {
+    id: string;
+    title: string;
+    description: string;
+    imageUrl: string;
+    industry: string;
+    slug: string;
+  };
 }
 
-const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({
-  caseStudy,
-  label = "FEATURED CASE STUDY"
-}) => {
+const FeaturedCaseStudyPanel: React.FC<FeaturedCaseStudyPanelProps> = ({ caseStudy }) => {
   return (
-    <section className="bg-ivory-200 text-brand-600 py-16">
-      <div className="container mx-auto px-4">
-        
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 order-2 md:order-1">
-            <div className="relative rounded-lg overflow-hidden shadow-md">
-              {caseStudy.images && caseStudy.images.length > 0 ? (
-                <img 
-                  src={caseStudy.images[0]} 
-                  alt={caseStudy.title} 
-                  className="w-full h-auto object-cover"
-                />
-              ) : (
-                <img 
-                  src={caseStudy.featuredImage} 
-                  alt={caseStudy.title} 
-                  className="w-full h-auto object-cover"
-                />
-              )}
-            </div>
-          </div>
-          
-          <div className="md:w-1/2 md:pl-8 order-1 md:order-2 mb-8 md:mb-0">
-            <div className="mb-4 text-xs font-semibold tracking-wider text-brand-500">
-              {label}
-            </div>
+    <section className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 items-center">
+          <div className="lg:w-1/2">
+            <h2 className="text-xl uppercase tracking-wide text-brand-600 mb-2">Featured Case Study</h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">{caseStudy.title}</h3>
+            <p className="text-gray-600 mb-6">{caseStudy.description}</p>
             
-            <h2 className="text-3xl md:text-4xl font-display font-light mb-6 text-brand-600">
-              {caseStudy.title}
-            </h2>
-            
-            <p className="text-base md:text-lg mb-8 text-brand-500">
-              {caseStudy.summary}
-            </p>
-            
-            <Link to={`/case-studies/${caseStudy.id}`}>
-              <Button 
-                variant="outline"
-                className="bg-transparent hover:bg-brand-500 hover:text-white text-brand-500 border border-brand-500"
-              >
-                See Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
+            <Link to={`/case-studies/${caseStudy.slug}`}>
+              <Button className="group">
+                <span>Read Case Study</span>
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            
-            {caseStudy.testimonial && (
-              <div className="mt-12 border-t border-brand-300/20 pt-8">
-                <blockquote className="text-lg font-light italic mb-4 text-brand-500">
-                  "{caseStudy.testimonial.quote}"
-                </blockquote>
-                
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-medium text-brand-600">{caseStudy.testimonial.author}</p>
-                    <p className="text-sm text-brand-400">{caseStudy.testimonial.position}</p>
-                  </div>
-                </div>
-              </div>
-            )}
+          </div>
+          
+          <div className="lg:w-1/2">
+            <img 
+              src={caseStudy.imageUrl} 
+              alt={caseStudy.title}
+              className="rounded-xl w-full h-auto shadow-lg"
+            />
           </div>
         </div>
       </div>

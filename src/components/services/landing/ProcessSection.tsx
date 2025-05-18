@@ -1,43 +1,47 @@
 
 import React from 'react';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { ArrowRight } from 'lucide-react';
 
-export interface ServiceProcess {
+interface ProcessStep {
   title: string;
   description: string;
-  number: number;
 }
 
 interface ProcessSectionProps {
-  processes: ServiceProcess[];
+  steps: ProcessStep[];
+  title?: string;
+  subtitle?: string;
 }
 
-const ProcessSection: React.FC<ProcessSectionProps> = ({ processes }) => {
+const ProcessSection: React.FC<ProcessSectionProps> = ({
+  steps,
+  title = "Our Process",
+  subtitle = "How we deliver exceptional results"
+}) => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Our Approach"
-          subtitle="A proven methodology to deliver exceptional results"
+          title={title}
+          subtitle={subtitle}
           centered
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
-          {processes.map((process, index) => (
-            <div key={index} className="relative">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mb-6 text-brand-600 text-2xl font-bold">
-                  {process.number}
+        <div className="mt-12 max-w-4xl mx-auto">
+          {steps.map((step, index) => (
+            <div key={index} className="flex mb-8">
+              <div className="mr-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold text-xl">
+                  {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-brand-600">{process.title}</h3>
-                <p className="text-gray-600">{process.description}</p>
+                {index < steps.length - 1 && (
+                  <div className="w-0.5 h-20 bg-gray-200 mx-auto mt-2"></div>
+                )}
               </div>
-              {index < processes.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full transform -translate-x-1/2 z-0">
-                  <ArrowRight className="w-10 h-10 text-brand-200" />
-                </div>
-              )}
+              <div className="pt-2">
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>

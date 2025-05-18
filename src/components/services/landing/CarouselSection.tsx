@@ -1,63 +1,47 @@
 
 import React from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import SectionHeading from '@/components/ui/SectionHeading';
 
-interface CarouselSectionProps<T> {
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+interface CarouselSectionProps {
   title: string;
-  subtitle: string;
-  items: T[];
-  renderItem: (item: T) => React.ReactNode;
-  bgColor?: string;
-  limit?: number;
+  subtitle?: string;
+  children: React.ReactNode;
 }
 
-function CarouselSection<T>({
+const CarouselSection: React.FC<CarouselSectionProps> = ({
   title,
   subtitle,
-  items,
-  renderItem,
-  bgColor = "bg-white",
-  limit
-}: CarouselSectionProps<T>) {
-  // Apply limit if specified
-  const displayItems = limit ? items.slice(0, limit) : items;
-  
+  children
+}) => {
   return (
-    <section className={`py-16 ${bgColor}`}>
-      <div className="container mx-auto px-4">
-        <SectionHeading 
-          title={title} 
-          subtitle={subtitle} 
+    <section className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          title={title}
+          subtitle={subtitle}
           centered
         />
         
-        <div className="mt-8">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
+        <div className="mt-12">
+          <Carousel className="w-full">
             <CarouselContent>
-              {displayItems.map((item: any, index) => (
-                <CarouselItem key={item.id || index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    {renderItem(item)}
-                  </div>
-                </CarouselItem>
-              ))}
+              {children}
             </CarouselContent>
-            <div className="flex justify-center gap-2 mt-8">
-              <CarouselPrevious className="static translate-y-0" />
-              <CarouselNext className="static translate-y-0" />
-            </div>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default CarouselSection;
