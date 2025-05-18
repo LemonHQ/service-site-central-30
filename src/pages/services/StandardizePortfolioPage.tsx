@@ -1,7 +1,6 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Library, FileText, Grid, Layers, Sparkles } from 'lucide-react';
+import { LayoutGrid, FileText, Grid, Layers, Sparkles, Library } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
@@ -21,7 +20,7 @@ const StandardizePortfolioPage = () => {
         {
           title: "Post-Merger portfolio consolidation",
           description: "Rationalize offerings, unify platforms, and build a single, consistent experience across merged entities",
-          icon: Library
+          icon: LayoutGrid
         },
         {
           title: "Growing portfolio",

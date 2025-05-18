@@ -1,7 +1,6 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Brain, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
+import { Lightbulb, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
@@ -21,7 +20,7 @@ const PilotTechPage = () => {
         {
           title: "Test Ecosystem plays",
           description: "Explore how your product or service performs when integrated into a partner environment or digital ecosystem.",
-          icon: FlaskConical
+          icon: Lightbulb
         },   
         {
           title: "Explore new value propositions",

@@ -1,7 +1,6 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { ArrowRight, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
+import { Palette, ArrowDown, Globe, Database, Shield, Settings } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
@@ -28,7 +27,7 @@ const UnifyBrandPage = () => {
         {
           title: "Strategic Brand Expansion",
           description: "Grow across markets and channels with a unified identity that supports both masterbrand and sub-brand strategies.",
-          icon: ArrowRight
+          icon: Palette
         },
         {
           title: "Reusable Brand Infrastructure",

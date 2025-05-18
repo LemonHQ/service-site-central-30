@@ -1,5 +1,5 @@
 
-import { Cog, BarChart, Code, Brush, LayoutDashboard, LucideIcon, Search, Network, Cloud, Database as DatabaseIcon, BrainCircuit, Rocket } from "lucide-react";
+import { Palette, Monitor, Layers, Maximize, Lightbulb, LayoutGrid, Cog, BarChart, Code, Brush, BrainCircuit, Rocket, LucideIcon, Search, Network, Cloud, Database as DatabaseIcon, Shield } from "lucide-react";
 
 export type MainService = {
   id: string;
@@ -35,7 +35,7 @@ export const mainServices: MainService[] = [
       "We help enterprises digitalize their product lines by building innovative digital products and platforms that drive revenue, improve customer engagement, and create new business models.",
     shortDescription: "Build innovative digital products and platforms.",
     coverImage: "/lovable-uploads/4e0c995b-6840-483f-a492-5554d854dd8a.png",
-    icon: Code,
+    icon: Monitor,
     relatedCaseStudies: ['case-study-1', 'case-study-2'],
     relatedInsights: ['blog-post-1', 'blog-post-2'],
     subServices: [],
@@ -48,7 +48,7 @@ export const mainServices: MainService[] = [
       "We help enterprises modernize their architecture by migrating to the cloud, adopting microservices, and implementing DevOps practices.",
     shortDescription: "Migrate to the cloud and adopt microservices.",
     coverImage: "/lovable-uploads/69885951-cf05-4592-940f-353489488991.png",
-    icon: LayoutDashboard,
+    icon: Code,
     subServices: [],
   },
   {
@@ -70,7 +70,7 @@ export const mainServices: MainService[] = [
       "We help enterprises design new experiences by conducting user research, creating wireframes, and building prototypes.",
     shortDescription: "Conduct user research and create wireframes.",
     coverImage: "/lovable-uploads/9975994b-6701-4999-9195-c3789a401592.png",
-    icon: Brush,
+    icon: Palette,
     subServices: [],
   },
   {
