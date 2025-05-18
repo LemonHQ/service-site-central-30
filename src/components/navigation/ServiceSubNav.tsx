@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
+import { 
+  Palette, 
+  Monitor, 
+  Layers, 
+  Maximize, 
+  Lightbulb, 
+  LayoutGrid 
+} from "lucide-react";
 
 // Navigation menu item component for consistent styling
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(({
@@ -43,8 +51,8 @@ const RouterListItem = ({
       <NavigationMenuLink asChild>
         <Link to={to} className={cn("block select-none rounded-md p-3.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground", className)}>
           <div className="flex items-center">
-            {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
-            <span className="font-medium text-sm">{title}</span>
+            {Icon && <Icon className="h-5 w-5 mr-2.5 text-brand-400" />}
+            <span className="font-medium text-[15px]">{title}</span>
           </div>
           {/* {description && (
             <p className="line-clamp-2 mt-1 text-xs text-muted-foreground">
@@ -58,31 +66,37 @@ const RouterListItem = ({
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
 
-  // Updated service items with direct URLs
+  // Updated service items with direct URLs and icons
   const serviceItems = [{
     title: "Unify Brand Experiences",
     url: "/unify-brand-experiences",
-    description: "Create consistent, compliant brand and product experiences across all touchpoints, regions, and business units."
+    description: "Create consistent, compliant brand and product experiences across all touchpoints, regions, and business units.",
+    icon: Palette
   }, {
     title: "Digitalize Product Lines",
     url: "/digitalize-product-lines",
-    description: "Transform legacy offerings into modern, scalable digital products built for today's markets and tomorrow's expectations."
+    description: "Transform legacy offerings into modern, scalable digital products built for today's markets and tomorrow's expectations.",
+    icon: Monitor
   }, {
     title: "Expand Product Offerings",
     url: "/expand-product-offerings",
-    description: "Identify, validate, and launch new services, bundles, and adjacent solutions that deepen customer value and drive growth."
+    description: "Identify, validate, and launch new services, bundles, and adjacent solutions that deepen customer value and drive growth.",
+    icon: Layers
   }, {
     title: "Scale Digital Experiences",
     url: "/scale-digital-experiences",
-    description: "Build the systems, standards, and operating models that power sustainable, enterprise-grade digital expansion."
+    description: "Build the systems, standards, and operating models that power sustainable, enterprise-grade digital expansion.",
+    icon: Maximize
   }, {
     title: "Pilot Emerging Tech",
     url: "/pilot-emerging-tech",
-    description: "Rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation."
+    description: "Rapidly prototype and validate AI, automation, and other emerging technologies to drive future-ready innovation.",
+    icon: Lightbulb
   }, {
     title: "Standardize Digital Portfolio",
     url: "/standardize-digital-portfolio",
-    description: "Establish consistent patterns and templates across your digital product catalog to improve efficiency and user experience."
+    description: "Establish consistent patterns and templates across your digital product catalog to improve efficiency and user experience.",
+    icon: LayoutGrid
   }];
   return <NavigationMenu>
       <NavigationMenuList>
@@ -103,7 +117,13 @@ const ServiceSubNav = () => {
               <div className="overflow-y-auto max-h-[350px] py-2">
                 <div className="space-y-4">
                   {serviceItems.map(service => <div key={service.title} className="mb-3">
-                      <RouterListItem title={service.title} to={service.url} description={service.description} className="font-semibold py-3" />
+                      <RouterListItem 
+                        title={service.title} 
+                        to={service.url} 
+                        description={service.description} 
+                        icon={service.icon} 
+                        className="font-semibold py-3" 
+                      />
                     </div>)}
                 </div>
               </div>
