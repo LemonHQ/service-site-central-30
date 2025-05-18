@@ -30,10 +30,10 @@ const InsightsCarousel: React.FC<InsightsCarouselProps> = ({
       {limitedPosts.map((post, index) => (
         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
           <div className="h-full bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 flex flex-col">
-            {post.imageUrl && (
+            {post.featuredImage && (
               <div className="h-48 overflow-hidden">
                 <img 
-                  src={post.imageUrl} 
+                  src={post.featuredImage} 
                   alt={post.title} 
                   className="w-full h-full object-cover"
                 />

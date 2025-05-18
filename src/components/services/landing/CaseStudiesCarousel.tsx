@@ -32,9 +32,9 @@ const CaseStudiesCarousel: React.FC<CaseStudiesCarouselProps> = ({
             <div className="h-full bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 flex flex-col">
               {/* Image with overlay */}
               <div className="relative h-48 overflow-hidden">
-                {study.imageUrl && (
+                {study.featuredImage && (
                   <img 
-                    src={study.imageUrl} 
+                    src={study.featuredImage} 
                     alt={study.title} 
                     className="w-full h-full object-cover transition-transform group-hover:scale-105"
                   />
@@ -49,10 +49,10 @@ const CaseStudiesCarousel: React.FC<CaseStudiesCarouselProps> = ({
               {/* Content */}
               <div className="flex flex-col flex-grow p-5 space-y-4">
                 <h3 className="font-bold text-lg text-gray-900">{study.title}</h3>
-                {study.description && (
-                  <p className="text-gray-600 text-sm flex-grow">{study.description.length > 100 
-                    ? `${study.description.substring(0, 100)}...` 
-                    : study.description}
+                {study.summary && (
+                  <p className="text-gray-600 text-sm flex-grow">{study.summary.length > 100 
+                    ? `${study.summary.substring(0, 100)}...` 
+                    : study.summary}
                   </p>
                 )}
                 <Link to={`/case-studies/${study.id}`}>
