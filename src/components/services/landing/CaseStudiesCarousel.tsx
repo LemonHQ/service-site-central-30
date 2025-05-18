@@ -1,67 +1,71 @@
 
 import React from 'react';
+import { CarouselItem } from "@/components/ui/carousel";
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import SectionHeading from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import CarouselSection from './CarouselSection';
 import { caseStudies } from '@/data/caseStudies';
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+interface CaseStudiesCarouselProps {
+  limit?: number;
+  title?: string;
+  subtitle?: string;
+}
 
-const CaseStudiesCarousel: React.FC = () => {
-  // Get first 5 case studies for carousel
-  const featuredCaseStudies = caseStudies.slice(0, 5);
+const CaseStudiesCarousel: React.FC<CaseStudiesCarouselProps> = ({
+  limit = 6,
+  title = "Case Studies",
+  subtitle = "See how we've helped leading organizations solve complex challenges"
+}) => {
+  // Get limited number of case studies
+  const limitedCaseStudies = caseStudies.slice(0, limit);
   
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-          <SectionHeading
-            title="Case Studies"
-            subtitle="See how we've helped organizations like yours"
-            className="md:text-left"
-          />
-          
-          <Link to="/case-studies" className="mt-6 md:mt-0">
-            <Button variant="outline" className="group">
-              <span>View All Case Studies</span>
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
-        
-        <Carousel className="w-full">
-          <CarouselContent>
-            {featuredCaseStudies.map((caseStudy) => (
-              <CarouselItem key={caseStudy.id} className="md:basis-1/2 lg:basis-1/3">
-                <Link to={`/case-studies/${caseStudy.slug}`} className="block">
-                  <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                    <img 
-                      src={caseStudy.imageUrl} 
-                      alt={caseStudy.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <span className="text-sm text-brand-600 font-medium">{caseStudy.industry}</span>
-                      <h3 className="text-xl font-semibold mt-1 mb-2">{caseStudy.title}</h3>
-                      <p className="text-gray-600 line-clamp-2">{caseStudy.description}</p>
-                    </div>
+    <CarouselSection
+      title={title}
+      subtitle={subtitle}
+    >
+      {limitedCaseStudies.map((study, index) => (
+        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <div className="relative group h-full">
+            <div className="h-full bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 flex flex-col">
+              {/* Image with overlay */}
+              <div className="relative h-48 overflow-hidden">
+                {study.imageUrl && (
+                  <img 
+                    src={study.imageUrl} 
+                    alt={study.title} 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="text-sm font-medium text-brand-300">{study.industry}</p>
                   </div>
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="flex flex-col flex-grow p-5 space-y-4">
+                <h3 className="font-bold text-lg text-gray-900">{study.title}</h3>
+                {study.description && (
+                  <p className="text-gray-600 text-sm flex-grow">{study.description.length > 100 
+                    ? `${study.description.substring(0, 100)}...` 
+                    : study.description}
+                  </p>
+                )}
+                <Link to={`/case-studies/${study.id}`}>
+                  <Button variant="link" className="p-0 flex items-center gap-1 text-brand-600">
+                    View case study <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-    </section>
+              </div>
+            </div>
+          </div>
+        </CarouselItem>
+      ))}
+    </CarouselSection>
   );
 };
 
