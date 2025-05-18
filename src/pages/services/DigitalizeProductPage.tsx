@@ -21,7 +21,7 @@ const DigitalizeProductPage = () => {
       heroImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       quotePanel={serviceQuotes['digitalize-product-lines']}
       featuredCaseStudy="snacks-direct-to-consumer"
-      showConsultingPanel={true}
+      showConsultingPanel={false}
       customerProfiles={customerProfiles}
       customerProfilesTitle="Who is digitalize product lines for"
       customerProfilesSubtitle="With you at different stages of your product journey"
