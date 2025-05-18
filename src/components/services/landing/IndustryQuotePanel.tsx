@@ -20,13 +20,13 @@ const IndustryQuotePanel: React.FC<QuotePanelProps> = ({
   className,
 }) => {
   return (
-    <section className={cn("py-16 bg-brand-300", className)}>
+    <section className={cn("py-16 bg-[#1A1F2C]", className)}>
       <div className="container mx-auto px-4">
         <Card className="overflow-hidden border-0 shadow-lg">
           <CardContent className="p-0">
             <div className="flex flex-col md:flex-row">
               {imageUrl && (
-                <div className="md:w-1/3 h-64 md:h-auto flex items-center justify-center bg-brand-100">
+                <div className="md:w-1/3 h-64 md:h-auto flex items-center justify-center bg-[#222222]">
                   <img
                     src={imageUrl}
                     alt={author || "Quote image"}
@@ -34,7 +34,7 @@ const IndustryQuotePanel: React.FC<QuotePanelProps> = ({
                   />
                 </div>
               )}
-              <div className={cn("p-8 md:p-12 flex-1 bg-brand-300 text-white", imageUrl ? "md:w-2/3" : "w-full")}>
+              <div className={cn("p-8 md:p-12 flex-1 bg-[#222222] text-white", imageUrl ? "md:w-2/3" : "w-full")}>
                 <QuoteIcon className="h-10 w-10 text-white/80 mb-6" />
                 <blockquote>
                   <h2 className="text-xl md:text-2xl font-display font-light italic text-white mb-6">
