@@ -6,7 +6,7 @@ import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
 const PilotTechPage = () => {
-  return (
+  return ( 
     <ServiceLandingTemplate
       title="Pilot Emerging Tech"
       subtitle="Experiment with confidence. Scale what works."
