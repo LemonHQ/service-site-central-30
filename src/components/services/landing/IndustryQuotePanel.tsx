@@ -20,13 +20,13 @@ const IndustryQuotePanel: React.FC<QuotePanelProps> = ({
   className,
 }) => {
   return (
-    <section className={cn("py-16 bg-brand-50", className)}>
+    <section className={cn("py-16 bg-brand-300", className)}>
       <div className="container mx-auto px-4">
         <Card className="overflow-hidden border-0 shadow-lg">
           <CardContent className="p-0">
             <div className="flex flex-col md:flex-row">
               {imageUrl && (
-                <div className="md:w-1/3 h-64 md:h-auto">
+                <div className="md:w-1/3 h-64 md:h-auto flex items-center justify-center bg-brand-100">
                   <img
                     src={imageUrl}
                     alt={author || "Quote image"}
@@ -34,26 +34,26 @@ const IndustryQuotePanel: React.FC<QuotePanelProps> = ({
                   />
                 </div>
               )}
-              <div className={cn("p-8 md:p-12 flex-1", imageUrl ? "md:w-2/3" : "w-full")}>
-                <QuoteIcon className="h-10 w-10 text-brand-300 mb-6" />
+              <div className={cn("p-8 md:p-12 flex-1 bg-brand-300 text-white", imageUrl ? "md:w-2/3" : "w-full")}>
+                <QuoteIcon className="h-10 w-10 text-white/80 mb-6" />
                 <blockquote>
-                  <h2 className="text-xl md:text-2xl font-display font-light italic text-gray-700 mb-6">
+                  <h2 className="text-xl md:text-2xl font-display font-light italic text-white mb-6">
                     "{quote}"
                   </h2>
                 </blockquote>
                 <div className="flex flex-col">
                   {author && (
-                    <span className="font-semibold text-brand-600">{author}</span>
+                    <span className="font-semibold text-white">{author}</span>
                   )}
                   {authorTitle && (
-                    <span className="text-gray-500 text-sm">{authorTitle}</span>
+                    <span className="text-white/80 text-sm">{authorTitle}</span>
                   )}
                   {sourceText && sourceUrl && (
                     <Link
                       to={sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-brand-400 text-sm mt-2 hover:text-brand-500"
+                      className="text-white/70 text-sm mt-2 hover:text-white border-white/30 hover:border-white"
                     >
                       Source: {sourceText}
                     </Link>
