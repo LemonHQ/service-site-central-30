@@ -1,6 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Layers, Target, Network, LineChart } from 'lucide-react';
+import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
@@ -25,10 +26,11 @@ const ExpandOfferingsPage = () => {
       customerProfilesTitle="Who is expand product offerings for"
       customerProfilesSubtitle="With you at different stages of your expansion journey"
       features={[
+
         {
           title: "Build once, use everywhere",
           description: "Reconfigure offerings to meet the specific needs of regional, sectoral, or demographic markets",
-          icon: Layers
+          icon: Target
         },
         {
           title: "Extend product lines to adjacent categories",

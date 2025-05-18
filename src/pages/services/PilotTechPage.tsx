@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Lightbulb, FlaskConical, Zap, History, BarChart2, BrainCircuit } from 'lucide-react';
+import { Brain, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
@@ -21,7 +21,7 @@ const PilotTechPage = () => {
         {
           title: "Test Ecosystem plays",
           description: "Explore how your product or service performs when integrated into a partner environment or digital ecosystem.",
-          icon: Lightbulb
+          icon: FlaskConical
         },   
         {
           title: "Explore new value propositions",
@@ -36,7 +36,7 @@ const PilotTechPage = () => {
         {
           title: "Hypothesis validation",
           description: "Run short, controlled pilots to test assumptions about new customer behaviors, market demand, or innovation bets",
-          icon: BrainCircuit
+          icon: Brain
         },
         {
           title: "Accelerate Time-to-Learning",

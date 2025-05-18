@@ -1,8 +1,9 @@
 
 import React from 'react';
-import SectionHeading from '@/components/ui/SectionHeading';
 import { CustomerProfile } from '@/data/customerProfiles';
-import { cn } from '@/lib/utils';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { H3, Paragraph } from '@/components/ui/Typography';
 
 interface CustomerProfilesSectionProps {
   profiles: CustomerProfile[];
@@ -11,54 +12,67 @@ interface CustomerProfilesSectionProps {
   className?: string;
 }
 
-const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({ 
+const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
   profiles,
-  title = "Who We Serve",
-  subtitle = "Tailored solutions for various customer profiles",
+  title = "Customer Profiles",
+  subtitle = "With you at different stages of your brand journey",
   className
 }) => {
+  if (!profiles || profiles.length === 0) {
+    return null;
+  }
+
   return (
-    <section className={cn("py-16 md:py-24", className)}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
+    <section className={`py-16 ${className || ''}`}>
+      <div className="container mx-auto px-4">
+        <SectionHeading 
           title={title}
           subtitle={subtitle}
           centered
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {profiles && profiles.map((profile, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100"
-            >
-              <div className={`${profile.bgColorClass} p-3 inline-block rounded-full mb-4`}>
-                <profile.icon className={`w-6 h-6 ${profile.colorClass}`} />
-              </div>
-              
-              <h3 className="text-xl font-semibold mb-4">{profile.title}</h3>
-              <p className="text-gray-600 mb-6">{profile.description}</p>
-              
-              <div className="space-y-4">
-                <h4 className="font-medium text-gray-800">Common Challenges:</h4>
-                <ul className="space-y-2">
-                  {profile.challenges && profile.challenges.map((challenge, idx) => (
-                    <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
-                      <span className="text-brand-600 mt-0.5">•</span>
-                      <span>{challenge}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              {profile.serviceFit && (
-                <div className="mt-6 pt-4 border-t border-gray-100">
-                  <h4 className="font-medium text-gray-800 mb-2">How We Help:</h4>
-                  <p className="text-gray-600 text-sm">{profile.serviceFit}</p>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {profiles.map((profile, index) => {
+            const Icon = profile.icon;
+            
+            return (
+              <Card key={index} className="overflow-hidden border-t-4 shadow-md hover:shadow-lg transition-shadow" style={{ borderTopColor: profile.colorClass.includes('green') ? '#4ADE80' : profile.colorClass.includes('amber') ? '#F59E0B' : '#3B82F6' }}>
+                <CardHeader className={`${profile.bgColorClass} pb-4`}>
+                  <div className="flex items-start gap-3">
+                    <div className={`p-2 rounded-full ${profile.bgColorClass} border-2`} style={{ borderColor: profile.colorClass.includes('green') ? '#4ADE80' : profile.colorClass.includes('amber') ? '#F59E0B' : '#3B82F6' }}>
+                      <Icon className={`h-5 w-5 ${profile.colorClass}`} />
+                    </div>
+                    <div>
+                      <p className={`text-sm font-medium ${profile.colorClass}`}>
+                        {profile.type === 'early-stage' ? 'EARLY-STAGE' : profile.type === 'growth' ? 'GROWTH' : 'MATURE'}
+                      </p>
+                      <H3 className="mt-1 mb-0">{profile.title}</H3>
+                    </div>
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="p-6">
+                  <Paragraph className="mb-4">{profile.description}</Paragraph>
+                  
+                  <div className="mt-4 space-y-4">
+                    <div>
+                      <h4 className="text-sm font-semibold mb-2">Typical Challenges:</h4>
+                      <ul className="list-disc pl-6 space-y-1">
+                        {profile.challenges.map((challenge, i) => (
+                          <li key={i} className="text-gray-700 text-sm">{challenge}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold mb-2">How Our Services Help:</h4>
+                      <p className="text-gray-700 text-sm">{profile.serviceFit}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

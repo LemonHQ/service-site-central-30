@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Maximize, Globe, Shield, BarChart2, Settings, Database } from 'lucide-react';
+import { Database, Globe, Shield, BarChart2, Settings } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
@@ -21,7 +21,7 @@ const ScaleExperiencesPage = () => {
         {
           title: "Market share expansion",
           description: "Operationalize and scale early success to sustained, multi-market impact",
-          icon: Maximize
+          icon: Database
         },
         {
           title: "Distribution expansion",

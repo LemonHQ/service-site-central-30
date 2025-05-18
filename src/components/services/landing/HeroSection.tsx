@@ -27,36 +27,45 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isAiHeroImage = false
 }) => {
   return (
-    <section className="py-16 md:py-24 bg-brand-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-bold mb-2 text-gray-900">{title}</h1>
-            <p className="text-xl md:text-2xl mb-4 text-brand-600 font-medium">{subtitle}</p>
-            <p className="text-lg mb-8 text-gray-700">{description}</p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
+    <section className="bg-gradient-to-b from-beige-50 to-white py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl lg:text-5xl font-bold text-brand-600 mb-4">
+              {title}
+            </h1>
+            <p className="text-xl text-brand-400 mb-8">{subtitle}</p>
+            <div className="text-gray-600 text-lg mb-8 space-y-4">
+              <p>{description}</p>
+            </div>
+
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <Link to={ctaLink}>
-                <Button className="bg-brand-600 hover:bg-brand-700 text-white">
+                <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
                   {ctaText}
                 </Button>
               </Link>
               {secondaryCtaText && secondaryCtaLink && (
                 <Link to={secondaryCtaLink}>
-                  <Button variant="outline" className="border-brand-600 text-brand-600 hover:bg-brand-50">
+                  <Button size="lg" variant="outline" className="border-brand-300 text-brand-500">
                     {secondaryCtaText}
                   </Button>
                 </Link>
               )}
-            </div>
+            </div> */}
+
           </div>
-          
-          <div className="flex-1">
-            <img 
-              src={heroImage} 
-              alt={title}
-              className={`rounded-xl shadow-lg w-full h-[350px] object-cover ${isAiHeroImage ? 'object-contain bg-white p-4' : ''}`}
+          <div className="flex justify-center relative">
+            <img
+              src={heroImage}
+              alt={`${title} - Hero Image`}
+              className={`rounded-xl shadow-lg w-full h-[400px] object-cover object-center ${isAiHeroImage ? 'border-2 border-brand-300' : ''}`}
             />
+            {isAiHeroImage && (
+              <div className="absolute bottom-2 right-2 bg-brand-100 text-brand-600 text-xs px-2 py-1 rounded-md opacity-80">
+                AI Generated
+              </div>
+            )}
           </div>
         </div>
       </div>

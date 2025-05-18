@@ -1,6 +1,7 @@
+
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Monitor, FileCode2, Rocket, Cloud, ShieldCheck, Users, Lightbulb } from 'lucide-react';
+import { Lightbulb, FileCode2, Rocket, Cloud, ShieldCheck, Users } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
@@ -28,7 +29,7 @@ const DigitalizeProductPage = () => {
         {
           title: "Decouple products",
           description: "Decompose traditional products into stand-alone offerings customized around a specific customer segment",
-          icon: Monitor
+          icon: Cloud
         },
         {
           title: "Monetize emerging business models",
