@@ -43,7 +43,7 @@ const RouterListItem = ({
         <Link to={to} className={cn("block select-none rounded-md p-2.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground", className)}>
           <div className="flex items-center">
             {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
-            <span className="text-base font-medium">{title}</span>
+            <span className="font-medium text-sm">{title}</span>
           </div>
           {/* {description && (
             <p className="line-clamp-2 mt-1 text-xs text-muted-foreground">
