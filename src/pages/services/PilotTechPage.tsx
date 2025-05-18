@@ -9,8 +9,8 @@ const PilotTechPage = () => {
   return (
     <ServiceLandingTemplate
       title="Pilot Emerging Tech"
-      subtitle="Test and implement innovative technologies"
-      description="We help organizations evaluate and implement emerging technologies like AI, blockchain, and IoT through focused pilot programs. Our approach minimizes risk while allowing you to explore new capabilities that could transform your business."
+      subtitle="Exweriment with confidence. Scale what works."
+      description="We partner with leading enterprise brands and digital leaders to explore and validate emerging technologies through focused, low-risk pilots—grounded in real business value, not hype. Sandboxed experiements, targeted use cases and testable experiences to make informed decisions"
       ctaText="Pilot New Technologies"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -19,41 +19,46 @@ const PilotTechPage = () => {
       showConsultingPanel={true}
       features={[
         {
-          title: "AI & Machine Learning Prototyping",
-          description: "Rapidly develop and test AI-powered solutions for specific business challenges.",
+          title: "Test Ecosystem plays",
+          description: "Explore how your product or service performs when integrated into a partner environment or digital ecosystem.",
+          icon: FlaskConical
+        },   
+        {
+          title: "Explore new value propositions",
+          description: "Pilot lightweight versions of new offerings to assess adoption, engagement and business value in live environments",
+          icon: History
+        },    
+        {
+          title: "Build internal buy-in through evidence",
+          description: "Generate early results that help align cross-functional teams and secure executive sponsorship",
+          icon: BarChart2
+        },                 
+        {
+          title: "Hypothesis validation",
+          description: "Run short, controlled pilots to test assumptions about new customer behaviors, market demand, or innovation bets",
           icon: Brain
         },
         {
-          title: "Emerging Tech Evaluation",
-          description: "Assess new technologies for business impact and implementation feasibility.",
-          icon: FlaskConical
+          title: "Accelerate Time-to-Learning",
+          description: "Shorten the gap between idea and insight by testing in-market quickly",
+          icon: BarChart2
         },
         {
-          title: "Proof of Concept Development",
-          description: "Create working prototypes to validate technical feasibility and business value.",
-          icon: Zap
-        },
-        {
-          title: "Technology Compliance Framework",
-          description: "Ensure emerging tech implementations meet regulatory requirements.",
-          icon: History
-        },
-        {
-          title: "Impact Measurement",
-          description: "Quantify business outcomes and ROI of emerging technology initiatives.",
+          title: "Identify Scalable Opportunities",
+          description: "Distinguish between promising concepts and scalable business models early in the process",
           icon: BarChart2
         }
       ]}
       featuresTitle="Use cases we solve for"
-      featuresSubtitle="Solutions that let you safely experiment with cutting-edge technologies"
+      featuresSubtitle="Solutions that let you safely experiment in sandboxed environments"
       benefits={[
-        "De-risked technology adoption through validated pilots",
+        "De-risked adoption through validated pilots",
         "Accelerated innovation cycle times",
-        "Competitive advantage through early adoption",
-        "Reduced investment in unsuccessful technologies",
-        "Clear ROI measurement before full-scale implementation",
-        "Increased organizational digital capabilities",
-        "Compliance-ready technology implementations"
+        "Early stakeholder and executive buy-in",
+        "Reduced investment in unsuccessful products",
+        "Clear ROI impact before full-scale committment",
+        "Increased organizational digital moat",
+        "Compliance-ready by design"
       ]}
       relatedServices={[
         {

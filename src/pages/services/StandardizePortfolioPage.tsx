@@ -9,8 +9,8 @@ const StandardizePortfolioPage = () => {
   return (
     <ServiceLandingTemplate
       title="Standardize Digital Portfolio"
-      subtitle="Create consistency across your digital ecosystem"
-      description="We help organizations create standardized digital experiences that improve efficiency and brand consistency. Our approach unifies disparate digital properties through shared components, design systems, and governance frameworks."
+      subtitle="Unlock the value of M&A. Bring order to complexity."
+      description="We partner with leading enterprise brands to align multi-market product offerings, journeys, and systems around a shared structure that allows you to scale faster, operate leaner, and deliver consistent value across every market, brand or channel"
       ctaText="Standardize Your Digital Portfolio"
       ctaLink="/lead-qualification"
       heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -19,41 +19,45 @@ const StandardizePortfolioPage = () => {
       showConsultingPanel={true}
       features={[
         {
-          title: "Fragemented Experiences",
-          description: "",
-          icon: Grid
-        },
-        {
-          title: "Component Libraries",
-          description: "Develop reusable UI and functional components to accelerate development.",
+          title: "Post-Merger portfolio consolidation",
+          description: "Rationalize offerings, unify platforms, and build a single, consistent experience across merged entities",
           icon: Library
         },
         {
-          title: "Pattern Documentation",
-          description: "Comprehensive documentation of standards and best practices.",
+          title: "Growing portfolio",
+          description: "Bring order to expansion by introducing common structures for experience, delivery, and governance",
           icon: FileText
-        },
+        }, 
         {
-          title: "Platform Integration Strategy",
-          description: "Plan for consistent integration across your technology ecosystem.",
+          title: "Entering new markets",
+          description: "Standardize products and experience frameworks to enter segments, markets faster and more efficiently.",
+          icon: Sparkles
+        },            
+        {
+          title: "Standardizing portfolio experiences",
+          description: "Align customer experience principles across all products and brands to project one unified enterprise",
           icon: Layers
+        },           
+        {
+          title: "Building the foundation for future growth",
+          description: "Build a shared, reusable foundation for delivering common digital experiences across the portfolio",
+          icon: Grid
         },
         {
-          title: "UX Standardization",
-          description: "Create consistent user experience patterns across your entire digital portfolio.",
+          title: "Refactor across teams and regions",
+          description: "Introduce shared systems, templates, and standards to reduce rework and improve cross-team collaboration",
           icon: Sparkles
         }
       ]}
       featuresTitle="Use cases we solve for"
       featuresSubtitle="Solutions to bring consistency and efficiency to your digital ecosystem"
       benefits={[
-        "Accelerated product development through reusable components",
-        "Reduced development and maintenance costs",
-        "Improved product quality and consistency",
-        "Enhanced user experience across all digital products",
-        "Simplified compliance with regulations and policies",
+        "Accelerate post merger integration",
+        "Reduce duplicate efforts and costs",
+        "Improve experience quality and consistency",
+        "Simplify compliance and portfolio governance",
         "More efficient onboarding of new team members",
-        "Greater flexibility to adapt to changing business needs"
+        "Greater flexibility to adapt to evolving business needs"
       ]}
       relatedServices={[
         {
