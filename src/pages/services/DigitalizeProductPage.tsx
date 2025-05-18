@@ -24,7 +24,7 @@ const DigitalizeProductPage = () => {
       showConsultingPanel={false}
       customerProfiles={customerProfiles}
       customerProfilesTitle="Who is digitalize product lines for"
-      customerProfilesSubtitle="With you at different stages of your product journey"
+      customerProfilesSubtitle="With you at different stages of your digitalization journey"
       features={[
         {
           title: "Decouple products",

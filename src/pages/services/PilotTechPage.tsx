@@ -4,8 +4,12 @@ import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate
 import { Brain, FlaskConical, Zap, History, BarChart2 } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
+import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
 
 const PilotTechPage = () => {
+    // Get customer profiles for this service
+    const customerProfiles = getCustomerProfilesByServiceSlug('unify-brand-experiences');
+  
   return ( 
     <ServiceLandingTemplate
       title="Pilot Emerging Tech"
@@ -16,6 +20,9 @@ const PilotTechPage = () => {
       heroImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
       quotePanel={serviceQuotes['pilot-emerging-tech']}
       featuredCaseStudy="smart-city-infrastructure"
+      customerProfiles={customerProfiles}
+      customerProfilesTitle="Who is digitalize product lines for"
+      customerProfilesSubtitle="With you at different stages of your digitalization journey"      
       showConsultingPanel={false}
       features={[
         {
