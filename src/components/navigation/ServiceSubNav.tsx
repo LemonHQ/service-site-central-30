@@ -59,11 +59,11 @@ const RouterListItem = ({ title, to, className, icon: Icon, description }: {
             {Icon && <Icon className="h-4 w-4 mr-2 text-brand-400" />}
             <span className="text-sm font-medium">{title}</span>
           </div>
-          {description && (
+          {/* {description && (
             <p className="line-clamp-2 mt-1 text-xs text-muted-foreground">
               {description}
             </p>
-          )}
+          )} */}
         </Link>
       </NavigationMenuLink>
     </li>
@@ -116,13 +116,13 @@ const ServiceSubNav = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 w-[600px] lg:w-[760px]">
               <div className="relative overflow-hidden rounded-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" 
-                  alt="Digital transformation team" 
+                  src="/assets/imgs/how-innovation-works.png" 
+                  alt="How innovation works" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                  <p className="font-medium">Enterprise Digital Transformation</p>
-                  <p className="text-sm opacity-90">Full-service digital product strategy and development</p>
+                  <p className="font-medium">Scaling and expanding enterprise brands</p>
+                  <p className="text-sm opacity-90">Solving for tomorrows problems today</p>
                 </div>
               </div>
               
