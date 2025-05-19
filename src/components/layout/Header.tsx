@@ -99,7 +99,7 @@ const Header = () => {
 
           {/* Desktop Navigation - Updated with center alignment */}
           <nav className="hidden md:flex flex-1 justify-center items-center">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-5">
               {/* Service SubNav - what we do */}
               <div className="relative flex items-center">
                 <ServiceSubNav />
