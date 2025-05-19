@@ -193,12 +193,12 @@ const Header = () => {
 
           {/* Theme toggle and placeholder div */}
           <div className="hidden md:flex items-center gap-4">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button 
               className="text-gray-600 hover:text-brand-400 dark:text-gray-300 dark:hover:text-brand-300"
               onClick={toggleMenu}
