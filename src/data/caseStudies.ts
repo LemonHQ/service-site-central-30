@@ -48,6 +48,46 @@ export const caseStudies: CaseStudy[] = [
     ],
     date: '2025-12-01'
   },
+  ,
+  {
+    id: 'reimagining-product-experience',
+    title: 'Reimagining product Experience',
+    client: 'Abbott Diabetes Care',
+    industry: 'Healthcare',
+    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'How Abbott FSL reimagined its product experience eco-system',
+    challenge: "<p>Abbott’s Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn’t an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.<p>",
+    solution: `<p>We launched a multi-market discovery and ecosystem mapping initiative, engaging end users, partners, and frontline stakeholders across the four target markets. Through in-depth user research and local partner interviews, we uncovered market-specific needs:</p>
+                <ul>
+                  <li>In Egypt, customers preferred monthly subscriptions</li>
+                  <li>In Oman, convenience and home delivery were top priorities</li>
+                  <li>In KSA, access was limited outside major cities</li>
+                  <li>In UAE, customers wanted digital support and payment flexibility</li>
+                </ul>
+                <p>We translated these insights into a unified digital roadmap for the Freestyle Libre ecosystem, including:</p>
+                <ul>
+                  <li>Customer personas per market</li>
+                  <li>Multi-market commerce platform architecture</li>
+                  <li>POS, distributor, and end-user journey flows</li>
+                  <li>Mockups for localized digital storefronts and service layers</li>
+                </ul>
+                <p>A flexible service design model that worked within Abbott&rsquo;s global brand and compliance constraints</p>`,
+    results: `<ul>
+                <li>Enabled Abbott to&nbsp;realize 1st-party customer&nbsp;data was possible for the first time</li>
+                <li>Distributors&nbsp;could envision&nbsp;a new sales channel apart from the retail path to higher-margin digital sales</li>
+                <li>Delivered a platform framework that balanced compliance, control, and local flexibility</li>
+                <li>Abstracted back-office and logistical complexity through digital architecture</li>
+                <li>Set the foundation for long-term, scalable D2D2C commerce across emerging markets</li>
+              </ul>`,
+    featuredImage: '/assets/imgs/fsl-web.png',
+    images: [
+      '/assets/imgs/fsl-dash.png',
+      '/assets/imgs/fsl-ecomm.png',
+      '/assets/imgs/fsl-pos.png',
+      '/assets/imgs/fsl-web.png'
+    ],
+    date: '2023-04-18'
+  },
   {
     id: 'digital-policy-and-claims-using-ai',
     title: 'Digital policy and claims using AI',
@@ -113,44 +153,5 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/damac-connect.png'
     ],
     date: '2016-10-05'
-  },
-  {
-    id: 'reimagining-product-experience',
-    title: 'Reimagining product Experience',
-    client: 'Abbott Diabetes Care',
-    industry: 'Healthcare',
-    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
-    summary: 'How Abbott FSL reimagined its product experience eco-system',
-    challenge: "<p>Abbott’s Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn’t an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.<p>",
-    solution: `<p>We launched a multi-market discovery and ecosystem mapping initiative, engaging end users, partners, and frontline stakeholders across the four target markets. Through in-depth user research and local partner interviews, we uncovered market-specific needs:</p>
-                <ul>
-                  <li>In Egypt, customers preferred monthly subscriptions</li>
-                  <li>In Oman, convenience and home delivery were top priorities</li>
-                  <li>In KSA, access was limited outside major cities</li>
-                  <li>In UAE, customers wanted digital support and payment flexibility</li>
-                </ul>
-                <p>We translated these insights into a unified digital roadmap for the Freestyle Libre ecosystem, including:</p>
-                <ul>
-                  <li>Customer personas per market</li>
-                  <li>Multi-market commerce platform architecture</li>
-                  <li>POS, distributor, and end-user journey flows</li>
-                  <li>Mockups for localized digital storefronts and service layers</li>
-                </ul>
-                <p>A flexible service design model that worked within Abbott&rsquo;s global brand and compliance constraints</p>`,
-    results: `<ul>
-                <li>Enabled Abbott to&nbsp;realize 1st-party customer&nbsp;data was possible for the first time</li>
-                <li>Distributors&nbsp;could envision&nbsp;a new sales channel apart from the retail path to higher-margin digital sales</li>
-                <li>Delivered a platform framework that balanced compliance, control, and local flexibility</li>
-                <li>Abstracted back-office and logistical complexity through digital architecture</li>
-                <li>Set the foundation for long-term, scalable D2D2C commerce across emerging markets</li>
-              </ul>`,
-    featuredImage: '/assets/imgs/fsl-web.png',
-    images: [
-      '/assets/imgs/fsl-dash.png',
-      '/assets/imgs/fsl-ecomm.png',
-      '/assets/imgs/fsl-pos.png',
-      '/assets/imgs/fsl-web.png'
-    ],
-    date: '2023-04-18'
   }
 ];
