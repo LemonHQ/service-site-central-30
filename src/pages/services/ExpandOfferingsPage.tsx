@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
@@ -26,7 +25,6 @@ const ExpandOfferingsPage = () => {
       customerProfilesTitle="Who is expand product offerings for"
       customerProfilesSubtitle="With you at different stages of your expansion journey"
       features={[
-
         {
           title: "Build once, use everywhere",
           description: "Reconfigure offerings to meet the specific needs of regional, sectoral, or demographic markets",

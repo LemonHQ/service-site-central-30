@@ -1,4 +1,3 @@
-
 export interface QuoteData {
   quote: string;
   author?: string;
@@ -34,12 +33,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html"
   },
   "expand-product-offerings": {
-    quote: "Companies that have undergone digital transformation are 26% more profitable than their industry peers and enjoy a 12% higher market valuation.",
-    author: "MIT Center for Digital Business",
-    authorTitle: "Research Initiative on Digital Transformation",
+    quote: "According to our research, digitally transformed organizations achieved 16% higher revenue and 26% greater profitability compared to their industry competitors.",
+    author: "Harvard Business Review",
+    authorTitle: "Digital Transformation Research",
     imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "Digital Transformation: A Roadmap For Billion-Dollar Organizations",
-    sourceUrl: "https://www.capgemini.com/wp-content/uploads/2017/07/Digital_Transformation__A_Road-Map_for_Billion-Dollar_Organizations.pdf"
+    sourceText: "Rethinking Digital Transformation: A Leader's Guide",
+    sourceUrl: "https://hbr.org/2019/03/digital-transformation-is-not-about-technology"
   },
   "standardize-digital-portfolio": {
     quote: "Design systems save organizations an average of 20-30% in design and development time, 60-70% in maintenance resources, and provide 80-95% reuse rate of design components.",
