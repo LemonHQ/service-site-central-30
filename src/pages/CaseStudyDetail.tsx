@@ -254,7 +254,7 @@ const CaseStudyDetail: React.FC = () => {
           </div>
         )}
 
-        <ResponseSection />
+       
         
         {/* Related Case Studies */}
         {relatedCaseStudies.length > 0 && (
@@ -262,6 +262,8 @@ const CaseStudyDetail: React.FC = () => {
             relatedCaseStudies={relatedCaseStudies}
           />
         )}
+
+         <ResponseSection />
       </div>
     </MainLayout>
   );
