@@ -85,14 +85,15 @@ const Footer = () => {
 
           {/* Follow Us */}
           <div>
-            <SocialLinks />
+            <NewsletterSubscribe />
+            {/* <SocialLinks /> */}
             {/* ISO certifications hidden as requested */}
           </div>
 
           {/* Subscribe */}
-          <div>
+          {/* <div>
             <NewsletterSubscribe />
-          </div>
+          </div> */}
         </div>
 
         {/* Disclaimer and Copyright */}
