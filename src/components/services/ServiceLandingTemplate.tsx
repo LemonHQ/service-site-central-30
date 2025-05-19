@@ -16,6 +16,8 @@ import CustomerProfilesSection from './landing/CustomerProfilesSection';
 import { caseStudies } from '@/data/caseStudies';
 import { QuoteData } from '@/data/quotes';
 import { CustomerProfile } from '@/data/customerProfiles';
+import ResponseSection from '@/components/approach/co-create-closer/ResponseSection';
+
 
 export interface ServiceLandingProps {
   title: string;
@@ -138,7 +140,8 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
       
       {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
       
-      <CtaSection ctaText={ctaText} ctaLink={ctaLink} />
+      <ResponseSection />
+      {/* <CtaSection ctaText={ctaText} ctaLink={ctaLink} /> */}
     </MainLayout>
   );
 };
