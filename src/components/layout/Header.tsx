@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import ServiceSubNav from '../navigation/ServiceSubNav';
+import ThemeToggle from '../ui/theme-toggle';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -85,7 +86,7 @@ const Header = () => {
 
   
   return (
-    <header className="sticky top-0 bg-white border-b border-gray-100 z-50">
+    <header className="sticky top-0 bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -190,22 +191,27 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Placeholder div to balance the flex layout for proper centering */}
-          <div className="hidden md:block w-[100px]"></div>
+          {/* Theme toggle and placeholder div */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
+          </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-600 hover:text-brand-400"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
+            <button 
+              className="text-gray-600 hover:text-brand-400 dark:text-gray-300 dark:hover:text-brand-300"
+              onClick={toggleMenu}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation - Updated to match desktop changes */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 animate-fade-in">
+        <div className="md:hidden bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 animate-fade-in">
           <nav className="flex flex-col space-y-2 py-6 px-8">
             <Link 
               to="/" 

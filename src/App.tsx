@@ -1,9 +1,9 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "next-themes";
 
 // Import Pages
 import Home from "./pages/Home";
@@ -54,63 +54,65 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          
-          {/* Direct routes to service landing pages */}
-          <Route path="/unify-brand-experiences" element={<UnifyBrandPage />} />
-          <Route path="/digitalize-product-lines" element={<DigitalizeProductPage />} />
-          <Route path="/expand-product-offerings" element={<ExpandOfferingsPage />} />
-          <Route path="/scale-digital-experiences" element={<ScaleExperiencesPage />} />
-          <Route path="/pilot-emerging-tech" element={<PilotTechPage />} />
-          <Route path="/standardize-digital-portfolio" element={<StandardizePortfolioPage />} />
-          
-          {/* Approach pages */}
-          <Route path="/approach/co-create" element={<CoCreatePage />} />
-          <Route path="/approach/co-innovate" element={<CoInnovatePage />} />
-          <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} />
-          <Route path="/approach/extend" element={<ExtendPage />} />
-          <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
-          <Route path="/webinar-signup" element={<WebinarSignupPage />} />
-          <Route path="/co-innovate-webinar" element={<CoInnovateWebinarPage />} /> {/* New route for co-innovate webinar */}
-          
-          {/* Industry landing pages */}
-          <Route path="/industries/insurance" element={<InsurancePage />} />
-          <Route path="/industries/finance" element={<FinancePage />} />
-          <Route path="/industries/healthcare" element={<HealthcarePage />} />
-          <Route path="/industries/retail" element={<RetailPage />} />
-          
-          {/* Legal pages */}
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          
-          {/* Keep the service structure routes for backward compatibility */}
-          <Route path="/services/:serviceSlug" element={<MainServicePage />} />
-          <Route path="/services/:serviceSlug/:subServiceSlug" element={<SubServicePage />} />
-          
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/insights" element={<Blog />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/insights/:postId" element={<BlogDetail />} />
-          <Route path="/blog/:postId" element={<BlogDetail />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
-          <Route path="/getting-started" element={<GettingStarted />} />
-          <Route path="/lead-qualification" element={<GettingStarted />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
-          <Route path="/cv-submission" element={<CvSubmission />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            
+            {/* Direct routes to service landing pages */}
+            <Route path="/unify-brand-experiences" element={<UnifyBrandPage />} />
+            <Route path="/digitalize-product-lines" element={<DigitalizeProductPage />} />
+            <Route path="/expand-product-offerings" element={<ExpandOfferingsPage />} />
+            <Route path="/scale-digital-experiences" element={<ScaleExperiencesPage />} />
+            <Route path="/pilot-emerging-tech" element={<PilotTechPage />} />
+            <Route path="/standardize-digital-portfolio" element={<StandardizePortfolioPage />} />
+            
+            {/* Approach pages */}
+            <Route path="/approach/co-create" element={<CoCreatePage />} />
+            <Route path="/approach/co-innovate" element={<CoInnovatePage />} />
+            <Route path="/approach/co-create-legacy" element={<CoCreateLegacyPage />} />
+            <Route path="/approach/extend" element={<ExtendPage />} />
+            <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
+            <Route path="/webinar-signup" element={<WebinarSignupPage />} />
+            <Route path="/co-innovate-webinar" element={<CoInnovateWebinarPage />} /> {/* New route for co-innovate webinar */}
+            
+            {/* Industry landing pages */}
+            <Route path="/industries/insurance" element={<InsurancePage />} />
+            <Route path="/industries/finance" element={<FinancePage />} />
+            <Route path="/industries/healthcare" element={<HealthcarePage />} />
+            <Route path="/industries/retail" element={<RetailPage />} />
+            
+            {/* Legal pages */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            
+            {/* Keep the service structure routes for backward compatibility */}
+            <Route path="/services/:serviceSlug" element={<MainServicePage />} />
+            <Route path="/services/:serviceSlug/:subServiceSlug" element={<SubServicePage />} />
+            
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/insights" element={<Blog />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/insights/:postId" element={<BlogDetail />} />
+            <Route path="/blog/:postId" element={<BlogDetail />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
+            <Route path="/getting-started" element={<GettingStarted />} />
+            <Route path="/lead-qualification" element={<GettingStarted />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/cv-submission" element={<CvSubmission />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
