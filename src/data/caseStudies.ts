@@ -43,7 +43,8 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/quote.png',
       '/assets/imgs/driver.png',
       '/assets/imgs/success.png',
-      '/assets/imgs/renew.png'
+      '/assets/imgs/renew.png',
+      '/assets/imgs/d2c.png',
     ],
     date: '2025-12-01'
   },
@@ -73,7 +74,8 @@ export const caseStudies: CaseStudy[] = [
     images: [
       '/assets/imgs/kamal-2.png',
       '/assets/imgs/kamal-3.png',
-      '/assets/imgs/kamal-9.png'
+      '/assets/imgs/kamal-9.png',
+      '/assets/imgs/kamal-1.png',
     ],
     date: '2023-06-22'
   },
@@ -107,7 +109,8 @@ export const caseStudies: CaseStudy[] = [
     images: [
       '/assets/imgs/damac-connect-property.jpeg',
       '/assets/imgs/damac-connect-search.jpeg',
-      '/assets/imgs/damac-connect-sign-up.jpeg'
+      '/assets/imgs/damac-connect-sign-up.jpeg',
+      '/assets/imgs/damac-connect.png'
     ],
     date: '2016-10-05'
   },
@@ -145,7 +148,8 @@ export const caseStudies: CaseStudy[] = [
     images: [
       '/assets/imgs/fsl-dash.png',
       '/assets/imgs/fsl-ecomm.png',
-      '/assets/imgs/fsl-pos.png'
+      '/assets/imgs/fsl-pos.png',
+      '/assets/imgs/fsl-web.png'
     ],
     date: '2023-04-18'
   }
