@@ -81,11 +81,11 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-future-of-personalization-and-how-to-get-ready-for-it"
   },
   "healthcare": {
-    quote: "78% of healthcare providers say digital innovation is important to their organization's long-term strategy, and 84% believe it's essential for survival.",
-    author: "HIMSS",
-    authorTitle: "Healthcare Information and Management Systems Society",
+    quote: "70% of healthcare organizations are planning to increase their investments in digital solutions, with improving patient experience, reducing costs, and enabling better clinical decisions as top priorities.",
+    author: "Deloitte",
+    authorTitle: "Digital Transformation in Healthcare",
     imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "HIMSS Future of Healthcare Report",
-    sourceUrl: "https://www.himss.org/resources/state-healthcare-report-2021-digital-health-transformation"
+    sourceText: "2023 Global Health Care Outlook",
+    sourceUrl: "https://www2.deloitte.com/global/en/pages/life-sciences-and-healthcare/articles/global-health-care-sector-outlook.html"
   }
 };
