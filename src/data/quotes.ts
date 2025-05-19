@@ -57,12 +57,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www.accenture.com/us-en/insights/technology/technology-trends-2023"
   },
   "retail": {
-    quote: "Retailers who successfully implement omnichannel customer experiences achieve 91% greater year-over-year customer retention rates compared to retailers who don't.",
-    author: "Aberdeen Group",
-    authorTitle: "Retail Industry Research",
+    quote: "73% of retail customers expect organizations to understand their unique needs and expectations, while 62% think companies should anticipate their needs before they arise.",
+    author: "Salesforce",
+    authorTitle: "State of the Connected Customer Report",
     imageUrl: "https://images.unsplash.com/photo-1573612664822-d7d347da7b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "Omnichannel Customer Care: Best-in-Class Strategies for 2023",
-    sourceUrl: "https://www.aberdeen.com/cmo-essentials/stats-omnichannel-customer-care/"
+    sourceText: "State of the Connected Customer, 5th Edition",
+    sourceUrl: "https://www.salesforce.com/resources/research-reports/state-of-the-connected-customer/"
   },
   "finance": {
     quote: "63% of financial services firms say their outdated technology infrastructure is the biggest obstacle in their digital transformation journey.",
