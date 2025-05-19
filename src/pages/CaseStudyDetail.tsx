@@ -1,5 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+
+import React, { useMemo, useState, useEffect } from 'react';
+import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 import { caseStudies } from '@/data/caseStudies';
 import { Badge } from '@/components/ui/badge';
@@ -26,15 +27,45 @@ const CaseStudyDetail: React.FC = () => {
   const { caseStudyId } = useParams<{ caseStudyId: string }>();
   const [imageIndex, setImageIndex] = useState<number | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const navigate = useNavigate();
   
-  // Find the case study based on the URL parameter
+  // Find the case study based on the URL parameter with added safety check
   const caseStudy = useMemo(() => {
-    return caseStudies.find(cs => cs.id === caseStudyId);
+    if (!caseStudyId) return null;
+    return caseStudies.find(cs => cs.id === caseStudyId) || null;
   }, [caseStudyId]);
   
-  // If case study not found, redirect to case studies page
+  // If case study not found, redirect to case studies page after a short delay
+  useEffect(() => {
+    if (!caseStudy && caseStudyId) {
+      console.error(`Case study with ID "${caseStudyId}" not found`);
+      const timer = setTimeout(() => {
+        navigate('/case-studies');
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [caseStudy, caseStudyId, navigate]);
+  
+  // If case study is null, show loading or return early
   if (!caseStudy) {
-    return <Navigate to="/case-studies" replace />;
+    return (
+      <MainLayout>
+        <div className="container mx-auto px-4 py-16">
+          <div className="mb-6">
+            <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
+            </Link>
+          </div>
+          <div className="text-center py-16">
+            <h2 className="text-2xl font-semibold mb-4">Case Study Not Found</h2>
+            <p className="text-gray-600 mb-6">We couldn't find the case study you're looking for.</p>
+            <Button variant="default" onClick={() => navigate('/case-studies')}>
+              View All Case Studies
+            </Button>
+          </div>
+        </div>
+      </MainLayout>
+    );
   }
   
   // Format date
@@ -155,33 +186,35 @@ const CaseStudyDetail: React.FC = () => {
         </div>
         
         {/* Project Gallery - Carousel with contrasting background */}
-        <div className="py-16 bg-brand-100 rounded-lg mb-16">
-          <div className="container mx-auto px-4">
-            <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {caseStudy.images.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-1">
-                    <div 
-                      className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
-                      onClick={() => openLightbox(index)}
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${caseStudy.title} - Image ${index+1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-center gap-4 mt-4">
-                <CarouselPrevious />
-                <CarouselNext />
-              </div>
-            </Carousel>
+        {caseStudy.images.length > 0 && (
+          <div className="py-16 bg-brand-100 rounded-lg mb-16">
+            <div className="container mx-auto px-4">
+              <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {caseStudy.images.map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-1">
+                      <div 
+                        className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
+                        onClick={() => openLightbox(index)}
+                      >
+                        <img 
+                          src={image} 
+                          alt={`${caseStudy.title} - Image ${index+1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-center gap-4 mt-4">
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </div>
+              </Carousel>
+            </div>
           </div>
-        </div>
+        )}
         
         {/* Lightbox for fullscreen image view */}
         <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
@@ -253,8 +286,6 @@ const CaseStudyDetail: React.FC = () => {
             </div>
           </div>
         )}
-
-       
         
         {/* Related Case Studies */}
         {relatedCaseStudies.length > 0 && (
@@ -263,7 +294,7 @@ const CaseStudyDetail: React.FC = () => {
           />
         )}
 
-         <ResponseSection />
+        <ResponseSection />
       </div>
     </MainLayout>
   );

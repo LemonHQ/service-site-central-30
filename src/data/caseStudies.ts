@@ -48,7 +48,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     date: '2025-12-01'
   },
-  ,
   {
     id: 'reimagining-product-experience',
     title: 'Reimagining product Experience',
@@ -56,7 +55,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Healthcare',
     services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
     summary: 'How Abbott FSL reimagined its product experience eco-system',
-    challenge: "<p>Abbott’s Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn’t an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.<p>",
+    challenge: "<p>Abbott's Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p><p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn't an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.</p>",
     solution: `<p>We launched a multi-market discovery and ecosystem mapping initiative, engaging end users, partners, and frontline stakeholders across the four target markets. Through in-depth user research and local partner interviews, we uncovered market-specific needs:</p>
                 <ul>
                   <li>In Egypt, customers preferred monthly subscriptions</li>
@@ -88,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     date: '2023-04-18'
   },
-    {
+  {
     id: 'driving-multi-market-d2c-sales',
     title: 'Driving multi-market D2C sales',
     client: 'DAMAC Properties',
@@ -130,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Finance',
     services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
     summary: 'How RSA slashed compliance bottlenecks and unified policy & claims with one smart AI move',
-    challenge: 'Liva’s policy issuance and claims processing journeys were fragmented due to differing compliance checks, legacy system silos, and inconsistent intake processes. Customers had to navigate entirely separate experiences for buying a policy and registering a claim—each with its own set of identity, ownership, and driver-related verifications. Internally, back-office systems operated in isolation, enforcing distinct business rules and document validation protocols. This not only created operational inefficiencies but also added friction to the customer experience.',
+    challenge: 'Liva's policy issuance and claims processing journeys were fragmented due to differing compliance checks, legacy system silos, and inconsistent intake processes. Customers had to navigate entirely separate experiences for buying a policy and registering a claim—each with its own set of identity, ownership, and driver-related verifications. Internally, back-office systems operated in isolation, enforcing distinct business rules and document validation protocols. This not only created operational inefficiencies but also added friction to the customer experience.',
     solution: `<p>We designed and deployed a unified compliance intake platform that acts as a single point of entry across policy and claims journeys. At its core is an AI-powered OCR engine that standardizes, validates, and extracts key data from uploaded documents&mdash;regardless of source or system destination.</p>
                 <ul>
                 <li>The platform was built to be:</li>
