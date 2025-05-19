@@ -48,8 +48,8 @@ export const caseStudies: CaseStudy[] = [
     date: '2025-12-01'
   },
   {
-    id: 'e-commerce-platform-redesign',
-    title: 'Digital policy and claims',
+    id: 'digital-policy-and-claims-using-ai',
+    title: 'Digital policy and claims using AI',
     client: 'Liva Insurance (formerly RSA Insurance)',
     industry: 'Finance',
     services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
@@ -79,24 +79,35 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'healthcare-patient-portal',
-    title: 'Healthcare Patient Portal',
-    client: 'MediCare Health Network',
+    title: 'Driving multi-market D2C sales',
+    client: 'DAMAC Properties',
     industry: 'Healthcare',
-    services: ['Application Development', 'UX Research', 'Systems Integration'],
-    summary: 'Created an intuitive patient portal for a leading healthcare provider that improved patient engagement and streamlined administrative processes.',
-    challenge: 'MediCare Health Network was struggling with patient engagement and administrative overhead. Patients had difficulty accessing their medical records, scheduling appointments, and communicating with their healthcare providers. Staff were overwhelmed with paperwork and manual processes, leading to inefficiencies and frustration.',
-    solution: 'We developed a comprehensive patient portal that integrated with their existing electronic health record system. The portal included features for appointment scheduling, secure messaging with providers, prescription refill requests, and access to test results and medical records. We conducted extensive usability testing with patients of all ages to ensure the interface was intuitive for everyone.',
-    results: 'The patient portal led to a 70% reduction in phone calls for appointment scheduling, a 50% decrease in no-show appointments, and a 90% patient satisfaction rating. Staff reported saving an average of 15 hours per week on administrative tasks, allowing them to focus more on patient care.',
-    testimonial: {
-      quote: "This patient portal has transformed how we interact with patients. The interface is so intuitive that even our elderly patients have adopted it enthusiastically. It's improved care coordination and patient satisfaction dramatically.",
-      author: 'Dr. Lisa Patel',
-      position: 'Chief Medical Officer, MediCare Health Network'
-    },
-    featuredImage: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
+    services: ['Expand Product Offerings', 'Scale Digital Experiences', 'Digitalize Product Lines'],
+    summary: 'How DAMAC turned around a tradtional property selling model into a high-converting D2C sales engine',
+    challenge: 'With a growing portfolio of properties across the Middle East markets, DAMAC was facing a backlog of unsold property units and overwhelmed sales teams chasing cold leads. The traditional model of roadshows, events, and offline sales meant delays, double bookings, and missed opportunities. DAMAC wanted to cut time-to-close, capture early buyer intent, and give its sales teams real-time visibility into available inventory—especially during international campaigns and events.',
+    solution: 'We co-created and delivered a multi-market D2C mobile app that let customers view real-time unit availability, express interest, and reserve properties on the spot with a down payment. The platform served as a single source of truth for both customers and DAMAC sales teams, ensuring that inventory was always current, synced across geographies, and instantly bookable. This allowed DAMAC to pre-qualify leads, reduce sales friction, and experiment with a direct-to-customer sales model without overhauling their core systems.',
+    results: `<ul>
+                <li>
+                  <p>📈 5x increase in qualified leads</p>
+                </li>
+                <li>
+                  <p>🔁 2x improvement in conversion rates</p>
+                </li>
+                <li>
+                  <p>🌍 Expanded reach across global markets and roadshows</p>
+                </li>
+                <li>
+                  <p>📲 New D2C channel unlocked for faster, more direct sales</p>
+                </li>
+                <li>
+                  <p>✅ Eliminated double-booking and inventory visibility gaps</p>
+                </li>
+              </ul>`,
+    featuredImage: '/assets/imgs/damac-connect.png',
     images: [
-      'https://images.unsplash.com/photo-1576091160550-2173dba999ef',
-      'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb',
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d'
+      '/assets/imgs/damac-connect-property.jpeg',
+      '/assets/imgs/damac-connect-search.jpeg',
+      '/assets/imgs/damac-connect-sign-up.jpeg'
     ],
     date: '2023-10-05'
   },
