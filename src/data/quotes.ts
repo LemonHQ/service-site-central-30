@@ -73,12 +73,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www2.deloitte.com/global/en/pages/financial-services/articles/digital-banking-maturity.html"
   },
   "insurance": {
-    quote: "Personalization can reduce acquisition costs by as much as 50%, lift revenues by 5-15%, and increase the efficiency of marketing spend by 10-30%.",
-    author: "Mckinsey",
-    authorTitle: "Growth, Marketing & Sales",
+    quote: "Insurance carriers who excel at customer experience generate 2-4X more growth and 30% higher profitability than their competitors.",
+    author: "McKinsey & Company",
+    authorTitle: "Insurance Practice",
     imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "The future of personalization—and how to get ready for it",
-    sourceUrl: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-future-of-personalization-and-how-to-get-ready-for-it"
+    sourceText: "The growth engine: Superior customer experience in insurance",
+    sourceUrl: "https://www.mckinsey.com/industries/financial-services/our-insights/the-growth-engine-superior-customer-experience-in-insurance"
   },
   "healthcare": {
     quote: "Healthcare organizations that have digitally transformed report 81% improved patient satisfaction and a 74% reduction in care costs through streamlined workflows and remote monitoring capabilities.",
