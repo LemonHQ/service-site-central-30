@@ -41,12 +41,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://hbr.org/2019/03/digital-transformation-is-not-about-technology"
   },
   "standardize-digital-portfolio": {
-    quote: "Design systems save organizations an average of 20-30% in design and development time, 60-70% in maintenance resources, and provide 80-95% reuse rate of design components.",
+    quote: "Organizations with design systems report a 46% increase in design consistency, 37% reduction in design debt, and 34% boost in production speed of digital products.",
     author: "Forrester Research",
-    authorTitle: "Total Economic Impact Study",
+    authorTitle: "Design Systems Impact Study",
     imageUrl: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "The Total Economic Impact Of InVision Design System Manager",
-    sourceUrl: "https://www.invisionapp.com/lp/forrester-design-system-manager"
+    sourceText: "The Total Economic Impact™ Of Design Systems",
+    sourceUrl: "https://www.forrester.com/report/the-total-economic-impact-of-adobe-spectrum-design-system/RES177565"
   },
   "pilot-emerging-tech": {
     quote: "75% of business leaders believe that if they don't move beyond experimentation with artificial intelligence in the next five years, they risk going out of business.",
