@@ -1,4 +1,3 @@
-
 export interface QuoteData {
   quote: string;
   author?: string;
@@ -66,12 +65,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www.aberdeen.com/cmo-essentials/stats-omnichannel-customer-care/"
   },
   "finance": {
-    quote: "80% of financial institutions believe that failing to digitally transform will lead to losing up to 15% of market share to more agile competitors and new entrants.",
+    quote: "63% of financial services firms say their outdated technology infrastructure is the biggest obstacle in their digital transformation journey.",
     author: "Deloitte",
-    authorTitle: "Financial Services Digital Transformation",
+    authorTitle: "Digital Banking Maturity Study",
     imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "Bank of 2030: Transform boldly",
-    sourceUrl: "https://www2.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html"
+    sourceText: "Digital Banking Maturity 2022",
+    sourceUrl: "https://www2.deloitte.com/global/en/pages/financial-services/articles/digital-banking-maturity.html"
   },
   "insurance": {
     quote: "Personalization can reduce acquisition costs by as much as 50%, lift revenues by 5-15%, and increase the efficiency of marketing spend by 10-30%.",
