@@ -21,7 +21,7 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'expanding-and-standardizing-motor-insurance-for-a-digital-future',
+    id: 'standardizing-motor-insurance-for-a-digital-future',
     title: 'Standardizing motor insurance for a digital future',
     client: 'Liva',
     industry: 'Finance',
@@ -49,24 +49,31 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'e-commerce-platform-redesign',
-    title: 'E-Commerce Platform Redesign',
-    client: 'Retail Universe',
+    title: 'Digital policy and claims',
+    client: 'Liva Insurance (formerly RSA Insurance)',
     industry: 'Finance',
-    services: ['UI/UX Design', 'Web Development', 'Conversion Optimization'],
-    summary: 'Completely reimagining the digital shopping experience for a major retailer, resulting in a 65% increase in conversion rates and 40% boost in average order value.',
-    challenge: 'Retail Universe was experiencing high cart abandonment rates and poor mobile conversion. Their e-commerce platform was difficult to navigate, slow to load, and didn\'t effectively showcase their products. They needed a complete redesign that would improve the customer journey and increase sales.',
-    solution: 'Our team conducted extensive user research and developed a completely new e-commerce experience. We redesigned the product browsing and checkout flows, implemented a responsive design optimized for all devices, and integrated advanced product recommendation algorithms. We also rebuilt the backend infrastructure to improve page load times and handle high traffic volumes.',
-    results: 'The new platform launched with immediate positive impact. Conversion rates increased by 65%, average order value grew by 40%, and mobile purchases doubled. Page load times were reduced by 60%, and the improved search functionality led to customers finding products 3x faster.',
-    testimonial: {
-      quote: "Our customers have been raving about the new shopping experience. It's intuitive, fast, and actually makes shopping online enjoyable. The metrics speak for themselves – this redesign has transformed our business.",
-      author: 'Michael Chen',
-      position: 'VP of Digital, Retail Universe'
-    },
-    featuredImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'How RSA slashed compliance bottlenecks and unified policy & claims with one smart AI move',
+    challenge: 'Liva’s policy issuance and claims processing journeys were fragmented due to differing compliance checks, legacy system silos, and inconsistent intake processes. Customers had to navigate entirely separate experiences for buying a policy and registering a claim—each with its own set of identity, ownership, and driver-related verifications. Internally, back-office systems operated in isolation, enforcing distinct business rules and document validation protocols. This not only created operational inefficiencies but also added friction to the customer experience.',
+    solution: `<p>We designed and deployed a unified compliance intake platform that acts as a single point of entry across policy and claims journeys. At its core is an AI-powered OCR engine that standardizes, validates, and extracts key data from uploaded documents&mdash;regardless of source or system destination.</p>
+                <ul>
+                <li>The platform was built to be:</li>
+                <li>Scalable across lines of business and use cases</li>
+                <li>Portable for integration into both internal tools and customer-facing apps</li>
+                <li>Extensible to support future regulatory or business requirements</li>
+                </ul>
+                <p>This eliminated the need for customers to repeat information or re-upload documents and dramatically reduced dependency on back-office teams for verification tasks. The result was a more fluid and consistent experience across products, powered by a shared compliance foundation.</p>`,
+    results: `<ul>
+                <li>Successfully integrated into 5+ internal back-office applications</li>
+                <li>Fully embedded in motor insurance quote and buy flows</li>
+                <li>Reduced manual verification load for operations teams</li>
+                <li>Created a single, reusable compliance layer across multiple journeys</li>
+                </ul>`,
+    featuredImage: '/assets/imgs/kamal-1.png',
     images: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-      'https://images.unsplash.com/photo-1551239262-61cf00f7f55d'
+      '/assets/imgs/kamal-2.png',
+      '/assets/imgs/kamal-3.png',
+      '/assets/imgs/kamal-9.png'
     ],
     date: '2023-06-22'
   },
