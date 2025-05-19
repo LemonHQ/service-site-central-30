@@ -1,3 +1,4 @@
+
 export interface QuoteData {
   quote: string;
   author?: string;
@@ -57,12 +58,12 @@ export const serviceQuotes: Record<string, QuoteData> = {
     sourceUrl: "https://www.accenture.com/us-en/insights/technology/technology-trends-2023"
   },
   "retail": {
-    quote: "Retailers who effectively integrate digital and physical experiences see 40% higher conversion rates and a 30% increase in average order value.",
-    author: "Harvard Business Review",
-    authorTitle: "Retail Innovation Analysis",
+    quote: "Retailers who successfully implement omnichannel customer experiences achieve 91% greater year-over-year customer retention rates compared to retailers who don't.",
+    author: "Aberdeen Group",
+    authorTitle: "Retail Industry Research",
     imageUrl: "https://images.unsplash.com/photo-1573612664822-d7d347da7b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    sourceText: "The Future of Retail Isn't What You Think",
-    sourceUrl: "https://hbr.org/2022/07/the-future-of-retail-isnt-what-you-think"
+    sourceText: "Omnichannel Customer Care: Best-in-Class Strategies for 2023",
+    sourceUrl: "https://www.aberdeen.com/cmo-essentials/stats-omnichannel-customer-care/"
   },
   "finance": {
     quote: "80% of financial institutions believe that failing to digitally transform will lead to losing up to 15% of market share to more agile competitors and new entrants.",
