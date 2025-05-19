@@ -32,7 +32,12 @@ const CaseStudyDetail: React.FC = () => {
   // Find the case study based on the URL parameter with added safety check
   const caseStudy = useMemo(() => {
     if (!caseStudyId) return null;
-    return caseStudies.find(cs => cs.id === caseStudyId) || null;
+    try {
+      return caseStudies.find(cs => cs?.id === caseStudyId) || null;
+    } catch (error) {
+      console.error('Error finding case study:', error);
+      return null;
+    }
   }, [caseStudyId]);
   
   // If case study not found, redirect to case studies page after a short delay
@@ -76,9 +81,16 @@ const CaseStudyDetail: React.FC = () => {
   });
 
   // Find related case studies with the same industry
-  const relatedCaseStudies = caseStudies
-    .filter(cs => cs.industry === caseStudy.industry && cs.id !== caseStudyId)
-    .slice(0, 3);
+  const relatedCaseStudies = useMemo(() => {
+    try {
+      return caseStudies
+        .filter(cs => cs && cs.industry === caseStudy.industry && cs.id !== caseStudyId)
+        .slice(0, 3);
+    } catch (error) {
+      console.error('Error finding related case studies:', error);
+      return [];
+    }
+  }, [caseStudy, caseStudyId]);
 
   // Open lightbox with specific image
   const openLightbox = (index: number) => {
@@ -88,13 +100,13 @@ const CaseStudyDetail: React.FC = () => {
 
   // Navigate to next image in lightbox
   const nextImage = () => {
-    if (imageIndex === null) return;
+    if (imageIndex === null || !caseStudy.images || caseStudy.images.length === 0) return;
     setImageIndex((imageIndex + 1) % caseStudy.images.length);
   };
 
   // Navigate to previous image in lightbox
   const prevImage = () => {
-    if (imageIndex === null) return;
+    if (imageIndex === null || !caseStudy.images || caseStudy.images.length === 0) return;
     setImageIndex((imageIndex - 1 + caseStudy.images.length) % caseStudy.images.length);
   };
   
@@ -186,7 +198,7 @@ const CaseStudyDetail: React.FC = () => {
         </div>
         
         {/* Project Gallery - Carousel with contrasting background */}
-        {caseStudy.images.length > 0 && (
+        {caseStudy.images && caseStudy.images.length > 0 && (
           <div className="py-16 bg-brand-100 rounded-lg mb-16">
             <div className="container mx-auto px-4">
               <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
@@ -222,7 +234,7 @@ const CaseStudyDetail: React.FC = () => {
           <DialogContent className="max-w-screen-lg max-h-[90vh] p-0 bg-transparent border-none shadow-none">
             <div className="relative w-full h-full">
               <div className="flex items-center justify-center h-full">
-                {imageIndex !== null && caseStudy.images[imageIndex] && (
+                {imageIndex !== null && caseStudy.images && caseStudy.images[imageIndex] && (
                   <img 
                     src={caseStudy.images[imageIndex]} 
                     alt={`${caseStudy.title} - Full view`}
@@ -265,7 +277,7 @@ const CaseStudyDetail: React.FC = () => {
               </div>
               
               <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                {imageIndex !== null && (
+                {imageIndex !== null && caseStudy.images && (
                   <span>{imageIndex + 1} of {caseStudy.images.length}</span>
                 )}
               </div>
