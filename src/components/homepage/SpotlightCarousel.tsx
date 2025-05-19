@@ -9,7 +9,7 @@ const SpotlightCarousel: React.FC = () => {
     buttonLink: "/services",
     secondaryButtonText: "Contact Us",
     secondaryButtonLink: "/contact",
-    bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80"
+    bgImage: "/assets/imgs/flying-paper-planes-hero-image.png"
   };
   return <section className="relative w-full h-[calc(100vh-5rem)]">
       <div className="flex flex-col justify-center h-full w-full text-white px-4 sm:px-6 lg:px-8 relative" style={{
