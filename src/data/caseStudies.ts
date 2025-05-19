@@ -22,7 +22,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: 'expanding-and-standardizing-motor-insurance-for-a-digital-future',
-    title: 'Expanding and standardizing motor insurance for a digital future',
+    title: 'Standardizing motor insurance for a digital future',
     client: 'Liva',
     industry: 'Finance',
     services: ['Digitalize Product Lines', 'Expand Product Offerings', 'Standardize Digital Portfolio'],

@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, Building, Award, Quote, ArrowRight, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import ResponseSection from '@/components/approach/co-create-closer/ResponseSection';
 import {
   Carousel,
   CarouselContent,
@@ -253,18 +254,7 @@ const CaseStudyDetail: React.FC = () => {
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12 mb-16">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to explore?</h3>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Assess your readiness for a co-creation journey today,
-          </p>
-          <Link to="/approach/co-create-assessment">
-            <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
-              Get Started
-            </Button>
-          </Link>
-        </div>
+        <ResponseSection />
         
         {/* Related Case Studies */}
         {relatedCaseStudies.length > 0 && (
