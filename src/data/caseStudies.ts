@@ -88,38 +88,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     date: '2023-04-18'
   },
-  {
-    id: 'digital-policy-and-claims-using-ai',
-    title: 'Digital policy and claims using AI',
-    client: 'Liva Insurance (formerly RSA Insurance)',
-    industry: 'Finance',
-    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
-    summary: 'How RSA slashed compliance bottlenecks and unified policy & claims with one smart AI move',
-    challenge: 'Liva’s policy issuance and claims processing journeys were fragmented due to differing compliance checks, legacy system silos, and inconsistent intake processes. Customers had to navigate entirely separate experiences for buying a policy and registering a claim—each with its own set of identity, ownership, and driver-related verifications. Internally, back-office systems operated in isolation, enforcing distinct business rules and document validation protocols. This not only created operational inefficiencies but also added friction to the customer experience.',
-    solution: `<p>We designed and deployed a unified compliance intake platform that acts as a single point of entry across policy and claims journeys. At its core is an AI-powered OCR engine that standardizes, validates, and extracts key data from uploaded documents&mdash;regardless of source or system destination.</p>
-                <ul>
-                <li>The platform was built to be:</li>
-                <li>Scalable across lines of business and use cases</li>
-                <li>Portable for integration into both internal tools and customer-facing apps</li>
-                <li>Extensible to support future regulatory or business requirements</li>
-                </ul>
-                <p>This eliminated the need for customers to repeat information or re-upload documents and dramatically reduced dependency on back-office teams for verification tasks. The result was a more fluid and consistent experience across products, powered by a shared compliance foundation.</p>`,
-    results: `<ul>
-                <li>Successfully integrated into 5+ internal back-office applications</li>
-                <li>Fully embedded in motor insurance quote and buy flows</li>
-                <li>Reduced manual verification load for operations teams</li>
-                <li>Created a single, reusable compliance layer across multiple journeys</li>
-                </ul>`,
-    featuredImage: '/assets/imgs/kamal-1.png',
-    images: [
-      '/assets/imgs/kamal-2.png',
-      '/assets/imgs/kamal-3.png',
-      '/assets/imgs/kamal-9.png',
-      '/assets/imgs/kamal-1.png',
-    ],
-    date: '2023-06-22'
-  },
-  {
+    {
     id: 'driving-multi-market-d2c-sales',
     title: 'Driving multi-market D2C sales',
     client: 'DAMAC Properties',
@@ -153,5 +122,36 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/damac-connect.png'
     ],
     date: '2016-10-05'
+  },
+  {
+    id: 'digital-policy-and-claims-using-ai',
+    title: 'Digital policy and claims using AI',
+    client: 'Liva Insurance (formerly RSA Insurance)',
+    industry: 'Finance',
+    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'How RSA slashed compliance bottlenecks and unified policy & claims with one smart AI move',
+    challenge: 'Liva’s policy issuance and claims processing journeys were fragmented due to differing compliance checks, legacy system silos, and inconsistent intake processes. Customers had to navigate entirely separate experiences for buying a policy and registering a claim—each with its own set of identity, ownership, and driver-related verifications. Internally, back-office systems operated in isolation, enforcing distinct business rules and document validation protocols. This not only created operational inefficiencies but also added friction to the customer experience.',
+    solution: `<p>We designed and deployed a unified compliance intake platform that acts as a single point of entry across policy and claims journeys. At its core is an AI-powered OCR engine that standardizes, validates, and extracts key data from uploaded documents&mdash;regardless of source or system destination.</p>
+                <ul>
+                <li>The platform was built to be:</li>
+                <li>Scalable across lines of business and use cases</li>
+                <li>Portable for integration into both internal tools and customer-facing apps</li>
+                <li>Extensible to support future regulatory or business requirements</li>
+                </ul>
+                <p>This eliminated the need for customers to repeat information or re-upload documents and dramatically reduced dependency on back-office teams for verification tasks. The result was a more fluid and consistent experience across products, powered by a shared compliance foundation.</p>`,
+    results: `<ul>
+                <li>Successfully integrated into 5+ internal back-office applications</li>
+                <li>Fully embedded in motor insurance quote and buy flows</li>
+                <li>Reduced manual verification load for operations teams</li>
+                <li>Created a single, reusable compliance layer across multiple journeys</li>
+                </ul>`,
+    featuredImage: '/assets/imgs/kamal-1.png',
+    images: [
+      '/assets/imgs/kamal-2.png',
+      '/assets/imgs/kamal-3.png',
+      '/assets/imgs/kamal-9.png',
+      '/assets/imgs/kamal-1.png',
+    ],
+    date: '2023-06-22'
   }
 ];
