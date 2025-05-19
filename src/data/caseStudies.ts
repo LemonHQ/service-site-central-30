@@ -113,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'reimagining-product-experience',
-    title: '',
+    title: 'Reimagining product Experience',
     client: 'Abbott Diabetes Care',
     industry: 'Healthcare',
     services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
