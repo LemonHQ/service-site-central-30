@@ -81,7 +81,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'healthcare-patient-portal',
     title: 'Driving multi-market D2C sales',
     client: 'DAMAC Properties',
-    industry: 'Healthcare',
+    industry: 'Real Estate',
     services: ['Expand Product Offerings', 'Scale Digital Experiences', 'Digitalize Product Lines'],
     summary: 'How DAMAC turned around a tradtional property selling model into a high-converting D2C sales engine',
     challenge: 'With a growing portfolio of properties across the Middle East markets, DAMAC was facing a backlog of unsold property units and overwhelmed sales teams chasing cold leads. The traditional model of roadshows, events, and offline sales meant delays, double bookings, and missed opportunities. DAMAC wanted to cut time-to-close, capture early buyer intent, and give its sales teams real-time visibility into available inventory—especially during international campaigns and events.',
@@ -109,7 +109,7 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/damac-connect-search.jpeg',
       '/assets/imgs/damac-connect-sign-up.jpeg'
     ],
-    date: '2023-10-05'
+    date: '2016-10-05'
   },
   {
     id: 'smart-city-infrastructure',
