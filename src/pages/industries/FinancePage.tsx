@@ -1,8 +1,8 @@
-
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
 import { Banknote, CreditCard, TrendingUp, Shield, Network } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
+import { serviceQuotes } from '@/data/quotes';
 
 const FinancePage = () => {
   return (
@@ -16,14 +16,7 @@ const FinancePage = () => {
       secondaryCtaLink="/case-studies"
       heroImage="https://images.unsplash.com/photo-1551038247-3d9af20df552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
       isAiHeroImage={false}
-      quotePanel={{
-        quote: "Financial institutions that successfully execute digital transformation strategies increase customer acquisition by up to 25% while reducing operational costs by up to 35%.",
-        author: "Boston Consulting Group",
-        authorTitle: "Financial Services Practice",
-        imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        sourceText: "Digital Strategy in Banking",
-        sourceUrl: "https://www.bcg.com/industries/financial-institutions/banking"
-      }}
+      quotePanel={serviceQuotes['finance']}
       features={[
         {
           title: "Digital Banking Transformation",
