@@ -78,7 +78,7 @@ export const caseStudies: CaseStudy[] = [
     date: '2023-06-22'
   },
   {
-    id: 'healthcare-patient-portal',
+    id: 'driving-multi-market-d2c-sales',
     title: 'Driving multi-market D2C sales',
     client: 'DAMAC Properties',
     industry: 'Real Estate',
@@ -112,25 +112,40 @@ export const caseStudies: CaseStudy[] = [
     date: '2016-10-05'
   },
   {
-    id: 'smart-city-infrastructure',
-    title: 'Smart City Infrastructure',
-    client: 'Metropolitan Council',
-    industry: 'Government',
-    services: ['IoT Integration', 'Data Analytics', 'Mobile App Development'],
-    summary: 'Developed an integrated smart city platform that improved traffic flow by 30% and reduced energy consumption across public buildings by 25%.',
-    challenge: "The Metropolitan Council was facing increasing pressure to improve city services while reducing operational costs. Traffic congestion, energy efficiency, and public safety were major concerns for residents. They needed a technological solution that would make their city operations smarter and more responsive to citizens' needs.",
-    solution: 'We designed and implemented a comprehensive smart city platform that integrated IoT sensors throughout the city infrastructure. This included smart traffic lights that adjusted to traffic patterns, energy management systems for public buildings, and a public safety network. We also developed a citizen-facing mobile app that provided real-time information and services to residents.',
-    results: 'The implementation reduced traffic congestion by 30%, decreased energy consumption in public buildings by 25%, and improved emergency response times by 40%. The mobile app was downloaded by 65% of residents and has maintained a 4.7-star rating. The city has estimated annual savings of $4.2 million due to operational efficiencies.',
-    testimonial: {
-      quote: "This smart city initiative has transformed how we serve our citizens. We're now able to be proactive rather than reactive, addressing issues before they impact residents. The data we're collecting is also helping us make better long-term planning decisions.",
-      author: 'Robert Williams',
-      position: 'Mayor, Metropolitan City'
-    },
-    featuredImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+    id: 'reimagining-product-experience',
+    title: '',
+    client: 'Abbott Diabetes Care',
+    industry: 'Healthcare',
+    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'How Abbott FSL reimagined its product experience eco-system',
+    challenge: "<p>Abbott’s Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn’t an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.<p>",
+    solution: `<p>We launched a multi-market discovery and ecosystem mapping initiative, engaging end users, partners, and frontline stakeholders across the four target markets. Through in-depth user research and local partner interviews, we uncovered market-specific needs:</p>
+                <ul>
+                  <li>In Egypt, customers preferred monthly subscriptions</li>
+                  <li>In Oman, convenience and home delivery were top priorities</li>
+                  <li>In KSA, access was limited outside major cities</li>
+                  <li>In UAE, customers wanted digital support and payment flexibility</li>
+                </ul>
+                <p>We translated these insights into a unified digital roadmap for the Freestyle Libre ecosystem, including:</p>
+                <ul>
+                  <li>Customer personas per market</li>
+                  <li>Multi-market commerce platform architecture</li>
+                  <li>POS, distributor, and end-user journey flows</li>
+                  <li>Mockups for localized digital storefronts and service layers</li>
+                </ul>
+                <p>A flexible service design model that worked within Abbott&rsquo;s global brand and compliance constraints</p>`,
+    results: `<ul>
+                <li>Enabled Abbott to&nbsp;realize 1st-party customer&nbsp;data was possible for the first time</li>
+                <li>Distributors&nbsp;could envision&nbsp;a new sales channel apart from the retail path to higher-margin digital sales</li>
+                <li>Delivered a platform framework that balanced compliance, control, and local flexibility</li>
+                <li>Abstracted back-office and logistical complexity through digital architecture</li>
+                <li>Set the foundation for long-term, scalable D2D2C commerce across emerging markets</li>
+              </ul>`,
+    featuredImage: '/assets/imgs/fsl-web.png',
     images: [
-      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df',
-      'https://images.unsplash.com/photo-1544085311-11a028465b03',
-      'https://images.unsplash.com/photo-1525785967371-87ba44b3e6cf'
+      '/assets/imgs/fsl-dash.png',
+      '/assets/imgs/fsl-ecomm.png',
+      '/assets/imgs/fsl-pos.png'
     ],
     date: '2023-04-18'
   }
