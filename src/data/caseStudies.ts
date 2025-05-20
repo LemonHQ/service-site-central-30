@@ -153,5 +153,99 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/kamal-1.png',
     ],
     date: '2023-06-22'
+  },
+  {
+    id: 'how-abdul-latif-jameel-established-its-market-leadership',
+    title: 'How Abdul Latif Jameel established its market leadership',
+    client: 'Abdul Latif Jameel (Automotive & Diversified)',
+    industry: 'Private Enterprise',
+    services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'Staying ahead of evolving market trends in brand communications',
+    challenge: `<p>As one of the oldest and most influential businesses in the MENA region, Abdul Latif Jameel (ALJ) had grown from a Toyota distributor into a global private enterprise with investments in real estate, renewable energy, finance, and advanced technologies. With such a broad and fast-evolving footprint, the leadership team needed a way to:</p>
+                <ul>
+                  <li>Showcase ALJ&rsquo;s global presence and impact to investors, governments, and manufacturing partners</li>
+                  <li>Keep its international teams and executives informed of developments across regional markets</li>
+                  <li>Do it all in a standardized, controlled, and brand-consistent way</li>
+                </ul>
+                <p>While ALJ had a strong website and social presence, it lacked a personalized, mobile-first channel to deliver tailored, timely insights.</p>`,
+    solution: `<p>We developed the ALJ Insights mobile news digest app&mdash;a modern content channel tailored for global teams and strategic stakeholders.</p>
+                <p>Key features included:</p>
+                <ul>
+                  <li>Curated news feeds based on region, sector, and role</li>
+                  <li>Audio news and playlist-style updates</li>
+                  <li>Real-time push notifications for important updates</li>
+                  <li>CMS integration to allow cross-publishing from the ALJ web newsroom</li>
+                </ul>
+                <p>The solution gave ALJ a direct, data-driven content delivery channel that complemented its corporate presence while offering a more personalized, engaging experience.</p>`,
+    results: `<ul>
+                <li>
+                  <p>📈 5x increase in engagement across content channels</p>
+                </li>
+                <li>
+                  <p>📣 Significant amplification of strategic messaging and brand visibility</p>
+                </li>
+                <li>
+                  <p>🚀 2.5% YoY growth in active readership</p>
+                </li>
+                <li>
+                  <p>📱 1,000+ user sign-ups at launch</p>
+                </li>
+                <li>
+                  <p>🌍 Launched in 2 languages for regional reach and relevance</p>
+                </li>
+              </ul>`,
+    featuredImage: '/assets/imgs/ALJ-insights-cover.png',
+    images: [
+      '/assets/imgs/ALJ-Insights-action-panel.png',
+      '/assets/imgs/ALJ-Insights-audio-news.png',
+      '/assets/imgs/ALJ-Insights-home.png',
+      '/assets/imgs/ALJ-Insights-media-gallery.png',
+      '/assets/imgs/ALJ-Insights-news-playlist.png',
+      '/assets/imgs/ALJ-Insights-swipe.png',
+      '/assets/imgs/ALJ-Insights-voice-search.png',
+      '/assets/imgs/ALJ-Insights-welcome.png',
+    ],
+    date: '2017-12-30'
+  },
+  {
+    id: 'how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
+    title: 'How MERAAS turned a live pilot to strategize for Dubai’s next major rewards ecosystem',
+    client: 'Meraas Holding',
+    industry: 'Private Enterprise',
+    services: ['Pilot Emerging Tech', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'Co-creating an idea to pilot for a new rewards eco-system program',
+    challenge: `<p>Meraas is the developer behind some of Dubai&rsquo;s most iconic destinations&mdash;from Bluewaters Island to City Walk and La Mer. As both a major employer and leaseholder of commercial real estate, Meraas saw an opportunity to combine employee experience with ecosystem growth.</p>
+                <p>The business goal was twofold:</p>
+                <ul>
+                  <li>Retain and engage talent with a meaningful rewards program</li>
+                  <li>Pilot a future-facing retail loyalty ecosystem across its malls and venues</li>
+                </ul>
+                <p>However, there was no working product, no real customer data, and the business model was still evolving. Meraas needed a testable, measurable way to validate the concept internally before committing to a full-scale public rollout.</p>`,
+    solution: `<p>We developed a mobile rewards app and rolled it out to select internal audiences&mdash;from executives to back-office staff. The platform allowed employees to:</p>
+                <ul>
+                  <li>Browse and redeem exclusive offers from 100+ participating retailers</li>
+                  <li>Collect and spend points at Meraas-owned destinations</li>
+                  <li>Share rewards with family members</li>
+                  <li>Receive personalized deals based on preference and usage</li>
+                </ul>
+                <p>This closed-loop pilot provided an active testbed for engagement, merchant participation, and system performance.</p>`,
+    results: `<ul>
+                <li>📊 2x increase in footfall across key Meraas destinations</li>
+                <li>📱 20% employee adoption rate within the pilot group</li>
+                <li>🛍️ 100+ retail outlets onboarded across malls and shopping destinations</li>
+                <li>🔍 Actionable data to inform future customer loyalty strategy</li>
+              </ul>`,
+    featuredImage: '/assets/imgs/my-meraas-cover.png',
+    images: [
+      '/assets/imgs/meraas-menu.jpeg',
+      '/assets/imgs/meraas-offers.jpeg',
+      '/assets/imgs/meraas-preferences.jpeg',
+      '/assets/imgs/meraas-search.jpeg',
+      '/assets/imgs/meraas-rewards.jpeg',
+      '/assets/imgs/meraas-experiences.jpeg',
+      '/assets/imgs/meraas-login.jpeg',
+      '/assets/imgs/meraas-hero.png'
+    ],
+    date: '2017-12-30'
   }
 ];
