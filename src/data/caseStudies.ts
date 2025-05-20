@@ -211,7 +211,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
     title: 'How MERAAS turned a live pilot to strategize for Dubai’s next major rewards ecosystem',
     client: 'Meraas Holding',
-    industry: 'Private Enterprise',
+    industry: 'Real Estate',
     services: ['Pilot Emerging Tech', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
     summary: 'Co-creating an idea to pilot for a new rewards eco-system program',
     challenge: `<p>Meraas is the developer behind some of Dubai&rsquo;s most iconic destinations&mdash;from Bluewaters Island to City Walk and La Mer. As both a major employer and leaseholder of commercial real estate, Meraas saw an opportunity to combine employee experience with ecosystem growth.</p>
