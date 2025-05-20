@@ -27,8 +27,13 @@ const DigitalizeProductPage = () => {
       customerProfilesSubtitle="With you at different stages of your digitalization journey"
       features={[
         {
-          title: "Decouple products",
+          title: "Drive Top-Line revenue",
           description: "Decompose traditional products into stand-alone offerings customized around a specific customer segment",
+          icon: Cloud
+        },
+        {
+          title: "Create competitive advantage",
+          description: "Establish market leadership by embedding digital features that are hard to replicate—driving customer lock-in and reducing competitive threats",
           icon: Cloud
         },
         {
@@ -54,6 +59,12 @@ const DigitalizeProductPage = () => {
         {
           title: "Modernize legacy experiences",
           description: "Redesing product journeys and experiences for a digital-first customer",
+          icon: Users
+        }
+        ,
+        {
+          title: "Enhance customer acquisition and retention",
+          description: "Enable customers to experience value upfront whilst incentivising eco-system transactions",
           icon: Users
         }
       ]}

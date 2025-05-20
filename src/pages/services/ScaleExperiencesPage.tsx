@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Database, Globe, Shield, BarChart2, Settings } from 'lucide-react';
+import { Database, Globe, Shield, BarChart2, Settings,Cloud, ShieldCheck, Users  } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 import { getCustomerProfilesByServiceSlug } from '@/data/customerProfiles';
@@ -46,6 +46,21 @@ const ScaleExperiencesPage = () => {
           description: "Deliver a unified experience that reflects the full depth of your brand and product portfolios",
           icon: Settings
         },
+        {
+          title: "Drive Top-Line revenue",
+          description: "Decompose traditional products into stand-alone offerings customized around a specific customer segment",
+          icon: Cloud
+        },
+        {
+          title: "Create competitive advantage",
+          description: "Establish market leadership by embedding digital features that are hard to replicate—driving customer lock-in and reducing competitive threats",
+          icon: Cloud
+        },
+        {
+          title: "Enhance customer acquisition and retention",
+          description: "Enable customers to experience value upfront whilst incentivising eco-system transactions",
+          icon: Users
+        }            
       ]}
       featuresTitle="Use cases we solve for"
       featuresSubtitle="Solutions to help your digital platforms grow efficiently and reliably"

@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Search, Target, Maximize as Expand, Network, LineChart } from 'lucide-react';
+import { Search, Target, Maximize as Expand, Network, LineChart,Cloud, ShieldCheck, Users } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import ProductJourney from '@/components/homepage/ProductJourney';
 import { serviceQuotes } from '@/data/quotes';
@@ -26,6 +26,16 @@ const ExpandOfferingsPage = () => {
       customerProfilesSubtitle="With you at different stages of your expansion journey"
       features={[
         {
+          title: "Drive Top-Line revenue",
+          description: "Decompose traditional products into stand-alone offerings customized around a specific customer segment",
+          icon: Cloud
+        },
+        {
+          title: "Create competitive advantage",
+          description: "Establish market leadership by embedding digital features that are hard to replicate—driving customer lock-in and reducing competitive threats",
+          icon: Cloud
+        },        
+        {
           title: "Build once, use everywhere",
           description: "Reconfigure offerings to meet the specific needs of regional, sectoral, or demographic markets",
           icon: Target
@@ -39,6 +49,11 @@ const ExpandOfferingsPage = () => {
           title: "Segment specific expansion",
           description: "Expand existing products into differentiated offerings based on distinct price points, feature sets, or service models",
           icon: LineChart
+        },
+        {
+          title: "Enhance customer acquisition and retention",
+          description: "Enable customers to experience value upfront whilst incentivising eco-system transactions",
+          icon: Users
         }
       ]}
       featuresTitle="Use cases we solve for"
