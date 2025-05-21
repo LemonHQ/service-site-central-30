@@ -77,8 +77,9 @@ export const caseStudies: CaseStudy[] = [
                 <li>Abstracted back-office and logistical complexity through digital architecture</li>
                 <li>Set the foundation for long-term, scalable D2D2C commerce across emerging markets</li>
               </ul>`,
-    featuredImage: '/assets/imgs/fsl-web.png',
+    featuredImage: '/assets/imgs/fsl-cover.png',
     images: [
+      '/assets/imgs/fsl-web.png',
       '/assets/imgs/fsl-dash.png',
       '/assets/imgs/fsl-ecomm.png',
       '/assets/imgs/fsl-pos.png',
@@ -145,7 +146,7 @@ export const caseStudies: CaseStudy[] = [
                 <li>Reduced manual verification load for operations teams</li>
                 <li>Created a single, reusable compliance layer across multiple journeys</li>
                 </ul>`,
-    featuredImage: '/assets/imgs/kamal-1.png',
+    featuredImage: '/assets/imgs/kamal-cover.png',
     images: [
       '/assets/imgs/kamal-2.png',
       '/assets/imgs/kamal-3.png',
@@ -211,7 +212,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
     title: 'How MERAAS turned a live pilot to strategize for Dubai’s next major rewards ecosystem',
     client: 'Meraas Holding',
-    industry: 'Real Estate',
+    industry: 'Private Enterprise',
     services: ['Pilot Emerging Tech', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
     summary: 'Co-creating an idea to pilot for a new rewards eco-system program',
     challenge: `<p>Meraas is the developer behind some of Dubai&rsquo;s most iconic destinations&mdash;from Bluewaters Island to City Walk and La Mer. As both a major employer and leaseholder of commercial real estate, Meraas saw an opportunity to combine employee experience with ecosystem growth.</p>
