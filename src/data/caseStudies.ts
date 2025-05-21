@@ -86,7 +86,7 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/fsl-web.png',
       '/assets/imgs/Customer-journey-map.png',
       '/assets/imgs/FSL-persona.png'
-    ],
+    ], 
     date: '2023-04-18'
   },
   {
