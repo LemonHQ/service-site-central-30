@@ -69,7 +69,7 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
         <img 
           src={caseStudy.featuredImage}
           alt={caseStudy.title}
-          className="w-full h-auto object-cover max-h-[500px]"
+          className="w-full h-auto object-contain max-h-[500px]"
         />
       </div>
     </>
