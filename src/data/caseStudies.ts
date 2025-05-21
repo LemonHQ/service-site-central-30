@@ -37,8 +37,9 @@ export const caseStudies: CaseStudy[] = [
 <p><strong>Operational efficiencies through digitalization</strong><strong><br /></strong>Digitalizing policy lifecycle services streamlined internal processes, cut down manual workload, and accelerated turnaround times across quoting, renewal, and servicing. Sales teams were able to pursue leads and close more deals quicker.</p>
 <p><strong>Enhanced customer experience</strong><strong><br /></strong>The self-service platform delivered a frictionless experience&mdash;making it easier for customers to manage policies end-to-end. This increased satisfaction, loyalty, and repeat engagement.</p>
 <p><strong>Multi-channel scalability:</strong><strong><br /></strong>With support for enterprise clients, brokers, and direct sales from a single platform, Liva scaled its reach efficiently&mdash;enabling new business models and revenue streams without added complexity.</p>`,
-    featuredImage: '/assets/imgs/d2c.png',
+    featuredImage: '/assets/imgs/liva-cover.png',
     images: [
+      '/assets/imgs/d2c.png',
       '/assets/imgs/quote.png',
       '/assets/imgs/driver.png',
       '/assets/imgs/success.png',
