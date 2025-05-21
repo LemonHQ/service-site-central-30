@@ -18,7 +18,7 @@ export interface CaseStudy {
   images: string[];
   date: string;
 }
-
+ 
 export const caseStudies: CaseStudy[] = [
   {
     id: 'standardizing-motor-insurance-for-a-digital-future',
