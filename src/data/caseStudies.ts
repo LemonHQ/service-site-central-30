@@ -48,12 +48,12 @@ export const caseStudies: CaseStudy[] = [
     date: '2025-12-01'
   },
   {
-    id: 'reimagining-product-experience',
-    title: 'Reimagining product Experience',
+    id: 'reimagining-patient-experience',
+    title: 'Reimagining patient Experience',
     client: 'Abbott Diabetes Care',
     industry: 'Healthcare',
     services: ['Unify Brand experiences', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
-    summary: 'How Abbott FSL reimagined its product experience eco-system',
+    summary: 'How Abbott FSL reimagined its patient experience eco-system',
     challenge: "<p>Abbott's Freestyle Libre, a revolutionary continuous glucose monitoring (CGM) product, was already changing how patients manage diabetes. But market awareness around CGMs was still low, and physical FSL Experience Centers in KSA, UAE, Oman, and Egypt—set up for patient education and sales—were no longer scalable post-pandemic. </p><p>Abbott needed a digital path forward, but its traditional distribution model posed a major hurdle. Selling directly wasn't an option. Distributors operated large, siloed back-office systems, and past attempts to deploy an off-the-shelf D2D2C platform had failed due to rigid assumptions and lack of localization.</p>",
     solution: `<p>We launched a multi-market discovery and ecosystem mapping initiative, engaging end users, partners, and frontline stakeholders across the four target markets. Through in-depth user research and local partner interviews, we uncovered market-specific needs:</p>
                 <ul>

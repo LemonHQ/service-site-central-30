@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 const SpotlightCarousel: React.FC = () => {
   const content = {
-    title: "Advancing digital plays for multi-line enterprise brands",
-    description: "Launching and expanding digital portfolios at scale to unlock new revenue streams, expand products distribution, and capitalize on emerging opportunities.",
+    title: "Advancing digital plays for multi-line product businesses",
+    description: "Your partner for executing digital business transformation roadmaps at scale",
     buttonText: "Explore Our Services",
     buttonLink: "/services",
     secondaryButtonText: "Contact Us",
