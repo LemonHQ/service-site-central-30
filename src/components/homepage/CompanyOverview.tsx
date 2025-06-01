@@ -94,7 +94,8 @@ const CompanyOverview: React.FC = () => {
             <p className="text-lg text-gray-600 mb-8">
               {/* Brands today are under increasing pressure to deliver digital-first experiences.  */}
               Multi-line businesses often face execution bottlenecks when running parallel digital strategy roadmaps across their product portfolios.
-              For over 17+ years we've worked closely with brand, product and market leaders to deliver multi-market digital products and portfolios with consistency, accuracy and standards. We're not just digital enablers — we're strategic partners who understand how to move strategic initiatives from idea to market to scale, reliably and efficiently.
+              For over 17+ years we've worked closely with brand, product and market leaders to deliver multi-market digital products and portfolios with consistency, accuracy and standards. 
+              We're not just digital enablers — we're strategic partners who understand how to move strategic initiatives from idea to market to expansion, reliably, efficiently and at SCALE.
             </p>
             
             <div className="space-y-4 mb-8">
