@@ -11,7 +11,7 @@ const PrivacyNotice: React.FC<PrivacyNoticeProps> = ({ className = '', formType 
   const getDataUsagePurpose = () => {
     switch (formType) {
       case 'contact':
-        return 'respond to your inquiry and provide the services you've requested';
+        return "respond to your inquiry and provide the services you've requested";
       case 'newsletter':
         return 'send you our newsletter and relevant marketing communications';
       case 'lead-qualification':
@@ -21,7 +21,7 @@ const PrivacyNotice: React.FC<PrivacyNoticeProps> = ({ className = '', formType 
       case 'assessment':
         return 'generate your assessment results and provide relevant recommendations';
       default:
-        return 'provide the services you've requested';
+        return "provide the services you've requested";
     }
   };
 
