@@ -15,6 +15,7 @@ import { Checkbox } from '../components/ui/checkbox';
 import { supabase } from '../integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import PrivacyNotice from '../components/privacy/PrivacyNotice';
 
 // Define form schema with validation
 const formSchema = z.object({
@@ -40,6 +41,7 @@ const formSchema = z.object({
   consent: z.boolean().refine(val => val === true, {
     message: "You must agree to the terms and conditions"
   }),
+  marketing_consent: z.boolean().default(false)
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -59,6 +61,7 @@ const CvSubmission = () => {
       phone: '',
       message: '',
       consent: false,
+      marketing_consent: false,
     }
   });
   
@@ -146,7 +149,8 @@ const CvSubmission = () => {
           file_name: data.file.name,
           file_type: data.file.type,
           file_size: data.file.size,
-          consent_given: data.consent
+          consent_given: data.consent,
+          marketing_consent: data.marketing_consent
         });
         
       if (submissionError) {
@@ -285,8 +289,13 @@ const CvSubmission = () => {
                     </div>
                   )}
                 </div>
-                
-                <div className="flex items-start pt-4">
+              </div>
+
+              {/* Privacy Notice */}
+              <PrivacyNotice formType="cv-submission" className="my-6" />
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
                   <div className="flex items-center h-5">
                     <Checkbox 
                       id="consent"
@@ -298,11 +307,28 @@ const CvSubmission = () => {
                       htmlFor="consent" 
                       className="text-gray-700 font-normal"
                     >
-                      I agree to the <Link to="/legal/terms-and-conditions" className="text-brand-500 hover:underline" target="_blank" rel="noopener noreferrer">Terms and Conditions</Link> and consent to be contacted about current and future job opportunities. *
+                      I agree to the <Link to="/legal/terms-and-conditions" className="text-brand-500 hover:underline" target="_blank" rel="noopener noreferrer">Terms and Conditions</Link> and consent to the processing of my personal data for recruitment purposes. *
                     </Label>
                     {errors.consent && (
                       <p className="mt-1 text-sm text-red-500">{errors.consent.message}</p>
                     )}
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <Checkbox 
+                      id="marketing_consent"
+                      {...register('marketing_consent')}
+                    />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <Label 
+                      htmlFor="marketing_consent" 
+                      className="text-gray-700 font-normal"
+                    >
+                      I consent to receiving marketing communications about job opportunities and company updates. You can withdraw this consent at any time.
+                    </Label>
                   </div>
                 </div>
               </div>

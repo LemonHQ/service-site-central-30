@@ -19,6 +19,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Checkbox } from '@/components/ui/checkbox';
+import PrivacyNotice from '@/components/privacy/PrivacyNotice';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -204,27 +205,30 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenBookingDialog }) => {
                 </FormItem>
               )}
             />
-            
-            <FormField
-              control={form.control}
-              name="marketing_consent"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 md:col-span-2">
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <FormLabel className="font-normal text-sm text-gray-700">
-                      I agree to receive marketing communications about relevant products and services
-                    </FormLabel>
-                  </div>
-                </FormItem>
-              )}
-            />
           </div>
+
+          {/* Privacy Notice */}
+          <PrivacyNotice formType="contact" className="my-6" />
+          
+          <FormField
+            control={form.control}
+            name="marketing_consent"
+            render={({ field }) => (
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <div className="space-y-1 leading-none">
+                  <FormLabel className="font-normal text-sm text-gray-700">
+                    I consent to receiving marketing communications about relevant products, services, and industry insights. You can withdraw this consent at any time.
+                  </FormLabel>
+                </div>
+              </FormItem>
+            )}
+          />
           
           <div className="flex flex-col md:flex-row md:justify-between gap-4">
             <Button type="submit" className="md:w-auto bg-brand-400 hover:bg-brand-500" disabled={loading}>

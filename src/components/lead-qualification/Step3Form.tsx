@@ -9,6 +9,7 @@ import { Step3Data, step3Schema } from './schema';
 import { timeframes } from './formConstants';
 import LeadFormButton from './LeadFormButton';
 import { Checkbox } from '@/components/ui/checkbox';
+import PrivacyNotice from '@/components/privacy/PrivacyNotice';
 
 interface Step3FormProps {
   defaultValues: Step3Data;
@@ -80,8 +81,11 @@ const Step3Form: React.FC<Step3FormProps> = ({
           )}
         </div>
 
+        {/* Privacy Notice */}
+        <PrivacyNotice formType="lead-qualification" className="my-6" />
+
         {/* Marketing Consent */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-start space-x-2">
           <Checkbox
             id="marketing_consent"
             {...form.register("marketing_consent")}
@@ -90,7 +94,7 @@ const Step3Form: React.FC<Step3FormProps> = ({
             htmlFor="marketing_consent"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
-            I agree to receive marketing communications about relevant products and services
+            I consent to receiving marketing communications about relevant products, services, and insights that match my business needs. You can withdraw this consent at any time.
           </label>
         </div>
 

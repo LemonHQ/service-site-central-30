@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from '@/components/ui/sonner';
 import { Checkbox } from '@/components/ui/checkbox';
+import PrivacyNotice from '@/components/privacy/PrivacyNotice';
 
 const NewsletterSubscribe: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +15,11 @@ const NewsletterSubscribe: React.FC = () => {
     
     if (!email || !email.includes('@')) {
       toast.error('Please enter a valid email address');
+      return;
+    }
+
+    if (!marketingConsent) {
+      toast.error('Please consent to receiving marketing communications');
       return;
     }
     
@@ -61,7 +67,8 @@ const NewsletterSubscribe: React.FC = () => {
       <p className="text-gray-600 mb-4">
         Our bi-weekly newsletter delivers serverless, AI, tech trends, podcasts and blogs straight to your inbox.
       </p>
-      <form onSubmit={handleSubscribe} className="space-y-3">
+      
+      <form onSubmit={handleSubscribe} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-2">
           <input 
             type="email" 
@@ -75,13 +82,13 @@ const NewsletterSubscribe: React.FC = () => {
           <button 
             type="submit" 
             className="px-4 py-2 bg-accent-400 text-white rounded-md hover:bg-accent-500 transition-colors"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !marketingConsent}
           >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </button>
         </div>
         
-        <div className="flex items-center space-x-2">
+        <div className="flex items-start space-x-2">
           <Checkbox 
             id="newsletter-marketing-consent"
             checked={marketingConsent}
@@ -91,8 +98,17 @@ const NewsletterSubscribe: React.FC = () => {
             htmlFor="newsletter-marketing-consent" 
             className="text-sm text-gray-600"
           >
-            I agree to receive marketing communications
+            I consent to receiving marketing communications and newsletters. You can unsubscribe at any time. *
           </label>
+        </div>
+
+        {/* Compact Privacy Notice for Newsletter */}
+        <div className="bg-gray-50 border border-gray-200 rounded p-3 text-xs text-gray-600">
+          <p>
+            We process your email to send newsletters and marketing communications. 
+            Data retained for 3 years or until unsubscribed. 
+            Contact <a href="mailto:privacy@lemonhq.co.uk" className="text-brand-600 hover:underline">privacy@lemonhq.co.uk</a> for data queries.
+          </p>
         </div>
       </form>
       

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from '@/integrations/supabase/client';
 import CoCreateAssessmentForm from '@/components/assessment/CoCreateAssessmentForm';
 import CoCreateAssessmentResults from '@/components/assessment/CoCreateAssessmentResults';
+import PrivacyNotice from '@/components/privacy/PrivacyNotice';
 
 const CoCreateAssessment = () => {
   const [step, setStep] = useState(0);
@@ -333,6 +334,13 @@ const CoCreateAssessment = () => {
               userData={userData}
               setUserData={setUserData}
             />
+            
+            {/* Show Privacy Notice on the user data collection step */}
+            {step === 3 && (
+              <div className="mt-6">
+                <PrivacyNotice formType="assessment" />
+              </div>
+            )}
             
             <div className="flex justify-between mt-6">
               {step > 0 && (
