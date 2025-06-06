@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> privacy@lemonhq.co.uk<br />
+            <strong>Email:</strong> <a href="mailto:privacy@lemonhq.co.uk" className="text-brand-600 hover:underline">privacy@lemonhq.co.uk</a><br />
             <strong>Address:</strong> 128, City Road, London, England, EC1V 2NX
           </p>
         </div>
