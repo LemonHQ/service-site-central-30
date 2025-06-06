@@ -3,6 +3,8 @@
  * Google Analytics service for tracking page views and user interactions
  */
 
+import { isCookieCategoryAllowed } from './cookieConsent';
+
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-F9MRP3Y6SL';
 
@@ -22,6 +24,57 @@ const isGoogleAnalyticsLoaded = () => {
   return typeof window !== 'undefined' && typeof window.gtag === 'function';
 };
 
+// Check if analytics tracking is allowed
+const isAnalyticsAllowed = () => {
+  return isCookieCategoryAllowed('analytics');
+};
+
+// Load Google Analytics script dynamically
+const loadGoogleAnalytics = () => {
+  if (typeof window === 'undefined' || window.gtag) {
+    return; // Already loaded or not in browser
+  }
+
+  // Initialize dataLayer
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function() {
+    window.dataLayer.push(arguments);
+  };
+
+  // Load the script
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(script);
+
+  // Configure GA
+  window.gtag('js', new Date());
+  window.gtag('config', GA_MEASUREMENT_ID, {
+    page_title: document.title,
+    page_location: window.location.href
+  });
+};
+
+// Initialize analytics if consent is given
+const initializeAnalytics = () => {
+  if (isAnalyticsAllowed() && !isDevelopment) {
+    loadGoogleAnalytics();
+  }
+};
+
+// Listen for consent changes
+if (typeof window !== 'undefined') {
+  window.addEventListener('cookieConsentChanged', (event: CustomEvent) => {
+    const preferences = event.detail;
+    if (preferences.analytics && !isDevelopment) {
+      loadGoogleAnalytics();
+    }
+  });
+
+  // Initialize on page load
+  initializeAnalytics();
+}
+
 // Track page views
 export const trackPageView = (pagePath: string, pageTitle: string) => {
   try {
@@ -30,8 +83,8 @@ export const trackPageView = (pagePath: string, pageTitle: string) => {
       console.log(`[Analytics] Page View: ${pageTitle} (${pagePath})`);
     }
     
-    // Send to Google Analytics if loaded and not in development
-    if (isGoogleAnalyticsLoaded() && !isDevelopment) {
+    // Send to Google Analytics if consent is given and not in development
+    if (isAnalyticsAllowed() && isGoogleAnalyticsLoaded() && !isDevelopment) {
       window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: pagePath,
         page_title: pageTitle,
@@ -60,8 +113,8 @@ export const trackEvent = (
       console.log(`[Analytics] Event: ${eventName} (${eventCategory})`, eventData || {});
     }
     
-    // Send to Google Analytics if loaded and not in development
-    if (isGoogleAnalyticsLoaded() && !isDevelopment) {
+    // Send to Google Analytics if consent is given and not in development
+    if (isAnalyticsAllowed() && isGoogleAnalyticsLoaded() && !isDevelopment) {
       window.gtag('event', eventName, {
         event_category: eventCategory,
         ...eventData,

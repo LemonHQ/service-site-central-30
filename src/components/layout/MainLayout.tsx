@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import usePageTracking from '@/hooks/usePageTracking';
+import CookieConsentBanner from '@/components/privacy/CookieConsentBanner';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, pageTitle }) => {
         {children}
       </main>
       <Footer />
+      <CookieConsentBanner />
     </div>
   );
 };
