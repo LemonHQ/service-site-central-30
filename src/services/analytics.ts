@@ -1,19 +1,48 @@
 
 /**
- * Simple analytics service for tracking page views and user interactions
+ * Google Analytics service for tracking page views and user interactions
  */
+
+// Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'G-F9MRP3Y6SL';
+
+// Check if we're in development mode
+const isDevelopment = import.meta.env.DEV;
+
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
+// Check if Google Analytics is loaded
+const isGoogleAnalyticsLoaded = () => {
+  return typeof window !== 'undefined' && typeof window.gtag === 'function';
+};
 
 // Track page views
 export const trackPageView = (pagePath: string, pageTitle: string) => {
   try {
-    // Log the page view for debugging during development
-    console.log(`[Analytics] Page View: ${pageTitle} (${pagePath})`);
+    // Always log in development for debugging
+    if (isDevelopment) {
+      console.log(`[Analytics] Page View: ${pageTitle} (${pagePath})`);
+    }
     
-    // In a production environment, you would send this data to your analytics service
-    // Example: sendToAnalyticsService('pageView', { path: pagePath, title: pageTitle });
-    
-    // For now we're just logging to console, but this is where you would
-    // integrate with services like Google Analytics, Mixpanel, etc.
+    // Send to Google Analytics if loaded and not in development
+    if (isGoogleAnalyticsLoaded() && !isDevelopment) {
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        page_path: pagePath,
+        page_title: pageTitle,
+      });
+      
+      window.gtag('event', 'page_view', {
+        page_title: pageTitle,
+        page_location: window.location.origin + pagePath,
+        page_path: pagePath
+      });
+    }
   } catch (error) {
     console.error('[Analytics] Error tracking page view:', error);
   }
@@ -26,11 +55,18 @@ export const trackEvent = (
   eventData?: Record<string, any>
 ) => {
   try {
-    // Log the event for debugging during development
-    console.log(`[Analytics] Event: ${eventName} (${eventCategory})`, eventData || {});
+    // Always log in development for debugging
+    if (isDevelopment) {
+      console.log(`[Analytics] Event: ${eventName} (${eventCategory})`, eventData || {});
+    }
     
-    // In a production environment, you would send this data to your analytics service
-    // Example: sendToAnalyticsService('event', { name: eventName, category: eventCategory, data: eventData });
+    // Send to Google Analytics if loaded and not in development
+    if (isGoogleAnalyticsLoaded() && !isDevelopment) {
+      window.gtag('event', eventName, {
+        event_category: eventCategory,
+        ...eventData,
+      });
+    }
   } catch (error) {
     console.error('[Analytics] Error tracking event:', error);
   }
