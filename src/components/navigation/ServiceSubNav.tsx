@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -66,6 +66,8 @@ const RouterListItem = ({
 
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   // Updated service items with direct URLs and icons
   const serviceItems = [{
@@ -100,6 +102,14 @@ const ServiceSubNav = () => {
     icon: LayoutGrid
   }];
 
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <>
       <NavigationMenuTrigger className="text-base font-medium">
@@ -109,7 +119,37 @@ const ServiceSubNav = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 w-[500px] lg:w-[650px]">
           <div className="relative overflow-hidden rounded-lg h-full">
             <AspectRatio ratio={12 / 16} className="h-full">
-              <img src="/assets/imgs/how-innovation-works.png" alt="How innovation works" className="w-full h-full object-cover" />
+              {!imageError ? (
+                <>
+                  {/* Loading skeleton */}
+                  {!imageLoaded && (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 animate-pulse flex items-center justify-center">
+                      <div className="text-gray-400 text-sm">Loading...</div>
+                    </div>
+                  )}
+                  <img 
+                    src="/assets/imgs/flying-paper-planes-hero-image.png" 
+                    alt="Innovation and digital transformation" 
+                    className={cn(
+                      "w-full h-full object-cover transition-opacity duration-300",
+                      imageLoaded ? "opacity-100" : "opacity-0"
+                    )}
+                    loading="lazy"
+                    width={325}
+                    height={433}
+                    onLoad={handleImageLoad}
+                    onError={handleImageError}
+                  />
+                </>
+              ) : (
+                // Fallback gradient background when image fails to load
+                <div className="w-full h-full bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center">
+                  <div className="text-center text-brand-600">
+                    <Lightbulb className="h-12 w-12 mx-auto mb-2" />
+                    <p className="text-sm font-medium">Innovation</p>
+                  </div>
+                </div>
+              )}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
                 <p className="font-medium text-sm">Innovating for enterprise brands</p>
                 <p className="text-xs opacity-90">Solving for tomorrows problems today</p>
