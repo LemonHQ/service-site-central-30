@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -98,97 +99,88 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Updated with center alignment */}
+          {/* Desktop Navigation - Fixed spacing */}
           <nav className="hidden md:flex flex-1 justify-center items-center">
-            <div className="flex items-center space-x-5">
-              {/* Service SubNav - what we do */}
-              <div className="relative flex items-center">
-                <ServiceSubNav />
-              </div>
+            <NavigationMenu>
+              <NavigationMenuList className="flex items-center gap-6">
+                {/* Service SubNav - what we do */}
+                <NavigationMenuItem>
+                  <ServiceSubNav />
+                </NavigationMenuItem>
 
-              {/* Our Approach dropdown - with consistent spacing */}
-              <div>
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger 
-                        className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent`}
-                      >
-                        Our Approach
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
-                          {approachItems.map((item) => (
-                            <Link 
-                              to={item.path} 
-                              key={item.name}
-                              className="flex flex-col group rounded-md p-3 hover:bg-accent"
-                            >
-                              <div className="overflow-hidden rounded-md mb-2">
-                                <img 
-                                  src={item.image} 
-                                  alt={item.name} 
-                                  className="h-32 w-full object-cover transition-transform group-hover:scale-105"
-                                />
-                              </div>
-                              <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
-                              <p className="text-xs text-muted-foreground">{item.description}</p>
-                            </Link>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
+                {/* Our Approach dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-base font-medium`}
+                  >
+                    Our Approach
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
+                      {approachItems.map((item) => (
+                        <Link 
+                          to={item.path} 
+                          key={item.name}
+                          className="flex flex-col group rounded-md p-3 hover:bg-accent"
+                        >
+                          <div className="overflow-hidden rounded-md mb-2">
+                            <img 
+                              src={item.image} 
+                              alt={item.name} 
+                              className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                            />
+                          </div>
+                          <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
+                          <p className="text-xs text-muted-foreground">{item.description}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
-              {/* Industries dropdown - with consistent spacing */}
-              <div>
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger 
-                        className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent`}
-                      >
-                        Industries
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
-                          {industryItems.map((industry) => (
-                            <Link 
-                              to={industry.path} 
-                              key={industry.name}
-                              className="flex flex-col group rounded-md p-3 hover:bg-accent"
-                            >
-                              <div className="overflow-hidden rounded-md mb-2">
-                                <img 
-                                  src={industry.image} 
-                                  alt={industry.name} 
-                                  className="h-32 w-full object-cover transition-transform group-hover:scale-105"
-                                />
-                              </div>
-                              <h3 className="text-sm font-medium group-hover:text-brand-600">{industry.name}</h3>
-                              <p className="text-xs text-muted-foreground">{industry.description}</p>
-                            </Link>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
-              
-              {/* Main nav links with consistent spacing */}
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
-                  to={link.path} 
-                  className={`${isActive(link.path)} font-medium`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+                {/* Industries dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-base font-medium`}
+                  >
+                    Industries
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid grid-cols-2 gap-4 p-4 w-[700px]">
+                      {industryItems.map((industry) => (
+                        <Link 
+                          to={industry.path} 
+                          key={industry.name}
+                          className="flex flex-col group rounded-md p-3 hover:bg-accent"
+                        >
+                          <div className="overflow-hidden rounded-md mb-2">
+                            <img 
+                              src={industry.image} 
+                              alt={industry.name} 
+                              className="h-32 w-full object-cover transition-transform group-hover:scale-105"
+                            />
+                          </div>
+                          <h3 className="text-sm font-medium group-hover:text-brand-600">{industry.name}</h3>
+                          <p className="text-xs text-muted-foreground">{industry.description}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                
+                {/* Main nav links */}
+                {navLinks.map((link) => (
+                  <NavigationMenuItem key={link.name}>
+                    <Link 
+                      to={link.path} 
+                      className={`${isActive(link.path)} font-medium text-base px-4 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground`}
+                    >
+                      {link.name}
+                    </Link>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
 
           {/* Theme toggle and placeholder div */}

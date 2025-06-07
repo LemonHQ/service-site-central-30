@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 import { 
@@ -63,6 +63,7 @@ const RouterListItem = ({
       </NavigationMenuLink>
     </li>;
 };
+
 const ServiceSubNav = () => {
   console.log("Rendering ServiceSubNav component");
 
@@ -98,41 +99,43 @@ const ServiceSubNav = () => {
     description: "Establish consistent patterns and templates across your digital product catalog to improve efficiency and user experience.",
     icon: LayoutGrid
   }];
-  return <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base">What We Do</NavigationMenuTrigger>
-          <NavigationMenuContent className="max-h-[450px] overflow-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 w-[500px] lg:w-[650px]">
-              <div className="relative overflow-hidden rounded-lg h-full">
-                <AspectRatio ratio={12 / 16} className="h-full">
-                  <img src="/assets/imgs/how-innovation-works.png" alt="How innovation works" className="w-full h-full object-cover" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
-                    <p className="font-medium text-sm">Innovating for enterprise brands</p>
-                    <p className="text-xs opacity-90">Solving for tomorrows problems today</p>
-                  </div>
-                </AspectRatio>
+
+  return (
+    <>
+      <NavigationMenuTrigger className="text-base font-medium">
+        What We Do
+      </NavigationMenuTrigger>
+      <NavigationMenuContent className="max-h-[450px] overflow-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 w-[500px] lg:w-[650px]">
+          <div className="relative overflow-hidden rounded-lg h-full">
+            <AspectRatio ratio={12 / 16} className="h-full">
+              <img src="/assets/imgs/how-innovation-works.png" alt="How innovation works" className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
+                <p className="font-medium text-sm">Innovating for enterprise brands</p>
+                <p className="text-xs opacity-90">Solving for tomorrows problems today</p>
               </div>
-              
-              <div className="overflow-y-auto max-h-[350px] py-2">
-                <div className="space-y-4">
-                  {serviceItems.map(service => <div key={service.title} className="mb-3">
-                      <RouterListItem 
-                        title={service.title} 
-                        to={service.url} 
-                        description={service.description} 
-                        icon={service.icon} 
-                        className="font-semibold py-3" 
-                      />
-                    </div>)}
-                </div>
-              </div>
+            </AspectRatio>
+          </div>
+          
+          <div className="overflow-y-auto max-h-[350px] py-2">
+            <div className="space-y-4">
+              {serviceItems.map(service => <div key={service.title} className="mb-3">
+                  <RouterListItem 
+                    title={service.title} 
+                    to={service.url} 
+                    description={service.description} 
+                    icon={service.icon} 
+                    className="font-semibold py-3" 
+                  />
+                </div>)}
             </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>;
+          </div>
+        </div>
+      </NavigationMenuContent>
+    </>
+  );
 };
+
 export default ServiceSubNav;
 
 // We need to manually re-export NavigationMenuLink from the UI components
