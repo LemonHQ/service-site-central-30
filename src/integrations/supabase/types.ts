@@ -115,6 +115,7 @@ export type Database = {
           file_size: number
           file_type: string
           id: string
+          marketing_consent: boolean | null
           message: string | null
           name: string
           phone: string | null
@@ -128,6 +129,7 @@ export type Database = {
           file_size: number
           file_type: string
           id?: string
+          marketing_consent?: boolean | null
           message?: string | null
           name: string
           phone?: string | null
@@ -141,6 +143,7 @@ export type Database = {
           file_size?: number
           file_type?: string
           id?: string
+          marketing_consent?: boolean | null
           message?: string | null
           name?: string
           phone?: string | null

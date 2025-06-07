@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -99,7 +100,7 @@ const CompanyOverview: React.FC = () => {
             </p>
             
             <div className="space-y-4 mb-8">
-              <div className="flex items-start">
+              <div className="flex items-center">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
@@ -109,7 +110,7 @@ const CompanyOverview: React.FC = () => {
                 </div>
               </div>
             
-              <div className="flex items-start">
+              <div className="flex items-center">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Users className="w-6 h-6 text-brand-400" />
                 </div>
@@ -119,7 +120,7 @@ const CompanyOverview: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
+              <div className="flex items-center">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
@@ -129,7 +130,7 @@ const CompanyOverview: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
+              <div className="flex items-center">
                 <div className="bg-brand-100 p-2 rounded-full mr-4">
                   <Database className="w-6 h-6 text-brand-400" />
                 </div>
