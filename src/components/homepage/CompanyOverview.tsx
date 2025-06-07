@@ -98,47 +98,64 @@ const CompanyOverview: React.FC = () => {
               We're not just digital enablers — we're strategic partners who understand how to move strategic initiatives from idea to market to expansion, reliably, efficiently and at SCALE.
             </p>
             
-            <div className="space-y-8 mb-8">
-              <div className="text-center">
-                <div className="bg-brand-100 p-3 rounded-full mx-auto mb-4 w-fit">
-                  <Globe className="w-8 h-8 text-brand-400" />
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Portfolio perspective</h4>
+                  <h4 className="font-semibold mb-1">Portfolio perspective</h4>
                   <p className="text-gray-600">Experience working with enterprise brands with diverse business and product lines.</p>
                 </div>
               </div>
             
-              <div className="text-center">
-                <div className="bg-brand-100 p-3 rounded-full mx-auto mb-4 w-fit">
-                  <Users className="w-8 h-8 text-brand-400" />
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Users className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Ecosystem approach</h4>
+                  <h4 className="font-semibold mb-1">Ecosystem approach</h4>
                   <p className="text-gray-600">Harnessing collaborative partnerships, platforms, and technologies to deliver integrated value across the digital landscape.</p>
                 </div>
               </div>
               
-              <div className="text-center">
-                <div className="bg-brand-100 p-3 rounded-full mx-auto mb-4 w-fit">
-                  <Globe className="w-8 h-8 text-brand-400" />
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Compliant by design</h4>
+                  <h4 className="font-semibold mb-1">Compliant by design</h4>
                   <p className="text-gray-600">Architecting products and platforms with built-in compliance controls to support evolving regulations.</p>
                 </div>
               </div>
               
-              <div className="text-center">
-                <div className="bg-brand-100 p-3 rounded-full mx-auto mb-4 w-fit">
-                  <Database className="w-8 h-8 text-brand-400" />
+              <div className="flex items-start">
+                <div className="bg-brand-100 p-2 rounded-full mr-4">
+                  <Database className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Standardization</h4>
+                  <h4 className="font-semibold mb-1">Standardization</h4>
                   <p className="text-gray-600">Creating a foundation for scaling products to new markets, customers, and targeted segments.</p>
                 </div>
               </div>
             </div>
+            {/** 
+            <div className="flex justify-center">
+              <Link to="/approach/co-create">
+                <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
+                  Co-Create
+                </Button>
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <Link to="/approach/extend">
+                <Button variant="outline" className="border-brand-300 text-brand-600 hover:bg-brand-100">
+                  Extend
+                </Button>
+              </Link>
+            </div>   
+          */}
+
           </div>
           
           <div className="relative">
