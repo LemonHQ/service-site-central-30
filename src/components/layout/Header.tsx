@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -98,10 +99,10 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Updated spacing */}
+          {/* Desktop Navigation - Fixed spacing and alignment */}
           <nav className="hidden md:flex flex-1 justify-center items-center">
             <NavigationMenu>
-              <NavigationMenuList className="flex items-center gap-4">
+              <NavigationMenuList className="flex items-center gap-1">
                 {/* Service SubNav - what we do */}
                 <NavigationMenuItem>
                   <ServiceSubNav />
@@ -110,7 +111,7 @@ const Header = () => {
                 {/* Our Approach dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-base font-medium`}
+                    className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-base font-medium`}
                   >
                     Our Approach
                   </NavigationMenuTrigger>
@@ -140,7 +141,7 @@ const Header = () => {
                 {/* Industries dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-base font-medium`}
+                    className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-base font-medium`}
                   >
                     Industries
                   </NavigationMenuTrigger>
@@ -167,12 +168,12 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 
-                {/* Main nav links */}
+                {/* Main nav links - Updated to match trigger height and styling */}
                 {navLinks.map((link) => (
                   <NavigationMenuItem key={link.name}>
                     <Link 
                       to={link.path} 
-                      className={`${isActive(link.path)} font-medium text-base px-4 py-2 rounded-md transition-colors hover:bg-accent hover:text-accent-foreground`}
+                      className={`${isActive(link.path)} inline-flex items-center justify-center h-10 px-4 py-2 text-base font-medium rounded-md transition-colors hover:bg-accent hover:text-accent-foreground`}
                     >
                       {link.name}
                     </Link>
