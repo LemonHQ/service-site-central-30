@@ -248,5 +248,74 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/meraas-hero.png'
     ],
     date: '2017-12-30'
+  },
+  {
+    id: 'standardizing-intellectual-property-management',
+    title: 'Standardizing Intellectual Property management',
+    client: 'Abdul Latif Jameel',
+    industry: 'Private Enterprise',
+    services: ['Pilot Emerging Tech', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'Unifiying disconnected brand experiences across the brand portfolio',
+    challenge: `<p>Abdul Latif Jameel, a diversified global enterprise operating across 30+ countries, faced a growing challenge in managing its complex and expanding intellectual property portfolio. Trademarks, domain names, licensed media assets, and digital brand materials were tracked in silos using spreadsheets, emails, and regional vendors. This fragmented setup led to missed renewal deadlines, duplicated asset purchases, and unnecessary manual effort across legal, brand, and finance teams. Collaboration with external counsel was primarily email-driven, making the process slow, error-prone, and difficult to audit. More critically, there was no centralized view for leadership to monitor brand exposure, IP spend, or governance compliance. With over 11,000 employees globally and hundreds of assets in circulation, ALJ needed a solution that could unify IP workflows and decision-making&mdash;without disrupting local team autonomy or established processes.</p>`,
+    solution: `<p>
+                To address this, ALJ partnered with LemonHQ to design and implement a modern, experience-led Intellectual Property Management (IPM) platform. The engagement began with on-site design sprints involving stakeholders from Legal, Finance, Brand, and IT, mapping over 40 user journeys and compliance checkpoints. A clickable prototype was developed and tested with 28 key users, 92% of whom preferred it to the existing tools. In just 12 weeks, a minimum viable product (MVP) was launched using a modular, micro-frontend architecture integrated with Azure Active Directory for secure, role-based access.
+              </p>
+              <p>
+                The new platform consolidated IP tracking, approvals, renewals, and collaboration into a single interface. It featured a real-time dashboard for global trademark and domain status, guided workflows for managing IP lifecycles, and an asset library that automatically fetched media from Getty, Adobe Stock, iStock, and others. Smart duplicate detection flagged redundant purchases, while the finance cockpit calculated ICANN fees and multi-currency renewals and integrated with SAP and NetSuite for downstream processes. A collaboration layer enabled comments, @mentions, and audit-ready trails, with external portals for counsel and agency partners. Each user&mdash;whether a legal lead, brand manager, finance analyst, or external vendor&mdash;saw only what they needed through customized role permissions. The product continued to scale through six-week release cycles, with new modules for financial workflows, calendar views, and asset ingestion added seamlessly.
+              </p>`,
+    results: `<ul>
+                <li>10&times; faster IP decision-making, reducing turnaround time from ~10 days to &lt;1 day</li>
+                <li>&ndash;60 administrative hours per month, freeing teams from manual tracking and email chains</li>
+                <li>20% reduction in duplicate stock-asset spend, thanks to centralized rights and duplicate detection</li>
+                <li>100% on-time renewals, up from 71%, eliminating lapses and compliance risks</li>
+                <li>5&times; increase in asset reusability, enabling brand assets to support more campaigns and regions</li>
+                <li>Improved governance and audit-readiness, with a single-source cockpit for global visibility</li>
+                <li>Stronger employee enablement, with over 11,000 users gaining self-service access to key brand tools</li>
+              </ul>`,
+    featuredImage: '/assets/imgs/my-meraas-cover.png',
+    images: [
+      '/assets/imgs/meraas-menu.jpeg',
+      '/assets/imgs/meraas-offers.jpeg',
+      '/assets/imgs/meraas-preferences.jpeg',
+      '/assets/imgs/meraas-search.jpeg',
+      '/assets/imgs/meraas-rewards.jpeg',
+      '/assets/imgs/meraas-experiences.jpeg',
+      '/assets/imgs/meraas-login.jpeg',
+      '/assets/imgs/meraas-hero.png'
+    ],
+    date: '2017-12-30'
+  },
+  {
+    id: 'building-a-composable-digital-brand-engine',
+    title: 'Building a composable digital brand engine',
+    client: 'Abdul Latif Jameel',
+    industry: 'Private Enterprise',
+    services: ['Pilot Emerging Tech', 'Standardize Digital Portfolio', 'Expand Product Offerings'],
+    summary: 'Unifiying disconnected brand experiences across the brand portfolio',
+    challenge: `<p>
+	Abdul Latif Jameel (ALJ), a diversified enterprise operating in over 30 global markets, was grappling with a fragmented digital ecosystem. Each business vertical had its own CMS, tech stack, and content workflows&mdash;leading to inconsistent brand experiences, high support costs, and long time-to-market for digital launches. Editorial teams worked in silos, with disconnected asset libraries and no standardized processes to manage or reuse content. The lack of governance made it increasingly difficult to maintain brand integrity, scale digital efforts, or quickly onboard new initiatives across regions.</p>`,
+    solution: `<p>
+	We partnered with ALJ&rsquo;s Corporate Brand team to architect and implement a scalable, future-ready Brand Communications Platform. At its core was a single CMS codebase, built with a modular, composable architecture capable of supporting multiple brands through configuration rather than customization. A multi-brand design system and shared UI component library ensured visual consistency, while structured content models enabled omnichannel publishing&mdash;from web to kiosk. CI/CD pipelines were standardized to allow repeatable, low-risk deployments, and the editorial experience was unified across all teams using WCAG-compliant templates. Training and onboarding ensured adoption across business units and partners, turning what was once a patchwork of systems into a cohesive, high-performance platform.</p>`,
+    results: `<<ul>
+                <li>5&times; increase in content and asset reuse across brands and digital channels</li>
+                <li>Time to launch new brand sites cut from 14+ weeks to under 5 weeks</li>
+                <li>99.99% uptime achieved with cloud-native, forward-compatible infrastructure</li>
+                <li>Standardized publishing workflows improved editorial velocity across markets</li>
+                <li>Enabled onboarding of four major brands under one governance model</li>
+                <li>Significantly reduced support and upgrade effort through shared pipelines and reusable components</li>
+                <li>Platform now positioned for integration with DAM, CRM, analytics, and AI-powered publishing</li>
+              </ul>`,
+    featuredImage: '/assets/imgs/my-meraas-cover.png',
+    images: [
+      '/assets/imgs/meraas-menu.jpeg',
+      '/assets/imgs/meraas-offers.jpeg',
+      '/assets/imgs/meraas-preferences.jpeg',
+      '/assets/imgs/meraas-search.jpeg',
+      '/assets/imgs/meraas-rewards.jpeg',
+      '/assets/imgs/meraas-experiences.jpeg',
+      '/assets/imgs/meraas-login.jpeg',
+      '/assets/imgs/meraas-hero.png'
+    ],
+    date: '2017-12-30'
   }
 ];
