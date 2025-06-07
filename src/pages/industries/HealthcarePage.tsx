@@ -1,46 +1,51 @@
 import React from 'react';
 import ServiceLandingTemplate from '@/components/services/ServiceLandingTemplate';
-import { Heart, FileChartColumn, Users, Shield, Network } from 'lucide-react';
+import { Heart, FileChartColumn,LineChart, Users, Shield, Network } from 'lucide-react';
 import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 import { serviceQuotes } from '@/data/quotes';
 
 const HealthcarePage = () => {
   return (
     <ServiceLandingTemplate
-      title="Healthcare Industry Solutions"
-      subtitle="Digital transformation for healthcare providers and payers"
-      description="We help healthcare organizations deliver better patient experiences and streamline clinical workflows through strategic digital solutions. Our approach balances innovation with compliance, creating secure systems that improve care delivery while meeting strict regulatory requirements."
-      ctaText="Transform Healthcare Delivery"
-      ctaLink="/lead-qualification"
-      secondaryCtaText="Learn Our Approach"
-      secondaryCtaLink="/contact"
+      title="Healthcare"
+      subtitle="Owning the health journey, not just the device"
+      description="Healthcare device makers can no longer rely on traditional distribution channels to own the patient relationship. As patient expectations rise, they must design connected, experience-first digital channels that engage users directly—unlocking data, driving adherence, and building long-term brand trust across the care continuum."
+      ctaText="Getting Started"
+      ctaLink="/getting-started"
+      secondaryCtaText="Getting Started"
+      secondaryCtaLink="/getting-started"
       heroImage="https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
       isAiHeroImage={false}
       quotePanel={serviceQuotes['healthcare']}
       features={[
         {
-          title: "Patient Experience Platforms",
-          description: "Create intuitive digital interfaces that improve engagement and satisfaction.",
+          title: "Multi-market D2C platform",
+          description: "Expand uniformly from one market to the other, customizing only for local regulations",
           icon: Heart
         },
-        {
-          title: "Clinical Workflow Optimization",
-          description: "Streamline clinical processes with intelligent digital tools and integrations.",
-          icon: FileChartColumn
+      {
+          title: "Standard product experience",
+          description: "Take control of how patients experience your products and receive value",
+          icon: LineChart
         },
         {
-          title: "Telehealth Solutions",
-          description: "Implement secure virtual care platforms that extend healthcare reach.",
-          icon: Network
-        },
-        {
-          title: "Healthcare Data Security",
-          description: "Build HIPAA-compliant systems that protect sensitive patient information.",
+          title: "Customer self-service portals",
+          description: "Deliver standard customer services at scale",
           icon: Shield
         },
         {
-          title: "Provider Collaboration Tools",
-          description: "Develop solutions that enhance communication between healthcare teams.",
+          title: "Market performance dashboards",
+          description: "Monitor and track market trends and opportunities",
+          icon: Users
+        },
+        {
+          title: "Customer 360 view",
+          description: "Observe customer purchasing behaviour and patterns across markets",
+          icon: Users
+        },
+        {
+          title: "Market management platform",
+          description: "Manage products catalog and distribution by market",
           icon: Users
         }
       ]}
@@ -48,12 +53,12 @@ const HealthcarePage = () => {
       featuresSubtitle="Solutions designed for healthcare's unique challenges and compliance requirements"
       benefits={[
         "Enhanced patient engagement and satisfaction",
-        "Reduced administrative burden for clinical staff",
-        "Improved care coordination and outcomes",
+        "Reduced administrative burden for customer services",
+        "Improved patient coordination and outcomes",
         "Seamless compliance with healthcare regulations",
         "Decreased operational costs through automation",
         "Extended care delivery through digital channels",
-        "Better data-driven decision making for care teams"
+        "Better data-driven decision making for device makers"
       ]}
       relatedServices={[
         {

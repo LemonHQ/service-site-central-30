@@ -8,8 +8,8 @@ const InsurancePage = () => {
   return (
     <ServiceLandingTemplate
       title="Insurance"
-      subtitle="Digital modernization for multi-line carriers"
-      description="We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
+      subtitle="Digital modernization for multi-line insurers"
+      description="Today’s insurers need to do more than sell policies—they need to own the customer relationship. That means delivering unified, experience-first products across all their product lines, expanding direct-to-customer channels, and making better use of existing tech investments. "//"We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."
       ctaText="Getting Started"
       ctaLink="/getting-started"
       secondaryCtaText="Getting Started"
@@ -27,27 +27,27 @@ const InsurancePage = () => {
       features={[
         {
           title: "Digital Policy Management",
-          description: "Streamline policy administration with intuitive digital interfaces for customers and agents.",
+          description: "Streamline policy administration with intuitive digital interfaces for customers and agents",
           icon: FileCheck
         },
         {
           title: "Claims Process Automation",
-          description: "Accelerate claims processing with intelligent automation and digital-first experiences.",
+          description: "Accelerate claims processing with intelligent automation and digital-first experiences",
           icon: ClipboardList
         },
         {
-          title: "Insurance Analytics Platform",
-          description: "Make data-driven decisions with advanced analytics and reporting capabilities.",
+          title: "Expand distribution",
+          description: "Tailor product offerings for partners, brokers and other retail segments",
           icon: LineChart
         },
         {
-          title: "Regulatory Compliance Solutions",
-          description: "Ensure adherence to evolving insurance regulations across multiple jurisdictions.",
+          title: "Unified payments",
+          description: "Streamline collection of services payments across channels and platforms",
           icon: Shield
         },
         {
-          title: "Customer Engagement Tools",
-          description: "Build stronger relationships with policyholders through personalized digital experiences.",
+          title: "Customer Self-Service Portal",
+          description: "Deliver standard customer services at scale",
           icon: Users
         }
       ]}

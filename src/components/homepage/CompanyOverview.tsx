@@ -125,8 +125,8 @@ const CompanyOverview: React.FC = () => {
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Compliant by design</h4>
-                  <p className="text-gray-600">Architecting products and platforms with built-in compliance controls to support evolving regulations.</p>
+                  <h4 className="font-semibold mb-1">Experience-first execution</h4>
+                  <p className="text-gray-600">Every feature, flow, and decision is shaped around user needs—because when products feel intuitive, adoption follows naturally, and value compounds over time.</p>
                 </div>
               </div>
               
@@ -135,8 +135,8 @@ const CompanyOverview: React.FC = () => {
                   <Database className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Standardization</h4>
-                  <p className="text-gray-600">Creating a foundation for scaling products to new markets, customers, and targeted segments.</p>
+                  <h4 className="font-semibold mb-1">Boutique yet scalable</h4>
+                  <p className="text-gray-600">As a partner we are deeply invested in your outcomes —while bringing the systems, scale, and digital maturity needed to support complex, multi-market initiatives. </p>
                 </div>
               </div>
             </div>
