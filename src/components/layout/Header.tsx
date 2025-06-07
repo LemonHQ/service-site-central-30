@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -99,10 +98,10 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Fixed spacing */}
+          {/* Desktop Navigation - Updated spacing */}
           <nav className="hidden md:flex flex-1 justify-center items-center">
             <NavigationMenu>
-              <NavigationMenuList className="flex items-center gap-6">
+              <NavigationMenuList className="flex items-center gap-4">
                 {/* Service SubNav - what we do */}
                 <NavigationMenuItem>
                   <ServiceSubNav />
