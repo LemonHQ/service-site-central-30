@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -102,7 +101,7 @@ const ServiceSubNav = () => {
 
   return (
     <>
-      <NavigationMenuTrigger className="h-10 px-4 py-2 text-base font-medium inline-flex items-center justify-center">
+      <NavigationMenuTrigger className="h-10 px-4 py-2 text-sm font-medium">
         What We Do
       </NavigationMenuTrigger>
       <NavigationMenuContent className="max-h-[450px] overflow-auto">

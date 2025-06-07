@@ -28,7 +28,7 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
   return (
     <nav className="hidden md:flex flex-1 justify-center items-center">
       <NavigationMenu>
-        <NavigationMenuList className="flex items-center gap-1">
+        <NavigationMenuList className="flex items-baseline gap-1">
           {/* Service SubNav - what we do */}
           <NavigationMenuItem>
             <ServiceSubNav />
@@ -37,7 +37,7 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
           {/* Our Approach dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-base font-medium`}
+              className={`${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
             >
               Our Approach
             </NavigationMenuTrigger>
@@ -67,7 +67,7 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
           {/* Industries dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-base font-medium`}
+              className={`${location.pathname.includes('/industries/') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
             >
               Industries
             </NavigationMenuTrigger>
@@ -99,7 +99,7 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
             <NavigationMenuItem key={link.name}>
               <Link 
                 to={link.path} 
-                className={`${isActive(link.path)} inline-flex items-center justify-center h-10 px-4 py-2 text-base font-medium rounded-md transition-colors hover:bg-accent hover:text-accent-foreground`}
+                className={`${isActive(link.path)} inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-accent hover:text-accent-foreground`}
               >
                 {link.name}
               </Link>
@@ -112,3 +112,4 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
 };
 
 export default DesktopNavigation;
+
