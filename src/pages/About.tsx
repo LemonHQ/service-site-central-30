@@ -27,7 +27,7 @@ const About = () => {
     role: 'Digital Product Expert',
     bio: 'Former enterprise solutions architect at major tech companies with expertise in enterprise digital portfolios.',
     fullBio: 'Abdul Majeed is a seasoned Digital Product Expert with extensive experience in accelerating goto market of digital products. His expertise spans across the entire product lifecycle—from ideation and design to development and launch—allowing him to craft digital solutions that are both functional and forward-thinking. Abdul Majeed is known for his strategic approach, always focused on driving growth, enhancing user engagement, and optimizing product performance. With a strong background in data-driven decision-making and agile methodologies, Abdul Majeed brings efficiency and clarity to complex digital product challenges. His ability to navigate the ever-evolving digital landscape makes him a valuable partner for businesses aiming to stay ahead of the curve and deliver exceptional digital products to the market..',
-    image: '/assets/imgs/Abdul-Majeed-Abdul-Hameed.jpeg',
+    image: '/assets/imgs/abdul-majeed.jpg',
     linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
     email: 'a.majeed@lemonhq.co.uk'
   }, ];
