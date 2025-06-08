@@ -34,7 +34,7 @@ export const mainServices: MainService[] = [
     description:
       "We help enterprises digitalize their product lines by building innovative digital products and platforms that drive revenue, improve customer engagement, and create new business models.",
     shortDescription: "Build innovative digital products and platforms.",
-    coverImage: "/lovable-uploads/4e0c995b-6840-483f-a492-5554d854dd8a.png",
+    coverImage: "/assets/imgs/product-roadmap-profile.jpg",
     icon: Code,
     relatedCaseStudies: ['case-study-1', 'case-study-2'],
     relatedInsights: ['blog-post-1', 'blog-post-2'],
