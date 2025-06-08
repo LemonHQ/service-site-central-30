@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import Autoplay from 'embla-carousel-autoplay';
 import { 
   Carousel,
   CarouselContent,
@@ -12,10 +13,40 @@ import { Card, CardContent, CardFooter, CardTitle } from '@/components/ui/card';
 import SectionHeading from '../ui/SectionHeading';
 import { Button } from '@/components/ui/button';
 import { caseStudies } from '@/data/caseStudies';
+import { shuffleArray } from '@/lib/utils';
 
 const CaseStudiesCarousel: React.FC = () => {
-  // Get a subset of case studies to display (first 6)
-  const displayCaseStudies = caseStudies.slice(0, 6);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Shuffle case studies once when component mounts
+  const shuffledCaseStudies = useMemo(() => shuffleArray(caseStudies), []);
+  
+  // Get the visible case studies based on current count
+  const displayCaseStudies = shuffledCaseStudies.slice(0, Math.min(visibleCount, 6));
+
+  // Auto-load remaining case studies after initial render
+  useEffect(() => {
+    if (visibleCount === 3 && shuffledCaseStudies.length > 3) {
+      const timer = setTimeout(() => {
+        setIsLoading(true);
+        // Simulate loading delay for better UX
+        setTimeout(() => {
+          setVisibleCount(6);
+          setIsLoading(false);
+        }, 500);
+      }, 2000); // Load after 2 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, shuffledCaseStudies.length]);
+
+  // Auto-scroll plugin configuration
+  const autoplayPlugin = Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  });
 
   return (
     <section className="section-padding">
@@ -28,8 +59,10 @@ const CaseStudiesCarousel: React.FC = () => {
         
         <div className="relative">
           <Carousel
+            plugins={[autoplayPlugin]}
             opts={{
               align: "start",
+              loop: true,
             }}
             className="w-full"
           >
@@ -43,6 +76,7 @@ const CaseStudiesCarousel: React.FC = () => {
                           src={study.featuredImage} 
                           alt={study.title} 
                           className="w-full h-full object-cover"
+                          loading={index < 3 ? "eager" : "lazy"}
                         />
                       </div>
                       <CardContent className="pt-6 pb-2">
@@ -72,6 +106,17 @@ const CaseStudiesCarousel: React.FC = () => {
                   </Link>
                 </CarouselItem>
               ))}
+              
+              {/* Loading indicator */}
+              {isLoading && (
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-400 mx-auto mb-4"></div>
+                    <p className="text-gray-600">Loading more stories...</p>
+                  </div>
+                </CarouselItem>
+              )}
+              
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
                 <div className="text-center p-8">
                   <h3 className="text-2xl font-semibold mb-4 text-brand-600">Ready to be our next success story?</h3>

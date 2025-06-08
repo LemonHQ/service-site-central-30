@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -10,6 +11,7 @@ interface CarouselSectionProps<T> {
   renderItem: (item: T) => React.ReactNode;
   bgColor?: string;
   limit?: number;
+  autoplay?: boolean;
 }
 
 function CarouselSection<T>({
@@ -18,10 +20,18 @@ function CarouselSection<T>({
   items,
   renderItem,
   bgColor = "bg-white",
-  limit
+  limit,
+  autoplay = false
 }: CarouselSectionProps<T>) {
   // Apply limit if specified
   const displayItems = limit ? items.slice(0, limit) : items;
+  
+  // Auto-scroll plugin configuration
+  const plugins = autoplay ? [Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  })] : [];
   
   return (
     <section className={`py-16 ${bgColor}`}>
@@ -34,6 +44,7 @@ function CarouselSection<T>({
         
         <div className="mt-8">
           <Carousel
+            plugins={plugins}
             opts={{
               align: "start",
               loop: true,
