@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Autoplay from 'embla-carousel-autoplay';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import SectionHeading from '../ui/SectionHeading';
@@ -11,15 +12,27 @@ const BlogCarousel: React.FC = () => {
   // Use the first 4 blog posts from our data source
   const displayPosts = blogPosts.slice(0, 4);
 
+  // Auto-scroll plugin configuration
+  const autoplayPlugin = Autoplay({
+    delay: 4000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  });
+
   return (
     <section className="section-padding bg-beige-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Insights" subtitle="Our latest thoughts on an evolving digital world" centered />
         
         <div className="relative">
-          <Carousel opts={{
-            align: "start"
-          }} className="w-full">
+          <Carousel 
+            plugins={[autoplayPlugin]}
+            opts={{
+              align: "start",
+              loop: true,
+            }} 
+            className="w-full"
+          >
             <CarouselContent className="-ml-4">
               {displayPosts.map((post, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
