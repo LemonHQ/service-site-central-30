@@ -17,7 +17,7 @@ const PilotTechPage = () => {
       description="We partner with leading enterprise brands and digital leaders to explore and validate emerging technologies through focused, low-risk pilots—grounded in real business value, not hype. Sandboxed experiements, targeted use cases and testable experiences to make informed decisions"
       ctaText="Pilot New Technologies"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      heroImage="/assets/imgs/robot-food-delivery.jpg"
       quotePanel={serviceQuotes['pilot-emerging-tech']}
       featuredCaseStudy="smart-city-infrastructure"
       customerProfiles={customerProfiles}
