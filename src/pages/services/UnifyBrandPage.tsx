@@ -17,7 +17,7 @@ const UnifyBrandPage = () => {
       description="We partner with leading enterprise brands to turn fragmented touchpoints into integrated brand experiences—aligning digital portfolios with strategic brand goals to drive customer loyalty and competitive differentiation"
       ctaText="Start Your Brand Transformation"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+      heroImage="/assets/imgs/drone-taxi.jpg" 
       quotePanel={serviceQuotes['unify-brand-experiences']}
       featuredCaseStudy="global-bank-digital-transformation"
       showConsultingPanel={false}
