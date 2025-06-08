@@ -17,7 +17,7 @@ const ExpandOfferingsPage = () => {
       description=" We partner with leading enterprise brands to turn core strengths into new offerings tailored for emerging segments, untapped markets, and evolving customer needs."
       ctaText="Expand Your Digital Portfolio"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+      heroImage="/assets/imgs/expand-product-offerings.jpg"
       quotePanel={serviceQuotes['expand-product-offerings']}
       featuredCaseStudy="ai-powered-financial-advisor"
       showConsultingPanel={false}
