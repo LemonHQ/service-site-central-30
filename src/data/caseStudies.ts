@@ -272,7 +272,7 @@ export const caseStudies: CaseStudy[] = [
                 <li>Improved governance and audit-readiness, with a single-source cockpit for global visibility</li>
                 <li>Stronger employee enablement, with over 11,000 users gaining self-service access to key brand tools</li>
               </ul>`,
-    featuredImage: '/assets/imgs/public/assets/imgs/iprm-main.jpg',
+    featuredImage: '/assets/imgs/iprm-main.jpg',
     images: [
       '/assets/imgs/iprm-dashboard.png',
       '/assets/imgs/trademark-detail.png',
