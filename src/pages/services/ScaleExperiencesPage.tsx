@@ -18,7 +18,7 @@ const ScaleExperiencesPage = () => {
       description="We partner with leading enteprises to replace fragmented, inconsistent digital delivery with a scalable foundation that supports multiple brands, markets, and products—without sacrificing speed, flexibility, or experience quality."
       ctaText="Scale Your Digital Presence"
       ctaLink="/lead-qualification"
-      heroImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      heroImage="/assets/imgs/scale-experiences.jpg"
       quotePanel={serviceQuotes['scale-digital-experiences']}
       featuredCaseStudy="e-commerce-platform-redesign"
       customerProfiles={customerProfiles}
