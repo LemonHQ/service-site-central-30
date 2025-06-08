@@ -206,7 +206,7 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/ALJ-Insights-voice-search.png',
       '/assets/imgs/ALJ-Insights-welcome.png',
     ],
-    date: '2017-12-30'
+    date: '2024-12-30'
   },
   {
     id: 'how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
@@ -247,7 +247,7 @@ export const caseStudies: CaseStudy[] = [
       '/assets/imgs/meraas-login.jpeg',
       '/assets/imgs/meraas-hero.png'
     ],
-    date: '2017-12-30'
+    date: '2023-12-30'
   },
   {
     id: 'standardizing-intellectual-property-management',
@@ -272,18 +272,16 @@ export const caseStudies: CaseStudy[] = [
                 <li>Improved governance and audit-readiness, with a single-source cockpit for global visibility</li>
                 <li>Stronger employee enablement, with over 11,000 users gaining self-service access to key brand tools</li>
               </ul>`,
-    featuredImage: '/assets/imgs/my-meraas-cover.png',
+    featuredImage: '/assets/imgs/public/assets/imgs/iprm-main.jpg',
     images: [
-      '/assets/imgs/meraas-menu.jpeg',
-      '/assets/imgs/meraas-offers.jpeg',
-      '/assets/imgs/meraas-preferences.jpeg',
-      '/assets/imgs/meraas-search.jpeg',
-      '/assets/imgs/meraas-rewards.jpeg',
-      '/assets/imgs/meraas-experiences.jpeg',
-      '/assets/imgs/meraas-login.jpeg',
-      '/assets/imgs/meraas-hero.png'
+      '/assets/imgs/iprm-dashboard.png',
+      '/assets/imgs/trademark-detail.png',
+      '/assets/imgs/Assets.png',
+      '/assets/imgs/Stock-assets.png',
+      '/assets/imgs/domain-details.png',
+      '/assets/imgs/trademark-detail.png'
     ],
-    date: '2017-12-30'
+    date: '2023-12-30'
   },
   {
     id: 'building-a-composable-digital-brand-engine',
@@ -305,17 +303,13 @@ export const caseStudies: CaseStudy[] = [
                 <li>Significantly reduced support and upgrade effort through shared pipelines and reusable components</li>
                 <li>Platform now positioned for integration with DAM, CRM, analytics, and AI-powered publishing</li>
               </ul>`,
-    featuredImage: '/assets/imgs/my-meraas-cover.png',
+    featuredImage: '/assets/imgs/brand-engine.jpg',
     images: [
-      '/assets/imgs/meraas-menu.jpeg',
-      '/assets/imgs/meraas-offers.jpeg',
-      '/assets/imgs/meraas-preferences.jpeg',
-      '/assets/imgs/meraas-search.jpeg',
-      '/assets/imgs/meraas-rewards.jpeg',
-      '/assets/imgs/meraas-experiences.jpeg',
-      '/assets/imgs/meraas-login.jpeg',
-      '/assets/imgs/meraas-hero.png'
+      '/assets/imgs/j-motors.jpg',
+      '/assets/imgs/jameelhealth.jpg',
+      '/assets/imgs/jimco.jpg',
+      '/assets/imgs/alj-masterbrand.jpg'
     ],
-    date: '2017-12-30'
+    date: '2024-12-30'
   }
 ];
