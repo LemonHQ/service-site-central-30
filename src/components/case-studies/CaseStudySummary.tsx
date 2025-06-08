@@ -44,16 +44,16 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
         <div className="md:w-1/3 space-y-4">
           <Card>
             <CardContent className="p-6">
-              <div className="flex items-start gap-3 mb-4">
-                <Building className="h-5 w-5 text-brand-400 mt-0.5" />
+              <div className="flex items-center gap-3 mb-4">
+                <Building className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-gray-500">Client</h4>
                   <p className="font-medium">{caseStudy.client}</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-3 mb-4">
-                <Calendar className="h-5 w-5 text-brand-400 mt-0.5" />
+              <div className="flex items-center gap-3 mb-4">
+                <Calendar className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-gray-500">Completed</h4>
                   <p className="font-medium">{formattedDate}</p>
