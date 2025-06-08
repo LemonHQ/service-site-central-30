@@ -134,6 +134,12 @@ const CaseStudiesCarousel: React.FC = () => {
             <CarouselNext className="hidden md:flex" />
           </Carousel>
         </div>
+        
+        <div className="text-center mt-8">
+          <Link to="/case-studies">
+            <Button size="lg">View All Case Studies</Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
