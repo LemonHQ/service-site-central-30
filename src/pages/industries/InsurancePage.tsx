@@ -14,7 +14,7 @@ const InsurancePage = () => {
       ctaLink="/getting-started"
       secondaryCtaText="Getting Started"
       secondaryCtaLink="/getting-started"
-      heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      heroImage="/assets/imgs/insurance-profile.jpg"
       isAiHeroImage={false}
       quotePanel={{
         quote: "Personalization can reduce acquisition costs by as much as 50%, lift revenues by 5-15%, and increase the efficiency of marketing spend by 10-30%.",
