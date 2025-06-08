@@ -19,7 +19,7 @@ const About = () => {
     role: 'Enterprise Partner',
     bio: '20+ years of experience lauching and expanding product portfolios for enterprise brands to new markets.',
     fullBio: 'With a proven track record in driving brand and product digitalization, Husain works with enterprise brand, product and market leaders to expand their digital presence, optimize their strategies, and scale effectively across diverse markets. His expertise spans across the digital landscape, from leveraging data-driven insights and a comprehensive understanding of global business dynamics, Husain ensures that brands not only grow but thrive in competitive digital ecosystems. His focus on innovation, efficiency and sustainable growth makes him a trusted ally for brands looking to expand their footprint and innovate with new business models. Through customized strategies and scalable solutions, Husain supports enterprises in building lasting relationships with their customers, growing their digital assets, and achieving long-term success across multiple markets.',
-    image: '/assets/imgs/husain-mohsin-profile-pic-old.png',
+    image: '/assets/imgs/husain-profile.jpg',
     linkedin: 'https://www.linkedin.com/in/husainmohsin/',
     email: 'h.mohsin@lemonhq.co.uk'
   }, {
@@ -27,7 +27,7 @@ const About = () => {
     role: 'Digital Product Expert',
     bio: 'Former enterprise solutions architect at major tech companies with expertise in enterprise digital portfolios.',
     fullBio: 'Abdul Majeed is a seasoned Digital Product Expert with extensive experience in accelerating goto market of digital products. His expertise spans across the entire product lifecycle—from ideation and design to development and launch—allowing him to craft digital solutions that are both functional and forward-thinking. Abdul Majeed is known for his strategic approach, always focused on driving growth, enhancing user engagement, and optimizing product performance. With a strong background in data-driven decision-making and agile methodologies, Abdul Majeed brings efficiency and clarity to complex digital product challenges. His ability to navigate the ever-evolving digital landscape makes him a valuable partner for businesses aiming to stay ahead of the curve and deliver exceptional digital products to the market..',
-    image: '/assets/imgs/abdul-majeed.jpg',
+    image: '/assets/imgs/abdul-profile.jpg',
     linkedin: 'https://www.linkedin.com/in/abdul-majeed-abdul-hameed-73396918/',
     email: 'a.majeed@lemonhq.co.uk'
   }, ];
