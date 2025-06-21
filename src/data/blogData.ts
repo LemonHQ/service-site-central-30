@@ -6,6 +6,7 @@ export interface BlogPost {
   content: string;
   featuredImage: string;
   publishDate: string;
+  date: string;
   readTime: number;
   category: string;
   tags: string[];
@@ -35,6 +36,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     publishDate: "2024-01-15",
+    date: "2024-01-15",
     readTime: 8,
     category: "Digital Strategy",
     tags: ["Digital Transformation", "Enterprise", "Strategy", "Innovation"],
@@ -62,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     publishDate: "2024-01-12",
+    date: "2024-01-12",
     readTime: 6,
     category: "Industry Analysis",
     tags: ["Consulting", "Digital Transformation", "Partnership", "Innovation"],
@@ -89,6 +92,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     publishDate: "2024-01-10",
+    date: "2024-01-10",
     readTime: 7,
     category: "Innovation",
     tags: ["Innovation", "Enterprise", "Frameworks", "Strategy"],
@@ -116,6 +120,7 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     publishDate: "2024-01-08",
+    date: "2024-01-08",
     readTime: 5,
     category: "Leadership",
     tags: ["Leadership", "Skills", "Digital Transformation", "Management"],
