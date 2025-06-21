@@ -48,48 +48,48 @@ const ICPPanel: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-blue-500" />,
       title: "Digital Transformation Leaders",
-      description: "C-suite executives and senior leaders driving enterprise-wide digital transformation initiatives.",
+      description: "Internal executives and senior leaders spearheading enterprise-wide digital transformation initiatives within their organizations.",
       benefits: [
-        "Accelerate transformation timelines",
-        "Reduce implementation risks",
-        "Achieve measurable business outcomes",
-        "Build organizational digital capabilities"
+        "Accelerate transformation timelines with proven frameworks",
+        "Reduce implementation risks through expert guidance",
+        "Achieve measurable ROI on digital investments",
+        "Build internal capabilities for sustained transformation"
       ],
       color: "bg-blue-100"
     },
     {
       icon: <Building2 className="h-8 w-8 text-purple-500" />,
-      title: "Consultancy Firms",
-      description: "Strategic consulting firms like Sia Partners, BCG, and others advancing digital transformation for enterprises.",
+      title: "Strategic Management Consultancies",
+      description: "External consulting firms like McKinsey, BCG, and Bain delivering digital transformation services to enterprise clients.",
       benefits: [
-        "Expand service capabilities",
-        "Deliver faster client results",
-        "Access specialized expertise",
-        "Scale transformation delivery"
+        "Expand digital transformation service capabilities",
+        "Access specialized frameworks and methodologies",
+        "Deliver faster, more predictable client outcomes",
+        "Scale transformation delivery across multiple clients"
       ],
       color: "bg-purple-100"
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-green-500" />,
-      title: "Digital Transformation Consultants",
-      description: "Independent consultants and specialized teams focused on enterprise digital transformation.",
+      title: "Digital Roadmap Owners",
+      description: "Internal strategists and product leaders responsible for defining and executing digital transformation roadmaps within their organizations.",
       benefits: [
-        "Enhance client offerings",
-        "Access proven frameworks",
-        "Leverage partnership opportunities",
-        "Accelerate project delivery"
+        "Create comprehensive, actionable digital roadmaps",
+        "Align stakeholders around transformation priorities",
+        "Track progress with clear metrics and milestones",
+        "Optimize resource allocation for maximum impact"
       ],
       color: "bg-green-100"
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-amber-500" />,
-      title: "Innovation Consultants",
-      description: "Strategic advisors helping enterprises innovate and transform their business models.",
+      title: "Independent Consultants",
+      description: "External individual consultants and boutique firms specializing in digital transformation and innovation advisory services.",
       benefits: [
-        "Apply cutting-edge methodologies",
-        "Drive innovation at scale",
-        "Access emerging technology insights",
-        "Create competitive advantages"
+        "Enhance service offerings with proven methodologies",
+        "Access cutting-edge transformation frameworks",
+        "Deliver higher-value client engagements",
+        "Build reputation with successful transformation outcomes"
       ],
       color: "bg-amber-100"
     }
@@ -100,7 +100,7 @@ const ICPPanel: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionHeading 
           title="Who We Optimize For" 
-          subtitle="We partner with leaders and organizations driving digital transformation across industries"
+          subtitle="We partner with leaders and organizations driving digital transformation across industries - both internal champions and external advisors"
           centered
           className="mb-16"
         />
@@ -120,7 +120,7 @@ const ICPPanel: React.FC = () => {
         
         <div className="text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Whether you're leading transformation within your organization or helping others navigate their digital journey, we provide the expertise and partnership you need to succeed.
+            Whether you're leading transformation from within your organization or advising clients as an external partner, we provide the expertise and frameworks you need to drive successful digital transformation outcomes.
           </p>
           <Link to="/lead-qualification">
             <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
