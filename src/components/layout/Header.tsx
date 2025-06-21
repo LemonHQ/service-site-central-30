@@ -15,7 +15,7 @@ const Header = () => {
 
   // Navigation links - Updated to remove 'Insights' from main nav
   const navLinks = [
-    { name: 'Our Work', path: '/case-studies' },
+    // { name: 'Our Work', path: '/case-studies' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
