@@ -60,6 +60,7 @@ const GettingStartedContent = () => {
         <Step1Form 
           defaultValues={step1Data}
           onSubmit={handleStep1Submit}
+          icpType={step0Data.icp_type}
         />
       )}
       

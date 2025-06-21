@@ -6,20 +6,24 @@ import { Form } from '@/components/ui/form';
 import SelectableBox from './SelectableBox';
 import NumberOption from './NumberOption';
 import { Step1Data, step1Schema } from './schema';
-import { sectors, numberOptions } from './formConstants';
+import { sectors, numberOptions, getBusinessContextByICP, getICPTitles } from './icpFormConstants';
 import LeadFormButton from './LeadFormButton';
 
 interface Step1FormProps {
   defaultValues: Step1Data;
   onSubmit: (data: Step1Data) => void;
+  icpType: string;
 }
 
-const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
+const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit, icpType }) => {
   const form = useForm<Step1Data>({
     resolver: zodResolver(step1Schema),
     defaultValues,
     mode: "onChange"
   });
+
+  const businessContext = getBusinessContextByICP(icpType);
+  const titles = getICPTitles(icpType);
 
   // Toggle a sector selection
   const toggleSector = (sectorId: string) => {
@@ -39,11 +43,11 @@ const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
 
   return (
     <div className="bg-white rounded-xl p-8 shadow">
-      <h2 className="text-2xl font-semibold mb-6">A Little Bit About Your Business</h2>
+      <h2 className="text-2xl font-semibold mb-6">{titles.businessTitle}</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {/* Business Sectors */}
         <div>
-          <h3 className="text-lg font-medium mb-4">Which business sectors do you operate in?</h3>
+          <h3 className="text-lg font-medium mb-4">{businessContext.sectorLabel}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sectors.map(sector => (
               <SelectableBox
@@ -63,7 +67,7 @@ const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
         {/* Markets, Brands, Products */}
         <div className="space-y-6">
           <NumberOption
-            label="How many markets do you operate in?"
+            label={businessContext.marketsLabel}
             options={numberOptions}
             value={form.getValues("markets")}
             onChange={(value) => {
@@ -74,7 +78,7 @@ const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
           />
           
           <NumberOption
-            label="How many brands do you have?"
+            label={businessContext.brandsLabel}
             options={numberOptions}
             value={form.getValues("brands")}
             onChange={(value) => {
@@ -85,7 +89,7 @@ const Step1Form: React.FC<Step1FormProps> = ({ defaultValues, onSubmit }) => {
           />
           
           <NumberOption
-            label="How many products do you have?"
+            label={businessContext.productsLabel}
             options={numberOptions}
             value={form.getValues("products")}
             onChange={(value) => {
