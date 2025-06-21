@@ -6,7 +6,7 @@ import { Form } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { Step3Data, step3Schema } from './schema';
-import { timeframes } from './formConstants';
+import { getTimeframesByICP } from './icpFormConstants';
 import LeadFormButton from './LeadFormButton';
 import { Checkbox } from '@/components/ui/checkbox';
 import PrivacyNotice from '@/components/privacy/PrivacyNotice';
@@ -16,13 +16,15 @@ interface Step3FormProps {
   onSubmit: (data: Step3Data) => void;
   onBack: () => void;
   isSubmitting: boolean;
+  icpType: string;
 }
 
 const Step3Form: React.FC<Step3FormProps> = ({ 
   defaultValues, 
   onSubmit, 
   onBack, 
-  isSubmitting 
+  isSubmitting,
+  icpType 
 }) => {
   const form = useForm<Step3Data>({
     resolver: zodResolver(step3Schema),
@@ -30,15 +32,22 @@ const Step3Form: React.FC<Step3FormProps> = ({
     mode: "onChange"
   });
 
+  const timeframes = getTimeframesByICP(icpType);
   const selectedTimeframe = form.watch("timeframe");
+
+  const isInternal = icpType === 'digital-transformation-leaders' || icpType === 'digital-roadmap-owners';
+  const title = isInternal ? "Your Transformation Timeline" : "Your Client Engagement Timeline";
+  const timeframeQuestion = isInternal 
+    ? "When are you planning to make decisions on transformation initiatives?" 
+    : "When are you looking to engage with new transformation opportunities?";
 
   return (
     <div className="bg-white rounded-xl p-8 shadow">
-      <h2 className="text-2xl font-semibold mb-6">Your Priorities</h2>
+      <h2 className="text-2xl font-semibold mb-6">{title}</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {/* Timeframe */}
         <div className="space-y-4">
-          <h3 className="text-lg font-medium">How soon are you planning to make a decision?</h3>
+          <h3 className="text-lg font-medium">{timeframeQuestion}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {timeframes.map(timeframe => (
               <div

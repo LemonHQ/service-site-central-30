@@ -11,6 +11,7 @@ interface LeadQualificationLayoutProps {
 }
 
 const defaultSteps: Step[] = [
+  { id: 0, label: "Your Role" },
   { id: 1, label: "About Your Business" },
   { id: 2, label: "Your Challenges" },
   { id: 3, label: "Your Priorities" }

@@ -5,21 +5,24 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Form } from '@/components/ui/form';
 import SelectableBox from './SelectableBox';
 import { Step2Data, step2Schema } from './schema';
-import { challenges } from './formConstants';
+import { getChallengesByICP } from './icpFormConstants';
 import LeadFormButton from './LeadFormButton';
 
 interface Step2FormProps {
   defaultValues: Step2Data;
   onSubmit: (data: Step2Data) => void;
   onBack: () => void;
+  icpType: string;
 }
 
-const Step2Form: React.FC<Step2FormProps> = ({ defaultValues, onSubmit, onBack }) => {
+const Step2Form: React.FC<Step2FormProps> = ({ defaultValues, onSubmit, onBack, icpType }) => {
   const form = useForm<Step2Data>({
     resolver: zodResolver(step2Schema),
     defaultValues,
     mode: "onChange"
   });
+
+  const challenges = getChallengesByICP(icpType);
 
   // Toggle a challenge selection
   const toggleChallenge = (challengeId: string) => {
@@ -37,9 +40,12 @@ const Step2Form: React.FC<Step2FormProps> = ({ defaultValues, onSubmit, onBack }
 
   const selectedChallenges = form.watch("challenges") || [];
 
+  const isInternal = icpType === 'digital-transformation-leaders' || icpType === 'digital-roadmap-owners';
+  const title = isInternal ? "What Internal Challenges Are You Facing?" : "What Client/Delivery Challenges Are You Facing?";
+
   return (
     <div className="bg-white rounded-xl p-8 shadow">
-      <h2 className="text-2xl font-semibold mb-6">What Challenges Are You Facing?</h2>
+      <h2 className="text-2xl font-semibold mb-6">{title}</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div>
           <h3 className="text-lg font-medium mb-4">Select all that apply:</h3>

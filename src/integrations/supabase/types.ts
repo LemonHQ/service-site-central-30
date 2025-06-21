@@ -156,6 +156,7 @@ export type Database = {
           challenges: string[]
           created_at: string
           email: string
+          icp_type: string | null
           id: string
           marketing_consent: boolean | null
           markets: string
@@ -168,6 +169,7 @@ export type Database = {
           challenges: string[]
           created_at?: string
           email: string
+          icp_type?: string | null
           id?: string
           marketing_consent?: boolean | null
           markets: string
@@ -180,6 +182,7 @@ export type Database = {
           challenges?: string[]
           created_at?: string
           email?: string
+          icp_type?: string | null
           id?: string
           marketing_consent?: boolean | null
           markets?: string

@@ -2,15 +2,18 @@
 import React from 'react';
 import { LeadQualificationProvider, useLeadQualification } from '../components/lead-qualification/LeadQualificationProvider';
 import LeadQualificationLayout from '../components/lead-qualification/LeadQualificationLayout';
+import Step0Form from '../components/lead-qualification/Step0Form';
 import Step1Form from '../components/lead-qualification/Step1Form';
 import Step2Form from '../components/lead-qualification/Step2Form';
 import Step3Form from '../components/lead-qualification/Step3Form';
 
 const GettingStartedContent = () => {
   const {
+    step0Data,
     step1Data,
     step2Data,
     step3Data,
+    setStep0Data,
     setStep1Data,
     setStep2Data,
     setStep3Data,
@@ -19,6 +22,11 @@ const GettingStartedContent = () => {
     isSubmitting,
     submitFormData
   } = useLeadQualification();
+
+  const handleStep0Submit = (data: typeof step0Data) => {
+    setStep0Data(data);
+    setCurrentStep(1);
+  };
 
   const handleStep1Submit = (data: typeof step1Data) => {
     setStep1Data(data);
@@ -35,11 +43,19 @@ const GettingStartedContent = () => {
     await submitFormData();
   };
 
+  const handleBackToStep0 = () => setCurrentStep(0);
   const handleBackToStep1 = () => setCurrentStep(1);
   const handleBackToStep2 = () => setCurrentStep(2);
 
   return (
     <LeadQualificationLayout currentStep={currentStep} title="Getting Started">
+      {currentStep === 0 && (
+        <Step0Form 
+          defaultValues={step0Data}
+          onSubmit={handleStep0Submit}
+        />
+      )}
+
       {currentStep === 1 && (
         <Step1Form 
           defaultValues={step1Data}
@@ -52,6 +68,7 @@ const GettingStartedContent = () => {
           defaultValues={step2Data}
           onSubmit={handleStep2Submit}
           onBack={handleBackToStep1}
+          icpType={step0Data.icp_type}
         />
       )}
       
@@ -61,6 +78,7 @@ const GettingStartedContent = () => {
           onSubmit={handleStep3Submit}
           onBack={handleBackToStep2}
           isSubmitting={isSubmitting}
+          icpType={step0Data.icp_type}
         />
       )}
     </LeadQualificationLayout>
