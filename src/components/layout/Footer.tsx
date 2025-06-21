@@ -34,6 +34,13 @@ const Footer = () => {
     { name: 'Co-Innovate', path: '/approach/co-innovate' },
   ];
 
+  // Resources links - New section
+  const resourceLinks = [
+    { name: 'Insights', path: '/insights' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blog', path: '/blog' },
+  ];
+
   // Company links - Updated
   const companyLinks = [
     { name: 'About Us', path: '/about' },
@@ -47,10 +54,11 @@ const Footer = () => {
     <footer className="bg-white text-gray-700 pt-16 pb-8 border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           <FooterLinks title="What We Do" links={serviceLinks} />
           <FooterLinks title="Industries" links={industryLinks} />
           <FooterLinks title="Our Approach" links={approachLinks} />
+          <FooterLinks title="Resources" links={resourceLinks} />
           <FooterLinks title="Company" links={companyLinks} showIcon={false} />
         </div>
 

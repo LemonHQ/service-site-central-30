@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ServiceSubNav from '../navigation/ServiceSubNav';
+import ResourcesSubNav from '../navigation/ResourcesSubNav';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -93,9 +94,12 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          {/* Resources dropdown */}
+          <ResourcesSubNav />
           
-          {/* Main nav links - Updated to match trigger height and styling */}
-          {navLinks.map((link) => (
+          {/* Main nav links - Updated to exclude 'Insights' */}
+          {navLinks.filter(link => link.name !== 'Insights').map((link) => (
             <NavigationMenuItem key={link.name}>
               <Link 
                 to={link.path} 
@@ -112,4 +116,3 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
 };
 
 export default DesktopNavigation;
-

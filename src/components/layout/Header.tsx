@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X } from "lucide-react";
@@ -11,12 +10,12 @@ const Header = () => {
   const [mobileExpandedService, setMobileExpandedService] = useState<string | null>(null);
   const [mobileExpandedIndustry, setMobileExpandedIndustry] = useState<string | null>(null);
   const [mobileExpandedApproach, setMobileExpandedApproach] = useState<string | null>(null);
+  const [mobileExpandedResources, setMobileExpandedResources] = useState<string | null>(null);
   const location = useLocation();
 
-  // Navigation links - Removed 'Home' from the array
+  // Navigation links - Updated to remove 'Insights' from main nav
   const navLinks = [
     { name: 'Our Work', path: '/case-studies' },
-    { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -78,6 +77,14 @@ const Header = () => {
     }
   };
 
+  const toggleMobileResources = (resourceId: string) => {
+    if (mobileExpandedResources === resourceId) {
+      setMobileExpandedResources(null);
+    } else {
+      setMobileExpandedResources(resourceId);
+    }
+  };
+
   return (
     <header className="sticky top-0 bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,9 +128,11 @@ const Header = () => {
         mobileExpandedService={mobileExpandedService}
         mobileExpandedIndustry={mobileExpandedIndustry}
         mobileExpandedApproach={mobileExpandedApproach}
+        mobileExpandedResources={mobileExpandedResources}
         toggleMobileService={toggleMobileService}
         toggleMobileIndustry={toggleMobileIndustry}
         toggleMobileApproach={toggleMobileApproach}
+        toggleMobileResources={toggleMobileResources}
         setIsMenuOpen={setIsMenuOpen}
         isActive={isActive}
       />

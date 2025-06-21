@@ -14,6 +14,7 @@ import PartnersSection from '../components/homepage/PartnersSection';
 import BlogCarousel from '../components/homepage/BlogCarousel';
 import SectorChallenges from '../components/homepage/SectorChallenges';
 import ProductExpansion from '../components/homepage/ProductExpansion';
+import ICPPanel from '../components/homepage/ICPPanel';
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
       
       {/* Sector-specific challenges */}
       <SectorChallenges />
+
+      {/* ICP Panel - Who We Optimize For */}
+      <ICPPanel />
       
       {/* Case Studies Carousel */}
       <CaseStudiesCarousel />

@@ -12,9 +12,11 @@ interface MobileNavigationProps {
   mobileExpandedService: string | null;
   mobileExpandedIndustry: string | null;
   mobileExpandedApproach: string | null;
+  mobileExpandedResources: string | null;
   toggleMobileService: (serviceId: string) => void;
   toggleMobileIndustry: (industryId: string) => void;
   toggleMobileApproach: (approachId: string) => void;
+  toggleMobileResources: (resourceId: string) => void;
   setIsMenuOpen: (open: boolean) => void;
   isActive: (path: string) => string;
 }
@@ -28,13 +30,21 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
   mobileExpandedService,
   mobileExpandedIndustry,
   mobileExpandedApproach,
+  mobileExpandedResources,
   toggleMobileService,
   toggleMobileIndustry,
   toggleMobileApproach,
+  toggleMobileResources,
   setIsMenuOpen,
   isActive
 }) => {
   const location = useLocation();
+
+  const resourceItems = [
+    { name: "Insights", path: "/insights" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Blog", path: "/blog" }
+  ];
 
   if (!isMenuOpen) return null;
 
@@ -82,7 +92,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
           )}
         </div>
         
-        {/* Our Approach - with sub-menu - Updated items */}
+        {/* Our Approach - with sub-menu */}
         <div className="flex flex-col">
           <button 
             className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/approach/') ? 'text-brand-600 font-medium' : ''}`}
@@ -137,9 +147,39 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             </div>
           )}
         </div>
+
+        {/* Resources - with sub-menu */}
+        <div className="flex flex-col">
+          <button 
+            className={`flex items-center justify-between text-lg py-2 ${location.pathname.includes('/insights') || 
+              location.pathname.includes('/case-studies') || 
+              location.pathname.includes('/blog') ? 'text-brand-600 font-medium' : ''}`}
+            onClick={() => toggleMobileResources('resources')}
+          >
+            <span>Resources</span>
+            <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileExpandedResources === 'resources' ? 'transform rotate-180' : ''}`} />
+          </button>
+          
+          {mobileExpandedResources === 'resources' && (
+            <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
+              {resourceItems.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    to={item.path}
+                    className="flex items-center py-2 text-gray-700 hover:text-brand-500"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <ChevronRight className="h-3 w-3 mr-2" />
+                    <span>{item.name}</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
         
-        {/* Main nav links */}
-        {navLinks.map((link) => (
+        {/* Main nav links - Filter out 'Insights' since it's now under Resources */}
+        {navLinks.filter(link => link.name !== 'Insights').map((link) => (
           <Link 
             key={link.name} 
             to={link.path} 

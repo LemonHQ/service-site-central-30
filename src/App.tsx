@@ -15,6 +15,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import GettingStarted from "./pages/GettingStarted";
@@ -22,7 +24,7 @@ import ThankYouPage from "./pages/ThankYouPage";
 import CvSubmission from "./pages/CvSubmission";
 import CoCreateAssessment from "./pages/CoCreateAssessment";
 import WebinarSignupPage from "./pages/WebinarSignupPage";
-import CoInnovateWebinarPage from "./pages/CoInnovateWebinarPage"; // Add import for new page
+import CoInnovateWebinarPage from "./pages/CoInnovateWebinarPage";
 
 // Import service landing pages
 import UnifyBrandPage from "./pages/services/UnifyBrandPage";
@@ -77,7 +79,7 @@ const App = () => (
             <Route path="/approach/extend" element={<ExtendPage />} />
             <Route path="/approach/co-create-assessment" element={<CoCreateAssessment />} />
             <Route path="/webinar-signup" element={<WebinarSignupPage />} />
-            <Route path="/co-innovate-webinar" element={<CoInnovateWebinarPage />} /> {/* New route for co-innovate webinar */}
+            <Route path="/co-innovate-webinar" element={<CoInnovateWebinarPage />} />
             
             {/* Industry landing pages */}
             <Route path="/industries/insurance" element={<InsurancePage />} />
@@ -98,9 +100,9 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/insights" element={<Blog />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/insights/:postId" element={<BlogDetail />} />
-            <Route path="/blog/:postId" element={<BlogDetail />} />
+            <Route path="/blog/:postId" element={<BlogDetailPage />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
             <Route path="/getting-started" element={<GettingStarted />} />
