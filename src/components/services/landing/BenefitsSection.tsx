@@ -39,7 +39,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
   }, [benefits.length]);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-gray-50">
+    <section ref={sectionRef} className="py-16 bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Benefits"
@@ -51,7 +51,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start space-x-3">
               <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-              <span className="text-gray-600 font-light">{benefit}</span>
+              <span className="text-gray-700">{benefit}</span>
             </div>
           ))}
         </div>
