@@ -54,15 +54,13 @@ const SpotlightCarousel: React.FC = () => {
       <div className="flex flex-col justify-center h-full w-full text-white px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="container mx-auto">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in font-light text-gray-50">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-6 animate-fade-in">
               {content.title}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-brand-100 animate-slide-in">
+            <p className="text-xl md:text-2xl mb-8 text-gray-100 font-light animate-slide-in">
               {content.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:0.2s]">
               {/**
                 <Link to={content.buttonLink}>
                   <Button className="bg-white text-brand-600 hover:bg-brand-100 py-6 px-8 text-lg">

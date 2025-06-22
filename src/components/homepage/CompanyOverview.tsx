@@ -89,10 +89,10 @@ const CompanyOverview: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-brand-700">
+            <h2 className="text-3xl md:text-4xl font-light mb-6 text-gray-900">
               Why Us
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-8 font-light leading-7">
               {/* Brands today are under increasing pressure to deliver digital-first experiences.  */}
               Multi-line businesses often face execution bottlenecks when running parallel digital strategy roadmaps across their product portfolios.
               For over 17+ years we've worked closely with brand, product and market leaders to deliver multi-market digital products and portfolios with consistency, accuracy and standards. 
@@ -105,7 +105,7 @@ const CompanyOverview: React.FC = () => {
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div> 
-                  <h4 className="font-semibold mb-1">Portfolio perspective</h4>
+                  <h4 className="text-lg font-medium mb-1 text-gray-800">Portfolio perspective</h4>
                   <p className="text-gray-600">Experience working with enterprise brands with diverse business and product lines.</p>
                 </div>  
               </div>
@@ -115,7 +115,7 @@ const CompanyOverview: React.FC = () => {
                   <Users className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Ecosystem approach</h4>
+                  <h4 className="text-lg font-medium mb-1 text-gray-800">Ecosystem approach</h4>
                   <p className="text-gray-600">Harnessing collaborative partnerships, platforms, and technologies to deliver integrated value across the digital landscape.</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ const CompanyOverview: React.FC = () => {
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Experience-first execution</h4>
+                  <h4 className="text-lg font-medium mb-1 text-gray-800">Experience-first execution</h4>
                   <p className="text-gray-600">Every feature, flow, and decision is shaped around user needs—because when products feel intuitive, adoption follows naturally, and value compounds over time.</p>
                 </div>
               </div>
@@ -135,7 +135,7 @@ const CompanyOverview: React.FC = () => {
                   <Database className="w-6 h-6 text-brand-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Boutique yet scalable</h4>
+                  <h4 className="text-lg font-medium mb-1 text-gray-800">Boutique yet scalable</h4>
                   <p className="text-gray-600">As a partner we are deeply invested in your outcomes —while bringing the systems, scale, and digital maturity needed to support complex, multi-market initiatives. </p>
                 </div>
               </div>
@@ -163,19 +163,19 @@ const CompanyOverview: React.FC = () => {
             <div ref={statsRef} className="bg-brand-100 rounded-lg p-8 relative z-10">
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{years}+</h3>
+                  <h3 className="text-4xl font-light text-brand-500 mb-2 animate-fade-in">{years}+</h3>
                   <p className="text-gray-600">Years of experience</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{products}+</h3>
+                  <h3 className="text-4xl font-light text-brand-500 mb-2 animate-fade-in">{products}+</h3>
                   <p className="text-gray-600">Products launched</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">${transactions}M+</h3>
+                  <h3 className="text-4xl font-light text-brand-500 mb-2 animate-fade-in">${transactions}M+</h3>
                   <p className="text-gray-600">Transactions enabled</p>
                 </div>
                 <div className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <h3 className="text-4xl font-bold text-brand-500 mb-2 animate-fade-in">{portfolios}+</h3>
+                  <h3 className="text-4xl font-light text-brand-500 mb-2 animate-fade-in">{portfolios}+</h3>
                   <p className="text-gray-600">Portfolios under management</p>
                 </div>
               </div>
