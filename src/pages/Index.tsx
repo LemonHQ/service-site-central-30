@@ -15,7 +15,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-beige-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-semibold mb-2 text-brand-500">Strategic Consulting</h3>
-              <p className="text-gray-600">Expert guidance to navigate complex business challenges and opportunities.</p>
+              <p className="text-gray-600">Expert guidance to navigate complex business challenges and opportunities</p>
             </div>
             <div className="bg-beige-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-semibold mb-2 text-brand-500">Digital Transformation</h3>
