@@ -9,7 +9,7 @@ interface TypographyProps {
 
 export const H1 = ({ children, className }: TypographyProps) => {
   return (
-    <h1 className={cn("text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-700", className)}>
+    <h1 className={cn("text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 leading-tight tracking-tight", className)}>
       {children}
     </h1>
   );
@@ -17,7 +17,7 @@ export const H1 = ({ children, className }: TypographyProps) => {
 
 export const H2 = ({ children, className }: TypographyProps) => {
   return (
-    <h2 className={cn("text-2xl md:text-3xl lg:text-4xl font-medium text-brand-600", className)}>
+    <h2 className={cn("text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 leading-tight tracking-tight", className)}>
       {children}
     </h2>
   );
@@ -25,7 +25,7 @@ export const H2 = ({ children, className }: TypographyProps) => {
 
 export const H3 = ({ children, className }: TypographyProps) => {
   return (
-    <h3 className={cn("text-xl md:text-2xl font-medium text-brand-500", className)}>
+    <h3 className={cn("text-xl md:text-2xl font-normal text-gray-800 leading-relaxed", className)}>
       {children}
     </h3>
   );
@@ -33,7 +33,7 @@ export const H3 = ({ children, className }: TypographyProps) => {
 
 export const H4 = ({ children, className }: TypographyProps) => {
   return (
-    <h4 className={cn("text-lg md:text-xl font-medium text-brand-500", className)}>
+    <h4 className={cn("text-lg md:text-xl font-normal text-gray-800 leading-relaxed", className)}>
       {children}
     </h4>
   );
@@ -41,7 +41,7 @@ export const H4 = ({ children, className }: TypographyProps) => {
 
 export const H5 = ({ children, className }: TypographyProps) => {
   return (
-    <h5 className={cn("text-base md:text-lg font-medium text-accent-600", className)}>
+    <h5 className={cn("text-base md:text-lg font-medium text-gray-700 leading-relaxed", className)}>
       {children}
     </h5>
   );
@@ -49,7 +49,7 @@ export const H5 = ({ children, className }: TypographyProps) => {
 
 export const H6 = ({ children, className }: TypographyProps) => {
   return (
-    <h6 className={cn("text-sm md:text-base font-medium text-accent-500", className)}>
+    <h6 className={cn("text-sm md:text-base font-medium text-gray-700 leading-relaxed", className)}>
       {children}
     </h6>
   );
@@ -65,7 +65,7 @@ export const Paragraph = ({ children, className }: TypographyProps) => {
 
 export const Lead = ({ children, className }: TypographyProps) => {
   return (
-    <p className={cn("text-lg md:text-xl leading-7 text-gray-600", className)}>
+    <p className={cn("text-lg md:text-xl leading-8 text-gray-700 font-light", className)}>
       {children}
     </p>
   );
@@ -73,7 +73,7 @@ export const Lead = ({ children, className }: TypographyProps) => {
 
 export const Subtitle = ({ children, className }: TypographyProps) => {
   return (
-    <p className={cn("text-lg text-gray-600", className)}>
+    <p className={cn("text-lg text-gray-600 font-light leading-7", className)}>
       {children}
     </p>
   );
