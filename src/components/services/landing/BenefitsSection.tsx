@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { CheckCircle } from 'lucide-react';
 import { trackEvent, EventCategory, EventName } from '@/services/analytics';
+import { Paragraph } from '@/components/ui/Typography';
 
 interface BenefitsSectionProps {
   benefits: string[];
@@ -51,7 +52,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start space-x-3">
               <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-              <span className="text-gray-700">{benefit}</span>
+              <Paragraph className="mb-0">{benefit}</Paragraph>
             </div>
           ))}
         </div>

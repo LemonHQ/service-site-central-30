@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Calendar } from 'lucide-react';
+import { H2, Lead } from '@/components/ui/Typography';
 
 interface CtaSectionProps {
   title: string;
@@ -28,12 +29,12 @@ const CtaSection: React.FC<CtaSectionProps> = ({
     <section className="bg-beige-200 py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-gray-900">{title}</h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light">{subtitle}</p>
+          <H2 className="mb-6 text-gray-900">{title}</H2>
+          <Lead className="mb-8 font-light text-gray-700">{subtitle}</Lead>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              className="bg-accent-400 hover:bg-accent-500 text-white py-6 px-8 text-lg"
+              className="bg-accent-400 hover:bg-accent-500 text-white py-6 px-8 text-lg font-normal"
               onClick={() => setBookingDialogOpen(true)}
             >
               {buttonText}
@@ -41,7 +42,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({
             
             {secondaryButtonText && secondaryButtonLink && (
               <Link to={secondaryButtonLink}>
-                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 py-6 px-8 text-lg">
+                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 py-6 px-8 text-lg font-normal">
                   {secondaryButtonText}
                 </Button>
               </Link>

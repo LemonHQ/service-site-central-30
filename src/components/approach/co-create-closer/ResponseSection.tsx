@@ -14,10 +14,10 @@ const ResponseSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-white text-brand-700 px-4 py-1 rounded-full mb-4">
-              <span className="text-sm font-medium">Ready to build your ecosystem strategy?</span>
+              <span className="text-sm font-normal">Ready to build your ecosystem strategy?</span>
             </div>
             <H2 className="mb-6 text-white">Take the First Step Towards Ecosystem Success</H2>
-            <Paragraph className="text-lg text-white/90">
+            <Paragraph className="text-lg text-white/90 font-light">
               Choose the path that works best for your organization
             </Paragraph>
           </div>
@@ -36,20 +36,16 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">1-minute ecosystem readiness assessment</span>
+                    <span className="text-sm font-normal">1-minute ecosystem readiness assessment</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Ecosystem report</span>
+                    <span className="text-sm font-normal">Ecosystem report</span>
                   </li>
-                  {/* <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Personalized integration strategy</span>
-                  </li> */}
                 </ul>
                 
                 <Link to="/approach/co-create-assessment" className="w-full">
-                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
+                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50 font-normal">
                     Start Assessment
                   </Button>
                 </Link>
@@ -57,10 +53,6 @@ const ResponseSection = () => {
             </Card>
             
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow border-0 relative">
-              {/* <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-700 text-white px-4 py-1 rounded-full">
-                <span className="text-sm font-medium">Most Popular</span>
-              </div> */}
-              
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center">
@@ -73,24 +65,24 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">30-minute ecosystem session with expert</span>
+                    <span className="text-sm font-normal">30-minute ecosystem session with expert</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Why ecosystems now?</span>
+                    <span className="text-sm font-normal">Why ecosystems now?</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">How they create value?</span>
+                    <span className="text-sm font-normal">How they create value?</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">How can you gain a competitive edge?</span>
+                    <span className="text-sm font-normal">How can you gain a competitive edge?</span>
                   </li>
                 </ul>
                 
                 <Link to="/webinar-signup" className="w-full">
-                  <Button className="w-full bg-brand-600 hover:bg-brand-700">
+                  <Button className="w-full bg-brand-600 hover:bg-brand-700 font-normal">
                     Learn more
                   </Button>
                 </Link>
@@ -110,20 +102,12 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Digital ecosystem case studies</span>
+                    <span className="text-sm font-normal">Digital ecosystem case studies</span>
                   </li>
-                  {/* <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Platform integration playbook</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Ecosystem ROI calculator</span>
-                  </li> */}
                 </ul>
                 
                 <Link to="/case-studies" className="w-full">
-                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
+                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50 font-normal">
                     Case Studies
                   </Button>
                 </Link>
