@@ -14,10 +14,10 @@ const ResponseSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-white text-brand-700 px-4 py-1 rounded-full mb-4">
-              <span className="text-sm font-normal">Ready to build your ecosystem strategy?</span>
+              <Paragraph className="text-sm mb-0">Ready to build your ecosystem strategy?</Paragraph>
             </div>
             <H2 className="mb-6 text-white">Take the First Step Towards Ecosystem Success</H2>
-            <Paragraph className="text-lg text-white/90 font-light">
+            <Paragraph className="text-white/90">
               Choose the path that works best for your organization
             </Paragraph>
           </div>
@@ -36,16 +36,16 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">1-minute ecosystem readiness assessment</span>
+                    <Paragraph className="text-sm mb-0">1-minute ecosystem readiness assessment</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">Ecosystem report</span>
+                    <Paragraph className="text-sm mb-0">Ecosystem report</Paragraph>
                   </li>
                 </ul>
                 
                 <Link to="/approach/co-create-assessment" className="w-full">
-                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50 font-normal">
+                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
                     Start Assessment
                   </Button>
                 </Link>
@@ -65,24 +65,24 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">30-minute ecosystem session with expert</span>
+                    <Paragraph className="text-sm mb-0">30-minute ecosystem session with expert</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">Why ecosystems now?</span>
+                    <Paragraph className="text-sm mb-0">Why ecosystems now?</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">How they create value?</span>
+                    <Paragraph className="text-sm mb-0">How they create value?</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">How can you gain a competitive edge?</span>
+                    <Paragraph className="text-sm mb-0">How can you gain a competitive edge?</Paragraph>
                   </li>
                 </ul>
                 
                 <Link to="/webinar-signup" className="w-full">
-                  <Button className="w-full bg-brand-600 hover:bg-brand-700 font-normal">
+                  <Button className="w-full bg-brand-600 hover:bg-brand-700">
                     Learn more
                   </Button>
                 </Link>
@@ -102,12 +102,12 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm font-normal">Digital ecosystem case studies</span>
+                    <Paragraph className="text-sm mb-0">Digital ecosystem case studies</Paragraph>
                   </li>
                 </ul>
                 
                 <Link to="/case-studies" className="w-full">
-                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50 font-normal">
+                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
                     Case Studies
                   </Button>
                 </Link>
