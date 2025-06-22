@@ -164,8 +164,47 @@
   }
 }
 
-/* Custom styles with more neutral approach */
+/* Semantic color classes for consistent theming */
 @layer components {
+  /* Typography semantic classes */
+  .text-heading-primary {
+    @apply text-gray-900;
+  }
+  
+  .text-heading-secondary {
+    @apply text-gray-800;
+  }
+  
+  .text-heading-tertiary {
+    @apply text-gray-700;
+  }
+  
+  .text-body {
+    @apply text-gray-600;
+  }
+  
+  .text-body-light {
+    @apply text-gray-500;
+  }
+  
+  .text-brand-accent {
+    @apply text-brand-400 hover:text-brand-500;
+  }
+
+  /* Background semantic classes */
+  .bg-section-light {
+    @apply bg-gray-50;
+  }
+  
+  .bg-section-brand {
+    @apply bg-brand-50;
+  }
+  
+  .bg-section-white {
+    @apply bg-white;
+  }
+
+  /* Button styles */
   .btn-primary {
     @apply bg-brand-400 hover:bg-brand-500 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
@@ -194,7 +233,7 @@
     @apply bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent;
   }
   
-  /* Subtle link styles */
+  /* Link styles */
   .link {
     @apply text-gray-700 hover:text-brand-400 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
   }

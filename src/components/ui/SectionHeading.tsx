@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { H2, Subtitle } from './Typography';
+import { SectionTitle, Subtitle } from './Typography';
 
 interface SectionHeadingProps {
   title: string;
@@ -22,7 +22,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       centered ? 'text-center' : '',
       className
     )}>
-      <H2 className="mb-4">{title}</H2>
+      <SectionTitle className="mb-4">{title}</SectionTitle>
       {subtitle && (
         <Subtitle className={cn("max-w-4xl", centered && "mx-auto")}>
           {subtitle}

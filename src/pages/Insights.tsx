@@ -3,6 +3,10 @@ import React, { useState, useMemo } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
 import InsightCard from '@/components/blog/InsightCard';
+import PageHero from '@/components/ui/PageHero';
+import ContentSection from '@/components/ui/ContentSection';
+import FilterButtons from '@/components/ui/FilterButtons';
+import { SectionTitle } from '@/components/ui/Typography';
 
 const Insights = () => {
   // Get unique categories
@@ -23,34 +27,21 @@ const Insights = () => {
 
   return (
     <MainLayout pageTitle="Insights">
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Insights</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert perspectives on digital transformation, product strategy, and technological innovation.
-          </p>
-        </div>
+      <PageHero
+        title="Insights"
+        subtitle="Expert perspectives on digital transformation, product strategy, and technological innovation."
+      />
 
-        {/* Category filter */}
-        <div className="flex gap-2 justify-center mb-10 flex-wrap">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-brand-400 text-white'
-                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      <ContentSection>
+        <FilterButtons
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
 
         {filteredPosts.length === 0 ? (
           <div className="text-center py-16">
-            <h3 className="text-2xl font-semibold text-gray-700">No articles found</h3>
+            <SectionTitle className="text-gray-700">No articles found</SectionTitle>
             <p className="text-gray-500 mt-2">Try selecting a different category</p>
           </div>
         ) : (
@@ -60,7 +51,7 @@ const Insights = () => {
             ))}
           </div>
         )}
-      </div>
+      </ContentSection>
     </MainLayout>
   );
 };
