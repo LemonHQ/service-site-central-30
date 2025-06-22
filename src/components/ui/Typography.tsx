@@ -64,7 +64,7 @@ export const Lead = ({
   children,
   className
 }: TypographyProps) => {
-  return <p className="">
+  return <p className={cn("text-lg md:text-xl font-sans leading-8 text-gray-600 font-light", className)}>
       {children}
     </p>;
 };
@@ -82,7 +82,7 @@ export const PageTitle = ({
   children,
   className
 }: TypographyProps) => {
-  return <h1 className={cn("text-4xl md:text-5xl font-display font-light text-gray-900 leading-tight tracking-tight mb-6", className)}>
+  return <h1 className={cn("text-4xl md:text-5xl font-display font-light text-gray-900 leading-tight mb-6", className)}>
       {children}
     </h1>;
 };
