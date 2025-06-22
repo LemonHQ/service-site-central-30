@@ -81,13 +81,13 @@ const BlogDetailPage: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="mb-6">
-          <Link to="/blog" className="inline-flex items-center text-gray-700 hover:text-gray-900">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to blog
+          <Link to="/insights" className="inline-flex items-center text-gray-700 hover:text-gray-900">
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to insights
           </Link>
         </div>
         
         <article className="max-w-4xl mx-auto">
-          <Badge className="mb-4">{post.category}</Badge>
+          <Badge className="mb-4 bg-gray-100 text-gray-700 hover:bg-gray-200">{post.category}</Badge>
           <H1 className="mb-6">{post.title}</H1>
           
           <div className="flex items-center mb-8">
@@ -96,7 +96,7 @@ const BlogDetailPage: React.FC = () => {
               <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-medium">{post.author.name}</p>
+              <p className="font-medium text-gray-800">{post.author.name}</p>
               <p className="text-gray-600 text-sm">{post.author.role}</p>
             </div>
             <div className="ml-auto flex items-center text-gray-500 text-sm">
@@ -116,17 +116,17 @@ const BlogDetailPage: React.FC = () => {
           </div>
           
           <div 
-            className="prose prose-lg max-w-none mb-12 prose-p:mb-4 prose-table:border-collapse prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-table:overflow-hidden prose-thead:bg-brand-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-brand-700 prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700 prose-tr:odd:bg-white prose-tr:even:bg-gray-50 prose-tr:hover:bg-brand-25"
+            className="prose prose-lg max-w-none mb-12 prose-p:mb-4 prose-h1:text-gray-900 prose-h1:font-light prose-h2:text-gray-800 prose-h2:font-light prose-h3:text-gray-800 prose-h3:font-normal prose-h4:text-gray-700 prose-h4:font-normal prose-h5:text-gray-700 prose-h5:font-medium prose-h6:text-gray-700 prose-h6:font-medium prose-table:border-collapse prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-table:overflow-hidden prose-thead:bg-gray-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-gray-700 prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700 prose-tr:odd:bg-white prose-tr:even:bg-gray-50 prose-tr:hover:bg-gray-25"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           
-          <div className="border-t border-b py-6 mb-12">
+          <div className="border-t border-b border-gray-200 py-6 mb-12">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="mr-2 flex items-center">
+              <span className="mr-2 flex items-center text-gray-700">
                 <Tag className="h-4 w-4 mr-2" /> Tags:
               </span>
               {post.tags.map((tag, index) => (
-                <Badge key={index} variant="outline" className="bg-gray-100">
+                <Badge key={index} variant="outline" className="bg-gray-100 text-gray-700 border-gray-200">
                   {tag}
                 </Badge>
               ))}
@@ -191,7 +191,7 @@ const BlogDetailPage: React.FC = () => {
             <H2 className="mb-8">Related Articles</H2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Link key={relatedPost.id} to={`/blog/${relatedPost.id}`} className="group">
+                <Link key={relatedPost.id} to={`/insights/${relatedPost.id}`} className="group">
                   <Card className="h-full overflow-hidden hover:shadow-md transition-all">
                     <div className="h-48 overflow-hidden">
                       <img 
