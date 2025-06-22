@@ -8,7 +8,6 @@ import TeamMemberDrawer, { TeamMember } from '../components/about/TeamMemberDraw
 import { CheckCircle, Clock, Users, Lightbulb, Target, Image } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { H1, H2, H3, H4, Paragraph, Lead } from '../components/ui/Typography';
 
 const About = () => {
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember | null>(null);
@@ -53,17 +52,28 @@ const About = () => {
     setSelectedTeamMember(member);
     setDrawerOpen(true);
   };
-  
-  return (
-    <MainLayout>
+  return <MainLayout>
+
+    {/*
+{
+    name: 'Mustafa Turab Ali',
+    role: 'Digital scaling advisor',
+    bio: 'Award-winning designer specializing in brand identity and user experience design.',
+    fullBio: "With a deep understanding of both the technical and operational aspects of scaling digital solutions, Mustafa Ali helps businesses enhance the performance, reliability, and scalability of their software products. He works closely with organizations to ensure that their digital products can seamlessly scale to meet the demands of a growing user base, all while maintaining the highest standards of quality. Whether working on large-scale systems or guiding companies through the challenges of digital transformation, Mustafa Ali ensures that businesses are equipped with the tools and strategies needed to scale effectively while maintaining a seamless user experience. His commitment to excellence and quality makes him a trusted advisor for organizations looking to accelerate their growth in the digital space.",
+    image: '/assets/imgs/Mustafa-turab-ali.jpeg',
+    linkedin: 'https://www.linkedin.com/in/mustafaturabali82/',
+    email: 'm.ali@lemonhq.co.uk'
+  }    
+    */}
       {/* Hero Section */}      
       <section className="bg-gradient-to-br from-brand-700 to-brand-600 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <H1 className="mb-6 font-thin text-slate-50">About LemonHQ</H1>
-            <Lead className="text-xl md:text-2xl mb-8 text-brand-100">
-              We have a global footprint with distributed teams across multiple regions, enabling us to seamlessly collaborate with clients anywhere in the world while providing localized expertise at scale.
-            </Lead>
+            <h1 className="mb-6 font-thin text-slate-50">About LemonHQ</h1>
+            <p className="text-xl md:text-2xl mb-8 text-brand-100">
+            We have a global footprint with distributed teams across multiple regions, enabling us to seamlessly collaborate with clients anywhere in the world while providing localized expertise at scale.
+              {/*We're a team of scaling experts enabling multi-product, multi-market enterprise brands create digital eco-system ready brands, product and customers experiences.*/}
+            </p>
           </div>
         </div>
       </section>
@@ -74,12 +84,12 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <SectionHeading title="Our Story" subtitle="Founded in 2008, LemonHQ has grown from a boutique strategic digital consultancy to an eco-system digital partner for enterprise brands worldwide looking to launch, scale and expand their digital-firt portfolios." />
-              <Paragraph className="mb-6">
+              <p className="text-gray-600 mb-6">
                 Our journey began with a simple mission: to help businesses create digital-first products that truly serve their customers' needs today and tomorrow. Over the years, we've expanded our capabilities and expertise, but that core mission remains unchanged.
-              </Paragraph>
-              <Paragraph>
+              </p>
+              <p className="text-gray-600">
                 Today, we work with leading enterprise brands across regulated sectors, bringing together strategic thinking, design excellence, and technical expertise to solve complex eco-system challenges and create exceptional digital-first experiences.
-              </Paragraph>
+              </p>
             </div>
             
             <div className="relative">
@@ -109,55 +119,55 @@ const About = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
                   <Clock className="w-10 h-10 text-brand-400 mb-4" />
-                  <H4 className="mb-2">Rapid Iteration</H4>
-                  <Paragraph className="text-sm">Fast feedback cycles for continuous improvement</Paragraph>
+                  <h3 className="font-semibold mb-2">Rapid Iteration</h3>
+                  <p className="text-gray-600 text-sm">Fast feedback cycles for continuous improvement</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
                   <Users className="w-10 h-10 text-brand-400 mb-4" />
-                  <H4 className="mb-2">User-Centered</H4>
-                  <Paragraph className="text-sm">Deep understanding of user needs drives decisions</Paragraph>
+                  <h3 className="font-semibold mb-2">User-Centered</h3>
+                  <p className="text-gray-600 text-sm">Deep understanding of user needs drives decisions</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
                   <Lightbulb className="w-10 h-10 text-brand-400 mb-4" />
-                  <H4 className="mb-2">Innovation Focus</H4>
-                  <Paragraph className="text-sm">Creative solutions to complex problems</Paragraph>
+                  <h3 className="font-semibold mb-2">Innovation Focus</h3>
+                  <p className="text-gray-600 text-sm">Creative solutions to complex problems</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
                   <Target className="w-10 h-10 text-brand-400 mb-4" />
-                  <H4 className="mb-2">Results-Driven</H4>
-                  <Paragraph className="text-sm">Clear focus on business outcomes</Paragraph>
+                  <h3 className="font-semibold mb-2">Results-Driven</h3>
+                  <p className="text-gray-600 text-sm">Clear focus on business outcomes</p>
                 </div>
               </div>
             </div>
             
             <div className="order-1 md:order-2">
-              <H3 className="text-gray-800 mb-4">A Holistic Method</H3>
-              <Paragraph className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4 text-brand-700">A Holistic Method</h3>
+              <p className="text-gray-600 mb-6">
                 Our approach integrates strategic platform thinking with human-centered design and technological expertise. We don't just focus on what's possible today; we help you build for the future while delivering immediate value.
-              </Paragraph>
+              </p>
               
               <div className="space-y-4 mb-6">
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <Paragraph>Collaborative partnership model with your team</Paragraph>
+                  <p className="text-gray-600">Collaborative partnership model with your team</p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <Paragraph>Data-backed insights that drive decisions</Paragraph>
+                  <p className="text-gray-600">Data-backed insights that drive decisions</p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <Paragraph>Multi-stage product design to reduce risk</Paragraph>
+                  <p className="text-gray-600">Multi-stage product design to reduce risk</p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-brand-400 mr-3 flex-shrink-0 mt-1" />
-                  <Paragraph>Scalable solutions designed for digital enterprise needs</Paragraph>
+                  <p className="text-gray-600">Scalable solutions designed for digital enterprise needs</p>
                 </div>
               </div>
             </div>
@@ -171,20 +181,18 @@ const About = () => {
           <SectionHeading title="Our Values" subtitle="The principles that guide our work and define our culture" centered />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+            {values.map((value, index) => <div key={index} className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
                 <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center mb-4">
                   <span className="text-brand-500 font-semibold">{index + 1}</span>
                 </div>
-                <H4 className="mb-2">{value.title}</H4>
-                <Paragraph>{value.description}</Paragraph>
-              </div>
-            ))}
+                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </div>)}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section - Unhide as requested */}
       <section className="section-padding bg-gray-50" id="team">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading title="Our Team" subtitle="Meet the scaling experts leading digitalization" centered />
@@ -204,9 +212,9 @@ const About = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <H4 className="mb-1">{member.name}</H4>
-                  <Paragraph className="text-brand-400 mb-3">{member.role}</Paragraph>
-                  <Paragraph className="text-sm">{member.bio}</Paragraph>
+                  <h3 className="font-semibold text-xl mb-1">{member.name}</h3>
+                  <p className="text-brand-400 mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               </div>
             ))}
@@ -220,12 +228,12 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeading title="Join Our Team" subtitle="We're always looking for talented individuals to help us create exceptional digital products." />
-              <Paragraph className="mb-6">
+              <p className="text-gray-600 mb-6">
                 At LemonHQ, we foster a culture of innovation, collaboration, and continuous learning. Our team members work on challenging projects for leading brands, with opportunities to grow their skills and make a real impact.
-              </Paragraph>
-              <Paragraph className="mb-6">
+              </p>
+              <p className="text-gray-600 mb-6">
                 We offer competitive compensation, flexible work arrangements, and a supportive environment where your ideas and contributions are valued.
-              </Paragraph>
+              </p>
               <Link to="/cv-submission" className="btn-primary">
                 Submit Your CV
               </Link>
@@ -233,7 +241,7 @@ const About = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-brand-100 p-6 rounded-lg">
-                <H4 className="mb-2">Benefits</H4>
+                <h4 className="font-semibold mb-2">Benefits</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-brand-400 mr-2" />
@@ -255,7 +263,7 @@ const About = () => {
               </div>
               
               <div className="bg-brand-100 p-6 rounded-lg">
-                <H4 className="mb-2">Work Culture</H4>
+                <h4 className="font-semibold mb-2">Work Culture</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-brand-400 mr-2" />
@@ -280,7 +288,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Updated to open dialog instead of navigating */}
       <CtaSection 
         title="Talk to us today to explore what's possible?" 
         subtitle="Schedule a one to one connect with our scaling expert" 
@@ -289,10 +297,8 @@ const About = () => {
         secondaryButtonLink="/contact" 
       />
 
-      {/* Team Member Drawer */}
+      {/* Team Member Drawer - Keep this for potential future use */}
       <TeamMemberDrawer member={selectedTeamMember} open={drawerOpen} onClose={() => setDrawerOpen(false)} />
-    </MainLayout>
-  );
+    </MainLayout>;
 };
-
 export default About;

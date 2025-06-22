@@ -1,123 +1,80 @@
+
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '../ui/button';
-import { H1, Paragraph } from '../ui/Typography';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/components/ui/skeleton';
 
-const SpotlightCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const SpotlightCarousel: React.FC = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
-  const slides = [
-    {
-      title: "Scale Digital-First Experiences Across Global Markets",
-      subtitle: "Enterprise brands trust us to expand their digital portfolios with confidence and precision",
-      description: "We partner with ambitious enterprise organizations to create scalable digital ecosystems that drive sustainable growth across multiple markets and product offerings.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-      cta: "Explore Our Approach",
-      ctaLink: "/about#approach"
-    },
-    {
-      title: "Transform Legacy Operations into Digital Powerhouses",
-      subtitle: "From traditional processes to cutting-edge digital experiences",
-      description: "Help established brands navigate digital transformation while maintaining operational excellence and customer trust built over decades.",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd",
-      cta: "View Case Studies",
-      ctaLink: "/case-studies"
-    },
-    {
-      title: "Co-Create the Future of Your Industry",
-      subtitle: "Innovation partnerships that redefine what's possible",
-      description: "Collaborate with our experts to identify opportunities, prototype solutions, and scale innovations that position your brand as an industry leader.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      cta: "Start Your Journey",
-      ctaLink: "/getting-started"
-    }
-  ];
-
-  const previousSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+  const content = {
+    title: "Advancing digital plays for multi-line product businesses",
+    description: "Your partner for executing digital business transformation roadmaps at scale",
+    buttonText: "Explore Our Services",
+    buttonLink: "/services",
+    secondaryButtonText: "Contact Us",
+    secondaryButtonLink: "/contact",
+    bgImage: "/assets/imgs/flying-paper-planes-hero-image.png"
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoaded(true); // Show content even if image fails
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
-      {/* Background Images */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-30' : 'opacity-0'
-          }`}
-        >
+    <section className="relative w-full h-[calc(100vh-5rem)]">
+      {/* Background Image with Progressive Loading */}
+      <div className="absolute inset-0 overflow-hidden">
+        {!imageLoaded && (
+          <Skeleton className="absolute inset-0 bg-gradient-to-br from-brand-400 to-brand-600" />
+        )}
+        {!imageError && (
           <img
-            src={slide.image}
-            alt=""
-            className="w-full h-full object-cover"
+            src={content.bgImage}
+            alt="Flying paper planes representing digital transformation"
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={handleImageLoad}
+            onError={handleImageError}
+            loading="eager"
           />
-        </div>
-      ))}
+        )}
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/70" />
+      </div>
 
-      {/* Content Overlay */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-brand-400/20 text-brand-200 rounded-full text-sm font-medium backdrop-blur-sm">
-              {slides[currentSlide].subtitle}
-            </span>
+      {/* Content */}
+      <div className="flex flex-col justify-center h-full w-full text-white px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto">
+          <div className="max-w-3xl">
+            <h1 className="mb-6 animate-fade-in font-light text-gray-50">
+              {content.title}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-brand-100 animate-slide-in">
+              {content.description}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
+              {/**
+                <Link to={content.buttonLink}>
+                  <Button className="bg-white text-brand-600 hover:bg-brand-100 py-6 px-8 text-lg">
+                    {content.buttonText}
+                  </Button>
+                </Link>
+               */}
+              <Link to={content.secondaryButtonLink}>
+                
+              </Link>
+            </div>
           </div>
-          
-          <H1 className="mb-8 text-white leading-tight">
-            {slides[currentSlide].title}
-          </H1>
-          
-          <Paragraph className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {slides[currentSlide].description}
-          </Paragraph>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-brand-400 hover:bg-brand-500">
-              <a href={slides[currentSlide].ctaLink}>
-                {slides[currentSlide].cta}
-              </a>
-            </Button>
-            
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
-              <a href="/contact">
-                Get In Touch
-              </a>
-            </Button>
-          </div>
-        </div>
-
-        {/* Navigation Controls */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
-          <button
-            onClick={previousSlide}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/40'
-                }`}
-              />
-            ))}
-          </div>
-          
-          <button
-            onClick={nextSlide}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
     </section>
