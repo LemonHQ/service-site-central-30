@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
                   <p>If you're building the next generation of digital experiences, LemonHQ is here to pilot it with you.<br>
                   <a href="https://lemonhq.co.uk/contact" target="_blank">Talk to our team today → lemonhq.co.uk/contact</a></p>
     `,
-    featuredImage: "/assets/imgs/ordering-food.png",
+    featuredImage: "/assets/imgs/ordering-food.jpg",
     date: "2024-01-15",
     publishDate: "2024-01-15",
     readTime: 5,
