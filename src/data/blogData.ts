@@ -92,9 +92,16 @@ export const blogPosts: BlogPost[] = [
     `,
     featuredImage: "/assets/imgs/ordering-food.png",
     publishDate: "2024-01-15",
+<<<<<<< HEAD
     readTime: 5,
     category: "AI",
     tags: ["AI Search", "SEO", "Strategy", "Innovation"],
+=======
+    date: "2024-01-15",
+    readTime: 8,
+    category: "Digital Strategy",
+    tags: ["Digital Transformation", "Enterprise", "Strategy", "Innovation"],
+>>>>>>> 30cc642488551f1542dbff1ed9bebf3d5559f9ae
     author: {
       name: "Mohammed Naheemuddin",
       avatar: "/assets/imgs/abdul-profile.jpg",
