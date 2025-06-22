@@ -7,11 +7,11 @@ import { Clock, ArrowRight } from 'lucide-react';
 import { BlogPost } from '@/types/blog';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-interface BlogCardProps {
+interface InsightCardProps {
   post: BlogPost;
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
+const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
   // Format date
   const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
     month: 'long',
@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const authorInitial = post.author && post.author.name ? post.author.name.charAt(0) : '?';
 
   return (
-    <Link to={`/blog/${post.id}`} className="block h-full">
+    <Link to={`/insights/${post.id}`} className="block h-full">
       <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
         <div className="relative h-48 overflow-hidden">
           <img
@@ -65,4 +65,4 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   );
 };
 
-export default BlogCard;
+export default InsightCard;
