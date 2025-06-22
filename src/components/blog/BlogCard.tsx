@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
 import { BlogPost } from '@/types/blog';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { H3, Paragraph } from '@/components/ui/Typography';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -45,8 +46,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
             </div>
           </div>
           
-          <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
+          <H3 className="mb-2">{post.title}</H3>
+          <Paragraph className="mb-4 line-clamp-2">{post.excerpt}</Paragraph>
           
           <div className="flex items-center mt-auto pt-4">
             <Avatar className="h-8 w-8 mr-3">
@@ -56,7 +57,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
             <span className="text-sm font-medium">{post.author?.name || 'Anonymous'}</span>
           </div>
           
-          <div className="flex items-center text-brand-400 hover:text-brand-500 font-medium mt-4">
+          <div className="flex items-center text-gray-700 hover:text-gray-900 font-medium mt-4">
             Read Article <ArrowRight className="ml-1 h-4 w-4" />
           </div>
         </CardContent>
