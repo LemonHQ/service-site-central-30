@@ -40,7 +40,7 @@ const CaptureAttentionHero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/approach/co-create-assessment">
-                <Button size="lg" className="bg-brand-600 hover:bg-brand-700 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="border-brand-300 text-brand-700 hover:bg-brand-50 w-full sm:w-auto">
                   Assess your ecosystem readiness <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
