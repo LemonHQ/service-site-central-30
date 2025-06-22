@@ -105,7 +105,7 @@ const CompanyOverview: React.FC = () => {
                   <Globe className="w-6 h-6 text-brand-400" />
                 </div>
                 <div> 
-                  <h4 className="font-semibold mb-1">Portfolio perspective.</h4>
+                  <h4 className="font-semibold mb-1">Portfolio perspective..</h4>
                   <p className="text-gray-600">Experience working with enterprise brands with diverse business and product lines.</p>
                 </div>
               </div>
