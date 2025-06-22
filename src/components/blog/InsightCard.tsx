@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Calendar } from 'lucide-react';
-import { BlogPost } from '@/data/blogPosts';
+import { BlogPost } from '@/data/blogData';
 
 interface InsightCardProps {
   post: BlogPost;
@@ -12,7 +12,7 @@ interface InsightCardProps {
 
 const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
   return (
-    <Link to={`/insights/${post.slug}`} className="block h-full">
+    <Link to={`/insights/${post.id}`} className="block h-full">
       <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
         <div className="h-48 bg-gray-100">
           <img 
@@ -28,7 +28,7 @@ const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
             </Badge>
             <div className="flex items-center text-gray-500 text-xs font-light">
               <Calendar className="h-3 w-3 mr-1" />
-              {new Date(post.publishedDate).toLocaleDateString()}
+              {new Date(post.publishDate).toLocaleDateString()}
             </div>
           </div>
           <h3 className="text-xl font-light text-gray-900 mb-2">{post.title}</h3>
