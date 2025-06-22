@@ -107,7 +107,7 @@ const CompanyOverview: React.FC = () => {
                 <div> 
                   <h4 className="font-semibold mb-1">Portfolio perspective</h4>
                   <p className="text-gray-600">Experience working with enterprise brands with diverse business and product lines.</p>
-                </div>
+                </div>  
               </div>
             
               <div className="flex items-center">
