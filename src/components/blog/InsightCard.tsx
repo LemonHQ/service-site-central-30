@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Calendar } from 'lucide-react';
-import { BlogPost } from '@/data/blogData';
+import { BlogPost } from '@/types/blog';
 
 interface InsightCardProps {
   post: BlogPost;
