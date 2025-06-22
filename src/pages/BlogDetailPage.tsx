@@ -1,3 +1,4 @@
+
 import React, { useMemo } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -80,13 +81,13 @@ const BlogDetailPage: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="mb-6">
-          <Link to="/insights" className="inline-flex items-center text-gray-700 hover:text-gray-900">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to insights
+          <Link to="/blog" className="inline-flex items-center text-gray-700 hover:text-gray-900">
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to blog
           </Link>
         </div>
         
         <article className="max-w-4xl mx-auto">
-          <Badge className="mb-4 bg-gray-100 text-gray-700 hover:bg-gray-200">{post.category}</Badge>
+          <Badge className="mb-4">{post.category}</Badge>
           <H1 className="mb-6">{post.title}</H1>
           
           <div className="flex items-center mb-8">
@@ -95,7 +96,7 @@ const BlogDetailPage: React.FC = () => {
               <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-medium text-gray-800">{post.author.name}</p>
+              <p className="font-medium">{post.author.name}</p>
               <p className="text-gray-600 text-sm">{post.author.role}</p>
             </div>
             <div className="ml-auto flex items-center text-gray-500 text-sm">
@@ -115,17 +116,17 @@ const BlogDetailPage: React.FC = () => {
           </div>
           
           <div 
-            className="max-w-none mb-12 [&_h1]:text-3xl [&_h1]:md:text-4xl [&_h1]:lg:text-5xl [&_h1]:font-light [&_h1]:text-gray-900 [&_h1]:leading-tight [&_h1]:tracking-tight [&_h1]:mt-8 [&_h1]:mb-6 [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:lg:text-4xl [&_h2]:font-light [&_h2]:text-gray-900 [&_h2]:leading-tight [&_h2]:tracking-tight [&_h2]:mt-8 [&_h2]:mb-6 [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-normal [&_h3]:text-gray-800 [&_h3]:leading-relaxed [&_h3]:mt-8 [&_h3]:mb-6 [&_h4]:text-lg [&_h4]:md:text-xl [&_h4]:font-normal [&_h4]:text-gray-800 [&_h4]:leading-relaxed [&_h4]:mt-8 [&_h4]:mb-6 [&_h5]:text-base [&_h5]:md:text-lg [&_h5]:font-medium [&_h5]:text-gray-700 [&_h5]:leading-relaxed [&_h5]:mt-8 [&_h5]:mb-6 [&_h6]:text-sm [&_h6]:md:text-base [&_h6]:font-medium [&_h6]:text-gray-700 [&_h6]:leading-relaxed [&_h6]:mt-8 [&_h6]:mb-6 [&_p]:text-base [&_p]:leading-7 [&_p]:text-gray-600 [&_p]:mb-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:my-6 [&_ul]:space-y-3 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:my-6 [&_ol]:space-y-3 [&_li]:pl-2 [&_li]:leading-7 [&_li]:text-gray-600 [&_a]:text-gray-700 [&_a]:hover:text-brand-400 [&_a]:transition-colors [&_a]:duration-300 [&_a]:border-b [&_a]:border-transparent [&_a]:hover:border-brand-400/30 [&_table]:border-collapse [&_table]:border [&_table]:border-gray-200 [&_table]:rounded-lg [&_table]:overflow-hidden [&_thead]:bg-gray-50 [&_th]:border [&_th]:border-gray-200 [&_th]:px-4 [&_th]:py-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-gray-700 [&_td]:border [&_td]:border-gray-200 [&_td]:px-4 [&_td]:py-3 [&_td]:text-gray-700 [&_tr:odd]:bg-white [&_tr:even]:bg-gray-50 [&_tr:hover]:bg-gray-25"
+            className="prose prose-lg max-w-none mb-12 prose-p:mb-4 prose-table:border-collapse prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-table:overflow-hidden prose-thead:bg-brand-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-brand-700 prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700 prose-tr:odd:bg-white prose-tr:even:bg-gray-50 prose-tr:hover:bg-brand-25"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           
-          <div className="border-t border-b border-gray-200 py-6 mb-12">
+          <div className="border-t border-b py-6 mb-12">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="mr-2 flex items-center text-gray-700">
+              <span className="mr-2 flex items-center">
                 <Tag className="h-4 w-4 mr-2" /> Tags:
               </span>
               {post.tags.map((tag, index) => (
-                <Badge key={index} variant="outline" className="bg-gray-100 text-gray-700 border-gray-200">
+                <Badge key={index} variant="outline" className="bg-gray-100">
                   {tag}
                 </Badge>
               ))}
@@ -190,7 +191,7 @@ const BlogDetailPage: React.FC = () => {
             <H2 className="mb-8">Related Articles</H2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Link key={relatedPost.id} to={`/insights/${relatedPost.id}`} className="group">
+                <Link key={relatedPost.id} to={`/blog/${relatedPost.id}`} className="group">
                   <Card className="h-full overflow-hidden hover:shadow-md transition-all">
                     <div className="h-48 overflow-hidden">
                       <img 
