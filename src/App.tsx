@@ -17,6 +17,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import Insights from "./pages/Insights";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import GettingStarted from "./pages/GettingStarted";
@@ -99,7 +100,7 @@ const App = () => (
             
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/insights" element={<Blog />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/insights/:postId" element={<BlogDetail />} />
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
