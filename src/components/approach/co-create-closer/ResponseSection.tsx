@@ -82,7 +82,7 @@ const ResponseSection = () => {
                 </ul>
                 
                 <Link to="/webinar-signup" className="w-full">
-                  <Button className="w-full bg-brand-600 hover:bg-brand-700">
+                  <Button variant="outline" className="w-full border-brand-200 text-brand-700 hover:bg-brand-50">
                     Learn more
                   </Button>
                 </Link>
