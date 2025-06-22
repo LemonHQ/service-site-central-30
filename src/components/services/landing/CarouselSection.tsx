@@ -61,8 +61,8 @@ function CarouselSection<T>({
               ))}
             </CarouselContent>
             <div className="flex justify-center gap-2 mt-8">
-              <CarouselPrevious className="static translate-y-0" />
-              <CarouselNext className="static translate-y-0" />
+              <CarouselPrevious className="static translate-y-0 border-gray-300 text-gray-700 hover:bg-gray-50 font-light" />
+              <CarouselNext className="static translate-y-0 border-gray-300 text-gray-700 hover:bg-gray-50 font-light" />
             </div>
           </Carousel>
         </div>
