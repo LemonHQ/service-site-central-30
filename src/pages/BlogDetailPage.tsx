@@ -13,7 +13,7 @@ import {
   HoverCardTrigger
 } from "@/components/ui/hover-card";
 import { useToast } from "@/hooks/use-toast";
-import { H3, Paragraph } from '@/components/ui/Typography';
+import { H1, H3, Paragraph } from '@/components/ui/Typography';
 
 const BlogDetailPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -87,7 +87,7 @@ const BlogDetailPage: React.FC = () => {
         
         <article className="max-w-4xl mx-auto">
           <Badge className="mb-4">{post.category}</Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
+          <H1 className="mb-6">{post.title}</H1>
           
           <div className="flex items-center mb-8">
             <Avatar className="h-12 w-12 mr-4">
