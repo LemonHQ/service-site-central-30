@@ -14,6 +14,7 @@ import {
   HoverCardTrigger
 } from "@/components/ui/hover-card";
 import { useToast } from "@/hooks/use-toast";
+import { H1, H3, H4, Paragraph } from '@/components/ui/Typography';
 
 const BlogDetail: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -87,7 +88,7 @@ const BlogDetail: React.FC = () => {
         
         <article className="max-w-4xl mx-auto">
           <Badge className="mb-4">{post.category}</Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
+          <H1 className="mb-6">{post.title}</H1>
           
           <div className="flex items-center mb-8">
             <Avatar className="h-12 w-12 mr-4">
@@ -191,12 +192,12 @@ const BlogDetail: React.FC = () => {
                   <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <h4 className="text-xl font-semibold mb-1">About {post.author.name}</h4>
+                  <H4 className="mb-1">About {post.author.name}</H4>
                   <p className="text-gray-600 mb-2">{post.author.role}</p>
-                  <p className="text-sm">
+                  <Paragraph className="text-sm mb-0">
                     Expert in digital transformation with over a decade of experience helping organizations 
                     navigate technological changes and implement innovative solutions.
-                  </p>
+                  </Paragraph>
                 </div>
               </CardContent>
             </Card>
@@ -206,7 +207,7 @@ const BlogDetail: React.FC = () => {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="max-w-6xl mx-auto mb-16">
-            <h3 className="text-2xl font-semibold mb-8">Related Articles</h3>
+            <H3 className="mb-8">Related Articles</H3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.id} to={`/blog/${relatedPost.id}`} className="group">
@@ -220,10 +221,10 @@ const BlogDetail: React.FC = () => {
                     </div>
                     <CardContent className="p-6">
                       <p className="text-sm text-gray-500 mb-2">{relatedPost.category}</p>
-                      <h4 className="font-semibold text-lg mb-2 group-hover:text-brand-400 transition-colors">
+                      <H4 className="mb-2 group-hover:text-brand-400 transition-colors">
                         {relatedPost.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm line-clamp-2">{relatedPost.excerpt}</p>
+                      </H4>
+                      <Paragraph className="text-sm line-clamp-2 mb-0">{relatedPost.excerpt}</Paragraph>
                     </CardContent>
                   </Card>
                 </Link>
@@ -234,10 +235,10 @@ const BlogDetail: React.FC = () => {
         
         {/* CTA Section */}
         <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12 max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to start your digital journey?</h3>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          <H3 className="mb-4">Ready to start your digital journey?</H3>
+          <Paragraph className="text-lg mb-6 max-w-2xl mx-auto">
             Let's discuss how our team can help you achieve your business goals through innovative digital solutions.
-          </p>
+          </Paragraph>
           <Link to="/contact">
             <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
               Contact Us
