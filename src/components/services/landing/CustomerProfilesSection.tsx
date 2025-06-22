@@ -3,7 +3,7 @@ import React from 'react';
 import { CustomerProfile } from '@/data/customerProfiles';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { H3, H4, Paragraph } from '@/components/ui/Typography';
+import { H3, H6, Paragraph } from '@/components/ui/Typography';
 
 interface CustomerProfilesSectionProps {
   profiles: CustomerProfile[];
@@ -56,7 +56,7 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                   
                   <div className="mt-4 space-y-4">
                     <div>
-                      <H4 className="text-sm font-semibold mb-2">Typical Challenges:</H4>
+                      <H6 className="mb-2">Typical Challenges:</H6>
                       <ul className="list-disc pl-6 space-y-1">
                         {profile.challenges.map((challenge, i) => (
                           <li key={i} className="text-gray-700 text-sm">{challenge}</li>
@@ -65,7 +65,7 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                     </div>
                     
                     <div>
-                      <H4 className="text-sm font-semibold mb-2">How Our Services Help:</H4>
+                      <H6 className="mb-2">How Our Services Help:</H6>
                       <Paragraph className="text-sm mb-0">{profile.serviceFit}</Paragraph>
                     </div>
                   </div>
