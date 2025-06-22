@@ -28,13 +28,13 @@ const RelatedServicesSection: React.FC<RelatedServicesSectionProps> = ({ related
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {relatedServices.map((service, index) => (
-            <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <H4 className="mb-2 text-brand-600">{service.title}</H4>
-                <Paragraph className="mb-4">{service.description}</Paragraph>
+            <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
+              <CardContent className="p-8">
+                <H4 className="mb-4 text-gray-900">{service.title}</H4>
+                <Paragraph className="mb-6 text-gray-600">{service.description}</Paragraph>
                 <Link 
                   to={service.link} 
-                  className="text-brand-500 inline-flex items-center hover:text-brand-600 font-normal"
+                  className="text-brand-600 inline-flex items-center hover:text-brand-700 font-medium transition-colors"
                 >
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
