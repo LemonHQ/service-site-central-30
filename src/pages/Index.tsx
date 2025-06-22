@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
 
-const Index = () => {
+const Index = () => { 
   return (
     <MainLayout>
       <div className="min-h-screen flex items-center justify-center bg-ivory-100">
