@@ -39,7 +39,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
   }, [benefits.length]);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-gray-50">
+    <section ref={sectionRef} className="py-16 bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Benefits"

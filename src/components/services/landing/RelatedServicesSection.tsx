@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Card, CardContent } from '@/components/ui/card';
-import { H3, Paragraph } from '@/components/ui/Typography';
 import { ArrowRight } from 'lucide-react';
 
 interface RelatedService {
@@ -18,7 +17,7 @@ interface RelatedServicesSectionProps {
 
 const RelatedServicesSection: React.FC<RelatedServicesSectionProps> = ({ relatedServices }) => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Related Services"
@@ -30,8 +29,8 @@ const RelatedServicesSection: React.FC<RelatedServicesSectionProps> = ({ related
           {relatedServices.map((service, index) => (
             <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                <H3 className="mb-2 text-brand-600">{service.title}</H3>
-                <Paragraph className="text-gray-600 mb-4">{service.description}</Paragraph>
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
                 <Link 
                   to={service.link} 
                   className="text-brand-500 inline-flex items-center hover:text-brand-600"

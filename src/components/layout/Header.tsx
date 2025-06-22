@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X } from "lucide-react";
@@ -87,7 +86,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-white border-b border-gray-100 z-50">
+    <header className="sticky top-0 bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -110,7 +109,7 @@ const Header = () => {
           <div className="md:hidden flex items-center gap-4">
             {/* <ThemeToggle /> */}
             <button 
-              className="text-gray-600 hover:text-brand-400"
+              className="text-gray-600 hover:text-brand-400 dark:text-gray-300 dark:hover:text-brand-300"
               onClick={toggleMenu}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

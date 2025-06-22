@@ -2,7 +2,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { H3, Paragraph } from '@/components/ui/Typography';
 import { LucideIcon } from 'lucide-react';
 
 export interface ServiceFeature {
@@ -36,8 +35,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 {feature.icon && <feature.icon className="h-10 w-10 text-brand-400 mb-4" />}
-                <H3 className="mb-2 text-brand-600">{feature.title}</H3>
-                <Paragraph className="text-gray-600">{feature.description}</Paragraph>
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
