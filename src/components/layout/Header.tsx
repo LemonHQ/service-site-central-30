@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X } from "lucide-react";
@@ -86,7 +87,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 z-50">
+    <header className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
