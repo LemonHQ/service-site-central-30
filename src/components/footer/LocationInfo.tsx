@@ -2,6 +2,7 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { H4, Paragraph } from '@/components/ui/Typography';
 
 interface LocationInfoProps {
   title: string;
@@ -12,9 +13,9 @@ interface LocationInfoProps {
 const LocationInfo: React.FC<LocationInfoProps> = ({ title, addressLines, mapUrl }) => {
   return (
     <div>
-      <h4 className="text-lg font-semibold mb-2 text-brand-600">{title}</h4>
+      <H4 className="mb-2 text-brand-600">{title}</H4>
       {addressLines.map((line, index) => (
-        <p key={index} className="text-gray-600">{line}</p>
+        <Paragraph key={index} className="mb-0 text-gray-600">{line}</Paragraph>
       ))}
       <div className="mt-3">
         <Button 

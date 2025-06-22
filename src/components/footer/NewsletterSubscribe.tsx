@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from '@/components/ui/sonner';
 import { Checkbox } from '@/components/ui/checkbox';
+import { H4, Paragraph } from '@/components/ui/Typography';
 import PrivacyNotice from '@/components/privacy/PrivacyNotice';
 
 const NewsletterSubscribe: React.FC = () => {
@@ -63,10 +64,10 @@ const NewsletterSubscribe: React.FC = () => {
 
   return (
     <div>
-      <h4 className="text-lg font-semibold mb-4 text-brand-600">Subscribe to our newsletter</h4>
-      <p className="text-gray-600 mb-4">
+      <H4 className="mb-4 text-brand-600">Subscribe to our newsletter</H4>
+      <Paragraph className="mb-4">
         Our bi-weekly newsletter delivers serverless, AI, tech trends, podcasts and blogs straight to your inbox.
-      </p>
+      </Paragraph>
       
       <form onSubmit={handleSubscribe} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-2">
@@ -104,11 +105,11 @@ const NewsletterSubscribe: React.FC = () => {
 
         {/* Compact Privacy Notice for Newsletter */}
         <div className="bg-gray-50 border border-gray-200 rounded p-3 text-xs text-gray-600">
-          <p>
+          <Paragraph className="mb-0 text-xs">
             We process your email to send newsletters and marketing communications. 
             Data retained for 3 years or until unsubscribed. 
             Contact <a href="mailto:privacy@lemonhq.co.uk" className="text-brand-600 hover:underline">privacy@lemonhq.co.uk</a> for data queries.
-          </p>
+          </Paragraph>
         </div>
       </form>
       

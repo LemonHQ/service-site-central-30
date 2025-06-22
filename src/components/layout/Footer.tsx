@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { H4 } from '@/components/ui/Typography';
 import FooterLinks from '../footer/FooterLinks';
 import SocialLinks from '../footer/SocialLinks';
 import LocationInfo from '../footer/LocationInfo';

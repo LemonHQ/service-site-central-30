@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react'; // Added CheckCircle import
+import { CheckCircle } from 'lucide-react';
+import { H4, Paragraph } from '@/components/ui/Typography';
 
 interface LinkItem {
   name: string;
@@ -17,7 +18,7 @@ interface FooterLinksProps {
 const FooterLinks: React.FC<FooterLinksProps> = ({ title, links, showIcon = false }) => {
   return (
     <div>
-      <h4 className="text-lg font-semibold mb-6 text-brand-600">{title}</h4>
+      <H4 className="mb-6 text-brand-600">{title}</H4>
       <ul className="space-y-3">
         {links.map((link) => (
           <li key={link.name} className="flex items-center">

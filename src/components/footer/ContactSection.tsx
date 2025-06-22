@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import { Mail, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { H4 } from '@/components/ui/Typography';
 
 const ContactSection: React.FC = () => {
   return (
     <div className="mt-6 space-y-3">
-      <h4 className="text-lg font-semibold text-brand-600">Get in Touch</h4>
+      <H4 className="text-brand-600">Get in Touch</H4>
       <div className="flex items-center">
         <Mail size={16} className="mr-2 text-brand-500" />
         <a href="mailto:create@lemonhq.co.uk" className="text-brand-500 hover:underline">
