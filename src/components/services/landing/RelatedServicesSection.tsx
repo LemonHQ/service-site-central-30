@@ -17,7 +17,7 @@ interface RelatedServicesSectionProps {
 
 const RelatedServicesSection: React.FC<RelatedServicesSectionProps> = ({ relatedServices }) => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-beige-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Related Services"
@@ -29,11 +29,11 @@ const RelatedServicesSection: React.FC<RelatedServicesSectionProps> = ({ related
           {relatedServices.map((service, index) => (
             <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                <h3 className="text-xl font-light text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4 font-light">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-brand-600">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
                 <Link 
                   to={service.link} 
-                  className="text-gray-700 hover:text-gray-900 inline-flex items-center font-light transition-colors"
+                  className="text-brand-500 inline-flex items-center hover:text-brand-600"
                 >
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

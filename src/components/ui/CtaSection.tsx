@@ -25,15 +25,15 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   const [bookingDialogOpen, setBookingDialogOpen] = useState(false);
   
   return (
-    <section className="bg-gray-100 py-16 md:py-24">
+    <section className="bg-beige-200 py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-6 text-gray-900">{title}</h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light mb-8">{subtitle}</p>
+          <p className="text-lg md:text-xl text-gray-600 font-light">{subtitle}</p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              className="bg-gray-700 hover:bg-gray-800 text-white py-6 px-8 text-lg font-light"
+              className="bg-accent-400 hover:bg-accent-500 text-white py-6 px-8 text-lg"
               onClick={() => setBookingDialogOpen(true)}
             >
               {buttonText}
@@ -41,7 +41,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({
             
             {secondaryButtonText && secondaryButtonLink && (
               <Link to={secondaryButtonLink}>
-                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 py-6 px-8 text-lg font-light">
+                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 py-6 px-8 text-lg">
                   {secondaryButtonText}
                 </Button>
               </Link>
@@ -54,7 +54,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({
       <Dialog open={bookingDialogOpen} onOpenChange={setBookingDialogOpen}>
         <DialogContent className="sm:max-w-[975px]">
           <DialogHeader>
-            <DialogTitle className="font-light">Schedule a Meeting</DialogTitle>
+            <DialogTitle>Schedule a Meeting</DialogTitle>
           </DialogHeader>
           <div className="flex justify-center py-4" id="calendar-container">
             <iframe 
