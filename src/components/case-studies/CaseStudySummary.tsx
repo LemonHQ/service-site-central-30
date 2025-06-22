@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Building, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CaseStudy } from '@/data/caseStudies';
-import { H1, Paragraph } from '@/components/ui/Typography';
 
 interface CaseStudySummaryProps {
   caseStudy: CaseStudy;
@@ -22,20 +21,20 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
   return (
     <>
       <div className="mb-6">
-        <Link to="/case-studies" className="inline-flex items-center text-gray-700 hover:text-gray-900">
+        <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
         </Link>
       </div>
       
       <div className="flex flex-col md:flex-row md:gap-8 mb-10">
         <div className="md:w-2/3 mb-6 md:mb-0">
-          <Badge className="mb-4 bg-gray-100 text-gray-800 hover:bg-gray-200">{caseStudy.industry}</Badge>
-          <H1 className="mb-4">{caseStudy.title}</H1>
-          <Paragraph className="text-xl mb-6">{caseStudy.summary}</Paragraph>
+          <Badge className="mb-4">{caseStudy.industry}</Badge>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{caseStudy.title}</h1>
+          <p className="text-xl text-gray-600 mb-6">{caseStudy.summary}</p>
           
           <div className="flex flex-wrap gap-2 mb-6">
             {caseStudy.services.map((service, index) => (
-              <Badge key={index} variant="secondary" className="text-xs bg-gray-100 text-gray-700 hover:bg-gray-200">
+              <Badge key={index} variant="secondary" className="text-xs">
                 {service}
               </Badge>
             ))}
@@ -46,18 +45,18 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
           <Card>
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Building className="h-5 w-5 text-gray-600 flex-shrink-0" />
+                <Building className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-gray-500">Client</h4>
-                  <p className="font-medium text-gray-800">{caseStudy.client}</p>
+                  <p className="font-medium">{caseStudy.client}</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-3 mb-4">
-                <Calendar className="h-5 w-5 text-gray-600 flex-shrink-0" />
+                <Calendar className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
                   <h4 className="font-medium text-gray-500">Completed</h4>
-                  <p className="font-medium text-gray-800">{formattedDate}</p>
+                  <p className="font-medium">{formattedDate}</p>
                 </div>
               </div>
             </CardContent>
