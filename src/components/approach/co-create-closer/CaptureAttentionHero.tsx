@@ -26,15 +26,15 @@ const CaptureAttentionHero = () => {
             <H1>Build thriving <span className="text-brand-500">digital ecosystems</span></H1>
             
             <div className="flex items-center gap-3 bg-brand-50 p-3 rounded-md border border-brand-100">
-              <span className="text-3xl font-bold text-brand-600">82%</span>
-              <Paragraph className="text-brand-600">of high-growth companies attribute success to digital ecosystem participation</Paragraph>
+              <span className="text-3xl font-light text-brand-600">82%</span>
+              <Paragraph className="text-brand-600 mb-0">of high-growth companies attribute success to digital ecosystem participation</Paragraph>
             </div>
             
-            <Lead className="text-brand-700 font-semibold">
+            <Lead className="text-brand-700">
               Co-Create: The framework that transforms siloed initiatives into connected ecosystem platforms
             </Lead>
             
-            <Paragraph className="mb-8">
+            <Paragraph>
                In today's fast-moving markets, enterprise brands can no longer rely on one-size-fits-all initiatives. To stay competitive, brands must unbundle traditional offerings and deliver targeted, use case–driven packages that resonate with specific segments extending reach, and creating value that isolated products simply cannot match.
             </Paragraph>
             
