@@ -89,7 +89,7 @@ const RapidInnovationResponseSection = () => {
                 </ul>
                 
                 <Link to="/co-innovate-webinar" className="w-full">
-                  <Button className="w-full bg-brand-600 hover:bg-brand-700">
+                  <Button variant="outline" className="w-full border-brand-300 text-brand-700 hover:bg-brand-50">
                     Sign Up For The Session
                   </Button>
                 </Link>
