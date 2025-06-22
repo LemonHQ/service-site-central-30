@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -115,7 +114,7 @@ const BlogDetailPage: React.FC = () => {
           </div>
           
           <div 
-            className="prose prose-lg max-w-none mb-12"
+            className="prose prose-lg max-w-none mb-12 prose-p:mb-4 prose-table:border-collapse prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-table:overflow-hidden prose-thead:bg-brand-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-brand-700 prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700 prose-tr:odd:bg-white prose-tr:even:bg-gray-50 prose-tr:hover:bg-brand-25"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           
