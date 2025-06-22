@@ -14,7 +14,7 @@ const ResponseSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-white text-brand-700 px-4 py-1 rounded-full mb-4">
-              <Paragraph className="text-sm mb-0">Ready to build your ecosystem strategy?</Paragraph>
+              <Paragraph className="mb-0">Ready to build your ecosystem strategy?</Paragraph>
             </div>
             <H2 className="mb-6 text-white">Take the First Step Towards Ecosystem Success</H2>
             <Paragraph className="text-white/90">
@@ -36,11 +36,11 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">1-minute ecosystem readiness assessment</Paragraph>
+                    <Paragraph className="mb-0">1-minute ecosystem readiness assessment</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">Ecosystem report</Paragraph>
+                    <Paragraph className="mb-0">Ecosystem report</Paragraph>
                   </li>
                 </ul>
                 
@@ -65,19 +65,19 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">30-minute ecosystem session with expert</Paragraph>
+                    <Paragraph className="mb-0">30-minute ecosystem session with expert</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">Why ecosystems now?</Paragraph>
+                    <Paragraph className="mb-0">Why ecosystems now?</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">How they create value?</Paragraph>
+                    <Paragraph className="mb-0">How they create value?</Paragraph>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">How can you gain a competitive edge?</Paragraph>
+                    <Paragraph className="mb-0">How can you gain a competitive edge?</Paragraph>
                   </li>
                 </ul>
                 
@@ -102,7 +102,7 @@ const ResponseSection = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <Paragraph className="text-sm mb-0">Digital ecosystem case studies</Paragraph>
+                    <Paragraph className="mb-0">Digital ecosystem case studies</Paragraph>
                   </li>
                 </ul>
                 
