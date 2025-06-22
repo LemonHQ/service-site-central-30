@@ -24,7 +24,7 @@ const RapidIterationHero = () => {
             
             <div className="flex items-center gap-3 bg-brand-50 p-3 rounded-md border border-brand-100">
               <span className="text-3xl font-bold text-brand-600">5x</span>
-              <Paragraph className="text-brand-700">faster time-to-market through rapid iteration methodology</Paragraph>
+              <Paragraph className="text-brand-700 mb-0">faster time-to-market through rapid iteration methodology</Paragraph>
             </div>
             
             <Lead className="text-brand-700 font-semibold">
@@ -57,15 +57,15 @@ const RapidIterationHero = () => {
           
           <div className="relative">
             <div className="absolute -top-6 -left-6 bg-white p-3 rounded-lg shadow-lg z-10 max-w-[180px]">
-              <p className="text-xs font-medium text-brand-500">Traditional Approach</p>
-              <p className="text-sm">High financial exposure</p>
-              <p className="text-sm">Significant brand risk</p>
+              <Paragraph className="text-xs font-medium text-brand-500 mb-1">Traditional Approach</Paragraph>
+              <Paragraph className="text-sm mb-1">High financial exposure</Paragraph>
+              <Paragraph className="text-sm mb-0">Significant brand risk</Paragraph>
             </div>
             
             <div className="absolute -bottom-6 -right-6 bg-brand-500 p-3 rounded-lg shadow-lg z-10 max-w-[180px]">
-              <p className="text-xs font-medium text-white">Rapid Iteration</p>
-              <p className="text-sm text-white">Limited exposure</p>
-              <p className="text-sm text-white">Accelerated learning</p>
+              <Paragraph className="text-xs font-medium text-white mb-1">Rapid Iteration</Paragraph>
+              <Paragraph className="text-sm text-white mb-1">Limited exposure</Paragraph>
+              <Paragraph className="text-sm text-white mb-0">Accelerated learning</Paragraph>
             </div>
             
             <img 
