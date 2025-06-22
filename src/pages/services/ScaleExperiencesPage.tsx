@@ -14,7 +14,7 @@ const ScaleExperiencesPage = () => {
   return (
     <ServiceLandingTemplate
       title="Scale Digital Experiences"
-      subtitle="Deliver unified, high-quality digital experiences—at enterprise scale"
+      subtitle="Deliver unified, high-quality digital experiences—at enterprise scale."
       description="We partner with leading enteprises to replace fragmented, inconsistent digital delivery with a scalable foundation that supports multiple brands, markets, and products—without sacrificing speed, flexibility, or experience quality."
       ctaText="Scale Your Digital Presence"
       ctaLink="/lead-qualification"
