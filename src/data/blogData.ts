@@ -20,8 +20,8 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "traditional-vs-ai-search",
-    title: "Traditional vs AI search",
-    excerpt: "An analysis of how brands and products are being percieved by the new content consumer - AI",
+    title: "An analysis of how brands and products are being percieved by the new content consumer - AI",
+    excerpt: "Exploring emerging trends and technologies shaping the next decade of enterprise digital transformation.",
     content: `    <h1>AI Search is Rewriting the Web: From Keywords to Contextual Intelligence</h1>
 
                   <p>For decades, search engines operated on a simple principle: match the words in your query to the words in a document. From Boolean logic to algorithms like TF-IDF (Term Frequency-Inverse Document Frequency) and Google's game-changing PageRank, the early web thrived on keyword optimization. But traditional keyword search, no matter how refined, has fundamental blind spots. It can't discern user intent, handle synonyms effectively, or understand context. When someone searches for "Apple," does that mean the fruit or the tech company?</p>

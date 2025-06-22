@@ -1,7 +1,7 @@
 
 import React, { useMemo } from 'react';
 import { blogPosts } from '@/data/blogPosts';
-import InsightCard from '@/components/blog/InsightCard';
+import BlogCard from '@/components/blog/BlogCard';
 import CarouselSection from './CarouselSection';
 import { shuffleArray } from '@/lib/utils';
 
@@ -18,7 +18,7 @@ const InsightsCarousel: React.FC<InsightsCarouselProps> = ({ limit = 6 }) => {
       title="Insights"
       subtitle="Latest thinking on digital transformation"
       items={shuffledBlogPosts}
-      renderItem={(post) => <InsightCard post={post} />}
+      renderItem={(post) => <BlogCard post={post} />}
       bgColor="bg-gray-50"
       limit={limit}
       autoplay={true}
