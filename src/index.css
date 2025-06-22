@@ -1,4 +1,3 @@
-
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap');
 
@@ -13,22 +12,22 @@
   }
 
   :root {
-    --background: 43 40% 98%; /* Lighter ivory background */
+    --background: 43 40% 96%; /* Ivory background */
     --foreground: 222 14% 18%;
 
-    --card: 0 0% 100%; /* Pure white cards */
+    --card: 43 30% 96%; /* Light beige card */
     --card-foreground: 222 14% 18%;
 
-    --popover: 0 0% 100%; /* Pure white popover */
+    --popover: 43 30% 96%; /* Light beige popover */
     --popover-foreground: 222 14% 18%;
 
     --primary: 270 33% 46%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 14% 96%;
+    --secondary: 186 51% 52%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 220 14% 96%; /* Light gray muted */
+    --muted: 43 20% 94%; /* Beige muted */
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 12 99% 69%;
@@ -37,19 +36,19 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%; /* Light gray border */
-    --input: 220 13% 91%; /* Light gray input */
+    --border: 43 25% 90%; /* Beige border */
+    --input: 43 25% 90%; /* Beige input */
     --ring: 270 33% 46%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 100%; /* White sidebar */
+    --sidebar-background: 43 40% 95%; /* Ivory sidebar */
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 220 14% 96%; /* Light gray sidebar accent */
+    --sidebar-accent: 43 15% 93%; /* Beige sidebar accent */
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%; /* Light gray sidebar border */
+    --sidebar-border: 43 15% 88%; /* Beige sidebar border */
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -102,80 +101,75 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Standardized heading styles with lighter weights and neutral colors */
+  /* Standardized heading styles with consistent font weights and sizes */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight mt-8 mb-6;
+    @apply font-display tracking-tight mt-6 mb-4;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 leading-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-700;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 leading-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium text-brand-600;
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-normal text-gray-800 leading-relaxed;
+    @apply text-xl md:text-2xl font-medium text-brand-500;
   }
 
   h4 {
-    @apply text-lg md:text-xl font-normal text-gray-800 leading-relaxed;
+    @apply text-lg md:text-xl font-medium text-brand-500;
   }
 
   h5 {
-    @apply text-base md:text-lg font-medium text-gray-700 leading-relaxed;
+    @apply text-base md:text-lg font-medium text-accent-600;
   }
 
   h6 {
-    @apply text-sm md:text-base font-medium text-gray-700 leading-relaxed;
+    @apply text-sm md:text-base font-medium text-accent-500;
   }
 
-  /* Subtle link styles */
+  /* Link styles - adding on-brand styling */
   a {
-    @apply text-gray-700 hover:text-brand-400 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
+    @apply text-brand-400 hover:text-brand-500 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
   }
 
-  /* List styles with better spacing */
+  /* List styles */
   ul {
-    @apply list-disc pl-6 my-6 space-y-3;
+    @apply list-disc pl-6 my-4 space-y-2;
   }
 
   ol {
-    @apply list-decimal pl-6 my-6 space-y-3;
+    @apply list-decimal pl-6 my-4 space-y-2;
   }
 
   li {
-    @apply pl-2 leading-7 text-gray-600;
+    @apply pl-2;
   }
 
   /* Nested lists */
   ul ul, ol ol, ul ol, ol ul {
-    @apply my-3;
-  }
-
-  /* Paragraphs with better spacing */
-  p {
-    @apply leading-7 text-gray-600 mb-6;
+    @apply my-2;
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-20;
   }
 }
 
-/* Custom styles with more neutral approach */
+/* Custom styles */
 @layer components {
   .btn-primary {
-    @apply bg-brand-400 hover:bg-brand-500 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-accent-400 hover:bg-accent-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-6 border border-gray-200 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-beige-100 hover:bg-beige-200 text-brand-600 font-semibold py-3 px-6 border border-brand-200 rounded-lg transition-colors duration-300 inline-block;
   }
 
   .btn-outline {
-    @apply bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
+    @apply bg-transparent border border-brand-400 text-brand-400 hover:bg-beige-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300 inline-block;
   }
 
   .card-hover {
@@ -183,38 +177,38 @@
   }
 
   .nav-link {
-    @apply text-gray-600 hover:text-gray-900 transition-colors duration-300 border-b-0;
+    @apply text-gray-600 hover:text-brand-400 transition-colors duration-300 border-b-0;
   }
 
   .active-nav-link {
-    @apply text-gray-900 font-medium border-b-0;
+    @apply text-brand-400 font-medium border-b-0;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent;
   }
   
-  /* Subtle link styles */
+  /* New link styles */
   .link {
-    @apply text-gray-700 hover:text-brand-400 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
+    @apply text-brand-400 hover:text-brand-500 transition-colors duration-300 border-b border-transparent hover:border-brand-400/30;
   }
   
   .link-accent {
-    @apply text-brand-400 hover:text-brand-500 transition-colors duration-300 font-medium border-b-0;
+    @apply text-accent-400 hover:text-accent-500 transition-colors duration-300 font-medium border-b-0;
   }
   
   .link-subtle {
-    @apply text-gray-500 hover:text-gray-700 transition-colors duration-300 border-b-0;
+    @apply text-gray-500 hover:text-brand-400 transition-colors duration-300 border-b-0;
   }
   
   .link-nav {
-    @apply text-gray-600 hover:text-gray-900 transition-colors duration-300 border-b-0;
+    @apply text-gray-600 hover:text-brand-400 transition-colors duration-300 border-b-0;
   }
   
-  /* Prose content with neutral styling */
+  /* Prose content links styling */
   .prose {
-    @apply [&_a]:text-gray-700 [&_a]:transition-colors [&_a]:duration-300 [&_a]:border-b 
-           [&_a]:border-gray-300 [&_a:hover]:text-brand-400 [&_a:hover]:border-brand-400;
+    @apply [&_a]:text-brand-400 [&_a]:transition-colors [&_a]:duration-300 [&_a]:border-b 
+           [&_a]:border-brand-400/30 [&_a:hover]:text-brand-500 [&_a:hover]:border-brand-500;
   }
 
   /* Theme toggle specific styles */

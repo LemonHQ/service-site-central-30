@@ -13,8 +13,8 @@ const Services = () => {
       <section className="bg-brand-50 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-light mb-6 text-gray-900">Our Services</h1>
-            <p className="text-xl mb-8 text-gray-700 font-light leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Services</h1>
+            <p className="text-xl mb-8 text-gray-700">
               We offer a comprehensive suite of digital product services to help enterprises 
               validate, design, launch, and scale products that drive business growth.
             </p>
@@ -56,12 +56,12 @@ const Services = () => {
                       {Icon && <Icon className="h-6 w-6 text-brand-600" />}
                     </div>
                     
-                    <h2 className="text-3xl font-light mb-4 text-gray-900">{service.title}</h2>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                    <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
                     
                     {relatedSubServices.length > 0 && (
                       <div className="mb-6">
-                        <h4 className="font-medium mb-3 text-gray-700">Specialized Services:</h4>
+                        <h4 className="font-medium mb-3">Specialized Services:</h4>
                         <ul className="space-y-2">
                           {relatedSubServices.map((subService) => (
                             <li key={subService.id}>
@@ -97,8 +97,8 @@ const Services = () => {
       <section className="py-16 md:py-24 bg-brand-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light mb-6">Ready to transform your digital experience?</h2>
-            <p className="text-xl mb-8 text-brand-100 font-light leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your digital experience?</h2>
+            <p className="text-xl mb-8 text-brand-100">
               Let's discuss how our services can help your organization achieve its goals.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

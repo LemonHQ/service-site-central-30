@@ -25,8 +25,8 @@ const Insights = () => {
     <MainLayout pageTitle="Insights">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-light mb-4 text-gray-900">Insights</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+          <h1 className="text-4xl font-bold mb-4">Insights</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Expert perspectives on digital transformation, product strategy, and technological innovation.
           </p>
         </div>
@@ -50,7 +50,7 @@ const Insights = () => {
 
         {filteredPosts.length === 0 ? (
           <div className="text-center py-16">
-            <h3 className="text-2xl font-normal text-gray-800">No articles found</h3>
+            <h3 className="text-2xl font-semibold text-gray-700">No articles found</h3>
             <p className="text-gray-500 mt-2">Try selecting a different category</p>
           </div>
         ) : (

@@ -63,48 +63,50 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Refined brand colors - more strategic usage
+				// Custom colors based on the provided image
 				"brand": {
-					25: "#FDFBFF", // Lightest brand tint
-					50: "#F8F4FD", // Very light brand background
-					100: "#F0E8FA", // Light brand background
-					200: "#E1D1F5", // Lighter brand
-					300: "#C4A3E8", // Medium light brand
-					400: "#6F4E9C", // Primary brand (unchanged)
-					500: "#5D4084", // Darker brand
-					600: "#4A3267", // Deep brand
+					100: "#F4F1F8", // Light purple background
+					200: "#E6D8F0", // Light purple
+					300: "#9B7DC7", // Medium purple
+					400: "#6F4E9C", // Primary purple (from logo)
+					500: "#5D4084", // Darker purple
+					600: "#4A3267", // Deep purple
 					700: "#292B32", // Near black
 				},
 				"accent": {
-					50: "#FFF7F4", // Very light coral
 					100: "#FEE8E1", // Light coral
 					200: "#FBD0C4", // Lighter coral
 					300: "#F8A78B", // Medium coral
-					400: "#FF7E5F", // Primary coral/orange (unchanged)
+					400: "#FF7E5F", // Primary coral/orange (from buttons)
 					500: "#E65F42", // Darker coral
 					600: "#D4452B", // Deep coral
 				},
 				"teal": {
-					50: "#F0FCFC", // Very light teal
 					100: "#E0F3F5", // Light teal
 					200: "#C2E7EB", // Lighter teal
 					300: "#85CED7", // Medium teal
-					400: "#3CADA0", // Primary teal (unchanged)
+					400: "#3CADA0", // Primary teal (from image)
 					500: "#2A8F86", // Darker teal
 					600: "#1F6F69", // Deep teal
 				},
-				// Neutral grays - main text colors
-				"gray": {
-					50: "#FAFAFA", // Lightest gray
-					100: "#F5F5F5", // Very light gray
-					200: "#E5E5E5", // Light gray
-					300: "#D4D4D4", // Medium light gray
-					400: "#A3A3A3", // Medium gray
-					500: "#737373", // Standard gray
-					600: "#525252", // Darker gray - body text
-					700: "#404040", // Dark gray - headings
-					800: "#262626", // Very dark gray
-					900: "#171717", // Near black - main headings
+				// Adding beige and ivory colors
+				"beige": {
+					50: "#FDFBF7", // Lightest beige, almost white
+					100: "#F5F0E6", // Very light beige
+					200: "#EDE5D4", // Light beige
+					300: "#E6DBB9", // Medium light beige
+					400: "#D6C6A5", // Medium beige
+					500: "#CABDA0", // Standard beige
+					600: "#B6A889", // Darker beige
+					700: "#A89878", // Deep beige
+				},
+				"ivory": {
+					50: "#FFFFF8", // Brightest ivory
+					100: "#FFFDF5", // Very light ivory
+					200: "#FFFAEB", // Light ivory
+					300: "#FFF8E1", // Standard ivory
+					400: "#FFF2D7", // Medium ivory
+					500: "#FFEBC4", // Deeper ivory
 				}
 			},
 			borderRadius: {
@@ -157,13 +159,6 @@ export default {
 			fontFamily: {
 				sans: ['Inter var', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif']
-			},
-			fontWeight: {
-				'light': '300',
-				'normal': '400',
-				'medium': '500',
-				'semibold': '600',
-				'bold': '700',
 			}
 		}
 	},

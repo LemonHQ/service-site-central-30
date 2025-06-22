@@ -14,8 +14,8 @@ const Contact = () => {
       <section className="bg-brand-100 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-light mb-6 text-gray-900">Contact Us</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700 font-light leading-relaxed">
+            <h1 className="mb-6 text-brand-700">Contact Us</h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-700">
               Let's discuss how we can help transform your digital product strategy.
             </p>
           </div>
@@ -28,8 +28,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Contact Information */}
             <div className="lg:col-span-4">
-              <h2 className="text-2xl font-normal mb-6 text-gray-800">Get in Touch</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <h2 className="text-2xl font-semibold mb-6 text-brand-700">Get in Touch</h2>
+              <p className="text-gray-600 mb-8">
                 Have a question about our services or want to discuss a potential project? Reach out to us using the contact information below or fill out the form.
               </p>
               
@@ -39,7 +39,7 @@ const Contact = () => {
                     <Mail className="w-5 h-5 text-brand-500" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1 text-gray-700">Email</h4>
+                    <h4 className="font-semibold mb-1">Email</h4>
                     <a href="mailto:create@lemonhq.co.uk" className="text-brand-400 hover:text-brand-500">
                       create@lemonhq.co.uk
                     </a>
@@ -51,7 +51,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-brand-500" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1 text-gray-700">UK & Europe</h4>
+                    <h4 className="font-semibold mb-1">UK & Europe</h4>
                     <address className="not-italic text-gray-600">
                       Lemon Marketing & Consultancy Ltd, <br />
                       128, City Road, London,England, EC1V 2NX
@@ -64,7 +64,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-brand-500" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1 text-gray-700">Middle East</h4>
+                    <h4 className="font-semibold mb-1">Middle East</h4>
                     <address className="not-italic text-gray-600">
                       Lemon Adv, & Pub. LLC<br />
                       Damas 14 Office Tower, Suite #1948<br />

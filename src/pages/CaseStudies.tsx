@@ -28,8 +28,8 @@ const CaseStudies: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-light mb-4 text-gray-900">Case Studies</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Case Studies</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore how we've helped organizations across industries transform their digital capabilities and achieve remarkable results.
           </p>
         </div>
@@ -52,7 +52,7 @@ const CaseStudies: React.FC = () => {
         
         {filteredCaseStudies.length === 0 ? (
           <div className="text-center py-16">
-            <h3 className="text-2xl font-normal text-gray-800">No case studies found</h3>
+            <h3 className="text-2xl font-semibold text-gray-700">No case studies found</h3>
             <p className="text-gray-500 mt-2">Try adjusting your filter criteria</p>
           </div>
         ) : (

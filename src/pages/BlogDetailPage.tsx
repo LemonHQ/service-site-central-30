@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import MainLayout from '@/components/layout/MainLayout';
@@ -87,7 +86,7 @@ const BlogDetailPage: React.FC = () => {
         
         <article className="max-w-4xl mx-auto">
           <Badge className="mb-4">{post.category}</Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 text-gray-900">{post.title}</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
           
           <div className="flex items-center mb-8">
             <Avatar className="h-12 w-12 mr-4">
@@ -95,7 +94,7 @@ const BlogDetailPage: React.FC = () => {
               <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-medium text-gray-800">{post.author.name}</p>
+              <p className="font-medium">{post.author.name}</p>
               <p className="text-gray-600 text-sm">{post.author.role}</p>
             </div>
             <div className="ml-auto flex items-center text-gray-500 text-sm">
@@ -187,7 +186,7 @@ const BlogDetailPage: React.FC = () => {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="max-w-6xl mx-auto mb-16">
-            <h3 className="text-2xl font-normal mb-8 text-gray-800">Related Articles</h3>
+            <h3 className="text-2xl font-semibold mb-8">Related Articles</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.id} to={`/blog/${relatedPost.id}`} className="group">
@@ -201,7 +200,7 @@ const BlogDetailPage: React.FC = () => {
                     </div>
                     <CardContent className="p-6">
                       <p className="text-sm text-gray-500 mb-2">{relatedPost.category}</p>
-                      <h4 className="font-medium text-lg mb-2 group-hover:text-brand-400 transition-colors text-gray-800">
+                      <h4 className="font-semibold text-lg mb-2 group-hover:text-brand-400 transition-colors">
                         {relatedPost.title}
                       </h4>
                       <p className="text-gray-600 text-sm line-clamp-2">{relatedPost.excerpt}</p>
@@ -215,7 +214,7 @@ const BlogDetailPage: React.FC = () => {
         
         {/* CTA Section */}
         <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12 max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-normal mb-4 text-gray-800">Ready to start your digital journey?</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to start your digital journey?</h3>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             Let's discuss how our team can help you achieve your business goals through innovative digital solutions.
           </p>
