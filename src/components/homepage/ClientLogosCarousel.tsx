@@ -87,8 +87,8 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
     <section className="py-12 bg-beige-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-display font-light text-brand-600 mb-2">{title}</h2>
-          {subtitle && <p className="text-gray-600">{subtitle}</p>}
+          <h2 className="text-3xl font-light text-gray-900 mb-2">{title}</h2>
+          {subtitle && <p className="text-gray-600 font-light">{subtitle}</p>}
         </div>
         <Carousel 
           opts={{

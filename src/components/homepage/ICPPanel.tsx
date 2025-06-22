@@ -27,13 +27,13 @@ const ICPProfile: React.FC<ICPProfileProps> = ({ icon, title, description, benef
           <div className={`${color} rounded-full p-4 mb-4`}>
             {icon}
           </div>
-          <h3 className="text-xl font-semibold mb-3 text-brand-600">{title}</h3>
-          <p className="text-gray-600 mb-4">{description}</p>
+          <h3 className="text-xl font-normal mb-3 text-gray-800">{title}</h3>
+          <p className="text-gray-600 mb-4 font-light">{description}</p>
           <ul className="space-y-2">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <div className="w-2 h-2 bg-brand-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-sm text-gray-700">{benefit}</span>
+                <span className="text-sm text-gray-700 font-light">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -119,7 +119,7 @@ const ICPPanel: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 font-light">
             Whether you're leading transformation from within your organization or advising clients as an external partner, we provide the expertise and frameworks you need to drive successful digital transformation outcomes.
           </p>
           <Link to="/lead-qualification">

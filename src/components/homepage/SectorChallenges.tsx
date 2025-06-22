@@ -82,15 +82,15 @@ const SectorChallenges: React.FC = () => {
                 <Button
                   key={sector.id}
                   variant={activeSector === sector.id ? "default" : "outline"}
-                  className={`flex items-center justify-start gap-3 px-4 py-6 w-full text-left ${
+                  className={`flex items-center justify-start gap-3 px-4 py-6 w-full text-left font-normal ${
                     activeSector === sector.id 
                       ? 'bg-accent-400 hover:bg-accent-500 text-white border-accent-400' 
-                      : 'border border-brand-300 text-brand-600 hover:bg-brand-100'
+                      : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
                   }`}
                   onClick={() => setActiveSector(sector.id)}
                 >
                   {sector.icon}
-                  <span className="font-medium">{sector.title}</span>
+                  <span className="font-normal">{sector.title}</span>
                 </Button>
               ))}
             </div>
@@ -104,13 +104,13 @@ const SectorChallenges: React.FC = () => {
                   {activeSectorData.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-brand-600">{activeSectorData.title}</h3>
-                  <p className="text-gray-600 mt-1">{activeSectorData.solution}</p>
+                  <h3 className="text-2xl font-normal text-gray-800">{activeSectorData.title}</h3>
+                  <p className="text-gray-600 mt-1 font-light">{activeSectorData.solution}</p>
                 </div>
               </div>
               
               <CardContent className="p-6">
-                <h4 className="font-semibold text-lg mb-4 text-brand-500">
+                <h4 className="font-normal text-lg mb-4 text-gray-800">
                   Key Challenges
                 </h4>
                 <ul className="space-y-4">
@@ -119,7 +119,7 @@ const SectorChallenges: React.FC = () => {
                       <span className="bg-accent-400 rounded-full w-6 h-6 flex items-center justify-center text-white mr-3 mt-0.5 flex-shrink-0">
                         {index + 1}
                       </span>
-                      <span className="text-gray-700">{challenge}</span>
+                      <span className="text-gray-700 font-light">{challenge}</span>
                     </li>
                   ))}
                 </ul>

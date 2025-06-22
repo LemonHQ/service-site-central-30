@@ -43,7 +43,7 @@ const BlogCarousel: React.FC = () => {
                       </div>
                       <CardContent className="pt-6">
                         <div className="mb-3 flex justify-between items-center">
-                          <span className="text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
+                          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-normal">
                             {post.category}
                           </span>
                           <span className="text-xs text-gray-500">{new Date(post.publishDate).toLocaleDateString('en-US', {
@@ -52,11 +52,11 @@ const BlogCarousel: React.FC = () => {
                             year: 'numeric'
                           })}</span>
                         </div>
-                        <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
-                        <p className="text-gray-600 text-sm">{post.excerpt}</p>
+                        <h3 className="text-xl font-normal mb-3 text-gray-800">{post.title}</h3>
+                        <p className="text-gray-600 text-sm font-light">{post.excerpt}</p>
                       </CardContent>
                       <CardFooter>
-                        <div className="text-brand-400 hover:text-brand-500 font-medium inline-flex items-center">
+                        <div className="text-gray-700 hover:text-gray-900 font-normal inline-flex items-center">
                           Read article
                           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -61,8 +61,8 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
             </blockquote>
             {(author || authorTitle) && (
               <div className="mt-6 text-right">
-                {author && <p className="text-white font-semibold">{author}</p>}
-                {authorTitle && <p className="text-brand-100">{authorTitle}</p>}
+                {author && <p className="text-white font-normal">{author}</p>}
+                {authorTitle && <p className="text-gray-100 font-light">{authorTitle}</p>}
               </div>
             )}
           </div>

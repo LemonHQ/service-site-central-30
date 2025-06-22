@@ -50,7 +50,7 @@ const ClientsSection: React.FC = () => {
 
         {/* Platform Alliances */}
         <div className="mb-12">
-          <h3 className="text-xl font-semibold text-brand-600 mb-6 text-center">Platform Alliances</h3>
+          <h3 className="text-xl font-normal text-gray-800 mb-6 text-center">Platform Alliances</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {platformAlliances.map((alliance, index) => (
               <div 
@@ -69,7 +69,7 @@ const ClientsSection: React.FC = () => {
         
         {/* Technology Expertise */}
         <div>
-          <h3 className="text-xl font-semibold text-brand-600 mb-6 text-center">Technology Expertise</h3>
+          <h3 className="text-xl font-normal text-gray-800 mb-6 text-center">Technology Expertise</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologyExpertise.map((tech, index) => (
               <div 

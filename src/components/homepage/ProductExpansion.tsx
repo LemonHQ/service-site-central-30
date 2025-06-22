@@ -29,8 +29,8 @@ const ExpansionStrategy: React.FC<ExpansionStrategyProps> = ({ icon, title, desc
             {icon}
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-3 text-brand-600">{title}</h3>
-            <p className="text-gray-600">{description}</p>
+            <h3 className="text-xl font-normal mb-3 text-gray-800">{title}</h3>
+            <p className="text-gray-600 font-light">{description}</p>
           </div>
         </div>
       </CardContent>
@@ -99,18 +99,6 @@ const ProductExpansion: React.FC = () => {
             />
           ))}
         </div>
-        {/** 
-        <div className="text-center">
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to operationalize your digital strategy? Our strategic approach enables you to navigate every stage of your digital maturity journey with confidence and assurance.
-          </p>
-          <Link to="/services">
-            <Button size="lg" className="bg-brand-600 hover:bg-brand-700">
-              Explore Our Services
-            </Button>
-          </Link>
-        </div>
-      */}
       </div>
     </section>
   );
