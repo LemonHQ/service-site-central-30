@@ -31,38 +31,40 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-brand-600 mb-4">
+            <h1 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
               {title}
             </h1>
-            <p className="text-xl text-brand-400 mb-8">{subtitle}</p>
-            <div className="text-gray-600 text-lg mb-8 space-y-4">
+            <p className="text-xl text-gray-700 font-light mb-8">{subtitle}</p>
+            <div className="text-gray-600 text-lg mb-8 space-y-4 font-light">
               <p>{description}</p>
             </div>
 
-            {/* <div className="flex flex-col sm:flex-row gap-4">
+            {/* Commented out buttons to match the current structure
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link to={ctaLink}>
-                <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
+                <Button size="lg" className="font-light">
                   {ctaText}
                 </Button>
               </Link>
               {secondaryCtaText && secondaryCtaLink && (
                 <Link to={secondaryCtaLink}>
-                  <Button size="lg" variant="outline" className="border-brand-300 text-brand-500">
+                  <Button size="lg" variant="outline" className="border-gray-300 text-gray-700 font-light">
                     {secondaryCtaText}
                   </Button>
                 </Link>
               )}
-            </div> */}
+            </div>
+            */}
 
           </div>
           <div className="flex justify-center relative">
             <img
               src={heroImage}
               alt={`${title} - Hero Image`}
-              className={`rounded-xl shadow-lg w-full h-[400px] object-cover object-center ${isAiHeroImage ? 'border-2 border-brand-300' : ''}`}
+              className={`rounded-xl shadow-lg w-full h-[400px] object-cover object-center ${isAiHeroImage ? 'border-2 border-gray-300' : ''}`}
             />
             {isAiHeroImage && (
-              <div className="absolute bottom-2 right-2 bg-brand-100 text-brand-600 text-xs px-2 py-1 rounded-md opacity-80">
+              <div className="absolute bottom-2 right-2 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-md opacity-80 font-light">
                 AI Generated
               </div>
             )}

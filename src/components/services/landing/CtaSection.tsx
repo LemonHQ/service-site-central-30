@@ -29,20 +29,20 @@ const CtaSection: React.FC<CtaSectionProps> = ({ ctaText, ctaLink }) => {
   };
   
   return (
-    <section className="py-16 bg-brand-50">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-brand-600 mb-4">Ready to Get Started?</h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-light text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto font-light">
           Contact our team today to discuss how we can help you achieve your business goals.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to={ctaLink} onClick={handleCtaClick}>
-            <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
+            <Button size="lg" className="font-light">
               {ctaText}
             </Button>
           </Link>
           <Link to="/contact" onClick={handleContactClick}>
-            <Button size="lg" variant="outline" className="border-brand-300 text-brand-500">
+            <Button size="lg" variant="outline" className="border-gray-300 text-gray-700 font-light">
               Contact Us
             </Button>
           </Link>
