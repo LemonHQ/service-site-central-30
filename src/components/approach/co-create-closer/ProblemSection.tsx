@@ -63,9 +63,9 @@ const ProblemSection = () => {
         
         <div className="mt-12 p-6 bg-red-50 rounded-lg border border-red-100">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="text-3xl font-bold text-red-600 whitespace-nowrap">The cost of isolation</div>
+            <div className="text-3xl font-light text-red-600 whitespace-nowrap">The cost of isolation</div>
             <div className="w-full h-0.5 bg-red-200"></div>
-            <div className="text-xl font-semibold text-red-600">$2.2M</div>
+            <div className="text-xl font-normal text-red-600">$2.2M</div>
           </div>
           <Paragraph className="mt-4 text-red-800">
            CG's research indicates that over $50 billion of capital is lost annually due to failed ecosystem investments, highlighting the substantial financial risks associated with mismanaging or not participating in digital ecosystems.
