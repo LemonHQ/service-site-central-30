@@ -16,6 +16,8 @@ export interface BlogPost {
   };
 }
 
+
+
 export const blogPosts: BlogPost[] = [
   {
     id: "traditional-vs-ai-search",
