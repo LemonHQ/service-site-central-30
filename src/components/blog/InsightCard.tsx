@@ -32,11 +32,11 @@ const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
             className="w-full h-full object-cover"
           />
           <div className="absolute top-4 left-4">
-            <Badge className="bg-brand-400 text-white">{post.category}</Badge>
+            <Badge className="bg-gray-700 text-white font-light">{post.category}</Badge>
           </div>
         </div>
         <CardContent className="p-6 flex flex-col flex-grow">
-          <div className="flex items-center text-gray-500 text-sm mb-3">
+          <div className="flex items-center text-gray-500 text-sm mb-3 font-light">
             <span>{formattedDate}</span>
             <span className="mx-2">•</span>
             <div className="flex items-center">
@@ -45,18 +45,18 @@ const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
             </div>
           </div>
           
-          <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
+          <h3 className="text-xl font-light mb-2 text-gray-800">{post.title}</h3>
+          <p className="text-gray-600 mb-4 line-clamp-2 font-light">{post.excerpt}</p>
           
           <div className="flex items-center mt-auto pt-4">
             <Avatar className="h-8 w-8 mr-3">
               <AvatarImage src={post.author?.avatar} alt={post.author?.name || 'Author'} />
-              <AvatarFallback>{authorInitial}</AvatarFallback>
+              <AvatarFallback className="font-light">{authorInitial}</AvatarFallback>
             </Avatar>
-            <span className="text-sm font-medium">{post.author?.name || 'Anonymous'}</span>
+            <span className="text-sm font-light text-gray-700">{post.author?.name || 'Anonymous'}</span>
           </div>
           
-          <div className="flex items-center text-brand-400 hover:text-brand-500 font-medium mt-4">
+          <div className="flex items-center text-gray-700 hover:text-gray-900 font-light mt-4">
             Read Article <ArrowRight className="ml-1 h-4 w-4" />
           </div>
         </CardContent>

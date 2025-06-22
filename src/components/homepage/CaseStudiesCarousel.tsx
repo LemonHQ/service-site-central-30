@@ -81,7 +81,7 @@ const CaseStudiesCarousel: React.FC = () => {
                       </div>
                       <CardContent className="pt-6 pb-2">
                         <div className="flex gap-2 mb-2">
-                          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-light">
+                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full font-light">
                             {study.industry}
                           </span>
                           {study.services[0] && (
