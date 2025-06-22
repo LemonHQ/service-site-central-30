@@ -81,21 +81,21 @@ const CaseStudiesCarousel: React.FC = () => {
                       </div>
                       <CardContent className="pt-6 pb-2">
                         <div className="flex gap-2 mb-2">
-                          <span className="text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
+                          <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-light">
                             {study.industry}
                           </span>
                           {study.services[0] && (
-                            <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+                            <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full font-light">
                               {study.services[0]}
                             </span>
                           )}
                         </div>
-                        <CardTitle className="mb-2 text-xl">{study.title}</CardTitle>
-                        <p className="text-sm text-gray-500 mb-2">Client: {study.client}</p>
-                        <p className="text-gray-600 line-clamp-2">{study.summary}</p>
+                        <CardTitle className="mb-2 text-xl font-light text-gray-800">{study.title}</CardTitle>
+                        <p className="text-sm text-gray-500 mb-2 font-light">Client: {study.client}</p>
+                        <p className="text-gray-600 line-clamp-2 font-light">{study.summary}</p>
                       </CardContent>
                       <CardFooter>
-                        <div className="text-brand-400 hover:text-brand-500 font-medium inline-flex items-center">
+                        <div className="text-gray-700 hover:text-gray-900 font-light inline-flex items-center">
                           Read case study
                           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -111,21 +111,21 @@ const CaseStudiesCarousel: React.FC = () => {
               {isLoading && (
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-400 mx-auto mb-4"></div>
-                    <p className="text-gray-600">Loading more stories...</p>
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-400 mx-auto mb-4"></div>
+                    <p className="text-gray-600 font-light">Loading more stories...</p>
                   </div>
                 </CarouselItem>
               )}
               
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-brand-600">Ready to be our next success story?</h3>
+                  <h3 className="text-2xl font-light mb-4 text-gray-800">Ready to be our next success story?</h3>
                   <Link to="/case-studies">
-                    <Button variant="outline" className="mb-2">View all case studies</Button>
+                    <Button variant="outline" className="mb-2 font-light">View all case studies</Button>
                   </Link>
                   <br />
                   <Link to="/contact">
-                    <Button>Start your project</Button>
+                    <Button className="font-light">Start your project</Button>
                   </Link>
                 </div>
               </CarouselItem>
@@ -137,7 +137,7 @@ const CaseStudiesCarousel: React.FC = () => {
         
         <div className="text-center mt-8">
           <Link to="/case-studies">
-            <Button size="lg">View All Case Studies</Button>
+            <Button size="lg" className="font-light">View All Case Studies</Button>
           </Link>
         </div>
       </div>
