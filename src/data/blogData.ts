@@ -5,6 +5,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   featuredImage: string;
+  date: string;
   publishDate: string;
   readTime: number;
   category: string;
@@ -16,8 +17,6 @@ export interface BlogPost {
   };
 }
 
-
-
 export const blogPosts: BlogPost[] = [
   {
     id: "traditional-vs-ai-search",
@@ -25,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Exploring emerging trends and technologies shaping the next decade of enterprise digital transformation.",
     content: `    <h1>AI Search is Rewriting the Web: From Keywords to Contextual Intelligence</h1>
 
-                  <p>For decades, search engines operated on a simple principle: match the words in your query to the words in a document. From Boolean logic to algorithms like TF-IDF (Term Frequency-Inverse Document Frequency) and Google’s game-changing PageRank, the early web thrived on keyword optimization. But traditional keyword search, no matter how refined, has fundamental blind spots. It can't discern user intent, handle synonyms effectively, or understand context. When someone searches for "Apple," does that mean the fruit or the tech company?</p>
+                  <p>For decades, search engines operated on a simple principle: match the words in your query to the words in a document. From Boolean logic to algorithms like TF-IDF (Term Frequency-Inverse Document Frequency) and Google's game-changing PageRank, the early web thrived on keyword optimization. But traditional keyword search, no matter how refined, has fundamental blind spots. It can't discern user intent, handle synonyms effectively, or understand context. When someone searches for "Apple," does that mean the fruit or the tech company?</p>
 
                   <p>Enter AI search — a new paradigm powered by large language models (LLMs), vector databases, and retrieval-augmented generation (RAG). This shift isn't just changing how we get answers. It's transforming how content is created, optimized, and consumed across the internet.</p>
 
@@ -65,13 +64,13 @@ export const blogPosts: BlogPost[] = [
                   </table>
 
                   <h2>SEO in the Age of AI Search</h2>
-                  <p>As AI-driven search begins to reshape how content is discovered and consumed, SEO experts are adjusting their strategies to stay ahead. Donna Bedford, Global SEO Lead at Lenovo, offers a pragmatic view: brands don’t need to start from scratch, but they do need to evolve.</p>
+                  <p>As AI-driven search begins to reshape how content is discovered and consumed, SEO experts are adjusting their strategies to stay ahead. Donna Bedford, Global SEO Lead at Lenovo, offers a pragmatic view: brands don't need to start from scratch, but they do need to evolve.</p>
 
                   <p>According to Bedford, the foundations of traditional SEO—structured content, strong navigation, and clarity—remain critical. However, she emphasizes the importance of adapting for both human readers and machines.</p>
 
-                  <p>She stresses the shift from keyword-stuffed copy to natural, conversational phrasing that mimics how users might actually ask a question. This dual focus—“think human, think machine”—is essential for visibility in AI-generated results.</p>
+                  <p>She stresses the shift from keyword-stuffed copy to natural, conversational phrasing that mimics how users might actually ask a question. This dual focus—"think human, think machine"—is essential for visibility in AI-generated results.</p>
 
-                  <p>Bedford also references Google’s EEAT framework—Experience, Expertise, Authority, and Trust—as a guiding principle. Content should demonstrate credibility, depth, and a comprehensive understanding of the subject matter to signal that it’s a trustworthy source for generative models.</p>
+                  <p>Bedford also references Google's EEAT framework—Experience, Expertise, Authority, and Trust—as a guiding principle. Content should demonstrate credibility, depth, and a comprehensive understanding of the subject matter to signal that it's a trustworthy source for generative models.</p>
 
                   <p>While traditional elements like H1 tags and headers still matter, she warns that certain technical choices—such as over-reliance on JavaScript—can impair visibility in AI-driven search. Unlike traditional crawlers, many AI models struggle with dynamically rendered content, making it critical to ensure accessibility and clarity.</p>
 
@@ -92,6 +91,7 @@ export const blogPosts: BlogPost[] = [
                   <a href="https://lemonhq.co.uk/contact" target="_blank">Talk to our team today → lemonhq.co.uk/contact</a></p>
     `,
     featuredImage: "/assets/imgs/ordering-food.png",
+    date: "2024-01-15",
     publishDate: "2024-01-15",
     readTime: 5,
     category: "AI",
@@ -119,6 +119,7 @@ export const blogPosts: BlogPost[] = [
       <p>The integration of advanced analytics, AI, and automation is becoming central to consulting delivery models.</p>
     `,
     featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    date: "2024-01-12",
     publishDate: "2024-01-12",
     readTime: 6,
     category: "Industry Analysis",
@@ -146,6 +147,7 @@ export const blogPosts: BlogPost[] = [
       <p>Developing metrics and KPIs to track innovation outcomes and ROI is crucial for sustained investment.</p>
     `,
     featuredImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    date: "2024-01-10",
     publishDate: "2024-01-10",
     readTime: 7,
     category: "Innovation",
@@ -173,6 +175,7 @@ export const blogPosts: BlogPost[] = [
       <p>The ability to translate business strategy into digital initiatives is fundamental to transformation success.</p>
     `,
     featuredImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    date: "2024-01-08",
     publishDate: "2024-01-08",
     readTime: 5,
     category: "Leadership",
