@@ -14,6 +14,7 @@ import Lightbox from '@/components/case-studies/Lightbox';
 import TestimonialSection from '@/components/case-studies/TestimonialSection';
 import RelatedCaseStudiesSection from '@/components/case-studies/RelatedCaseStudiesSection';
 import NotFoundSection from '@/components/case-studies/NotFoundSection';
+import { H1, Paragraph } from '@/components/ui/Typography';
 
 const CaseStudyDetail: React.FC = () => {
   const { caseStudyId } = useParams<{ caseStudyId: string }>();
@@ -81,7 +82,7 @@ const CaseStudyDetail: React.FC = () => {
       <MainLayout>
         <div className="container mx-auto px-4 py-16">
           <div className="mb-6">
-            <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+            <Link to="/case-studies" className="inline-flex items-center text-gray-700 hover:text-gray-900">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
           </div>

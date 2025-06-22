@@ -5,6 +5,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
 import { CaseStudy } from '@/data/caseStudies';
 import { Button } from '@/components/ui/button';
+import { H3 } from '@/components/ui/Typography';
 import { 
   Carousel,
   CarouselContent,
@@ -23,7 +24,7 @@ const RelatedCaseStudiesSection: React.FC<RelatedCaseStudiesSectionProps> = ({ r
   }
   
   return (
-    <section className="py-16 bg-beige-50">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Related Case Studies"
@@ -48,13 +49,13 @@ const RelatedCaseStudiesSection: React.FC<RelatedCaseStudiesSectionProps> = ({ r
               {/* CTA Card */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-brand-600">Ready to be our next success story?</h3>
+                  <H3 className="mb-4 text-gray-800">Ready to be our next success story?</H3>
                   <Link to="/case-studies">
-                    <Button variant="outline" className="mb-2">View all case studies</Button>
+                    <Button variant="outline" className="mb-2 border-gray-300 text-gray-700 hover:bg-gray-50">View all case studies</Button>
                   </Link>
                   <br />
                   <Link to="/contact">
-                    <Button>Start your project</Button>
+                    <Button className="bg-gray-800 hover:bg-gray-900 text-white">Start your project</Button>
                   </Link>
                 </div>
               </CarouselItem>

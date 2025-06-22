@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { H3 } from '@/components/ui/Typography';
 
 interface ImageGalleryProps {
   images: string[];
@@ -20,9 +21,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, onImageClick
   }
   
   return (
-    <div className="py-16 bg-brand-100 rounded-lg mb-16">
+    <div className="py-16 bg-gray-50 rounded-lg mb-16">
       <div className="container mx-auto px-4">
-        <h3 className="text-2xl font-semibold mb-6">Project Gallery</h3>
+        <H3 className="mb-6">Project Gallery</H3>
         <Carousel className="w-full">
           <CarouselContent>
             {images.map((image, index) => (
