@@ -26,7 +26,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({
   title = "Frequently Asked Questions",
   subtitle,
   className = "",
-  backgroundColor = "bg-beige-50"
+  backgroundColor = "bg-gray-50"
 }) => {
   return (
     <section className={`py-16 ${backgroundColor} ${className}`}>
@@ -34,8 +34,8 @@ const FaqSection: React.FC<FaqSectionProps> = ({
         <div className="max-w-3xl mx-auto">
           {title && (
             <div className="text-center mb-10">
-              <H3 className="mb-3">{title}</H3>
-              {subtitle && <Paragraph className="text-center">{subtitle}</Paragraph>}
+              <H3 className="mb-3 text-gray-800 font-light">{title}</H3>
+              {subtitle && <Paragraph className="text-center text-gray-600 font-light">{subtitle}</Paragraph>}
             </div>
           )}
           
@@ -43,14 +43,14 @@ const FaqSection: React.FC<FaqSectionProps> = ({
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
                 <AccordionTrigger className="text-left py-4">
-                  <span className="flex items-start text-base text-gray-800">
-                    <span className="font-medium text-brand-500 mr-3">
+                  <span className="flex items-start text-base text-gray-800 font-light">
+                    <span className="font-normal text-gray-700 mr-3">
                       {index + 1}.
                     </span>
                     <span>{faq.question}</span>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-gray-600 pb-6 pl-8">
+                <AccordionContent className="text-sm text-gray-600 pb-6 pl-8 font-light">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
