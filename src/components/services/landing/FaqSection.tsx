@@ -18,7 +18,7 @@ const ServiceFaqSection: React.FC<FaqSectionProps> = ({
       faqs={faqs}
       title={title}
       subtitle={subtitle}
-      backgroundColor="bg-slate-50"
+      backgroundColor="bg-gray-50"
     />
   );
 };
