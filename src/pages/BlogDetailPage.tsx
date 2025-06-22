@@ -13,6 +13,7 @@ import {
   HoverCardTrigger
 } from "@/components/ui/hover-card";
 import { useToast } from "@/hooks/use-toast";
+import { H3, Paragraph } from '@/components/ui/Typography';
 
 const BlogDetailPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -214,10 +215,10 @@ const BlogDetailPage: React.FC = () => {
         
         {/* CTA Section */}
         <div className="text-center bg-brand-50 rounded-lg p-8 md:p-12 max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to start your digital journey?</h3>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          <H3 className="mb-4">Ready to start your digital journey?</H3>
+          <Paragraph className="text-lg mb-6 max-w-2xl mx-auto">
             Let's discuss how our team can help you achieve your business goals through innovative digital solutions.
-          </p>
+          </Paragraph>
           <Link to="/contact">
             <Button size="lg" className="bg-brand-400 hover:bg-brand-500">
               Contact Us
