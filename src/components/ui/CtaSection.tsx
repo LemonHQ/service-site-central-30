@@ -1,17 +1,20 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calendar } from 'lucide-react';
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Button } from './button';
+import { SectionTitle, Paragraph } from './Typography';
 
 interface CtaSectionProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   buttonText: string;
-  buttonLink?: string; // Made optional since we'll use dialog
+  buttonLink?: string;
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
+  onButtonClick?: () => void;
+  onSecondaryButtonClick?: () => void;
+  backgroundVariant?: 'brand' | 'gray' | 'white';
+  className?: string;
 }
 
 const CtaSection: React.FC<CtaSectionProps> = ({
@@ -21,50 +24,55 @@ const CtaSection: React.FC<CtaSectionProps> = ({
   buttonLink,
   secondaryButtonText,
   secondaryButtonLink,
+  onButtonClick,
+  onSecondaryButtonClick,
+  backgroundVariant = 'brand',
+  className
 }) => {
-  const [bookingDialogOpen, setBookingDialogOpen] = useState(false);
-  
+  const backgroundClasses = {
+    brand: 'bg-brand-50',
+    gray: 'bg-gray-50',
+    white: 'bg-white'
+  };
+
   return (
-    <section className="bg-beige-200 py-16 md:py-24">
+    <section className={cn(
+      'py-16 md:py-20',
+      backgroundClasses[backgroundVariant],
+      className
+    )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-600">{title}</h2>
-          <p className="text-lg md:text-xl text-gray-700 mb-8">{subtitle}</p>
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionTitle className="mb-4">{title}</SectionTitle>
+          {subtitle && (
+            <Paragraph className="text-lg mb-8">{subtitle}</Paragraph>
+          )}
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button 
-              className="bg-accent-400 hover:bg-accent-500 text-white py-6 px-8 text-lg"
-              onClick={() => setBookingDialogOpen(true)}
-            >
-              {buttonText}
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {buttonLink ? (
+              <Button asChild className="btn-primary">
+                <a href={buttonLink}>{buttonText}</a>
+              </Button>
+            ) : (
+              <Button onClick={onButtonClick} className="btn-primary">
+                {buttonText}
+              </Button>
+            )}
             
-            {secondaryButtonText && secondaryButtonLink && (
-              <Link to={secondaryButtonLink}>
-                <Button variant="outline" className="border-brand-400 text-brand-400 hover:bg-beige-100 py-6 px-8 text-lg">
+            {secondaryButtonText && (
+              secondaryButtonLink ? (
+                <Button asChild variant="outline">
+                  <a href={secondaryButtonLink}>{secondaryButtonText}</a>
+                </Button>
+              ) : (
+                <Button onClick={onSecondaryButtonClick} variant="outline">
                   {secondaryButtonText}
                 </Button>
-              </Link>
+              )
             )}
           </div>
         </div>
       </div>
-      
-      {/* Booking Dialog */}
-      <Dialog open={bookingDialogOpen} onOpenChange={setBookingDialogOpen}>
-        <DialogContent className="sm:max-w-[975px]">
-          <DialogHeader>
-            <DialogTitle>Schedule a Meeting</DialogTitle>
-          </DialogHeader>
-          <div className="flex justify-center py-4" id="calendar-container">
-            <iframe 
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0B2joTaaMkpn7ocWprDwd5JFjcDq8YF6qkJoym3LDGtbJSIULDeYEkUX3_OygWAmciwvXsjhs5?gv=true" 
-              style={{ width: "100%", height: "600px", border: 0 }} 
-              frameBorder="0"
-            ></iframe>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
