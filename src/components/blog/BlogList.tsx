@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { blogPosts } from '@/data/blogData';
-import BlogCard from './BlogCard';
+import InsightCard from './InsightCard';
 
 const BlogList = () => {
   // Get unique categories
@@ -54,7 +54,7 @@ const BlogList = () => {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <InsightCard key={post.id} post={post} />
           ))}
         </div>
       )}
