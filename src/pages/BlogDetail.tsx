@@ -96,8 +96,8 @@ const BlogDetail: React.FC = () => {
               <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-medium">{post.author.name}</p>
-              <p className="text-gray-600 text-sm">{post.author.role}</p>
+              <Paragraph className="font-medium mb-0">{post.author.name}</Paragraph>
+              <Paragraph className="text-gray-600 text-sm mb-0">{post.author.role}</Paragraph>
             </div>
             <div className="ml-auto flex items-center text-gray-500 text-sm">
               <Calendar className="h-4 w-4 mr-1" />
@@ -193,7 +193,7 @@ const BlogDetail: React.FC = () => {
                 </Avatar>
                 <div>
                   <H4 className="mb-1">About {post.author.name}</H4>
-                  <p className="text-gray-600 mb-2">{post.author.role}</p>
+                  <Paragraph className="text-gray-600 mb-2">{post.author.role}</Paragraph>
                   <Paragraph className="text-sm mb-0">
                     Expert in digital transformation with over a decade of experience helping organizations 
                     navigate technological changes and implement innovative solutions.
@@ -220,7 +220,7 @@ const BlogDetail: React.FC = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <p className="text-sm text-gray-500 mb-2">{relatedPost.category}</p>
+                      <Paragraph className="text-sm text-gray-500 mb-2">{relatedPost.category}</Paragraph>
                       <H4 className="mb-2 group-hover:text-brand-400 transition-colors">
                         {relatedPost.title}
                       </H4>
