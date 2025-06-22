@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Building, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CaseStudy } from '@/data/caseStudies';
+import { H1, H4, Paragraph } from '@/components/ui/Typography';
 
 interface CaseStudySummaryProps {
   caseStudy: CaseStudy;
@@ -29,8 +30,8 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
       <div className="flex flex-col md:flex-row md:gap-8 mb-10">
         <div className="md:w-2/3 mb-6 md:mb-0">
           <Badge className="mb-4">{caseStudy.industry}</Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{caseStudy.title}</h1>
-          <p className="text-xl text-gray-600 mb-6">{caseStudy.summary}</p>
+          <H1 className="mb-4">{caseStudy.title}</H1>
+          <Paragraph className="text-xl mb-6">{caseStudy.summary}</Paragraph>
           
           <div className="flex flex-wrap gap-2 mb-6">
             {caseStudy.services.map((service, index) => (
@@ -47,7 +48,7 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
               <div className="flex items-center gap-3 mb-4">
                 <Building className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
-                  <h4 className="font-medium text-gray-500">Client</h4>
+                  <H4 className="font-medium text-gray-500 mb-0">Client</H4>
                   <p className="font-medium">{caseStudy.client}</p>
                 </div>
               </div>
@@ -55,7 +56,7 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
               <div className="flex items-center gap-3 mb-4">
                 <Calendar className="h-5 w-5 text-brand-400 flex-shrink-0" />
                 <div>
-                  <h4 className="font-medium text-gray-500">Completed</h4>
+                  <H4 className="font-medium text-gray-500 mb-0">Completed</H4>
                   <p className="font-medium">{formattedDate}</p>
                 </div>
               </div>

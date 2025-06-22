@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { H3 } from '@/components/ui/Typography';
 
 interface RelatedCaseStudiesSectionProps {
   relatedCaseStudies: CaseStudy[];
@@ -48,7 +49,7 @@ const RelatedCaseStudiesSection: React.FC<RelatedCaseStudiesSectionProps> = ({ r
               {/* CTA Card */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-brand-600">Ready to be our next success story?</h3>
+                  <H3 className="mb-4 text-brand-600">Ready to be our next success story?</H3>
                   <Link to="/case-studies">
                     <Button variant="outline" className="mb-2">View all case studies</Button>
                   </Link>
