@@ -3,7 +3,7 @@ import React from 'react';
 import { CustomerProfile } from '@/data/customerProfiles';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { H3, Paragraph } from '@/components/ui/Typography';
+import { H3, H4, Paragraph } from '@/components/ui/Typography';
 
 interface CustomerProfilesSectionProps {
   profiles: CustomerProfile[];
@@ -43,9 +43,9 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                       <Icon className={`h-5 w-5 ${profile.colorClass}`} />
                     </div>
                     <div>
-                      <p className={`text-sm font-medium ${profile.colorClass}`}>
+                      <Paragraph className={`text-sm font-medium ${profile.colorClass} mb-0`}>
                         {profile.type === 'early-stage' ? 'EARLY-STAGE' : profile.type === 'growth' ? 'GROWTH' : 'MATURE'}
-                      </p>
+                      </Paragraph>
                       <H3 className="mt-1 mb-0">{profile.title}</H3>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                   
                   <div className="mt-4 space-y-4">
                     <div>
-                      <h4 className="text-sm font-semibold mb-2">Typical Challenges:</h4>
+                      <H4 className="text-sm font-semibold mb-2">Typical Challenges:</H4>
                       <ul className="list-disc pl-6 space-y-1">
                         {profile.challenges.map((challenge, i) => (
                           <li key={i} className="text-gray-700 text-sm">{challenge}</li>
@@ -65,8 +65,8 @@ const CustomerProfilesSection: React.FC<CustomerProfilesSectionProps> = ({
                     </div>
                     
                     <div>
-                      <h4 className="text-sm font-semibold mb-2">How Our Services Help:</h4>
-                      <p className="text-gray-700 text-sm">{profile.serviceFit}</p>
+                      <H4 className="text-sm font-semibold mb-2">How Our Services Help:</H4>
+                      <Paragraph className="text-sm mb-0">{profile.serviceFit}</Paragraph>
                     </div>
                   </div>
                 </CardContent>
