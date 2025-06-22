@@ -23,22 +23,22 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ caseStudy }) => {
         </div>
         <CardContent className="p-6">
           <div className="mb-2">
-            <Badge variant="outline" className="bg-gray-100 text-gray-800">
+            <Badge variant="outline" className="bg-gray-100 text-gray-800 font-light">
               {caseStudy.industry}
             </Badge>
           </div>
-          <h3 className="text-xl font-semibold mb-2">{caseStudy.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-2">{caseStudy.summary}</p>
+          <h3 className="text-xl font-light text-gray-900 mb-2">{caseStudy.title}</h3>
+          <p className="text-gray-600 mb-4 line-clamp-2 font-light">{caseStudy.summary}</p>
           
           <div className="flex flex-wrap gap-2 mb-4">
             {caseStudy.services.slice(0, 3).map((service, index) => (
-              <Badge key={index} variant="secondary" className="text-xs">
+              <Badge key={index} variant="secondary" className="text-xs font-light bg-gray-100 text-gray-600">
                 {service}
               </Badge>
             ))}
           </div>
           
-          <div className="flex items-center text-brand-400 hover:text-brand-500 font-medium mt-2">
+          <div className="flex items-center text-gray-700 hover:text-gray-900 font-light mt-2">
             View Case Study <ArrowRight className="ml-1 h-4 w-4" />
           </div>
         </CardContent>
