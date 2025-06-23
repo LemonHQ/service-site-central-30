@@ -8,6 +8,9 @@ import { isCookieCategoryAllowed } from './cookieConsent';
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-F9MRP3Y6SL';
 
+// Vector Tracking ID
+const VECTOR_TRACKING_ID = '79882b66-a905-4394-9c3d-f7bfe8730314';
+
 // Check if we're in development mode
 const isDevelopment = import.meta.env.DEV;
 
@@ -16,12 +19,22 @@ declare global {
   interface Window {
     gtag: (...args: any[]) => void;
     dataLayer: any[];
+    vector: {
+      load: (id: string) => void;
+      identify: (data: any) => void;
+      on: (event: string, callback: Function) => void;
+    };
   }
 }
 
 // Check if Google Analytics is loaded
 const isGoogleAnalyticsLoaded = () => {
   return typeof window !== 'undefined' && typeof window.gtag === 'function';
+};
+
+// Check if Vector is loaded
+const isVectorLoaded = () => {
+  return typeof window !== 'undefined' && typeof window.vector === 'object' && window.vector.load;
 };
 
 // Check if analytics tracking is allowed
@@ -55,10 +68,22 @@ const loadGoogleAnalytics = () => {
   });
 };
 
+// Initialize Vector tracking
+const initializeVector = () => {
+  if (typeof window !== 'undefined' && window.vector && isAnalyticsAllowed() && !isDevelopment) {
+    try {
+      window.vector.load(VECTOR_TRACKING_ID);
+    } catch (error) {
+      console.error('[Analytics] Error initializing Vector:', error);
+    }
+  }
+};
+
 // Initialize analytics if consent is given
 const initializeAnalytics = () => {
   if (isAnalyticsAllowed() && !isDevelopment) {
     loadGoogleAnalytics();
+    initializeVector();
   }
 };
 
@@ -68,6 +93,7 @@ if (typeof window !== 'undefined') {
     const preferences = event.detail;
     if (preferences.analytics && !isDevelopment) {
       loadGoogleAnalytics();
+      initializeVector();
     }
   });
 
@@ -96,6 +122,11 @@ export const trackPageView = (pagePath: string, pageTitle: string) => {
         page_path: pagePath
       });
     }
+
+    // Send to Vector if consent is given and not in development
+    if (isAnalyticsAllowed() && isVectorLoaded() && !isDevelopment) {
+      // Vector automatically tracks page views, but you can add custom tracking here if needed
+    }
   } catch (error) {
     console.error('[Analytics] Error tracking page view:', error);
   }
@@ -119,6 +150,11 @@ export const trackEvent = (
         event_category: eventCategory,
         ...eventData,
       });
+    }
+
+    // Send to Vector if consent is given and not in development
+    if (isAnalyticsAllowed() && isVectorLoaded() && !isDevelopment) {
+      // Vector custom event tracking can be added here if needed
     }
   } catch (error) {
     console.error('[Analytics] Error tracking event:', error);
