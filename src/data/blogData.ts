@@ -12,7 +12,7 @@ export interface BlogPost {
   tags: string[];
   author: {
     name: string;
-    avatar: string; 
+    avatar: string;  
     role: string; 
   };
 }
