@@ -31,49 +31,6 @@ const ResourcesSubNav: React.FC = () => {
     }
   ];
 
-  const caseStudyItems = [
-    {
-      name: "Standardizing Motor Insurance",
-      path: "/case-study/standardizing-motor-insurance-for-a-digital-future",
-      description: "Transforming fragmented insurance into scalable digital-first experience"
-    },
-    {
-      name: "Reimagining Patient Experience",
-      path: "/case-study/reimagining-patient-experience",
-      description: "Abbott FSL's patient experience ecosystem transformation"
-    },
-    {
-      name: "Multi-Market D2C Sales",
-      path: "/case-study/driving-multi-market-d2c-sales",
-      description: "DAMAC's traditional property selling to D2C sales engine"
-    },
-    {
-      name: "Digital Policy & Claims AI",
-      path: "/case-study/digital-policy-and-claims-using-ai",
-      description: "AI-powered compliance and claims processing platform"
-    },
-    {
-      name: "ALJ Market Leadership",
-      path: "/case-study/how-abdul-latif-jameel-established-its-market-leadership",
-      description: "Strategic brand communications and market positioning"
-    },
-    {
-      name: "MERAAS Rewards Ecosystem",
-      path: "/case-study/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem",
-      description: "Live pilot strategy for Dubai's rewards ecosystem"
-    },
-    {
-      name: "IP Management Platform",
-      path: "/case-study/standardizing-intellectual-property-management",
-      description: "Standardizing intellectual property management processes"
-    },
-    {
-      name: "Digital Brand Engine",
-      path: "/case-study/building-a-composable-digital-brand-engine",
-      description: "Building composable digital brand architecture"
-    }
-  ];
-
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger 
@@ -84,51 +41,26 @@ const ResourcesSubNav: React.FC = () => {
         Resources
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <div className="w-[800px] p-4">
-          <div className="grid grid-cols-2 gap-6">
-            {/* Main Resources Section */}
-            <div>
-              <h3 className="text-sm font-medium text-brand-600 mb-3">Resources</h3>
-              <div className="space-y-2">
-                {resourceItems.map((item) => (
-                  <Link 
-                    to={item.path} 
-                    key={item.name}
-                    className="flex items-center group rounded-md p-3 hover:bg-accent"
-                  >
-                    <div className="overflow-hidden rounded-md mr-4">
-                      <img 
-                        src={item.image} 
-                        alt={item.name} 
-                        className="h-12 w-12 object-cover transition-transform group-hover:scale-105"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h4>
-                      <p className="text-xs text-muted-foreground">{item.description}</p>
-                    </div>
-                  </Link>
-                ))}
+        <div className="grid grid-cols-1 gap-4 p-4 w-[500px]">
+          {resourceItems.map((item) => (
+            <Link 
+              to={item.path} 
+              key={item.name}
+              className="flex items-center group rounded-md p-3 hover:bg-accent"
+            >
+              <div className="overflow-hidden rounded-md mr-4">
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="h-16 w-16 object-cover transition-transform group-hover:scale-105"
+                />
               </div>
-            </div>
-
-            {/* Case Studies Section */}
-            <div>
-              <h3 className="text-sm font-medium text-brand-600 mb-3">Case Studies</h3>
-              <div className="space-y-1 max-h-80 overflow-y-auto">
-                {caseStudyItems.map((item) => (
-                  <Link 
-                    to={item.path} 
-                    key={item.name}
-                    className="block group rounded-md p-2 hover:bg-accent"
-                  >
-                    <h4 className="text-xs font-medium group-hover:text-brand-600">{item.name}</h4>
-                    <p className="text-xs text-muted-foreground mt-0.5">{item.description}</p>
-                  </Link>
-                ))}
+              <div>
+                <h3 className="text-sm font-medium group-hover:text-brand-600">{item.name}</h3>
+                <p className="text-xs text-muted-foreground">{item.description}</p>
               </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </NavigationMenuContent>
     </NavigationMenuItem>
