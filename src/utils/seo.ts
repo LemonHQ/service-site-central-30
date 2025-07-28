@@ -281,11 +281,45 @@ export const generateSitemap = () => {
     { url: '/services', priority: '0.9', changefreq: 'weekly' },
     { url: '/case-studies', priority: '0.9', changefreq: 'weekly' },
     { url: '/insights', priority: '0.9', changefreq: 'weekly' },
+    { url: '/blog', priority: '0.9', changefreq: 'weekly' },
     { url: '/about', priority: '0.8', changefreq: 'monthly' },
     { url: '/contact', priority: '0.8', changefreq: 'monthly' },
   ];
 
-  const servicePages = mainServices.map(service => ({
+  // Service pages with direct URLs from navigation
+  const servicePages = [
+    { url: '/unify-brand-experiences', priority: '0.8', changefreq: 'monthly' },
+    { url: '/digitalize-product-lines', priority: '0.8', changefreq: 'monthly' },
+    { url: '/expand-product-offerings', priority: '0.8', changefreq: 'monthly' },
+    { url: '/scale-digital-experiences', priority: '0.8', changefreq: 'monthly' },
+    { url: '/pilot-emerging-tech', priority: '0.8', changefreq: 'monthly' },
+    { url: '/standardize-digital-portfolio', priority: '0.8', changefreq: 'monthly' },
+  ];
+
+  // Industry pages
+  const industryPages = [
+    { url: '/industries/insurance', priority: '0.8', changefreq: 'monthly' },
+    { url: '/industries/finance', priority: '0.8', changefreq: 'monthly' },
+    { url: '/industries/healthcare', priority: '0.8', changefreq: 'monthly' },
+    { url: '/industries/retail', priority: '0.8', changefreq: 'monthly' },
+  ];
+
+  // Approach pages
+  const approachPages = [
+    { url: '/approach/co-create', priority: '0.8', changefreq: 'monthly' },
+    { url: '/approach/co-innovate', priority: '0.8', changefreq: 'monthly' },
+  ];
+
+  // Legal pages
+  const legalPages = [
+    { url: '/privacy-policy', priority: '0.5', changefreq: 'yearly' },
+    { url: '/terms-and-conditions', priority: '0.5', changefreq: 'yearly' },
+    { url: '/cookie-policy', priority: '0.5', changefreq: 'yearly' },
+    { url: '/disclaimer', priority: '0.5', changefreq: 'yearly' },
+  ];
+
+  // Keep original service pages from data (if they exist and are different)
+  const additionalServicePages = mainServices.map(service => ({
     url: `/services/${service.slug}`,
     priority: '0.8',
     changefreq: 'monthly',
@@ -314,7 +348,11 @@ export const generateSitemap = () => {
   const allPages = [
     ...staticPages,
     ...servicePages,
+    ...additionalServicePages,
     ...subServicePages,
+    ...industryPages,
+    ...approachPages,
+    ...legalPages,
     ...caseStudyPages,
     ...blogPages,
   ];
