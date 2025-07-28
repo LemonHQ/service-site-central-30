@@ -135,11 +135,11 @@ const App = () => (
             {/* <Route path="/insights-1" element={<Insights />} /> */}
             <Route path="/blog" element={<BlogPage />} />
             {/* <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} /> */}
-            <Route path="/insights/:postId" element={<BlogDetail />} />
+            {/* <Route path="/insights/:postId" element={<BlogDetail />} /> */}
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
         <Route path="/case-studies" element={<CaseStudiesStatic />} />
         {/* <Route path="/case-studies-1" element={<CaseStudies />} /> */}
-            <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
+            {/* <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} /> */}
             <Route path="/getting-started" element={<GettingStarted />} />
             <Route path="/lead-qualification" element={<GettingStarted />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
