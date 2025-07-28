@@ -35,7 +35,7 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
           
           <div className="flex flex-wrap gap-2 mb-6">
             {caseStudy.services.map((service, index) => (
-              <Badge key={index} variant="secondary" className="text-xs">
+              <Badge key={index} variant="rectangular" className="text-xs">
                 {service}
               </Badge>
             ))}
