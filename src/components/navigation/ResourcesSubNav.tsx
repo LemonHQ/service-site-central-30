@@ -25,7 +25,7 @@ const ResourcesSubNav: React.FC = () => {
     },
     { 
       name: "Blog", 
-      path: "/blog", 
+      path: "/blog-1", 
       description: "Thought leadership and industry trends",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       subItems: [
@@ -58,7 +58,7 @@ const ResourcesSubNav: React.FC = () => {
       <NavigationMenuTrigger 
         className={`${location.pathname.includes('/insights') || 
           location.pathname.includes('/case-studies') || 
-          location.pathname.includes('/blog') ||
+          location.pathname.includes('/blog-1') ||
           location.pathname.includes('/blogger') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
       >
         Resources

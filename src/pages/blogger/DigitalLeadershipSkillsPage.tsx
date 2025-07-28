@@ -78,7 +78,7 @@ const DigitalLeadershipSkillsPage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Back button */}
             <Link 
-              to="/blog" 
+              to="/blog-1" 
               className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group"
             >
               <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />

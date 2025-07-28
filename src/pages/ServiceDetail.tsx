@@ -328,7 +328,7 @@ const ServiceDetail = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <Link to="/blog">
+              <Link to="/blog-1">
                 <Button variant="outline">Read Our Blog</Button>
               </Link>
             </div>

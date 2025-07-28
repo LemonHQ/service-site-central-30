@@ -26,7 +26,7 @@ const BlogDetailPage: React.FC = () => {
   
   // If post not found, redirect to blog page
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/blog-1" replace />;
   }
   
   // Format date
@@ -80,7 +80,7 @@ const BlogDetailPage: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="mb-6">
-          <Link to="/blog" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+          <Link to="/blog-1" className="inline-flex items-center text-brand-400 hover:text-brand-500">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to blog
           </Link>
         </div>
