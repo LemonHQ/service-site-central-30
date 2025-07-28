@@ -19,7 +19,7 @@ const ResourcesSubNav: React.FC = () => {
     },
     { 
       name: "Case Studies", 
-      path: "/case-studies-1", 
+      path: "/case-studies", 
       description: "Real-world transformation success stories",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
