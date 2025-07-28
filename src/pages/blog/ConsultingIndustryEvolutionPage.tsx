@@ -89,26 +89,6 @@ const ConsultingIndustryEvolutionPage = () => {
             <div className="mb-8">
               <Badge className="mb-4">{post.category}</Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">{post.title}</h1>
-              
-              <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-6">
-                <div className="flex items-center">
-                  <Avatar className="h-10 w-10 mr-3">
-                    <AvatarImage src={post.author.avatar} alt={post.author.name} />
-                    <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-medium text-foreground">{post.author.name}</div>
-                    <div className="text-sm">{post.author.role}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center text-sm">
-                  <span>{formattedDate}</span>
-                  <span className="mx-2">•</span>
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{post.readTime} min read</span>
-                </div>
-              </div>
             </div>
 
             {/* Featured image */}
@@ -118,6 +98,27 @@ const ConsultingIndustryEvolutionPage = () => {
                 alt={post.title}
                 className="w-full h-64 md:h-96 object-cover rounded-lg"
               />
+            </div>
+
+            {/* Author and meta information */}
+            <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
+              <div className="flex items-center">
+                <Avatar className="h-10 w-10 mr-3">
+                  <AvatarImage src={post.author.avatar} alt={post.author.name} />
+                  <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+                <div>
+                  <div className="font-medium text-foreground">{post.author.name}</div>
+                  <div className="text-sm">{post.author.role}</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center text-sm">
+                <span>{formattedDate}</span>
+                <span className="mx-2">•</span>
+                <Clock className="h-4 w-4 mr-1" />
+                <span>{post.readTime} min read</span>
+              </div>
             </div>
 
             {/* Article content */}
