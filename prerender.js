@@ -41,6 +41,7 @@ const routesToPrerender = [
   '/contact',
   '/insights',
   '/blog',
+  '/case-studies',
   '/case-studies-1',
   '/getting-started',
   '/lead-qualification',

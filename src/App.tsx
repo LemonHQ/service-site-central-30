@@ -19,6 +19,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import Insights from "./pages/Insights";
 import CaseStudies from "./pages/CaseStudies";
+import CaseStudiesStatic from "./pages/CaseStudiesStatic";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import GettingStarted from "./pages/GettingStarted";
 import ThankYouPage from "./pages/ThankYouPage";
@@ -124,7 +125,8 @@ const App = () => (
             <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} />
             <Route path="/insights/:postId" element={<BlogDetail />} />
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
-            <Route path="/case-studies-1" element={<CaseStudies />} />
+        <Route path="/case-studies" element={<CaseStudiesStatic />} />
+        <Route path="/case-studies-1" element={<CaseStudies />} />
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
             <Route path="/getting-started" element={<GettingStarted />} />
             <Route path="/lead-qualification" element={<GettingStarted />} />
