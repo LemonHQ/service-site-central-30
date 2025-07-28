@@ -127,34 +127,82 @@ const TraditionalVsAISearchPage = () => {
     }
   };
 
+  // Enhanced SEO metadata
+  const seoData = {
+    post: post,
+    title: post.title,
+    description: post.excerpt,
+    image: post.featuredImage,
+    publishedTime: post.publishDate,
+    author: post.author.name,
+    category: post.category,
+    tags: post.tags
+  };
+
+  const aiMetadata = {
+    purpose: 'Educate readers about AI search technology and its impact on digital transformation',
+    contentSummary: 'Comprehensive analysis of traditional vs AI search technologies, covering natural language processing, semantic retrieval, and SEO implications for brands.',
+    keywords: ['AI search', 'digital transformation', 'SEO strategy', 'machine learning', 'natural language processing', 'enterprise technology'],
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout pageTitle={post.title}>
-      <div className="min-h-screen bg-background">
+    <MainLayout 
+      pageTitle={post.title}
+      seoPage="blog-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
+      <article className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="mb-8">
+              <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <li>
+                  <Link to="/" className="hover:text-brand-600 transition-colors">Home</Link>
+                </li>
+                <li className="text-muted-foreground/50">/</li>
+                <li>
+                  <Link to="/insights" className="hover:text-brand-600 transition-colors">Insights</Link>
+                </li>
+                <li className="text-muted-foreground/50">/</li>
+                <li className="text-foreground font-medium" aria-current="page">
+                  {post.title.length > 50 ? post.title.substring(0, 50) + '...' : post.title}
+                </li>
+              </ol>
+            </nav>
+
             {/* Back button */}
             <Link 
-              to="/blog"
+              to="/insights"
               className="inline-flex items-center text-brand-400 hover:text-brand-500 mb-8 group"
             >
               <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
-              Back to Blog
+              Back to Insights
             </Link>
 
             {/* Article header */}
-            <div className="mb-8">
+            <header className="mb-8">
               <Badge className="mb-4">{post.category}</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">{post.title}</h1>
-            </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">{post.title}</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">{post.excerpt}</p>
+            </header>
 
             {/* Featured image */}
-            <div className="mb-8">
+            <figure className="mb-8">
               <img
                 src={post.featuredImage}
-                alt={post.title}
+                alt={`Featured image for ${post.title} - AI search vs traditional search analysis`}
                 className="w-full h-64 md:h-96 object-cover rounded-lg"
+                loading="eager"
+                width="800"
+                height="400"
               />
-            </div>
+              <figcaption className="sr-only">
+                Visual representation of AI search technology transformation
+              </figcaption>
+            </figure>
 
             {/* Author and meta information */}
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-8">
@@ -178,51 +226,74 @@ const TraditionalVsAISearchPage = () => {
             </div>
 
             {/* Article content */}
-            <div className="prose prose-lg max-w-none mb-12">
+            <section className="prose prose-lg max-w-none mb-12 prose-headings:scroll-mt-20" aria-label="Article content">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </div>
+            </section>
 
             {/* Tags */}
-            <div className="mb-8">
+            <section className="mb-8" aria-label="Article tags">
+              <h3 className="sr-only">Article Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">{tag}</Badge>
+                  <Badge key={tag} variant="secondary" aria-label={`Tag: ${tag}`}>{tag}</Badge>
                 ))}
               </div>
-            </div>
+            </section>
 
             {/* Share buttons */}
-            <Card className="mb-12">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Share2 className="h-5 w-5 mr-2" />
-                    <span className="font-medium">Share this article</span>
+            <section aria-label="Share article">
+              <Card className="mb-12">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Share2 className="h-5 w-5 mr-2" aria-hidden="true" />
+                      <span className="font-medium">Share this article</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        onClick={handleCopyLink}
+                        aria-label="Copy article link to clipboard"
+                      >
+                        <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
+                        Copy Link
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        onClick={() => handleShare('facebook')}
+                        aria-label="Share on Facebook"
+                      >
+                        <Facebook className="h-4 w-4 mr-1" aria-hidden="true" />
+                        Facebook
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        onClick={() => handleShare('twitter')}
+                        aria-label="Share on Twitter"
+                      >
+                        <Twitter className="h-4 w-4 mr-1" aria-hidden="true" />
+                        Twitter
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        onClick={() => handleShare('linkedin')}
+                        aria-label="Share on LinkedIn"
+                      >
+                        <Linkedin className="h-4 w-4 mr-1" aria-hidden="true" />
+                        LinkedIn
+                      </Button>
+                    </div>
                   </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" onClick={handleCopyLink}>
-                      <Copy className="h-4 w-4 mr-1" />
-                      Copy Link
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('facebook')}>
-                      <Facebook className="h-4 w-4 mr-1" />
-                      Facebook
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('twitter')}>
-                      <Twitter className="h-4 w-4 mr-1" />
-                      Twitter
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('linkedin')}>
-                      <Linkedin className="h-4 w-4 mr-1" />
-                      LinkedIn
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </section>
           </div>
         </div>
-      </div>
+      </article>
     </MainLayout>
   );
 };

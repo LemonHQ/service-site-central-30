@@ -32,17 +32,19 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: baseURL,
-        title: 'LemonHQ - Advancing digital plays for multi-market enterprise brands',
-        description: 'Digital-first experience services for enterprise brands - validate, design, launch and scale multi-market products.',
+        title: 'LemonHQ - Digital Transformation & Innovation Consulting for Enterprise',
+        description: 'Leading digital transformation consultancy helping enterprises build next-generation products, modernize architecture, and innovate with AI. Transform your business with proven methodologies.',
+        tags: ['digital transformation', 'innovation consulting', 'enterprise solutions', 'AI consulting', 'product digitalization']
       };
 
     case 'services':
       return {
         ...defaultSEO,
         url: `${baseURL}/services`,
-        title: 'Digital Services - LemonHQ',
-        description: 'Comprehensive digital transformation services including product digitalization, AI innovation, architecture modernization, and new experience design.',
+        title: 'Digital Transformation Services - Enterprise Solutions | LemonHQ',
+        description: 'Comprehensive digital transformation services: product digitalization, AI innovation, architecture modernization, and experience design. Proven solutions for enterprise success.',
         type: 'website',
+        tags: ['digital transformation services', 'enterprise consulting', 'AI solutions', 'product modernization', 'technology consulting']
       };
 
     case 'service-detail':
@@ -62,9 +64,10 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/case-studies`,
-        title: 'Case Studies - LemonHQ',
-        description: 'Explore how we\'ve helped organizations across industries transform their digital capabilities and achieve remarkable results.',
+        title: 'Case Studies - Digital Transformation Success Stories | LemonHQ',
+        description: 'Explore our portfolio of successful digital transformation projects across finance, healthcare, real estate, and retail. Real client results and innovation outcomes.',
         type: 'website',
+        tags: ['digital transformation case studies', 'client success stories', 'enterprise projects', 'innovation results', 'transformation outcomes']
       };
 
     case 'case-study-detail':
@@ -87,9 +90,10 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/insights`,
-        title: 'Insights - LemonHQ',
-        description: 'Expert perspectives on digital transformation, product strategy, and technological innovation.',
+        title: 'Insights & Blog - Digital Innovation Thought Leadership | LemonHQ',
+        description: 'Expert insights on AI search, digital transformation trends, innovation frameworks, and industry analysis. Stay ahead with actionable thought leadership content.',
         type: 'website',
+        tags: ['digital transformation insights', 'AI trends', 'innovation thought leadership', 'technology analysis', 'industry trends']
       };
 
     case 'blog-detail':
@@ -113,18 +117,82 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/about`,
-        title: 'About Us - LemonHQ',
-        description: 'Learn about LemonHQ\'s mission to help enterprise brands digitalize product lines and drive business growth through innovative solutions.',
+        title: 'About LemonHQ - Digital Transformation Experts & Innovation Leaders',
+        description: 'Meet the team behind successful digital transformations for leading enterprises. Learn about our mission, expertise, and proven approach to innovation consulting.',
         type: 'website',
+        tags: ['digital transformation experts', 'innovation consultants', 'enterprise technology leaders', 'consulting team']
       };
 
     case 'contact':
       return {
         ...defaultSEO,
         url: `${baseURL}/contact`,
-        title: 'Contact Us - LemonHQ',
-        description: 'Get in touch with LemonHQ to discuss your digital transformation needs. We\'re here to help you achieve your business goals.',
+        title: 'Contact LemonHQ - Start Your Digital Transformation Journey',
+        description: 'Ready to transform your business? Contact LemonHQ for expert digital transformation consulting. Schedule a consultation with our innovation specialists today.',
         type: 'website',
+        tags: ['contact digital transformation consultant', 'enterprise consulting services', 'innovation consultation']
+      };
+
+    // Industry pages
+    case 'finance':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/industries/finance`,
+        title: 'Financial Services Digital Transformation - Banking & Fintech Solutions | LemonHQ',
+        description: 'Specialized digital transformation services for banks, wealth management, and fintech companies. Modern solutions for financial services innovation and compliance.',
+        type: 'website',
+        tags: ['financial services digital transformation', 'banking technology', 'fintech solutions', 'regulatory compliance']
+      };
+
+    case 'healthcare':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/industries/healthcare`,
+        title: 'Healthcare Digital Transformation - Patient Experience & Medical Innovation | LemonHQ',
+        description: 'Transform healthcare delivery with digital patient experiences, medical device integration, and innovative health technology solutions.',
+        type: 'website',
+        tags: ['healthcare digital transformation', 'patient experience', 'medical technology', 'health innovation']
+      };
+
+    case 'retail':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/industries/retail`,
+        title: 'Retail Digital Transformation - E-commerce & Customer Experience | LemonHQ',
+        description: 'Modernize retail operations with omnichannel experiences, e-commerce platforms, and innovative customer engagement solutions.',
+        type: 'website',
+        tags: ['retail digital transformation', 'e-commerce solutions', 'omnichannel retail', 'customer experience']
+      };
+
+    case 'insurance':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/industries/insurance`,
+        title: 'Insurance Digital Transformation - Policy Management & Claims Processing | LemonHQ',
+        description: 'Transform insurance operations with digital policy management, automated claims processing, and enhanced customer self-service capabilities.',
+        type: 'website',
+        tags: ['insurance digital transformation', 'policy management', 'claims automation', 'insurtech solutions']
+      };
+
+    // Approach pages
+    case 'co-create':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/approach/co-create`,
+        title: 'Co-Create Approach - Collaborative Digital Transformation | LemonHQ',
+        description: 'Our collaborative co-creation methodology for building digital products and services that truly meet enterprise needs and deliver measurable results.',
+        type: 'website',
+        tags: ['co-creation methodology', 'collaborative development', 'digital product development', 'enterprise innovation']
+      };
+
+    case 'co-innovate':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/approach/co-innovate`,
+        title: 'Co-Innovate Approach - Rapid Innovation & Prototyping | LemonHQ',
+        description: 'Fast-track innovation with our co-innovation approach. Rapid prototyping, emerging technology pilots, and agile development for enterprise transformation.',
+        type: 'website',
+        tags: ['rapid innovation', 'technology prototyping', 'agile development', 'emerging technology', 'innovation methodology']
       };
 
     default:

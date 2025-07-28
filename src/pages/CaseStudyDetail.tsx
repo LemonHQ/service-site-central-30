@@ -91,9 +91,56 @@ const CaseStudyDetail: React.FC = () => {
     );
   }
   
+  // Enhanced SEO data
+  const seoData = {
+    caseStudy: caseStudy,
+    title: caseStudy.title,
+    client: caseStudy.client,
+    summary: caseStudy.summary,
+    industry: caseStudy.industry,
+    services: caseStudy.services,
+    featuredImage: caseStudy.featuredImage,
+    publishedTime: caseStudy.date
+  };
+
+  const aiMetadata = {
+    purpose: `Showcase successful digital transformation project for ${caseStudy.client} in ${caseStudy.industry} industry`,
+    contentSummary: `${caseStudy.summary} This case study demonstrates how LemonHQ helped ${caseStudy.client} achieve digital transformation success through ${caseStudy.services.join(', ').toLowerCase()}.`,
+    keywords: [
+      `${caseStudy.client.toLowerCase()}`,
+      `${caseStudy.industry.toLowerCase()} digital transformation`,
+      'case study',
+      'client success',
+      ...caseStudy.services.map(s => s.toLowerCase()),
+      'enterprise innovation'
+    ],
+    contentType: 'case-study' as const
+  };
+
   return (
-    <MainLayout>
-      <div className="container mx-auto px-4 py-8 md:py-12">
+    <MainLayout 
+      seoPage="case-study-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
+      <article className="container mx-auto px-4 py-8 md:py-12">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <li>
+              <Link to="/" className="hover:text-brand-600 transition-colors">Home</Link>
+            </li>
+            <li className="text-muted-foreground/50">/</li>
+            <li>
+              <Link to="/case-studies" className="hover:text-brand-600 transition-colors">Case Studies</Link>
+            </li>
+            <li className="text-muted-foreground/50">/</li>
+            <li className="text-foreground font-medium" aria-current="page">
+              {caseStudy.title.length > 40 ? caseStudy.title.substring(0, 40) + '...' : caseStudy.title}
+            </li>
+          </ol>
+        </nav>
+
         {/* Case Study Summary Section */}
         <CaseStudySummary caseStudy={caseStudy} />
         
@@ -129,7 +176,7 @@ const CaseStudyDetail: React.FC = () => {
         )}
 
         <ResponseSection />
-      </div>
+      </article>
     </MainLayout>
   );
 };

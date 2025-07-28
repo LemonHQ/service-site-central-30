@@ -10,36 +10,42 @@ interface ChallengeSectionProps {
 
 const ChallengeSection: React.FC<ChallengeSectionProps> = ({ caseStudy }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-      {/* Challenge */}
-      <div className="bg-gray-50 rounded-lg p-6 lg:p-8">
-        <H3 className="mb-4">The Challenge</H3>
-        <div 
-          className="text-gray-700"
-          dangerouslySetInnerHTML={{ __html: caseStudy.challenge }}
-        ></div>
+    <section className="mb-16" aria-label="Project overview">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Challenge */}
+        <article className="bg-gray-50 rounded-lg p-6 lg:p-8">
+          <h3 className="mb-4 text-2xl font-semibold text-foreground" id="challenge-section">The Challenge</h3>
+          <div 
+            className="text-gray-700 prose prose-sm max-w-none"
+            dangerouslySetInnerHTML={{ __html: caseStudy.challenge }}
+            aria-labelledby="challenge-section"
+          ></div>
+        </article>
+        
+        {/* Solution */}
+        <article className="bg-brand-50 rounded-lg p-6 lg:p-8">
+          <h3 className="mb-4 text-2xl font-semibold text-foreground" id="solution-section">Our Solution</h3>
+          <div 
+            className="text-gray-700 prose prose-sm max-w-none"
+            dangerouslySetInnerHTML={{ __html: caseStudy.solution }}
+            aria-labelledby="solution-section"
+          ></div>
+        </article>
+        
+        {/* Results */}
+        <article className="bg-green-50 rounded-lg p-6 lg:p-8">
+          <h3 className="mb-4 text-2xl font-semibold text-foreground flex items-center" id="results-section">
+            <Award className="mr-2 h-5 w-5 text-green-600" aria-hidden="true" /> 
+            Results
+          </h3>
+          <div 
+            className="text-gray-700 prose prose-sm max-w-none"
+            dangerouslySetInnerHTML={{ __html: caseStudy.results }}
+            aria-labelledby="results-section"
+          ></div>
+        </article>
       </div>
-      
-      {/* Solution */}
-      <div className="bg-brand-50 rounded-lg p-6 lg:p-8">
-        <H3 className="mb-4">Our Solution</H3>
-        <div 
-          className="text-gray-700"
-          dangerouslySetInnerHTML={{ __html: caseStudy.solution }}
-        ></div>
-      </div>
-      
-      {/* Results */}
-      <div className="bg-green-50 rounded-lg p-6 lg:p-8">
-        <H3 className="mb-4 flex items-center">
-          <Award className="mr-2 h-5 w-5 text-green-600" /> Results
-        </H3>
-        <div 
-          className="text-gray-700"
-          dangerouslySetInnerHTML={{ __html: caseStudy.results }}
-        ></div>
-      </div>
-    </div>
+    </section>
   );
 };
 
