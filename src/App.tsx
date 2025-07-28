@@ -121,9 +121,9 @@ const App = () => (
              <Route path="/case-studies/building-a-composable-digital-brand-engine" element={<BuildingComposableDigitalBrandEnginePage />} />
             
             {/* Individual insight pages */}
-            <Route path="/insight/personalization-a-usd-2-trillion-opportunity" element={<PersonalizationA2TrillionOpportunityPage />} />
-            <Route path="/insight/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage />} />
-            <Route path="/insight/how-generative-ai-is-reshaping-brand-and-product-discovery" element={<HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage />} />
+            <Route path="/insights/personalization-a-usd-2-trillion-opportunity" element={<PersonalizationA2TrillionOpportunityPage />} />
+            <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage />} />
+            <Route path="/insights/how-generative-ai-is-reshaping-brand-and-product-discovery" element={<HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage />} />
             
             {/* Keep the service structure routes for backward compatibility */}
             <Route path="/services/:serviceSlug" element={<MainServicePage />} />
@@ -132,13 +132,13 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/insights" element={<InsightsStatic />} />
-            <Route path="/insights-1" element={<Insights />} />
+            {/* <Route path="/insights-1" element={<Insights />} /> */}
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} />
             <Route path="/insights/:postId" element={<BlogDetail />} />
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
         <Route path="/case-studies" element={<CaseStudiesStatic />} />
-        <Route path="/case-studies-1" element={<CaseStudies />} />
+        {/* <Route path="/case-studies-1" element={<CaseStudies />} /> */}
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
             <Route path="/getting-started" element={<GettingStarted />} />
             <Route path="/lead-qualification" element={<GettingStarted />} />
