@@ -124,7 +124,7 @@ const App = () => (
             <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} />
             <Route path="/insights/:postId" element={<BlogDetail />} />
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies-1" element={<CaseStudies />} />
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
             <Route path="/getting-started" element={<GettingStarted />} />
             <Route path="/lead-qualification" element={<GettingStarted />} />

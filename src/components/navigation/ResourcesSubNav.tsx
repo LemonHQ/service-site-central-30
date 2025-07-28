@@ -19,7 +19,7 @@ const ResourcesSubNav: React.FC = () => {
     },
     { 
       name: "Case Studies", 
-      path: "/case-studies", 
+      path: "/case-studies-1", 
       description: "Real-world transformation success stories",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
@@ -35,7 +35,7 @@ const ResourcesSubNav: React.FC = () => {
     <NavigationMenuItem>
       <NavigationMenuTrigger 
         className={`${location.pathname.includes('/insights') || 
-          location.pathname.includes('/case-studies') || 
+          location.pathname.includes('/case-studies-1') || 
           location.pathname.includes('/blog') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
       >
         Resources
