@@ -1,6 +1,8 @@
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const PersonalizationA2TrillionOpportunityPage = () => {
   const post = blogPosts.find(p => p.id === 'personalization-a-usd-2-trillion-opportunity');
@@ -13,6 +15,11 @@ const PersonalizationA2TrillionOpportunityPage = () => {
     <MainLayout pageTitle={post.title}>
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16">
+          <div className="mb-6">
+            <Link to="/insights" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Insights
+            </Link>
+          </div>
           <article className="max-w-4xl mx-auto">
             {/* Header */}
             <header className="mb-12">
