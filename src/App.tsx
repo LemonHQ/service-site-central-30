@@ -70,6 +70,12 @@ import PersonalizationA2TrillionOpportunityPage from "./pages/insight/Personaliz
 import ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage from "./pages/insight/ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage";
 import HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage from "./pages/insight/HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage";
 
+// Import blogger page components
+import TraditionalVsAISearchPage from "./pages/blogger/TraditionalVsAISearchPage";
+import ConsultingIndustryEvolutionPage from "./pages/blogger/ConsultingIndustryEvolutionPage";
+import InnovationFrameworks2024Page from "./pages/blogger/InnovationFrameworks2024Page";
+import DigitalLeadershipSkillsPage from "./pages/blogger/DigitalLeadershipSkillsPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -124,6 +130,12 @@ const App = () => (
             <Route path="/insights/personalization-a-usd-2-trillion-opportunity" element={<PersonalizationA2TrillionOpportunityPage />} />
             <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage />} />
             <Route path="/insights/how-generative-ai-is-reshaping-brand-and-product-discovery" element={<HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage />} />
+            
+            {/* Blogger routes */}
+            <Route path="/blogger/traditional-vs-ai-search" element={<TraditionalVsAISearchPage />} />
+            <Route path="/blogger/consulting-industry-evolution" element={<ConsultingIndustryEvolutionPage />} />
+            <Route path="/blogger/innovation-frameworks-2024" element={<InnovationFrameworks2024Page />} />
+            <Route path="/blogger/digital-leadership-skills" element={<DigitalLeadershipSkillsPage />} />
             
             {/* Keep the service structure routes for backward compatibility */}
             <Route path="/services/:serviceSlug" element={<MainServicePage />} />

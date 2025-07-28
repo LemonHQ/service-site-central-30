@@ -60,7 +60,12 @@ const routesToPrerender = [
   // Individual insight pages
   '/insights/personalization-a-usd-2-trillion-opportunity',
   '/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies',
-  '/insights/how-generative-ai-is-reshaping-brand-and-product-discovery'
+  '/insights/how-generative-ai-is-reshaping-brand-and-product-discovery',
+  // Individual blogger pages
+  '/blogger/traditional-vs-ai-search',
+  '/blogger/consulting-industry-evolution',
+  '/blogger/innovation-frameworks-2024',
+  '/blogger/digital-leadership-skills'
   // NOTE: Dynamic routes like /blog/:postId and /case-studies/:caseStudyId 
   // need to be added manually when creating new content
 ]
