@@ -104,14 +104,14 @@ const App = () => (
             <Route path="/disclaimer" element={<Disclaimer />} />
             
             {/* Individual case study pages */}
-            <Route path="/case-study/standardizing-motor-insurance-for-a-digital-future" element={<StandardizingMotorInsurancePage />} />
-            <Route path="/case-study/reimagining-patient-experience" element={<ReimaginingPatientExperiencePage />} />
-            <Route path="/case-study/driving-multi-market-d2c-sales" element={<DrivingMultiMarketD2CSalesPage />} />
-            <Route path="/case-study/digital-policy-and-claims-using-ai" element={<DigitalPolicyAndClaimsUsingAIPage />} />
-            <Route path="/case-study/how-abdul-latif-jameel-established-its-market-leadership" element={<AbdulLatifJameelMarketLeadershipPage />} />
-            <Route path="/case-study/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem" element={<MeraasRewardsEcosystemPage />} />
-            <Route path="/case-study/standardizing-intellectual-property-management" element={<StandardizingIntellectualPropertyPage />} />
-            <Route path="/case-study/building-a-composable-digital-brand-engine" element={<BuildingComposableDigitalBrandEnginePage />} />
+             <Route path="/case-studies/standardizing-motor-insurance-for-a-digital-future" element={<StandardizingMotorInsurancePage />} />
+             <Route path="/case-studies/reimagining-patient-experience" element={<ReimaginingPatientExperiencePage />} />
+             <Route path="/case-studies/driving-multi-market-d2c-sales" element={<DrivingMultiMarketD2CSalesPage />} />
+             <Route path="/case-studies/digital-policy-and-claims-using-ai" element={<DigitalPolicyAndClaimsUsingAIPage />} />
+             <Route path="/case-studies/how-abdul-latif-jameel-established-its-market-leadership" element={<AbdulLatifJameelMarketLeadershipPage />} />
+             <Route path="/case-studies/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem" element={<MeraasRewardsEcosystemPage />} />
+             <Route path="/case-studies/standardizing-intellectual-property-management" element={<StandardizingIntellectualPropertyPage />} />
+             <Route path="/case-studies/building-a-composable-digital-brand-engine" element={<BuildingComposableDigitalBrandEnginePage />} />
             
             {/* Keep the service structure routes for backward compatibility */}
             <Route path="/services/:serviceSlug" element={<MainServicePage />} />

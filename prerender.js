@@ -47,14 +47,14 @@ const routesToPrerender = [
   '/thank-you',
   '/cv-submission',
   // Individual case study pages
-  '/case-study/standardizing-motor-insurance-for-a-digital-future',
-  '/case-study/reimagining-patient-experience',
-  '/case-study/driving-multi-market-d2c-sales',
-  '/case-study/digital-policy-and-claims-using-ai',
-  '/case-study/how-abdul-latif-jameel-established-its-market-leadership',
-  '/case-study/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
-  '/case-study/standardizing-intellectual-property-management',
-  '/case-study/building-a-composable-digital-brand-engine'
+  '/case-studies/standardizing-motor-insurance-for-a-digital-future',
+  '/case-studies/reimagining-patient-experience',
+  '/case-studies/driving-multi-market-d2c-sales',
+  '/case-studies/digital-policy-and-claims-using-ai',
+  '/case-studies/how-abdul-latif-jameel-established-its-market-leadership',
+  '/case-studies/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
+  '/case-studies/standardizing-intellectual-property-management',
+  '/case-studies/building-a-composable-digital-brand-engine'
   // NOTE: Dynamic routes like /blog/:postId and /case-studies/:caseStudyId 
   // need to be added manually when creating new content
 ]
