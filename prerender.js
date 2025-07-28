@@ -42,7 +42,6 @@ const routesToPrerender = [
   '/insights',
   // '/insights-1',
   '/blog',
-  '/blog-1',
   '/case-studies',
   // '/case-studies-1',
   '/getting-started',
