@@ -58,9 +58,9 @@ const routesToPrerender = [
   '/case-studies/standardizing-intellectual-property-management',
   '/case-studies/building-a-composable-digital-brand-engine',
   // Individual insight pages
-  '/insight/personalization-a-usd-2-trillion-opportunity',
-  '/insight/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies',
-  '/insight/how-generative-ai-is-reshaping-brand-and-product-discovery'
+  '/insights/personalization-a-usd-2-trillion-opportunity',
+  '/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies',
+  '/insights/how-generative-ai-is-reshaping-brand-and-product-discovery'
   // NOTE: Dynamic routes like /blog/:postId and /case-studies/:caseStudyId 
   // need to be added manually when creating new content
 ]
