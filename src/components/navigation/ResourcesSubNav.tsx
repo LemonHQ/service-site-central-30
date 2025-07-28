@@ -28,28 +28,28 @@ const ResourcesSubNav: React.FC = () => {
       path: "/blog", 
       description: "Thought leadership and industry trends",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      subItems: [
-        {
-          name: "AI Search Revolution",
-          path: "/blog/traditional-vs-ai-search",
-          description: "How brands are perceived by AI content consumers"
-        },
-        {
-          name: "Consulting Evolution",
-          path: "/blog/consulting-industry-evolution", 
-          description: "Digital transformation in consulting firms"
-        },
-        {
-          name: "Innovation Frameworks",
-          path: "/blog/innovation-frameworks-2024",
-          description: "Enterprise scale innovation methodologies"
-        },
-        {
-          name: "Digital Leadership",
-          path: "/blog/digital-leadership-skills",
-          description: "Essential skills for transformation leaders"
-        }
-      ]
+      // subItems: [
+      //   {
+      //     name: "AI Search Revolution",
+      //     path: "/blog/traditional-vs-ai-search",
+      //     description: "How brands are perceived by AI content consumers"
+      //   },
+      //   {
+      //     name: "Consulting Evolution",
+      //     path: "/blog/consulting-industry-evolution", 
+      //     description: "Digital transformation in consulting firms"
+      //   },
+      //   {
+      //     name: "Innovation Frameworks",
+      //     path: "/blog/innovation-frameworks-2024",
+      //     description: "Enterprise scale innovation methodologies"
+      //   },
+      //   {
+      //     name: "Digital Leadership",
+      //     path: "/blog/digital-leadership-skills",
+      //     description: "Essential skills for transformation leaders"
+      //   }
+      // ]
     }
   ];
 
