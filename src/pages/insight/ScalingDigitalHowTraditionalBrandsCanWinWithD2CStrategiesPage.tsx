@@ -1,6 +1,8 @@
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage = () => {
   const post = blogPosts.find(p => p.id === 'scaling-digital-how-traditional-brands-can-win-with-d2c-strategies');
@@ -14,6 +16,11 @@ const ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage = () => {
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16">
           <article className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <Link to="/insights" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Insights
+              </Link>
+            </div>
             {/* Header */}
             <header className="mb-12">
               {post.featuredImage && (

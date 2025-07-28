@@ -12,16 +12,15 @@ const HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage = () => {
   }
 
   return (
-    
     <MainLayout pageTitle={post.title}>
-      <div className="mb-6">
-        <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
-        </Link>
-      </div>
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16">
           <article className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <Link to="/insights" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Insights
+              </Link>
+            </div>
             {/* Header */}
             <header className="mb-12">
               {post.featuredImage && (
