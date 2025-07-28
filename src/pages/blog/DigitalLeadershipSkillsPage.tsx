@@ -79,7 +79,7 @@ const DigitalLeadershipSkillsPage = () => {
             {/* Back button */}
             <Link 
               to="/blog"
-              className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group"
+              className="inline-flex items-center text-brand-400 hover:text-brand-500 mb-8 group"
             >
               <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to Blog
