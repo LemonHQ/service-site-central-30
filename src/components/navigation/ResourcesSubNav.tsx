@@ -35,7 +35,7 @@ const ResourcesSubNav: React.FC = () => {
     <NavigationMenuItem>
       <NavigationMenuTrigger 
         className={`${location.pathname.includes('/insights') || 
-          location.pathname.includes('/case-studies-1') || 
+          location.pathname.includes('/case-studies') || 
           location.pathname.includes('/blog') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
       >
         Resources
