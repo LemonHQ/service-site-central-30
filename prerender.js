@@ -45,7 +45,16 @@ const routesToPrerender = [
   '/getting-started',
   '/lead-qualification',
   '/thank-you',
-  '/cv-submission'
+  '/cv-submission',
+  // Individual case study pages
+  '/case-study/standardizing-motor-insurance-for-a-digital-future',
+  '/case-study/reimagining-patient-experience',
+  '/case-study/driving-multi-market-d2c-sales',
+  '/case-study/digital-policy-and-claims-using-ai',
+  '/case-study/how-abdul-latif-jameel-established-its-market-leadership',
+  '/case-study/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem',
+  '/case-study/standardizing-intellectual-property-management',
+  '/case-study/building-a-composable-digital-brand-engine'
   // NOTE: Dynamic routes like /blog/:postId and /case-studies/:caseStudyId 
   // need to be added manually when creating new content
 ]
