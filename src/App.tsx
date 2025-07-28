@@ -147,10 +147,10 @@ const App = () => (
             <Route path="/insights" element={<InsightsStatic />} />
             {/* <Route path="/insights-1" element={<Insights />} /> */}
             <Route path="/blog" element={<BlogStaticPage />} />
-            <Route path="/blog-1" element={<BlogPage />} />
+            {/* <Route path="/blog-1" element={<BlogPage />} /> */}
             {/* <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} /> */}
             {/* <Route path="/insights/:postId" element={<BlogDetail />} /> */}
-            <Route path="/blog/:postId" element={<BlogDetailPage />} />
+            {/* <Route path="/blog/:postId" element={<BlogDetailPage />} /> */}
         <Route path="/case-studies" element={<CaseStudiesStatic />} />
         {/* <Route path="/case-studies-1" element={<CaseStudies />} /> */}
             {/* <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} /> */}

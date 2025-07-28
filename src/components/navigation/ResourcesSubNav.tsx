@@ -25,7 +25,7 @@ const ResourcesSubNav: React.FC = () => {
     },
     { 
       name: "Blog", 
-      path: "/blog-1", 
+      path: "/blog", 
       description: "Thought leadership and industry trends",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       subItems: [
