@@ -38,6 +38,15 @@ const isConsentExpired = (timestamp: number): boolean => {
 
 // Get current consent state
 export const getCookieConsent = (): CookieConsentState => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+    return {
+      hasConsented: false,
+      preferences: defaultPreferences,
+      showBanner: true,
+    };
+  }
+
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) {
@@ -78,6 +87,11 @@ export const getCookieConsent = (): CookieConsentState => {
 
 // Save consent preferences
 export const saveCookieConsent = (preferences: Omit<CookiePreferences, 'timestamp'>): void => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+    return;
+  }
+
   try {
     const consentData: CookiePreferences = {
       ...preferences,
@@ -118,6 +132,11 @@ export const acceptEssentialOnly = (): void => {
 
 // Clear all consent data (for testing or reset)
 export const clearCookieConsent = (): void => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+    return;
+  }
+
   localStorage.removeItem(STORAGE_KEY);
   window.dispatchEvent(new CustomEvent('cookieConsentChanged', { 
     detail: defaultPreferences 
