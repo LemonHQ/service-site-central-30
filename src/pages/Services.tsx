@@ -11,7 +11,16 @@ import { SectionTitle } from '@/components/ui/Typography';
 
 const Services = () => {
   return (
-    <MainLayout>
+    <MainLayout 
+      pageTitle="Services"
+      seoPage="services"
+      aiMetadata={{
+        purpose: "Service catalog showcasing LemonHQ's digital transformation offerings",
+        contentSummary: "Comprehensive digital services including product digitalization, AI innovation, architecture modernization, experience design, and new venture launches",
+        contentType: "service",
+        keywords: ["digital services", "enterprise solutions", "AI innovation", "cloud migration", "product development"]
+      }}
+    >
       <PageHero
         title="Our Services"
         subtitle="We offer a comprehensive suite of digital product services to help enterprises validate, design, launch, and scale products that drive business growth."

@@ -1,0 +1,333 @@
+import { caseStudies } from '@/data/caseStudies';
+import { blogPosts } from '@/data/blogPosts';
+import { mainServices, subServices } from '@/data/services';
+
+export interface SEOMetadata {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'profile';
+  siteName?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
+const defaultSEO: SEOMetadata = {
+  title: 'LemonHQ - Digital Product Services for Enterprise Brands',
+  description: 'Digital product services for enterprise brands - validate, design, launch and scale products that drive business growth.',
+  image: '/assets/imgs/flying-paper-planes-hero-image.png',
+  type: 'website',
+  siteName: 'LemonHQ',
+};
+
+export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
+  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co';
+
+  switch (page) {
+    case 'home':
+      return {
+        ...defaultSEO,
+        url: baseURL,
+        title: 'LemonHQ - Advancing digital plays for multi-market enterprise brands',
+        description: 'Digital-first experience services for enterprise brands - validate, design, launch and scale multi-market products.',
+      };
+
+    case 'services':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/services`,
+        title: 'Digital Services - LemonHQ',
+        description: 'Comprehensive digital transformation services including product digitalization, AI innovation, architecture modernization, and new experience design.',
+        type: 'website',
+      };
+
+    case 'service-detail':
+      if (data?.service) {
+        return {
+          ...defaultSEO,
+          url: `${baseURL}/services/${data.service.slug}`,
+          title: `${data.service.title} - LemonHQ`,
+          description: data.service.shortDescription || data.service.description,
+          image: data.service.coverImage || defaultSEO.image,
+          type: 'website',
+        };
+      }
+      break;
+
+    case 'case-studies':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/case-studies`,
+        title: 'Case Studies - LemonHQ',
+        description: 'Explore how we\'ve helped organizations across industries transform their digital capabilities and achieve remarkable results.',
+        type: 'website',
+      };
+
+    case 'case-study-detail':
+      if (data?.caseStudy) {
+        return {
+          ...defaultSEO,
+          url: `${baseURL}/case-studies/${data.caseStudy.id}`,
+          title: `${data.caseStudy.title} - ${data.caseStudy.client} Case Study`,
+          description: data.caseStudy.summary,
+          image: data.caseStudy.featuredImage || defaultSEO.image,
+          type: 'article',
+          publishedTime: data.caseStudy.date,
+          section: 'Case Studies',
+          tags: [data.caseStudy.industry, ...data.caseStudy.services],
+        };
+      }
+      break;
+
+    case 'insights':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/insights`,
+        title: 'Insights - LemonHQ',
+        description: 'Expert perspectives on digital transformation, product strategy, and technological innovation.',
+        type: 'website',
+      };
+
+    case 'blog-detail':
+      if (data?.post) {
+        return {
+          ...defaultSEO,
+          url: `${baseURL}/insights/${data.post.id}`,
+          title: `${data.post.title} - LemonHQ Insights`,
+          description: data.post.excerpt,
+          image: data.post.featuredImage || defaultSEO.image,
+          type: 'article',
+          publishedTime: data.post.publishDate,
+          author: data.post.author.name,
+          section: 'Insights',
+          tags: [data.post.category],
+        };
+      }
+      break;
+
+    case 'about':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/about`,
+        title: 'About Us - LemonHQ',
+        description: 'Learn about LemonHQ\'s mission to help enterprise brands digitalize product lines and drive business growth through innovative solutions.',
+        type: 'website',
+      };
+
+    case 'contact':
+      return {
+        ...defaultSEO,
+        url: `${baseURL}/contact`,
+        title: 'Contact Us - LemonHQ',
+        description: 'Get in touch with LemonHQ to discuss your digital transformation needs. We\'re here to help you achieve your business goals.',
+        type: 'website',
+      };
+
+    default:
+      return defaultSEO;
+  }
+
+  return defaultSEO;
+};
+
+export const generateStructuredData = (type: string, data?: any) => {
+  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co';
+
+  switch (type) {
+    case 'organization':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'LemonHQ',
+        url: baseURL,
+        logo: `${baseURL}/assets/imgs/android-chrome-512x512.png`,
+        description: 'Digital product services for enterprise brands - validate, design, launch and scale products that drive business growth.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '167-169 Great Portland Street',
+          addressLocality: 'London',
+          postalCode: 'W1W 5PF',
+          addressCountry: 'GB',
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+44-020-7907-5090',
+          contactType: 'Business',
+          email: 'hello@lemonhq.co',
+        },
+        sameAs: [
+          'https://linkedin.com/company/lemonhq',
+          'https://twitter.com/lemonhq',
+        ],
+      };
+
+    case 'website':
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'LemonHQ',
+        url: baseURL,
+        description: 'Digital product services for enterprise brands',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${baseURL}/search?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
+      };
+
+    case 'article':
+      if (data?.post) {
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: data.post.title,
+          description: data.post.excerpt,
+          image: data.post.featuredImage,
+          datePublished: data.post.publishDate,
+          dateModified: data.post.publishDate,
+          author: {
+            '@type': 'Person',
+            name: data.post.author.name,
+            image: data.post.author.avatar,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'LemonHQ',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseURL}/assets/imgs/android-chrome-512x512.png`,
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${baseURL}/insights/${data.post.id}`,
+          },
+        };
+      }
+      break;
+
+    case 'case-study':
+      if (data?.caseStudy) {
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: data.caseStudy.title,
+          description: data.caseStudy.summary,
+          image: data.caseStudy.featuredImage,
+          datePublished: data.caseStudy.date,
+          dateModified: data.caseStudy.date,
+          author: {
+            '@type': 'Organization',
+            name: 'LemonHQ',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'LemonHQ',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseURL}/assets/imgs/android-chrome-512x512.png`,
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${baseURL}/case-studies/${data.caseStudy.id}`,
+          },
+          about: {
+            '@type': 'Thing',
+            name: data.caseStudy.client,
+          },
+          keywords: [data.caseStudy.industry, ...data.caseStudy.services].join(','),
+        };
+      }
+      break;
+
+    case 'service':
+      if (data?.service) {
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: data.service.title,
+          description: data.service.description,
+          provider: {
+            '@type': 'Organization',
+            name: 'LemonHQ',
+          },
+          serviceType: 'Digital Transformation',
+          areaServed: {
+            '@type': 'Place',
+            name: 'Global',
+          },
+        };
+      }
+      break;
+
+    default:
+      return null;
+  }
+
+  return null;
+};
+
+export const generateSitemap = () => {
+  const baseURL = 'https://lemonhq.co';
+  const currentDate = new Date().toISOString();
+  
+  const staticPages = [
+    { url: '/', priority: '1.0', changefreq: 'weekly' },
+    { url: '/services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/case-studies', priority: '0.9', changefreq: 'weekly' },
+    { url: '/insights', priority: '0.9', changefreq: 'weekly' },
+    { url: '/about', priority: '0.8', changefreq: 'monthly' },
+    { url: '/contact', priority: '0.8', changefreq: 'monthly' },
+  ];
+
+  const servicePages = mainServices.map(service => ({
+    url: `/services/${service.slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+  }));
+
+  const subServicePages = subServices.map(service => ({
+    url: `/services/${service.slug}`,
+    priority: '0.7',
+    changefreq: 'monthly',
+  }));
+
+  const caseStudyPages = caseStudies.map(caseStudy => ({
+    url: `/case-studies/${caseStudy.id}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: caseStudy.date,
+  }));
+
+  const blogPages = blogPosts.map(post => ({
+    url: `/insights/${post.id}`,
+    priority: '0.7',
+    changefreq: 'monthly',
+    lastmod: post.publishDate,
+  }));
+
+  const allPages = [
+    ...staticPages,
+    ...servicePages,
+    ...subServicePages,
+    ...caseStudyPages,
+    ...blogPages,
+  ];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allPages.map(page => `  <url>
+    <loc>${baseURL}${page.url}</loc>
+    <lastmod>${'lastmod' in page ? page.lastmod : currentDate}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  return sitemap;
+};

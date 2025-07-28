@@ -1,14 +1,61 @@
+# Robots.txt for LemonHQ
+# Allow all major search engines and AI crawlers
+
+# Google Search & Bard AI
 User-agent: Googlebot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# Bing Search & Copilot AI
 User-agent: Bingbot
 Allow: /
 
+# OpenAI ChatGPT & GPT crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OpenAIBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Claude AI (Anthropic)
+User-agent: Claude-Web
+Allow: /
+
+# Social media crawlers
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# Other AI assistants
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Generic AI crawlers
+User-agent: AI2Bot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# All other crawlers
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://lemonhq.co/sitemap.xml
+
+# Crawl delay to be respectful
+Crawl-delay: 1

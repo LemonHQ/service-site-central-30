@@ -12,7 +12,16 @@ const Contact = () => {
   const [bookingDialogOpen, setBookingDialogOpen] = useState(false);
 
   return (
-    <MainLayout>
+    <MainLayout 
+      pageTitle="Contact"
+      seoPage="contact"
+      aiMetadata={{
+        purpose: "Contact page for business inquiries and consultation requests",
+        contentSummary: "Contact information and form for potential clients to reach LemonHQ for digital transformation services",
+        contentType: "contact",
+        keywords: ["contact LemonHQ", "digital transformation consultation", "business inquiry", "enterprise services"]
+      }}
+    >
       <PageHero
         title="Contact Us"
         subtitle="Let's discuss how we can help transform your digital product strategy."

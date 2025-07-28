@@ -29,7 +29,15 @@ const CaseStudies: React.FC = () => {
   }, [selectedIndustry]);
   
   return (
-    <MainLayout>
+    <MainLayout
+      seoPage="case-studies"
+      aiMetadata={{
+        purpose: "Case studies showcasing successful digital transformation projects",
+        contentSummary: "Real-world examples of digital transformation success stories across industries including finance, healthcare, real estate, and enterprise",
+        contentType: "case-study",
+        keywords: ["case studies", "digital transformation", "client success", "enterprise solutions", "business results"]
+      }}
+    >
       <PageHero
         title="Case Studies"
         subtitle="Explore how we've helped organizations across industries transform their digital capabilities and achieve remarkable results."

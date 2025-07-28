@@ -26,7 +26,16 @@ const Insights = () => {
   }, [selectedCategory]);
 
   return (
-    <MainLayout pageTitle="Insights">
+    <MainLayout 
+      pageTitle="Insights"
+      seoPage="insights"
+      aiMetadata={{
+        purpose: "Blog and insights section featuring expert perspectives on digital transformation",
+        contentSummary: "Expert articles on digital transformation, product strategy, AI innovation, and technological trends for enterprise leaders",
+        contentType: "article",
+        keywords: ["digital transformation insights", "product strategy", "AI trends", "technology articles", "business innovation"]
+      }}
+    >
       <PageHero
         title="Insights"
         subtitle="Expert perspectives on digital transformation, product strategy, and technological innovation."

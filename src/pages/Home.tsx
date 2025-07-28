@@ -18,7 +18,15 @@ import ICPPanel from '../components/homepage/ICPPanel';
 
 const Home = () => {
   return (
-    <MainLayout>
+    <MainLayout 
+      seoPage="home"
+      aiMetadata={{
+        purpose: "Homepage showcasing LemonHQ's digital transformation services for enterprise brands",
+        contentSummary: "Digital product services company offering product digitalization, AI innovation, architecture modernization, and experience design for enterprise clients",
+        contentType: "homepage",
+        keywords: ["digital transformation", "enterprise services", "product development", "AI innovation", "business growth"]
+      }}
+    >
       {/* Full Page Spotlight Carousel */}
       <SpotlightCarousel />
       
