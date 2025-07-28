@@ -8,33 +8,33 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
 
-const DigitalLeadershipSkillsPage = () => {
+const InnovationFrameworks2024Page = () => {
   const post = {
-    id: "digital-leadership-skills",
-    title: "Essential Skills for Digital Transformation Leaders",
-    excerpt: "The key competencies and skills that digital transformation leaders need to succeed in today's enterprise environment.",
+    id: "innovation-frameworks-2024",
+    title: "Innovation Frameworks for Enterprise Scale",
+    excerpt: "Proven frameworks and methodologies for driving innovation at enterprise scale in 2024 and beyond.",
     content: `
-      <p>Digital transformation leadership requires a unique blend of technical understanding, strategic thinking, and people management skills.</p>
+      <p>Innovation at enterprise scale requires structured approaches and proven frameworks that can deliver consistent results.</p>
       
-      <h3>Technical Acumen</h3>
-      <p>Leaders need sufficient technical knowledge to make informed decisions about technology investments and capabilities.</p>
+      <h3>Structured Innovation Processes</h3>
+      <p>Successful enterprises are implementing systematic approaches to innovation that balance creativity with execution.</p>
       
-      <h3>Change Management</h3>
-      <p>Successfully leading digital transformation requires expertise in organizational change management and culture transformation.</p>
+      <h3>Cross-Functional Collaboration</h3>
+      <p>Breaking down silos and fostering collaboration across departments is essential for innovation success.</p>
       
-      <h3>Strategic Vision</h3>
-      <p>The ability to translate business strategy into digital initiatives is fundamental to transformation success.</p>
+      <h3>Measuring Innovation Impact</h3>
+      <p>Developing metrics and KPIs to track innovation outcomes and ROI is crucial for sustained investment.</p>
     `,
-    featuredImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    date: "2024-01-08",
-    publishDate: "2024-01-08",
-    readTime: 5,
-    category: "Leadership",
-    tags: ["Leadership", "Skills", "Digital Transformation", "Management"],
+    featuredImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    date: "2024-01-10",
+    publishDate: "2024-01-10",
+    readTime: 7,
+    category: "Innovation",
+    tags: ["Innovation", "Enterprise", "Frameworks", "Strategy"],
     author: {
-      name: "Robert Williams",
-      avatar: "/assets/imgs/husain-profile.jpg",
-      role: "Transformation Lead"
+      name: "Dr. Emily Chen",
+      avatar: "/assets/imgs/abdul-profile.jpg",
+      role: "Innovation Consultant"
     }
   };
 
@@ -78,7 +78,7 @@ const DigitalLeadershipSkillsPage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Back button */}
             <Link 
-              to="/blog-1" 
+              to="/blog-1"
               className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group"
             >
               <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
@@ -98,7 +98,7 @@ const DigitalLeadershipSkillsPage = () => {
                   </Avatar>
                   <div>
                     <div className="font-medium text-foreground">{post.author.name}</div>
-                    <div className="text-text-sm">{post.author.role}</div>
+                    <div className="text-sm">{post.author.role}</div>
                   </div>
                 </div>
                 
@@ -170,4 +170,4 @@ const DigitalLeadershipSkillsPage = () => {
   );
 };
 
-export default DigitalLeadershipSkillsPage;
+export default InnovationFrameworks2024Page;

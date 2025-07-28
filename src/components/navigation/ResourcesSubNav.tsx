@@ -31,22 +31,22 @@ const ResourcesSubNav: React.FC = () => {
       subItems: [
         {
           name: "AI Search Revolution",
-          path: "/blogger/traditional-vs-ai-search",
+          path: "/blog/traditional-vs-ai-search",
           description: "How brands are perceived by AI content consumers"
         },
         {
           name: "Consulting Evolution",
-          path: "/blogger/consulting-industry-evolution", 
+          path: "/blog/consulting-industry-evolution", 
           description: "Digital transformation in consulting firms"
         },
         {
           name: "Innovation Frameworks",
-          path: "/blogger/innovation-frameworks-2024",
+          path: "/blog/innovation-frameworks-2024",
           description: "Enterprise scale innovation methodologies"
         },
         {
           name: "Digital Leadership",
-          path: "/blogger/digital-leadership-skills",
+          path: "/blog/digital-leadership-skills",
           description: "Essential skills for transformation leaders"
         }
       ]
@@ -58,8 +58,7 @@ const ResourcesSubNav: React.FC = () => {
       <NavigationMenuTrigger 
         className={`${location.pathname.includes('/insights') || 
           location.pathname.includes('/case-studies') || 
-          location.pathname.includes('/blog-1') ||
-          location.pathname.includes('/blogger') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
+          location.pathname.includes('/blog') ? 'text-brand-600 font-medium' : ''} h-10 px-4 py-2 text-sm font-medium`}
       >
         Resources
       </NavigationMenuTrigger>
