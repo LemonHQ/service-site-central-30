@@ -134,7 +134,7 @@ const App = () => (
             <Route path="/insights" element={<InsightsStatic />} />
             {/* <Route path="/insights-1" element={<Insights />} /> */}
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} />
+            {/* <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} /> */}
             <Route path="/insights/:postId" element={<BlogDetail />} />
             <Route path="/blog/:postId" element={<BlogDetailPage />} />
         <Route path="/case-studies" element={<CaseStudiesStatic />} />
