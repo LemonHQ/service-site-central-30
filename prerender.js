@@ -39,6 +39,7 @@ const routesToPrerender = [
   // General pages
   '/about',
   '/contact',
+  '/insights',
   '/insights-1',
   '/blog',
   '/case-studies',

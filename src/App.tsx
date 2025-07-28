@@ -18,6 +18,7 @@ import BlogDetail from "./pages/BlogDetail";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import Insights from "./pages/Insights";
+import InsightsStatic from "./pages/InsightsStatic";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudiesStatic from "./pages/CaseStudiesStatic";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
@@ -130,6 +131,7 @@ const App = () => (
             
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/insights" element={<InsightsStatic />} />
             <Route path="/insights-1" element={<Insights />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<BlogDetail />} />
