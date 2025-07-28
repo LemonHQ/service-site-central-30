@@ -1,6 +1,8 @@
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage = () => {
   const post = blogPosts.find(p => p.id === 'how-generative-ai-is-reshaping-brand-and-product-discovery');
