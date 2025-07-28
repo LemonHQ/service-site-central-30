@@ -64,6 +64,11 @@ import MeraasRewardsEcosystemPage from "./pages/case-study/MeraasRewardsEcosyste
 import StandardizingIntellectualPropertyPage from "./pages/case-study/StandardizingIntellectualPropertyPage";
 import BuildingComposableDigitalBrandEnginePage from "./pages/case-study/BuildingComposableDigitalBrandEnginePage";
 
+// Import individual insight pages
+import PersonalizationA2TrillionOpportunityPage from "./pages/insight/PersonalizationA2TrillionOpportunityPage";
+import ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage from "./pages/insight/ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage";
+import HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage from "./pages/insight/HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -113,6 +118,11 @@ const App = () => (
              <Route path="/case-studies/how-meraas-used-a-live-pilot-to-strategize-the-next-major-rewards-ecosystem" element={<MeraasRewardsEcosystemPage />} />
              <Route path="/case-studies/standardizing-intellectual-property-management" element={<StandardizingIntellectualPropertyPage />} />
              <Route path="/case-studies/building-a-composable-digital-brand-engine" element={<BuildingComposableDigitalBrandEnginePage />} />
+            
+            {/* Individual insight pages */}
+            <Route path="/insight/personalization-a-usd-2-trillion-opportunity" element={<PersonalizationA2TrillionOpportunityPage />} />
+            <Route path="/insight/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies" element={<ScalingDigitalHowTraditionalBrandsCanWinWithD2CStrategiesPage />} />
+            <Route path="/insight/how-generative-ai-is-reshaping-brand-and-product-discovery" element={<HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage />} />
             
             {/* Keep the service structure routes for backward compatibility */}
             <Route path="/services/:serviceSlug" element={<MainServicePage />} />
