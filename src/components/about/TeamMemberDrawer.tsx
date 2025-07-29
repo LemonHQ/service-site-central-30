@@ -37,8 +37,8 @@ const TeamMemberDrawer: React.FC<TeamMemberDrawerProps> = ({ member, open, onClo
 
   return (
     <Drawer open={open} onOpenChange={onClose}>
-      <DrawerContent className="bg-background border-t border-border backdrop-blur-none">
-        <div className="max-w-3xl mx-auto w-full bg-background p-2">
+      <DrawerContent className="bg-background/100 border-t border-border">
+        <div className="max-w-3xl mx-auto w-full bg-background/100 p-2 relative z-10">
           <DrawerHeader>
             <DrawerTitle className="text-2xl font-semibold text-brand-700">
               {member.name}
