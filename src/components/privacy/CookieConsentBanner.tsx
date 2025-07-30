@@ -42,7 +42,7 @@ const CookieConsentBanner: React.FC = () => {
         backgroundColor: 'hsl(var(--card))',
         borderColor: 'hsl(var(--border))',
         opacity: '1'
-      }} className="border-t border-border shadow-lg p-4 sm:p-6 bg-slate-50 rounded-none">
+      }} className="border-t border-border shadow-lg p-4 sm:p-6 rounded-none bg-slate-100">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               {/* Content Section */}
