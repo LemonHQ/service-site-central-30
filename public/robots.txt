@@ -55,7 +55,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://lemonhq.co/sitemap.xml
+Sitemap: https://lemonhq.co.uk/sitemap.xml
 
 # Crawl delay to be respectful
 Crawl-delay: 1
