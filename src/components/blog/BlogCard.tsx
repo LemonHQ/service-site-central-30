@@ -1,10 +1,9 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
-import AccessibleLink from '@/components/ui/AccessibleLink';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 import { BlogPost } from '@/types/blog';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -24,19 +23,13 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const authorInitial = post.author && post.author.name ? post.author.name.charAt(0) : '?';
 
   return (
-    <AccessibleLink 
-      to={`/blog/${post.id}`} 
-      className="block h-full"
-      ariaLabel={`Read full article: ${post.title}`}
-      description={`Published on ${formattedDate} - ${post.readTime} minute read`}
-    >
+    <Link to={`/blog/${post.id}`} className="block h-full">
       <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
         <div className="relative h-48 overflow-hidden">
-          <OptimizedImage
+          <img
             src={post.featuredImage}
-            alt={`Featured image for article: ${post.title}`}
-            className="w-full h-full"
-            objectFit="cover"
+            alt={post.title}
+            className="w-full h-full object-cover"
           />
           <div className="absolute top-4 left-4">
             <Badge className="bg-brand-400 text-white">{post.category}</Badge>
@@ -68,7 +61,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           </div>
         </CardContent>
       </Card>
-    </AccessibleLink>
+    </Link>
   );
 };
 

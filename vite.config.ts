@@ -19,21 +19,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
-          carousel: ['embla-carousel-react', 'embla-carousel-autoplay'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
-        }
-      }
-    },
-    target: 'esnext',
-    minify: false
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
-  }
 }));

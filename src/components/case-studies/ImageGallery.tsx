@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 
 interface ImageGalleryProps {
   images: string[];
@@ -31,21 +30,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, onImageClick
                 <div 
                   className="rounded-lg overflow-hidden h-64 cursor-pointer transition-transform hover:scale-[1.02]"
                   onClick={() => onImageClick(index)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      onImageClick(index);
-                    }
-                  }}
-                  aria-label={`View ${title} image ${index + 1} in lightbox`}
                 >
-                  <OptimizedImage 
+                  <img 
                     src={image} 
-                    alt={`${title} - Image ${index + 1}`}
-                    className="w-full h-full"
-                    objectFit="cover"
+                    alt={`${title} - Image ${index+1}`}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </CarouselItem>

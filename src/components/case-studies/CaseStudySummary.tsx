@@ -1,9 +1,8 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Building, Calendar } from 'lucide-react';
-import AccessibleLink from '@/components/ui/AccessibleLink';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 import { Card, CardContent } from '@/components/ui/card';
 import { CaseStudy } from '@/data/caseStudies';
 import { H1, H4, Paragraph } from '@/components/ui/Typography';
@@ -23,14 +22,9 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
   return (
     <>
       <div className="mb-6">
-        <AccessibleLink 
-          to="/case-studies" 
-          className="inline-flex items-center text-brand-400 hover:text-brand-500"
-          ariaLabel="Go back to case studies overview page"
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-          Back to Case Studies
-        </AccessibleLink>
+        <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">
+          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
+        </Link>
       </div>
       
       <div className="flex flex-col md:flex-row md:gap-8 mb-10">
@@ -73,12 +67,10 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
       
       {/* Featured Image */}
       <div className="mb-12 rounded-lg overflow-hidden">
-        <OptimizedImage 
+        <img 
           src={caseStudy.featuredImage}
-          alt={`Featured image for case study: ${caseStudy.title}`}
-          className="w-full h-auto max-h-[500px]"
-          objectFit="cover"
-          priority
+          alt={caseStudy.title}
+          className="w-full h-auto object-cover max-h-[500px]"
         />
       </div>
     </>

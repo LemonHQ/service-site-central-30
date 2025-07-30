@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import AutoplayType from 'embla-carousel-autoplay';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 
 interface ClientLogosCarouselProps {
   title?: string;
@@ -103,11 +102,10 @@ const ClientLogosCarousel: React.FC<ClientLogosCarouselProps> = ({
             {clientLogos.map((client, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="h-16 flex items-center justify-center p-2">
-                  <OptimizedImage 
+                  <img 
                     src={client.logo} 
-                    alt={`${client.name} logo - trusted enterprise client`} 
-                    className="h-8 w-32 grayscale hover:grayscale-0 transition-all" 
-                    objectFit="contain"
+                    alt={`${client.name} logo`} 
+                    className="h-8 w-32 object-contain grayscale hover:grayscale-0 transition-all" 
                   />
                 </div>
               </CarouselItem>

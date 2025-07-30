@@ -1,10 +1,9 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
-import AccessibleLink from '@/components/ui/AccessibleLink';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 import { CaseStudy } from '@/data/caseStudies';
 
 interface CaseStudyCardProps {
@@ -13,19 +12,13 @@ interface CaseStudyCardProps {
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ caseStudy }) => {
   return (
-    <AccessibleLink 
-      to={`/case-studies/${caseStudy.id}`} 
-      className="block h-full"
-      ariaLabel={`View case study: ${caseStudy.title} for ${caseStudy.client}`}
-      description={`${caseStudy.industry} industry case study completed in ${caseStudy.date}`}
-    >
+    <Link to={`/case-studies/${caseStudy.id}`} className="block h-full">
       <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15),0_6px_6px_rgba(0,0,0,0.12)] hover:-translate-y-1 transform">
         <div className="relative h-48 overflow-hidden">
-          <OptimizedImage
+          <img
             src={caseStudy.featuredImage}
-            alt={`Case study featured image: ${caseStudy.title}`}
-            className="w-full h-full"
-            objectFit="cover"
+            alt={caseStudy.title}
+            className="w-full h-full object-cover"
           />
         </div>
         <CardContent className="p-6">
@@ -50,7 +43,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ caseStudy }) => {
           </div>
         </CardContent>
       </Card>
-    </AccessibleLink>
+    </Link>
   );
 };
 

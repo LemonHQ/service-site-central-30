@@ -1,48 +1,10 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Toaster } from '@/components/ui/toaster';
-import { Toaster as Sonner } from '@/components/ui/sonner';
-import { TooltipProvider } from '@/components/ui/tooltip';
-import { ThemeProvider } from 'next-themes';
-import CookieConsentBanner from '@/components/privacy/CookieConsentBanner';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import usePageTracking from '@/hooks/usePageTracking';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "next-themes";
 
-// Import lazy-loaded pages
-import {
-  LazyHomePage,
-  LazyAboutPage,
-  LazyContactPage,
-  LazyServicesPage,
-  LazyCaseStudiesPage,
-  LazyBlogPage,
-  LazyInsightsPage,
-  LazyMeraasRewardsEcosystemPage,
-  LazyDrivingMultiMarketD2CSalesPage,
-  LazyReimaginingPatientExperiencePage,
-  LazyInnovationFrameworks2024Page,
-  LazyDigitalLeadershipSkillsPage,
-  LazyConsultingIndustryEvolutionPage,
-  LazyUnifyBrandPage,
-  LazyDigitalizeProductPage,
-  LazyExpandOfferingsPage,
-  LazyScaleExperiencesPage,
-  LazyPilotTechPage,
-  LazyStandardizePortfolioPage,
-  LazyInsurancePage,
-  LazyFinancePage,
-  LazyHealthcarePage,
-  LazyRetailPage,
-  LazyCoCreatePage,
-  LazyCoInnovatePage,
-  LazyPrivacyPolicyPage,
-  LazyTermsAndConditionsPage,
-  LazyCookiePolicyPage,
-  LazyDisclaimerPage
-} from '@/utils/lazyLoad';
-
-// Keep these as regular imports for immediate loading
 // Import Pages
 import Home from "./pages/Home";
 import ServiceDetail from "./pages/ServiceDetail";
@@ -117,18 +79,12 @@ import DigitalLeadershipSkillsPage from "./pages/blog/DigitalLeadershipSkillsPag
 
 const queryClient = new QueryClient();
 
-const AppPageTracking = () => {
-  usePageTracking();
-  return null;
-};
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <TooltipProvider>
-        <AppPageTracking />
-        <CookieConsentBanner />
-        <Suspense fallback={<LoadingSpinner className="min-h-screen" size="lg" text="Loading page..." />}>
+        <Toaster />
+        <Sonner />
           <Routes>
             <Route path="/" element={<Home />} />
             
@@ -186,8 +142,8 @@ const App = () => (
             <Route path="/services/:serviceSlug" element={<MainServicePage />} />
             <Route path="/services/:serviceSlug/:subServiceSlug" element={<SubServicePage />} />
             
-            <Route path="/about" element={<LazyAboutPage />} />
-            <Route path="/contact" element={<LazyContactPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/insights" element={<InsightsStatic />} />
             {/* <Route path="/insights-1" element={<Insights />} /> */}
             <Route path="/blog" element={<BlogStaticPage />} />
@@ -204,10 +160,7 @@ const App = () => (
             <Route path="/cv-submission" element={<CvSubmission />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-          <Toaster />
-          <Sonner />
+          </Routes>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>
