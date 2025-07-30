@@ -49,8 +49,8 @@ const CookieConsentBanner: React.FC = () => {
     <>
       {/* Less Intrusive Bottom Banner */}
       <div className="fixed bottom-0 left-0 right-0 z-50 animate-slide-up">
-        <div className="bg-card border-t border-border shadow-lg p-4 sm:p-6 backdrop-blur-sm bg-opacity-95"
-             style={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))' }}>
+        <div className="bg-card border-t border-border shadow-lg p-4 sm:p-6"
+             style={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', opacity: '1' }}>
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               {/* Content Section */}
