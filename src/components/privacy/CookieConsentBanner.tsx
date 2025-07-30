@@ -51,9 +51,7 @@ const CookieConsentBanner: React.FC = () => {
                   <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{
                   backgroundColor: 'hsl(var(--primary))'
                 }}>
-                    <span className="font-bold text-xs" style={{
-                    color: 'hsl(var(--primary-foreground))'
-                  }}>L</span>
+                    
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2" style={{
