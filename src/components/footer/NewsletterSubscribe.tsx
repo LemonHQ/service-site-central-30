@@ -86,7 +86,7 @@ const NewsletterSubscribe: React.FC = () => {
       </form>
       
       <div className="mt-6">
-        <img src="/lovable-uploads/50fa6423-029f-4a1e-87c3-051a066b6c9b.png" alt="Newsletter Logo" className="h-8 object-contain" />
+        
       </div>
     </div>;
 };
