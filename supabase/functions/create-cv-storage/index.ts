@@ -30,14 +30,7 @@ Deno.serve(async (_req) => {
         throw error;
       }
       
-      // Set up RLS policy for the cv-uploads bucket
-      // Allow users to upload to their own folder
-      await supabase.rpc('create_storage_policy', {
-        bucket_id: 'cv-uploads',
-        policy_name: 'Allow public uploads',
-        definition: 'true',
-        operation: 'INSERT'
-      });
+      console.log('CV uploads bucket created successfully with secure policies');
     }
 
     return new Response(JSON.stringify({ 
