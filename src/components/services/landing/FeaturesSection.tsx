@@ -34,7 +34,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           {features.map((feature, index) => (
             <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                {feature.icon && <feature.icon className="h-10 w-10 text-gray-700 mb-4" />}
+                {feature.icon && <feature.icon className="h-10 w-10 text-brand-500 mb-4" />}
                 <h3 className="text-xl font-light mb-2 text-gray-800">{feature.title}</h3>
                 <p className="text-gray-600 font-light">{feature.description}</p>
               </CardContent>
