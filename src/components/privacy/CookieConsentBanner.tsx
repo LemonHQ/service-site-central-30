@@ -82,7 +82,7 @@ const CookieConsentBanner: React.FC = () => {
                 <Button onClick={handleShowPreferences} variant="outline" size="sm" className="whitespace-nowrap">
                   Manage preferences
                 </Button>
-                <Button onClick={handleAcceptAll} size="sm" className="whitespace-nowrap bg-primary hover:bg-primary/90">
+                <Button onClick={handleAcceptAll} size="sm" className="whitespace-nowrap bg-brand-600 hover:bg-brand-700 text-white">
                   Accept all
                 </Button>
               </div>
