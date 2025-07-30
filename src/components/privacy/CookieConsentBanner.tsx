@@ -44,9 +44,7 @@ const CookieConsentBanner: React.FC = () => {
               {/* Content Section */}
               <div className="flex-1">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
-                    
-                  </div>
+                  
                   <div>
                     <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">
                       We value your privacy
