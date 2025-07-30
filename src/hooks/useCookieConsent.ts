@@ -22,16 +22,23 @@ export const useCookieConsent = () => {
           marketing: false,
           timestamp: Date.now(),
         },
-        showBanner: true,
+        showBanner: false, // Don't show banner during SSR
       };
     }
+    // On client side, immediately get the actual consent state to prevent flash
     return getCookieConsent();
   });
 
-  // Listen for consent changes
+  const [isClient, setIsClient] = useState(false);
+
+  // Listen for consent changes and handle client-side hydration
   useEffect(() => {
-    // Update state with actual consent data once we're on the client
-    setConsentState(getCookieConsent());
+    // Mark as client-side
+    setIsClient(true);
+    
+    // Only update if we don't already have valid consent state
+    const currentState = getCookieConsent();
+    setConsentState(currentState);
 
     const handleConsentChange = (event: CustomEvent) => {
       setConsentState(getCookieConsent());
@@ -67,6 +74,8 @@ export const useCookieConsent = () => {
 
   return {
     ...consentState,
+    // Only show banner on client-side and when consent is needed
+    showBanner: isClient && consentState.showBanner,
     updatePreferences,
     acceptAll,
     acceptEssential,
