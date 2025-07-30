@@ -161,7 +161,7 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
             <Button onClick={handleSavePreferences} variant="outline" className="flex-1">
               Save Preferences
             </Button>
-            <Button onClick={handleAcceptAll} className="flex-1 bg-brand-600 hover:bg-brand-700">
+            <Button onClick={handleAcceptAll} className="flex-1 bg-brand-600 hover:bg-brand-700 text-neutral-50">
               Accept All
             </Button>
           </div>
