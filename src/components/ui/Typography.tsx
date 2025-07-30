@@ -57,7 +57,7 @@ export const Paragraph = ({
   children,
   className
 }: TypographyProps) => {
-  return <p className={cn("text-base font-sans leading-7 text-gray-600", className)}>
+  return <p className={cn("text-base font-display leading-7 text-gray-600", className)}>
       {children}
     </p>;
 };
