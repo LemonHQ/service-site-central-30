@@ -88,7 +88,7 @@ const CookieConsentBanner: React.FC = () => {
               </div>
 
               {/* Close button */}
-              <button onClick={hideBanner} className="absolute top-2 right-2 p-1 rounded-full transition-colors lg:static lg:p-2 hover:opacity-70" style={{
+              <button onClick={hideBanner} className="absolute top-2 right-2 p-1 rounded-full border border-gray-300 transition-colors lg:static lg:p-2 hover:opacity-70" style={{
               color: 'hsl(var(--muted-foreground))'
             }} aria-label="Close">
                 <X className="w-4 h-4" />
