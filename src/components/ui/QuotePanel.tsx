@@ -1,24 +1,20 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Headphones, Sparkles } from "lucide-react";
 import { H3 } from '@/components/ui/Typography';
-
 interface QuotePanelProps {
   quote: string;
   author?: string;
   authorTitle?: string;
   className?: string;
 }
-
 const QuotePanel: React.FC<QuotePanelProps> = ({
   quote,
   author,
   authorTitle,
   className
 }) => {
-  return (
-    <section className={cn("relative py-16 md:py-24 overflow-hidden", className)}>
+  return <section className={cn("relative py-16 md:py-24 overflow-hidden", className)}>
       {/* Spotlight effect from top left */}
       <div className="absolute top-0 left-0 w-[350px] h-[350px] rounded-full bg-gradient-to-br from-brand-300/70 to-transparent blur-[80px] -translate-x-1/3 -translate-y-1/3 z-0"></div>
       
@@ -38,7 +34,7 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
               <div className="w-32 h-32 md:w-48 md:h-48 bg-brand-50 rounded-full flex items-center justify-center shadow-lg">
                 <Headphones size={64} className="text-brand-600" />
               </div>
-              <div className="absolute top-1/2 left-full -translate-y-1/2 w-12 h-4 bg-brand-50"></div>
+              
             </div>
           </div>
 
@@ -59,12 +55,10 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
                 {quote}
               </H3>
             </blockquote>
-            {(author || authorTitle) && (
-              <div className="mt-6 text-right">
+            {(author || authorTitle) && <div className="mt-6 text-right">
                 {author && <p className="text-white font-normal">{author}</p>}
                 {authorTitle && <p className="text-gray-100 font-light">{authorTitle}</p>}
-              </div>
-            )}
+              </div>}
           </div>
 
           {/* Visual elements inspired by the uploaded image */}
@@ -78,8 +72,6 @@ const QuotePanel: React.FC<QuotePanelProps> = ({
       
       {/* Top left spotlight effect */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-brand-200/50 via-accent-300/30 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default QuotePanel;
