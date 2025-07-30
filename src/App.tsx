@@ -123,14 +123,13 @@ const AppPageTracking = () => {
 };
 
 const App = () => (
-  <Router>
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-        <TooltipProvider>
-          <AppPageTracking />
-          <CookieConsentBanner />
-          <Suspense fallback={<LoadingSpinner className="min-h-screen" size="lg" text="Loading page..." />}>
-            <Routes>
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <TooltipProvider>
+        <AppPageTracking />
+        <CookieConsentBanner />
+        <Suspense fallback={<LoadingSpinner className="min-h-screen" size="lg" text="Loading page..." />}>
+          <Routes>
             <Route path="/" element={<Home />} />
             
             {/* Direct routes to service landing pages */}
@@ -209,10 +208,9 @@ const App = () => (
           </Suspense>
           <Toaster />
           <Sonner />
-        </TooltipProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
-  </Router>
+      </TooltipProvider>
+    </ThemeProvider>
+  </QueryClientProvider>
 );
 
 export default App;
