@@ -71,6 +71,11 @@ export const useSEO = (metadata: SEOMetadata, structuredDataType?: string, struc
     updateMetaTag('twitter:description', metadata.description);
     updateMetaTag('twitter:image', metadata.image);
 
+    // Preview control meta tags for AI and search
+    updateMetaTag('max-snippet', '320');
+    updateMetaTag('max-image-preview', 'large');
+    updateMetaTag('max-video-preview', '30');
+
     // Canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (metadata.url) {

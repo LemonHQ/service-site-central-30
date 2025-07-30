@@ -25,7 +25,7 @@ const defaultSEO: SEOMetadata = {
 };
 
 export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
-  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co';
+  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co.uk';
 
   switch (page) {
     case 'home':
@@ -203,7 +203,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
 };
 
 export const generateStructuredData = (type: string, data?: any) => {
-  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co';
+  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co.uk';
 
   switch (type) {
     case 'organization':
@@ -225,7 +225,7 @@ export const generateStructuredData = (type: string, data?: any) => {
           '@type': 'ContactPoint',
           telephone: '+44-020-7907-5090',
           contactType: 'Business',
-          email: 'hello@lemonhq.co',
+          email: 'hello@lemonhq.co.uk',
         },
         sameAs: [
           'https://linkedin.com/company/lemonhq',
@@ -248,19 +248,27 @@ export const generateStructuredData = (type: string, data?: any) => {
       };
 
     case 'article':
+    case 'BlogPosting':
       if (data?.post) {
         return {
           '@context': 'https://schema.org',
-          '@type': 'Article',
+          '@type': 'BlogPosting',
           headline: data.post.title,
           description: data.post.excerpt,
-          image: data.post.featuredImage,
+          image: {
+            '@type': 'ImageObject',
+            url: data.post.featuredImage,
+            width: 1200,
+            height: 630
+          },
           datePublished: data.post.publishDate,
-          dateModified: data.post.publishDate,
+          dateModified: data.post.modifiedDate || data.post.publishDate,
           author: {
             '@type': 'Person',
             name: data.post.author.name,
             image: data.post.author.avatar,
+            url: data.post.author.profileUrl || `${baseURL}/about`,
+            jobTitle: data.post.author.role
           },
           publisher: {
             '@type': 'Organization',
@@ -268,12 +276,23 @@ export const generateStructuredData = (type: string, data?: any) => {
             logo: {
               '@type': 'ImageObject',
               url: `${baseURL}/assets/imgs/android-chrome-512x512.png`,
+              width: 512,
+              height: 512
             },
+            url: baseURL,
+            contactPoint: {
+              '@type': 'ContactPoint',
+              contactType: 'Business',
+              email: 'hello@lemonhq.co.uk'
+            }
           },
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': `${baseURL}/insights/${data.post.id}`,
           },
+          keywords: data.post.tags?.join(', '),
+          articleSection: data.post.category,
+          wordCount: data.post.content ? data.post.content.replace(/<[^>]*>/g, '').split(' ').length : undefined
         };
       }
       break;
@@ -341,7 +360,7 @@ export const generateStructuredData = (type: string, data?: any) => {
 };
 
 export const generateSitemap = () => {
-  const baseURL = 'https://lemonhq.co';
+  const baseURL = 'https://lemonhq.co.uk';
   const currentDate = new Date().toISOString();
   
   const staticPages = [

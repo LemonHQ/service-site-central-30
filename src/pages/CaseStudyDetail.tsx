@@ -78,7 +78,10 @@ const CaseStudyDetail: React.FC = () => {
   // If case study is null, show not found section
   if (!caseStudy) {
     return (
-      <MainLayout>
+      <MainLayout 
+        pageTitle="Case Study Not Found"
+        seoPage="case-studies"
+      >
         <div className="container mx-auto px-4 py-16">
           <div className="mb-6">
             <Link to="/case-studies" className="inline-flex items-center text-brand-400 hover:text-brand-500">

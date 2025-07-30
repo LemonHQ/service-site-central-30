@@ -6,8 +6,19 @@ import PageHero from '@/components/ui/PageHero';
 import ContentSection from '@/components/ui/ContentSection';
 
 const InsightsStatic = () => {
+  const aiMetadata = {
+    purpose: 'Share expert insights and thought leadership on digital transformation and innovation',
+    contentSummary: 'Expert insights on AI search, digital transformation trends, innovation frameworks, and industry analysis from digital transformation specialists.',
+    keywords: ['digital transformation insights', 'AI trends', 'innovation thought leadership', 'technology analysis'],
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout pageTitle="Insights">
+    <MainLayout 
+      pageTitle="Insights - Digital Innovation Thought Leadership"
+      seoPage="insights"
+      aiMetadata={aiMetadata}
+    >
       <PageHero
         title="Insights"
         subtitle="Expert perspectives on digital transformation, product strategy, and technological innovation."

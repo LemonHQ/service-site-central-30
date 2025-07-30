@@ -76,8 +76,22 @@ const BlogDetailPage: React.FC = () => {
     window.open(shareUrl, '_blank', 'width=600,height=400');
   };
   
+  // SEO data for this specific blog post
+  const seoData = { post };
+  const aiMetadata = {
+    purpose: 'Provide expert insights and thought leadership on digital transformation',
+    contentSummary: post.excerpt,
+    keywords: post.tags,
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout>
+    <MainLayout 
+      pageTitle={post.title}
+      seoPage="blog-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="mb-6">
           <Link to="/blog" className="inline-flex items-center text-brand-400 hover:text-brand-500">
