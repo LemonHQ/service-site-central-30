@@ -6,6 +6,9 @@ export interface SEOMetadata {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   url?: string;
   type?: 'website' | 'article' | 'profile';
   siteName?: string;
@@ -16,10 +19,20 @@ export interface SEOMetadata {
   tags?: string[];
 }
 
+// Helper function to generate absolute URLs for social sharing
+const getAbsoluteImageUrl = (relativePath: string): string => {
+  const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co.uk';
+  if (relativePath.startsWith('http')) return relativePath;
+  return `${baseURL}${relativePath}`;
+};
+
 const defaultSEO: SEOMetadata = {
   title: 'LemonHQ - Digital Product Services for Enterprise Brands',
   description: 'Digital product services for enterprise brands - validate, design, launch and scale products that drive business growth.',
   image: '/assets/imgs/flying-paper-planes-hero-image.png',
+  imageAlt: 'LemonHQ Digital Innovation Services',
+  imageWidth: 1200,
+  imageHeight: 630,
   type: 'website',
   siteName: 'LemonHQ',
 };
@@ -32,6 +45,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: baseURL,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'LemonHQ - Digital Transformation & Innovation Consulting for Enterprise',
         description: 'Leading digital transformation consultancy helping enterprises build next-generation products, modernize architecture, and innovate with AI. Transform your business with proven methodologies.',
         tags: ['digital transformation', 'innovation consulting', 'enterprise solutions', 'AI consulting', 'product digitalization']
@@ -41,6 +55,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/services`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Digital Transformation Services - Enterprise Solutions | LemonHQ',
         description: 'Comprehensive digital transformation services: product digitalization, AI innovation, architecture modernization, and experience design. Proven solutions for enterprise success.',
         type: 'website',
@@ -52,10 +67,12 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
         return {
           ...defaultSEO,
           url: `${baseURL}/services/${data.service.slug}`,
-          title: `${data.service.title} - LemonHQ`,
+          title: `${data.service.title} - Digital Transformation Service | LemonHQ`,
           description: data.service.shortDescription || data.service.description,
-          image: data.service.coverImage || defaultSEO.image,
+          image: getAbsoluteImageUrl(data.service.coverImage || defaultSEO.image!),
+          imageAlt: `${data.service.title} - Digital Transformation Service`,
           type: 'website',
+          tags: data.service.tags || ['digital transformation', 'enterprise services'],
         };
       }
       break;
@@ -64,6 +81,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/case-studies`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Case Studies - Digital Transformation Success Stories | LemonHQ',
         description: 'Explore our portfolio of successful digital transformation projects across finance, healthcare, real estate, and retail. Real client results and innovation outcomes.',
         type: 'website',
@@ -75,9 +93,10 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
         return {
           ...defaultSEO,
           url: `${baseURL}/case-studies/${data.caseStudy.id}`,
-          title: `${data.caseStudy.title} - ${data.caseStudy.client} Case Study`,
+          title: `${data.caseStudy.title} - ${data.caseStudy.client} Case Study | LemonHQ`,
           description: data.caseStudy.summary,
-          image: data.caseStudy.featuredImage || defaultSEO.image,
+          image: getAbsoluteImageUrl(data.caseStudy.featuredImage || defaultSEO.image!),
+          imageAlt: `${data.caseStudy.title} - ${data.caseStudy.client} Case Study`,
           type: 'article',
           publishedTime: data.caseStudy.date,
           section: 'Case Studies',
@@ -90,6 +109,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/insights`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Insights & Blog - Digital Innovation Thought Leadership | LemonHQ',
         description: 'Expert insights on AI search, digital transformation trends, innovation frameworks, and industry analysis. Stay ahead with actionable thought leadership content.',
         type: 'website',
@@ -101,14 +121,16 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
         return {
           ...defaultSEO,
           url: `${baseURL}/insights/${data.post.id}`,
-          title: `${data.post.title} - LemonHQ Insights`,
+          title: `${data.post.title} | LemonHQ Insights`,
           description: data.post.excerpt,
-          image: data.post.featuredImage || defaultSEO.image,
+          image: getAbsoluteImageUrl(data.post.featuredImage || defaultSEO.image!),
+          imageAlt: `${data.post.title} - Digital Innovation Insights`,
           type: 'article',
           publishedTime: data.post.publishDate,
+          modifiedTime: data.post.modifiedDate || data.post.publishDate,
           author: data.post.author.name,
           section: 'Insights',
-          tags: [data.post.category],
+          tags: data.post.tags || [data.post.category],
         };
       }
       break;
@@ -117,6 +139,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/about`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'About LemonHQ - Digital Transformation Experts & Innovation Leaders',
         description: 'Meet the team behind successful digital transformations for leading enterprises. Learn about our mission, expertise, and proven approach to innovation consulting.',
         type: 'website',
@@ -127,6 +150,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/contact`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Contact LemonHQ - Start Your Digital Transformation Journey',
         description: 'Ready to transform your business? Contact LemonHQ for expert digital transformation consulting. Schedule a consultation with our innovation specialists today.',
         type: 'website',
@@ -138,6 +162,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/industries/finance`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Financial Services Digital Transformation - Banking & Fintech Solutions | LemonHQ',
         description: 'Specialized digital transformation services for banks, wealth management, and fintech companies. Modern solutions for financial services innovation and compliance.',
         type: 'website',
@@ -148,6 +173,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/industries/healthcare`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Healthcare Digital Transformation - Patient Experience & Medical Innovation | LemonHQ',
         description: 'Transform healthcare delivery with digital patient experiences, medical device integration, and innovative health technology solutions.',
         type: 'website',
@@ -158,6 +184,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/industries/retail`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Retail Digital Transformation - E-commerce & Customer Experience | LemonHQ',
         description: 'Modernize retail operations with omnichannel experiences, e-commerce platforms, and innovative customer engagement solutions.',
         type: 'website',
@@ -168,6 +195,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/industries/insurance`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Insurance Digital Transformation - Policy Management & Claims Processing | LemonHQ',
         description: 'Transform insurance operations with digital policy management, automated claims processing, and enhanced customer self-service capabilities.',
         type: 'website',
@@ -179,6 +207,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/approach/co-create`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Co-Create Approach - Collaborative Digital Transformation | LemonHQ',
         description: 'Our collaborative co-creation methodology for building digital products and services that truly meet enterprise needs and deliver measurable results.',
         type: 'website',
@@ -189,6 +218,7 @@ export const getSEOMetadata = (page: string, data?: any): SEOMetadata => {
       return {
         ...defaultSEO,
         url: `${baseURL}/approach/co-innovate`,
+        image: getAbsoluteImageUrl(defaultSEO.image!),
         title: 'Co-Innovate Approach - Rapid Innovation & Prototyping | LemonHQ',
         description: 'Fast-track innovation with our co-innovation approach. Rapid prototyping, emerging technology pilots, and agile development for enterprise transformation.',
         type: 'website',
@@ -257,7 +287,7 @@ export const generateStructuredData = (type: string, data?: any) => {
           description: data.post.excerpt,
           image: {
             '@type': 'ImageObject',
-            url: data.post.featuredImage,
+            url: getAbsoluteImageUrl(data.post.featuredImage || defaultSEO.image!),
             width: 1200,
             height: 630
           },
@@ -304,7 +334,12 @@ export const generateStructuredData = (type: string, data?: any) => {
           '@type': 'Article',
           headline: data.caseStudy.title,
           description: data.caseStudy.summary,
-          image: data.caseStudy.featuredImage,
+          image: {
+            '@type': 'ImageObject',
+            url: getAbsoluteImageUrl(data.caseStudy.featuredImage || defaultSEO.image!),
+            width: 1200,
+            height: 630
+          },
           datePublished: data.caseStudy.date,
           dateModified: data.caseStudy.date,
           author: {

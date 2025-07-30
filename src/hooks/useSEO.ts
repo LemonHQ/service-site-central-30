@@ -40,6 +40,9 @@ export const useSEO = (metadata: SEOMetadata, structuredDataType?: string, struc
     updateMetaTag('', metadata.description, 'og:description');
     updateMetaTag('', metadata.type || 'website', 'og:type');
     updateMetaTag('', metadata.image, 'og:image');
+    updateMetaTag('', metadata.imageAlt, 'og:image:alt');
+    updateMetaTag('', metadata.imageWidth?.toString(), 'og:image:width');
+    updateMetaTag('', metadata.imageHeight?.toString(), 'og:image:height');
     updateMetaTag('', metadata.url, 'og:url');
     updateMetaTag('', metadata.siteName || 'LemonHQ', 'og:site_name');
     
@@ -70,6 +73,7 @@ export const useSEO = (metadata: SEOMetadata, structuredDataType?: string, struc
     updateMetaTag('twitter:title', metadata.title);
     updateMetaTag('twitter:description', metadata.description);
     updateMetaTag('twitter:image', metadata.image);
+    updateMetaTag('twitter:image:alt', metadata.imageAlt);
 
     // Preview control meta tags for AI and search
     updateMetaTag('max-snippet', '320');
