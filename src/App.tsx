@@ -122,10 +122,8 @@ const AppPageTracking = () => {
   return null;
 };
 
-const App = () => {
-  usePageTracking();
-  
-  return (
+const App = () => (
+  <Router>
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <TooltipProvider>
@@ -214,7 +212,7 @@ const App = () => {
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>
-  );
-};
+  </Router>
+);
 
 export default App;
