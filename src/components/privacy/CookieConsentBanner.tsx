@@ -62,10 +62,10 @@ const CookieConsentBanner: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-2 lg:flex-shrink-0">
-                <Button onClick={handleEssentialOnly} variant="outline" size="sm" className="whitespace-nowrap">
+                <Button onClick={handleEssentialOnly} variant="outline" size="sm" className="whitespace-nowrap text-brand-500 bg-white">
                   Essential only
                 </Button>
-                <Button onClick={handleShowPreferences} variant="outline" size="sm" className="whitespace-nowrap">
+                <Button onClick={handleShowPreferences} variant="outline" size="sm" className="whitespace-nowrap text-brand-500 bg-white">
                   Manage preferences
                 </Button>
                 <Button onClick={handleAcceptAll} size="sm" className="whitespace-nowrap bg-brand-600 hover:bg-brand-700 text-white">
