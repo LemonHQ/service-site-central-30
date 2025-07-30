@@ -31,13 +31,7 @@ export default defineConfig(({ mode }) => ({
       }
     },
     target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-        drop_debugger: mode === 'production'
-      }
-    }
+    minify: false
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom']
