@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import AccessibleLink from '@/components/ui/AccessibleLink';
 import { H4, Paragraph } from '@/components/ui/Typography';
 
 interface LinkItem {
@@ -25,9 +25,13 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ title, links, showIcon = fals
             {showIcon && link.name === 'Trust Center' && (
               <CheckCircle className="w-4 h-4 mr-2 text-brand-500" />
             )}
-            <Link to={link.path} className="text-gray-600 hover:text-brand-500 transition-colors">
+            <AccessibleLink 
+              to={link.path} 
+              className="text-gray-600 hover:text-brand-500 transition-colors"
+              ariaLabel={`Navigate to ${link.name} page`}
+            >
               {link.name}
-            </Link>
+            </AccessibleLink>
           </li>
         ))}
       </ul>

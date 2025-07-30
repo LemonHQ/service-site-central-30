@@ -50,7 +50,11 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
 
   return (
     <div className="md:hidden bg-background dark:bg-background border-b border-gray-100 dark:border-gray-800 animate-fade-in">
-      <nav className="flex flex-col space-y-2 py-6 px-8">
+      <nav 
+        className="flex flex-col space-y-2 py-6 px-8"
+        role="navigation"
+        aria-label="Mobile navigation menu"
+      >
         <Link 
           to="/" 
           className={`${isActive('/')} text-lg py-2`}
@@ -69,13 +73,20 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
               location.pathname.includes('/pilot-emerging-tech') || 
               location.pathname.includes('/standardize-digital-portfolio') ? 'text-brand-600 font-medium' : ''}`}
             onClick={() => toggleMobileService('services')}
+            aria-expanded={mobileExpandedService === 'services'}
+            aria-controls="mobile-services-menu"
           >
             <span>What We Do</span>
             <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileExpandedService === 'services' ? 'transform rotate-180' : ''}`} />
           </button>
           
           {mobileExpandedService === 'services' && (
-            <div className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3">
+            <div 
+              className="ml-4 pl-4 border-l border-gray-200 py-2 space-y-3"
+              id="mobile-services-menu"
+              role="region"
+              aria-label="Services submenu"
+            >
               {serviceItems.map((service) => (
                 <div key={service.name}>
                   <Link
