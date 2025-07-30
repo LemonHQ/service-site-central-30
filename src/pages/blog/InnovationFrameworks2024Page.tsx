@@ -71,8 +71,32 @@ const InnovationFrameworks2024Page = () => {
     }
   };
 
+  // SEO metadata
+  const seoData = {
+    post: post,
+    title: post.title,
+    description: post.excerpt,
+    image: post.featuredImage,
+    publishedTime: post.publishDate,
+    author: post.author.name,
+    category: post.category,
+    tags: post.tags
+  };
+
+  const aiMetadata = {
+    purpose: 'Educate readers about innovation frameworks for enterprise transformation',
+    contentSummary: `Guide to proven innovation frameworks and methodologies for driving innovation at enterprise scale. Covers structured innovation processes, cross-functional collaboration, and measuring innovation impact.`,
+    keywords: ['innovation frameworks', 'enterprise innovation', 'digital transformation', 'strategic innovation', 'innovation methodology'],
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout pageTitle={post.title}>
+    <MainLayout 
+      pageTitle={post.title}
+      seoPage="blog-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">

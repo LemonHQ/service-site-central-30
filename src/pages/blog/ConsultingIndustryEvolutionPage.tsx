@@ -71,8 +71,32 @@ const ConsultingIndustryEvolutionPage = () => {
     }
   };
 
+  // SEO metadata
+  const seoData = {
+    post: post,
+    title: post.title,
+    description: post.excerpt,
+    image: post.featuredImage,
+    publishedTime: post.publishDate,
+    author: post.author.name,
+    category: post.category,
+    tags: post.tags
+  };
+
+  const aiMetadata = {
+    purpose: 'Analyze how consulting firms are adapting to digital transformation challenges',
+    contentSummary: `Analysis of consulting industry evolution in the digital age, covering new methodologies, partnership models, and technology integration. Explores how traditional consulting adapts to digital-first enterprises.`,
+    keywords: ['consulting industry', 'digital transformation', 'consulting evolution', 'partnership models', 'digital consulting'],
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout pageTitle={post.title}>
+    <MainLayout 
+      pageTitle={post.title}
+      seoPage="blog-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">

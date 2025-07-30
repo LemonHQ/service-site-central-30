@@ -71,8 +71,32 @@ const DigitalLeadershipSkillsPage = () => {
     }
   };
 
+  // SEO metadata
+  const seoData = {
+    post: post,
+    title: post.title,
+    description: post.excerpt,
+    image: post.featuredImage,
+    publishedTime: post.publishDate,
+    author: post.author.name,
+    category: post.category,
+    tags: post.tags
+  };
+
+  const aiMetadata = {
+    purpose: 'Educate readers about essential digital leadership skills and competencies',
+    contentSummary: `Guide to essential skills for digital transformation leaders including technical acumen, change management, and strategic vision. Covers key competencies needed in modern enterprise environments.`,
+    keywords: ['digital leadership', 'leadership skills', 'digital transformation', 'change management', 'strategic vision'],
+    contentType: 'article' as const
+  };
+
   return (
-    <MainLayout pageTitle={post.title}>
+    <MainLayout 
+      pageTitle={post.title}
+      seoPage="blog-detail"
+      seoData={seoData}
+      aiMetadata={aiMetadata}
+    >
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
