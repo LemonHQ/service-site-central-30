@@ -1,23 +1,10 @@
-
 import React from 'react';
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from '@/components/ui/dialog';
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from '@/components/ui/accordion';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { CookiePreferences as CookiePrefs } from '@/services/cookieConsent';
 import { Link } from 'react-router-dom';
-
 interface CookiePreferencesProps {
   isOpen: boolean;
   onClose: () => void;
@@ -26,20 +13,19 @@ interface CookiePreferencesProps {
   onAcceptAll: () => void;
   onAcceptEssential: () => void;
 }
-
 const CookiePreferences: React.FC<CookiePreferencesProps> = ({
   isOpen,
   onClose,
   preferences,
   onUpdatePreferences,
   onAcceptAll,
-  onAcceptEssential,
+  onAcceptEssential
 }) => {
   const [localPreferences, setLocalPreferences] = React.useState({
     essential: preferences.essential,
     analytics: preferences.analytics,
     functional: preferences.functional,
-    marketing: preferences.marketing,
+    marketing: preferences.marketing
   });
 
   // Update local state when preferences change
@@ -48,35 +34,29 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
       essential: preferences.essential,
       analytics: preferences.analytics,
       functional: preferences.functional,
-      marketing: preferences.marketing,
+      marketing: preferences.marketing
     });
   }, [preferences]);
-
   const handlePreferenceChange = (category: keyof typeof localPreferences, value: boolean) => {
     setLocalPreferences(prev => ({
       ...prev,
-      [category]: value,
+      [category]: value
     }));
   };
-
   const handleSavePreferences = () => {
     onUpdatePreferences(localPreferences);
     onClose();
   };
-
   const handleAcceptAll = () => {
     onAcceptAll();
     onClose();
   };
-
   const handleAcceptEssential = () => {
     onAcceptEssential();
     onClose();
   };
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+  return <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-slate-50">
         <DialogHeader>
           <DialogTitle className="text-xl font-semibold">
             Privacy Preferences
@@ -93,11 +73,7 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
               <AccordionTrigger className="text-left">
                 <div className="flex items-center justify-between w-full pr-4">
                   <span className="font-medium">Essential Cookies</span>
-                  <Checkbox 
-                    checked={true} 
-                    disabled={true}
-                    className="pointer-events-none"
-                  />
+                  <Checkbox checked={true} disabled={true} className="pointer-events-none" />
                 </div>
               </AccordionTrigger>
               <AccordionContent>
@@ -116,10 +92,7 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
               <AccordionTrigger className="text-left">
                 <div className="flex items-center justify-between w-full pr-4">
                   <span className="font-medium">Analytics Cookies</span>
-                  <Checkbox 
-                    checked={localPreferences.analytics}
-                    onCheckedChange={(checked) => handlePreferenceChange('analytics', checked as boolean)}
-                  />
+                  <Checkbox checked={localPreferences.analytics} onCheckedChange={checked => handlePreferenceChange('analytics', checked as boolean)} />
                 </div>
               </AccordionTrigger>
               <AccordionContent>
@@ -137,10 +110,7 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
               <AccordionTrigger className="text-left">
                 <div className="flex items-center justify-between w-full pr-4">
                   <span className="font-medium">Functional Cookies</span>
-                  <Checkbox 
-                    checked={localPreferences.functional}
-                    onCheckedChange={(checked) => handlePreferenceChange('functional', checked as boolean)}
-                  />
+                  <Checkbox checked={localPreferences.functional} onCheckedChange={checked => handlePreferenceChange('functional', checked as boolean)} />
                 </div>
               </AccordionTrigger>
               <AccordionContent>
@@ -157,10 +127,7 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
               <AccordionTrigger className="text-left">
                 <div className="flex items-center justify-between w-full pr-4">
                   <span className="font-medium">Marketing Cookies</span>
-                  <Checkbox 
-                    checked={localPreferences.marketing}
-                    onCheckedChange={(checked) => handlePreferenceChange('marketing', checked as boolean)}
-                  />
+                  <Checkbox checked={localPreferences.marketing} onCheckedChange={checked => handlePreferenceChange('marketing', checked as boolean)} />
                 </div>
               </AccordionTrigger>
               <AccordionContent>
@@ -188,31 +155,18 @@ const CookiePreferences: React.FC<CookiePreferencesProps> = ({
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button 
-              onClick={handleAcceptEssential}
-              variant="outline"
-              className="flex-1"
-            >
+            <Button onClick={handleAcceptEssential} variant="outline" className="flex-1">
               Essential Only
             </Button>
-            <Button 
-              onClick={handleSavePreferences}
-              variant="outline"
-              className="flex-1"
-            >
+            <Button onClick={handleSavePreferences} variant="outline" className="flex-1">
               Save Preferences
             </Button>
-            <Button 
-              onClick={handleAcceptAll}
-              className="flex-1 bg-brand-600 hover:bg-brand-700"
-            >
+            <Button onClick={handleAcceptAll} className="flex-1 bg-brand-600 hover:bg-brand-700">
               Accept All
             </Button>
           </div>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 export default CookiePreferences;
