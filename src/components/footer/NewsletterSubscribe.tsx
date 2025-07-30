@@ -63,7 +63,7 @@ const NewsletterSubscribe: React.FC = () => {
       <form onSubmit={handleSubscribe} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-2">
           <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter email address" className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 flex-grow" required disabled={isSubmitting} />
-          <button type="submit" disabled={isSubmitting || !marketingConsent} className="px-4 py-2 text-white rounded-md transition-colors bg-brand-600 hover:bg-brand-500">
+          <button type="submit" disabled={isSubmitting || !marketingConsent} className="px-4 py-2 text-white rounded-md transition-colors bg-brand-500 hover:bg-brand-400">
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </button>
         </div>
