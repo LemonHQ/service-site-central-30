@@ -7,6 +7,7 @@ import ClientLogosCarousel from '@/components/homepage/ClientLogosCarousel';
 const InsurancePage = () => {
   return (
     <ServiceLandingTemplate
+      seoPage="insurance"
       title="Insurance"
       subtitle="Digital modernization for multi-line insurers"
       description="Today’s insurers need to do more than sell policies—they need to own the customer relationship. That means delivering unified, experience-first products across all their product lines, expanding direct-to-customer channels, and making better use of existing tech investments. "//"We enable carriers to modernize their digital customer experiences and connect their products with digital eco-system partners. Our approach balances innovation with compliance to help you stay competitive in a rapidly evolving market."

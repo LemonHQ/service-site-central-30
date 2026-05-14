@@ -13,6 +13,7 @@ const ScaleExperiencesPage = () => {
   
   return (
     <ServiceLandingTemplate
+      seoPage="scale-digital-experiences"
       title="Scale Digital Experiences"
       subtitle="Deliver unified, high-quality digital experiences—at enterprise scale"
       description="We partner with leading enteprises to replace fragmented, inconsistent digital delivery with a scalable foundation that supports multiple brands, markets, and products—without sacrificing speed, flexibility, or experience quality."

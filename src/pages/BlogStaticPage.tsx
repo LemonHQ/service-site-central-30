@@ -4,7 +4,7 @@ import StaticBlogList from '@/components/blog/StaticBlogList';
 
 const BlogStaticPage = () => {
   return (
-    <MainLayout pageTitle="Blog">
+    <MainLayout seoPage="blog" pageTitle="Blog">
       <StaticBlogList />
     </MainLayout>
   );

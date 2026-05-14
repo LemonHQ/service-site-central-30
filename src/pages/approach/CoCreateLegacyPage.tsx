@@ -11,7 +11,7 @@ import CtaSection from '@/components/approach/co-create/CtaSection';
 
 const CoCreateLegacyPage = () => {
   return (
-    <MainLayout pageTitle="Co-Create Legacy - Previous Version">
+    <MainLayout seoPage="co-create" pageTitle="Co-Create Legacy">
       <HeroSection />
       <BenefitsSection />
       <ServicesSection />

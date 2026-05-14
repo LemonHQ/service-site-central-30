@@ -112,7 +112,7 @@ const WebinarSignupPage: React.FC = () => {
   ];
   
   return (
-    <MainLayout pageTitle="90-Minute Ecosystem Strategy Session Registration">
+    <MainLayout seoPage="webinar-signup" pageTitle="Ecosystem Strategy Session">
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-brand-50 to-white">
         <div className="container mx-auto px-4 py-12 md:py-16">

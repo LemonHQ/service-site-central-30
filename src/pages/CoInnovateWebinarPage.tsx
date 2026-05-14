@@ -111,7 +111,7 @@ const CoInnovateWebinarPage: React.FC = () => {
   ];
   
   return (
-    <MainLayout pageTitle="90-Minute Rapid Innovation Strategy Session Registration">
+    <MainLayout seoPage="co-innovate-webinar" pageTitle="Rapid Innovation Session">
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-beige-50 to-white">
         <div className="container mx-auto px-4 py-12 md:py-16">

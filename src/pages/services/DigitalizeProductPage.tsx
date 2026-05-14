@@ -13,6 +13,7 @@ const DigitalizeProductPage = () => {
 
   return (
     <ServiceLandingTemplate
+      seoPage="digitalize-product-lines"
       title="Digitalize Product Lines"
       subtitle="Transform legacy products into modern digital offerings"
       description="We partner with leading enterprises to re-architect their core products into modular, data-rich, and platform-ready offerings—designed to enable rapid innovation and unlock emerging business models."
