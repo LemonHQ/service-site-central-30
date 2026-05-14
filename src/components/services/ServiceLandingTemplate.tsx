@@ -49,6 +49,7 @@ export interface ServiceLandingProps {
   customerProfilesTitle?: string;
   customerProfilesSubtitle?: string;
   children?: React.ReactNode;
+  seoPage?: string;
 }
 
 const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
@@ -73,7 +74,8 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
   customerProfiles,
   customerProfilesTitle,
   customerProfilesSubtitle,
-  children
+  children,
+  seoPage,
 }) => {
   // Find the selected case study if an ID is provided
   const selectedCaseStudy = featuredCaseStudy 
@@ -81,7 +83,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingProps> = ({
     : null;
 
   return (
-    <MainLayout>
+    <MainLayout seoPage={seoPage} pageTitle={title}>
       <HeroSection
         title={title}
         subtitle={subtitle}
