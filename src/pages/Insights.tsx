@@ -55,6 +55,7 @@ const Insights = () => {
         keywords: ["digital transformation insights", "product strategy", "AI trends", "technology articles", "business innovation"]
       }}
     >
+      <JsonLd id="insights-collection" data={insightsCollectionSchema} />
       <PageHero
         title="Insights"
         subtitle="Expert perspectives on digital transformation, product strategy, and technological innovation."
