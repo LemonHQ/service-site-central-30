@@ -38,12 +38,16 @@ const SpotlightCarousel: React.FC = () => {
           <img
             src={content.bgImage}
             alt="Flying paper planes representing digital transformation"
+            width={1920}
+            height={1080}
             className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             onLoad={handleImageLoad}
             onError={handleImageError}
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         )}
         {/* Gradient Overlay */}
