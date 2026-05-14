@@ -7,6 +7,25 @@ import PageHero from '@/components/ui/PageHero';
 import ContentSection from '@/components/ui/ContentSection';
 import FilterButtons from '@/components/ui/FilterButtons';
 import { SectionTitle } from '@/components/ui/Typography';
+import JsonLd from '@/components/seo/JsonLd';
+
+const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co.uk';
+const caseStudiesCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Case Studies — LemonHQ',
+  description: 'Digital transformation case studies across finance, healthcare, real estate and retail.',
+  url: `${baseURL}/case-studies`,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: caseStudies.map((cs, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${baseURL}/case-studies/${cs.id}`,
+      name: cs.title,
+    })),
+  },
+};
 
 const CaseStudies: React.FC = () => {
   // Get all unique industries for filtering
