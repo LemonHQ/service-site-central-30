@@ -6,7 +6,7 @@ const Copyright: React.FC = () => {
   return (
     <div className="text-center text-gray-600">
       <Paragraph className="mb-3 text-sm text-center">
-        © 2025 LemonHQ. All rights reserved.
+        © 2026 LemonHQ. All rights reserved
       </Paragraph>
       <Paragraph className="mb-2 text-sm text-center">
         UAE registered company number 567068, at Damas 14 Office tower Suite 1948, Sharjah, UAE
