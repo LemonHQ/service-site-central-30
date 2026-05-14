@@ -8,63 +8,33 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Sitewide fallback title (per-route <title> is injected by react-helmet-async) -->
     <title>LemonHQ — Digital products for enterprise brands</title>
-    
+
     <!-- Google Analytics will be loaded conditionally based on cookie consent -->
-    
+
     <!-- Vector Tracking Script -->
     <script>
         !function(e,r){try{if(e.vector)return void console.log("Vector snippet included more than once.");var t={};t.q=t.q||[];for(var o=["load","identify","on"],n=function(e){return function(){var r=Array.prototype.slice.call(arguments);t.q.push([e,r])}},c=0;c<o.length;c++){var a=o[c];t[a]=n(a)}if(e.vector=t,!t.loaded){var i=r.createElement("script");i.type="text/javascript",i.async=!0,i.src="https://cdn.vector.co/pixel.js";var l=r.getElementsByTagName("script")[0];l.parentNode.insertBefore(i,l),t.loaded=!0}}catch(e){console.error("Error loading Vector:",e)}}(window,document);
-        
-        // Vector will be initialized conditionally based on cookie consent
-        // The load call will be handled by the analytics service
     </script>
-    
-    <!-- Add your favicon here -->
+
+    <!-- Favicon -->
     <link rel="icon" href="/assets/imgs/favicon.ico" type="image/x-icon">
-    <!-- Alternative for PNG -->
     <link rel="icon" href="/assets/imgs/android-chrome-512x512.png" type="image/png">
     <!-- Preload the homepage hero image (LCP candidate) -->
     <link rel="preload" as="image" href="/assets/imgs/flying-paper-planes-hero-image.png" fetchpriority="high">
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Validate, design, launch and scale digital products for multi-market enterprise brands." />
+
+    <!-- Sitewide SEO -->
     <meta name="author" content="LemonHQ" />
-    <meta name="keywords" content="digital transformation, enterprise software, product development, AI innovation, digital services, business growth" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="18c1Jno4KK7IofGMYo0sl0JKEfRc8GsMnu65gyTtljs" />
-    <link rel="canonical" href="https://lemonhq.co.uk/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="LemonHQ — Digital products for enterprise brands" />
-    <meta property="og:description" content="Validate, design, launch and scale digital products for multi-market enterprise brands." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lemonhq.co.uk/" />
-    <meta property="og:image" content="https://lemonhq.co.uk/assets/imgs/flying-paper-planes-hero-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="LemonHQ" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lemonhq" />
-    <meta name="twitter:creator" content="@lemonhq" />
-    <meta name="twitter:title" content="LemonHQ — Digital products for enterprise brands" />
-    <meta name="twitter:description" content="Validate, design, launch and scale digital products for multi-market enterprise brands." />
-    <meta name="twitter:image" content="https://lemonhq.co.uk/assets/imgs/flying-paper-planes-hero-image.png" />
-
-    <!-- AI Crawler Tags -->
-    <meta name="ai-content-summary" content="LemonHQ provides digital product services for enterprise brands including product digitalization, AI innovation, architecture modernization, and experience design." />
-    <meta name="ai-purpose" content="Business website showcasing digital transformation services and expertise for enterprise clients." />
-    <meta name="ai-content-type" content="homepage" />
-
-    <!-- Additional SEO Tags -->
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
     <meta name="distribution" content="global" />
     <meta name="rating" content="general" />
-    
-    <!-- Structured Data for Organization -->
+
+    <!-- Sitewide Organization JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -94,18 +64,11 @@
       "sameAs": [
         "https://linkedin.com/company/lemonhq",
         "https://twitter.com/lemonhq"
-      ],
-      "services": [
-        "Digital Product Development",
-        "AI Innovation",
-        "Architecture Modernization", 
-        "Experience Design",
-        "Digital Transformation"
       ]
     }
     </script>
 
-    <!-- Website Structured Data -->
+    <!-- Sitewide WebSite JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -117,13 +80,12 @@
         "@type": "SearchAction",
         "target": "https://lemonhq.co.uk/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
-      },
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "LemonHQ"
       }
     }
     </script>
+
+    <!-- Per-route head (react-helmet-async, injected at prerender) -->
+    <!--app-head-->
   </head>
 
   <body>
