@@ -1,6 +1,7 @@
 
 import React from 'react';
 import FaqSection, { FaqItem } from '@/components/ui/FaqSection';
+import JsonLd from '@/components/seo/JsonLd';
 
 interface FaqSectionProps {
   faqs: FaqItem[];
@@ -13,13 +14,29 @@ const ServiceFaqSection: React.FC<FaqSectionProps> = ({
   title = "Frequently Asked Questions",
   subtitle = "Find answers to common questions about our services"
 }) => {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: typeof f.answer === 'string' ? f.answer : String(f.answer),
+      },
+    })),
+  };
+
   return (
-    <FaqSection 
-      faqs={faqs}
-      title={title}
-      subtitle={subtitle}
-      backgroundColor="bg-slate-50"
-    />
+    <>
+      {faqs.length > 0 && <JsonLd id="faq" data={faqSchema} />}
+      <FaqSection
+        faqs={faqs}
+        title={title}
+        subtitle={subtitle}
+        backgroundColor="bg-slate-50"
+      />
+    </>
   );
 };
 
