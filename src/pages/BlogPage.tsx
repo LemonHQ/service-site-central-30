@@ -5,7 +5,7 @@ import BlogList from '@/components/blog/BlogList';
 
 const BlogPage = () => {
   return (
-    <MainLayout pageTitle="Blog">
+    <MainLayout seoPage="blog" pageTitle="Blog">
       <BlogList />
     </MainLayout>
   );

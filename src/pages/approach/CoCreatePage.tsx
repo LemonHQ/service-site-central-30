@@ -13,7 +13,7 @@ import EcosystemPartnersCarousel from '@/components/approach/co-create-closer/Ec
 
 const CoCreatePage = () => {
   return (
-    <MainLayout pageTitle="Co-Create - Digital Ecosystem Strategy">
+    <MainLayout seoPage="co-create" pageTitle="Co-Create">
       <CaptureAttentionHero />
       <ProblemSection />
       <SolutionSection />

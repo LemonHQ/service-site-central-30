@@ -9,7 +9,7 @@ const ThankYouPage = () => {
   const navigate = useNavigate();
 
   return (
-    <MainLayout>
+    <MainLayout seoPage="thank-you">
       <div className="container mx-auto px-4 py-16 max-w-3xl text-center">
         <div className="bg-white rounded-xl p-8 shadow">
           <div className="mb-6 flex justify-center">

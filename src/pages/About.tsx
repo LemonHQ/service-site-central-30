@@ -54,7 +54,7 @@ const About = () => {
     setSelectedTeamMember(member);
     setDrawerOpen(true);
   };
-  return <MainLayout>
+  return <MainLayout seoPage="about">
 
     {/*
 {

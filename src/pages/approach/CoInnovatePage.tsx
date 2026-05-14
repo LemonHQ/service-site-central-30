@@ -12,7 +12,7 @@ import InsightsCarousel from '@/components/services/landing/InsightsCarousel';
 
 const CoInnovatePage = () => {
   return (
-    <MainLayout pageTitle="Co-Innovate - Rapid Product Innovation Framework">
+    <MainLayout seoPage="co-innovate" pageTitle="Co-Innovate">
       <RapidIterationHero />
       <TraditionalProblemSection />
       <RapidIterationSolutionSection />

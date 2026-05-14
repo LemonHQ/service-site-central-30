@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 
 const Index = () => { 
   return (
-    <MainLayout>
+    <MainLayout seoPage="home">
       <PageHero
         title="Welcome to LemonHQ Professional Services"
         subtitle="We specialize in delivering exceptional solutions that drive business growth and innovation."

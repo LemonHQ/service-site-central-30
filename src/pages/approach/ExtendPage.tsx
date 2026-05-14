@@ -8,7 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const ExtendPage = () => {
   return (
-    <MainLayout>
+    <MainLayout seoPage="extend">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-beige-50 to-white py-16 md:py-24">
         <div className="container mx-auto px-4">

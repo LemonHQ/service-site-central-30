@@ -4,7 +4,7 @@ import MainLayout from '@/components/layout/MainLayout';
 
 const PrivacyPolicy = () => {
   return (
-    <MainLayout pageTitle="Privacy Policy">
+    <MainLayout seoPage="privacy-policy" pageTitle="Privacy Policy">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
         

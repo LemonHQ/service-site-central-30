@@ -321,7 +321,7 @@ const CoCreateAssessment = () => {
   };
 
   return (
-    <MainLayout>
+    <MainLayout seoPage="co-create-assessment">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         {!isSubmitted ? (
           <div className="bg-white shadow-md rounded-lg p-6">
