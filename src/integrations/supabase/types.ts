@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.3 (519615d)"
@@ -150,6 +150,39 @@ export type Database = {
           id?: string
           marketing_consent?: boolean | null
           message?: string | null
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      h2contact_submissions: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          id: string
+          marketing_consent: boolean | null
+          message: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          id?: string
+          marketing_consent?: boolean | null
+          message: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          id?: string
+          marketing_consent?: boolean | null
+          message?: string
           name?: string
           phone?: string | null
         }
