@@ -22,7 +22,18 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({ seoPage, seoData, aiMetadata }) => {
-  const m = getSEOMetadata(seoPage, seoData);
+  // Normalize seoData so pages can pass an entity directly OR a wrapped { post } / { caseStudy } / { service }
+  let normalized = seoData;
+  if (seoData && typeof seoData === 'object') {
+    if (seoPage === 'case-study-detail' && !seoData.caseStudy) {
+      normalized = { caseStudy: seoData };
+    } else if (seoPage === 'blog-detail' && !seoData.post) {
+      normalized = { post: seoData };
+    } else if (seoPage === 'service-detail' && !seoData.service) {
+      normalized = { service: seoData };
+    }
+  }
+  const m = getSEOMetadata(seoPage, normalized);
 
   // Force absolute URLs based on production origin so SSR output is correct
   const url = m.url ? (m.url.startsWith('http') ? m.url.replace(/^https?:\/\/[^/]+/, PROD_ORIGIN) : toAbsolute(m.url)) : PROD_ORIGIN;
