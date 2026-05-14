@@ -12,6 +12,7 @@ const UnifyBrandPage = () => {
 
   return (
     <ServiceLandingTemplate
+      seoPage="unify-brand-experiences"
       title="Unify Brand Experiences"
       subtitle="Create cohesive experiences across all customer touchpoints"
       description="We partner with leading enterprise brands to turn fragmented touchpoints into integrated brand experiences—aligning digital portfolios with strategic brand goals to drive customer loyalty and competitive differentiation"

@@ -7,6 +7,7 @@ import { serviceQuotes } from '@/data/quotes';
 const RetailPage = () => {
   return (
     <ServiceLandingTemplate
+      seoPage="retail"
       title="Retail Industry Solutions"
       subtitle="Digital transformation for modern retail enterprises"
       description="We help retailers create seamless omnichannel experiences that bridge online and offline shopping journeys. Our solutions enable personalized customer engagement, streamlined operations, and data-driven decision making to drive growth in today's competitive retail landscape."

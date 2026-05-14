@@ -7,6 +7,7 @@ import { serviceQuotes } from '@/data/quotes';
 const FinancePage = () => {
   return (
     <ServiceLandingTemplate
+      seoPage="finance"
       title="Financial Services Solutions"
       subtitle="Digital transformation strategies for banks, wealth management, and fintech"
       description="We help financial institutions create modern digital experiences that balance innovation with security and compliance. Our tailored solutions address the evolving needs of both retail and commercial banking customers while streamlining operations and reducing costs."

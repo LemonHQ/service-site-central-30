@@ -12,6 +12,7 @@ const ExpandOfferingsPage = () => {
   const customerProfiles = getCustomerProfilesByServiceSlug('expand-product-offerings');
   return (
     <ServiceLandingTemplate
+      seoPage="expand-product-offerings"
       title="Expand Product Offerings"
       subtitle="Innovate and grow your digital portfolio"
       description=" We partner with leading enterprise brands to turn core strengths into new offerings tailored for emerging segments, untapped markets, and evolving customer needs."

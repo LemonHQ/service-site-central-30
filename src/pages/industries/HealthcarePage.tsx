@@ -7,6 +7,7 @@ import { serviceQuotes } from '@/data/quotes';
 const HealthcarePage = () => {
   return (
     <ServiceLandingTemplate
+      seoPage="healthcare"
       title="Healthcare"
       subtitle="Owning the health journey, not just the device"
       description="Healthcare device makers can no longer rely on traditional distribution channels to own the patient relationship. As patient expectations rise, they must design connected, experience-first digital channels that engage users directly—unlocking data, driving adherence, and building long-term brand trust across the care continuum."

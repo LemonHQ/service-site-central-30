@@ -13,6 +13,7 @@ const StandardizePortfolioPage = () => {
   
   return (
     <ServiceLandingTemplate
+      seoPage="standardize-digital-portfolio"
       title="Standardize Digital Portfolio"
       subtitle="Unlock the value of M&A. Bring order to complexity."
       description="We partner with leading enterprise brands to align multi-market product offerings, journeys, and systems around a shared structure that allows you to scale faster, operate leaner, and deliver consistent value across every market, brand or channel"
