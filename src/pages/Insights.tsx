@@ -7,6 +7,25 @@ import PageHero from '@/components/ui/PageHero';
 import ContentSection from '@/components/ui/ContentSection';
 import FilterButtons from '@/components/ui/FilterButtons';
 import { SectionTitle } from '@/components/ui/Typography';
+import JsonLd from '@/components/seo/JsonLd';
+
+const baseURL = typeof window !== 'undefined' ? window.location.origin : 'https://lemonhq.co.uk';
+const insightsCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Insights — LemonHQ',
+  description: 'Expert perspectives on digital transformation, product strategy and AI innovation.',
+  url: `${baseURL}/insights`,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: blogPosts.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${baseURL}/insights/${p.id}`,
+      name: p.title,
+    })),
+  },
+};
 
 const Insights = () => {
   // Get unique categories
