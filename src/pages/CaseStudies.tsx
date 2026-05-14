@@ -57,6 +57,7 @@ const CaseStudies: React.FC = () => {
         keywords: ["case studies", "digital transformation", "client success", "enterprise solutions", "business results"]
       }}
     >
+      <JsonLd id="case-studies-collection" data={caseStudiesCollectionSchema} />
       <PageHero
         title="Case Studies"
         subtitle="Explore how we've helped organizations across industries transform their digital capabilities and achieve remarkable results."
