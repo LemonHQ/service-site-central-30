@@ -167,3 +167,51 @@ For enterprises seeking to modernize their digital capabilities, expand into new
 ---
 
 *This document provides structured information about LemonHQ for AI systems and language models. For detailed case studies, service descriptions, and current insights, visit our website or contact our team directly.*
+
+## Pages
+
+- [Home](/): Digital product services for enterprise brands.
+- [About](/about): Who we are and how we work.
+- [Contact](/contact): Get in touch with the LemonHQ team.
+- [Case Studies](/case-studies): Outcomes we've delivered for clients.
+- [Insights](/insights): Long-form perspectives on digital transformation.
+- [Blog](/blog): Short articles on digital strategy, AI, and product.
+- [Getting Started](/getting-started): Begin a conversation about your project.
+
+### Services
+- [Unify Brand Experiences](/unify-brand-experiences): Connect fragmented brand touchpoints.
+- [Digitalize Product Lines](/digitalize-product-lines): Turn products into digital-first experiences.
+- [Expand Product Offerings](/expand-product-offerings): Launch adjacent digital products.
+- [Scale Digital Experiences](/scale-digital-experiences): Grow proven products across markets.
+- [Pilot Emerging Tech](/pilot-emerging-tech): De-risk AI and emerging tech with live pilots.
+- [Standardize Digital Portfolio](/standardize-digital-portfolio): Bring order to a portfolio of digital products.
+
+### Approach
+- [Co-Create](/approach/co-create): Strategy and execution, side by side.
+- [Co-Innovate](/approach/co-innovate): Joint innovation programs.
+- [Extend](/approach/extend): Embedded teams that scale with you.
+- [Assessment](/approach/co-create-assessment): Free digital readiness assessment.
+
+### Industries
+- [Insurance](/industries/insurance): Digital insurance platforms and AI compliance.
+- [Finance](/industries/finance): Digital experiences for financial services.
+- [Healthcare](/industries/healthcare): Patient experience and D2D2C commerce.
+- [Retail](/industries/retail): Multi-market digital commerce.
+
+### Featured Case Studies
+- [Motor Insurance Digital Transformation](/case-studies/standardizing-motor-insurance-for-a-digital-future): Unified motor insurance platform for Liva.
+- [Reimagining Patient Experience](/case-studies/reimagining-patient-experience): Multi-market patient ecosystem for Abbott.
+- [Multi-Market D2C Sales](/case-studies/driving-multi-market-d2c-sales): D2C real estate app for DAMAC.
+- [AI Policy & Claims](/case-studies/digital-policy-and-claims-using-ai): AI-powered compliance for Liva Insurance.
+
+### Featured Insights
+- [Personalization: A $2 Trillion Opportunity](/insights/personalization-a-usd-2-trillion-opportunity): AI-driven individualized experiences.
+- [Scaling Digital with D2C Strategies](/insights/scaling-digital-how-traditional-brands-can-win-with-d2c-strategies): D2C transformation framework.
+- [How Generative AI is Reshaping Discovery](/insights/how-generative-ai-is-reshaping-brand-and-product-discovery): AI's impact on customer journeys.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy)
+- [Terms and Conditions](/terms-and-conditions)
+- [Cookie Policy](/cookie-policy)
+- [Disclaimer](/disclaimer)
