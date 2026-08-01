@@ -49,6 +49,14 @@ const loadGoogleAnalytics = () => {
     return; // Already loaded or not in browser
   }
 
+  if (!GA_MEASUREMENT_ID) {
+    if (isDevelopment) {
+      console.warn('[Analytics] VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY is not configured. Google Analytics will not load.');
+    }
+    return;
+  }
+
+
   // Initialize dataLayer
   window.dataLayer = window.dataLayer || [];
   window.gtag = function() {
