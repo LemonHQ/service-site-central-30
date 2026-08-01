@@ -46,8 +46,10 @@ const SpotlightCarousel: React.FC = () => {
             onLoad={handleImageLoad}
             onError={handleImageError}
             loading="eager"
-            fetchPriority="high"
+            // @ts-expect-error React 18 warns on camelCase fetchPriority; lowercase is the DOM attribute
+            fetchpriority="high"
             decoding="async"
+
           />
         )}
         {/* Gradient Overlay */}
