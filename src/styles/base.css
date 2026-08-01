@@ -1,5 +1,6 @@
 
-@layer base {
+/* Add smooth transition for theme changes */
+
   /* Add smooth transition for theme changes */
   * {
     @apply transition-colors duration-200;
