@@ -9,7 +9,7 @@ import EcosystemPartnersCarousel from './EcosystemPartnersCarousel';
 
 const ResponseSection = () => {
   return (
-    <section className="py-16 bg-brand-600">
+    <section className="py-16 bg-brand-600" id="ecosystem-success">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
