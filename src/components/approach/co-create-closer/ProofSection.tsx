@@ -26,12 +26,11 @@ const ProofSection = () => {
                 <span className="text-sm font-medium">Featured Case Study</span>
               </div>
               
-              <H3 className="mb-4">Reinventing travel insurance for a digital future</H3>
+              <H3 className="mb-4">Standardizing motor insurance for a digital future</H3>
               
               <Paragraph className="mb-6">
-                A multi-line insurer needed to expand their travel insurance offering from B2B to direct customers. The traditional business model of relying on 
-                3rd party brokers and agents required manual multi-step processing by customer service teams on legacy backoffice systems. Through our Co-Create approach, we brought 
-                together their product, customer service, commercial, sales teams for a 4-week engagement to validate the new D2C travel offering.
+                Liva faced major hurdles in scaling its sales channels across direct customers, partners, and brokers. Through our Co-Create approach, we unified a fragmented 3rd party reliant model 
+                into a scalable, digital-first experience, bringing together their product, customer service, and commercial teams for a 4-week engagement.
               </Paragraph>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -54,7 +53,7 @@ const ProofSection = () => {
                 </div>
               </div>
               
-              <Link to="/case-studies/expanding-and-standardizing-motor-insurance-for-a-digital-future">
+              <Link to="/case-studies/standardizing-motor-insurance-for-a-digital-future">
                 <Button 
                   variant="outline" 
                   className="flex items-center border-brand-300 text-brand-700 hover:bg-brand-50"
