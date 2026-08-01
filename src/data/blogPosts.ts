@@ -12,7 +12,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-05-05',
     publishDate: '2025-05-05',
     category: 'Strategy',
-    tags: ['Digital Platforms', 'AI', 'Personalizaion', 'Scale'],
+    tags: ['Digital Platforms', 'AI', 'Personalization', 'Scale'],
     featuredImage: '/assets/imgs/joachim-schnurle-GYpv7oh1G_A-unsplash.jpg',
     readTime: 8,
     content: `
