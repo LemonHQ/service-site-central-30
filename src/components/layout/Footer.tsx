@@ -76,7 +76,7 @@ const Footer = () => {
                 "Lemon Marketing & Consultancy Ltd,",
                 "128 City Road, London, England, EC1V 2NX"
               ]}
-              mapUrl="https://maps.google.com/?q=128 City Road, London, England, EC1V 2NX"
+              showDirections={false}
             />
             
             <ContactSection />
