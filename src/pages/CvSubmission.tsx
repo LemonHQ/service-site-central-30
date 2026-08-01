@@ -88,9 +88,10 @@ const CvSubmission = () => {
       // Upload file to Supabase storage
       const fileExtension = data.file.name.split('.').pop();
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.${fileExtension}`;
-      const filePath = `${data.email.replace('@', '-at-')}/${fileName}`;
+      const uploadToken = crypto.randomUUID();
+      const filePath = `${data.email.replace('@', '-at-')}/${uploadToken}/${fileName}`;
       
-      // Reserve the submission record first so the storage policy can verify the path
+      // Reserve the submission record first so the storage policy can verify the upload token
       const { data: submissionRecord, error: reservationError } = await supabase
         .from('cv_submissions')
         .insert({
@@ -99,6 +100,7 @@ const CvSubmission = () => {
           phone: data.phone || null,
           message: data.message || null,
           file_path: filePath,
+          upload_token: uploadToken,
           file_name: data.file.name,
           file_type: data.file.type,
           file_size: data.file.size,
