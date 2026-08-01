@@ -9,15 +9,15 @@ const EcosystemPartnersCarousel: React.FC = () => {
   const partnerLogos = [
     {
       name: "UAE Pass",
-      logo: "/assets/imgs/uae-pass-logo.svg" 
+      logo: "https://id-preview--19bf778c-37ad-4ef6-abec-06b328f0319a.lovable.app/assets/imgs/uae-pass-logo.svg" 
     },
     {
       name: "Royal Oman Police",
-      logo: "/assets/imgs/oman-police-logo.png"
+      logo: "https://id-preview--19bf778c-37ad-4ef6-abec-06b328f0319a.lovable.app/assets/imgs/oman-police-logo.png"
     },
     {
       name: "Omantel",
-      logo: "/assets/imgs/omantel-logo.png"
+      logo: "https://id-preview--19bf778c-37ad-4ef6-abec-06b328f0319a.lovable.app/assets/imgs/omantel-logo.png"
     },
     {
       name: "Twilio",
@@ -25,7 +25,7 @@ const EcosystemPartnersCarousel: React.FC = () => {
     },
     {
       name: "TuneProtect",
-      logo: "/assets/imgs/icon_TP_logo.png"
+      logo: "https://id-preview--19bf778c-37ad-4ef6-abec-06b328f0319a.lovable.app/assets/imgs/icon_TP_logo.png"
     },
     {
       name: "LinkedIn",
@@ -41,7 +41,7 @@ const EcosystemPartnersCarousel: React.FC = () => {
     },
     {
       name: "RTA UAE",
-      logo: "/assets/imgs/RTA_Dubai_logo.png"
+      logo: "https://id-preview--19bf778c-37ad-4ef6-abec-06b328f0319a.lovable.app/assets/imgs/RTA_Dubai_logo.png"
     }
   ];
 
