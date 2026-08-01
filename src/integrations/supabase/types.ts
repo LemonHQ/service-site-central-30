@@ -124,6 +124,7 @@ export type Database = {
           message: string | null
           name: string
           phone: string | null
+          upload_token: string | null
         }
         Insert: {
           consent_given?: boolean
@@ -138,6 +139,7 @@ export type Database = {
           message?: string | null
           name: string
           phone?: string | null
+          upload_token?: string | null
         }
         Update: {
           consent_given?: boolean
@@ -152,6 +154,7 @@ export type Database = {
           message?: string | null
           name?: string
           phone?: string | null
+          upload_token?: string | null
         }
         Relationships: []
       }
@@ -299,6 +302,10 @@ export type Database = {
     }
     Functions: {
       is_valid_cv_path: { Args: { file_path: string }; Returns: boolean }
+      is_valid_cv_upload: {
+        Args: { path: string; token: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
