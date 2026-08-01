@@ -63,19 +63,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-brand-100 p-3 rounded-full mr-4">
-                  <MapPin className="w-5 h-5 text-brand-500" />
-                </div>
-                <div>
-                  <CardTitle>Middle East</CardTitle>
-                  <address className="not-italic text-gray-600">
-                    Lemon Adv, & Pub. LLC<br />
-                    Damas 14 Office Tower, Suite #1948<br />
-                    Al Zahra Street, Sharjah, United Arab Emirates
-                  </address>
-                </div>
-              </div>
             </div>
           </div>
           
