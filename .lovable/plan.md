@@ -1,5 +1,8 @@
 Migrate Google Analytics to the Lovable connector
 
+> **Build pre-requisite:** A CSS build error is currently blocking the project (`src/styles/components.css` uses `@layer components` without a matching `@tailwind components` directive in the same file). This needs to be fixed before the app can be built and the GA migration verified. It can be fixed in the same build session as the GA migration.
+
+
 ## Goal
 Replace the hardcoded Google Analytics Measurement ID with the Lovable-managed Google Analytics connector so the ID is controlled as a project secret and can be rotated without code changes.
 
