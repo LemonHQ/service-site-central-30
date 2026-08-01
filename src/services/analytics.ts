@@ -5,8 +5,14 @@
 
 import { isCookieCategoryAllowed } from './cookieConsent';
 
-// Google Analytics Measurement ID (from Lovable Google Analytics connector)
-const GA_MEASUREMENT_ID = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY as string;
+// Google Analytics Measurement ID. Netlify cannot access Lovable connector
+// environment variables, so use the site's public GA4 ID as a deployment-safe
+// fallback. VITE_GA_MEASUREMENT_ID can override it in Netlify when needed.
+const GA_MEASUREMENT_ID = (
+  import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY ||
+  import.meta.env.VITE_GA_MEASUREMENT_ID ||
+  'G-F9MRP3Y6SL'
+) as string;
 
 
 // Vector Tracking ID
@@ -51,7 +57,7 @@ const loadGoogleAnalytics = () => {
 
   if (!GA_MEASUREMENT_ID) {
     if (isDevelopment) {
-      console.warn('[Analytics] VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY is not configured. Google Analytics will not load.');
+      console.warn('[Analytics] A Google Analytics Measurement ID is not configured. Google Analytics will not load.');
     }
     return;
   }
