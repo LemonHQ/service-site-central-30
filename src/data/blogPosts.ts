@@ -1126,7 +1126,7 @@ export const blogPosts: BlogPost[] = [
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.pymnts.com/artificial-intelligence-2/2025/adobe-analytics-genai-traffic-to-retail-websites-doubles-every-2-months/?utm_source=chatgpt.com"> target="_blank"
+                    <a href="https://www.pymnts.com/artificial-intelligence-2/2025/adobe-analytics-genai-traffic-to-retail-websites-doubles-every-2-months/?utm_source=chatgpt.com" target="_blank">
                       Adobe Analytics: GenAI Traffic to Retail Websites Doubles Every 2 Months
                     </a>
                   </li>
