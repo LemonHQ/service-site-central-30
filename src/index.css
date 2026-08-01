@@ -1,12 +1,11 @@
 
-/* Import fonts */
+/* Import fonts and modular styles first (must precede @tailwind directives) */
 @import './styles/fonts.css';
+@import './styles/theme-variables.css';
+@import './styles/base.css';
+@import './styles/components.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import modular styles */
-@import './styles/theme-variables.css';
-@import './styles/base.css';
-@import './styles/components.css';

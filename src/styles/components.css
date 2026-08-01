@@ -1,6 +1,6 @@
 
 /* Semantic color classes for consistent theming */
-@layer components {
+
   /* Typography semantic classes */
   .text-heading-primary {
     @apply text-gray-900;
@@ -111,4 +111,4 @@
   .animate-slide-up {
     animation: slideUp 0.3s ease-out;
   }
-}
+
