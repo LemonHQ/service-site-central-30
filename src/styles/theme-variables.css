@@ -1,6 +1,6 @@
 
-@layer base {
-  :root {
+:root {
+
     --background: 43 40% 98%; /* Lighter ivory background */
     --foreground: 222 14% 18%;
 
