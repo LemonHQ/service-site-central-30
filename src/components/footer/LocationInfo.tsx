@@ -23,17 +23,19 @@ const LocationInfo: React.FC<LocationInfoProps> = ({
       {addressLines.map((line, index) => (
         <Paragraph key={index} className="mb-0 text-gray-600">{line}</Paragraph>
       ))}
-      <div className="mt-3">
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100"
-          onClick={() => window.open(mapUrl, "_blank")}
-        >
-          <MapPin size={16} />
-          Get Directions
-        </Button>
-      </div>
+      {showDirections && mapUrl && (
+        <div className="mt-3">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="flex items-center gap-2 border-brand-400 text-brand-500 hover:bg-brand-100"
+            onClick={() => window.open(mapUrl, "_blank")}
+          >
+            <MapPin size={16} />
+            Get Directions
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
