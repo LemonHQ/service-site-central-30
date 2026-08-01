@@ -3,6 +3,7 @@ import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { formatLongDate } from '@/utils/formatDate';
 
 const HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage = () => {
   const post = blogPosts.find(p => p.id === 'how-generative-ai-is-reshaping-brand-and-product-discovery');
@@ -37,11 +38,7 @@ const HowGenerativeAIIsReshapingBrandAndProductDiscoveryPage = () => {
                     {post.category}
                   </span>
                   <time dateTime={post.publishDate}>
-                    {new Date(post.publishDate).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {formatLongDate(post.publishDate)}
                   </time>
                   <span>{post.readTime} min read</span>
                 </div>

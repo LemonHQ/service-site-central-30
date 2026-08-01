@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/hover-card";
 import { useToast } from "@/hooks/use-toast";
 import { H1, H3, H4, Paragraph } from '@/components/ui/Typography';
+import { formatLongDate } from '@/utils/formatDate';
 
 const BlogDetail: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
@@ -31,11 +32,7 @@ const BlogDetail: React.FC = () => {
   }
   
   // Format date
-  const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+  const formattedDate = formatLongDate(post.publishDate);
   
   // Get related posts (same category, excluding current post)
   const relatedPosts = useMemo(() => {

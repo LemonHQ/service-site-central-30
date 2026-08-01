@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
 import { BlogPost } from '@/types/blog';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { formatLongDate } from '@/utils/formatDate';
 
 interface InsightCardProps {
   post: BlogPost;
@@ -13,11 +14,7 @@ interface InsightCardProps {
 
 const InsightCard: React.FC<InsightCardProps> = ({ post }) => {
   // Format date
-  const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+  const formattedDate = formatLongDate(post.publishDate);
 
   // Get author initial safely
   const authorInitial = post.author && post.author.name ? post.author.name.charAt(0) : '?';

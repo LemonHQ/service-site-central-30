@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import SectionHeading from '../ui/SectionHeading';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/data/blogPosts';
+import { formatLongDate } from '@/utils/formatDate';
 
 const BlogCarousel: React.FC = () => {
   // Use the first 4 blog posts from our data source
@@ -46,11 +47,7 @@ const BlogCarousel: React.FC = () => {
                           <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-normal">
                             {post.category}
                           </span>
-                          <span className="text-xs text-gray-500">{new Date(post.publishDate).toLocaleDateString('en-US', {
-                            month: 'long',
-                            day: 'numeric',
-                            year: 'numeric'
-                          })}</span>
+                          <span className="text-xs text-gray-500">{formatLongDate(post.publishDate)}</span>
                         </div>
                         <h3 className="text-xl font-normal mb-3 text-gray-800">{post.title}</h3>
                         <p className="text-gray-600 text-sm font-light">{post.excerpt}</p>
