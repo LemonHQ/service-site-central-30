@@ -5,8 +5,9 @@
 
 import { isCookieCategoryAllowed } from './cookieConsent';
 
-// Google Analytics Measurement ID
-const GA_MEASUREMENT_ID = 'G-F9MRP3Y6SL';
+// Google Analytics Measurement ID (from Lovable Google Analytics connector)
+const GA_MEASUREMENT_ID = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY as string;
+
 
 // Vector Tracking ID
 const VECTOR_TRACKING_ID = '79882b66-a905-4394-9c3d-f7bfe8730314';
