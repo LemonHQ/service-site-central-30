@@ -90,6 +90,28 @@ const CvSubmission = () => {
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}.${fileExtension}`;
       const filePath = `${data.email.replace('@', '-at-')}/${fileName}`;
       
+      // Reserve the submission record first so the storage policy can verify the path
+      const { data: submissionRecord, error: reservationError } = await supabase
+        .from('cv_submissions')
+        .insert({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          message: data.message || null,
+          file_path: filePath,
+          file_name: data.file.name,
+          file_type: data.file.type,
+          file_size: data.file.size,
+          consent_given: data.consent,
+          marketing_consent: data.marketing_consent
+        })
+        .select('id')
+        .single();
+        
+      if (reservationError) {
+        throw new Error(`Error saving submission: ${reservationError.message}`);
+      }
+      
       // Create a custom upload handler to track progress
       const uploadFile = async () => {
         // Create blob reader to track progress
@@ -134,27 +156,15 @@ const CvSubmission = () => {
         return uploadData;
       };
       
-      // Upload the file and track progress
-      await uploadFile();
-      
-      // Create record in cv_submissions table
-      const { error: submissionError } = await supabase
-        .from('cv_submissions')
-        .insert({
-          name: data.name,
-          email: data.email,
-          phone: data.phone || null,
-          message: data.message || null,
-          file_path: filePath,
-          file_name: data.file.name,
-          file_type: data.file.type,
-          file_size: data.file.size,
-          consent_given: data.consent,
-          marketing_consent: data.marketing_consent
-        });
-        
-      if (submissionError) {
-        throw new Error(`Error saving submission: ${submissionError.message}`);
+      try {
+        // Upload the file and track progress
+        await uploadFile();
+      } catch (uploadError) {
+        // Clean up the reserved submission record if the upload fails
+        if (submissionRecord?.id) {
+          await supabase.from('cv_submissions').delete().eq('id', submissionRecord.id);
+        }
+        throw uploadError;
       }
       
       // Show success message
