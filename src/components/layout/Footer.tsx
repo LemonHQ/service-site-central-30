@@ -79,7 +79,7 @@ const Footer = () => {
               mapUrl="https://maps.google.com/?q=128 City Road, London, England, EC1V 2NX"
             />
             
-            <ContactSection showMapLink={false} />
+            <ContactSection />
           </div>
 
           {/* Follow Us */}
