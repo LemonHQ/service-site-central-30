@@ -1,6 +1,6 @@
 
 /* Semantic color classes for consistent theming */
-@layer components {
+
   /* Typography semantic classes */
   .text-heading-primary {
     @apply text-gray-900;
