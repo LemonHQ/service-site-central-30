@@ -181,9 +181,6 @@ const CvSubmission = () => {
       setUploadProgress(0);
     }
   };
-      setUploadProgress(0);
-    }
-  };
 
   return (
     <MainLayout seoPage="cv-submission">
