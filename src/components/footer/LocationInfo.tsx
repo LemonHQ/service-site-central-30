@@ -7,10 +7,16 @@ import { H4, Paragraph } from '@/components/ui/Typography';
 interface LocationInfoProps {
   title: string;
   addressLines: string[];
-  mapUrl: string;
+  mapUrl?: string;
+  showDirections?: boolean;
 }
 
-const LocationInfo: React.FC<LocationInfoProps> = ({ title, addressLines, mapUrl }) => {
+const LocationInfo: React.FC<LocationInfoProps> = ({ 
+  title, 
+  addressLines, 
+  mapUrl,
+  showDirections = true 
+}) => {
   return (
     <div>
       <H4 className="mb-2 text-brand-600">{title}</H4>
