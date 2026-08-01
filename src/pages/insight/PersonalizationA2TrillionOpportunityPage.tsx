@@ -3,6 +3,7 @@ import MainLayout from '@/components/layout/MainLayout';
 import { blogPosts } from '@/data/blogPosts';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { formatLongDate } from '@/utils/formatDate';
 
 const PersonalizationA2TrillionOpportunityPage = () => {
   const post = blogPosts.find(p => p.id === 'personalization-a-usd-2-trillion-opportunity');
@@ -37,11 +38,7 @@ const PersonalizationA2TrillionOpportunityPage = () => {
                     {post.category}
                   </span>
                   <time dateTime={post.publishDate}>
-                    {new Date(post.publishDate).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {formatLongDate(post.publishDate)}
                   </time>
                   <span>{post.readTime} min read</span>
                 </div>

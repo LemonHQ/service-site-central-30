@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { formatLongDate } from '@/utils/formatDate';
 
 const StaticBlogList = () => {
   const blogPosts = [
@@ -94,11 +95,7 @@ const StaticBlogList = () => {
               </div>
               <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center text-gray-500 text-sm mb-3 font-light">
-                  <span>{new Date(post.publishDate).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric'
-                  })}</span>
+                  <span>{formatLongDate(post.publishDate)}</span>
                   <span className="mx-2">•</span>
                   <div className="flex items-center">
                     <Clock className="h-3 w-3 mr-1" />

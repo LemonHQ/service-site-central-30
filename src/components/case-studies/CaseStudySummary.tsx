@@ -6,6 +6,7 @@ import { ArrowLeft, Building, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CaseStudy } from '@/data/caseStudies';
 import { H1, H4, Paragraph } from '@/components/ui/Typography';
+import { formatLongDate } from '@/utils/formatDate';
 
 interface CaseStudySummaryProps {
   caseStudy: CaseStudy;
@@ -13,11 +14,7 @@ interface CaseStudySummaryProps {
 
 const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ caseStudy }) => {
   // Format date
-  const formattedDate = new Date(caseStudy.date).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+  const formattedDate = formatLongDate(caseStudy.date);
 
   return (
     <>

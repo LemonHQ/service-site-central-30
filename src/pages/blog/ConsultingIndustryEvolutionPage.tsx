@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
+import { formatLongDate } from '@/utils/formatDate';
 
 const ConsultingIndustryEvolutionPage = () => {
   const post = {
@@ -38,11 +39,7 @@ const ConsultingIndustryEvolutionPage = () => {
     }
   };
 
-  const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+  const formattedDate = formatLongDate(post.publishDate);
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
