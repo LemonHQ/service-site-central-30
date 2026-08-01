@@ -58,7 +58,7 @@ const Contact = () => {
                   <CardTitle>UK & Europe</CardTitle>
                   <address className="not-italic text-gray-600">
                     Lemon Marketing & Consultancy Ltd, <br />
-                    128, City Road, London,England, EC1V 2NX
+                    128 City Road, London, England, EC1V 2NX
                   </address>
                 </div>
               </div>
