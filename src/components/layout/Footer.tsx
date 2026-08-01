@@ -74,19 +74,9 @@ const Footer = () => {
               title="UK & Europe"
               addressLines={[
                 "Lemon Marketing & Consultancy Ltd,",
-                "128, City Road, London,England, EC1V 2NX"
+                "128 City Road, London, England, EC1V 2NX"
               ]}
-              mapUrl="https://maps.google.com/?q=128, City Road, London, England, EC1V 2NX"
-            />
-            
-            <LocationInfo 
-              title="Middle East"
-              addressLines={[
-                "Lemon Adv, & Pub. LLC",
-                "Damas 14 Office Tower, Suite #1948",
-                "Al Zahra Street, Sharjah, United Arab Emirates"
-              ]}
-              mapUrl="https://maps.google.com/?q=Damas 14 Office Tower, Al Zahra Street, Sharjah, UAE"
+              mapUrl="https://maps.google.com/?q=128 City Road, London, England, EC1V 2NX"
             />
             
             <ContactSection />
