@@ -89,11 +89,13 @@ const Footer = () => {
             {/* ISO certifications hidden as requested */}
           </div>
 
-          {/* Subscribe */}
-          {/* <div>
-            <NewsletterSubscribe />
-          </div> */}
+          {/* Clutch Verified Badge */}
+          <div className="flex justify-center md:justify-end items-start">
+            <ClutchBadge size={280} className="sm:hidden" />
+            <ClutchBadge size={340} className="hidden sm:block" />
+          </div>
         </div>
+
 
         {/* Disclaimer and Copyright */}
         <Separator className="my-8" />
