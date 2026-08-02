@@ -9,6 +9,8 @@ import LocationInfo from '../footer/LocationInfo';
 import ContactSection from '../footer/ContactSection';
 import NewsletterSubscribe from '../footer/NewsletterSubscribe';
 import Copyright from '../footer/Copyright';
+import ClutchBadge from '../ui/ClutchBadge';
+
 
 const Footer = () => {
   // Service links - Updated with direct URLs
