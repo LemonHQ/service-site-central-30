@@ -184,7 +184,7 @@ const CompanyOverview: React.FC = () => {
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-200 rounded-lg -z-0"></div>
             <div className="relative z-10 mt-16 flex justify-center">
-              <ClutchBadge size={340} />
+              <ClutchBadge size={136} />
             </div>
           </div>
 
