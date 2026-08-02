@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
 
           {/* Clutch Verified Badge */}
-          <div className="flex justify-center md:justify-end items-start">
+          <div className="flex justify-start md:justify-start items-start pl-10">
             <ClutchBadge size={112} className="sm:hidden" />
             <ClutchBadge size={136} className="hidden sm:block" />
           </div>
