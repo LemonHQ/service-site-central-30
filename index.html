@@ -1,13 +1,15 @@
-
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.vector.co https://cdn.gpteng.co https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://ssl.google-analytics.com https://tagmanager.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://tagmanager.google.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self' https://cdn.vector.co https://api.vector.co https://*.googletagmanager.com https://calendar.google.com; connect-src 'self' https://zfkspavuxvdtofgdrrkv.supabase.co https://cdn.vector.co https://api.vector.co https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.vector.co https://cdn.gpteng.co https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://ssl.google-analytics.com https://tagmanager.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://tagmanager.google.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self' https://cdn.vector.co https://api.vector.co https://*.googletagmanager.com https://calendar.google.com; connect-src 'self' https://zfkspavuxvdtofgdrrkv.supabase.co https://cdn.vector.co https://api.vector.co https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net;"
+    />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
     <!-- Sitewide fallback title (per-route <title> is injected by react-helmet-async) -->
     <title>LemonHQ — Digital products for enterprise brands</title>
@@ -16,14 +18,14 @@
 
     <!-- Vector Tracking Script -->
     <script>
-        !function(e,r){try{if(e.vector)return void console.log("Vector snippet included more than once.");var t={};t.q=t.q||[];for(var o=["load","identify","on"],n=function(e){return function(){var r=Array.prototype.slice.call(arguments);t.q.push([e,r])}},c=0;c<o.length;c++){var a=o[c];t[a]=n(a)}if(e.vector=t,!t.loaded){var i=r.createElement("script");i.type="text/javascript",i.async=!0,i.src="https://cdn.vector.co/pixel.js";var l=r.getElementsByTagName("script")[0];l.parentNode.insertBefore(i,l),t.loaded=!0}}catch(e){console.error("Error loading Vector:",e)}}(window,document);
+      !function(e,r){try{if(e.vector)return void console.log("Vector snippet included more than once.");var t={};t.q=t.q||[];for(var o=["load","identify","on"],n=function(e){return function(){var r=Array.prototype.slice.call(arguments);t.q.push([e,r])}},c=0;c<o.length;c++){var a=o[c];t[a]=n(a)}if(e.vector=t,!t.loaded){var i=r.createElement("script");i.type="text/javascript",i.async=!0,i.src="https://cdn.vector.co/pixel.js";var l=r.getElementsByTagName("script")[0];l.parentNode.insertBefore(i,l),t.loaded=!0}}catch(e){console.error("Error loading Vector:",e)}}(window,document);
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="/assets/imgs/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/imgs/android-chrome-512x512.png" type="image/png">
+    <link rel="icon" href="/assets/imgs/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/imgs/android-chrome-512x512.png" type="image/png" />
     <!-- Preload the homepage hero image (LCP candidate) -->
-    <link rel="preload" as="image" href="/assets/imgs/flying-paper-planes-hero-image.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/imgs/flying-paper-planes-hero-image.png" fetchpriority="high" />
 
     <!-- Sitewide SEO -->
     <meta name="author" content="LemonHQ" />
@@ -36,51 +38,51 @@
 
     <!-- Sitewide Organization JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LemonHQ",
-      "url": "https://lemonhq.co.uk",
-      "logo": "https://lemonhq.co.uk/assets/imgs/android-chrome-512x512.png",
-      "description": "Digital product services for enterprise brands - validate, design, launch and scale products that drive business growth.",
-      "foundingDate": "2015",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "128 City Road",
-        "addressLocality": "London",
-        "postalCode": "EC1V 2NX",
-        "addressCountry": "GB"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "Business",
-          "email": "create@lemonhq.co.uk",
-          "areaServed": "Worldwide",
-          "availableLanguage": "English"
-        }
-      ],
-      "sameAs": [
-        "https://linkedin.com/company/lemonhq",
-        "https://twitter.com/lemonhq"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LemonHQ",
+        "url": "https://lemonhq.co.uk",
+        "logo": "https://lemonhq.co.uk/assets/imgs/android-chrome-512x512.png",
+        "description": "Digital product services for enterprise brands - validate, design, launch and scale products that drive business growth.",
+        "foundingDate": "2015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "128 City Road",
+          "addressLocality": "London",
+          "postalCode": "EC1V 2NX",
+          "addressCountry": "GB"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Business",
+            "email": "create@lemonhq.co.uk",
+            "areaServed": "Worldwide",
+            "availableLanguage": "English"
+          }
+        ],
+        "sameAs": [
+          "https://linkedin.com/company/lemonhq",
+          "https://twitter.com/lemonhq"
+        ]
+      }
     </script>
 
     <!-- Sitewide WebSite JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "LemonHQ",
-      "url": "https://lemonhq.co.uk",
-      "description": "Digital product services for enterprise brands",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://lemonhq.co.uk/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "LemonHQ",
+        "url": "https://lemonhq.co.uk",
+        "description": "Digital product services for enterprise brands",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://lemonhq.co.uk/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
-    }
     </script>
 
     <!-- Per-route head (react-helmet-async, injected at prerender) -->
