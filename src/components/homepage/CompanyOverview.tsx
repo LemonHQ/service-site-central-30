@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Users, Database, Globe } from 'lucide-react';
+import ClutchBadge from '@/components/ui/ClutchBadge';
+
 
 const CompanyOverview: React.FC = () => {
   // State for animated stats
