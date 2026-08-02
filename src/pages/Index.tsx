@@ -1,21 +1,20 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import MainLayout from "@/components/layout/MainLayout";
+import PageHero from "@/components/ui/PageHero";
+import ContentSection from "@/components/ui/ContentSection";
+import FeatureCard from "@/components/ui/FeatureCard";
+import { Button } from "@/components/ui/button";
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import MainLayout from '@/components/layout/MainLayout';
-import PageHero from '@/components/ui/PageHero';
-import ContentSection from '@/components/ui/ContentSection';
-import FeatureCard from '@/components/ui/FeatureCard';
-import { Button } from '@/components/ui/button';
-
-const Index = () => { 
+const Index = () => {
   return (
     <MainLayout seoPage="home">
       <PageHero
-        title="Welcome to LemonHQ Professional Services"
+        title="Welcome to LemonHQ - Digital product experts"
         subtitle="We specialize in delivering exceptional solutions that drive business growth and innovation."
         backgroundVariant="brand"
       />
-      
+
       <ContentSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <FeatureCard
@@ -29,12 +28,10 @@ const Index = () => {
             variant="elevated"
           />
         </div>
-        
+
         <div className="text-center mt-8">
           <Link to="/services">
-            <Button className="bg-accent-400 hover:bg-accent-500 text-white font-medium">
-              Explore Our Services
-            </Button>
+            <Button className="bg-accent-400 hover:bg-accent-500 text-white font-medium">Explore Our Services</Button>
           </Link>
         </div>
       </ContentSection>
