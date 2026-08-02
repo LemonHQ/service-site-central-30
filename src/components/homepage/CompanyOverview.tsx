@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Users, Database, Globe } from 'lucide-react';
+import ClutchBadge from '@/components/ui/ClutchBadge';
+
 
 const CompanyOverview: React.FC = () => {
   // State for animated stats
@@ -181,7 +183,11 @@ const CompanyOverview: React.FC = () => {
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-200 rounded-lg -z-0"></div>
+            <div className="relative z-10 mt-16 flex justify-center">
+              <ClutchBadge size={340} />
+            </div>
           </div>
+
         </div>
       </div>
     </section>

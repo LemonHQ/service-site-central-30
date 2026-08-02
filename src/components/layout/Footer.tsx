@@ -9,6 +9,8 @@ import LocationInfo from '../footer/LocationInfo';
 import ContactSection from '../footer/ContactSection';
 import NewsletterSubscribe from '../footer/NewsletterSubscribe';
 import Copyright from '../footer/Copyright';
+import ClutchBadge from '../ui/ClutchBadge';
+
 
 const Footer = () => {
   // Service links - Updated with direct URLs
@@ -89,11 +91,13 @@ const Footer = () => {
             {/* ISO certifications hidden as requested */}
           </div>
 
-          {/* Subscribe */}
-          {/* <div>
-            <NewsletterSubscribe />
-          </div> */}
+          {/* Clutch Verified Badge */}
+          <div className="flex justify-center md:justify-end items-start">
+            <ClutchBadge size={280} className="sm:hidden" />
+            <ClutchBadge size={340} className="hidden sm:block" />
+          </div>
         </div>
+
 
         {/* Disclaimer and Copyright */}
         <Separator className="my-8" />
