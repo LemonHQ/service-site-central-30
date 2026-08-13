@@ -1,4 +1,3 @@
-
 export interface BlogPost {
   id: string;
   title: string;
@@ -12,8 +11,8 @@ export interface BlogPost {
   tags: string[];
   author: {
     name: string;
-    avatar: string;  
-    role: string; 
+    avatar: string;
+    role: string;
   };
 }
 
@@ -99,13 +98,14 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: "Mohammed Naheemuddin",
       avatar: "/assets/imgs/abdul-profile.jpg",
-      role: "Digital Media Lead"
-    }
+      role: "Digital Media Lead",
+    },
   },
   {
     id: "consulting-industry-evolution",
     title: "How Consulting Firms Are Evolving in the Digital Age",
-    excerpt: "An analysis of how traditional consulting firms are adapting their methodologies for digital-first enterprises.",
+    excerpt:
+      "An analysis of how traditional consulting firms are adapting their methodologies for digital-first enterprises.",
     content: `
       <p>The consulting industry is undergoing a significant transformation as firms adapt to serve digital-native clients and embrace new methodologies.</p>
       
@@ -118,17 +118,18 @@ export const blogPosts: BlogPost[] = [
       <h3>Technology Integration</h3>
       <p>The integration of advanced analytics, AI, and automation is becoming central to consulting delivery models.</p>
     `,
-    featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    featuredImage:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     date: "2024-01-12",
     publishDate: "2024-01-12",
     readTime: 6,
     category: "Industry Analysis",
     tags: ["Consulting", "Digital Transformation", "Partnership", "Innovation"],
     author: {
-      name: "Mark Thompson",
+      name: "Husain Mohsin",
       avatar: "/assets/imgs/husain-profile.jpg",
-      role: "Industry Analyst"
-    }
+      role: "Industry Analyst",
+    },
   },
   {
     id: "innovation-frameworks-2024",
@@ -146,7 +147,8 @@ export const blogPosts: BlogPost[] = [
       <h3>Measuring Innovation Impact</h3>
       <p>Developing metrics and KPIs to track innovation outcomes and ROI is crucial for sustained investment.</p>
     `,
-    featuredImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    featuredImage:
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     date: "2024-01-10",
     publishDate: "2024-01-10",
     readTime: 7,
@@ -155,13 +157,14 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: "Dr. Emily Chen",
       avatar: "/assets/imgs/abdul-profile.jpg",
-      role: "Innovation Consultant"
-    }
+      role: "Innovation Consultant",
+    },
   },
   {
     id: "digital-leadership-skills",
     title: "Essential Skills for Digital Transformation Leaders",
-    excerpt: "The key competencies and skills that digital transformation leaders need to succeed in today's enterprise environment.",
+    excerpt:
+      "The key competencies and skills that digital transformation leaders need to succeed in today's enterprise environment.",
     content: `
       <p>Digital transformation leadership requires a unique blend of technical understanding, strategic thinking, and people management skills.</p>
       
@@ -174,7 +177,8 @@ export const blogPosts: BlogPost[] = [
       <h3>Strategic Vision</h3>
       <p>The ability to translate business strategy into digital initiatives is fundamental to transformation success.</p>
     `,
-    featuredImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    featuredImage:
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     date: "2024-01-08",
     publishDate: "2024-01-08",
     readTime: 5,
@@ -183,7 +187,7 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: "Robert Williams",
       avatar: "/assets/imgs/husain-profile.jpg",
-      role: "Transformation Lead"
-    }
-  }
+      role: "Transformation Lead",
+    },
+  },
 ];
