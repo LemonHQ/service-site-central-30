@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
     category: "Leadership",
     tags: ["Leadership", "Skills", "Digital Transformation", "Management"],
     author: {
-      name: "Robert Williams",
+      name: "Husain Mohsin",
       avatar: "/assets/imgs/husain-profile.jpg",
       role: "Transformation Lead",
     },
