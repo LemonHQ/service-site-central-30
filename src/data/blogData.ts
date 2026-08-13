@@ -155,7 +155,7 @@ export const blogPosts: BlogPost[] = [
     category: "Innovation",
     tags: ["Innovation", "Enterprise", "Frameworks", "Strategy"],
     author: {
-      name: "Dr. Emily Chen",
+      name: "Mohammed Naheemuddin",
       avatar: "/assets/imgs/abdul-profile.jpg",
       role: "Innovation Consultant",
     },
