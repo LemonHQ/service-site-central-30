@@ -68,7 +68,7 @@ const StaticBlogList = () => {
       readTime: 5,
       category: "Leadership",
       author: {
-        name: "Robert Williams",
+        name: "Husain Mohsin",
         avatar: "/assets/imgs/husain-profile.jpg",
         role: "Transformation Lead",
       },
