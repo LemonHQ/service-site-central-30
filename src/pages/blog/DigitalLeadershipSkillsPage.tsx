@@ -1,19 +1,20 @@
-import React from 'react';
-import MainLayout from '@/components/layout/MainLayout';
-import { ArrowLeft, Clock, Share2, Copy, Facebook, Twitter, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
-import { toast } from 'sonner';
-import { formatLongDate } from '@/utils/formatDate';
+import React from "react";
+import MainLayout from "@/components/layout/MainLayout";
+import { ArrowLeft, Clock, Share2, Copy, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { toast } from "sonner";
+import { formatLongDate } from "@/utils/formatDate";
 
 const DigitalLeadershipSkillsPage = () => {
   const post = {
     id: "digital-leadership-skills",
     title: "Essential Skills for Digital Transformation Leaders",
-    excerpt: "The key competencies and skills that digital transformation leaders need to succeed in today's enterprise environment.",
+    excerpt:
+      "The key competencies and skills that digital transformation leaders need to succeed in today's enterprise environment.",
     content: `
       <p>Digital transformation leadership requires a unique blend of technical understanding, strategic thinking, and people management skills.</p>
       
@@ -26,45 +27,46 @@ const DigitalLeadershipSkillsPage = () => {
       <h3>Strategic Vision</h3>
       <p>The ability to translate business strategy into digital initiatives is fundamental to transformation success.</p>
     `,
-    featuredImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    featuredImage:
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     date: "2024-01-08",
     publishDate: "2024-01-08",
     readTime: 5,
     category: "Leadership",
     tags: ["Leadership", "Skills", "Digital Transformation", "Management"],
     author: {
-      name: "Robert Williams",
+      name: "Husain Mohsin",
       avatar: "/assets/imgs/husain-profile.jpg",
-      role: "Transformation Lead"
-    }
+      role: "Transformation Lead",
+    },
   };
 
   const formattedDate = formatLongDate(post.publishDate);
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
-    toast.success('Link copied to clipboard!');
+    toast.success("Link copied to clipboard!");
   };
 
   const handleShare = (platform: string) => {
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
-    
-    let shareUrl = '';
+
+    let shareUrl = "";
     switch (platform) {
-      case 'facebook':
+      case "facebook":
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
         break;
-      case 'twitter':
+      case "twitter":
         shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
         break;
-      case 'linkedin':
+      case "linkedin":
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
         break;
     }
-    
+
     if (shareUrl) {
-      window.open(shareUrl, '_blank', 'width=600,height=400');
+      window.open(shareUrl, "_blank", "width=600,height=400");
     }
   };
 
@@ -77,31 +79,29 @@ const DigitalLeadershipSkillsPage = () => {
     publishedTime: post.publishDate,
     author: post.author.name,
     category: post.category,
-    tags: post.tags
+    tags: post.tags,
   };
 
   const aiMetadata = {
-    purpose: 'Educate readers about essential digital leadership skills and competencies',
+    purpose: "Educate readers about essential digital leadership skills and competencies",
     contentSummary: `Guide to essential skills for digital transformation leaders including technical acumen, change management, and strategic vision. Covers key competencies needed in modern enterprise environments.`,
-    keywords: ['digital leadership', 'leadership skills', 'digital transformation', 'change management', 'strategic vision'],
-    contentType: 'article' as const
+    keywords: [
+      "digital leadership",
+      "leadership skills",
+      "digital transformation",
+      "change management",
+      "strategic vision",
+    ],
+    contentType: "article" as const,
   };
 
   return (
-    <MainLayout 
-      pageTitle={post.title}
-      seoPage="blog-detail"
-      seoData={seoData}
-      aiMetadata={aiMetadata}
-    >
+    <MainLayout pageTitle={post.title} seoPage="blog-detail" seoData={seoData} aiMetadata={aiMetadata}>
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto">
             {/* Back button */}
-            <Link 
-              to="/blog"
-              className="inline-flex items-center text-brand-400 hover:text-brand-500 mb-8 group"
-            >
+            <Link to="/blog" className="inline-flex items-center text-brand-400 hover:text-brand-500 mb-8 group">
               <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to Blog
             </Link>
@@ -114,11 +114,7 @@ const DigitalLeadershipSkillsPage = () => {
 
             {/* Featured image */}
             <div className="mb-8">
-              <img
-                src={post.featuredImage}
-                alt={post.title}
-                className="w-full h-64 md:h-96 object-cover rounded-lg"
-              />
+              <img src={post.featuredImage} alt={post.title} className="w-full h-64 md:h-96 object-cover rounded-lg" />
             </div>
 
             {/* Author and meta information */}
@@ -133,7 +129,7 @@ const DigitalLeadershipSkillsPage = () => {
                   <div className="text-sm">{post.author.role}</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center text-sm">
                 <span>{formattedDate}</span>
                 <span className="mx-2">•</span>
@@ -151,7 +147,9 @@ const DigitalLeadershipSkillsPage = () => {
             <div className="mb-8">
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">{tag}</Badge>
+                  <Badge key={tag} variant="secondary">
+                    {tag}
+                  </Badge>
                 ))}
               </div>
             </div>
@@ -169,15 +167,15 @@ const DigitalLeadershipSkillsPage = () => {
                       <Copy className="h-4 w-4 mr-1" />
                       Copy Link
                     </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('facebook')}>
+                    <Button variant="outline" size="sm" onClick={() => handleShare("facebook")}>
                       <Facebook className="h-4 w-4 mr-1" />
                       Facebook
                     </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('twitter')}>
+                    <Button variant="outline" size="sm" onClick={() => handleShare("twitter")}>
                       <Twitter className="h-4 w-4 mr-1" />
                       Twitter
                     </Button>
-                    <Button variant="outline" size="sm" onClick={() => handleShare('linkedin')}>
+                    <Button variant="outline" size="sm" onClick={() => handleShare("linkedin")}>
                       <Linkedin className="h-4 w-4 mr-1" />
                       LinkedIn
                     </Button>
