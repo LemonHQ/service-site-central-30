@@ -51,7 +51,7 @@ const StaticBlogList = () => {
       readTime: 7,
       category: "Innovation",
       author: {
-        name: "Dr. Emily Chen",
+        name: "Mohammed Naheemuddin",
         avatar: "/assets/imgs/abdul-profile.jpg",
         role: "Innovation Consultant",
       },
